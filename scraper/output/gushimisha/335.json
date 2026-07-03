@@ -1,0 +1,41 @@
+{
+  "number": 335,
+  "book": "Gushimisha",
+  "title": "Umuhanuzi Yesaya",
+  "slug": "umuhanuzi-yesaya",
+  "uuid": "ff99c347-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/umuhanuzi-yesaya/ff99c347-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umuhanuzi Yesaya Yeretsw' ibyiza kera.",
+        "Yerekw' Imana mw ijuru Iri mu rusengero :",
+        "Abakerubi n'Abaserafi Bayishyize hagati,",
+        "Bajya bayishim' iteka, Bayisingiza bati:"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwan' Uwer' Uwer' Uwera:Ibyo mw isi n'ijuru",
+        "Byuzuyemw ishimwe ryawe, Bose baguhimbaze.",
+        "Baracyaririmba batyo,Kand' abantu bo mw isi",
+        "Na bo barashim'Imana, Umukiza n'Umwami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Natwe tuyihimbazanye N' abamaraika bose,",
+        "Tuti : Mwami nyir'ingabo, Ni Wow'usumba byose;",
+        "Ur' Uwer' Uwer' Uwera :Ibyo mw isi n'ijuru",
+        "Byuzuyemw ishimwe ryawe. Bose baguhimbaze !"
+      ]
+    }
+  ]
+}

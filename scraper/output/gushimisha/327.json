@@ -1,0 +1,42 @@
+{
+  "number": 327,
+  "book": "Gushimisha",
+  "title": "Ni byiza kureb' ab'Imana",
+  "slug": "ni-byiza-kureb-abimana",
+  "uuid": "ff999858-0670-11ea-9a58-deadbe058832",
+  "category": "Igaburo ryera",
+  "url": "https://indirimbo.com/gushimisha/ni-byiza-kureb-abimana/ff999858-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ni byiza kureb' ab'Imana Baterana bakundanye; Mwuka Wera naw' ubakunda.Ubazenguruts' umucyo. Gusenga n'indirimbo byabo   Bitumbagira mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iyo bagez' imbere yawe, Baje gusangira nawe, Urukundo ruva mw ijuru",
+        "Rurabanezeza cyane; Imitima yabo yizeye Ijy' igusingiz' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubwo bugingo bubeshaho Abacunguwe ba hose, Imitima yab' inezezwa N'ukw",
+        "ihor'ibon' ibyiza. Itorero ryawe ritunze Ubuntu bwawe busaga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mana y'urukund' utwigishe Gukundana neza rwose, Ngo duhabw' Ibyokurya",
+        "Byera,Tweger' Uruhimbi rwawe. Irari ry'imitima yacu rib'iryo guhazwa cyane"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "number": 378,
+  "book": "Gushimisha",
+  "title": "Nuzuy' umunezero",
+  "slug": "nuzuy-umunezero",
+  "uuid": "ff9ab9cf-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/nuzuy-umunezero/ff9ab9cf-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nuzuy' umunezero Kuko maze kozwa de Mu maraso ya Yesu Y'igiciro kinini."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' ushimirwe Ko wankijije !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Urukundo rwa Yesu Na bwa buntu bwe bwinshi Bisumb' uko twibwira; Bidukiz'",
+        "imitima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mana, ndagushimira Urukundo wankunze : Waduhay' Umukiza Ngw adukiz'",
+        "umuriro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "None, turabinginze,he kub' uwo muri mwe Utita ku mbabazi Z'Umucunguzi wacu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "umv'icy'icyo agushakaho:wihane ubabarirwe,umutima uwinjize mu maraso ya yesu."
+      ]
+    }
+  ]
+}

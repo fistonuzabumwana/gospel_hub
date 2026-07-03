@@ -1,0 +1,54 @@
+{
+  "number": 33,
+  "book": "Gushimisha",
+  "title": "Ndagushimiye, Mukiza",
+  "slug": "ndagushimiye-mukiza",
+  "uuid": "ff90a787-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ndagushimiye-mukiza/ff90a787-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndagushimiye, Mukiza ,Urukundo wankunze; Nuk' umpindur’ umugende  W'amazi y'ubugingo."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mb' umugende gusa, Yesu,Wuzuyemw imbaraga Z'agakiza kawe, Mwami,",
+        "Kitbone kuntembamo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mb' umugend' ugez' amazi Mu mitim’ isaraye, Ibone kunyw' agakiza K'ubutumwa bw'ineza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mb' ikibindi cyawe, Yesu :Nuk' unyoz' untunganye, Maz' unyuzuz' ayo mazi, Ni",
+        "yo Mwuka w'Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mb' umugabo wo guhamya Uburyo wankijije : Waranguze ngo mb' uwawe, Nuk'unyuzure rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yesu, suk' Umwuka Wera Mu mutima wanjy’ ubu, Kugira ngo ngez' amazi   Yawe mu basaraye !"
+      ]
+    }
+  ]
+}

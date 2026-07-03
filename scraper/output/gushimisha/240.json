@@ -1,0 +1,49 @@
+{
+  "number": 240,
+  "book": "Gushimisha",
+  "title": "Wa mwanya mu Getsemani",
+  "slug": "wa-mwanya-mu-getsemani",
+  "uuid": "ff96b293-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/wa-mwanya-mu-getsemani/ff96b293-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Wa mwanya mu Getsemani",
+        "Sinawibagirwa, Ubwo wabirag' ibyuya Bisa n'amaraso."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Sinibagirw' amakuba Wabonye kubwanjye. Wunamye n'umubabaro Ur' i",
+        "Getsemani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wari mu biti n'ijoro Kubw’ibyaha byanjye Byaragushenjaguye pe : N’urubanza",
+        "rwaniye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Intumwa zagusizeyo, S’arakuzinukwa. Natwe nta bwo twashobora Kubigereranya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "N’ubona ko mbyibagiwe,Yes’uzanyibutse Bya byuya byawe wabize Kubwanjye,",
+        "kubwanjye !"
+      ]
+    }
+  ]
+}

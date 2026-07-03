@@ -1,0 +1,42 @@
+{
+  "number": 168,
+  "book": "Gushimisha",
+  "title": "Mbumbatiwe nawe",
+  "slug": "mbumbatiwe-nawe",
+  "uuid": "ff949d6f-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/mbumbatiwe-nawe/ff949d6f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbumbatiwe nawe, Yesu , Nta kizampangara, Kand' urukund' umfitiye Ni rwo runduhur' ubu.Numvis' amajwi meza Y'abatugiy' imbere; Bahora baririmba, Bashima Yesu, bati :"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mbumbatiwe nawe,Yesu, Nta kizampangara, Kand' urukund' umfitiye ni rwo",
+        "runduhur' ubu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mbumbatiwe nawe, Yesu; Ntabwo nkiganyira. Nta cyo Satan' antwar’ ubu N'",
+        "amahane ye yose.Kand' amakuba na yo Ntashobora kunsinda. Ibyago by'isi byose Ntibyadutandukanya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu, Buhungiro bwanjye, Yesu wamfiriye, Wowe, Rutare nshinzweho,",
+        "Nzakwiringir' iteka.Nuko, njye nihangana : Dor' iri joro ribi Vuba rigiye gucya,",
+        "Mpereko njye mw ijuru !"
+      ]
+    }
+  ]
+}

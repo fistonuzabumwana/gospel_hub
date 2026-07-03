@@ -1,0 +1,47 @@
+{
+  "number": 359,
+  "book": "Gushimisha",
+  "title": "lyo ntinye ko kwizera Kwanjy' ari guke",
+  "slug": "lyo-ntinye-ko-kwizera-kwanjy-ari-guke",
+  "uuid": "ff9a5878-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/lyo-ntinye-ko-kwizera-kwanjy-ari-guke/ff9a5878-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "lyo ntinye ko kwizera Kwanjy' ari guke, Kand’ iyo ngiye kuneshwa, Yesu ni W' umfata."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' aramfata, Akankomeza, Kukw ankunda bihebuje : Arankomeza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Urukundo rwanjye ruke Ntirwamufata. Sinamugundir' ubwanjye : Yesu ni W'",
+        "umfata."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntiyandeka, kukw ankunda.Nubwo ndi mubi; Anyishimir' ubwo nd' uwe ; itek'",
+        "aramfata."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ntiyakundir' ubugingo Bwanjye kubura; Yabucunguj' igiciro : Itek' aramfata"
+      ]
+    }
+  ]
+}

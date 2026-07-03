@@ -1,0 +1,67 @@
+{
+  "number": 218,
+  "book": "Gushimisha",
+  "title": "kubana na Yesu iteka mu ijuru",
+  "slug": "kubana-na-yesu-iteka-mu-ijuru",
+  "uuid": "ff961757-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/kubana-na-yesu-iteka-mu-ijuru/ff961757-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "kubana na Yesu",
+        "iteka mu ijuru",
+        "Bidutera umunezero,",
+        "Bikatwishimisha. ;",
+        "Mu isi ndi umushyitsi :",
+        "Sinzayihoramo;",
+        "Ahubwo ndi mu rugendo",
+        "Runjyana mu ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Urugo rw'Imana",
+        "Ajya arunyereka,",
+        "Ndurora runyegereye,",
+        "Arumpishuriye;",
+        "Bituma nifuza",
+        "Cyane kugerayo :",
+        "Ni ho mwandu w'ab'Imana,",
+        "Yerusalenu nshya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Paulo yaravuze,",
+        "Ati : Tuzabana",
+        "Iteka ryose n'Imana;",
+        "Ni ko tubisoma.",
+        "Iryo sezerano,",
+        "Urinsohoreze,",
+        "Tubane no muri iyi si,",
+        "Uhore undengera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nugenza utyo, Mwami,",
+        "Umwuka nuhera,",
+        "Urupfu ruzanyinjiza",
+        "Aho batagipfa :",
+        "Ni ho nzakumenya,",
+        "Nkuko unzi,Mukiza,",
+        "Niratire imbere yawe",
+        "Ko tuzahorana."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "number": 247,
+  "book": "Gushimisha",
+  "title": "unyigishe Mukiza,Iby’Umusaraba",
+  "slug": "unyigishe-mukizaibyumusaraba",
+  "uuid": "ff96e4e4-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/unyigishe-mukizaibyumusaraba/ff96e4e4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "unyigishe Mukiza,Iby’Umusaraba N'icyatumy’ uza mw isi,Ukatubambirwa Umenyeshe umumaro W'umunyabyah’ umwe, Umbwire n'igiciro Wanshungurishije !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Unyigishe n'impamvu  Y'isok’ itukura Yo mu rubavu rwawe,Urwo bacumise, Ari",
+        "jye gusa mw isi: Wacumuy’ Imana,Uba warayavuye Ngw’amber’ impongano."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "unyerek'urukundo rutarondoreka rwamanutse i kuzimu ku bwacu abihebe.uyu",
+        "mutim'ukonje wuzuy'inarijye ,uwatsemwo urukundo ruva i Gologota"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Unyigishe,Mukiza:ndi umunyabyaha pe icyantabara,mwami ni ubuntu bwonyine",
+        "Yesu ni jy'ugukennye:mu bo wapfiriye b'abanyabyaha babi,ni jyewe ukabije"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mukiza wanjye,Yesu ni wowe nizeye maze ubwo umpamagaye,ndakwiyeguriye none ubwo unyakiriye,njye nshima imbabazi na rwa rukundo unkunda,mbivuge ndinde mfa."
+      ]
+    }
+  ]
+}

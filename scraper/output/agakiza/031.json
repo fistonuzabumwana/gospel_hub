@@ -1,0 +1,41 @@
+{
+  "number": 31,
+  "book": "Agakiza",
+  "title": "Musamariyakazi, Yesu yaramubwiye",
+  "slug": "musamariyakazi-yesu-yaramubwiye",
+  "uuid": "ff9ced3b-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/musamariyakazi-yesu-yaramubwiye/ff9ced3b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Musamariyakazi, Yesu yaramubwiye Ati: Mp' utuzi nyweho, naw' aramusubiza; Byashoboka bite se,ngo mbe naguh' amazi? Kandi k'ur' Umuyuda nkab' Umusamariya? Nguk' uko yatangaye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umuntu wes' uzanywa ayo mazi nzamuha, Nta bw' azagir' inyota.kugez' iteka",
+        "ryose.Kukw ayo maz'ariyo yamanutse mw ijuru. Azamuhindukira isokw idudubiza, Muri w' iteka ryose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umpe kur’ayo mazi y'ubugingo bw'iteka, Amar' inyota mfite, sinzongere kuvoma. Yesu yumva ningoga uwo Musamariya. Ngwino kukw iyo mpano ituruka mw ijuru. Wayi habw' uyu munsi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iy' usobanukirwa igikorwa cy'I mana, Ukameny' ugusabye ayo mazi yo",
+        "kunywa,Naw' uba wamusabye, akaguh' ayo mazi. Amazi y'ubugingo ntabw' aba mur' iyi si Abantu batuyemo."
+      ]
+    }
+  ]
+}

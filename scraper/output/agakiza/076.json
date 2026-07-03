@@ -1,0 +1,56 @@
+{
+  "number": 76,
+  "book": "Agakiza",
+  "title": "Yemwe mwa bushyo bw'Imana",
+  "slug": "yemwe-mwa-bushyo-bwimana",
+  "uuid": "ff9ddfe4-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yemwe-mwa-bushyo-bwimana/ff9ddfe4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemwe mwa bushyo bw'Imana Mwihangan' ibihe bito.",
+        "Muri wa murw' uhoraho Muzabonay' Ibyishimo.",
+        "Hasigay' igihe gito, Intambar' ikazashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntukarogwe mur' iyi si Ntuka rek' Imana yawe.",
+        "Mu makuba no mu byago Kurikir' Umwami Yesu.",
+        "Buri munsi, buri munsi Aguha kunesha byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "N'unanirwa mu rugendo lnzir' imaze kuramba.",
+        "No mu makuba y'iyi si Iman'izakuruhura.",
+        "Hazabah' umunezero Wo kunezez' umugenzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni twizera tuzabona Cya gihugu cyo mw ijuru.",
+        "Kand' iyo n'inkuru nziza Nta bizatugerageza.",
+        "Turi hafi, turi hafi Yo guhurira mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ni dutumirwa n'urupfu Tuzimukan' ibyishimo.",
+        "Ibyo twiringiye byose Tuzabibona mw ijuru.",
+        "Hazab' amahoro menshi N'umunezer' uhoraho."
+      ]
+    }
+  ]
+}

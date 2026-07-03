@@ -1,0 +1,46 @@
+{
+  "number": 123,
+  "book": "Gushimisha",
+  "title": "Yesu, ni Wowe musa",
+  "slug": "yesu-ni-wowe-musa",
+  "uuid": "ff9353db-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/yesu-ni-wowe-musa/ff9353db-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, ni Wowe musa mbonyemo Amahoro nifuzaga. Najyaga nyashaka, sinyabone, Ngasuhuz' umutim' iteka."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "None, ni Yes' umpaza wenyine Nta n'irindi zina nemera, Kuk' ubugingo n'umunezero Bibonekera muri We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nifuzag' uko nakwinezeza, Ntita ku Mukiza wanjye. Nkimwirengagiza ntamwitaho, Nukw’amfatish' urukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Najyaga njya kw iriba ry'iyi si, Mfit' inyota nyinshi cyane, Naba ngiye kunyw'",
+        "agakam' ubwo, Nuko nkayabura, nkiheba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nuzuy ' agahinda n'ubwihebe,Mbuz' ibyo niringiraga; Maz' amaso yanjy' arahumuka, Ndakureba, Yesu, ndanyurwa"
+      ]
+    }
+  ]
+}

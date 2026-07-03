@@ -1,0 +1,49 @@
+{
+  "number": 407,
+  "book": "Gushimisha",
+  "title": "Umurimo wacu—Ni mwiza cyane",
+  "slug": "umurimo-wacu-ni-mwiza-cyane",
+  "uuid": "ff9b8f9d-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/umurimo-wacu-ni-mwiza-cyane/ff9b8f9d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umurimo wacu—Ni mwiza cyane : Dushakire Yesu—Abazimiye.Iyo babonetse,—Abo mw ijuru Bajya baririmba,—Bat'Aratsinze."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Uyu murimo ni mwiza; N'Umwami Yesu ntahwema. Dushishikare dukore: Ni W",
+        "uduter' imbaraga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uwitek' ashimirw'—Umucunguzi Wadutoye twese—Ngo tube benshi. Tur'",
+        "ab'intege nke:—Tujye twizera, Twe kugir' ubute—Tumukorera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uyu murimo we—Tuwuhoremo : Twibuk' izo mbuto,—Tuzibagare !",
+        "Nyir'ibisarurwa—Yaradutumye : Tuzagororerwa—Tuzimuritse."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mu makuba yose—N'ibibabaza, Naho batugaya,—Tuzakomere. Twibuk'",
+        "umurimo,—Tuwukomeze, Tub' ab'urukundo,—Ben' Uwiteka !"
+      ]
+    }
+  ]
+}

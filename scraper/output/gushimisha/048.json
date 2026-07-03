@@ -1,0 +1,49 @@
+{
+  "number": 48,
+  "book": "Gushimisha",
+  "title": "Ni jye, ni jye gusa, Nkwiriye gusabirwa",
+  "slug": "ni-jye-ni-jye-gusa-nkwiriye-gusabirwa",
+  "uuid": "ff911ac1-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ni-jye-ni-jye-gusa-nkwiriye-gusabirwa/ff911ac1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "chorus",
+      "lines": [
+        "Ni jye, ni jye gusa, Nkwiriye gusabirwa.",
+        "Ni jye, ni jye gusa, Nkwirive gusabirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Si na data, si na mama,Ni jye jyenyine, Nkwiriye gusabirwa. Si na data, si na",
+        "mama, Ni jye jyenyine, Nkwiriye gusabirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kandi si na mwene data,Ni jye jyenyine, Nkwiriye gusabirwa. Reka, si na mwene data."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "S' abo mu muryango wacu, Ni jye jyenyine, Nkwiriye gusabirwa. S’ abo muryango wacu...."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndetse si n'inshuti zanjye,Ni jye jyenyine, Nkwiriye gusabirwa. Reka, si",
+        "n'inshuti zanjye ....",
+        "(ly’Abirabura bo mw‘Amerika)"
+      ]
+    }
+  ]
+}

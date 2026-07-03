@@ -1,0 +1,55 @@
+{
+  "number": 437,
+  "book": "Gushimisha",
+  "title": "Mp' amavuta, Yesu, mbone kwaka !",
+  "slug": "mp-amavuta-yesu-mbone-kwaka",
+  "uuid": "ff9c3b0e-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/mp-amavuta-yesu-mbone-kwaka/ff9c3b0e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mp' amavuta, Yesu, mbone kwaka ! Mp' amavuta, ndakwinginze ! Mp' amavuta, Yesu, mbone kwaka ! Mbone kwaka, burinde bucya !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Turirimbe, turirimbe, Ngo Hozana : tugusingize Wowe, Mwam' utwar' abami:",
+        "Yesu, tugusingize"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mp' amahoro. Mukiza, nduhuke :Mp' amahoro. ndakwinginze ! Mp' amahoro,",
+        "Mukiza, nduhuke : Mp' amahoro, burinde bucya !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mp' umunezero, Yesu, ngushime : Mp' igikombe giseseka ! Mp' umunezero, Yesu, ngushime : Njye ngushima, burinde bucya !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mpa kumenek' iteka, Mukiza :Nkomeza ku Musaraba ! Mpa kumenek' iteka,",
+        "Mukiza : Ujy' umena, burinde bucya !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mpa guhora nkwihangir' amaso :Uk' unyigisha nkwemere ! Mpa guhora nkwihangir'amaso : Nkwigireho, burinde bucya !"
+      ]
+    }
+  ]
+}

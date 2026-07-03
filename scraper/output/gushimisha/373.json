@@ -1,0 +1,60 @@
+{
+  "number": 373,
+  "book": "Gushimisha",
+  "title": "Harihw’icyo nkwaka Mwami",
+  "slug": "harihwicyo-nkwaka-mwami",
+  "uuid": "ff9aa061-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/harihwicyo-nkwaka-mwami/ff9aa061-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Harihw’icyo nkwaka Mwami",
+        "Nubwo mpora ngucumuraho",
+        "Mwami unyeze unyejeshe",
+        "Amazi cyangw’umuriro"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mpanagurwe hose Mwami",
+        "N’umuriro nib’ushaka",
+        "Nkir’ibyaha birimburwe",
+        "Nkir’ibyaha birimburwe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nuntungniriza ubwenge",
+        "Nzanezerwa,nzaguhimbaza",
+        "Arik’umutima wera",
+        "Ndawushaka kurutaho"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ninezw’umutima wanjye",
+        "Ni bwo nzunguk’ubwenge bwose",
+        "Bwo mw’ijuru bwo mw’ijuru",
+        "Mwami mbubwirijwe na We"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ngerageza uko nshobora",
+        "Kwibuza inama mbi z’ibyaha",
+        "Nyamara njya mbyibonamo",
+        "Jy’umboneza,jy’umboneza"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "number": 72,
+  "book": "Gushimisha",
+  "title": "Twaheze mu mwijima mwinshi cyane",
+  "slug": "twaheze-mu-mwijima-mwinshi-cyane",
+  "uuid": "ff91cc46-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/twaheze-mu-mwijima-mwinshi-cyane/ff91cc46-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Twaheze mu mwijima mwinshi cyane; Umucyo w'isi ni Yesu ! Ubwiza bwe bwaralumurikiye : Umucyo w'isi ni Yesu !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Sang' uwo Mucy' ukwakir' ubu ! jye nzi yuko wammurikiye, Nari nd' impumy’",
+        "arampumura. Usang' uwo Mucyo nawe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta mwijim' ugir' uri kumwe na we:Umucyo w'isi ni Yesu ! Tugendane na W'",
+        "atumurikire: Umucyo w'isi ni Yesu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwa mpumyi zaheze mu mwijima mwe,Umucyo w'isi ni Yesu! Mwoge mu maraso, muhumuk' ubu : Umucyo w'isi ni Yesu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Har' indi s' itagomb' izuba rwose, Umucyo waho ni Yesu ! Umwana w''ntam'",
+        "ahaber' izuba : Umucyo waho ni Yesu !"
+      ]
+    }
+  ]
+}

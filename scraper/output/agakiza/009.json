@@ -1,0 +1,48 @@
+{
+  "number": 9,
+  "book": "Agakiza",
+  "title": "Mfit' Umukiza mwiza cyane",
+  "slug": "mfit-umukiza-mwiza-cyane",
+  "uuid": "ff9c6b39-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mfit-umukiza-mwiza-cyane/ff9c6b39-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mfit' Umukiza mwiza cyane, Kuko yazanywe no kunkiza. Yatanz' ubugingo bwe bwose, Ngw apfir' abari mw isi bose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yabambiwe ku musaraba, Ya bambiwe ku musaraba. Yabambiwe kubw' ibyaha nakoze, Yabambiwe ku musaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yasiz' ubwiza bwe mw ijuru, Aza mur' iyi si turimo. Yababajwe kubera jyewe,",
+        "Kand' anyugururir' ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yateranij' ibyaha byanjye, Ndetse n'imibabaro yanjye. Byose ni ko ya byikoreye,",
+        "Ngw ankize kand' amp' amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yesu yasubiye mw ijuru, Kuko yar' aneshej' urupfu. Arikw azagaruka vuba,",
+        "Gutwar'abamwizeye bose."
+      ]
+    }
+  ]
+}

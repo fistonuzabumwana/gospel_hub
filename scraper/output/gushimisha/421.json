@@ -1,0 +1,61 @@
+{
+  "number": 421,
+  "book": "Gushimisha",
+  "title": "Nguhaye, Data wera,Uyu mwaka wose",
+  "slug": "nguhaye-data-werauyu-mwaka-wose",
+  "uuid": "ff9be6a2-0670-11ea-9a58-deadbe058832",
+  "category": "Uwambere w'umwaka",
+  "url": "https://indirimbo.com/gushimisha/nguhaye-data-werauyu-mwaka-wose/ff9be6a2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nguhaye, Data wera,Uyu mwaka wose,",
+        "Ngo mbone kub' uwa we Mu bibaho byose.",
+        "Sinasaba kw ibyago Mbikurwaho byose;",
+        "Icyo ngusabye n'uko Nzajya ngushimisha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mbe, ni nde wah' umwana Byos' ibyo yifuza ?",
+        "Nyamara se ntamwima Ibyiza by'ukuri.",
+        "Nawe, Man' iby' uduha Biradukwiriye :",
+        "Birut' ibyo twibwira N'ibyo twisabira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ahar' ubuntu bwawe Buzanyemerera",
+        "Kubon' ihirwe ryinshi Ntari nsanzwe mfite;",
+        "Byamera bityo, Mwami,Nzajya ngushimira,",
+        "Ngo nkuz' izina ryawe Mu bataryemeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nib’ uzashaka yuko Mbon' imibabaro",
+        "N'ibyago n'amakuba,Ngo mfush' ibyo nkunda;",
+        "Nabw' uzamfashe, Mana,Ngo nibuke Yesu,",
+        "Uburyo yihanganye, Ubwo yampfiraga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nuko, mu byago byose.Nzajya ngusingiza,",
+        "Menye kw iby' umpa byose,Biva mu rukundo.",
+        "Nuk' uyu mwaka wose Ub' uwawe, Mana;",
+        "Mu byiza no mu byago, Mbiguhimbarishe"
+      ]
+    }
+  ]
+}

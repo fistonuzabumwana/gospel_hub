@@ -1,0 +1,41 @@
+{
+  "number": 281,
+  "book": "Gushimisha",
+  "title": "Ngiy' inkuru twumvise",
+  "slug": "ngiy-inkuru-twumvise",
+  "uuid": "ff982da1-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/ngiy-inkuru-twumvise/ff982da1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngiy' inkuru twumvise;N'uko Yes' akiza! Vuga hos' iyo nkuru Yuko Yes' akiza ! Menyesh' abarimbuka,Abo mu birorero N'abo mu midugudu, Yuko Yes' akiza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Menyesh' abananiwe Yuko Yes' akiza Menyesh' abashobewe Yuko Yes’ akiza!",
+        "Yavuy' amaraso ye Kera ku Musaraba,Ngw abakize, be gupfa:  Ni ko Yes’ akiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "I Rukig' ubabwire Yuko Yes' akiza ! Umvish' i Bugesera Yuko Yes' akiza ! Vug' i",
+        "Bunyambiriri N'i Ndorwa n'i Bumbogo,Bwira n'i Bufumbira Yuko Yes' akiza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Banyarwanda, mumenye Yuko Yes' akiza ! Nimwihane, mwemere Yuko Yes' akiza ! Umvish' abacuruzi, No mu nkik' ubivuge,N’i buzungu n'i bwami, Yuko Yes' akiza !"
+      ]
+    }
+  ]
+}

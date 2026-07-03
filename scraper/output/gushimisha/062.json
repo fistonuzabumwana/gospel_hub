@@ -1,0 +1,39 @@
+{
+  "number": 62,
+  "book": "Gushimisha",
+  "title": "Ntumwa za Yesu",
+  "slug": "ntumwa-za-yesu",
+  "uuid": "ff91837a-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/ntumwa-za-yesu/ff91837a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ntumwa za Yesu, murangurure, Mwamamaze mw is' ubwo butumwa bwe! Nimukwiz' inkuru z'Umucunguzi :Ubikunz' amwitabe!"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "haz' uwemeye ! Haz' uwemeye  Mubibwir' abato n'abakomeye. Yemera gutarur' abazimiye : Ubikunz, amwitabe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ubikunze naze, ntakererwe. Yinjire mw irembo twugururiwe. Yesu ni we nzir' igeza mw ijuru :Ubikunz' amwitabe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubikunze wese namwumvire : Ntabw' avuguruz' isezerano rye. Umusang'",
+        "agabany' ubugingo bwe :Ubikunz' amwitabe !"
+      ]
+    }
+  ]
+}

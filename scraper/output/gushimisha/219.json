@@ -1,0 +1,57 @@
+{
+  "number": 219,
+  "book": "Gushimisha",
+  "title": "Ubwo nzamar’ imirimo ngo nsezere kw'isi,",
+  "slug": "ubwo-nzamar-imirimo-ngo-nsezere-kwisi",
+  "uuid": "ff961bfd-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/ubwo-nzamar-imirimo-ngo-nsezere-kwisi/ff961bfd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubwo nzamar’ imirimo ngo nsezere kw'isi,",
+        "Umugezi witw' Urupfunywambutse,",
+        "Ni ho nzagera mw Ijuru,nsang' Uwamfiriye :",
+        "Azanyakiran’ ubuntu n’ineza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nzamumenya, nzamumenya  Nzaba mpagaz' imbere Ye, nyuzwe, Nzamumenya, nzamumenya ;Mbony’ inkovu zo mu biganza bye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nzanezerwa ni mbon’ubwiza bwo mumaso he,",
+        "Kandi sinzasiba kumushimira",
+        "Urukundo n'imbabazi n'ubuntu byatumye",
+        "Nanjy' amboner’ ikibanza mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abo nkunda bagezeyo mbafitiy’ ubwuzu:",
+        "Wa Mugezi ni wo wadutanije.",
+        "Ariko sinavug' ubwuzu bwinshi mfitiye",
+        "Umukiza wanjye wanyitangiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Azanshisha mw iremb’ansohoze mu rugo i We.",
+        "Azanyambikish’ umwenda wera de.",
+        "Nzaririmb’ iya Mose n’iy,Umwana,w’intama !",
+        "Yewe, nzanyurwa nirebeye Yesu !"
+      ]
+    }
+  ]
+}

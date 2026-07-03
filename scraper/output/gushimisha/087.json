@@ -1,0 +1,45 @@
+{
+  "number": 87,
+  "book": "Gushimisha",
+  "title": "Mbe, ntiwaturw' ibyo byaha byawe",
+  "slug": "mbe-ntiwaturw-ibyo-byaha-byawe",
+  "uuid": "ff923792-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/mbe-ntiwaturw-ibyo-byaha-byawe/ff923792-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbe, ntiwaturw' ibyo byaha byawe ? Usange Yesu ! Usange Yesu  Ntushaka no kubinesha rwose ? Wizer' amaras' akiza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Amaraso,kokw ashobora  Imitim' ishobewe Amaraso y’ Umucunguzi Ni yo mas' atuneshereza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mbe, ntiwaturw' ubwigenge bwawe? Usange Yesu ! Usange Yesu ! Akugir’ umugwaneza nka we !Wizer' amaras' akiza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbese, ntushaka no kwezwa dede?Usange Yesu ! Usange Yesu ! Emer' akoz’ ibyo byaha byose, Wizer’ amaras’ akiza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mbese, ntushaka kumuyoboka? Usange Yesu  Usange Yesu ! No kumusingiz’ iteka ryose? Wizer' amaras' akiza !"
+      ]
+    }
+  ]
+}

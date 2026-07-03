@@ -1,0 +1,45 @@
+{
+  "number": 140,
+  "book": "Gushimisha",
+  "title": "Mwami, ndakwimitse",
+  "slug": "mwami-ndakwimitse",
+  "uuid": "ff93e89e-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/mwami-ndakwimitse/ff93e89e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami, ndakwimitse : wime Mu mutima wanjye, Sinibagirweya mahwa : Njyan' i Gologota !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ibyabay’i Getsemane N’ibyo wababajwe byose, Sinzobyibagirwe, Mwami: Njyan’i Gologota."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Unyereke ya mva, Mwami,Aho bagushyize, Aho marayika wera Yaray' ataramye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nje nka Mariya, Mukiza, Kukurabukira; Nsanz’imva y’ irimw ubusa; Nshimy’Uwanzukiye!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Unkorer’ umusaraba,Niyange, mb’uwawe; Nsangire naw’ igikombe Wanyoye kubwanjye.Ndengera  Ndengera Mwami wanjye, ndengera"
+      ]
+    }
+  ]
+}

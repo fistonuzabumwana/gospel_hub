@@ -1,0 +1,54 @@
+{
+  "number": 295,
+  "book": "Gushimisha",
+  "title": "Mumushime, bana bato mwese",
+  "slug": "mumushime-bana-bato-mwese",
+  "uuid": "ff98d63f-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/mumushime-bana-bato-mwese/ff98d63f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mumushime, bana bato mwese:N' Umukunzi wanyu. Twese, twese, tujye tumushima : Adukunda twese."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mumusenge, bana bato mwese:N’ Umukunzi wanyu. Twese, twese, tujye",
+        "tumushima : Adukunda twese."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mumusange ..............."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mumukunde..............."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mumuture   ................"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mumukorere.............."
+      ]
+    }
+  ]
+}

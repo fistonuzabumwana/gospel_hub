@@ -1,0 +1,48 @@
+{
+  "number": 403,
+  "book": "Gushimisha",
+  "title": "Nyenyeri yo mu museke",
+  "slug": "nyenyeri-yo-mu-museke",
+  "uuid": "ff9b4c4c-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/nyenyeri-yo-mu-museke/ff9b4c4c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nyenyeri yo mu museke, U bonets' uri kw ijuru,Ur' umucy' utuvira. Tumurikir' imitima, Utweyurir'mwijima Ukunda kuba mw isi."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mwami, Mwana—w'Uwiteka, Muri Wowe,—har’ umucyo: Jy udushorera, Mukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni Wowe, Yesu, wanshatse Mu mwijima wa Satani,Ubwo nari muri wo, Wowe,",
+        "Mucunguzi wanjye, Wankuye mu bwenge buke Kubw' urukundo rwawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wiyambuy' icyubahiro, Wigira nk'umugaragu Utagir' agaciro. Uhorw' ibyaha",
+        "nakoze, Mpeshw' amahoro n'ubuntu N'urupfu rwawe, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mucunguzi, mbane nawe, Njye nkwizeran’umurava :Uz' intege nke zanjye; Njye",
+        "nkor’ iby' ushaka byose. Non' unshunshumurireho Umwuka wawe Wera."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "number": 322,
+  "book": "Gushimisha",
+  "title": "Aba bombi, Mana Data",
+  "slug": "aba-bombi-mana-data",
+  "uuid": "ff9980a0-0670-11ea-9a58-deadbe058832",
+  "category": "Ubukwe",
+  "url": "https://indirimbo.com/gushimisha/aba-bombi-mana-data/ff9980a0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Aba bombi, Mana Data , Bashyingiranyw’ amahoro, Ujy'ubarinda neza. Mugwaneza w'ubutunzi, Ubatere kwizigira,Kubw' imbabazi zawe. Bakwizere,—Bagusenge, Wowe, Data,—Kuk' ukunda No kubikiriz' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Bahimbaz' izina ryawe; Rinda guterana kwabo Kubw' urukundo rwawe. Kand'",
+        "amahoro yaw' abe i wabo none n'iteka hamwe n'ubuntu bwawe. Amen ! Amen !—Ubemeze. Ubafashe,—Ubarinde Mu kubaho kwabo kwose."
+      ]
+    }
+  ]
+}

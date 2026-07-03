@@ -1,0 +1,26 @@
+{
+  "number": 135,
+  "book": "Gushimisha",
+  "title": "Mukiz' utubonez' iminsi yose",
+  "slug": "mukiz-utubonez-iminsi-yose",
+  "uuid": "ff93b5cb-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/mukiz-utubonez-iminsi-yose/ff93b5cb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mukiz' utubonez' iminsi yose; Mu kubaho kwacu, tugusingize. Utubonekere,tur' abangizi; Nukw amahoro yaw’atwinjiremo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tugendan' iteka mu byiringiro; Tubabaye nabwo, tukwizigire. Hahirw’ uruhurwa",
+        "n'inama zawe, Ukamutabar’ ukamwikiriza."
+      ]
+    }
+  ]
+}

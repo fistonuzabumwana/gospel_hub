@@ -1,0 +1,42 @@
+{
+  "number": 370,
+  "book": "Gushimisha",
+  "title": "Urampamagara",
+  "slug": "urampamagara",
+  "uuid": "ff9a8f36-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/urampamagara/ff9a8f36-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Urampamagara, Yesu, Kuk' uz' izina ryanjye; Nanjy' uwagucumuyeho Ubu ndihannye rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nshaka kukwiyegurira :mber' Umwungeri, Mwami; Ujy’ undagir' ukT ushaka.",
+        "Kand' unyikenurire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wemeye kwitanga rwose Ng' unkize, Yesu wanjye; Iyo neza yaw' ishimwe, Naw'",
+        "ushimishwe, Mwami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Witinya, mutima wanjye,Yes' arakujy' imbere : Mu kubaho kwawe kose, Nta",
+        "kizamukunyaga."
+      ]
+    }
+  ]
+}

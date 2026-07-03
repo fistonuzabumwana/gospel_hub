@@ -1,0 +1,42 @@
+{
+  "number": 404,
+  "book": "Gushimisha",
+  "title": "Yesu Krist' agiye kuza",
+  "slug": "yesu-krist-agiye-kuza",
+  "uuid": "ff9b7b4d-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/yesu-krist-agiye-kuza/ff9b7b4d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu Krist' agiye kuza:Tubyuke, ben' Imana. Igihe eye kiri hafl: Umwam' azaboneka. ( x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Aje kwimana n'abera No gukiz' Itorero. Ni W' uzaryambik' ikamba Ry'ubwiza",
+        "budashira. (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntutinye, mukumbi muto :Ukundwa n'lmana, So; Umusaraba wa Yesu Ni wo",
+        "bendera yawe. (X 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Abo mw isi ni bakwanga, Biguhesh' umugisha; Urukundo no kwizera Bizaguha",
+        "kunesha. (x 2)"
+      ]
+    }
+  ]
+}

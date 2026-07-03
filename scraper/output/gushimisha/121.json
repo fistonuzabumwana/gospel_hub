@@ -1,0 +1,46 @@
+{
+  "number": 121,
+  "book": "Gushimisha",
+  "title": "Yesu ni We mucyo wanjye",
+  "slug": "yesu-ni-we-mucyo-wanjye",
+  "uuid": "ff934280-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/yesu-ni-we-mucyo-wanjye/ff934280-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu ni We mucyo wanjye ;Amurikir' inzira. Nemer' intege nke zanjye; Nizera kw andengera. Amurikir'inzira. (X 2)",
+        "Nemer' intege nke zanjye; Nizera kw andengera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu ni We nshungu yanjye :Koko yaramfiriye ! Ni We byiringiro byajye; Ni We",
+        "wambabariye. Koko yaramfiriye ! (x 2)",
+        "Ni We byiringiro byanjye; Ni We wambabariye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu ni W' ump' amahoro;Atuma nkiranuka. Ajy'amp' ubugingo na bwo Bunkiz'",
+        "ibyah' iteka. Atuma nkiranuka (X2)",
+        "Ajy'amp' ubugingo na bwo Bunkiz' ibyah' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yishyuye n'imyenda yanjye,Angur' amaraso ye. Yanteguriye gakondo Mu bwami",
+        "bwo mw’ ijuru. Angur' amaraso ye; (x 2)",
+        "Yanteguriye gakondo Mu bwami bwo mwijuru."
+      ]
+    }
+  ]
+}

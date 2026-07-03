@@ -1,0 +1,42 @@
+{
+  "number": 156,
+  "book": "Gushimisha",
+  "title": "Ni jye, Yesu, witanze",
+  "slug": "ni-jye-yesu-witanze",
+  "uuid": "ff94598b-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/ni-jye-yesu-witanze/ff94598b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ni jye, Yesu, witanze Kera ku Musaraba, Mbitewe n'urukundo Ngo ngukiz' ibyaha byawe. Mugenzi, narakwitangiye ; Wanyituy' iki wo we ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Narets' ubwiza bwanjye Nari mfite mw ijuru, Nsig' umucyo kwa Data, Nza mu",
+        "mwijima w'iyi si,Naretse byose nkurengera : Wants' iki kubwaruye ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Banyish' urupfu rubi, Birut' uko byavugwa; Navushijw' amaraso Ng' utazapfa",
+        "nabi nawe Nakwihanganiy' ibyo byose : Wanyihanganiy' iki?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Navuy' i Wanjy' i bwami, Nger' ah' uri mw isi mbi, Nkuzanir' agakiza N'ubugingo",
+        "budashira.Ko nakugabiy' impan' ubwo, Wigeze kuntur' iki ?"
+      ]
+    }
+  ]
+}

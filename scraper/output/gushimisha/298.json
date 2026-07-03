@@ -1,0 +1,48 @@
+{
+  "number": 298,
+  "book": "Gushimisha",
+  "title": "Mbe nk'umurase w'izuba",
+  "slug": "mbe-nkumurase-wizuba",
+  "uuid": "ff98ed13-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/mbe-nkumurase-wizuba/ff98ed13-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbe nk'umurase w'izuba Aho ngera hose, Mbonesh' umucyo wa Yesu Mu mwijima w'isi."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu, Mucyo w'isi, Mbe nk'umurase kubwawe,Ngez’ umucyo wawe Mu mwijima w'iyi si !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mbe rik'umurase w'izuba  weyur' umiwijima wo mu mitima y'abantu Bataz'",
+        "Umukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbe nk'umurase w'izuba,  Mfash' ab'i muhira, nkwiz' amahoro ya Yesu  Mu bo",
+        "duturanye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mbe nk'umurase w'izuba :Mbisezeranye  ntyo. nerekan' ingeso nziza ; Ziva kuri",
+        "Yesu."
+      ]
+    }
+  ]
+}

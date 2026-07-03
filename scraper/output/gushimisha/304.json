@@ -1,0 +1,61 @@
+{
+  "number": 304,
+  "book": "Gushimisha",
+  "title": "Harihw Inshuti y'abana",
+  "slug": "harihw-inshuti-yabana",
+  "uuid": "ff9910a7-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/harihw-inshuti-yabana/ff9910a7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Harihw Inshuti y'abana Ihoraho mw ijuru, Ibakund' urukundo Rutagir' iherezo.",
+        "Nubw'inshuti zo mw’isi Zaduhararuka,  Inshuti yacu, Yesu, Ntiyaduhemukira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kandi mw ijuru ry'Imana, Har' uburuhukiro Bw'abana bamukunda Bakambaz'",
+        "Imana, Se Ahw abagenzi bato Bajya basohora;   Baruhukir' iteka Mu mahor’",
+        "adashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nyir'urugo rwo mw ijuru N' Uwatubabarijwe. Ahamagar' abana Ngo binjire muri",
+        "rwo.N’ urugo rwiza cyane Rw'amahoro masa; Kand' ibyishimo byaho Birut' iby'abo mw isi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Harihw amakamba yera Y'abana bakijijwe Bazaherwa mw ijuru  Na Yesu",
+        "bakoreye. Abamushimishije Bakunz’ izina rye, Azabagororera Ingororano nziza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Harihw indirimbo nziza  Y'abana bakijijwe  Bazaririmb' iteka,Basohoye mw",
+        "ijuru:Ishim’ urukundo Uwabacunguye;Kand' abayiririmba Ntabwo bazacogora"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Hariho n'imyenda yera Y'abana bakijijwe  N'impundu z'ibyishimo N'inanga",
+        "z'izahabu.Abakunz' Umukiza Bazabigabirwa, Tukiriho dukunde Yes' urukundo",
+        "rwinshi."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "number": 194,
+  "book": "Gushimisha",
+  "title": "Mana nduburira amaso yanjye ku misozi",
+  "slug": "mana-nduburira-amaso-yanjye-ku-misozi",
+  "uuid": "ff9584db-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/mana-nduburira-amaso-yanjye-ku-misozi/ff9584db-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana nduburira amaso yanjye ku misozi",
+        "Mbe gutabarwa kwanjye kuzava he? Mubimbwire",
+        "K’Uwiteka niho guturuka",
+        "Ku Mana yaremy’ijuru n’isi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntizemera k’ibirenge byawe biteguza",
+        "Ikurinda ntabw’ihunikira ntisinzira",
+        "Imana irind’Abisirayeri",
+        "Ihor’iri maso  ntisinzira"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Imana ni Yo Murinzi wawe wo kwizerwa",
+        "Niyo gicucu cy’iburyo bwawe gihoraho",
+        "Ku manyw’izuba ntirizakwica",
+        "N’ijoro ukwezi ntuzagutinya"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Imana niyo ikurind’ibibi byose iteka",
+        "Imana niy’irind’ubugingo bwawe neza",
+        "Izakurind’amajya n’amaza",
+        "None no mu bihe bidashira"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "number": 431,
+  "book": "Gushimisha",
+  "title": "Abakund' iby'isi",
+  "slug": "abakund-ibyisi",
+  "uuid": "ff9c1c37-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/abakund-ibyisi/ff9c1c37-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Abakund' iby'isi—Ntabwo babihaga; Ba sogokuruza—Na bo ntibahaze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abanga kwihana—Muratubabaza. Ko tubaburira,—Mukizib' amatwi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibi bibashuka,—Nta kizarokoka, Kerets' abihannye,—Yes' akabakiza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "iyi s' izashira—N'ibirimo byose ; Inka n'imirima—N'intoke n'inzoga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nta kizasigara :—Bizab' umuyonga Ubw' is' izashira,—Muzasigara he ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Twebw' abakijijwe—'Turanezerewe guca mur'iyi si,—Dufit' amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Mwami wacu Yesu,—Turagushimira Ko wadupfiriye,—Ntituzarimbuke."
+      ]
+    }
+  ]
+}

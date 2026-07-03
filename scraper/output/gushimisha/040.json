@@ -1,0 +1,33 @@
+{
+  "number": 40,
+  "book": "Gushimisha",
+  "title": "Ndakwizeye, Yesu",
+  "slug": "ndakwizeye-yesu",
+  "uuid": "ff90e2d2-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ndakwizeye-yesu/ff90e2d2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndakwizeye, Yesu ,Mwana w'intama ko wamfiriye.None,ndakwinginze, Unyoz' umutima, Nonubu, mb'uwawe unyakire !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nyuzuz' imbabazi, Unyobor' inzira, umpembure !Ubwo wankunz' utyo, Ukamfira, Yesu,  Umvugutire, nanjye ngukunde!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni nterw' umwijima N'ibyago by'iyi si, unyobore ! Mmar' umubabaro, Weyur’",
+        "umwijima, Kandi ntundekere kure yawe !"
+      ]
+    }
+  ]
+}

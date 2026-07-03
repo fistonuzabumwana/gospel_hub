@@ -1,0 +1,46 @@
+{
+  "number": 148,
+  "book": "Gushimisha",
+  "title": "Nta rukundo rusa n’urwa Yesu",
+  "slug": "nta-rukundo-rusa-nurwa-yesu",
+  "uuid": "ff942283-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/nta-rukundo-rusa-nurwa-yesu/ff942283-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nta rukundo rusa n’urwa Yesu Rutazarangira: Ni rwo ruzagez' abana be Bose mu bwami bwe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Banguka, winjire Mur’ urwo rukundo Ruhebuje rw’ Umucunguzi Watubabarijwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta wundi mutima nk’ uwa Yesu Wuzuy’ imbabazi, Kand’ amarira y'abantu be",
+        "Arayazi neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nta rindi jwi risa n’irya Yesu Rihamagar’ abe, Ngo tumwitabe, tumwumvire, Tumukurikire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nta bihembo bisa n’ibyo Yesu Azah' abantu be, Azabiduh’ abamwizera, Tukamukorera."
+      ]
+    }
+  ]
+}

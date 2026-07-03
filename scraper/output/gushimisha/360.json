@@ -1,0 +1,41 @@
+{
+  "number": 360,
+  "book": "Gushimisha",
+  "title": "Rukundo rwinshi",
+  "slug": "rukundo-rwinshi",
+  "uuid": "ff9a5dbf-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/rukundo-rwinshi/ff9a5dbf-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Rukundo rwinshi,—Buntu butarutwa, Umwami Yesu—Kw agiriwe nabi, Akubitirwa—Ibibi nakoze ngw’anshungure rwose:—Abishimirwe"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ubuntu bwawe—Bumfasha, Mwami.  Busumba cyane—Impano zose. Njya",
+        "ntekereza,—Nkir' aha mw isi, Ubwo buntu bwinshi—Bwanshunguye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand’ iyo ngoswe—N'umwijima mwinshi Inshuti yanjye—Imfat’ ukuboko;",
+        "Singitiny' ubwo,—Ari y' imfashije : Ntumbira mw ijuru,—Yes' antinyuye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umusaraba—Wawe ni w' unkiza; Ni W' unduhura—Rwos' imibabaro. N'",
+        "ubuhungiro—Bwanjye buhoraho; Umbera n'icyiru—Ku Mucamanza."
+      ]
+    }
+  ]
+}

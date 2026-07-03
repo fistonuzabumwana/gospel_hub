@@ -1,0 +1,33 @@
+{
+  "number": 9,
+  "book": "Gushimisha",
+  "title": "Yes’ashimwe turamushim’umukiza",
+  "slug": "yesashimwe-turamushimumukiza",
+  "uuid": "ff8ff695-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/yesashimwe-turamushimumukiza/ff8ff695-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes’ashimwe turamushim’umukiza Hose bahimbaz’urukundo rwe Mumushime ngabo zo mw’ijuru Mwese Muhimbaz’ubuntu n’ubwiza bwe Ukw’intama zirindwa n’umushumba Ni ko Yes’arind’abana be Mumushime ngabo mw ijuru mwese Mutanarir’urwo rukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yes’ashimwe turamushim’umukiza kubw’ibyaha byacu yapfiriye yaje mw’isi",
+        "ngw’atubohore adukize aduh’ubugingo budashira yarabambw’abyemejwe n’urukundo abagome baramuhemukira yambikwa n’ikamba ry’amahwa mu mutwe byos’abyemezwa n’urukundo rwe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes’ashimwe turamushim’umukiza yarazutse yicara mw’ijuru non’ashimwe n’abari mw’ijuru rirerire none twese ntitugitiny’urupfu nyagasani wararunesheje ahubwo rwahinduw’irembo ry’ijuru no kuzaka kwawe  mucunguzi."
+      ]
+    }
+  ]
+}

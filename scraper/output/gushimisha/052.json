@@ -1,0 +1,38 @@
+{
+  "number": 52,
+  "book": "Gushimisha",
+  "title": "Utahe ! Utahe ! Ko wazerereye?",
+  "slug": "utahe-utahe-ko-wazerereye",
+  "uuid": "ff913569-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/utahe-utahe-ko-wazerereye/ff913569-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Utahe ! Utahe ! Ko wazerereye? Mu gihugu cya kure, Ibya S' ubyayirayo?"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mwana wanjy' uzimiye, Tyo ngwino, garuka !Ngwino ,Ngarukira !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Utahe ! Utahe ! Nturarambirwa se ? Izo ngurub' uzite ! Ibyo zirya si byiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Utahe ! Utahe ! Ntuzi ko niriwe Mpagaz' aha kwirembo, Mfit' ubwuzu kubwawe."
+      ]
+    }
+  ]
+}

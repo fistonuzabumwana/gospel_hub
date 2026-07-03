@@ -1,0 +1,67 @@
+{
+  "number": 201,
+  "book": "Gushimisha",
+  "title": "Bayoboke, mubyuke.",
+  "slug": "bayoboke-mubyuke",
+  "uuid": "ff95ad23-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/bayoboke-mubyuke/ff95ad23-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Bayoboke, mubyuke.",
+        "Mwe, ntore z'Umwami,",
+        "dufate mu maboko",
+        "lntwaro za Yesu.",
+        "Mu nzira yo kunesha",
+        "tuyoborwa na Yesu,",
+        "tujyane na W' iteka,",
+        "Aturwanirire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Impanda ziravuze",
+        "Uti Nimuze, mwitabe",
+        "Ikamba ry'ubugingo",
+        "N’ ingabire yanyu.",
+        "Ni mwangwa n'ababisha",
+        "Mukomere,murwane,",
+        "Mugir' umwete mwinshi,",
+        "Mutsinde Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mubyuke, mutabare,",
+        "Mudashidikanya",
+        "Ntihagir' usigara;",
+        "Mutumbire Yesu.",
+        "Kandi mujye mutwara",
+        "Intwaro zo kwizera",
+        "Zizatuma munesha,",
+        "Mugir' ibyishimo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mubyuke vuba vuba,",
+        "Murwane mwihwema.",
+        "Mwizer’izina ryera;",
+        "Ni iryo muneshesha.",
+        "Ni muva ku rugamba",
+        "Mutahanye na Yesu,",
+        "Muzabon’ amahoro",
+        "Y'iteka mw’ ijuru."
+      ]
+    }
+  ]
+}

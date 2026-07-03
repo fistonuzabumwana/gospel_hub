@@ -1,0 +1,50 @@
+{
+  "number": 242,
+  "book": "Gushimisha",
+  "title": "Mwana w'Imana, mbega wakoz’iki",
+  "slug": "mwana-wimana-mbega-wakoziki",
+  "uuid": "ff96c124-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/mwana-wimana-mbega-wakoziki/ff96c124-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwana w'Imana, mbega wakoz’iki,Cyatumy’ucirw’iteka iy’ababi ? Impamvu n'iki yaguteye gupfa ?Uyitubwire, turakwinginze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wapfuy' urupfu rw'abagome, Mwami Uhemurwa, ushinyagurirwa. Ntangajwe",
+        "n'uko.wemeye kubambwa, Upfa nab’utyo ku Musaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ayo makuba wayatewe n'iki ? N’ibyaha byanjye bakujijije ! Ni jye wapfiriye,",
+        "nd’umunyabyaha : Sinkwiriy’izo mbabazi zawe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nta cyaha wigcze gukora, Yesu :Ubuntu bwawe burantangaza  Ibyaha byanjye",
+        "bitagir’ingano Warabyikorey’ urandokora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Reka ngushimir' ubwo buntu bwinshi !Nariha nte kubabara kwawe? Akir’ubwenge",
+        "bwanjye n'ubugingo. Sinkir’uwanjye: waranshunguye"
+      ]
+    }
+  ]
+}

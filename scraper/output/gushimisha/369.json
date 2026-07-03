@@ -1,0 +1,33 @@
+{
+  "number": 369,
+  "book": "Gushimisha",
+  "title": "Ngukunde Yesu Mwami wanjye",
+  "slug": "ngukunde-yesu-mwami-wanjye",
+  "uuid": "ff9a89ab-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/ngukunde-yesu-mwami-wanjye/ff9a89ab-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngukunde Yesu. Mwami wanjye,Mukiza wanjye, ngukunde; Ngukunde, nkor' ibyo gushimwa N’ibikunezeza byose,Ngeze ku munsi wo gupfa, Yesu, nkigukunda !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta wundi ngir' uhwanye nawe kuk' ungwiriz' imbabazi; Ngukunde, Yesu,",
+        "ngushimishe Akanwa, no mu mutima.Ni Wowe Yes’ ukuraho Ibyaha by'abantu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ngukunde. Yesu Databuja, Mwana w'lmana Rurema; Ngukundish’ imbaraga zose, Nahw amakub' ari menshi,Ngeze ku munsi wo gupfa, Yesu, nkigukunda !"
+      ]
+    }
+  ]
+}

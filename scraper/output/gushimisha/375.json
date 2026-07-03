@@ -1,0 +1,70 @@
+{
+  "number": 375,
+  "book": "Gushimisha",
+  "title": "Habay’umunsi w’ishimwe mw’ijuru",
+  "slug": "habayumunsi-wishimwe-mwijuru",
+  "uuid": "ff9aaa90-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/habayumunsi-wishimwe-mwijuru/ff9aaa90-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Habay’umunsi w’ishimwe mw’ijuru",
+        "Yesu yitanga ngw’agere mw’isi",
+        "Aza kubyarwa n’umwar’utunganye",
+        "Uwer’aturana natw’ababi"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Dore urukundo rwatumy’ampfira",
+        "Ibyaha byanjy’abibamba mu mva",
+        "Maz’arazuka ngo ampuze na Se",
+        "Nagaruka nzamushimir’ibyo"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Habay’umunsi babamb’Umukiza",
+        "I Gologota ku Musaraba",
+        "Ahemurw’avumw’atukwa n’abantu",
+        "Yikorera ibyaha byanjye byose"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Habay’umuns’aruhukira mu mva",
+        "Harindwa n’abamarayika be",
+        "Niko yitanze ngo amber’Umukiza",
+        "Bihebe mwese,mumwiringire"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Habay’umunsi satan’aratsindwa",
+        "Ntiyaheza Yesu mu gituro",
+        "Nukw’arazuka,urupf’arutsinze,",
+        "None ari mw’ijuru iburyo bwa Se"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Hazab’umunsi tuzumv’ah’impanda",
+        "Harabagiran’ijuru ryose",
+        "Yes’uwo azaza mu bwiza bwe bwose",
+        "Azim’ingoma uwo Mwami wanjye"
+      ]
+    }
+  ]
+}

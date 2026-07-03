@@ -1,0 +1,37 @@
+{
+  "number": 401,
+  "book": "Gushimisha",
+  "title": "Iri joro, yemwe bakristo mwese",
+  "slug": "iri-joro-yemwe-bakristo-mwese",
+  "uuid": "ff9b3e2c-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/iri-joro-yemwe-bakristo-mwese/ff9b3e2c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Iri  joro, yemwe bakristo  mwese, Turabibuts' Umwana w'Imana, Uko yaje kuducungura twese,Ngw Iman' izadukure mu byaha.Abo mw isi bose banezerewe Iri joro, bibuk' Umukiza. Mupfukame,",
+        "mushim’Umucunguzi I Tunezerwe, tunezerwe twese ! (x2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kwizigira kwacu, bakristo mwese,Kudutere guhimbaz' Umwami; Inyenyeri y’",
+        "iracyaka kw ijuru Ahw abanyabwenge bayibonye. Uwo Mwami yashyizwe mu muvure: Mubimenye, rubanda mwese mwe ! Munezerwe kukw Iman' ibikiza. Munezerwe, mwambaz' uwo Mwami ! (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umukiza yabakuye mu kaga No mu buretwa bw'umwanzi mubi. Mwes' abita ben'",
+        "Imana Rurema; Abigish' iby'urukundo rwayo.Tumwerurire yuko",
+        "tumukunda:Yadupfiriye ku Musaraba. Rubanda mwe, mwishime cyane none !",
+        "Tunezerwe, tunezerwe twese ! (x 2)"
+      ]
+    }
+  ]
+}

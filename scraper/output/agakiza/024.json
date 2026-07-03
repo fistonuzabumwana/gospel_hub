@@ -1,0 +1,50 @@
+{
+  "number": 24,
+  "book": "Agakiza",
+  "title": "Yes' aduhamagaye mu rukundo",
+  "slug": "yes-aduhamagaye-mu-rukundo",
+  "uuid": "ff9cbf91-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yes-aduhamagaye-mu-rukundo/ff9cbf91-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' aduhamagaye mu rukundo, Jye na we, ndetse n'abandi. Kand' ubu yiteguye kukwakira. Reka gutinda mu byaha!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Garuka, garuka. Ugarukir' Umukiza. Reka gutind' aragutegereje. Non'",
+        "ugarukire Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntutinde, dor' araguhamagara. Ategereje ko waza. Hafi ya Yesu haracyar'",
+        "umwanya, Ndets' uhagije n'abandi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ibihe byacu bihita ningoga. Ntibizagaruk' ukundi. Sanga Yesu vub' ubon'",
+        "amahoro. Bikor' ukiri muzima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Witegerez'urukundo rwa Yesu. Ni rwo rukwiriye bose. Kand' atwibuka kubw'",
+        "imbabazi ze. Jye na we ndetse n'abandi."
+      ]
+    }
+  ]
+}

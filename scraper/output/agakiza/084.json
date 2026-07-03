@@ -1,0 +1,51 @@
+{
+  "number": 84,
+  "book": "Agakiza",
+  "title": "Mbes' aho wamenye rya zina ryiza",
+  "slug": "mbes-aho-wamenye-rya-zina-ryiza",
+  "uuid": "ff9e06a5-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mbes-aho-wamenye-rya-zina-ryiza/ff9e06a5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbes' aho wamenye rya zina ryiza",
+        "Ry'Umukiza wacu Yesu ?",
+        "Riraririmbwa mur' iyi si yose,",
+        "Rivugwa mu bantu bose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu ni we zina rihebuje, Rirul' ayandi yose mw isi. Rifit' imba¬raga zo",
+        "kudufasha, Ridukiz' ibyaha byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni ryo rihoz' umutim' ubabaye Riratunezeza rwose. Mu mubabaro no mu byago byinshi Ribasha no kuturinda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndetse no mu mwijima mur'iyi si Rimurika nk'inyenyeri. Rimp' amahoro, rimpa",
+        "n'ubutwari Ndetse no kugeza gupfa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Amazina yos' aribagirana Kerets' izina rya Yesu. Rizahora rimurika mw ijuru.",
+        "Yesu ni we zina ryiza."
+      ]
+    }
+  ]
+}

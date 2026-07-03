@@ -1,0 +1,54 @@
+{
+  "number": 130,
+  "book": "Gushimisha",
+  "title": "Nazimiriye kure yawe Non’untarure",
+  "slug": "nazimiriye-kure-yawe-nonuntarure",
+  "uuid": "ff939369-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitaba Yesu",
+  "url": "https://indirimbo.com/gushimisha/nazimiriye-kure-yawe-nonuntarure/ff939369-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nazimiriye kure yawe Non’untarure! Nagundiriy' ibyaha byanjye : Ndaje, noneho."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nditabye  Nditabye Ntabwo nzongera. Nyemerer’ umbabarire. Mwami, nyakira!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Napfapfany' iyo myaka yose :Non’untarure  Nkwitwayeho, Mukiza wanjye Ndaje, noneho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Narembejwe n’ibyaha byanjye :None untarure! Niringiy’ urukundo rwawe: Ndaje, noneho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Wamviriy’amaraso yawe :Non' untarure! Ubwaw' uraz’ uranshungura  Ndaje,",
+        "noneho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Umv’uko ntats' unkize, Yesu Non’untarure ! Mukiza, nyeza nk'urubura : Ndaje",
+        "noneho."
+      ]
+    }
+  ]
+}

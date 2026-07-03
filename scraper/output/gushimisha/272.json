@@ -1,0 +1,50 @@
+{
+  "number": 272,
+  "book": "Gushimisha",
+  "title": "Umwami ageze ku irembo",
+  "slug": "umwami-ageze-ku-irembo",
+  "uuid": "ff97e022-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/umwami-ageze-ku-irembo/ff97e022-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umwami ageze ku irembo, Wabambwe ku Musaraba;",
+        "Yaje kudukoranya abe,Tubane mu ijuru."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ku irembo Ku irembo ! Ubu ari ku irembo!",
+        "Nuko araje, nuko araje, Kandi ageze ku irembo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyerekana kuza kwe Birihuta kuboneka :",
+        "Agiye kutugabira Kubaho kw'iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntihazabura intambara; Ntabwo amahoro azahora.",
+        "Keretse Yesu atsembyeho Urupfu n'ibyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Maze, mu isi yagizwe nshya, Tuzahaba, dusugire,",
+        "Kudapfa kwakuye gupfa,Tutakibabara."
+      ]
+    }
+  ]
+}

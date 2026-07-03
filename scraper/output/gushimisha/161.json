@@ -1,0 +1,47 @@
+{
+  "number": 161,
+  "book": "Gushimisha",
+  "title": "Mbwir’amagambo ya Yesu",
+  "slug": "mbwiramagambo-ya-yesu",
+  "uuid": "ff947b7c-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/mbwiramagambo-ya-yesu/ff947b7c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbwir’amagambo ya Yesu; Mbwir’ibyo yankoreye.",
+        "Ndirimbira n'indirimbo Irut' izindi zose:",
+        "Ya yindi y'abamarayika Ba bungeri bumvise",
+        "Bat' Uwiteka yubahwe, Kand' amahor' abe mwisi."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mbwir' amagambo ya Yesu; Mbwir' ibyo yankoreye. Ndirimbira n'indirimbo Irut' izindi zose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mbwir’iby'iminsi yamaze Ashukwa n'Umwanzi we,",
+        "N'uko Satani yatsinzweN'ljambo ry'Uwiteka.",
+        "Mbwira n'ibyiza yakoze N'iby'imibabaro ye",
+        "N'uko yahinyuwe n'abe N'uko yasuzugurwaga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbwir' iby'urupfu rwa Yesu N'iby'Umusaraba we",
+        "N'uko yahambw' akazuka:Non' ariho, ntagipfa.",
+        "Mbwir' urukundo rwe rwinshi Rwatumy' anshungur’atyo.",
+        "Ayi we ! bintey' agahinda:Yes'ibyo yambabarijwe!"
+      ]
+    }
+  ]
+}

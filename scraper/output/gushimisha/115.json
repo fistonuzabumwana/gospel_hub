@@ -1,0 +1,39 @@
+{
+  "number": 115,
+  "book": "Gushimisha",
+  "title": "Nabonye umukunzi Mwiza",
+  "slug": "nabonye-umukunzi-mwiza",
+  "uuid": "ff930a2a-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nabonye-umukunzi-mwiza/ff930a2a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nabonye umukunzi mwiza yarankunze ntamuziYamfatishije umugozi, arirwo rukundo rwe.Izo ngoyi ze zanteye kuba imbata ye rwose.Njye ndi uwe, nawe ni uwanjye kugeza iteka ryose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nabonye umukunzi mwiza kera yaramfiriye Yaranguze ampa ubugingo nawe yaranyihaye.None ibintu mfite byose ntabwo nkibigundira. Ibyo ntunze nanjye ubwanjye ni iby’uwo mucunguzi!!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nabonye umukunzi mwiza byose arabishobora.Ajya andinda akaga kose munzira ijya mu ijuru.Kumuhanga amaso iteka bizankiza intege nke.Nshira ubwoba, nshira ubute,nyuma, nzatabaruka!!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nabonye umukunzi mwiza niwe nyiri imbabazi.Niwe mujyanama wange. Niwe undengera iteka.Nta kubaho nta n’urupfu, nta n’abadayimoni,Ntabya none, ntabizaza byazantanya Na Yesu !!"
+      ]
+    }
+  ]
+}

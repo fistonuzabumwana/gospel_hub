@@ -1,0 +1,63 @@
+{
+  "number": 173,
+  "book": "Gushimisha",
+  "title": "Imana ni yo mwungeri",
+  "slug": "imana-ni-yo-mwungeri",
+  "uuid": "ff94f9a5-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/imana-ni-yo-mwungeri/ff94f9a5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Imana ni yo mwungeri Undagiz' urukundo; Niringiye yuko ntazakena, Kuko nd' intama ya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Andyamisha mu cyanya cye Cy'ubwatsi bwiza cyane,Anjyan' i ruhande rw'",
+        "imigezi, Itemba nez' idasuma."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ansubizamw intege nshya, Zinkomez' umutima,Anyobor' inzir' igororotse Kubwa rya zina rye ryera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nubwo naca mu gikombe Cy'umwijima w'urupfu, Sinagir' ikibi ntinya cyose, Kuko turi kumw' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kand' ujy'undindish' inkoni Yawe n'inshyimbo, Mana, Nukw ibyo bizampumuririza No mu gicucu cy'urupfu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Untunganiriz' ameza Mu maso y'abanyanga, Unsize n'amavuta mu mutwe, Ump'",
+        "igikombe cyuzuye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "N'ukur' imbabazi zawe Zizanyomahw iteka;Nanjye nzaba mu nzu y'Uwiteka",
+        "Ibihe byose, nishima."
+      ]
+    }
+  ]
+}

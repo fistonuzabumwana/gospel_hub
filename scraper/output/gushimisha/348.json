@@ -1,0 +1,50 @@
+{
+  "number": 348,
+  "book": "Gushimisha",
+  "title": "Mbese, mu mutima wawe, Ntufitiye Yes' ahw aba ?",
+  "slug": "mbese-mu-mutima-wawe-ntufitiye-yes-ahw-aba",
+  "uuid": "ff9a1883-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/mbese-mu-mutima-wawe-ntufitiye-yes-ahw-aba/ff9a1883-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbese, mu mutima wawe, Ntufitiye Yes' ahw aba ?",
+        "Dor' ahagaze ku rugi :Munyabyaha, mwinjize"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Uh' Umwami Yes' ahw aba : Umvir' Ijwi rye ryinginga ' Kingur' umutima wawe,",
+        "Yinjiremo, yimemo"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Dor' imirimo n'iby'isi Bikwihariy' umutima : Ntagufitemw ahw atura,Nubwo",
+        "yagupfiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbes' uracyabuz' uburyo Bwo kwita kur' iryo jwi rye ? we gutind' uyu n'umunsi",
+        "Wawe wakirizwaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uhe Yes' ahw aba none, Kukw imins' ihita vuba, Udatungurwa n'urupfu, Rya jwi",
+        "rigaceceka !"
+      ]
+    }
+  ]
+}

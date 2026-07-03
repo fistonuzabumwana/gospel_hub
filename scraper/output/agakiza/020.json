@@ -1,0 +1,42 @@
+{
+  "number": 20,
+  "book": "Agakiza",
+  "title": "Mana, nyohererez' umuriro wawe",
+  "slug": "mana-nyohererez-umuriro-wawe",
+  "uuid": "ff9cab56-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mana-nyohererez-umuriro-wawe/ff9cab56-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana, nyohererez' umuriro wawe, Ubu ni wo ntegereje. Mp' ubugingo bwiza, umpe n'uruku ndo. Unyuzuz' ibyiza byawe Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibitagushimishije, ubitwike. U nyogeshe ya maraso. Undinde kub'",
+        "umunyagasunuguro. Yes' unyeze mbone gutungana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes'undinde, sinkakugomer'ukundi. Kand' umar' umubabaro. Nyoboz' ukuboko",
+        "kwawe Mwami Yesu, Kuko kenshi nd' umunyatege nke."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mw ijuru tuzanezerwa bihebuje. Umubabar' uzashira. Hazabamw indirimbo zo",
+        "gushimira, Zo guhimbaza Yesu Mucunguzi."
+      ]
+    }
+  ]
+}

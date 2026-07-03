@@ -1,0 +1,44 @@
+{
+  "number": 366,
+  "book": "Gushimisha",
+  "title": "Ngutuy' ubugingo bwanjye, Yesu",
+  "slug": "ngutuy-ubugingo-bwanjye-yesu",
+  "uuid": "ff9a7b92-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/ngutuy-ubugingo-bwanjye-yesu/ff9a7b92-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngutuy' ubugingo bwanjye, Yesu, Mwana w'lrnana; Ubwakire n'urukundo, Ngo bub' ubwaw' iteka.Nkuzaniy' ibyaha byanjye N'umutim' unangiwe : Mu maraso wamviriye, Unyoze, Mucunguzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uz' uko mpora nirwanya Ngo nkomez' umutima; Uz' uko nari merewe N'ishavu",
+        "n'agahinda. Ububasha bwawe. Mwami,Bundokore mu byaha Kand' Umwuka",
+        "w'ubugingo Ujy' unkura mu bibi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nemeye kwitanga rwose,Nta cyo nishigarije; Mpisemo kujyana nawe No",
+        "kukumvira, yesu. Njye nkuyobokan' ishimwe Kukw ari wow' ubimpa; Ujy' unyobor'inzir' ijya Mu bwami bwawe bwiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Reb' uyu muhigo mpize Nibwo nzivuguruza. Wukomeresh' amaraso N'urukundo",
+        "wankunze. Itek' iyo nirebyeho,Ndiheba, nkazimira; Ariko kuk' ujy'unkunda,",
+        "Uzamfasha, Mukiza."
+      ]
+    }
+  ]
+}

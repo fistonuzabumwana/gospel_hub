@@ -1,0 +1,42 @@
+{
+  "number": 110,
+  "book": "Agakiza",
+  "title": "N'utagir' umwete mu nzira y'Imana",
+  "slug": "nutagir-umwete-mu-nzira-yimana",
+  "uuid": "ff9eccae-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nutagir-umwete-mu-nzira-yimana/ff9eccae-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "N'utagir' umwete mu nzira y'Imana, Ntabw' uzinjira mw ijuru. rindir' umutima mw ijambo ry'Imana, Ni ryo rizagukomeza. Irembo ni rito ndetse n'inzira nto. Wihangane rwose kugira ng' ucemo, Niwemere non' agakiza k'lmana. Nibw' uzagera mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibigusha byinshi biri mu rugendo Kandi bizanwa n'umwanzi. Usho bora rwose",
+        "kunesh' ibyo byose Bi shaka kukudindiza.Ntugakurikire ijwi wumva ryose Kuko",
+        "byasho bora kukuyoby' inzira. Ukwiye ku menya ko Yes' agukunda Nawe wi tang'ukomeje,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "N'utizer' Imana ntuzajya mw ijuru Habe no guc' umutaru. Kandi n'ubugingo",
+        "ntabw' uzabubona Iryo n'ijambo ry'Imana.Mu kwizera gu sa ni ho wakirizwa. N'ubu ndetse wumv' ijambo ry'agakiza. Niwihan' ibyaha, wizer' Umukiza, Inzira y'ukuri n'iyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iman' irashaka ko bose bakizwa, Kandi bahabw' ubugingo. Iraguha naw' umurage w'ijuru Nib' uwusha kan' umwete, Kand' Iman' ikunda umutima wawe. Yesu na we agashaka kuwukiza, Kand' Umwuka Wera aragukangura, Niba wumvir' uzahirwa"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "number": 307,
+  "book": "Gushimisha",
+  "title": "Haleluya ! Haj' umunsi",
+  "slug": "haleluya-haj-umunsi",
+  "uuid": "ff9920a7-0670-11ea-9a58-deadbe058832",
+  "category": "Icyumweru",
+  "url": "https://indirimbo.com/gushimisha/haleluya-haj-umunsi/ff9920a7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Haleluya ! Haj' umunsi Wo kuruhukir' Imana, Uyu munsi ni w' urusha Iyindi yos’ amahoro. Iteka,twumv' ibyishimo Biva ku Mana yacu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uburuhukiro bwiza Bubaho mur'uyu munsi. Umucyo w'Imana yera Ub’",
+        "uratumurikiye.Ni w' utweza mu mitima Ku munsi w’ Uwiteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbega, nambar' iki none, Mbone kwizihiz' Imana ? Dor’ umwambaro yampaye N’",
+        "ugukiranuka kwayo, Kugira ng’umubi nkanjye Nerekan' ubwiza bwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "We yamviriy' amaraso, Kuko ngir’ ibicumuro; Gukiranuka kwe ni ko Kwez' uyu",
+        "mutima wanjye. Ibyo n' umwambaro wanjye Ukwiriy' icyumweru,"
+      ]
+    }
+  ]
+}

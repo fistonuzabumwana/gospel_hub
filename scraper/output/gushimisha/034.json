@@ -1,0 +1,54 @@
+{
+  "number": 34,
+  "book": "Gushimisha",
+  "title": "Ndusheho kukwegera, Mukiza",
+  "slug": "ndusheho-kukwegera-mukiza",
+  "uuid": "ff90aefc-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ndusheho-kukwegera-mukiza/ff90aefc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndusheho kukwegera, Mukiza, Ne kukuba kure: Nkwishingikirizeho, Mukiza, Ungendeshe neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nerekan’ icyubahiro cyawe Mu byo nkora byose; Akanwa kanjye kajye kavuga",
+        "Ibyiz' umbwiriza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umpindure nk'isoko y'ibyiza,Itemb' idakama; He kugir' undi nkorer' iteka, Databuja mwiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' imigambi yanjye n'inama Ubyigandurire; Nyemeza k' ur' Umwami wenyine Untegcka byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ni Wowe mutsima w'ubugingo N'amazi mazima; lyo nishwe n'inzara n'inyota, Ni Wow' ujy' umpaza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Ni Wow' uhaza kwifuza kwiza,Kose niyumvamo. Ni tujy' i wawe, nta cyo, Mukiza, Tuzifuz' ukundi."
+      ]
+    }
+  ]
+}

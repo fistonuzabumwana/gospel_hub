@@ -1,0 +1,49 @@
+{
+  "number": 276,
+  "book": "Gushimisha",
+  "title": "Data ngiye gusinzira",
+  "slug": "data-ngiye-gusinzira",
+  "uuid": "ff98023c-0670-11ea-9a58-deadbe058832",
+  "category": "Iza n'imugoroba",
+  "url": "https://indirimbo.com/gushimisha/data-ngiye-gusinzira/ff98023c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Data ngiye gusinzira :Ngwin' undind' iri joro, Umbundikiz' amababa, ibibi bitanzaho. (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umbabarir' ibi byaha Nagukoreye none, Kand' Umwuka wawe wera Untere",
+        "kukumvira. (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kand' uryamish' amahoro Bene wacu n'inshuti Bato na bakuru bose, Ubarind'",
+        "ubiteho. (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "ineza yaw’ iboneke Mu bababaye bose, Kand' ukenur' abakene, Abarway' ubakize. ( x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mwami, ndangije gusenga, Nsinzire nkwiseguye, Marw' ubwoba no kumenya K'",
+        "undindish’ urukundo. (x 2)"
+      ]
+    }
+  ]
+}

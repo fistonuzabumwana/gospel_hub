@@ -1,0 +1,47 @@
+{
+  "number": 11,
+  "book": "Agakiza",
+  "title": "Ku musarab' Umukiza wanjye",
+  "slug": "ku-musarab-umukiza-wanjye",
+  "uuid": "ff9c77cb-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ku-musarab-umukiza-wanjye/ff9c77cb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ku musarab' Umukiza wanjye, Ni ho yanyitangiriye kera. Amaraso ye yaramviriye, Kugira ngo mb' ubohowe na yo."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "i Gologota, i Gologota, Yesu ni ho yababarijwe. Gologota, i Gologota, Ni ho",
+        "naherew'amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mugihe Yesu yadupfiraga, Aremerewe n'ibyaha byacu. Haba yeh' umushits' icyo gihe. Habayeho n'ubwirakabiri."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Na rwa rusika rwasadutsemo, Ijambo rye riragaragara. Noneho mbony' inzira",
+        "y'ijuru; N'ukwezwa n'amaraso ya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yesu, ntangajwe n'urwo rukundo, Rwatumy' utang' ubugingo bwawe. Warabahaye kubera jyewe, Umubabaro w'umusaraba."
+      ]
+    }
+  ]
+}

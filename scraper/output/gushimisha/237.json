@@ -1,0 +1,57 @@
+{
+  "number": 237,
+  "book": "Gushimisha",
+  "title": "Tur' abami bayobotse",
+  "slug": "tur-abami-bayobotse",
+  "uuid": "ff969f2f-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/tur-abami-bayobotse/ff969f2f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tur' abami bayobotse, Tuje ngo turabukire Uyu Mwam' usumba byose, Dukurikiy' inyenyeri."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ye... we. . Wa nyenyeri nziza we, Komez' utuyobore, Tujy' imbere; gumy'",
+        "ugende, Tuger' ahw Umwami' ari!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nje gutur' Umwami Yesu, Nzany' izi zahabu nziza. Ni We nyir'isi n'ijuru, N'",
+        "Umwami w'abami bose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nje gutur' Umwami Yesu, Nzany' iyi mibavu myiza : Byerekana yukw atwumva,",
+        "iyo tumusenze hose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nje gutur' Umwami Yesu, Nzany' ishangi rihumura : Byerekana yukw azapfa Mu",
+        "cyimbo cy'abanyabyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Tuje kugushengerera :Ur' Umwami n'Umukiza. Akir' amaturo yacu, Mucunguzi,",
+        "Nyirigira."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "number": 245,
+  "book": "Gushimisha",
+  "title": "lyo nibwiye mu mutima",
+  "slug": "lyo-nibwiye-mu-mutima",
+  "uuid": "ff96d699-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/lyo-nibwiye-mu-mutima/ff96d699-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "lyo nibwiye mu mutima Igit’ Umwami yatangiyeho,Nzinukw' ibyo niratanaga; Mbireba nk'ibitariho rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Sinkirat’ikindi, Mukiza, Keretse ko wankunz’ ukamfira;Ndeke n'ibyo nishimiraga,",
+        "Ngushimir' uko wanyitangiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ishavu n'ibambe bivanze Byavuye mu mutima wa Yesu;Mbese, har’ undi Mwami nka we Wateg’ ikamba nk'iryo ry'amahwa ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mwam’ lyo mba mfit’ isi yose, Nkemera kuyitanga h' ubwishyu,Nta bwo yarangiza",
+        "na hato Kwishyur' umwenda wanjy’ ukomeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Urwo rukundo wankunz' utyo Rukwiriye kuntangisha byose,Ibyanjye n'umutima",
+        "wanjye, Bikab' ibyaw’ ukabitegeka."
+      ]
+    }
+  ]
+}

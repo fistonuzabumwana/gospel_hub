@@ -1,0 +1,45 @@
+{
+  "number": 32,
+  "book": "Gushimisha",
+  "title": "Mwam' utuvubir' imvura",
+  "slug": "mwam-utuvubir-imvura",
+  "uuid": "ff90a0f3-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/mwam-utuvubir-imvura/ff90a0f3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwam' utuvubir' imvura, Nkuko wasezeranye Twunva twumye mu mitima : Uduhembuz' imvura."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Utuvubir' imvura, iy'umugisha wawe  Hahoze hagw' urujojo: Duh'umuvumbi wawe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwam' utuvubir’ imvura :Yaduhembura rwose. Twumva mu matw' irahinda : Uyidusohozeho !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwam' utuvubir’ imvura,Iducunshumukeho  . Tuje guhabw' umugisha Wadusezeranije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mwam' utuvubir' imvura Icyamp' ikagwa vuba, Ubu tukiri ku mavi, Tukigutakambira"
+      ]
+    }
+  ]
+}

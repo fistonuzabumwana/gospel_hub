@@ -1,0 +1,48 @@
+{
+  "number": 345,
+  "book": "Gushimisha",
+  "title": "Umv' iryo jwi rikwinginga",
+  "slug": "umv-iryo-jwi-rikwinginga",
+  "uuid": "ff9a0526-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/umv-iryo-jwi-rikwinginga/ff9a0526-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umv' iryo jwi rikwinginga: N' irya So wo mw ijuru ! Yiriw' aguhamagara : Umwitabe nonaha !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nonaha ... nonaha ...  Sanga Yesu nonaha"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ko wamaz' imyaka myinshi Uzerer' uzimiye, Mbese, ntiwaz' uyu munsi  Ni byo",
+        "bigukwiriye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wabuz' amahoro mw isi; Wuzuy' umubabaro : Banguka, wisunge Yesu; Ni We",
+        "buruhukiro !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Bwira Yes' ibyaha byawe, Na W' akubabarire. Herek' ugendane na We, Mu nzir'",
+        "ijya mw ijuru !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "number": 436,
+  "book": "Gushimisha",
+  "title": "Ubwo nagendaga ndemerewe",
+  "slug": "ubwo-nagendaga-ndemerewe",
+  "uuid": "ff9c361e-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/ubwo-nagendaga-ndemerewe/ff9c361e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubwo nagendaga ndemerewe, Sinari nz' ubw' icyo ntekereza. None ubu, maze kwihitiramo : Mpisemw Umucunguzi."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tekereza, nimutekereze ! Mbes' iryo jamho muryitayeho ? Mwibaze, muhitemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mbeg' urukundo rw'Umwami Yesu ! Aradukunda tudakwiriye. Ubu ngub'",
+        "arabahamagara : None, nimuhitemo !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntangajwe cyane n'imbabazi ze : Ni zo zatumy' anyitangirira; Kandi ngiheze mu",
+        "mwijim' ubwo, Mvanwamo n'umucyo we."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Emera nawe kwihitiramo ! Imur' umwanz' uguhemukira : Wimik' ahubw' Umukiza",
+        "wawe ! Nta wakez' abo bombi."
+      ]
+    }
+  ]
+}

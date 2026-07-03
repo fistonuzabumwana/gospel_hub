@@ -1,0 +1,32 @@
+{
+  "number": 68,
+  "book": "Agakiza",
+  "title": "Nta bwo nkwiye kujya niganyira",
+  "slug": "nta-bwo-nkwiye-kujya-niganyira",
+  "uuid": "ff9db76e-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nta-bwo-nkwiye-kujya-niganyira/ff9db76e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nta bwo nkwiye kujya niganyira, Nibaz' ukw ejo nzaba merewe. Nzajya nibuka yukw Ihoraho Imeny' ibyo byos' uko bingana.Ifit' umutima w'urukundo Kukw ijy’ intungish' ibinkwiriye. Umunezero n'umubabaro Byos' abi nzaniramw amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Amba hafi ndetse buri munsi, Kand' angerer' ubuntu bukwiye. Ajy'i anyikorerer'imitwaro Ni we Data kandi ni we Mana! Nguk' ukw ajy' antunga buri munsi, Ajy'anda mira mur' ibyo byose. Buri muns' azajy' amp' imbaraga Iryo n'isezera no yampaye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mana yanjye, komez' ujy' umfasba Ngutaramire ntez' icy' umbwira. Mpore nizey' ijambo wambwiye Sinka bure ku mbaraga zawe.No mu bikomeye birih' ubu undamburir'amaboko yawe.ump’imbaraga ku buntu bwawe kugeza igihe uzaza kunjyana."
+      ]
+    }
+  ]
+}

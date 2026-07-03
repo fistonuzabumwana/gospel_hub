@@ -1,0 +1,41 @@
+{
+  "number": 43,
+  "book": "Gushimisha",
+  "title": "Ngwino, Mwami Yesu",
+  "slug": "ngwino-mwami-yesu",
+  "uuid": "ff90fa36-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ngwino-mwami-yesu/ff90fa36-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngwino, Mwami Yesu ,ngwino, Kuko tugukumbuye. Utuvane mu ntege nke, Uturuhure vuba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu, byishimo by'abawe,Byiringiro by'ababi, Amahanga yose yose. Arakwifuza cyane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu ni ryo zina wiswe :Waje kuturokora, Wavuts’ ur' akana gato, Nyamar' uri",
+        "n'Umwami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kubw’ Umwuka wawe wera, Mwami Yes' unyimemo ! Nuk' ungirir' uk' ushaka,",
+        "Uzangeze mw ijuru !"
+      ]
+    }
+  ]
+}

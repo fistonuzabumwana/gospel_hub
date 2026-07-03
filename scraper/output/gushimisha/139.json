@@ -1,0 +1,71 @@
+{
+  "number": 139,
+  "book": "Gushimisha",
+  "title": "Mukiza Yesu, ntabara",
+  "slug": "mukiza-yesu-ntabara",
+  "uuid": "ff93dfeb-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/mukiza-yesu-ntabara/ff93dfeb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mukiza Yesu, ntabara, Kukw abantu babiri Bari mu mutima wanjye, Umw' akund’und’agoma."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ndengera  Ndengera Mwami wanjye, ndengera"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umwe ni we Mwuka wawe Unyiringiz’ijuru; Und’ahor anyoshya nabi, Ashaka",
+        "kunshumuza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami, sinkor' ibyo nkunda, Nubwo mpora mbyifuza.  Ibibi byo ndabikora,",
+        "Nubw’iteka njya mbyanga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Murokoz' umucyo wawe Umurikire neza, Ngo wa muntu mubi nanga Atamperana rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Iyo nirwanya ntyo, Mwami, Nta mahoro mba mfite. Ndagukunda, ndagushaka",
+        "Mfasha,nesh' uwo mubi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Kiz' imbata yaw' irushywa, Ihor'ikuganyira; Umpe n'ububasha bwawe Ngo njye",
+        "nsinda Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Ndashak' uburuhukiro Mu bwami bwawe bwiza; Mfasha ngo wa wundi nanga",
+        "Atambuza kujyayo."
+      ]
+    }
+  ]
+}

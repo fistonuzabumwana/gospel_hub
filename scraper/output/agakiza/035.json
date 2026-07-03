@@ -1,0 +1,53 @@
+{
+  "number": 35,
+  "book": "Agakiza",
+  "title": "Imana ishimwe cyane",
+  "slug": "imana-ishimwe-cyane",
+  "uuid": "ff9d0ccc-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/imana-ishimwe-cyane/ff9d0ccc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ni Yesu wangize kub' umuvandimwe we.",
+        "Iman' ishimwe cyane.",
+        "Kand' ibyo mfite byose ni we wabimpaye.",
+        "Iman' ishimwe cyane.",
+        "Kandi yarambabariy' angir' imbohore.",
+        "Yamviriy' amaraso yo mu mutima we.",
+        "Ndanezerewe cyane kuko yanshunguye.",
+        "Iman' ishimwe cyane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyiza yakoze mbifitemw umufasha.",
+        "Iman' ishimwe cyane.",
+        "Ni w’ umfasha mu bintu byose bikomeye.",
+        "Iman' ishimwe cyane.",
+        "Imibabaro yanjye yose ni kw ayizi.",
+        "Ahindur' iyo mibabaro ngw anezeze.",
+        "Iman' ishimwe kuko yumv' amasengesho.",
+        "Iman' ishimwe cyane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ku Mana mw ijuru mfitey' umu gabane.",
+        "Iman' ishimwe cyane.",
+        "Mu mwanya muto tuzabon umunezero.",
+        "Iman' ishimwe cyane.",
+        "Mw ijur' abera bazamurika nk'izuba.",
+        "Yes' ubw' azatwambik' ikamba ry'ubugingo.",
+        "Tumwitegure kukw azagaruka vuba.",
+        "Iman' ishimwe cyane."
+      ]
+    }
+  ]
+}

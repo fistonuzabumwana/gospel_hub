@@ -1,0 +1,35 @@
+{
+  "number": 60,
+  "book": "Gushimisha",
+  "title": "We, mutim' urira",
+  "slug": "we-mutim-urira",
+  "uuid": "ff9173b5-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/we-mutim-urira/ff9173b5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "We, mutim' urira,—Uze kwa Yesu; Amakuba yawe,—Uyamubwire.",
+        "Mubwire buhoro—Ibikuriza; We kugir' ubwoba,—Kandi wirira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Bwira Yesu byose,—N' inshuti yawe, Ibikubabaza—N'ibigutera.",
+        "Arakund'afasha—Abashavuye; Wizer' ijambo rye,—Kandi wirira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abaremerewe—N'ibiruhanya, Babwire kw Imana—Yabaruhura.",
+        "Ubahumurize,—Ut' Umukiza Amar' agahinda :—None, mwirira !"
+      ]
+    }
+  ]
+}

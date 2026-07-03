@@ -1,0 +1,40 @@
+{
+  "number": 410,
+  "book": "Gushimisha",
+  "title": "Yesu, ni Wowe dushima",
+  "slug": "yesu-ni-wowe-dushima",
+  "uuid": "ff9ba37d-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/yesu-ni-wowe-dushima/ff9ba37d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, ni Wowe dushima: Watuguz' amaraso yawe Cya gihe wadupfiraga. Imibiri n'imitima N' iyawe kubw'ubuntu bwawe Buduhay' ubukiriro. None tur' abawe—Kuko wadutoye;Tugushime,—Udukere, Mucyo wacu, Twe kuguma mu mwijima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Twebwe si twe twagushatse : Ni Wow' ubwawe wadukunze Kubw' ubuntu bwawe bwinshi.Twebwe nta ntege dufite : Nta wabasha kugukorera, Utamuhay' imbaraga,Yobor' imitima !—Tujyane kwa Data Mu bwami bwe :—Ab'ukuri babushaka Ntibanga gusuzugurwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Garagaz' ubuntu bwawe Ku bataz' ubwami bw'Imana, Bigumiye mu mwijima. Kera kose ntibumvise Ubutumwa butunezeza Bukesh' imitima yacu. None, wategetse—Umucyo w'ukuri Ng'uboneke.—Mwami Yesu, tuyobore, Utwerek' inzira yawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ibisarurwa ni byinshi, Abasaruzi ni bakeya: Tum' abagusarurira ! Duhatwe",
+        "n'ubuntu bwawe Guhamagar' abantu benshi, Bahabw' ibyiza by'Imana. Uwemerwa wese—Mu bwami bw'Imana Arahirwa;—Anezezwa n'amahoro Azagir' iteka ryose."
+      ]
+    }
+  ]
+}

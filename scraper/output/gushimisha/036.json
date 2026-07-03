@@ -1,0 +1,45 @@
+{
+  "number": 36,
+  "book": "Gushimisha",
+  "title": "Ntumpiteho Mukiza",
+  "slug": "ntumpiteho-mukiza",
+  "uuid": "ff90c1b9-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ntumpiteho-mukiza/ff90c1b9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ntumpiteho  Mukiza We Wumv’uko Nganya Ubw’ugenderera Abandi Nanjye Ntusige."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu Mukiza Wanjye Wumv’uko Nganya Ubwo Ugenderera Abandi Nanjye Ntusige."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mpa Kweger’intebe Yawe Mpabw’imbabazi Ngupfukamiye Mbabaye Mpa Kukwizera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nta Wundi Nakwizigira Ni Wowe Nshaka Mvur’ibikomere Byanjye Umbabarire"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ur’isoko Y’amahoro Nyir’ubugingo Singir’undi Niyambaza Keretse Wowe"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "number": 29,
+  "book": "Gushimisha",
+  "title": "Uduhagarare Hagati",
+  "slug": "uduhagarare-hagati",
+  "uuid": "ff908d21-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/uduhagarare-hagati/ff908d21-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uduhagarare Hagati, Mukiza,Iki gihe cyacu Cyo guseng' ucyeze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu tugisenga, Suk' Umwuka Wera Mu mitima yacu, Atubwir' ibyawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kwinjira kwe kwera Kutumar' ubwoba N'agahinda kose, Tube mu mahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tutabuzwa n'ibyo, Yes’ inzira yawe, Tuzayikomeza. Dufit' intege nshya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kandi tukigenda,Tuzategercza igihe cyo kuza Kwawe turi maso."
+      ]
+    }
+  ]
+}

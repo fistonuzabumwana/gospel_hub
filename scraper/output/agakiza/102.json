@@ -1,0 +1,37 @@
+{
+  "number": 102,
+  "book": "Agakiza",
+  "title": "Ump' akanya, Yesu, nze nkwegere",
+  "slug": "ump-akanya-yesu-nze-nkwegere",
+  "uuid": "ff9ea585-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ump-akanya-yesu-nze-nkwegere/ff9ea585-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ump' akanya, Yesu, nze nkwegere, Kuko naniriwe mur' iyi si.",
+        "Ndetse no mu gihe cy'i ntambara, Na bwo Mwami, ujy' ump' amahoro.",
+        "Ump' akanya, Yesu, nze nkwegere, Kuk' umwijim'ukabije mw isi.",
+        "Icyo nkeneye n'ukukwegera Kugira ngo numv' ijambo ryawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ump' akanya, Yesu, nze nkwegere Mu bingerageza n'amakuba.",
+        "Ni wowe buhungiro nizeye Mu gihe cy'akaga mur' iyi si."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ump' akanya, Yesu, nze nkwegere Kuko wanyikorerey' ibyaha. Ndumva nshaka",
+        "kukubwira byose Kuko, Mwami, nizeye k'unyumva."
+      ]
+    }
+  ]
+}

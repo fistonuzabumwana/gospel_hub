@@ -1,0 +1,35 @@
+{
+  "number": 255,
+  "book": "Gushimisha",
+  "title": "Yesu Kristo yarazutse",
+  "slug": "yesu-kristo-yarazutse",
+  "uuid": "ff973ac4-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/yesu-kristo-yarazutse/ff973ac4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu Kristo yarazutse : Twese tumushime : Haleluya Uyu munsi, tunezerwe,Twese tumushime : Haleluya",
+        "Kera ku Musaraba, Ni ho Yesu yatubabarijwe, Ngw ab' impongano y'ibyaha byacu : Haleluya, reka tumuhimbaze"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yes’ Umwami wo mw’ Ijuru, Twese tumushime:Haleluya  Kukw ar’ umukiza w’abo mw’isi,Yarabambw’arahambwa Ajya n’i kuzimu mu bapfuye.Maz’arabinesh’ava mu rupfu Haleluya, reka tumuhimbaze"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibyo yababajwe byose, Umukiza wac' abishimirwe Ni byo byonyine byatumye",
+        "Tugir' ubugingo budashira.None, yimye mw ijuru, Ahw abamarayika baririmba,",
+        "Tumusingizanye na bo, tuti : Haleluya, reka tumuhimbaze."
+      ]
+    }
+  ]
+}

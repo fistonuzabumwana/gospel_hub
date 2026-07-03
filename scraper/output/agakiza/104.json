@@ -1,0 +1,48 @@
+{
+  "number": 104,
+  "book": "Agakiza",
+  "title": "Yesu, ni wowe mucyo",
+  "slug": "yesu-ni-wowe-mucyo",
+  "uuid": "ff9eaf38-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yesu-ni-wowe-mucyo/ff9eaf38-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, ni wowe mucyo, Ni wowe nshima kuko wa nkunze. Mwami, byose wakoze Ku twitangira ndabigushima."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu, ur' amahoro yacu, Kuko waluberey' inshungu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwami, ndanezerewe kukuriri mba kuko wankunze. Yesu, ko mez' umfashe,",
+        "Nanjye ngukunde, nkuririmbire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu, ngwino tubane, ngwin' unyobore mu nzira yawe. Kandi ni wowe nzira, ur'",
+        "ubugingo ndetse n'ukuri."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nzi ko har' igihugu ey' umucyo mwinshi ku bakijijwe. Ndetse icyo gihugu N'icy'",
+        "izahabu zitatse neza."
+      ]
+    }
+  ]
+}

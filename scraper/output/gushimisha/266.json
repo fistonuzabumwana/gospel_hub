@@ -1,0 +1,53 @@
+{
+  "number": 266,
+  "book": "Gushimisha",
+  "title": "Man' ubwami bwawe",
+  "slug": "man-ubwami-bwawe",
+  "uuid": "ff9798dd-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/man-ubwami-bwawe/ff9798dd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Man' ubwami bwawe—Buze mur'iyi si i Tsind' Umurimbuzi,—Wic' ubutware bwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwami, dukumbuye —iyo ngo ma yawe.Usimbuz' ineza—inzangano z'isi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Turagukumbuye i—Ngwin' uc' intambara.Uce n'ingeso mbi,— Zos' uzimareho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Zana n’imbaraga;_Uz’uduhembure.Turakurindira;_Amas’ahezeyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Dor' ukw amasega—Amarahw intama, Kandi hagwiriye—Abatakwitaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Amahanga yose—Ari mu mwijima; Yesu, wa zuba we.—Non' uz' uyavire"
+      ]
+    }
+  ]
+}

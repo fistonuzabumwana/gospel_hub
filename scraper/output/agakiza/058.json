@@ -1,0 +1,43 @@
+{
+  "number": 58,
+  "book": "Agakiza",
+  "title": "Turi mu gihe cyiza cy'umunsi w'agakiza",
+  "slug": "turi-mu-gihe-cyiza-cyumunsi-wagakiza",
+  "uuid": "ff9d862c-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/turi-mu-gihe-cyiza-cyumunsi-wagakiza/ff9d862c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Turi mu gihe cyiza cy'umunsi w'agakiza. Yesu yarangirije byose ku musaraba, Abantu benshi cyane basang' uwo Mukiza. Bahabw' umunezero, bakizwa mu mutima."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu, Mwana w'intama, twese turagushima. Wadutunganirij' u bugingo",
+        "buhoraho. Kandi waduhinduye hub' intumwa z'Imana No mu mazina yose nta",
+        "rihwanye n'iryawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Waducunguye twese, utuvir' ama raso. Ubuntu bwawe buturnurikira nk'izuba.",
+        "Tumaze kumeny' urukundo rw'Imana yacu. Amaraso ya tumenyeshej' isezerano."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ngwino nawe mugenzi, naw' ugishidikanya, Iman' irakuzuza ubuntu bwayo",
+        "bwinshi.No mu mutima wawe harab' umunezero. Ibyiri ngiro byinshi n'urukundo",
+        "rukwiye."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "number": 418,
+  "book": "Gushimisha",
+  "title": "Wa gatabaza kanjye we",
+  "slug": "wa-gatabaza-kanjye-we",
+  "uuid": "ff9bd60c-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/wa-gatabaza-kanjye-we/ff9bd60c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Wa gatabaza kanjye we, Yesu ngo.",
+        "Murika !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Murika !Murika ! Murika !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Satan' ampuh' anzimye ? 'Shwi ! ,Yesu ngo, Murika !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntwikirwe mu gitebo ? 'Shwi Yesu ngo, Murika !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Murikir' a bo mu Rwanda !Yesu ngo, Murika !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "N'az' azansange murika !Yesu, ngo Murika !"
+      ]
+    }
+  ]
+}

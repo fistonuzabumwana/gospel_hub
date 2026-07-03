@@ -1,0 +1,41 @@
+{
+  "number": 286,
+  "book": "Gushimisha",
+  "title": "Biba mu gitondo",
+  "slug": "biba-mu-gitondo",
+  "uuid": "ff985be8-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/biba-mu-gitondo/ff985be8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Biba mu gitondo imbuto z'ineza; Jy'ubiba ku manywa n'ikigoroba Rindira ko zera, .baze basarure,Tuzatund' imiba, tunezerewe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tuzanezerwa! Tuzanezerwa! Ni dutund'imiba, tuzanezerwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Bib' izuba riva; biba mu kibunda :Ntugatiny' ibihu n'imbeho nyinshi. Amasarura",
+        "n'imirimo bishize, Tuzatund' imiba, tunezerewe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Tugende turira, tubibir’ Umwami. Niba",
+        "tubabazwa n’abarimbuka Tuzahozwa n’aza, dushir’agahinda: Ni dutund’ imiba,",
+        "tuzanezerwa"
+      ]
+    }
+  ]
+}

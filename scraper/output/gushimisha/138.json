@@ -1,0 +1,45 @@
+{
+  "number": 138,
+  "book": "Gushimisha",
+  "title": "Yesu, Mukiza wanjye",
+  "slug": "yesu-mukiza-wanjye",
+  "uuid": "ff93d6f7-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/yesu-mukiza-wanjye/ff93d6f7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, Mukiza wanjye, Nguhany' ibyishimo Uyu mubiri wanjye, Ng’ub’uwawe rwose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Akir' ituro ryanjye, Mwana w'UwIteka, Utum’ Umwuka Wera, Umanukiremo,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Sintinya na gatoya Kukwiyegurira, Kubw'’imbabazi zawe, Murokozi wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umuriro w'Umwuka Uz' ub’unyakemo, Umare mu mutima Ibitar’ibyawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Za vuba, Mwami Yesu, Ube Databuja; Iteka nzab’ uwawe Kuk' uhor'unkunda."
+      ]
+    }
+  ]
+}

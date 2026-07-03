@@ -1,0 +1,81 @@
+{
+  "number": 334,
+  "book": "Gushimisha",
+  "title": "Wa mutima wanjye we",
+  "slug": "wa-mutima-wanjye-we",
+  "uuid": "ff99bc99-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/wa-mutima-wanjye-we/ff99bc99-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Wa mutima wanjye we, shim' Uwiteka",
+        "Mwa bindimo byose mwe, mushime",
+        "Njye mpimbaz' izina rye, ne kwibagirwa",
+        "Iby'Imana yankoreye byose.",
+        "Imbabarir' ibyaha nakoze byose.",
+        "Ni Y'inkiz' indwara zamugaje.",
+        "Inyambik' imbabazi zayo nk'ikamba,",
+        "Ikampaz' ibyiza bidashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ijy' ikor' ibyo gukiranuka gusa.",
+        "N'abarenganyw' ikabarengera.",
+        "Ic' imanza ziboneye zitabera,",
+        "Kand' igir' imbabazi n'ibambe.",
+        "Imenyesh' abayubah' inzirazayo",
+        "Uwitek' atinda kurakara;",
+        "Umujiny' ntiyawuguman' iteka.",
+        "Akunda kugirira nez' abe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uwiteka ntiyatwituy' ibihwanye",
+        "N'ibicumuro twamucumuye,",
+        "Kandi nkukw ijuru rye ryitaruy' isi.",
+        "Ni kw imbabaz' agira zingana.",
+        "Ibuvazuba n'iburengerazuba.",
+        "Dor'uko hitaruye kure pe.",
+        "Ni ko yajyanye n'ibicumuro byacu",
+        "Kure yacu. Tununuhimbaza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nkuko se w'aban' abagirir' ibambe,",
+        "Ni kw Imana yac' irigirira",
+        "Abantu bayubaha,kukw izi neza",
+        "Ubukene bwacu n'intege nke.",
+        "iz' ubugingo bwacu kobutarama;",
+        "Buhwanye n'ubwatsi bushiraho.",
+        "Ntibutinda; si nka za mbabazi zayo,",
+        "Zo ntizizashir' iteka ryose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Uwitonder' isezerano ry'Imana,",
+        "Ni ryo ryakomejwe n'amaraso",
+        "Ayo Yes' Umwana w'Intama yavuye,",
+        "Kand' akumvir' ibyo yategetse,",
+        "Ni w'ugirirwa neza n'Iman'iteka,",
+        "Non' akiri mw isi no mw ijuru,",
+        "Iman' izamwerek' imbabazi zayo",
+        "N'umurava no gukiranuka."
+      ]
+    }
+  ]
+}

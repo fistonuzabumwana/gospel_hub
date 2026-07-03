@@ -1,0 +1,40 @@
+{
+  "number": 79,
+  "book": "Gushimisha",
+  "title": "Jy' uhor' undinganirije",
+  "slug": "jy-uhor-undinganirije",
+  "uuid": "ff91fb88-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/jy-uhor-undinganirije/ff91fb88-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Jy' uhor' undinganirije Ay  magambo meza. Umpugur' uyamenyeshe, Aya magambo ye. Ayo ni yo njya nkunda, Ni y' ampesh' amahoro."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ni yo meza, ndayakunda, Anter' ibyishimo byinshi : Ni yo meza, ndayakunda,",
+        "Anter' ibyishimo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Krist' aber' abantu bose Aya magambo meza. Mumwitabe, banyabyaha, Mwumv'",
+        "amagambo ye. Abayoboz' ituza, N' amagamb' atunganye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kwiza hos' ubutumwa bwe Bw'aya magambo meza. Muz' arabababarira, Mwumv’amagambo ye. Yesu ni We Mukiza, Utubeshahw iteka."
+      ]
+    }
+  ]
+}

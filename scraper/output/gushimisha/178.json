@@ -1,0 +1,48 @@
+{
+  "number": 178,
+  "book": "Gushimisha",
+  "title": "iyutewe n'amakub' akomeye",
+  "slug": "iyutewe-namakub-akomeye",
+  "uuid": "ff951b79-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/iyutewe-namakub-akomeye/ff951b79-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "iyutewe n'amakub' akomeye, ukiheb' ubonye ko bicitse pe, jyubar' imigisha yaw' ukw ingana ! erega ni myinshi yo gutangaza !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Bar' iyo migisha nonaha, ly' Jmana yakugabiye. Uyibare Ntusige n'umwe  Erega",
+        "ni myinshi yo gutangata ."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nturemerewe, se, no kwiganyira ? ugira ngo ntibicyihanganirwa ?  Bara ya migish' Iman' ijy'iguha, Umutitn' ushyike munda, wishime !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Har' abakurushij' amajyambere, Arikw aya Yesu ni y’ ahebuje ! Ereg' ubutunz'",
+        "ufite mw ijuru, Bwo nta wabugura ! Nuko, humura !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Amakuba naho yaba mensh' ate. We kwiheb' Iman' irayategeka. Wibuk'",
+        "imigisha yakugabiye ! Byos' izabitungany'ikuyobore!"
+      ]
+    }
+  ]
+}

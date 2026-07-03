@@ -1,0 +1,56 @@
+{
+  "number": 51,
+  "book": "Agakiza",
+  "title": "Yemwe bantu mwese",
+  "slug": "yemwe-bantu-mwese",
+  "uuid": "ff9d645a-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yemwe-bantu-mwese/ff9d645a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemwe bantu mwese, mushimir' Imana, Ku mbabaz'ihor' itugirira, Yesu Kristo, aturind' iminsi yose, Kand' atuyobor' inzira."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Shim' Imana! Shim' Imana! Kukw ari yo iturinda twebwe twese. Shim' Imana!",
+        "Shim' lmana! Kuko irind' abayo neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu yakubabariy' ibyaha byose. Aragukiz' intege nke zawe. Araguhanagur'",
+        "amarira yawe, Urahazwa n'ubuntu bwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes' ashobora kuguh' imbaraga nshya, No kuguh' intwaro yo kunesha. Uyoborwa neza mu nzira ya Yesu, Akurinda mu mahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Hor' ushikamye mu Mwami Yesu Kristo, Ni ko gukiranuka gushyitse. Ni nako",
+        "gakiza, ndetse ni bwo bwenge Turonkera mu Mukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Umuns' umw' Umwami Yes' azagaruka, Aje kutujyan' iwe mw ijuru. Uwo Mwami",
+        "wacu, tuzamuhimbaza, Kukw ari we Mucunguzi."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "number": 37,
+  "book": "Gushimisha",
+  "title": "Tuguman' iteka",
+  "slug": "tuguman-iteka",
+  "uuid": "ff90c9f8-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/tuguman-iteka/ff90c9f8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tuguman' iteka,—Mukiz' uhebuje. Ijwi ryawe ryiza—Rizan’ amahoro."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ku manywa na n'ijoro,—Ndagushak'iteka. Ndahiriwe, Mukiza:—Twigumanire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ndagushak' iteka :—Jy' ungum' iruhande.Nsind' amoshya yose,—lyo turi kumwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndagushak'iteka ,—Nturiz' amaganya. Ngwin' ubu, tubane,—Mbone gutungana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndagushak' iteka,—Nyigish' iby’ ushaka Kand' uce muri jye—Ingeso zose mbi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ndagushak' iteka,—Wa Mwami wera  we! Mb' uwaw' unyobore,—Nyir'imigisha"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "number": 4,
+  "book": "Agakiza",
+  "title": "Niboney' urukundo rw'Umukiza.",
+  "slug": "niboney-urukundo-rwumukiza",
+  "uuid": "ff9c4e5b-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/niboney-urukundo-rwumukiza/ff9c4e5b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Niboney' urukundo rw'Umukiza.",
+        "Urwo rukundo ni rwo runezeza.",
+        "Afit' izina ryiz' uwo wankunze.",
+        "N'Imana Data n'Umwana we Yesu.",
+        "Nashimishijwe n'urukundo rwawe, Yewe Mana nawe Yesu Kristo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Jye nd' imbere yawe nd' umwana muto.",
+        "Icyo nkwiriye n'ugufashwa rwose.",
+        "Mu bintu byose mu kubaho kwanjye.",
+        "Mu gihe ngeragezwa mur' iyi si.",
+        "Nkomeza Mwami singende jyenyine Umbe hafi mu rugendo rwanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iyo ngusabye Yesu kujy' iwanjye,",
+        "Ubwo mba nshaka ko wamar' ubwoba.",
+        "Jye munyabyaha umfat' unkomeze,",
+        "Kuko nshidikanya sinkor' ibyiza.",
+        "Singikor' ibyajyaga binezeza. Ubu nkora ibyo ntikoresha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Niboney' urukundo rw'Umukiza,",
+        "Ari we wanshunguj' amaraso ye.",
+        "Ayo maraso s'ayo mu bitungwa,",
+        "N'amaraso y'Umwami Yesu Kristo.",
+        "Yar' ukiranuka mu b'isi bose, Agezahw atang' ubugingo bwe."
+      ]
+    }
+  ]
+}

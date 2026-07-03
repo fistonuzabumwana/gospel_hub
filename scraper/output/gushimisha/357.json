@@ -1,0 +1,48 @@
+{
+  "number": 357,
+  "book": "Gushimisha",
+  "title": "Ubwo nari nshinjirijwe cyane Na Satani",
+  "slug": "ubwo-nari-nshinjirijwe-cyane-na-satani",
+  "uuid": "ff9a4db8-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/ubwo-nari-nshinjirijwe-cyane-na-satani/ff9a4db8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubwo nari nshinjirijwe cyane Na Satani n'ibyaha byanjye, Haj' Umwami Yes' arakomanga, Ati : Kanguk'unkingurire !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ati: Kingura !Kingura ! Nkingurira, nkwinjiremo ! Umutima waw' uranezerwa,",
+        "Wemeye yuko nkwinjiramo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yarandaritse mu birori bye, Ngo dusangir' ibyiz' afite; Maze, ndanyurwa,",
+        "ndamuhimbaza :Sinavug' ibyo yankoreye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ku rugamba rwanjye na Satani, Yesu ni We ngab' inkingira. Kuba muri We",
+        "byarantinyuye,Ajy'ansubizamw imbaraga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni we Mwungeri mwiz' undagira, Nta cyo nkena, ndi kumwe na We. Nd' ino mw is'itek' aranyobora:Nyuma, nzasugira mu nzu ye."
+      ]
+    }
+  ]
+}

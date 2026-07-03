@@ -1,0 +1,33 @@
+{
+  "number": 184,
+  "book": "Gushimisha",
+  "title": "Dor' inzir' ijya mw ijuru n' imwe",
+  "slug": "dor-inzir-ijya-mw-ijuru-n-imwe",
+  "uuid": "ff954482-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/dor-inzir-ijya-mw-ijuru-n-imwe/ff954482-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dor' inzir' ijya mw ijuru n' imwe : N’ iya Yesu n'Umusaraba we. Ni mpush' inzira y'Uwambambiwe.Sinzahabona n'Umucy' ubayo.nta yindi nziratuzabona : Nta yiriho, haba n'imwe,n'ukur' inzir' ijya mw ijuru N' iy'Umusaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nuhaka kwinjir' Ahera cyane, jy' imbere y'Imana yera, mu nzira twaciriwe nshya;",
+        "y'amaraso y'Umwami Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nsezeye ku nzira z'isi zose : sinzazinyuramw uhereiy' ubu.data arampamagar’ ati: Ngwino ! nzakugez' aho wateguriwe"
+      ]
+    }
+  ]
+}

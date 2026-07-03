@@ -1,0 +1,45 @@
+{
+  "number": 71,
+  "book": "Gushimisha",
+  "title": "Hagarara, munyabyaha",
+  "slug": "hagarara-munyabyaha",
+  "uuid": "ff91c562-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/hagarara-munyabyaha/ff91c562-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Hagarara, munyabyaha ,Kuk' uri mu mwijima; Urarindagira hose, Ugiye kwiyahura."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ngwin'Iman' ijya yakira munyabyaha wese. Ibuka, nta n'umwe yanze : Ngwin' irakurokora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wajyaga wibwir'ibibi,Ukagir' agahinda; Washatse gutsind' ibyaha, Nyamar' urananirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Washaka kuza mu mucyo Ng' ubohorwe n'Imana? Wakwemera kuyikunda Nkuko na Y’ igukunda?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Teg’ amatwi, munyabyaha : Araguhamagara. None wemere gukizwa ; We kwihemukir' utyo !"
+      ]
+    }
+  ]
+}

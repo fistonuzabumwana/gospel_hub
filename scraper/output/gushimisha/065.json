@@ -1,0 +1,33 @@
+{
+  "number": 65,
+  "book": "Gushimisha",
+  "title": "Musange Umwami ugira ubuntu",
+  "slug": "musange-umwami-ugira-ubuntu",
+  "uuid": "ff919b64-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/musange-umwami-ugira-ubuntu/ff919b64-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Musange Umwami ugira ubuntu ,abatakimwizigira .ntiyanga kwakira abatindi;ahabura'abazimiye Kandi yemeye kubapfira: Yabaviriy' amaraso. Nta kindi abasha gukirisha Abanze kumvir'Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Musang' Umwami ujy' ahembura Nimuze, mwes' abaguye, Batacyizigir' agakiza :Abategey' amaboko ! Yakirishij' ubuntu bwinshi Wa munyabyahakaz' arira; Na Wa mwambuzi babambanywe Ntiyarnwisungiy' ubusa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Musang' ubasha kuruhura; Az' ibibarushya byose. Kubw' urukundo rusaga, Ahez'",
+        "ibibashavuza. Cya gihe,muri Getsemani,Yariz' amarira menshi : Kubw' ubuntu bwe buhoraho, Azahanagur' ayanyu."
+      ]
+    }
+  ]
+}

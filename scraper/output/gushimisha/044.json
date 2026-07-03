@@ -1,0 +1,41 @@
+{
+  "number": 44,
+  "book": "Gushimisha",
+  "title": "Tubabarire",
+  "slug": "tubabarire",
+  "uuid": "ff9100bb-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/tubabarire/ff9100bb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tubabarire :—Duh' umugisha.",
+        "Tumurikirwe—N'ubuntu bwawe,",
+        "Ngw inzira yaw' imenyekane mw isi, Abantu",
+        "bameny' ubugingo bwawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand' amahanga—Agusingize.",
+        "Nukw anezerwe,—Kand’ aririmbe.",
+        "Ur’ Umucamanza n'Umwami wabo;",
+        "Uzacir' ab'isi— Imanza nziza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wategets’ isi—Ngo yer’ irnyaka.",
+        "Mana, ni Wowe—Uturengera.",
+        "Imigish' uduha—Tuyamamaze,",
+        "Maz' iyi si yos' ikugandukire."
+      ]
+    }
+  ]
+}

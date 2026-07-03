@@ -1,0 +1,53 @@
+{
+  "number": 206,
+  "book": "Gushimisha",
+  "title": "Har’ uwitwa Danyeli:yar’ intwari pe !",
+  "slug": "har-uwitwa-danyeliyar-intwari-pe",
+  "uuid": "ff95ca5d-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/har-uwitwa-danyeliyar-intwari-pe/ff95ca5d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Har’ uwitwa Danyeli:yar’ intwari pe !",
+        "Ntiyakangwaga n’abanz' asenga  Imana ye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tinyuka, mugenzi ba nka Danyeli! Itange ku Mwami wawe, ntumwihakane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ub' intwari ya Yesu niy'ukuri kwe. Bakubare no mu mutwe wa Danyel’uwo !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Bamwe bo mu ntore ze baraneshejwe. Kuko batihaze rwose nka Danyel'uwo !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dor’ Umwanzi Satan’ agaby’ ingabo ze! Ziraneshwa zihuye na ba Danyel’ uwo !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nuko rer'ushikame kand' utambuke ! Umv' impundu ziravuza ba Danyel’uwo"
+      ]
+    }
+  ]
+}

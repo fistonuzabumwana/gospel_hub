@@ -1,0 +1,26 @@
+{
+  "number": 137,
+  "book": "Gushimisha",
+  "title": "Wowe, Mana, ndaguhimbaza",
+  "slug": "wowe-mana-ndaguhimbaza",
+  "uuid": "ff93ce95-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/wowe-mana-ndaguhimbaza/ff93ce95-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Wowe, Mana, ndaguhimbaza Kukw ari nta yindi man’ibaho;Nguhaye n'umutima wanjye Ump' imbaraga z'Umwuka wawe, Mbashe gukor' ibikunezeza, Mw izina ry'Umwami wacu Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nuzuzw’Umwuka wawe wera, Umutima wanjy' uwutegeke;Ujy'unyobor inzira",
+        "yawe, Ngo nyinyuremo ntajya nzimira; Kandi, ni nanirw' ujy'untabara, Ugez’ubw’uzansohoz’i Wawe."
+      ]
+    }
+  ]
+}

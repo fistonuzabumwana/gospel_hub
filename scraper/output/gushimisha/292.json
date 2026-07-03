@@ -1,0 +1,46 @@
+{
+  "number": 292,
+  "book": "Gushimisha",
+  "title": "tugiye gutaha",
+  "slug": "tugiye-gutaha",
+  "uuid": "ff98c231-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/tugiye-gutaha/ff98c231-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "tugiye gutaha: ntitwibagirwe amagambo yera batwigishije"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "ii.Uyu munsi mwiza—Twumvir' Umwami N’ umunsi w'izuka—Ry'Umucunguzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Twubahir' Imana—Ahantu hose, Twumvir' ijwi ryayo—Rituyobora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iman' itwigishe—Kubar' iminsi, Twibuke kw ari Yo—Itubeshaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Tuyiririmbire,—Tuyishimire, Kuko yaduhaye—Umwami mwiza."
+      ]
+    }
+  ]
+}

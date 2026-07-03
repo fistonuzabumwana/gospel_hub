@@ -1,0 +1,46 @@
+{
+  "number": 6,
+  "book": "Agakiza",
+  "title": "Nagir’indim’igihumbi",
+  "slug": "nagirindimigihumbi",
+  "uuid": "ff9c595e-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nagirindimigihumbi/ff9c595e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nagir’indim’igihumbi , Na bwo byananira Gusingiz’umucunguzi Ngo mbirangize neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "umfashe, Man’ihoraho nkwiz’icyubahiro cy’izina ryiza rya Yesu namamaz’ishimwe rye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "n’izina ridutinyura mu bwoba dufite ; ruhumuriz’ubabaye rikabyuts’uwaguye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "N’ukuri, Yes’ashobora, Gutsembahw ibyaha, Akesh’amaso ye Abacumuye bose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Gipfamatwi, umva Yesu kiragi ririmba kimug’itere hejuru mpumyi tumbira Yesu"
+      ]
+    }
+  ]
+}

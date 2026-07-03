@@ -1,0 +1,43 @@
+{
+  "number": 66,
+  "book": "Gushimisha",
+  "title": "Ngwino, ngukize, mwangizi",
+  "slug": "ngwino-ngukize-mwangizi",
+  "uuid": "ff91a249-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/ngwino-ngukize-mwangizi/ff91a249-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngwino, ngukize, mwangizi: Nabony' ishavu ryawe ryose; Nyamar' ushatse ko ngukiza,Ukwiriye kunyumvira.Dor' uko mpagaze ku rugi;Ndi Shobuj' Umucunguzi. Nkuzaniy' imigisha myinshi : Mbese, ntiwankingurira ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kera, narakuvukiye,Ngucunguz' ubugingo bwanjye. Mbese, k' unangiw' umutima, Ubuz' uko wanshyiramo ? Namaz' iminsi myinshi cyane Ku rugi rwawe nkomanga. Mugenzi, ko bugiye kwira, Mbese, ntiwankingurira ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Rya joro ridacy' iteka Ni ryir' uzantabaza s' ute ? Ntutind' unyitab' uyu",
+        "munsi,mNgukikire, nkurengere ! Igihe cyawe kirakuze;Ntuvug' uti : Nzaz' ubundi.",
+        "N' uza ku rugi rwanjy' utinze, Uzakomangir’ ubusa,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nubwo wumv' utanyitaho, Jye ndacyakwinginga ngukunze, Nkurindire kugeza",
+        "ryari ?Ngwino, ndakwifuz' i wanjye;Dor' uko mpagaze ku rugi :Ndi Shobuj'",
+        "ukwitayeho. Nkuzaniy’ imigisha myinshi; Mbese, ntiwankingurira ?"
+      ]
+    }
+  ]
+}

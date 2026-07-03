@@ -1,0 +1,42 @@
+{
+  "number": 257,
+  "book": "Gushimisha",
+  "title": "Shimwa, Mukiza—Utuzukiye",
+  "slug": "shimwa-mukiza-utuzukiye",
+  "uuid": "ff974db5-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/shimwa-mukiza-utuzukiye/ff974db5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Shimwa, Mukiza—Utuzukiye",
+        "Tuguhimbarize—Ko wanesheje  Imana yashatse,—Mu gihe",
+        "cyayo,Gutsindish'urupfu—Umucunguzi."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Shimwa, Mukiza—Utuzukiye Tuguhimbarize—Ko wanesheje"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nimumurebe :—Ni We, ni Yesu Mwe gushidikanya :—Ni We Shobuja  Munezerwe",
+        "mwese,—Bantu b'Umwami, Nimuvuge, muti :—Yatuzukiye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nta cyo ngitinya :—Yesu ntagipfa Ni Wempora nshima:—N' uw'amahoro.",
+        "Aramfash' iteka;—Arankomeza. Mu kubaho kwanjye,—Nta cyo ngitinya."
+      ]
+    }
+  ]
+}

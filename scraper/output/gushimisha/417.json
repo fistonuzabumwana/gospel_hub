@@ -1,0 +1,59 @@
+{
+  "number": 417,
+  "book": "Gushimisha",
+  "title": "Yesu n' Umukiza Ndamwiringiye",
+  "slug": "yesu-n-umukiza-ndamwiringiye",
+  "uuid": "ff9bcfa9-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/yesu-n-umukiza-ndamwiringiye/ff9bcfa9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu n' Umukiza Ndamwiringiye.x2"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nd' igiti cyatewe ku mugezi: Nd' amahoro pe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Sinkinyeganyega,Kukw ankomeza.x2"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "No mu cyi, sinuma,Ntewemuri We.x2"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iyo ngiye kugwa, Arandamira.x2"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Iyo mbony' ibyago,Arandengera.x2"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Satan' iy' anteye,—Ntabw' anshobora.x2"
+      ]
+    }
+  ]
+}

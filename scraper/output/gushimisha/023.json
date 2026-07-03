@@ -1,0 +1,32 @@
+{
+  "number": 23,
+  "book": "Gushimisha",
+  "title": "Mana yo mw ijuru",
+  "slug": "mana-yo-mw-ijuru",
+  "uuid": "ff90622c-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/mana-yo-mw-ijuru/ff90622c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana yo mw ijuru, Byos' uri nyira byo, Kand' ubiduh' ubudasiba. Utang’ utImana; Ujy' udukenura, Bituma tuguhimbaza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Impan' ihebuje Yes’ atugabira N' ubuntu bwe n'amahoro ye. Yatubabariye, Twaramugomeye : Mbes’ ibyo s’ igitangaza?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami, ndakwinginze, Nubwo ntakwiriye, Nyigiza hafi, tugumane ! Mpa kugukorera, Ndusheho kwemera Gukund’ ibiri mw ijuru !"
+      ]
+    }
+  ]
+}

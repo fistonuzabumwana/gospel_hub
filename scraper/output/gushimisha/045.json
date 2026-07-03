@@ -1,0 +1,47 @@
+{
+  "number": 45,
+  "book": "Gushimisha",
+  "title": "Ndagushaka, Mwami Yesu",
+  "slug": "ndagushaka-mwami-yesu",
+  "uuid": "ff910765-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ndagushaka-mwami-yesu/ff910765-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndagushaka, Mwami Yesu Ntabwo nakwishoboza. Ndifuza k’ umpora hafi, Ukajy' ump' imbaraga."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nta cyo nti... nya noneho.., Nkore byo... s' untegeka... Njye nguku.. .rikira hose,",
+        "Nkumvira, nguhakwaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ndagushaka, Mwami Yesu Jye nd' umunyantege nke. Uzamber'umujyanama. Nta wundi mbitezeho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndagushaka, Mwami Yesu,Aho ndi mur'iyi si, Mu muvumbi no ku zuba, Mu",
+        "bimbabaza byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndagushaka, Mwami Yesu, Hos' uzajy’ unyobora; Ngeze kuri wa Mugezi, Uzamfashe nywambuke."
+      ]
+    }
+  ]
+}

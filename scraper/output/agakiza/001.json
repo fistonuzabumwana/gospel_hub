@@ -1,0 +1,42 @@
+{
+  "number": 1,
+  "book": "Agakiza",
+  "title": "Urukundo ruhebuje",
+  "slug": "urukundo-ruhebuje",
+  "uuid": "ff9c3fe7-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/urukundo-ruhebuje/ff9c3fe7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Urukundo ruhebuje, gend' urwogeze hose. Urukundo ruhebuje, n'indirimbo ya mbere.Yaririmbwe na marayika, yumvikana mu bashumba. Twishimiye kumenya ko haj' urukundo",
+        "rw'Imana."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Urukundo! Urukundo! Urukundo! Ngurw' urukundo rw'Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Urukundo ruhebuje, rushak'uwazimiye. Urukundo ruhebuje rurakubabarira.Jya",
+        "kuri ya soko nziza, ituruk' i Gologota. Uzaboner' ubugingo mu rukundo ruhebuje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Urukundo ruhebuje, rutugeza mw ijuru. Urukundo ruhebuje, tuzanezerwa",
+        "cyane.Mw ijuru nta ndwar' ibayo, nta rupfu ruzagerayo. Twakijijwe n'urukundo",
+        "rwinshi rw' Iman' ihoraho"
+      ]
+    }
+  ]
+}

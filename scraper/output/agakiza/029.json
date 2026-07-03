@@ -1,0 +1,49 @@
+{
+  "number": 29,
+  "book": "Agakiza",
+  "title": "Yesu ni w'ufit' izina ryiza",
+  "slug": "yesu-ni-wufit-izina-ryiza",
+  "uuid": "ff9cdc90-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yesu-ni-wufit-izina-ryiza/ff9cdc90-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu ni w'ufit' izina ryiza, Mu mazina yose mur' iyi si. Iryo zina Yesu, Yesu, N'umubavu mwiza cyane rwose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Iryo zina rirakomeye, Rirashobora gukurahw ibyaha. Iryo zina Yesu, Yesu, Ni",
+        "ryo rinezeza mu mutima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta n'irindi zina mur' iyi si Rifit' imbaraga n'ubugingo. Iryo zina Yesu, Yesu,",
+        "Ryaririmbwe n'abamarayika."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni ryo zina rihebuj'ayandi, Nde tse ni ryo ryahanits' ijuru. Iryo zina Yesu, Yesu,",
+        "Ririmbwa mur' iyi si yose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Sinshobora kwibagirwa Yesu, Iryo zina n'agakiza kanjye. Yesu, Yesu nzamubona",
+        "Turi mw ijuru tunezerewe."
+      ]
+    }
+  ]
+}

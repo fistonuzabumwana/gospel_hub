@@ -1,0 +1,25 @@
+{
+  "number": 25,
+  "book": "Gushimisha",
+  "title": "Uwiteka n'umunyambabazi",
+  "slug": "uwiteka-numunyambabazi",
+  "uuid": "ff907112-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/uwiteka-numunyambabazi/ff907112-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uwiteka n'umunyambabazi ;N' Umukunzi wac' udahemuka; Nta warondor' imbarag' agira; Nta wager'urukundo rwe rwinshi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni We Tangiriro n'Imperuka. Aturindish' imbaraga nyinshi. Tumushimir' ibyatubayeho; Tumuragize n'ibir' imbere."
+      ]
+    }
+  ]
+}

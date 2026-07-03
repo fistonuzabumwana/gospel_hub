@@ -1,0 +1,40 @@
+{
+  "number": 11,
+  "book": "Gushimisha",
+  "title": "Mpimbariz' Iman'ibyo yankoreye",
+  "slug": "mpimbariz-imanibyo-yankoreye",
+  "uuid": "ff9003b3-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/mpimbariz-imanibyo-yankoreye/ff9003b3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mpimbariz' Iman'ibyo yankoreye: Yatanz' Umwana wayo w'ikinege, Amfir' ab' icyiru cy'ibyaha byanjye; Nukw’anshir' icyanzu ngo njyemw’ijuru."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nsingize, nsingize Yesu  wamfiriye! Nsingize, nsingize uwo Mwami wanjye!",
+        "Namwe ngo nimuz' abageze kwa Se;Mumwitabe mwese, mumusingize !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yamberey' inshungu i Gologota, Angur’ amaraso : sinkir’ uwanjye. Uwab’ umugome, akamwizera,Yakizw' ako kany' akababarirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yakoz' ibikomeye ! Twishimane ! Twishimir' ubuntu n'imbabazi ze. Nyamar' ubw'",
+        "azaza tumwirebera,Nta wavug' uburyo tuzamushima."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "number": 75,
+  "book": "Gushimisha",
+  "title": "Yesu ni we Nshuti yacu",
+  "slug": "yesu-ni-we-nshuti-yacu",
+  "uuid": "ff91e06e-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/yesu-ni-we-nshuti-yacu/ff91e06e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu ni we Nshuti yacu; Ni W' utwikorerera Imibabaro n'ibyaha, Akatwuzuza na Se. Dore, tubur’amahoro,Tuyabuzwa n'ubusa, Kuko tudasaba neza Ibyo dukena byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni tugir' ibyago byinshi.Tugashukwa n'Umubi, Tumuganyir' amaganya,Kukw",
+        "ayadukuraho. Ha'rihw indi nshuti nk'iyi Yababarana natwe ? Yes' az' intege nke",
+        "zacu, Tumwisunge dusaba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Niba ufit' ishavu ryinshi ukababara rwose,ubuhungiro ni Yesu: ngwino",
+        "tumwihishemo. inshuti zidutaye, zikaduhemukira, Yes' adukingir' ingabo,",
+        "Akaduhumuriza."
+      ]
+    }
+  ]
+}

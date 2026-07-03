@@ -1,0 +1,50 @@
+{
+  "number": 30,
+  "book": "Agakiza",
+  "title": "Ubugingo bwacu ni bugufi cyane",
+  "slug": "ubugingo-bwacu-ni-bugufi-cyane",
+  "uuid": "ff9ce3e3-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ubugingo-bwacu-ni-bugufi-cyane/ff9ce3e3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubugingo bwacu ni bugufi cyane, Twabugeranya n'ubwato mu mazi.",
+        "Tunyura mu nyanja irimw amakuba,Arik'Umukiza ni w' utuyobora."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ubwo tuyoborwa n'Umukiza wacu, Dufit' amahoro mur' urwo rugendo. Kand'",
+        "azatugeza mw ijur' amahoro,Nta bwo tuzongera kwibuk' urugendo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tunyura mu mbeho mu muyaga mwinshi, Ijambo ry'Imana rituber' umucyo.",
+        "Ubwoba n'amakuba mur' ubwo bwato Bizibagirana mw ijuru kwa Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubw' uwo muyaga ufit' imbaraga, Natwe twegereye ku nkombe y'uruzi. Nta",
+        "muyag' uhari, nta murab' uhari.N'ukuri tuzasohora mu mahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ubwo tuzagera kwa Data mw ijuru, Rwose tuzashimir' Umukiza Yesu. Nta yandi",
+        "makuba tuzagir' ukundi, Tubanye na Yesu mu bwami mw ijuru."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "number": 26,
+  "book": "Agakiza",
+  "title": "Ndashakashak' umwana wa njye",
+  "slug": "ndashakashak-umwana-wa-njye",
+  "uuid": "ff9cca7b-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ndashakashak-umwana-wa-njye/ff9cca7b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndashakashak' umwana wa njye, Uri he se, mwana wanjye?",
+        "Mbere wajyag' unezeza rwose, Na none ndacyakwibuka."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Uri he se mwana wanjye? Uri he se mwana wanjye? Garuka ningoga! Mwana",
+        "wanjye nku nda, Ni wowe nshak' uyu munsi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mbere wari wejejwe rwose, Ukimberey' umwana. Non'ubu wanduriye mu byaha, N'inzira mbi wahisemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "None ndifuza kukubona, Ko wagend' utunganye. Nkongera kukumv' useng' Imana Ushimir' Umwami Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nshakashakir' iyi nzimizi. Uyishakish' urukundo. Ndamukiriz' uwo mwana wanjye,",
+        "Mubwire yuko murinze."
+      ]
+    }
+  ]
+}

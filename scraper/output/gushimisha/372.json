@@ -1,0 +1,43 @@
+{
+  "number": 372,
+  "book": "Gushimisha",
+  "title": "Nyigiza hafi, Mwami Yesu",
+  "slug": "nyigiza-hafi-mwami-yesu",
+  "uuid": "ff9a9ada-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/nyigiza-hafi-mwami-yesu/ff9a9ada-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nyigiza hafi, Mwami Yesu; Nyakira, Yesu, nguhungiyeho.",
+        "Mbumbatiz' amaboko yawe, Ni ho handutir' ahandi hose. ( x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nyigiza hafi, Mwami wanjye : Nta turo ryiza nkuzaniy’ ubu.Nzany' umutima",
+        "wanjye mubi; Uwuhagiz' amaraso yawe. (x2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nyigiza hafi y’ Uwambambiwe ! Nihanny' ibyaha n'iby'isoni nke.Nzinutsw' ibyo",
+        "nishimiraga. Ni Wowe nshaka, Yesu wenyine ! (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iminsi yose, njye nkwegera, Ngez' ubwo nzager' i Wawe, Yesu.Maze, mu bwami",
+        "budashira, Nzakubahw akaramata, Yesu. (x 2)"
+      ]
+    }
+  ]
+}

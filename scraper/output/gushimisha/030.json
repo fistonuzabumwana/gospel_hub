@@ -1,0 +1,43 @@
+{
+  "number": 30,
+  "book": "Gushimisha",
+  "title": "Ai Mukunzi wanjye we",
+  "slug": "ai-mukunzi-wanjye-we",
+  "uuid": "ff909424-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ai-mukunzi-wanjye-we/ff909424-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ai Mukunzi wanjye we, Umpe kukwihishamo. iyo ntewe n'iby'isi N'ingabo za Satani, Mutabaz’umpish'ubwo , Ba banzi be kumfata Umber' ubuhungiro, Mu rupf' uzanyakire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta bundi buhungiro, Mwam’ unyirokorere; We kunsiga, Krisito, Komez' uiy'",
+        "undengera. Ni Wow' ump’ imbaraga,Nta wundi mfit' umfasha; Mbundikiz' amababa, Uhor' undind' ibibi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ur' umunyambabazi Zitarangira, Yesu; Usindagiz' urushye, N'urway' uramukiza,",
+        "Urera bihebuje,Nta bwo ngutunganiye; Ndi mubi bikabije,  Wow' urakiranuka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yesu ni Wowe soko Y'amazi y'ubugingo, Reka nkunyweho cyane, Undudubiz'",
+        "imbere. Nuk' umutima wanjye Ujye wuzur' iteka, Amazi y'iyo soko Abe mensh'",
+        "adakama"
+      ]
+    }
+  ]
+}

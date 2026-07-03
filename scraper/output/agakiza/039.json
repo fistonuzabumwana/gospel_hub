@@ -1,0 +1,48 @@
+{
+  "number": 39,
+  "book": "Agakiza",
+  "title": "Kur' uyu munsi turashobora Kubon' ibimenyetso by'Imana",
+  "slug": "kur-uyu-munsi-turashobora-kubon-ibimenyetso-byimana",
+  "uuid": "ff9d292e-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/kur-uyu-munsi-turashobora-kubon-ibimenyetso-byimana/ff9d292e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Kur' uyu munsi turashobora Kubon' ibimenyetso by'Imana. Abanyabyaha barakanguka, Bakemer' Ihoraho."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Impumyi zose n'ibipfamatwi N'abaremaye n’abanyunyutse. Bose babasha kuba",
+        "bazima, Kubw' izina rya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Na n'ub' Iman’ifit' ububasha, I byuts' abarway' ikibakiza. Iman'ifa sh'",
+        "abanyantege nke, No kubakiza rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dufit' Umwuka Wera w'Imana. Ni w' utuyobora buri munsi. Non' Abakristo",
+        "bariteguye, Gusanganira Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Wa munyabyaha we, sanga Yesu, Aragushak' aguhamagara. Wiyeze mu maraso ya Yesu, N'Umucunguzi wawe."
+      ]
+    }
+  ]
+}

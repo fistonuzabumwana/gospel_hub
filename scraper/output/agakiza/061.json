@@ -1,0 +1,55 @@
+{
+  "number": 61,
+  "book": "Agakiza",
+  "title": "Kubw' urukundo rwinshi",
+  "slug": "kubw-urukundo-rwinshi",
+  "uuid": "ff9d93f5-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/kubw-urukundo-rwinshi/ff9d93f5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Kubw' urukundo rwinshi rwa tumy' aza kunshaka, Anshyira ku bitugu anjyana mu rugo rwe.Haririmbw' indirimbo nziza Ziririmbwa na marayika."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yaj' aje kunshaka kugira ngw ankize. Yamvanye mu musayo w'urupfu. Yanshyize mu rugo rwe rw'intama."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu, Mwungeri mwiza, Yanzu ye mu mutima. Aherakw ambwir' ati, Mwana",
+        "Wanjye nakunze.Uko ni kw iryo jwi rye ryiza Ryahojej' umutima wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nta bwo nakwibagirwa ko ya vuy' amaraso. Ubwo bamwambikaga na rya kamba ry'amahwa, Kandi ku musaraba ni ho Nshimir' Umwami Yesu Kristo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ubu nsigaye ngendera mu mucyo w'ukuri. Mfit’ amasezerano mur' iyo nzira",
+        "ncamo, Nzahora nshim' Umwami Yesu Iteka ryose nezerewe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ibihe birihuta ndindiriy'igitondo, Ubw' uzampamagara unyinjiza mw ijuru.",
+        "Nzahagarar' imbere yawe Nezerewe kandi ndirimba."
+      ]
+    }
+  ]
+}

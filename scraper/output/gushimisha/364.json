@@ -1,0 +1,65 @@
+{
+  "number": 364,
+  "book": "Gushimisha",
+  "title": "Yes' Umwami ndamubonye",
+  "slug": "yes-umwami-ndamubonye",
+  "uuid": "ff9a71e8-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/yes-umwami-ndamubonye/ff9a71e8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' Umwami ndamubonye, Kandi sinkimwimura; Yemeye kunyoz' i by aha Byambuzag' ubugingo."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nta kirut' Umwami Yesu Mw’ isi cyangwa mw ijuru. Ni We watuguz' amaraso",
+        "Kera ku Musaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Amaras' arantangaza : Yarampembuye mpfuye. Ampesh' amahoro menshi No",
+        "kubaho kw'iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubwo wampinduy' umwana, Non' umpindur' ingeso, Kugira ng’ undeba wese",
+        "Aguhimbaze, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndagushima ko wanshatse Kandi ko wantaruye, Ukanyogesh' amaraso Kubw’",
+        "imbabazi zawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mwami Yes' ump' urukundo, Rwo wakunz' a bo mw isi. Umpe kugukunda rwose,",
+        "Nkunde n'abawe bose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Warampfiriye, Mukiza : Noneho, mpfane nawe ! Kand' usohoze muri jye ibyo",
+        "kugushimisha."
+      ]
+    }
+  ]
+}

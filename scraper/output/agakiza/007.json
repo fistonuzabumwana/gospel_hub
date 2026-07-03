@@ -1,0 +1,45 @@
+{
+  "number": 7,
+  "book": "Agakiza",
+  "title": "Nimuze mwese turirimbe",
+  "slug": "nimuze-mwese-turirimbe",
+  "uuid": "ff9c5f4a-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nimuze-mwese-turirimbe/ff9c5f4a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimuze mwese turirimbe, Kubw' uyu munsi wahanuwe N'abahanuzi kera. N'umunsi mwiza ukomeye, Ni h' urukundo rukomeye Rwaturutse ku Mana. Muze mwese tunezerwe turirimbe dushimira Yesu waje kudukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yes' afit' ishusho y'Imana, Ariko yihinduy’ umuntu Ngo twese tumumenye.",
+        "Yatuzaniye amahoro,Yaje gushak' abazimiye, Yazany we no gukiza. Muze",
+        "mwesedufatanye N'Umukiza, kand' aduhe Urukundo n'ubugingo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Azameny' uko tubabara, Azameny' amagorwa yacu, Azadufasha rwose.",
+        "Azatwigish' Imana Data.Azatumenyesh' urukundo Mu rupf' azadupfira. Muze",
+        "mwese adukize, Atu zure mu mitima Atwugururir' ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni we zuba ryacu ry'ukuri, Rya tuzaniye agakiza, Riratuvira twese. N'Umwungeri",
+        "Mwiz' uturinda,Ashaka ko twamugumaho, Tukamuku rikira. Muze mwese uko",
+        "mwaje, Tumusange, tumurebe. Muze mwese tumwigane."
+      ]
+    }
+  ]
+}

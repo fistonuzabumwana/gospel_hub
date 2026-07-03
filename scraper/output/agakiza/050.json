@@ -1,0 +1,41 @@
+{
+  "number": 50,
+  "book": "Agakiza",
+  "title": "Ririmb' inkuru nziza",
+  "slug": "ririmb-inkuru-nziza",
+  "uuid": "ff9d5f8f-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ririmb-inkuru-nziza/ff9d5f8f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ririmb' inkuru nziza: Iman' i kunda bose. Wigishe ya maraso yatwejej' imitima. Uvug' iby' iyo mpano,yuko twahaw' Umwana.Gend' uvug' iyo nkuru ku bantu bose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu ku musaraba yadupfiriye twese. Yatwujuje n'Imana, ni yo Data wa twese.",
+        "Wa mwenda war' ahera, nziko watabutsemo.Jye nawe, none twugururiw' inzira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abababaye bose, gend' ubariri mbire. N'abari mu ntambara cyan' i",
+        "abageragezwa. Ririmba mu misozi, vug' iyi nkuru nziza,Yuko Yes' a bashaka kubw'urukundo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu mwijim' uririmbe, naho ha tav' izuba. Bos' ubaririmbire, bos' uko bamerewe,",
+        "Mu gitond' uririmbe, no ku manywa y'ihangu.Shim' Umukiza nubw' ijoro riguye."
+      ]
+    }
+  ]
+}

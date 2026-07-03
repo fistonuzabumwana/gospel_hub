@@ -1,0 +1,40 @@
+{
+  "number": 53,
+  "book": "Gushimisha",
+  "title": "Nimusang’ Umwami Yesu",
+  "slug": "nimusang-umwami-yesu",
+  "uuid": "ff913be0-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/nimusang-umwami-yesu/ff913be0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimusang’ Umwami Yesu :Arabaruhura; Nimubyumve, mw’ abarushve,Yasezerany' atyo. Ni W' ugab’umugisha: Ashobora byose.  Ni W’ ugab' ubugingo Butazashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nimusang' Umwami Yesu :Dor' arabashaka; Nimubyumve, mw' abahabye,Yasezerany' atyo. Kand' ushavura wese,Agahab' inzira, Yumvire Yesu vuba. Az' amwakire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nimusang' Umwami Yesu :Atang' imbaraga; Banyantege nke",
+        "mubyumve,Mumwisunge mwese. Satan' arabarwanya, Akajy' abashuka. Yesu yaramutsinze: Nimutinyuke !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' usang’ Umwami Yesu Ntazamukumira; Mwe gushidikanya rwose, Mwumve munezerwe. Akund' abanyabyaha Urukundo rwinshi. Arabahamagara Ngo muz' ahwari."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "number": 344,
+  "book": "Gushimisha",
+  "title": "Muze mwese, muz' aho ndi",
+  "slug": "muze-mwese-muz-aho-ndi",
+  "uuid": "ff99feb6-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/muze-mwese-muz-aho-ndi/ff99feb6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Muze mwese, muz' aho ndi, Abananiwe! Yesu ni kw 'ahamagara . Abo mw isi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Si wow' umushak' ahubwo Ni W' ugushaka ! Wi kwirirwa witunganya i Uz' uk' uri."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dor' ahagaze ku rugi Arakomanga. Ahamaz' iminsi myinshi : Mwinjiz' ubu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ngwin' ureb' iby' Umukiza Agukorera ; Aribugukiz' indwara Z'umutima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ntutsinzwe se n'urubanza Rw'ibyaha byawe? Rek' akubabarir' ibyo Byaha byose!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Yesu kw ar' umunyebambe.Umwangiy' iki ? Ko byatuma yigirayo, Ababaye ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Amaganya yawe yoseN'imibabaro,  None byos' abiguture, Uruhuke !"
+      ]
+    }
+  ]
+}

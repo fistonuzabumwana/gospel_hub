@@ -1,0 +1,56 @@
+{
+  "number": 347,
+  "book": "Gushimisha",
+  "title": "Yesu nguriy' ahw ahagaze",
+  "slug": "yesu-nguriy-ahw-ahagaze",
+  "uuid": "ff9a11e1-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/yesu-nguriy-ahw-ahagaze/ff9a11e1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu nguriy' ahw ahagaze; Dor' ukw aboshywe n'abanzi be  Umva Pilat' arabaz' ati :Yesu mugirire nte ?"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Uramugenza s'ute ?hitamo nonaha ' Naw' utazibaz' ubundi, Uti  Arangenz' ate?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyo na non' ubihitemo ! Wabyemera, wamuhinyura, Cyangwa wamwimika",
+        "wishimye.Uramugirir' ute ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubwo Pilato yashakaga Kwirengagiza guhitamo, Byaramunaniye : naw' ibyo",
+        "Ntibyagushobokera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Petero yaramwihakanye; Ni ko guhitamo nabi pe ! Wowe s' ahubwo ntiwakunda",
+        "Gupfa bamuguhora ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yes' umusubize nez' uti :Nd' uwawe, Mwami, ndakwihaye; Umpe kujy' aho",
+        "wanyobora, Nishimiy' iby' ukunda !"
+      ]
+    }
+  ]
+}

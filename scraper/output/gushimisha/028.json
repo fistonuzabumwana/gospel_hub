@@ -1,0 +1,40 @@
+{
+  "number": 28,
+  "book": "Gushimisha",
+  "title": "Muganga wacu ni Yesu",
+  "slug": "muganga-wacu-ni-yesu",
+  "uuid": "ff90868e-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/muganga-wacu-ni-yesu/ff90868e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Muganga wacu ni Yesu:Ni we Mukiza wacu; Ni na w' ubyuts' abaguye ; Umv' ijwi ry'ugukunda !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Indirimbo z’lmana Ni zo zidushimisha : Turirimbane, tuti; Yesu, Yesu, Yesu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "imyend' urayirihiwe ! Umv' ijwi ry'Umukiza. Azakugeza mw ijuru. ng' unezeranwe",
+        "na We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Izina ryiza rya Yesu Ni ryo rikuru rwose. Dushim uwo Mucunguzi Imyaka yacu",
+        "yose."
+      ]
+    }
+  ]
+}

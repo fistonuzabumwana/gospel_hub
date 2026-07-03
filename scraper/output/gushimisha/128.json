@@ -1,0 +1,34 @@
+{
+  "number": 128,
+  "book": "Gushimisha",
+  "title": "Ubu, nj'uko ndi",
+  "slug": "ubu-njuko-ndi",
+  "uuid": "ff9385a2-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitaba Yesu",
+  "url": "https://indirimbo.com/gushimisha/ubu-njuko-ndi/ff9385a2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubu, nj'uko ndi, niringiye Gus' amaraso wamviriye Kandi yuko wampamagaye  Mucunguzi, nditabye, nditabye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ubu,nj’uko ndi, mbuyerezwa N'intambara yo mu mutima N'intimba nyinshi",
+        "n'ubwihebe: Mucunguzi, nditabye, nditabye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubu, nj’uko ndi: sinabasha Kwikurahw ibinter' isoni; Niringiy’amaraso yawe:",
+        "Mucunguzi, nditabye, nditabye"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "number": 191,
+  "book": "Gushimisha",
+  "title": "Nunguk' ubuntu bwa Yesu",
+  "slug": "nunguk-ubuntu-bwa-yesu",
+  "uuid": "ff95727d-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/nunguk-ubuntu-bwa-yesu/ff95727d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nunguk' ubuntu bwa Yesu, Menye n'imbabaz' afite, Nunguk' ubwenge bw'ukuri, Meny' urukundo yankunze! Nunguk' ibya Yesu !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nunguk' ibya Yesu  Nunguk' ubwenge bw'ukuri, ' Meny' urukundo yankunze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nshishikarir' ibya Yesu, Meny' iby' anshakaho byose. Mwuka Wer' umfuturire :",
+        "Mbwir' uko Yesu yankunze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nunguk' ijambo rya Yesu, Mbane n'Umwam' antoneshe; Numvire byos' antegeka, Mpuze na We, muyoboke."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Meny’ iby'ubwami bwa Yesu, Menye n'ubwiza bwe bwose, Meny' ukw azim'",
+        "ingoma ye, Ari We Mwami w'abami."
+      ]
+    }
+  ]
+}

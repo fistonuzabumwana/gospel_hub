@@ -1,0 +1,52 @@
+{
+  "number": 248,
+  "book": "Gushimisha",
+  "title": "Hafi y'Umusaraba",
+  "slug": "hafi-yumusaraba",
+  "uuid": "ff96edf0-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/hafi-yumusaraba/ff96edf0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Hafi y'Umusaraba,aho ntura iteka,niho mperwa ku buntu amazi y'ubugingo."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "nirata umusaraba kugeza ubwo nzaba mbonye uburuhukiro hakurya y'uruzi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "nahageze nshobewe,nsinzwe n'urubanza,Yesu arambabarira,angotesha urukundo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "mwami Yesu unyibutse uwo musaraba.kugira ngo ngendere mu gicucu cyawo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni w’utuma nemera Kwang' iby'isi rwose, Kukw ari w’unkundisha Yesu wamfiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Hafi y'Umusaraba, Ni ho ntur’iteka, Ntegerej’ igihe cyo Kwambuka rwa Ruzi."
+      ]
+    }
+  ]
+}

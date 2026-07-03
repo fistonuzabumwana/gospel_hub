@@ -1,0 +1,58 @@
+{
+  "number": 19,
+  "book": "Agakiza",
+  "title": "Mana, turategereje kwakir' uwo Mwuka wawe.",
+  "slug": "mana-turategereje-kwakir-uwo-mwuka-wawe",
+  "uuid": "ff9ca612-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mana-turategereje-kwakir-uwo-mwuka-wawe/ff9ca612-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana, turategereje kwakir' uwo Mwuka wawe.",
+        "Tumugusabye twizeye; Mutwoherereze, Mana,"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mana yacu, Mana yacu, Woherez' Umwuka wawe. Mu mitima yacu twese,",
+        "Twuzuriz'isezerano."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wonger' ucan' umuriro, mu mitima yacu twese.",
+        "Ibitagushimishije, ubitwikish' umuriro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Duh' imitim' iboneye, tuve mu gasuzuguro, Utuber' Umwami twese, utegek'",
+        "abantu bawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Utwuzuz' iminsi yose, urukundo rwawe Mana. Tub' inzu y'Umwuka Wera, ahore",
+        "muri tw' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kand' impano Z'umwuka, uzitugabire Mwami. Ndets'ukize n'abarwayi, na bo",
+        "bakumenye Mana."
+      ]
+    }
+  ]
+}

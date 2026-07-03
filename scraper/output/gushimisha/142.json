@@ -1,0 +1,40 @@
+{
+  "number": 142,
+  "book": "Gushimisha",
+  "title": "Untwar' untwar’untware",
+  "slug": "untwar-untwaruntware",
+  "uuid": "ff93f894-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/untwar-untwaruntware/ff93f894-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Untwar' untwar’untware, Yesu, Mwami Yes’ untegeke ! Untwar' ungir'’imbata yawe Mwami Yes’untegeke!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyaha byanjye byari byinshi: Mwami Yes’untegeke! Nyamara, byos' urabijyana: Mwami  Yes’untegeke!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wangabiy’ amahoro menshi :Mwami Yes’untegeke! Ubwo wangeze mu mutima, Mwami Yes’untegeke!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Gumana nanjy’ iminsi yose :Mwami Yes’untegeke! Tutari kumwe, naba mfuye :",
+        "Mwami Yes’untegeke!"
+      ]
+    }
+  ]
+}

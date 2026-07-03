@@ -1,0 +1,55 @@
+{
+  "number": 89,
+  "book": "Gushimisha",
+  "title": "Yesu yaje kunshaka",
+  "slug": "yesu-yaje-kunshaka",
+  "uuid": "ff92498f-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/yesu-yaje-kunshaka/ff92498f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu yaje kunshaka, Ndi kure ,nzimiye, Anshyira ku bitugu Nukw arantarura  ! Maz’ abamarayika be. Baririmba basingiza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umv' uko yankunze  Umv' uko yanshatse ! Ibuk’ amaraso yanguze ! Mbur’uko",
+        "mbivuga, numiwe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yasanze nkomeretse,Nukw aranyomora Ampumurira neza  At' Ur’ uwanjye ko! Sinari numv' ijwi nk'iryo, Nduhuka mu mutim’ u’bwo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Anyereka n' inkovu Zo mu biganza bye, N'izatewe n'amahwa Zo mu ruhanga rwe. Nibaz’ icyo yambonyemo, Cyatumye yihangan' atyo!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "None, tuban' iteka; Mu maso he hera Hamvir’ umucyo mwinshi, Uhor' unyobora;",
+        "Amp' ibikwiriye byose; Mbur' uko mbimushimira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nduhutse mu mutima,Amp' amahoro ye. Iteka ntegereje Umuns' azazaho,",
+        "Antahukan' angez' i We. Anguze n'amaraso ye."
+      ]
+    }
+  ]
+}

@@ -1,11 +1,10 @@
 import 'dart:async';
-import 'package:sqflite/sqflite.dart';
+import 'dart:io';
+import 'package:flutter/services.dart';
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 import '../models/bible_verse.dart';
-import '../models/bible_book.dart';
-import '../models/bible_version.dart';
 import '../models/hymn.dart';
-import '../models/hymn_category.dart';
 
 class DatabaseService {
   static final DatabaseService _instance = DatabaseService._internal();
@@ -21,185 +20,163 @@ class DatabaseService {
   }
 
   Future<Database> _initDatabase() async {
-    String path = join(await getDatabasesPath(), 'gospel_hub.db');
-    return await openDatabase(
-      path,
-      version: 1,
-      onCreate: _createTables,
-    );
+    final databasesPath = await getDatabasesPath();
+    final path = join(databasesPath, 'gospel_hub.db');
+
+    // Check if the database exists
+    final exists = await databaseExists(path);
+    bool shouldCopy = !exists;
+
+    if (exists) {
+      try {
+        final db = await openDatabase(path, readOnly: true);
+        final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM bible_verses'));
+        await db.close();
+        if (count == null || count == 0) {
+          print('Existing database is empty. Will overwrite.');
+          shouldCopy = true;
+        }
+      } catch (e) {
+        print('Existing database is invalid or outdated: $e. Will overwrite.');
+        shouldCopy = true;
+      }
+    }
+
+    if (shouldCopy) {
+      print('Creating new copy from asset...');
+      // Make sure the parent directory exists
+      try {
+        await Directory(dirname(path)).create(recursive: true);
+      } catch (_) {}
+
+      // Copy from asset
+      try {
+        ByteData data = await rootBundle.load('assets/database/gospel_hub.db');
+        List<int> bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+        
+        // Write and flush the bytes written
+        await File(path).writeAsBytes(bytes, flush: true);
+        print('Database copied successfully!');
+      } catch (e) {
+        print('Error copying database asset: $e');
+        throw Exception('Failed to initialize local database');
+      }
+    } else {
+      print('Database already exists at: $path and is healthy.');
+    }
+
+    // Open the database
+    return await openDatabase(path, version: 1);
   }
 
-  Future<void> _createTables(Database db, int version) async {
-    // Bible versions table
-    await db.execute('''
-      CREATE TABLE bible_versions (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        version_code TEXT NOT NULL,
-        language_code TEXT NOT NULL,
-        display_name TEXT NOT NULL,
-        is_downloaded INTEGER NOT NULL DEFAULT 0,
-        download_date INTEGER
-      )
-    ''');
+  // ── Bible Queries ──────────────────────────────────────────────────────────
 
-    // Bible books table
-    await db.execute('''
-      CREATE TABLE bible_books (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        book_number INTEGER NOT NULL,
-        book_name_en TEXT NOT NULL,
-        book_name_kinyarwanda TEXT NOT NULL,
-        book_name_french TEXT NOT NULL,
-        testament TEXT NOT NULL,
-        chapter_count INTEGER NOT NULL
-      )
-    ''');
-
-    // Bible verses table
-    await db.execute('''
-      CREATE TABLE bible_verses (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        version_id INTEGER NOT NULL,
-        book_id INTEGER NOT NULL,
-        chapter_number INTEGER NOT NULL,
-        verse_number INTEGER NOT NULL,
-        verse_text TEXT NOT NULL,
-        FOREIGN KEY (version_id) REFERENCES bible_versions (id),
-        FOREIGN KEY (book_id) REFERENCES bible_books (id)
-      )
-    ''');
-
-    // Hymn categories table
-    await db.execute('''
-      CREATE TABLE hymn_categories (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        category_name_en TEXT NOT NULL,
-        category_name_kinyarwanda TEXT NOT NULL,
-        category_name_french TEXT NOT NULL
-      )
-    ''');
-
-    // Hymns table
-    await db.execute('''
-      CREATE TABLE hymns (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        hymn_number INTEGER NOT NULL,
-        title_en TEXT NOT NULL,
-        title_kinyarwanda TEXT NOT NULL,
-        title_french TEXT NOT NULL,
-        category_id INTEGER NOT NULL,
-        lyrics_en TEXT NOT NULL,
-        lyrics_kinyarwanda TEXT NOT NULL,
-        lyrics_french TEXT NOT NULL,
-        first_line TEXT NOT NULL,
-        FOREIGN KEY (category_id) REFERENCES hymn_categories (id)
-      )
-    ''');
-
-    // Create indexes for better performance
-    await db.execute('CREATE INDEX idx_bible_verses_version_book ON bible_verses(version_id, book_id)');
-    await db.execute('CREATE INDEX idx_bible_verses_chapter ON bible_verses(chapter_number)');
-    await db.execute('CREATE INDEX idx_hymns_category ON hymns(category_id)');
-    await db.execute('CREATE INDEX idx_hymns_search ON hymns(title_en, first_line)');
-  }
-
-  // Bible Version methods
-  Future<int> insertBibleVersion(BibleVersion version) async {
-    final db = await database;
-    return await db.insert('bible_versions', version.toMap());
-  }
-
-  Future<List<BibleVersion>> getBibleVersions() async {
-    final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query('bible_versions');
-    return List.generate(maps.length, (i) => BibleVersion.fromMap(maps[i]));
-  }
-
-  Future<void> updateBibleVersionDownloadStatus(int versionId, bool isDownloaded) async {
-    final db = await database;
-    await db.update(
-      'bible_versions',
-      {
-        'is_downloaded': isDownloaded ? 1 : 0,
-        'download_date': isDownloaded ? DateTime.now().millisecondsSinceEpoch : null,
-      },
-      where: 'id = ?',
-      whereArgs: [versionId],
-    );
-  }
-
-  // Bible Book methods
-  Future<int> insertBibleBook(BibleBook book) async {
-    final db = await database;
-    return await db.insert('bible_books', book.toMap());
-  }
-
-  Future<List<BibleBook>> getBibleBooks() async {
-    final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query('bible_books', orderBy: 'book_number');
-    return List.generate(maps.length, (i) => BibleBook.fromMap(maps[i]));
-  }
-
-  // Bible Verse methods
-  Future<int> insertBibleVerse(BibleVerse verse) async {
-    final db = await database;
-    return await db.insert('bible_verses', verse.toMap());
-  }
-
-  Future<List<BibleVerse>> getChapterVerses(int versionId, int bookId, int chapterNumber) async {
+  Future<List<BibleVerse>> getChapterVerses(int bookNumber, int chapterNumber) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
       'bible_verses',
-      where: 'version_id = ? AND book_id = ? AND chapter_number = ?',
-      whereArgs: [versionId, bookId, chapterNumber],
-      orderBy: 'verse_number',
+      where: 'book = ? AND chapter = ?',
+      whereArgs: [bookNumber, chapterNumber],
+      orderBy: 'verse',
     );
     return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
   }
 
-  // Hymn Category methods
-  Future<int> insertHymnCategory(HymnCategory category) async {
+  Future<List<BibleVerse>> searchBible(String query) async {
+    if (query.trim().isEmpty) return [];
     final db = await database;
-    return await db.insert('hymn_categories', category.toMap());
+    final List<Map<String, dynamic>> maps = await db.query(
+      'bible_verses',
+      where: 'text LIKE ?',
+      whereArgs: ['%$query%'],
+      orderBy: 'book, chapter, verse',
+      limit: 100, // Safe limit for performance
+    );
+    return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
   }
 
-  Future<List<HymnCategory>> getHymnCategories() async {
-    final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query('hymn_categories');
-    return List.generate(maps.length, (i) => HymnCategory.fromMap(maps[i]));
-  }
+  // ── Hymn Queries ───────────────────────────────────────────────────────────
 
-  // Hymn methods
-  Future<int> insertHymn(Hymn hymn) async {
-    final db = await database;
-    return await db.insert('hymns', hymn.toMap());
-  }
-
-  Future<List<Hymn>> getHymnsByCategory(int categoryId) async {
+  Future<List<Hymn>> getHymnsByBook(String bookName) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
       'hymns',
-      where: 'category_id = ?',
-      whereArgs: [categoryId],
-      orderBy: 'hymn_number',
+      where: 'book = ?',
+      whereArgs: [bookName],
+      orderBy: 'number',
     );
     return List.generate(maps.length, (i) => Hymn.fromMap(maps[i]));
   }
 
-  Future<List<Hymn>> searchHymns(String searchQuery) async {
+  Future<List<Hymn>> searchHymns(String query) async {
+    if (query.trim().isEmpty) return [];
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
       'hymns',
-      where: 'title_en LIKE ? OR title_kinyarwanda LIKE ? OR title_french LIKE ? OR first_line LIKE ?',
-      whereArgs: ['%$searchQuery%', '%$searchQuery%', '%$searchQuery%', '%$searchQuery%'],
-      orderBy: 'hymn_number',
+      where: 'title LIKE ? OR category LIKE ? OR lyrics LIKE ? OR number = ?',
+      whereArgs: ['%$query%', '%$query%', '%$query%', int.tryParse(query) ?? -1],
+      orderBy: 'book, number',
+      limit: 100,
     );
     return List.generate(maps.length, (i) => Hymn.fromMap(maps[i]));
   }
 
-  // Utility methods
-  Future<void> closeDatabase() async {
+  // ── Favorite Queries ────────────────────────────────────────────────────────
+
+  Future<void> addFavorite(String type, int itemId) async {
     final db = await database;
-    await db.close();
+    // Check if already exists
+    final List<Map<String, dynamic>> existing = await db.query(
+      'favorites',
+      where: 'type = ? AND item_id = ?',
+      whereArgs: [type, itemId],
+    );
+    if (existing.isEmpty) {
+      await db.insert('favorites', {
+        'type': type,
+        'item_id': itemId,
+        'created_at': DateTime.now().millisecondsSinceEpoch,
+      });
+    }
+  }
+
+  Future<void> removeFavorite(String type, int itemId) async {
+    final db = await database;
+    await db.delete(
+      'favorites',
+      where: 'type = ? AND item_id = ?',
+      whereArgs: [type, itemId],
+    );
+  }
+
+  Future<bool> isFavorite(String type, int itemId) async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.query(
+      'favorites',
+      where: 'type = ? AND item_id = ?',
+      whereArgs: [type, itemId],
+    );
+    return maps.isNotEmpty;
+  }
+
+  Future<List<Map<String, dynamic>>> getFavoritesByType(String type) async {
+    final db = await database;
+    if (type == 'bible') {
+      return await db.rawQuery('''
+        SELECT f.id as favorite_id, v.*
+        FROM favorites f
+        JOIN bible_verses v ON f.item_id = v.id
+        WHERE f.type = 'bible'
+        ORDER BY f.created_at DESC
+      ''');
+    } else {
+      return await db.rawQuery('''
+        SELECT f.id as favorite_id, h.*
+        FROM favorites f
+        JOIN hymns h ON f.item_id = h.id
+        WHERE f.type = 'hymn'
+        ORDER BY f.created_at DESC
+      ''');
+    }
   }
 }

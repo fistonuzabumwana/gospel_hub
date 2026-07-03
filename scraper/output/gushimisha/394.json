@@ -1,0 +1,57 @@
+{
+  "number": 394,
+  "book": "Gushimisha",
+  "title": "Duhurure ngo twitabe: Kwizera Kristo",
+  "slug": "duhurure-ngo-twitabe-kwizera-kristo",
+  "uuid": "ff9b18f9-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/duhurure-ngo-twitabe-kwizera-kristo/ff9b18f9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Duhurure ngo twitabe, Tujye mu ntambara.",
+        "Mbe, kwicara kumaz' iki,Satan' akiriho ?",
+        "Dor' ar' imber'ahagaze.We n'abadayimoni.",
+        "Twiringiy' Umucunguzi Ko yamunesheje."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Kwizera Krisito ! Kwizera Krisito ! Ni ko kudushoboza Kunesh' iby'iyi si."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Twahaw' inkot' ikomeye, N' Ijambo ry'Imana.",
+        "Ni yo yanesherej' abe Mu bihe bya mbere.",
+        "Ingabo yitwa kwizera Yarabakingiye.",
+        "Natwe ni y' idukingira Twiringiye Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abanzi baragwiriye, Barwany' Uwiteka.",
+        "Tuzabanesha, twambaye Intwaro ze zose:",
+        "Ingofero y'agakiza, Umweko w'ukuri,",
+        "Inkweto z'amahoro ye, Biradukomeza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Unesh' ibyah' azambikwa Umwambaro wera.",
+        "Yes' azavug' izina rye Ku Mana mwijuru.",
+        "Dukanguke, dutambuke,Turwan'intambara",
+        "Tunesh' abanzi, twizeyo Izina rya Yesu."
+      ]
+    }
+  ]
+}

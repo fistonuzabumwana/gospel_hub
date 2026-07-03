@@ -1,0 +1,33 @@
+{
+  "number": 324,
+  "book": "Gushimisha",
+  "title": "Mana Dat' ukiranuka",
+  "slug": "mana-dat-ukiranuka",
+  "uuid": "ff998a53-0670-11ea-9a58-deadbe058832",
+  "category": "Kubatizwa",
+  "url": "https://indirimbo.com/gushimisha/mana-dat-ukiranuka/ff998a53-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana Dat' ukiranuka, Ababatizwa none, Ubah' umugisha wawe, Kand' ubarind' iteka; Bahame mu bawe rwose,Bagushimishe, Mwami, Kandi babe mw Itorero, Bitez' ubwami bwawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwam' isezerano ryabo,Ngo baryibuk' iteka, Ubakomeze mu byawe Kuko",
+        "wabapflriye; Babeho mu byawe byiza,Bagukunde mu kuri, Kuko waje kubakiza, Be mere gucungurwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwam' ubah' Umwuka wawe,Bakuyoboke rwose, Ntibazatanire mw isi.Bakundane na bose ; Babone no kwamamaza Ibyiza byawe byose. Niho twese tuzahabwa Ikamba ry'ubugingo."
+      ]
+    }
+  ]
+}

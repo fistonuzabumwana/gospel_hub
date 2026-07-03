@@ -1,0 +1,52 @@
+{
+  "number": 48,
+  "book": "Agakiza",
+  "title": "Nahaw' ubugingo buhoraho rwose.",
+  "slug": "nahaw-ubugingo-buhoraho-rwose",
+  "uuid": "ff9d5570-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nahaw-ubugingo-buhoraho-rwose/ff9d5570-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nahaw' ubugingo buhoraho rwose.",
+        "Kand' ubwo bugingo ni Yesu.",
+        "N'ukuri yinjiye mu mutima wanjye.",
+        "Kandi yanshyizemwubutwari."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nejejwe n'lmana mu mutima wanjye. N'umuriro w'ijur' urimo. Nsigaye",
+        "ngendera mu mucyo w'ukuri. Yesu Mukiza ni we mucyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Imigisha yo mu gakiza k'Imana Kubw' ubuntu narayihawe. Nayi hawe mu gihe",
+        "nihanny' ibyaha Imbere y 'Umukiza Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umukiza ni we wankuye mu ishyamba. Nsigaye mba mu murima we. No kubw'",
+        "imvura n'izuba byo mw ijuru Nshobora kwer' imbut' ashaka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ubugingo bwiza nahisemo n'ubu: Gukorer' Umukiza Yesu. Kubaho ni Kristo no",
+        "gupfa n'inyungu Ku Mu kristo wese w'ukuri."
+      ]
+    }
+  ]
+}

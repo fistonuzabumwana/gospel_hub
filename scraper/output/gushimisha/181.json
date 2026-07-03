@@ -1,0 +1,48 @@
+{
+  "number": 181,
+  "book": "Gushimisha",
+  "title": "Mwa nshuti za Yesu mwe",
+  "slug": "mwa-nshuti-za-yesu-mwe",
+  "uuid": "ff952f56-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/mwa-nshuti-za-yesu-mwe/ff952f56-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwa nshuti za Yesu mwe , Nimuze, twamamaze Hos' umunezero wacu, Nukw indirimbo z'ishimwe Zizamuke ziger' i bwami mw ijuru."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Turajy' i Siyoni, Ku murwa mwiza w'Imana, Tunyur' inzir' ijya mw ijuru: Ku",
+        "murwa w'Imana yacu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Utaz' Imana yacu Yaziririmb’ ate se ? N'abana b'Umwami basa Bashobora",
+        "gusingiza Uwabacunguye, nkuko bikwiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umurwa w'i Siyoni Wuzuy' ibyiza byinshi, Kandi mu nzir' iganayo . Tutaragera",
+        "mw ijuru, Twahaw’ ingwate yabyo ngo tunezerwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Muhumure noneho ! Nimuze, twishimane. Tugende turirimbana, . Duca mu bwatsi bwa Yesu; Tugiye mw is’ irut' iyi, ni mw ijuru."
+      ]
+    }
+  ]
+}

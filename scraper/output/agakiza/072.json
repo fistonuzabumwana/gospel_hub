@@ -1,0 +1,49 @@
+{
+  "number": 72,
+  "book": "Agakiza",
+  "title": "Iman' iri hamwe natwe",
+  "slug": "iman-iri-hamwe-natwe",
+  "uuid": "ff9dcc12-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/iman-iri-hamwe-natwe/ff9dcc12-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Iman' iri hamwe natwe Kugira ngw idukomeze. Ijuru rifit'ibihu Byo kutuzanir' imvura."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Utwumvire, Mana yacu, duh’ umugish' uyu munsi. Turagutegerej' ubu Tuvubir'",
+        "imvura yawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iman' iri hamwe natwe Hano ha hinduts' ahera. Twese turategereje Kuzuzwi",
+        "imbaraga zawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iman' iri hamwe natwe Turasaban' ukwizera. Mana can' uwo muriro Mu mitima",
+        "yacu twese."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ugurur' ijuru, Mana, Uduh' imbaraga zawe. Duh' umugish' uyu mwanya Kubw'",
+        "ubuntu bwawe, Mana."
+      ]
+    }
+  ]
+}

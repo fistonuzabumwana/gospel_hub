@@ -1,0 +1,41 @@
+{
+  "number": 8,
+  "book": "Agakiza",
+  "title": "Umucyo wabonekeye bose",
+  "slug": "umucyo-wabonekeye-bose",
+  "uuid": "ff9c6519-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/umucyo-wabonekeye-bose/ff9c6519-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umucyo wabonekeye bose bari mu mwijima. Ubw' abungeri bumvaga indirimb' iva mw ijuru."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Icyubahiro mw ijuru, Kib' icy' Iman' Ihoraho. Nahw amahor' abe mw isi.",
+        "Tuyishime duhimbaza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mu murwa wa Betlehemu, none havuts' uruhinja. N'umunezer' i Yudaya, kukw",
+        "Iman' ibacunguye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mariya yambits' Umwana utwambaro tw'uruhinja. Kandi mu muvure w'inka ni ho",
+        "yamuryamishije."
+      ]
+    }
+  ]
+}

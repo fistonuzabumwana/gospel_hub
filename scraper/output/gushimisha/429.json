@@ -1,0 +1,49 @@
+{
+  "number": 429,
+  "book": "Gushimisha",
+  "title": "Dor' inzira nziz' ijya mw ijuru",
+  "slug": "dor-inzira-nziz-ijya-mw-ijuru",
+  "uuid": "ff9c109a-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/dor-inzira-nziz-ijya-mw-ijuru/ff9c109a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dor' inzira nziz' ijya mw ijuru Ic' aho yabambwe ku Musaraba; Yayibwiy' umwambuz' umwe wihannye, Ashir'agahinda, arakizwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tuzakizwa na nde tutizeye Umukiza wacu wadupfiriye ? Yagiz' agahinda",
+        "k'abarimbuka, Atang' ubugingo, ngw abakize."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nimukizwe mwese kurimbuka, Mugir' ubugingo bw'abakijijwe, Mwizigir' Imana",
+        "yabacunguye, Muyiture byose kubwa Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dor' uko mu Rwanda barimbuka ! Mubabwir' imana yac' ibakize, Tuzahanwe na bo kuba mw ijuru, Nta gahinda kose, nta kwicuza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Wa Musaraba we, ndakwifuza ! Waneshej' urupfu rwic' ab'iyi si; Watsinz' i",
+        "kuzimu n'ibibabaza, Uduhindura kub' umunt' umwe !"
+      ]
+    }
+  ]
+}

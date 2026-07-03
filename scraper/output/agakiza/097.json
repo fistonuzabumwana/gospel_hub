@@ -1,0 +1,49 @@
+{
+  "number": 97,
+  "book": "Agakiza",
+  "title": "Ifeza n'izahabu nta bwo zibasha Gukiz' umutim' ubabajwe n'ibyaha",
+  "slug": "ifeza-nizahabu-nta-bwo-zibasha-gukiz-umutim-ubabajwe-nibyaha",
+  "uuid": "ff9e87dd-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ifeza-nizahabu-nta-bwo-zibasha-gukiz-umutim-ubabajwe-nibyaha/ff9e87dd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ifeza n'izahabu nta bwo zibasha Gukiz' umutim' ubabajwe n'ibyaha, Nyamar' amaraso ya Yesu Mukiza Yashoboye kunkura mu byaha byose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Narakijijwe. si kubw' imari, Kubw' ubuntu narakijijwe. Yanyishyu riye ya",
+        "myenda yose Yamviriy' amaraso ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ifeza n'izahabu nta bwo zibasha Kundihirir' imyenda yanjye y'ibyaha, Nyamar'",
+        "amaraso ya Yesu Mukiza Yanyogej' ibyaha mbon' agakiza ke."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ifeza n'izahabu nta bwo zibasha Gukingur' urugi rugeza ku Mana, Nyamar'",
+        "amaraso ni yo yanshoboje Kugera ku buntu bw'Iman' ihoraho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ifeza n'izahabu nta bwo zibasha Kungeza ku Mananibankor' ibyaha, Nyamar'",
+        "amaraso ni yo nacungujwe, Ni yo kimenyetso kigeza mw ijuru."
+      ]
+    }
+  ]
+}

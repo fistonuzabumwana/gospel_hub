@@ -1,0 +1,61 @@
+{
+  "number": 19,
+  "book": "Gushimisha",
+  "title": "juru ryawe, Mana, Riraguhimbaza",
+  "slug": "juru-ryawe-mana-riraguhimbaza",
+  "uuid": "ff90425d-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/juru-ryawe-mana-riraguhimbaza/ff90425d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "juru ryawe, Mana, Riraguhimbaza:",
+        "Ushimwa. n'ikirere N'ibirimo byose.",
+        "Bishim' ubudasiba Ku manywa na n'ijoro",
+        "Icyubahiro cyawe N'ubwenge n'ubuntu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Izuba ryawe, Mana, Hamwe n'inyenyeri",
+        "N'ukwezi na ko, byose Biraguhimbaza.",
+        "Bibwiriz' amahanga Atarumv' ibya Yesu",
+        "Ubwiza bw'Umuremyi Wabiremye byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ijambo ryawe ryera N' iry'ukuri rwose;",
+        "Ni ryiza, kandi ni ryo Riduhumuriza.",
+        "Kand' ubutunzi bwawe N'ubwenge bwo mw ijuru,",
+        "Duhora tubihabwa lyo tukumviye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nta n'umw' ubasha kubwe Kwirinda ngw atagwa.",
+        "No kujy' akor' ibyiza No kudacumura :",
+        "Man' ujy' umfash' iteka.Ndeke kukwibagirwa",
+        "No kugucumuraho Bikakubabaza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ibyo waremye byose Byo mw ijuru n'isi",
+        "Bishim' izina ryawe;",
+        "Nanjye ndisingize. Ndashaka kugutura Uyu mutima wanjye",
+        "N'uyu mubiri na wo; Bib' imbata zawe."
+      ]
+    }
+  ]
+}

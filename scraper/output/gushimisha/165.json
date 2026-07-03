@@ -1,0 +1,44 @@
+{
+  "number": 165,
+  "book": "Gushimisha",
+  "title": "Hozana, singizwa, Yesu",
+  "slug": "hozana-singizwa-yesu",
+  "uuid": "ff94917a-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/hozana-singizwa-yesu/ff94917a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Hozana, singizwa, Yesu , Mukiza mwiza : Watumenyesheje Urukundo rw'Uwiteka.",
+        "Usingizwe, Mwami :Wavuye mw ijuru, Uzanir' ab'isi Agakiza keza. (X 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Hozana, singizwa, Muvunyi w'ubugingo;Imitim' ishime iryo zina ryawe ryiza.",
+        "None turirimbe lzi ndirimbo nshya,Ngw abana b'Imana Banezerwe bose. (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Hozana, singizwa, wowe, Nshuti y'abantu. uwihanganye wese ntabwo wanga",
+        "kumwaklra.",
+        "wowe, Mwami mwiza, Waje kutwigisha No kutumenyesha ..Uk' ukiranuka. (x 2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Hozana, singizwa, Yesu, Mukiza wacu; Wemeye kwitanga kubw' ibicumuro byacu,",
+        "Wicisha bugufi, Maz' upfira bose, Kugira ngw abawe : Babon' ubugingo. (x 2)"
+      ]
+    }
+  ]
+}

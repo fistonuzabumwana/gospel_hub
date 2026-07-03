@@ -1,0 +1,46 @@
+{
+  "number": 204,
+  "book": "Gushimisha",
+  "title": "Dor' ibendera ya Yesu",
+  "slug": "dor-ibendera-ya-yesu",
+  "uuid": "ff95bc4b-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/dor-ibendera-ya-yesu/ff95bc4b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dor' ibendera ya Yesu Iramanitswe !Nguy’ araj' ahuruy’ atyo, ngwatabare abe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ati: Yemwe, ndaje, ndaje ! Nimukomere ! Ko ndi hamwe namwe ni nde",
+        "Wabashobora ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kokw ingabo za Satani Zirakomeye.Tudafit’ Umwami Yesu, Zaduhindura."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nshuti mwe, dukurikire Umucunguzi, Tumutumbire twizere Ubutwari bwe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nubw’intambar'iturushya,twe gucogora ! Umv’ impundu ziravuze ; Aranesheje !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "number": 362,
+  "book": "Gushimisha",
+  "title": "iyi s’ izashira :Yesu n' uwanjye",
+  "slug": "iyi-s-izashira-yesu-n-uwanjye",
+  "uuid": "ff9a678c-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/iyi-s-izashira-yesu-n-uwanjye/ff9a678c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "iyi s’ izashira :Yesu n' uwanjye; Nubwo byese byabura, Yes' uwo n' uwanjye ! Ubu harijimye :ntiturareb' i We.",
+        "Tuzanezerwa cyane, Ni tubana na We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Sinzajya nanirwa :Yesu n’ uwanjye; Nzatsind' amoshya yose, Yes' ubw' ar'",
+        "uwanjye. Byose ni bishira, Nta cyo bizantwara : Uzansang’ amahoro. Yes' ubw'u r’ uwanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Hoshi, mwe nzozi mbi !Yesu n’ uwanjye; Naho bwatinda gucya ,Yes' uwo n'",
+        "uwanjye ! Umutima wanjye Yarawuhagije; Ubu ndi kumwe na We : Yes’ uwo n'",
+        "uwanjye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Genda, wa rupfu we : Yesu n' uwanjye ! Nzahoranaho na We :Yes' uwo n' uwanjye! Kand' urukundo rwe N'iby' ajy'ankorera, Ni byo binyereka ko Yes' uw' ar’uwanjye."
+      ]
+    }
+  ]
+}

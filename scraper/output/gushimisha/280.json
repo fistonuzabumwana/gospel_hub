@@ -1,0 +1,76 @@
+{
+  "number": 280,
+  "book": "Gushimisha",
+  "title": "Imins' irahita vuba",
+  "slug": "imins-irahita-vuba",
+  "uuid": "ff982507-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/imins-irahita-vuba/ff982507-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Imins' irahita vuba, Irahita yihuta. Ukw ihita, benshi bapfa Batameny’ Umukiza. Hari twakora :Tugikoran' umwete : Dutabar' ubu vuba, Imins' itarashira."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Irashira, irashira ! Dor' iminsi irashira!  Dutabar' ubu twese, Twe gukererwa",
+        "dutyo!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "None, bib' imbuto nziza mu mitima y'abantu; hagura n'amarira y",
+        "'abanyamibabaro.",
+        "Renger' abapfakazi,Kand' ubyuts' abaguye, Uhumure n'impumyi,Ibiseb' ubivure."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iby' uzabishobor' ute ? Ntibizakunanira, ib' ufit' Umwuka Wera N'urukundo",
+        "rw'Imana:",
+        "ibiduh' itimanye,Tubishatse byukuri. Tuyisengan' umwete, Dukor'",
+        "iby'imbabazi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Icy' Umwami Yes' ashaka N' ukugendana natwe, Ngo yikiriz' abarushye",
+        "Bamutey' umugongo. Kandi yaravuz' ati:Uzanyizera wese Azabwir' irimisozi Ngo nitabwe mu nyanja."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "We gutiny' ibir' imbere : Yes' azagushoboza. Umuh' umutima wawe, Awutegeke rwose ! Isi yubahe Yesu ! Yadutsindiy' urupfu N'abadayimoni bose. Ubu ni We dufite."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Sigaho kwizera guke :Na wa wundi yakizwa ! Wibuke ko Paulo na we Yar'",
+        "umwanzi w'ibyiza; Yamufash' atunguwe,Yemera gukizw' ubwo, Ab' intumwa ya",
+        "Yesu, Yamamaz' ubuntu bwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Tyo n'ubu, mugende mwese, Muri kumwe na Yesu; Mubamwerek; abakize, Bos'",
+        "abazabyemera.  Kandi mwe  gucogora Cyangwa se kunanirwa, Mutarabasohoza Ku Mukiz' ubifuza."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "number": 396,
+  "book": "Gushimisha",
+  "title": "Ni heh' abizera bazajya kuba ?",
+  "slug": "ni-heh-abizera-bazajya-kuba",
+  "uuid": "ff9b242b-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/ni-heh-abizera-bazajya-kuba/ff9b242b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ni heh' abizera bazajya kuba ?",
+        "Mur'iyi si nta ho tuzakirira.",
+        "Nta hantu hatagerwa n'umubisha :",
+        "Ibibi nta hantu twabihungira.",
+        "Nta ho, nta ho, mw isi nta ho;",
+        "Mw ijuru ni hw i wabo w'abizera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tuzimuka mw isi, tuger' i wacu;",
+        "N' aheza twubakiwe n'Umukiza.",
+        "Ku Mana yacu,har' amazu menshi",
+        "Yubakany' isuku tutarabona.",
+        "Ni ho, ni ho, ni hw i wacu;",
+        "N'ubuturo bwiza tuzahoramo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu ni W' ugir' amahoro meza;",
+        "Urupfu n'ibyago ni W' ubitsinda.",
+        "Abashak'ubugingo budashira",
+        "Ni mumwizigire azabarengera.",
+        "Muze mwese, dushengere;",
+        "Mw ijuru, tuzimanan'Umukiza."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "number": 379,
+  "book": "Gushimisha",
+  "title": "Umutim' ukomerekejwe",
+  "slug": "umutim-ukomerekejwe",
+  "uuid": "ff9abfbf-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/umutim-ukomerekejwe/ff9abfbf-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umutim' ukomerekejwe,Utari womorwa, Ikiganza cyatobowe Ni cyo cyawomora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "iy' umutim' uremerewe,Hatemb' amarira, Har' umutim' umwe musa",
+        "Wawuhumuriza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umuns iy' ababajwe cyane N'icyaha yakoze, Isok' imwe y'amaraso Yamwoz'",
+        "akera de !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ayo maraso n' aya Yesu;Cya kiganza n' icye; Wa mutima w'imbabazi Na wo n'",
+        "uwa Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Utwerek' ibyo. biganza bye Byatobowe, Mana; Duhungir' ibyaha byacu Mur'izo",
+        "nkovu ze !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "number": 55,
+  "book": "Gushimisha",
+  "title": "Yes' araduhamagara",
+  "slug": "yes-araduhamagara",
+  "uuid": "ff914a1f-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/yes-araduhamagara/ff914a1f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' araduhamagara kureka ibyaha byose :ahora atubwira iteka ngo tumukurikire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tumere nka ba barobyi, Bumvis' amagambo ye; Bemeye gusig' ibyabo, Ngo",
+        "bamukurikire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Atubuza kwifuz' ibyo Mw isi n'icyubahiro; Azaduh' ibiduhaza, Ni tumukurikira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nubwo twaba tunezerwa, Cyangwa turi mu byago, Yes' araduhamagara, Ngo tumukurikire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yes' araduhamagara;Nuko, tub' intore ze, Tumukunde, tumusenge, Tuzageze ku gupfa."
+      ]
+    }
+  ]
+}

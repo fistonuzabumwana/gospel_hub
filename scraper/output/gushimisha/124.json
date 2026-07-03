@@ -1,0 +1,55 @@
+{
+  "number": 124,
+  "book": "Gushimisha",
+  "title": "Yes' amp' amahoro",
+  "slug": "yes-amp-amahoro",
+  "uuid": "ff935c8c-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/yes-amp-amahoro/ff935c8c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' amp' amahoro y' atarondoreka Andinda mu byago byose. Uko mba kose, nzajya nishima, nti: Nguwe neza, ndatunganiwe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ni neza... Ndatuje... Nguwe neza , ndatunganiwe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Satan' iy' antey' ankandas’imyambi ye,Njya mpeshw' amahoro menshi No",
+        "kwibuka Yes' uko yandengeye, Ava mw ijuru ngw anshungure."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibyaha byanjye yabyikoreye byose: Ntiyashigaje na kimwe Byabambwe byose ku Musaraba we : Yes' ashimwe  Yarankijije !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kuv’ubu, kubwanjye kubaho ni Kristo; Ndetse, singitinya gupfa; Urupfu na rwo",
+        "ruzamber' indamu. Yes' ampay' amahoro menshi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mumeny' iyo tujya: n' i bwami mw ijuru; Ntabw' ar’ i kuzimu mu mva.Ni twumva za",
+        "mpanda, tuzanezerwa. Uzagaruka ryari, Yesu ?"
+      ]
+    }
+  ]
+}

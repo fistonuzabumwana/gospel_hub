@@ -1,0 +1,59 @@
+{
+  "number": 85,
+  "book": "Gushimisha",
+  "title": "Amaraso Y’umucunguzi",
+  "slug": "amaraso-yumucunguzi",
+  "uuid": "ff9225a7-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/amaraso-yumucunguzi/ff9225a7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Amaraso  Y’umucunguzi Niyo Soko Yoz’abanduye Niyo Yesu Abanyabyaha De Bakabonera  Rwose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ndaguhimbariza Mucunguzi Imbabazi Wangiriye Ukanyoz’ibyaha Nakoze Mu Maraso Wavuye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Urya Mwambuzi Mwabambanywe Ayarabutsw’aranezerwa Nanjy’umwihebe Mubi Nka We Untabare Umboneze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami Yesu Mwana W’intama Njya Ngukundira Mucunguzi Amaraso Yaw’atunganye Ayo Watuviriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nta N’ikindi Kibasha Nkayo Kudutsembaho Ibicumuro No Gucungura N'abemeye Kwizer'umucunguzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mperey’aho Nayaboneye Ava Mu Bikomere Byawe Nogez’urukundo Wankunze Nzagushima Ndinde Mpfa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Nd’ino Mw’isi,Birananira Kugushim’uko Bikwiriye Nyum’uzamp’urundi Rurimi Njye Ngusingiz’iteka."
+      ]
+    }
+  ]
+}

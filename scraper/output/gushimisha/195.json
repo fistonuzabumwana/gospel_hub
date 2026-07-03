@@ -1,0 +1,43 @@
+{
+  "number": 195,
+  "book": "Gushimisha",
+  "title": "Yesu yatwis'amatabaza ye",
+  "slug": "yesu-yatwisamatabaza-ye",
+  "uuid": "ff958bc6-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/yesu-yatwisamatabaza-ye/ff958bc6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu yatwis'amatabaza ye Yo kumurikir' abo mu mwijima.",
+        "Tubamurikishiriz' umucyo we, Tubamurikishiriz' ingeso."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tur’ amatabaza ya Kristo, Yifuza kureb' uko tumurika;",
+        "Kand' iyo tuzimy' ababara cyane :Noneho, bagenzi, tumurike !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Arashaka kw abandi bareba Kumurika kwacu, bakayoboka.",
+        "Tumurikir' ab'i wacu n'ahandi,Dushimishe Databuja, Yesu,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni dushaka kumurika dutyo, Twizer' Umukiza wadupfiriye,",
+        "Tumusab’ Umwuka Wer' atunganye Imitima yacu : tumurike !"
+      ]
+    }
+  ]
+}

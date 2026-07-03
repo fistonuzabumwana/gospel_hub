@@ -1,0 +1,48 @@
+{
+  "number": 153,
+  "book": "Gushimisha",
+  "title": "Yes' urankunda, Mukiza mwiza",
+  "slug": "yes-urankunda-mukiza-mwiza",
+  "uuid": "ff9442b5-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/yes-urankunda-mukiza-mwiza/ff9442b5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' urankunda, Mukiza mwiza ; Yes' urankunda : sinz' icyakunkundishije !Waje kunkiza, nd' umunyabyaha; Ubwo wanshunguye, nagupfira !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Njye nguhimbaza, Mukiza mwiza ! Njye nguhimbaza, Mucunguzi wanjy' unkunda. N'jye nguhimbaza, Mukiza mwiza:Nzak uririmbir' ibihe byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Waje kunkiza, Mukiza mwiza; Waje kunkiza: wabyemejwe n'iki, mbese?Icyo nzi",
+        "n'uko wabay' inshungu,Ubwo wamfirag' urupfu rubi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nshorera, Yesu, Mukiza mwiza : Nshorera, Yesu; jy'ungez’ ah' ushaka hose,Mu",
+        "nzira nziza, cyangwa no mu mbi, Ngcr' ikirenge mu cyawe, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yes' uzampemba, Mukiza mwiza: Yes' uzampemba, ntakwiriy' ubuntu bwawe",
+        "Kandi nzareba n'ubwiza bwawe, Nguhimbazanye n'abera bose"
+      ]
+    }
+  ]
+}

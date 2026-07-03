@@ -1,0 +1,39 @@
+{
+  "number": 358,
+  "book": "Gushimisha",
+  "title": "Twemere Yesu Ko yaje mw isi",
+  "slug": "twemere-yesu-ko-yaje-mw-isi",
+  "uuid": "ff9a5381-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/twemere-yesu-ko-yaje-mw-isi/ff9a5381-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Twemere Yesu—Ko yaje mw isi",
+        "Kutubwir' amahoro ye. Ni We nshuti nziza.—I Gologota,Yahaw' abazimiye.Mpora",
+        "nizera,—N'ubu nizeye Yuko Yesu yampfiriye; Ku Musaraba,—Yaranesheje;",
+        "Ambohora mwizeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Inzira yanjye—Ni Yesu wanjye;Anjyan' aho yangeneye. N' umugiraneza;—Nta",
+        "muntu n'umwe Yanga guh' agakiza Mpora nizera,—N'ubu nizeye Yuko Yesu",
+        "yamfiriye; Ku Musaraba,—Yaranesheje; Ambohora mmwizeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami w'ubuntu,—Uhimbarizwe Kuk' uturarik' iteka. Tukwitabe twese,—",
+        "Twumv' ijwi ryaweRihamagara hose.Twizere twese,—Twe guhinyura Ko Yesu",
+        "yadupfiriye; Ku Musaraba,—Yaranesheje; Abohor' abizeye"
+      ]
+    }
+  ]
+}

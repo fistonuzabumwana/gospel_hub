@@ -1,0 +1,40 @@
+{
+  "number": 203,
+  "book": "Gushimisha",
+  "title": "Mwa ngabo z'Umwami mwe",
+  "slug": "mwa-ngabo-zumwami-mwe",
+  "uuid": "ff95b6cd-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/mwa-ngabo-zumwami-mwe/ff95b6cd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwa ngabo z'Umwami mwe, muze,dutabare! dor'Umwami wacu yatugiy'imbere.yahuye n'abanzi be, abanesha bose. dor'ibender'iragiye.tuyikurikire."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Muze ngabo zose za Yesu, Muze dutabare umugaba wacu Yatugiy’ imbere."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Maz’ izina rya Yesu Turivuge hose. Nuko tujy' imbere, Rituneshereze Indirimbo",
+        "z'ishimwe . Zirater’ubwoba  Ingabo za satani mbi, Nuko turirimbe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubw’ingabo zo mw’isi zigenda zitsindwa, Ubwami bwa Yesu Ni nde wabunesha?",
+        "We yasezeranije : Yukw’ Itorero rye Ridatsindwa na Satani N'iby’ afite byose."
+      ]
+    }
+  ]
+}

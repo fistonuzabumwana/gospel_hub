@@ -1,0 +1,25 @@
+{
+  "number": 22,
+  "book": "Gushimisha",
+  "title": "Mwami mwiza w'ijuru",
+  "slug": "mwami-mwiza-wijuru",
+  "uuid": "ff9059bc-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/mwami-mwiza-wijuru/ff9059bc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami mwiza w'ijuru,Twese twaje kugushima,Uri Nyir'imbaraga, Muremyi w'ibintu byose; Kand' uduh'amahoro, Udukiz' imitima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Watumy' Umwami Yesu Ngw atwigish’ibyiza byawe;Twe gukomez’ibyaha, Kandi turek' ingeso mbi; Kuk' utubabarira, Twese turagushima."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "number": 147,
+  "book": "Gushimisha",
+  "title": "Uburyo Yes’ ankunda",
+  "slug": "uburyo-yes-ankunda",
+  "uuid": "ff941c95-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/uburyo-yes-ankunda/ff941c95-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uburyo Yes’ ankunda Burantangaza cyane. Ubuntu yangtriye Ni bwo bubimenyesha. Ya pay’ umunezero N'amabor' aseseka. Mbwirwa n'ibyo ko nd’ uwe Na We yukw ar’ u wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ubwiza bw'isanzure N'uburabyo bwo mw isi; Nta wanezezwa na byo, Kerets’",
+        "afite Yesu. Ukw inyoni zishima Izina ry'Umuremyi Bimbwira ko nd’ uwawe Nawe",
+        "yuku  ur’ uwanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ker’ ibyantinyishaga None ntibinkangisha. Ibyiza birangota, Mukiza, nkwisegure. Ne kukujijinganya, Ne kugir’ amaganya: Kuko mbizi, nd’ uwawe, Kandi naw’ ur’ uwanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nd’ uwe wenyin’ iteka: Nta cyadutandukanya. Amahoro mez’ ampa Arut’ ay’isi",
+        "cyane. Nubw’ iyi si n’ijuru Byombi bizashiraho,azahor'ar'uwanjye,nanjye ngo",
+        "mb'uwe rwose."
+      ]
+    }
+  ]
+}

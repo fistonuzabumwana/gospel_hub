@@ -1,0 +1,42 @@
+{
+  "number": 175,
+  "book": "Gushimisha",
+  "title": "Mwunger’ udukunda",
+  "slug": "mwunger-udukunda",
+  "uuid": "ff950606-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/mwunger-udukunda/ff950606-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwunger’ udukunda,—Jy' uturagira, N'uduhora hafi,—Twatiny' iki se? Tugukurikire,Iy' ujya hose,",
+        "Naho haba habi—Cyangwa se heza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwunger' udukunda,—Tuz' ijwi ryawe, Uduhamagaye,—Turanezerwa Kand' iy’",
+        "uduhannye,Turabyemera. Tur' intama zawe :—Utwiharire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wavuy' amaraso,—Mwungeri mwiza, Kugira ngw intama—Uducungiire. Washyize kuri twe Ikimenyetso,Ni cyo Mwuka Wera,—Udutuyemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mwunger' uturinde,—Uturengere Amasega mabi—Ye  kutwegera. Nta cy'",
+        "azadutwara,Kuk' ukomeye. Turikumwe, byose—Biranesheka."
+      ]
+    }
+  ]
+}

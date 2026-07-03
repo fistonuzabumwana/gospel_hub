@@ -1,0 +1,55 @@
+{
+  "number": 164,
+  "book": "Gushimisha",
+  "title": "Yes’ avukir’i Betelehemu",
+  "slug": "yes-avukiri-betelehemu",
+  "uuid": "ff948bfa-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/yes-avukiri-betelehemu/ff948bfa-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes’ avukir’i  Betelehemu bamuryamishije   mu  muvure",
+        "n’umunyambabazi  nyinshi  cyane ,Ng’uko  yaje anshaka",
+        "Ng’uko  yaje anshaka (x2)",
+        "N’umunyambabazi   nyinshi cyane",
+        "nguk’uko yaje anshaka"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu  yanshunguriye ku giti kand’ abohor’ umutima wanjye",
+        "ntangazwa   cyane n’imbabazi ze ,yaziz’ ibyaha byanjye",
+        "yaziz’ ibyaha byanjye(x2)",
+        "Ntangazwa cyane n’ imbabazi ze",
+        "yaziz’ibyaha byanjye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu ntahwema gukiz ’abantu ntitugasubire   mu ngeso mbi",
+        "ngo tuzabane na We mw’ ijuru, Araduhamagara",
+        "Araduhamagara (x2)",
+        "ngo tuzabane na We mw’ijuru,",
+        "araduhamagara"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yes’ azagaruka atujyan’ iwe tugumane na  We iminsi yose",
+        "Kuko y abisezeranye natwe azaza  ntazatinda",
+        "azaza  ntazatinda (x2)",
+        "kuko yabisezeranye  natwe",
+        "azaza ntazatinda"
+      ]
+    }
+  ]
+}

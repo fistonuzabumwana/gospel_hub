@@ -1,0 +1,34 @@
+{
+  "number": 57,
+  "book": "Gushimisha",
+  "title": "Yes' araguhamagara",
+  "slug": "yes-araguhamagara",
+  "uuid": "ff915ae2-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/yes-araguhamagara/ff915ae2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' araguhamagara :Ngwino,murushywa ! Ubu tugisab' Imana, Ngwino, murushywa ! Ubu n' igihe gikwiye Ngwino, murushywa ! Itaba Yes' uyu munsi ! Ngwino, murushywa!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ubwo wumv’ uremerewe, Ngwino, murushywa ! Yes’ akuruhure none :Ngwino,",
+        "murushywa ! Nta w' ajy' ashuka, mugenzi,Ngwino, murushywa ! Yes' arakwakira none : Ngwino, murushywa !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes' arakwinginze ng' uze :Ngwino, murushywa ! Aguh' umugisha mwinshi;Ngwino, murushywa ! N' umunyambabazi rwose : Ngwino, murushywa !",
+        "Tukigusabir' Imana, Ngwino. murushywa !"
+      ]
+    }
+  ]
+}

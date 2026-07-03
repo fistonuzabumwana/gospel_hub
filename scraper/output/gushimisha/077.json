@@ -1,0 +1,48 @@
+{
+  "number": 77,
+  "book": "Gushimisha",
+  "title": "Umva, munyabyaha we",
+  "slug": "umva-munyabyaha-we",
+  "uuid": "ff91ee31-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/umva-munyabyaha-we/ff91ee31-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umva, munyabyaha we.Yes'ukw akuburira : Sigaho gukinisha Ubugingo n'urupfu!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umubir' ushukana Uzasaz' ushireho, Ujy'iy' utagaruka : Nuko, wibikinaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Takambir' Iman' ubu, Itarac' amateka :Yo ntikinish' ibyayo. Ngwin' usab'",
+        "imbabazi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Gupfa ntikuba kure : We kujarajar' utyo ! Ntuzi k' uzarimbuka ? We kugum' uk'",
+        "ur' uko."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Haguruka ! Huguka ! Hung' urupfu rw'iteka  Yesu n’ ubukiriro:Wamuhungiyeho se?"
+      ]
+    }
+  ]
+}

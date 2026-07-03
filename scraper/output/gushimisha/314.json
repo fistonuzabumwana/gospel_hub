@@ -1,0 +1,42 @@
+{
+  "number": 314,
+  "book": "Gushimisha",
+  "title": "Gukundana kw'aba Yesu Ni ko kudukoranije",
+  "slug": "gukundana-kwaba-yesu-ni-ko-kudukoranije",
+  "uuid": "ff994fef-0670-11ea-9a58-deadbe058832",
+  "category": "Gusezeranaho",
+  "url": "https://indirimbo.com/gushimisha/gukundana-kwaba-yesu-ni-ko-kudukoranije/ff994fef-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Gukundana kw'aba Yesu Ni ko kudukoranije, Ariko murunga w'abana'Imana Yabanje gukund' abayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Duhore dusabirana Ngw iduh' imitim' ihuje, Ngw imare muri twe ibyaha",
+        "n'ubwoba, Iduh’ umugisha wayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Twabon’ umukristo wese Watay' iyi nzira yayo, Tuzinging' Imana ngw imwibuts'",
+        "ibyayo Ngo yonger' are be Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' iyo dutandukanye, Tujyanye n'Umwami wacu, Uhor' uturindish' ubuntu",
+        "n'ihirwe, Dukomej' ubumwe bwacu."
+      ]
+    }
+  ]
+}

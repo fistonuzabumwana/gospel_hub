@@ -1,0 +1,50 @@
+{
+  "number": 114,
+  "book": "Gushimisha",
+  "title": "Kuva Ubu Sintinya Ibizaba Ejo",
+  "slug": "kuva-ubu-sintinya-ibizaba-ejo",
+  "uuid": "ff93039d-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/kuva-ubu-sintinya-ibizaba-ejo/ff93039d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Kuva Ubu Sintinya  Ibizaba  Ejo",
+        "Ibyago Cyangwa Amahirwe",
+        "Nzi Byose Ko Imana Ibitegeka",
+        "Kwiganyira N’uk’ubusa."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mbeshwaho No Kwizera Yesu",
+        "Niringiye Imbabazi Ze",
+        "Mbumbatiwe N’umukiza Unkunda",
+        "Nizeye Yesu Nta Bwoba Mfite"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umwanzi Satani Yangerageza",
+        "Nkabona Amakuba Menshi",
+        "Nzi Yuko Umukiza Azamba Hafi",
+        "Njye Mwisunga,Mwihishemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Numva Amatsiko Mu Mutima Wanjye",
+        "Yo Gucya K’umunsi Mwiza",
+        "Yesu Ubwo Azagaruka Kunjyana",
+        "Mu Rugo Rwe Rwo Mw’ijuru"
+      ]
+    }
+  ]
+}

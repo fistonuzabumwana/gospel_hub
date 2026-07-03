@@ -1,0 +1,54 @@
+{
+  "number": 282,
+  "book": "Gushimisha",
+  "title": "A bantu benshi cyane bataye uwiteka",
+  "slug": "a-bantu-benshi-cyane-bataye-uwiteka",
+  "uuid": "ff9835c8-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/a-bantu-benshi-cyane-bataye-uwiteka/ff9835c8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "A bantu benshi cyane Batay' Uwiteka, Bazimiye nk'intama Zahabiye kure, Zihagaze ku manga, Zikicwa n'imbeho,impyisi zikazirya : Ni kw abo bameze!"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nimuze,tubashake Twe tubatarure  Bizatunezeza cyane, Tuzany' intam' imwe,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Hemeye nde kugenda Gushak' inzimizi, Ntiyite ku makuba No kubiruhanya, Ngwagir' ure umwete mwinshi  Nk' ushak' itungo rye, Agend’ ashak' intama Yesu yapfiriye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubw' uri mu mahoro, Mbese, wumv' ufite Ishyaka rikujyana Gushak' iza Yesu? Nahw ar’ aboroheje Cyangw’ abagayitse N' abantu b'igiciro Mu maso ya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "No kw irembo ry'urugo.Yes’ arahagaze, Ahamagar’ intama, Azugururiye.Abuz'",
+        "abazicyura :Ni wow’ abwir' ati: Ushak' intama zanjye, Izo napfiriye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Byab' ari byiza Yesu Bwakwira tukaza Tukakubwira tuti :N'ukuri twiriwe",
+        "Dushak' intama zawe Izi zazimiye.Ngizi, turazicyuye : Zishyire mu rugo !"
+      ]
+    }
+  ]
+}

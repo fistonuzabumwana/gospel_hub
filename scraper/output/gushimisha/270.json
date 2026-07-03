@@ -1,0 +1,49 @@
+{
+  "number": 270,
+  "book": "Gushimisha",
+  "title": "Uwadupfiriye kera",
+  "slug": "uwadupfiriye-kera",
+  "uuid": "ff97cc5a-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/uwadupfiriye-kera/ff97cc5a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uwadupfiriye kera Azaz' ava mw ijuru; Umwam' azamanukanaN'aber' inzovu nyinshi.Haleluya, Haleluya i Umukiz' azagaruka"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Azaboneker' abantu Bos' afit' ubwiza bwe. Kand' abamusuzuguye, Bakamubamba kera, Bazaboroga bamenye Yukw ari Kristo w'ukuri."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kand' inkovu z'imbereri Azaza zikiriho, Kand' abacunguwe bose",
+        "Bazazinezererwa. Mwam' ubwo tuzazireba, ibyishimo bizatwica."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nuko twese tugusenge, Yes' ushyizwe hejuru  End' icyubahiro cyose, im' ingoma,",
+        "n' iyawe i Haleluya, Haleluya i Ni Wowe Mwami wenyine."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Noneho, nimuze : Twih' Umukiza wacu Dukundane nka We, Tub' abera nka We.",
+        "Ubwo turi mw isi,Tumwigane, tubeho, Turindir' ijuru. Umwami yazutse"
+      ]
+    }
+  ]
+}

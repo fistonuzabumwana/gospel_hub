@@ -1,0 +1,40 @@
+{
+  "number": 268,
+  "book": "Gushimisha",
+  "title": "Ubw' Umwami Yes' azaza",
+  "slug": "ubw-umwami-yes-azaza",
+  "uuid": "ff97ac79-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/ubw-umwami-yes-azaza/ff97ac79-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubw' Umwami Yes' azaza",
+        "Kwend' abo yatoye, Ab' akunda b'abatoni, Bamuyobotse."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Bazaka nk'inyenyeri Zitatse kw ikamba rye; Bazatangaza cyane, Bakize rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ubw' azaz' akorany' abo Yatoye ba hose, Bera baboneye rwose, B'abatoni be."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yemwe bantu, yemwe bantu,bakund' Umukiza, Ni mw' akunda. ni mw' akunda",
+        "Nk'abatoni be."
+      ]
+    }
+  ]
+}

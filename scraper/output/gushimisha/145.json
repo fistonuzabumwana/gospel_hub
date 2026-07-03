@@ -1,0 +1,55 @@
+{
+  "number": 145,
+  "book": "Gushimisha",
+  "title": "Kugukorera ni byiza",
+  "slug": "kugukorera-ni-byiza",
+  "uuid": "ff9410c2-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/kugukorera-ni-byiza/ff9410c2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Kugukorera ni byiza, Mukiza wanjye. Iri turo ntuye, Mwami, Rikunezeze."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Akir' ubugingo bwanjye, N’ ubwawe, Yesu; Kandi kubw’ ubuntu bwawe, Undind’",
+        "ibibi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwam’icyo nifuza cyane N' ukwera nkawe : Nta n'ikindi nshaka, Yesu; Nzajya",
+        "nkumvira,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbe nk’intumwa zawe, Yesu, Njye ngukorera; Ngukurikire, Muvunyi, Nkubehw",
+        "iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Singitinya n’amakuba N' ibyago bindi : Uwo nizeye ni Yesu N'agakiza ke."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Twese tujy’imbere hamwe Mu by'inzira ye, Turirimban’indirimbo, Tunesh’iteka."
+      ]
+    }
+  ]
+}

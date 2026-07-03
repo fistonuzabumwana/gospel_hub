@@ -1,0 +1,67 @@
+{
+  "number": 28,
+  "book": "Agakiza",
+  "title": "Twarabatuwe rwose rwose",
+  "slug": "twarabatuwe-rwose-rwose",
+  "uuid": "ff9cd677-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/twarabatuwe-rwose-rwose/ff9cd677-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Twarabatuwe rwose rwose",
+        "Mu Mwami Yesu Kristo.",
+        "Twigish' ijambo rye rizima",
+        "Mu mbaraga z'Umwuka.Cyo",
+        "dukomeze tujye imbere,",
+        "Dutsind' ibigerageza!",
+        "Turwan' intambara twizeye,",
+        "Twihanganire byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tur'abasirikare benshi,",
+        "Twogejwe mu maraso.",
+        "Umwami wacu Yesu Kristo,",
+        "Ni nawe muyobozi.",
+        "Kubw' imbaraga ze dufite,",
+        "Tuzabaho no mu rupfu.",
+        "Dukomeze dushyire mbere,",
+        "Dushimir' Ihoraho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kwa Yesu dufit' ubutwari,",
+        "Dufit' ubushobozi.",
+        "Iyo twizey' amagambo ye,",
+        "Uko yayatubwiye.",
+        "Ku musaraba haturuka",
+        "Iriba rimar' inyota.",
+        "Twa hanywerey' amazi meza,",
+        "Amazi y'ubugingo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mw ijuru n'igihugu cyacu,",
+        "Cyuzuyemw amahoro.",
+        "Mu gihe tuzakigeramo,",
+        "Tuzahimbaza Yesu.",
+        "Umukiz' azahanagura",
+        "Amarira yacu yose.",
+        "Tuzanezererw'igihugu,",
+        "Yadusezeranije."
+      ]
+    }
+  ]
+}

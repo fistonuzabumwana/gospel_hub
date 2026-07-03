@@ -1,0 +1,56 @@
+{
+  "number": 25,
+  "book": "Agakiza",
+  "title": "Yew' ubabazwa n'ibyaha",
+  "slug": "yew-ubabazwa-nibyaha",
+  "uuid": "ff9cc46c-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yew-ubabazwa-nibyaha/ff9cc46c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yew' ubabazwa n'ibyaha, Sang' Umukiza ningoga.",
+        "Ya maraso ye yavuye, Niy' agukurahw ibyaha."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Sang' Umukiza ningoga. Ashaka kugukiz' ubu. Mw isi har' umubabaro,arikw iwe n'amahoro"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ku ki s' utinze mu byaha? Ku ki wabur' ubugingo? Ngwino ningoga kwa Yesu,",
+        "Araguh' amahoro ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibihe bihita vuba, Kandi nta bwo bigaruka. N'igihe git' ukitaba, Kand’ukajyanw'",
+        "ikuzimu,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yes' azagaruka vuba. Azajyan' umugeni we. Tuzahora turirimba. Dushim'",
+        "Umwana w'Intama."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mw ijuru, hafi ya Yesu Dutandukanye n 'ibyaha. N'ukuri nzaba mpiriwe.",
+        "Nzahora nezerw' iteka."
+      ]
+    }
+  ]
+}

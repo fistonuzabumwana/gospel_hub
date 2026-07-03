@@ -1,0 +1,36 @@
+{
+  "number": 62,
+  "book": "Agakiza",
+  "title": "Mu gihe cyo gusenga, amase ngesho yacu",
+  "slug": "mu-gihe-cyo-gusenga-amase-ngesho-yacu",
+  "uuid": "ff9d9895-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mu-gihe-cyo-gusenga-amase-ngesho-yacu/ff9d9895-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mu gihe cyo gusenga, amase ngesho yacu Agera kure cyane, atambuka n'inyenyeri. Umutima w'umuntu ujy' imbere y'Imana, Ugakomang' urugi, Ushaka kureb' Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta mahoro yuzuye twabona mur' iyi si, Kwa Data ni ho gusa hasenderey'",
+        "amahoro. Umutim' uzatuza,N'umucy' uzaba mwinshi, Niba dukurikiye inzira",
+        "y'amasengesho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndetse n'umwana muto uzi gu seng' Imana, Nta bw' azagir' ubwoba, azafashwa",
+        "no gusenga.Kandi nti twibagirwe yukw aho tujya hose, Yuko gusenga kwacu kugera",
+        "ku Mana Data!"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "number": 96,
+  "book": "Gushimisha",
+  "title": "Iby' Iman' ijy' inkorera",
+  "slug": "iby-iman-ijy-inkorera",
+  "uuid": "ff928596-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/iby-iman-ijy-inkorera/ff928596-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Iby' Iman' ijy' inkorera, Bikorwa neza byose; Inam' ijy' ingira zose Nzishima nezerewe.Ni yo Mana; ni Y' imenya Kundind' umunsi mubi : Ni ko kuyihereza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iby' Iman' ijy' inkorera Bikorwa neza byose; Inzira nziz' inyuzamo N' iy'umurava wayo.Yankirije muri Yesu, Ingirira n'ubuntu; Nta cyo yanyima rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "iby' Iman' ijy' inkorera Bikorwa neza byose; nagir' ishavu n'ibyago Binguye mu",
+        "mutima.Ntibinyica; nsind' ibibi, Kukw ijy' impumuriza : Nta kindi niringira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iby' Iman' ijy' inkorera Bikorwa neza byose; Urupf' ubwo ruzantera, Rukazankura mw isi, Sinzatinya;nzakomera, Kukw Uwiteka anjyana Mu bugingo budapfa."
+      ]
+    }
+  ]
+}

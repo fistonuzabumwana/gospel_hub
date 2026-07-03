@@ -1,0 +1,42 @@
+{
+  "number": 107,
+  "book": "Gushimisha",
+  "title": "Nkomeze njye niringira Amaraso",
+  "slug": "nkomeze-njye-niringira-amaraso",
+  "uuid": "ff92d5ed-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nkomeze-njye-niringira-amaraso/ff92d5ed-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nkomeze njye niringira Amaraso y'Umukiza.Nta wundi nshaka kwigana Keretse Yesu wenyine.Nikomeze ku Rutare, Nahw ahandi n'umusenyi, Nahw ahandi n'umusenyi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iyo ngoswe n'umwijima, Niringir' ubwo buntu bwe. Mu byago no mu makuba,",
+        "Ntagir' ubw’ anzibukira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntunganywa n'amaraso ye Na ya masezerano ye. Naho napfush' ibyo mfite, Ni",
+        "we musa niringira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Maz’ icyo gih’azazira, azasanga mwiteguye, Nambaye gukiranuka; ntanenge",
+        "nzaba ngifite."
+      ]
+    }
+  ]
+}

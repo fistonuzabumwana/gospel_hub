@@ -1,0 +1,60 @@
+{
+  "number": 300,
+  "book": "Gushimisha",
+  "title": "Bana, ntimugire—Icyaha mukora",
+  "slug": "bana-ntimugire-icyaha-mukora",
+  "uuid": "ff98f9f7-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/bana-ntimugire-icyaha-mukora/ff98f9f7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Bana, ntimugire—Icyaha mukora, Ntimutonganishwe—N'uburakari."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Bana, kuko muri—Aba Yesu Kristo, Nukw ingeso zanyu—Zib' ingeso ze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yavugag’ iteka—Iby'ukuri byose, Nta by'isoni Yesu —Yigez' akora,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nta n'umwe yigeze—Kugirira nabi Kuko Yes' iteka—Yangag' ibyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Har' ufit' ubwenge—Bwo kuboshya nabi: N' Umwanzi Satani—Uhora hafi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Abasezeranye—Kwimura Satani No kurek' ibyaha,—Mwe kumwumvira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Yes' azabafasha—Kumurwanya cyane, Kuk' ubwe wenyine—Yamunesheje"
+      ]
+    }
+  ]
+}

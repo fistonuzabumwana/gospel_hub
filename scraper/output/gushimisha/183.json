@@ -1,0 +1,47 @@
+{
+  "number": 183,
+  "book": "Gushimisha",
+  "title": "Tugiy' i wacu mw ijuru :Muze, mwisigara !",
+  "slug": "tugiy-i-wacu-mw-ijuru-muze-mwisigara",
+  "uuid": "ff953bbd-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/tugiy-i-wacu-mw-ijuru-muze-mwisigara/ff953bbd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tugiy' i wacu mw ijuru :Muze, mwisigara !",
+        "Gusingiz' Umucunguzi: Muze, mwisigara !",
+        "Abagezeyo baragwiriye;",
+        "Baranezererw' Umwana w'lntama.",
+        "Abandi ban mu nzira :",
+        "Muze, mwisigara."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Hazab' umucyo mw ijuru :Muze, mwisigara",
+        "Muve mu mwijima mubi :Muze, mwisigara !",
+        "Har' ikamba Yes' azatwambika;",
+        "Tuzanezeranwa n'abakijijwe,",
+        "Ibyiza tubisangiye :",
+        "Muze, mwisigara !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "N' ushaka ko tujyanayo, ihane ! Ihane !",
+        "Mwiringir' agukiz' ubu ;Ihane ! Ihane !",
+        "Kand' uwo mutwaro wikoreye,",
+        "Mwemerer' awuguture uruhuke,",
+        "Ngo tuzabane mwijuru :",
+        "Ihane ! Ihane !"
+      ]
+    }
+  ]
+}

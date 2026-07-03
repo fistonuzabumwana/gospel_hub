@@ -1,0 +1,46 @@
+{
+  "number": 397,
+  "book": "Gushimisha",
+  "title": "Mw isi tubonana n'inshuti",
+  "slug": "mw-isi-tubonana-ninshuti",
+  "uuid": "ff9b2925-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/mw-isi-tubonana-ninshuti/ff9b2925-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mw isi tubonana n'inshuti, Tugatandukana vuba : Mw ijuru si ko biri."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tuzabon' ibyishimo, Ibyishim' ibyishimo. Tuzabon' inshuti zacu, Tutakibasha",
+        "gutandukana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni hw abakund' Umwami Yesu Bose bazateranira, Batagitandukana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kandi tubony' Umucunguzi, Tuzagir' umunezero Urut' iyindi yose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kandi tuzajya duhimbaza Yesu. tumuririmbira Mw ijur' iteka ryose."
+      ]
+    }
+  ]
+}

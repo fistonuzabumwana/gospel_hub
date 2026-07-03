@@ -1,0 +1,67 @@
+{
+  "number": 86,
+  "book": "Gushimisha",
+  "title": "Amaraso y'Umukiza Yakuyiriye.",
+  "slug": "amaraso-yumukiza-yakuyiriye",
+  "uuid": "ff922deb-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/amaraso-yumukiza-yakuyiriye/ff922deb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Amaraso y'Umukiza Yakuyiriye.",
+        "Yayaviriy' abagome N'abanyabyaha."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Amaraso y' Umukiza Yakuviriye, Rek' akoze, rek' akweze, Agukiz' ubu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Amaraso y'Umukiza Ni y' atunganya. Rek’ atembe nk' umugezi, Akugeremo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubw' ufit’ ibyaha byinshi,Kandi wanduye, Amaraso y'Umukiza Arakweza de."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Amaraso ni yo masa yanyishyuriye irya myenda yanjye yose,ndababarirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ubu nshiz' amanga cyane Kwinjir' Ahera, Kuko yaduhay  inzira Mu maraso ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Amaraso yo kunesha Ni yo ndwanisha, Nsind' ibyaha na Satani, Nshobojwe na yo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Amaraso y'Umuhuza Wacu n'Imana, Ni y' ambonez' umutima ; Ndayasingiza."
+      ]
+    }
+  ]
+}

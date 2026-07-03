@@ -1,0 +1,49 @@
+{
+  "number": 33,
+  "book": "Agakiza",
+  "title": "Yesu Mukiza yasezeranye Yuk' umuns' umw' azaza kudutwara",
+  "slug": "yesu-mukiza-yasezeranye-yuk-umuns-umw-azaza-kudutwara",
+  "uuid": "ff9cfbaa-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yesu-mukiza-yasezeranye-yuk-umuns-umw-azaza-kudutwara/ff9cfbaa-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu Mukiza yasezeranye Yuk' umuns' umw' azaza kudutwara. Azatujyana iwe mw ijuru, Azaza vuba nta bw' azatinda."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Sinshidikanya, mfit' ukwizera, Kubw' Umukiza n'amaraso ye. Umivuka Wera ni",
+        "we nahawe, Ni w'uzangeza ku byo narazwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Intumwa nyinshi z'Umwam' Imana, Ubu zatumwe mur' iyi si yose. Ziramamaz'",
+        "ubutumwa bwiza, bwa Yesu Kristo n'urukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abantu benshi bizer' Imana, Bi tab' umuhamagaro w'Imana. Duhuz' umutima mu",
+        "rugendo, Kandi tuzabon' ingororano."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Igihe cy' Umwami Yesu Kristo Cyo kugaruka kwe, kiregereje. Tugir' umwete,",
+        "tumwitegure, Az' atujyane iwe mw ijuru."
+      ]
+    }
+  ]
+}

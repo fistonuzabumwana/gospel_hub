@@ -1,0 +1,43 @@
+{
+  "number": 267,
+  "book": "Gushimisha",
+  "title": "imitim' ikomezwa No kwiringira cyane",
+  "slug": "imitim-ikomezwa-no-kwiringira-cyane",
+  "uuid": "ff97a2c2-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/imitim-ikomezwa-no-kwiringira-cyane/ff97a2c2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "imitim' ikomezwa No kwiringira cyane",
+        "Ko Yes' azagaruka.Azaza vuba, ntazatinda. Tuzagir’ ibyishimo. Yes'ubw' uzagaru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand' abo twakundaga, iyo tubapfushije, Tukababara cyane,iryo ni ryo",
+        "ritwiringiza  Turorere kurira : N’aza, tuzabonana"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni tugir' amakuba, N'ibyo kutunaniza, Twe gukuk' imitima Mw isi s' i wacu :",
+        "duhumure  N'ibyo kwihanganirwa Kugez' ahw azazira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tugeze ku meza ye,Dusangir' urwibutso Rw'umutsima na vino; Bisur' ameza yo",
+        "mw ijuru : Ni ko tuzasangira Na W' ubw' azagaruka."
+      ]
+    }
+  ]
+}

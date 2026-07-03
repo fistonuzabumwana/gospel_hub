@@ -1,0 +1,51 @@
+{
+  "number": 67,
+  "book": "Agakiza",
+  "title": "Ba bakobwa cumi",
+  "slug": "ba-bakobwa-cumi",
+  "uuid": "ff9db235-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ba-bakobwa-cumi/ff9db235-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ba bakobwa cumi biteguye Ku jya gusanganira wa mukwe Bari bajyany' amatara yabo, Ngw aba murikire mu mwijima.Abatanu bar' abanyabwenge, Bujuj' amavuta mu mperezo, Nahw abandi batanu b'a bapfu mu mperezo zabo hari humye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Hanyuma yah' umukw' aratinda Nuko bose barahunikira. Bigeze mu gihe",
+        "cy'igieuku, Habah' urusaku bat' araje! Bumv' irindi jwi rivuga riti: Mwihutire",
+        "kurnusanganira. Ba bakobwa bose bitegura Gutunganya ya matara yabo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ba bapfu batangira kuvuga bati kw amatara yac' ataka! Bati: Nya muneka, nshuti zacu, Ni muduhe ku mavuta yanyu. Na bo bati:Nta bwo yadukwira, Nimugende mujye kwigurira. Bafat' inzir' ubwo bara genda Bajya gushak' aho bagurira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uwo mwanya bamaze kuv' aho, Umukw' aherakw arasohora. Ba bakobwa bar'",
+        "abanyabwerige Binjirana n'umukwe mu bukwe.Ba bapfu baza bavuga bati: Databuja we, duki ngurire. Arabasubiz' ati: Simbazi. Aherakw arabakingirana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nta bwo tuz' umunsi cyangw' igihe, Tube maso n'amatara yacu. Yes' ashobora",
+        "kutwuzuriza Amavuta mu mitima yacu.Mwene Data, wumv' izi nyigisho Zituruka k'",
+        "Umukiza wacu. Ukwiriye nawe kwitegura Kumusanganir' ubw' agaruka."
+      ]
+    }
+  ]
+}

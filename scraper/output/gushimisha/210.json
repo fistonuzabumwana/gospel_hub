@@ -1,0 +1,40 @@
+{
+  "number": 210,
+  "book": "Gushimisha",
+  "title": "Nimuze, ngabo za Yesu",
+  "slug": "nimuze-ngabo-za-yesu",
+  "uuid": "ff95e30d-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/nimuze-ngabo-za-yesu/ff95e30d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimuze, ngabo za Yesu, Tujye mu ntambara! Mwarobanu we n’Um wami: Mwese, mwiyereke  araje :Impanda bazivugije : Nimuze, mwitabe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Dor’ umugab’ uzigabye Ni Yesu Krisito.yanesheje wa mwanzi we kubw’Umusaraba. Ndetse,n'intwaro ze Yarazimwambuye. Twashobora kuneshwa se, Yes’ aturwanira ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwiyumanganye mu byago mugiye kubona.Murind’ imitima yanyu, Itagwa mu gico. Intwari y'Umwami Ntiyita ku by’isi.Ni kw ijy'imera ngw ibona Kunesha Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mutwar’ intwaro Ni zo zimukwiriye Inkot’ ityay’ iboneye N' ijambo ry'Imana.",
+        "Muryemere mwese; Ni ryo ribakiza.Muryizere mu mitima, Ni ho muzatsinda."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "number": 73,
+  "book": "Agakiza",
+  "title": "Nshut' iby' ushidikanyamo",
+  "slug": "nshut-iby-ushidikanyamo",
+  "uuid": "ff9dd0d7-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nshut-iby-ushidikanyamo/ff9dd0d7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nshut' iby' ushidikanyamo Ubishyir' Umwami Yesu. Uwizer' Umwami Yesu Nta bw' azakorwa n'isoni."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ndakwizeye, ndakwizeye. ndakwizeye, Mwami Yesu. Ndakwizeye, ndakwizeye,",
+        "Nizey' iryo jambo ryawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wihan' ibyo byaha byawe, Wezwe no mu maraso ye. Kand' ara kwambik' ukuri",
+        "Kugez' ubw' azakujyana,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Imiruho yawe yose, Uyerek' Umwami Yesu. Naho waca mu gicucu Nta bwo Yesu yakureka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' umunezero wawe Umenyekane kwa Yesu. Ni we Mwami muri byose Niw'",
+        "uzaguh' umugisha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Wiyegurir' Umukiza, Muh' ubwe nge n'umutima, Kukw ashaka gu tunganya",
+        "Ubugingo bwawe bwose."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "number": 353,
+  "book": "Gushimisha",
+  "title": "Amaraso yose y’intama",
+  "slug": "amaraso-yose-yintama",
+  "uuid": "ff9a377a-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/amaraso-yose-yintama/ff9a377a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Amaraso yose y’intama n'ihene Y 'ibitambo by'Abayuda Nta cy' atumarira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ariko wa Mwana W'Intama w'Imana Ni We wenyin' ushobora Kudukiz' ibyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yabay'igitambo Kiruta bya bindi; Nta yandi maras' ariho Yo kutwoz' ibyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndambits' ikiganza Ku mutwe wa Yesu, Mushyizehw’ ibyaha byanjye, Mbyatuye",
+        "nihannye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Umutwaro wanjye Yarawikoreye,Ari ku Git' amanitswe, Ari jyew' azize."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Twizeye, dushima Wa Mwana w'lntama, Kuk' umuvumo twarimo Wavuyeho rwose."
+      ]
+    }
+  ]
+}

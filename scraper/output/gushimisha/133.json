@@ -1,0 +1,55 @@
+{
+  "number": 133,
+  "book": "Gushimisha",
+  "title": "Ndagukurikira, Yesu",
+  "slug": "ndagukurikira-yesu",
+  "uuid": "ff93a84e-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/ndagukurikira-yesu/ff93a84e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndagukurikira, Yesu; Nemey' umusaraba.Jye nta shinge, nta rugero : Urampagije wenyine."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ndagukurikira, Yesu, Ubwo wanguz’amaraso; Ndakwihaye, Mwami Yesu: Kera",
+        "waranyitangiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Icyubahiro n'iby'isi, Sinkibimaranira. Kubwa Yesu, ndabiretse: Amp’ibviza byo",
+        "mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nahw ab'isi bazanyanga, Ni ko bakugiriye. Ntibankund' akaramata: Wowe ntabw' uzanzinukwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uwansek' ansuzuguye, Byakunsunikiraho. Uko bizamera kose, Uzabinyihanganisha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ko mpaw’urukundo rwawe, Har’ikindi nshaka se? Ibinezaneza by'isi, Simbishaka:",
+        "mfite Yesu."
+      ]
+    }
+  ]
+}

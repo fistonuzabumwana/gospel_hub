@@ -1,0 +1,44 @@
+{
+  "number": 85,
+  "book": "Agakiza",
+  "title": "Urukundo rw'Umukiza",
+  "slug": "urukundo-rwumukiza",
+  "uuid": "ff9e0b6c-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/urukundo-rwumukiza/ff9e0b6c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Urukundo rw'Umukiza Ni nk' amazi menshi cyane.",
+        "Ameze nk'isoko nziza Idudubiza muri we.Yesu ni we",
+        "wuguruye Rwa rure mbo rwo mw ijuru, Kugira ngo ndwinjiremo",
+        "Kubw' ubuntu bwi nsh' agira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nababay' iminsi myinshi, Nasaga n'inyon' ihigwa. Natakiy' Umwami Yesu Na we ntiyanyirukanye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwiyumvir' igitangaza, Yanyogej' ibyaha byose, Kuber' ubwo bunt' agira",
+        "Ndirimban' umunezero."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mu gitondo cy'agakiza Nzagera mur' iryo rembo. Kuber' urukund' afite Nzinjira",
+        "mur' uwo murwa."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "number": 92,
+  "book": "Agakiza",
+  "title": "Mw ijuru ni heza cyane",
+  "slug": "mw-ijuru-ni-heza-cyane",
+  "uuid": "ff9e64b2-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mw-ijuru-ni-heza-cyane/ff9e64b2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mw ijuru ni heza cyane",
+        "Kuko hatabamo ibyaha,",
+        "N'ukuri ni heza cyane",
+        "Ni Yesu wahateguye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Dushimire Yesu Kristo,",
+        "Kuko ya duteguriye Ibyicaro byiza cyane",
+        "Mw ijuru ku Mana Data."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mw ijuru ni heza cyane",
+        "Nta mu sinz' uzahagera.",
+        "N'ukuri ni heza cyane",
+        "Nta mujur' uzahagera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mw ijuru ni heza cyane",
+        "Nta muroz' uzahagera.",
+        "N'ukuri ni heza cyane",
+        "Nta mwicany' uzahagera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mw ijuru ni heza cyane",
+        "Ntiha zajy' abahehesi.",
+        "N'ukuri ni heza cyane,",
+        "Nta mugom' uzahagera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mw ijuru ni heza cyane",
+        "Hagenew' abakijijwe.",
+        "N'ukuri ni hez; cyane",
+        "Kandi hazicar' abera."
+      ]
+    }
+  ]
+}

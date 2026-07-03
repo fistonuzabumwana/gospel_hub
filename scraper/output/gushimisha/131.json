@@ -1,0 +1,49 @@
+{
+  "number": 131,
+  "book": "Gushimisha",
+  "title": "Mwumv' imbabazi z'Imana",
+  "slug": "mwumv-imbabazi-zimana",
+  "uuid": "ff939a5f-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitaba Yesu",
+  "url": "https://indirimbo.com/gushimisha/mwumv-imbabazi-zimana/ff939a5f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwumv' imbabazi z'Imana : Ntabwo zarondoreka ! Mbeg’ umunyabyaha nkanjye  Koko yababarirwa?"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ndaje, Yesu ..ndakwitabye.. Uko ndi ko...s' unyemere Ndaje, Yesu ndakwitabye",
+        "Mukiz’unyakire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nari kure y'Uw' unkunda,Mbabaz' umutima we, Kuko namwimag' ahw aba Mu",
+        "wanjye yapfiriye!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "None Yesu, ndakwihaye,Umbohor' undokore. Ibi byaha binyomaho, Non’uz'",
+        "ubinkureho !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Haleluya : yanduhuye ! Singishidikany' ubu ! Ndi mu nzir’ijya mw ijuru,",
+        "Nuzuy’umunezero."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "number": 43,
+  "book": "Agakiza",
+  "title": "Ngwin' unyigishe ya nkurunzi za",
+  "slug": "ngwin-unyigishe-ya-nkurunzi-za",
+  "uuid": "ff9d3cb2-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ngwin-unyigishe-ya-nkurunzi-za/ff9d3cb2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngwin' unyigishe ya nkurunzi za, Ya nkuru y'agakiza. Nubwo ntabasha kumenya neza Ubuntu bwe bwinshi.Nzi yuk' ubwo nari mu mwijima, Yesu Mukiza yarahansanze. Aherakw amp' agakiza, Ampa n'ibyiringiro."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nar' impumyi, non' ubu ndabona. Kuko yumvise gusenga kwa njye. Kandi",
+        "ntazanyibagirwa, Kuko nzi yukw ankunda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand' iy' abumbuy' ibiganza bye, Tubonamw agakiza. Nib' unaniriwe mu mutima,",
+        "Ngwin' usange Yesu. Waruhijwe n'ibyo byaha byawe,Tumbir' Umukiza wawe Yesu. Kand' araguhe agakiza, Ngwino kukw agukunda."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "number": 47,
+  "book": "Agakiza",
+  "title": "N'igihe git' intambar' igashira.",
+  "slug": "nigihe-git-intambar-igashira",
+  "uuid": "ff9d4fed-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nigihe-git-intambar-igashira/ff9d4fed-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "N'igihe git' intambar' igashira.",
+        "N'igihe git' umurab' ugacyahwa.",
+        "Noneho nkarambik' umutwe wanjye",
+        "Muri rwa rubavu rwa Yes' unkunda.",
+        "Mw ijuru ntihazageramw ibyaha,",
+        "Ni cyo gituma huzuy'amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umubabaro n'uw' igihe gito.",
+        "ljoro, na ryo n'iry' igihe gito.",
+        "Ndirira kenshi mur' iyisi ndimo,",
+        "Ariko nuko ntarabona Yesu.",
+        "Hazabahw igitondo gihoraho,",
+        "Ni bwo ntazongera kurir' ukundi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "N'igihe gito ngifit' umuruho.",
+        "N'igihe gito nkazabona Yesu.",
+        "Ni bwo nzaba ntandukanye n'ibyago.",
+        "Nzaba mbumbatiwe mu maboko ye.",
+        "Nzi ko mw jjuru hatab'umwijima.",
+        "Habah' umucyo uhorahw iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Noneho nta cy' umubabar' u ntwaye,",
+        "Kuko nzawibagirirwa kwa Yesu.",
+        "Nubwo ngifite kubabazwa mw isi",
+        "Mw ijuru nta mubabaro n'urupfu.",
+        "Iman' izahanagur' amarira,",
+        "Izavanah' umubabaro wose."
+      ]
+    }
+  ]
+}

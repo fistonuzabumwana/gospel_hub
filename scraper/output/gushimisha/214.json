@@ -1,0 +1,41 @@
+{
+  "number": 214,
+  "book": "Gushimisha",
+  "title": "Har’ umurwa mwiza",
+  "slug": "har-umurwa-mwiza",
+  "uuid": "ff960303-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/har-umurwa-mwiza/ff960303-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Har’ umurwa mwiza—W'abera b'lmana: Nta gihumanya,—Nta gihumanya Kizajya muri wo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwana w’uwiteka,—Mukiz’ubundaje:Nyoz’ untunganye,—Nyoz’ untunganye! Nkiz’ibyaha byose!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mpindur’ ubu, Mwami, Ngo Mb’ umwana wawe; Unkomereshe,—Unkomereshe",
+        "Amaboko yawe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nuk’ uzansohoze—Mu bera b'i Wawe, Ntafit’ inenge,—Ntafit’ inenge, Mur’iyo si",
+        "nziza"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "number": 244,
+  "book": "Gushimisha",
+  "title": "Har' umusozi wa kure",
+  "slug": "har-umusozi-wa-kure",
+  "uuid": "ff96d035-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/har-umusozi-wa-kure/ff96d035-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Har' umusozi wa kure Hafi y'ururembo, Ah’ Umukiza yabambwe Watubabarijwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntabwo twabasha kumenya Uko yababajwe! Twizeye gusa kw’ar’ twe Twatumy’apfa nabi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni cyo cyatumy’ ibyaha byacu Byos’ uko bingana Bikurwaho n’Uwiteka, Tukazaban’i We,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nta wundi wabasha kuba Inshungu y'lbyaha; Ni we watwugururiye irembo ry'ijuru"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nuk’ubwo yadukiinz’ atyo,Natwe tumukunde, Twiringir’amaraso ye, tumwumvire",
+        "rwose."
+      ]
+    }
+  ]
+}

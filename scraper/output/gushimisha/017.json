@@ -1,0 +1,36 @@
+{
+  "number": 17,
+  "book": "Gushimisha",
+  "title": "Nshim' Umuremy' uhoraho",
+  "slug": "nshim-umuremy-uhoraho",
+  "uuid": "ff902b6a-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/nshim-umuremy-uhoraho/ff902b6a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nshim' Umuremy' uhoraho Wahanits' ijuru, Inyanj'akazidendeza; Yiremeye byose.  Yashyizeho n'izuba rye Kumurika ku munsi, N'ukwezi n'inyenyeri bye",
+        "Byo kwaka n'ijoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mushime ko yategetse Imyaka ngw imere; Yaremeshej' ijambo rye Ibizima",
+        "byose. Nitegerez' ibyiza bye Ku mpande zos' iteka, Hasi no hasi no hejuru; Ntabwo bihinyuka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mw isi nta kintu kiriho Kiterekan' ibye. Ni We wenyin' utegeka Izuba n'imvura.",
+        "lmana ni Y' ibeshaho Twe n'inyamaswa zose.Nta hantu twayihungira, Nta na hw",
+        "itagera."
+      ]
+    }
+  ]
+}

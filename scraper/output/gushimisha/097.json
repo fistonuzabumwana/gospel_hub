@@ -1,0 +1,48 @@
+{
+  "number": 97,
+  "book": "Gushimisha",
+  "title": "Nishimiye ko menye rwose",
+  "slug": "nishimiye-ko-menye-rwose",
+  "uuid": "ff928d79-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nishimiye-ko-menye-rwose/ff928d79-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nishimiye ko menye  rwose Yesu kw ar' Umukiza wanjye; Ni we wanshunguj' amaraso; Ndizera, mvuk' ubwa kabiri."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yambwiye ko nd' umunyabyaha, Ndihana ndizer' arankiza; Nibyo ndirimba, ni",
+        "byo mvugo, Nshim' Umukiz' ubudasiba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nditanze, ndamwiyeguriye; Binzariir' ibyishimo byinshi, Namuhay' ibyanyanduzaga, Abinkurahw amp' amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Sinkir' uwanjy' arantegeka; Mpiriwe n'uko mba muri We; Njya ntegerez' ibyiza",
+        "bindi Nzagirirwa n'urukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kubimenya ni kwiza rwose : Nd' uwa Yesu, sinshidikanya. Ushobora byos'",
+        "arandinda; Nkimwizeye, nta wamunnyaga."
+      ]
+    }
+  ]
+}

@@ -1,55 +1,86 @@
+import 'dart:convert';
+
 class Hymn {
   final int? id;
-  final int hymnNumber;
-  final String titleEn;
-  final String titleKinyarwanda;
-  final String titleFrench;
-  final int categoryId;
-  final String lyricsEn;
-  final String lyricsKinyarwanda;
-  final String lyricsFrench;
-  final String firstLine;
+  final String book;      // 'Gushimisha' or 'Agakiza'
+  final int number;
+  final String title;
+  final String slug;
+  final String uuid;
+  final String category;
+  final List<LyricsBlock> lyrics;
 
   Hymn({
     this.id,
-    required this.hymnNumber,
-    required this.titleEn,
-    required this.titleKinyarwanda,
-    required this.titleFrench,
-    required this.categoryId,
-    required this.lyricsEn,
-    required this.lyricsKinyarwanda,
-    required this.lyricsFrench,
-    required this.firstLine,
+    required this.book,
+    required this.number,
+    required this.title,
+    required this.slug,
+    required this.uuid,
+    required this.category,
+    required this.lyrics,
   });
 
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
-      'hymn_number': hymnNumber,
-      'title_en': titleEn,
-      'title_kinyarwanda': titleKinyarwanda,
-      'title_french': titleFrench,
-      'category_id': categoryId,
-      'lyrics_en': lyricsEn,
-      'lyrics_kinyarwanda': lyricsKinyarwanda,
-      'lyrics_french': lyricsFrench,
-      'first_line': firstLine,
+      if (id != null) 'id': id,
+      'book': book,
+      'number': number,
+      'title': title,
+      'slug': slug,
+      'uuid': uuid,
+      'category': category,
+      'lyrics': json.encode(lyrics.map((l) => l.toMap()).toList()),
     };
   }
 
   factory Hymn.fromMap(Map<String, dynamic> map) {
+    List<dynamic> lyricsJson = [];
+    try {
+      if (map['lyrics'] != null) {
+        lyricsJson = json.decode(map['lyrics'] as String) as List<dynamic>;
+      }
+    } catch (e) {
+      print('Error parsing lyrics JSON: $e');
+    }
+
     return Hymn(
-      id: map['id'],
-      hymnNumber: map['hymn_number'],
-      titleEn: map['title_en'],
-      titleKinyarwanda: map['title_kinyarwanda'],
-      titleFrench: map['title_french'],
-      categoryId: map['category_id'],
-      lyricsEn: map['lyrics_en'],
-      lyricsKinyarwanda: map['lyrics_kinyarwanda'],
-      lyricsFrench: map['lyrics_french'],
-      firstLine: map['first_line'],
+      id: map['id'] as int?,
+      book: map['book'] as String? ?? 'Gushimisha',
+      number: map['number'] as int? ?? 0,
+      title: map['title'] as String? ?? '',
+      slug: map['slug'] as String? ?? '',
+      uuid: map['uuid'] as String? ?? '',
+      category: map['category'] as String? ?? '',
+      lyrics: lyricsJson.map((l) => LyricsBlock.fromMap(l as Map<String, dynamic>)).toList(),
+    );
+  }
+}
+
+class LyricsBlock {
+  final String type;      // 'verse' or 'chorus'
+  final int? number;      // Verse number, null if chorus
+  final List<String> lines;
+
+  LyricsBlock({
+    required this.type,
+    this.number,
+    required this.lines,
+  });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'type': type,
+      if (number != null) 'number': number,
+      'lines': lines,
+    };
+  }
+
+  factory LyricsBlock.fromMap(Map<String, dynamic> map) {
+    return LyricsBlock(
+      type: map['type'] as String? ?? 'verse',
+      number: map['number'] as int?,
+      lines: List<String>.from(map['lines'] ?? []),
     );
   }
 }

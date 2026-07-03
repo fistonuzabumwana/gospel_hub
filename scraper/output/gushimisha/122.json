@@ -1,0 +1,35 @@
+{
+  "number": 122,
+  "book": "Gushimisha",
+  "title": "Ukunda kujy'ambabarira",
+  "slug": "ukunda-kujyambabarira",
+  "uuid": "ff934b4e-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/ukunda-kujyambabarira/ff934b4e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ukunda kujy'ambabarira N' Umukiza. Umfasha kujya nesh' ibibi N' Umukiza. Umwami wanjy' aranyizeza,Nanjye nkunda kumukorera, Kukw ashaka kubabarira Umwegera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nkund' iyi nzira y'agakiza Y'Umukiza, Kukw ijy'intera kunezerwa Mu Mukiza.",
+        "Nababazwa n'iby'isi cyane, Mfashwa no kujya mwizigira, Ngahora mpanz' amas'iteka Umukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndashima rwos' Uwankijije :Ni we Yesu. Kand' azanjyana mu bwami bwe Kukw",
+        "ankunze. Nuko nemera gushorerwa N'Umwuka Wera w'Umukiza, Kukw ari Wo",
+        "Mufash' uhamya Ibya Yesu."
+      ]
+    }
+  ]
+}

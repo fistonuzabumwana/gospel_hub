@@ -1,0 +1,49 @@
+{
+  "number": 70,
+  "book": "Agakiza",
+  "title": "Reka gutiny' ibizakubaho",
+  "slug": "reka-gutiny-ibizakubaho",
+  "uuid": "ff9dc212-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/reka-gutiny-ibizakubaho/ff9dc212-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Reka gutiny' ibizakubaho Iman' izakurinda! Reb' ubushake bw'Imana gusa Iman' irakurinda."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Iman' irakurinda Iminsi yose mu nzir' ucamo. Iraguhaz' amahoro. Iman'",
+        "irakurinda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nubw' uwo mutwar' uremereye, Iman' irakurinda. N'ibyago biri mu nzir' ucamo,",
+        "Iman' irakurinda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iman' imeny' ubukene bwawe, Iman' irakurinda. Komez' ubane n'lmana gusa,",
+        "Iman’ irakurinda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' ubw' uzaca mu bikomeye, Iman' izakurinda. Uyimenyesh' ibikubabaje,",
+        "Iman'irakurinda."
+      ]
+    }
+  ]
+}

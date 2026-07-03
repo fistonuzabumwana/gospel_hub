@@ -1,0 +1,40 @@
+{
+  "number": 236,
+  "book": "Gushimisha",
+  "title": "Umukiza wac' ubwo yavukaga",
+  "slug": "umukiza-wac-ubwo-yavukaga",
+  "uuid": "ff969819-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/umukiza-wac-ubwo-yavukaga/ff969819-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umukiza wac' ubwo yavukaga, Nta cumbi yabonye, keretse mu nka. Nubwo bamuhej' i Betelehemu, Twe kumwim' icumbi: twe, tumwakire!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Marayika yaj' asang' abungeri; Izo nkuru nziz' azibabariye, Bagend' uwo mwanya kumusingiza. Natwe twe gutinda, tumusingize."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Na ba banyabweng’ aho baboneye Ya nyenyer' irang' Umwami Krisito. Bamusanze vuba, ihayobora, Bamutur' ibyiza bamuzaniye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ko nd' umwana muto, namutur' iki ?Simfit' izahabu nk'abanyabwenge, Nta",
+        "n'intama mfite, nka ba bungeri. Mfite kimwe gusa : muh' umutima!"
+      ]
+    }
+  ]
+}

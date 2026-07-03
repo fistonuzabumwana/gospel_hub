@@ -1,0 +1,33 @@
+{
+  "number": 232,
+  "book": "Gushimisha",
+  "title": "Munezero, Munezero,Birori bishimisha !",
+  "slug": "munezero-munezerobirori-bishimisha",
+  "uuid": "ff967e7e-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/munezero-munezerobirori-bishimisha/ff967e7e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Munezero, Munezero,Birori bishimisha ! Mu ndirimbo zo mw ijuru, Dushyiremo n'izacu Yesu yaje kudukiza,Tumuhawe n'Uwiteka : Munezero, Munezero, Birori bishimisha !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Munezero, Munezero,Imitim’ inezerwe ! Tumwitabe, tumwitabe,Yes’aduhamagara Dukunze kw’ aturokora,Tureke kubirazika : Munezero, Munezero, Imitim’inezerwe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Munezero, Munezero,Jyan’ ishimwe ku mana! Amahoro n'amahoro Ni ko",
+        "Intumwa zivuga. Yesu ni w' uhira bose :twese tumuririmbire : Munezero,Munezero, Jyan’ ishimwe ku Mana !"
+      ]
+    }
+  ]
+}

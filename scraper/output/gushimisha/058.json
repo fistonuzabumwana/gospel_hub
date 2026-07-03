@@ -1,0 +1,52 @@
+{
+  "number": 58,
+  "book": "Gushimisha",
+  "title": "Shobuj' uguhamagara",
+  "slug": "shobuj-uguhamagara",
+  "uuid": "ff91630d-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/shobuj-uguhamagara/ff91630d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Shobuj' uguhamagara Munyabyah' umwitabe, Wumvir' ijwi rye ryinginga : N' Umucunguzi wawe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mwitabe Mwitabe ! Sanga Yesu nonaha"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "N' iki gitum' umutera Kukurindira cyane ? Kera kose waramwanze None ngwino : ntutinde !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Banguk' aguh' uyu munsi Ubwera n'imbabazi N'amahoro y’ adashira N'ubugingo n'ubwami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Agutegey' amaboko,Agukund' akwifuza. Banguk' uve mu bugoryi : Ngwino, wikebaguza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Aracyaguhamagara :Wihut' atarahita. Wumvir' ijwi rye ryinginga, Udasanga yagiye !"
+      ]
+    }
+  ]
+}

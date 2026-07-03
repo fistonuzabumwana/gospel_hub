@@ -1,0 +1,59 @@
+{
+  "number": 261,
+  "book": "Gushimisha",
+  "title": "Bene data mwe mwese",
+  "slug": "bene-data-mwe-mwese",
+  "uuid": "ff976e73-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamba",
+  "url": "https://indirimbo.com/gushimisha/bene-data-mwe-mwese/ff976e73-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Bene data mwe mwese ,ni muze dufatanye ibi byago tubonye tubisangire"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Kubakunzi b’ Imana ,Amahoro n’ibyago birafatanya Kuzana ibyiza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "iyi nshuti ya twese None yadukuwemo. Yadufashaga cyane :Ni y' ituriza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Twibuk' imihati ye N'uko yakiranutse No kwitanga kwe kose No gutinyuka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Twese yatugiriye Umumaro w'ukuri, Kandi yatuyoboye Mu byo gukizwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Twagira ngw azab' ino imyaka myinshi cyane, Ariko kuva mw isi Kwari kugeze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "imigambi y'Imana Si nk'ibyo twibwiraga. Non' ubw' ibitegetse, Turabyemeye"
+      ]
+    }
+  ]
+}

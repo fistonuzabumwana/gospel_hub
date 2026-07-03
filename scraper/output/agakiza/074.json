@@ -1,0 +1,42 @@
+{
+  "number": 74,
+  "book": "Agakiza",
+  "title": "Harihw igihugu cyiza",
+  "slug": "harihw-igihugu-cyiza",
+  "uuid": "ff9dd5f6-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/harihw-igihugu-cyiza/ff9dd5f6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Harihw igihugu cyiza cyane Gituwemo n'abanezerewe. Nta bwo batinya bomb' atomike. Baririmb'indirimbo z'ishimwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyaho byose ni byiza cyane. Har’ uburuhukiro' bw'ukuri. Nta magamb' atey'",
+        "ison' abayo, Nta n'imfubyi zihakubitirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Icyo gihugu si nk'icyo mw isi Kukw ibyaho byose bitunganye. Bene Dat' icyo",
+        "nifuza n'iki: Kuzababonayo muririmba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mbese ni kiguzi ki dutanga Kwinjira mur' uwo murwa mwiza. Nta kiguzi na kimwe",
+        "twatanga, Yesu yishyuriy' i Gologota."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "number": 253,
+  "book": "Gushimisha",
+  "title": "Haleluya ! Haleluya ! Haleluya !",
+  "slug": "haleluya-haleluya-haleluya",
+  "uuid": "ff972693-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/haleluya-haleluya-haleluya/ff972693-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "chorus",
+      "lines": [
+        "b.",
+        "Haleluya ! Haleluya ! Haleluya !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Hashimw' Uwatuzukiye ! Kukw avuye mu gituro;Duhuze hamwe,—Twishime tuti: Haleluya !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu, waradupfiriye,ub' Umwam' ubahw iteka. Uradukunda;—Uradushaka :",
+        "Haleluya !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uri mu bwiza bw'ijuru, Uhadutegerereje.Udushakisha—Ubuntu bwawe :Haleluya!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tuguh' imitima yacu, Uyitware, Mwami Yesu,Ikwishimire—Iminsi yose : Haleluya!"
+      ]
+    }
+  ]
+}

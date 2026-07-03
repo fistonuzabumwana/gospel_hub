@@ -1,0 +1,53 @@
+{
+  "number": 309,
+  "book": "Gushimisha",
+  "title": "Inzu yawe, Mana",
+  "slug": "inzu-yawe-mana",
+  "uuid": "ff992b85-0670-11ea-9a58-deadbe058832",
+  "category": "Icyumweru",
+  "url": "https://indirimbo.com/gushimisha/inzu-yawe-mana/ff992b85-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Inzu yawe, Mana,—Turayishimira : Ni h' ujy'uhurira—N'abo wakijiije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Duteraniramo—Guseng' Uwiteka, Tukamwaturira—Ibi tuba baza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dufashirizwamo—N' Ijambo ry' Imana: Tukirisomerwa,—Twunguk’ ibya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tubwiririzwamo—Ibidukomeza Mu ntambara nziza,—Bikatunezeza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Tuharirimbira—Ishimwe rya Yesu, Twagera mw ijuru,—Tukazarushaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mw is' ujy'unkundisha— Kubana n'a bawe; Nzaguhimbazanye—N'abera mw ijuru"
+      ]
+    }
+  ]
+}

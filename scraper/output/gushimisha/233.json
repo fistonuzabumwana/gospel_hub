@@ -1,0 +1,68 @@
+{
+  "number": 233,
+  "book": "Gushimisha",
+  "title": "Yemwe bungeri ba kera",
+  "slug": "yemwe-bungeri-ba-kera",
+  "uuid": "ff9684e3-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/yemwe-bungeri-ba-kera/ff9684e3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemwe bungeri ba kera, Mutubwir' ibya Yesu,",
+        "Ibyo mwabonye rya joro, Igihe yavukaga."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Shimwa Rurema !Shimwa Rurema,  Shimwa,, Rurema, shimwa ! Wow’ usumba",
+        "byose.",
+        "Shimwa Rurema !Shimwa, Rurema!  Shirmwa, Rurema, shimwa!Amahor’a be",
+        "mw isi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Twar’ aho turaririye Umukumbi n'ijoro. Maze, tugubwa gitumo N'urangurur' aty'",
+        "ati:"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Marayik' aratubwira, At' i Betelehemu Habavukiy’ Umukiza : Ni We Mwami",
+        "Krisito!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uwo mwanya, haz' umutwe W'ingabo zo mw ijuru, Zigoswe n'umucyo mwinshi;",
+        "Zirasingiza ziti:"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Natwe turahaguruka,Tujy’ i Betelehemu, Dusangayo rwa Ruhinja, Ni ko",
+        "kurushima, ngo :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Bungeri turabashimye; Byose turabyumyise. Tujye kumusanga natwe,",
+        "Tumusingize  tuti :"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "number": 376,
+  "book": "Gushimisha",
+  "title": "Mwami Yesu, Nyir'ubuntu n'ibambe",
+  "slug": "mwami-yesu-nyirubuntu-nibambe",
+  "uuid": "ff9aafff-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/mwami-yesu-nyirubuntu-nibambe/ff9aafff-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami Yesu, Nyir'ubuntu n'ibambe,",
+        "Menyesh' icyakwemeje Wa Musaraba kera !",
+        "Ni kubwawe, mwana, Nemeye gutukwa",
+        "No guhemurwa ntyo, Nzir' ibyaha byawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwami Yesu, Nyir'ubuntu n'ibambe.",
+        "Dor' ibyaha nakoze ! Ndaje, nsaby' imbabazi.",
+        "inshyi nakubiswe,Mwana, n'imibyimba,",
+        "Ndetse n'imbereri, Ni byo bwishyu bwawe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami Yesu, Nyir'ubuntu n'ibambe,",
+        "Nyuhagiz' amaraso, Ntungane mu mutima!",
+        "Mwana, banshumise, Burya, mu rubavu !",
+        "Shyiramw ibyo byaha Ngo bisibangane !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mwami Yesu, Nyir'ubuntu n'ibambe,",
+        "Ubwo wambabariye, Noneho ndakwihaye.",
+        "umva,mwana nkunda,nagucunguriye",
+        "ng'ub'uwanjye rwose utagir'inenge!"
+      ]
+    }
+  ]
+}

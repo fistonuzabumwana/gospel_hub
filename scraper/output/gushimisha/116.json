@@ -1,0 +1,58 @@
+{
+  "number": 116,
+  "book": "Gushimisha",
+  "title": "Numva Yes' ampamagara",
+  "slug": "numva-yes-ampamagara",
+  "uuid": "ff93109a-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/numva-yes-ampamagara/ff93109a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Numva Yes' ampamagara;",
+        "Numva Yes' ampamagara;",
+        "Numva Yes' ampamagara,",
+        "Ati : Mwana, ngwino, nyoboka!"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nzamukurikira hose, (x3)",
+        "Jye na Yesu, tuzagendana"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tuzajyana mu miruho;",
+        "Tuzajyana mu makuba;",
+        "Tuzajyana no mu byago;",
+        "Tuzajyana : sinzamuvaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Tuzajyana mu rugendo",
+        "No mu mirimo yo mw isi",
+        "No mu ndwara no mu rupfu :",
+        "Jye nzajyana na We mu nzira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Azamp' amahoro menshi;",
+        "Azamp' imigisha myinsbi;",
+        "Azamp' urukundo rwinshi",
+        "!Nkurikir' Umwungeri Yesu !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "number": 367,
+  "book": "Gushimisha",
+  "title": "Yesu ndakwitabye",
+  "slug": "yesu-ndakwitabye",
+  "uuid": "ff9a804f-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/yesu-ndakwitabye/ff9a804f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu ndakwitabye,—Ntakwiriye : Imbabazi zawe—Zirantinyuye.Mfit' ibicumuro—Byuzuye muri jye;Niringiye gusa—Ko wampfiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyo nacumuye—Ndabyihannye. Kand' uko ndi kose—Simbiguhishe.Nuk'",
+        "unyuhagize—Amaraso yawe,Nyogemo, ntungane,—Ico rimvemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami, mbabarira;—Ndakwizeye. Nkwikubis' imbere;—Ndakwiringiye. Amaraso",
+        "yawe—Y'Umwana w'intama Anyoz' antembeho,—Anyeze dede !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nuko, ndanezerwa;—Mb’ amahoro; Njyana n'Uwo nkunda,—Ntaramubona;Itek'",
+        "uko ntewe—N'iby'isi n'ibyaha. Negamira Yesu,— Bikanesheka."
+      ]
+    }
+  ]
+}

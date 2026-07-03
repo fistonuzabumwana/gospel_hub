@@ -1,0 +1,44 @@
+{
+  "number": 363,
+  "book": "Gushimisha",
+  "title": "Jye mpisemo Yesu",
+  "slug": "jye-mpisemo-yesu",
+  "uuid": "ff9a6cb7-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/jye-mpisemo-yesu/ff9a6cb7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Jye mpisemo Yesu; murutish' iyi si yose;",
+        "Andutir' amafaranga cyangw' izahabu.Jye nkund'Uwabambwe, murutisha n'amatungo. Andutira n'amasambu n'amazu meza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Uwanyimika, nkab' Umwami w'ishyanga rinini rite, Nd’imbata y'icyaha",
+        "cyose,sinabikunda. Ahubwo niragije Yes' Umukunzl wanjye : Sinkyita ku blri mw",
+        "Isi: Yes' aranyuze !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Jye mpisemo Yes' Umucunguzi wanjy' unkunda; Andutira no gushimwa n'ab'isi",
+        "bose. Umv’ icyo nifuza :sinshaka kumenyekana; Njye nyobok’ Umwami Yesa iminsi yose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Andyohera cyane : nta buki buryoha nka We; Ni mwiza; n' uw'igikundiro cyinshi",
+        "cyane;Ahumura neza kurush' ibirabyo byose : Nabur' iki se, mmufite, kw",
+        "andangirije?"
+      ]
+    }
+  ]
+}

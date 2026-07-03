@@ -1,0 +1,34 @@
+{
+  "number": 308,
+  "book": "Gushimisha",
+  "title": "Mwami Yesu, turaje",
+  "slug": "mwami-yesu-turaje",
+  "uuid": "ff992626-0670-11ea-9a58-deadbe058832",
+  "category": "Icyumweru",
+  "url": "https://indirimbo.com/gushimisha/mwami-yesu-turaje/ff992626-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami Yesu, turaje Kumv' amategeko yawe; Ushyire mu mitima Ijambo ryawe riryoha. ibyo mw’ isi tubireke, Dutekerez' iby'ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta cyo twebwe twamenya, Iyi mitim' icyijimye,Itakiwe n'umucyo Uva mu Mwuka",
+        "w'Imana. Utwigishe kuyoboka, Ngo tujye dukora neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dore, Mwana w'Imana, Twebwe twese tugusaba Ng’ utweresh' imitima Umwuka",
+        "wawe w'ukuri; Tujye twumva, turirimbe :Tunezez' Imana yacu."
+      ]
+    }
+  ]
+}

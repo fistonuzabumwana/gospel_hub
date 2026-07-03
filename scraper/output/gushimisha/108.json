@@ -1,0 +1,57 @@
+{
+  "number": 108,
+  "book": "Gushimisha",
+  "title": "Njye nd' Umukristo",
+  "slug": "njye-nd-umukristo",
+  "uuid": "ff92dc3e-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/njye-nd-umukristo/ff92dc3e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Njye nd'umukristo: nzahora ndiwe mubintu byose,ngeze kugupfa.",
+        "Njye nd'umukristo:Mpora mbihamya nahw' igihugu cyose cyanseka.",
+        "Njye nd'umukristo wo mumutima kuk'ubu nsigaye nkunda kristo.",
+        "Icyatumy'apfa yazize njyewe",
+        "Nabuzwa n' iki kujya mukunda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Njye nd'umukristo umv'ubwo buntu",
+        "Narakijijwe nkurwa mubyaha.",
+        "Njye nd'umukristo naho naterwa n'ibyago nkaba no kurugamba.",
+        "Njye nd'umukristo nd'umutabazi muntambara ndasana n'ibyaha.",
+        "Mfite umugaba n'umwami yesu",
+        "Nituba hamwe nzahora nesha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Njye nd'umukristo nd'umwimukira ndakomeje murugendo rwanjye",
+        "Ibyino mwisi ndabihinyuye nsigaye nifuz' ibyo mw'ijuru.",
+        "Njye nd'umukristo gakondo yacu iri mwijuru kumana yacu.",
+        "Ntanzar'ibayo ntanimituho abaho bose baguwe neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Njye nd'umukristo icyo n'ikintu",
+        "Gihumuriz' umutima wanjye.",
+        "Kinyibagiza ibyago byose nkumva nduhuwe n'umwami yesu.",
+        "Njye nd'umukristo uko ndi kose.",
+        "Maze nintumirwa ngiye gupfa",
+        "Nzagir'ibyishimo bitavugwa",
+        "Nzabona ihirwe,ngeze mw'ijuru."
+      ]
+    }
+  ]
+}

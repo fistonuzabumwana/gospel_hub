@@ -1,0 +1,49 @@
+{
+  "number": 265,
+  "book": "Gushimisha",
+  "title": "Ubwo Yesu yar'agiye Gusig' abantu be",
+  "slug": "ubwo-yesu-yaragiye-gusig-abantu-be",
+  "uuid": "ff978eff-0670-11ea-9a58-deadbe058832",
+  "category": "Umwuka wera",
+  "url": "https://indirimbo.com/gushimisha/ubwo-yesu-yaragiye-gusig-abantu-be/ff978eff-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubwo Yesu yar'agiye Gusig' abantu be,",
+        "Ngw azamuk' ajye mw ijuru Ku Mana, Se,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yasezeranye kubaba Umwuka we Wera,",
+        "Ngw ahumuriz' ayobore Aba Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yiturira mu mutima Wumuntu wihannye; Asukamw urukundo rwe N'amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "ijwi rye ryongorerera imbere muri twe, Rikaduhendahenda ngo Dutinyuke."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "ibyiza dukora byose Ni W' ubidutera : Ni W' udutekereresha ibya Yesu.Mwuk'",
+        "ureban' imbabazi intege nke zacu, Udutungany' imitima, Uyibemo."
+      ]
+    }
+  ]
+}

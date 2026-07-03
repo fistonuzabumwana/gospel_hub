@@ -1,0 +1,42 @@
+{
+  "number": 119,
+  "book": "Gushimisha",
+  "title": "Yesu murutisha byose",
+  "slug": "yesu-murutisha-byose",
+  "uuid": "ff933132-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/yesu-murutisha-byose/ff933132-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu murutisha byose :Nta kindi nkifuza. Iminsi yos' aramfasha,Ngo nkomere, ne kugwa. Iyo ndushye njya kuti We;Nta wund' unduhura nkawe We. Yanyujuje... ibyishinno .. ! N'uwanjye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu murutisha byose :Amfasha naniwe. Itek’ amp' imigisha Mbur' uko nabivuga. Atang' izuba n'imvura Ngo nez' imyak' inkwiriye Angabira ...  byose nkena .. ! N'uwanjye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu murutisha byose : Nzajya mukorera Kukw ar' uwo kwiringirwa;",
+        "Sinzamuhemukira. Nkurikira Yesu Turi kumwe,nta cyo  nzaba. Arankunda .. !",
+        "Arandinda . N' uwanjye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yesu murutisha byose  N' inshuti yanjye pe Nta wundi nabona nka We;Nzahora",
+        "mwizigira Yampay' impan' ihebuje Ni yo bugingo bw'iteka. Aranyuze .. ! MusingizeN' uwanjye !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "number": 209,
+  "book": "Gushimisha",
+  "title": "Yemw’ abari kuri Yesu",
+  "slug": "yemw-abari-kuri-yesu",
+  "uuid": "ff95dd12-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/yemw-abari-kuri-yesu/ff95dd12-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemw’ abari kuri Yesu, Dukanguke, tube maso, Kuko wa Mwanzi, Satani,: Ajy’ atureba ku jisho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Satani ntiyigendera, Afit’ icy’ ahagazeho; Nuk ube maso, wiriride, Witwaz’ inkota y’Umwuka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "K'uhishira Satani se, Kandi witirirwa Yesu ? None witind’ umwiyake : Afit’ igihe",
+        "kigufi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yaciriw’ iteka ribi, Ashak’ abo yisasira. Bitum' ashishikarira Koshy’ abakunzi ba",
+        "Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ibya Yesu twabikijwe Twihute tubimenyeshe , ab'isi yose,bihane, bave mu",
+        "byaha,bakizwe."
+      ]
+    }
+  ]
+}

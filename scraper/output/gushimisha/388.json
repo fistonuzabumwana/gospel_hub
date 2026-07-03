@@ -1,0 +1,51 @@
+{
+  "number": 388,
+  "book": "Gushimisha",
+  "title": "Tunganir’Imana ubudasiba",
+  "slug": "tunganirimana-ubudasiba",
+  "uuid": "ff9af9ce-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/tunganirimana-ubudasiba/ff9af9ce-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tunganir’Imana ubudasiba",
+        "Jy’uhora uyisenga Kand’uyumvire",
+        "Jy’ubana n’abayo,jy’ufash iindushyi",
+        "Ntusibe na rimwe kuyikorera"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tunganir’Imana Jy’ubana nayo",
+        "Nutumbira Yesu Uzaba nka We",
+        "Bose bazamenya k’ubana na We",
+        "Barek’ubugome Bitabe Yesu"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Tunganir’Imana, ikuyobore",
+        "N’uterwa n’ibyago,jy’usanga Yesu",
+        "Ntiyirengagiza,umwiyambaza",
+        "Uyoboke Yesu ni we Shobuja"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tunganir’imana,tuz’umutima",
+        "Muby’ukora byose wihutiraho",
+        "Jya wumvir’Umwuka Gwiz’urukundo",
+        "Nta son’uzagira,n’ubona Yesu"
+      ]
+    }
+  ]
+}

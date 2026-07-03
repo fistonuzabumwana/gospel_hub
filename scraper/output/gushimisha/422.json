@@ -1,0 +1,71 @@
+{
+  "number": 422,
+  "book": "Gushimisha",
+  "title": "Yesu yageze mu Rwanda",
+  "slug": "yesu-yageze-mu-rwanda",
+  "uuid": "ff9bec21-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/yesu-yageze-mu-rwanda/ff9bec21-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu yageze mu Rwanda, N'i Burund' agerayo;",
+        "Yigerey' i Tanganyika N'i Bugande n'i Kongo.",
+        "Yadukuye mu bugoryi No mu mwijima mwinshi;",
+        "Tumuberey' umuryango : Tumusingize cyane !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Imana yishimye cyane Kubon' ibyo yaremye;",
+        "Byari biboneye byose, Nta n'inenge byarimo.",
+        "Maz' umunt' iramurema,Ab' umukurambere",
+        "W'inyamaswa n'amatungo; Byos' abyit' amazina."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Satan' ajy'arushy' abantu,Abah' ibishushanyo",
+        "No kubabuz' agaciro No kubarushya cyane.",
+        "Yabahugije Umuremyi,Ababwir' ibinyoma.",
+        "Abahemukir' iteka : Ni we mwanz' ukabije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "yemwe mwese abari mw isi. Abakuru n'abato,",
+        "Nimumenye yukw Imana Yer'ikang' ibyaha pe !",
+        "Ni cyo cyatumy' ic' Adamu,We na Hawa, mw Edeni,",
+        "Ikarimbura ya mirwa, Sodomu na Gomora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yemwe mwes' abari mw isi, Namw' abari mw ijuru,",
+        "Nimumeny' Imana yacu Yukw ar' inyambabazi!",
+        "Yatanze n'Umwana wayo,Aratubabarizwa;",
+        "Yagiriwe nabi cyane, Bamubamba ku Giti."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Yes' ashobor' imitima Y'abinangiye bose,",
+        "Uhereye mu Bulaya,Ukageza mw Afrika.",
+        "Nta mitima w' atabasha, Nubwo yaba nk'ibuye;",
+        "Nubw' irimw ibyaha byinshi Yos' arayishobora."
+      ]
+    }
+  ]
+}

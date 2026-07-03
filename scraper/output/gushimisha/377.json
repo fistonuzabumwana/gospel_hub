@@ -1,0 +1,58 @@
+{
+  "number": 377,
+  "book": "Gushimisha",
+  "title": "Reka twongere twishimire Rwa rukundo",
+  "slug": "reka-twongere-twishimire-rwa-rukundo",
+  "uuid": "ff9ab500-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/reka-twongere-twishimire-rwa-rukundo/ff9ab500-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Reka twongere twishimire Rwa rukundo",
+        "rudahinduka N'amaraso twahongerewe Ku Musarab' i Gologota."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Twogez' ibya Yesu Tumusingiz' iteka ryose! Twogez' Ibya Yesu, Kugez' ubwo",
+        "tuzaban' i we"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Muze mwese, mwitabe Yesu, Mwisuke mu maraso none, Mwakir' ubuntu",
+        "n'imbabazi, Mubiheshwe na za ntimba ze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Turi mw isi, tunezererwa Imigisha dusogongeye, Ariko ni tumwirebera, Tuzicwa",
+        "n'umunezero pe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tujye twambar' iryo zina rye, Tumukurikire mu nzira.Yes' azaza mu minsi mike;",
+        "Tuzajya kumusanganira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yesu, wez' imitima yacu, Twuzure na bagenzi bacu, Ni ho tuzaba twiteguye",
+        "Kugusanganir' ugarutse."
+      ]
+    }
+  ]
+}

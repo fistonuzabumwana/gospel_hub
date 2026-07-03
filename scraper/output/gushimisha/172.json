@@ -1,0 +1,41 @@
+{
+  "number": 172,
+  "book": "Gushimisha",
+  "title": "Mwemere kw Iman' ibaha umurokozi",
+  "slug": "mwemere-kw-iman-ibaha-umurokozi",
+  "uuid": "ff94f2c3-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/mwemere-kw-iman-ibaha-umurokozi/ff94f2c3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwemere kw Iman' ibaha umurokozi , witeguye kubakiza, ubakwiriye.mu ijuru  no mw isi yose, ni We nyir'ububasha;kand' ubony' uwo Mukiza Aranezerwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "azatuma muba beza, Mumere nka We; umukurikira wese  Ntabw' azaneshwa. Mu rugamba, ntabahana;Ahor' abarwanira; Kand' ubwe yemeye rwose Kubarengera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mukiz' ubwaw' ubabwira Iby'amahoro, Yuk' unyuz' inshuti zawe Mu nzira nziza.",
+        "Kand' ubwaw' urabarinda Kugira ngo be kugwa,Bave mu makuba yose Bayanesheje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mwam' ibyago ni bitera Cyangw' amakuba, Utwongerer' imbaraga,Tukwiringire.",
+        "Maze twizigiy' ibyawe,Dutumbire mw ijuru; Twishimire kuzabona Wa munsi mwiza."
+      ]
+    }
+  ]
+}

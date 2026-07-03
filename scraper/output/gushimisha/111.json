@@ -1,0 +1,52 @@
+{
+  "number": 111,
+  "book": "Gushimisha",
+  "title": "Izina ryiza rihebuje",
+  "slug": "izina-ryiza-rihebuje",
+  "uuid": "ff92ef78-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/izina-ryiza-rihebuje/ff92ef78-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Izina ryiza rihebuje Rinezeza amatwi yanjye  nzajya ndihimbaza ntahwema  ndivuge nirya Yesu."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu ndamukunda,  Yesu ndamukunda,  ndamukundira y’uko yabanje kunkunda atyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kok’iryo zina rinyibutsa uko yankunz’ akampfira Ababi nkanjy ’akabeza de Mur’ayo maraso ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Rimbwira Data wa twese ibyo yanshyinguriye mu ijuru naho nagenda mu mwijima rimurikira hose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Rinyeyurir’umubabaro, rihanagur’amarira rinyongorera  ngo mpumure ngo ntinyuke,nkomere."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Izina nkunda  n’irya Yesu Risumb’uko turivuga ntawo mw’ isi warisingiza  uburyo buhagije"
+      ]
+    }
+  ]
+}

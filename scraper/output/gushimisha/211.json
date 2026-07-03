@@ -1,0 +1,42 @@
+{
+  "number": 211,
+  "book": "Gushimisha",
+  "title": "Harihw indi si nziza",
+  "slug": "harihw-indi-si-nziza",
+  "uuid": "ff95ea09-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/harihw-indi-si-nziza/ff95ea09-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Harihw indi si nziza cyane Twasezeranijwe n'Imana;",
+        "Tuyitegereje twizeye Kuko Dat’ ayidufitiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Aheza....mu ijuru...tuzahurirayo bagenzi:(X2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Tuzaririmbira mw’ijuru Indirimbo z’abakijijwe.",
+        "Ntituzongera kubabara:Tuzashir’agahinda rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Data tuzamusingiza Ubwo buntu yatugiriye",
+        "N'urukundo rwe n'imbabazi N'imigish’ ajy'atwungukira."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "number": 223,
+  "book": "Gushimisha",
+  "title": "Rya Joro Ryatowe",
+  "slug": "rya-joro-ryatowe",
+  "uuid": "ff9633b5-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/rya-joro-ryatowe/ff9633b5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Rya Joro Ryatowe",
+        "Rubanda Ruryamye",
+        "Mariya Na Yozefu Basa",
+        "Bari Maso Barera Akana",
+        "Kaje Kava Mw’ijuru (X2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Rya Joro Ryatowe",
+        "Intumwa Z’Imana",
+        "Zamenyesheje Ba Bungeri",
+        "Icyabonetse Mw’isi Yacu",
+        "Y’uko Yesu Yavutse (X2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Rya Joro Ryatowe",
+        "Umucyo W’ukuri",
+        "Twese Waratumurikiye",
+        "Ng’udukure Mu Byaha Byacu",
+        "Kuko Yesu Yavutse (X2)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Rya Joro Ryatowe",
+        "Rituma Twishima",
+        "Dufatanye N’abo Mw’ijuru",
+        "Kuririmbir’akana Yesu Tuti:",
+        "Shimwa,Mukiza. (X2)"
+      ]
+    }
+  ]
+}

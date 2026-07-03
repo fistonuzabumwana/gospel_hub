@@ -1,0 +1,33 @@
+{
+  "number": 320,
+  "book": "Gushimisha",
+  "title": "Mwa bagore mwe b'i Rwanda.",
+  "slug": "mwa-bagore-mwe-bi-rwanda",
+  "uuid": "ff997739-0670-11ea-9a58-deadbe058832",
+  "category": "Itorero",
+  "url": "https://indirimbo.com/gushimisha/mwa-bagore-mwe-bi-rwanda/ff997739-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwa bagore mwe b'i Rwanda. Muze, mwitabe Yesu I Dor' imirimo ni myinshi:Tujye kumukorera. Dutabare bene wacu :Ubu bararimbuka.Mwa bagore mwe b'i Rwanda. Yes' arabashoboza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwa bagore mwe b’I Rwanda,None nimutebuke! Imibabaro n'indwara Biragwiriye mw isi. Nimulongur' imitima, Umukiz' ageremo. Mwa bagore mwe b'i Rwanda, Mureke gupfapfana !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwa bagore mwe b'i Rwanda, Mw isi har' umwijima. Nimujyan’",
+        "amatabaza,Mwakire bene wanyu. Abagore n'abakobwa Baheze mu mwijima. Mwa bagore mwe b'i Rwanda, Mubamurikir' ubu !"
+      ]
+    }
+  ]
+}

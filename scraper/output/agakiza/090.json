@@ -1,0 +1,65 @@
+{
+  "number": 90,
+  "book": "Agakiza",
+  "title": "Ai Mana y'ukuri, komeza ku nyobora",
+  "slug": "ai-mana-yukuri-komeza-ku-nyobora",
+  "uuid": "ff9e574a-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ai-mana-yukuri-komeza-ku-nyobora/ff9e574a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ai Mana y'ukuri, komeza kunyobora ,",
+        "Uranshishe mu nzira yo gukora ibyo ushaka.",
+        "Mwami kubaho ntagufite Bintera ubwoba n'amaganya",
+        "Ndetse byabasha ku ngeza no mu rupfu vuba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyiza mbona ni ibi: Kwizera umwami Yesu.",
+        "No guhora ngendera mu nzira ye ntunganye.",
+        "Na we yemeye kujya andinda,",
+        "Ndetse no ku nyobora neza.",
+        "Ampesha no kwinjira vuba mu mahoro ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubu urugendo mfite ni urwo kujya mu ijuru.",
+        "Umukiza niyo ari nanjye nkwiye kujyayo.",
+        "Kandi umunsi nzaba ngezeyo",
+        "Nzamuhimba zanya ibyishimo",
+        "Nzanezezwa nuko ari we wanguze amaraso."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Muri iyi si huzuye umuruho n'amahane",
+        "Icyo nkeneye cyose simperako nkibona.",
+        "Ariko ku munsi mu kuru",
+        "Ubwo nzabona umucunguzi",
+        "Niringiye kuzabona ingororano yanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mu ijuru sinzabona abanzi banjye ukundi,",
+        "Nta n'icyo nzahabura mu ijuru ry'amahoro.",
+        "Nzashima Imana mvuza impundu",
+        "Nti Haleluya, haleluya!",
+        "Nzarambura amaboko mpimbaze umwami Yesu."
+      ]
+    }
+  ]
+}

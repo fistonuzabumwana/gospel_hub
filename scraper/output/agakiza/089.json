@@ -1,0 +1,66 @@
+{
+  "number": 89,
+  "book": "Agakiza",
+  "title": "Icyubahiro n'icyawe",
+  "slug": "icyubahiro-nicyawe",
+  "uuid": "ff9e504f-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/icyubahiro-nicyawe/ff9e504f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Icyubahiro n'icyawe, Yesu, Ni ko ndirimbir' Imana."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Shimwa... ur' uwo gushimwa, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Gusenga kwanjye kukugereho, Man' ur' amahoro yanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Sinsaba mvugavuga nk'inyoni, isakuriza mw ishyamba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Umutima wanjy' urakangutse Kuririmbir' Ihoraho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Abagir' umwete wo gusenga, Ni bo banesha Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Abera bose muhaguruke, Turi rimbir' Umukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Tubabajwe n'ababyeyi bacu Bagikorera Satani.Yesu... washobora kubakiza."
+      ]
+    }
+  ]
+}

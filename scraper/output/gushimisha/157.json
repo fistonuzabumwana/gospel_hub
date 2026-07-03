@@ -1,0 +1,64 @@
+{
+  "number": 157,
+  "book": "Gushimisha",
+  "title": "Mukiz' umpe kumenya",
+  "slug": "mukiz-umpe-kumenya",
+  "uuid": "ff946222-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/mukiz-umpe-kumenya/ff946222-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mukiz' umpe kumenya ,Naho kab' agace, K'urukundo rw'igitangaza Rwatumy' udupfira."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umenyeshe, Mukiza, Uko wababajwe, Ubw' Uwera wang' ibyaha pe",
+        "Wishyiragahw ibyanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umenyesh' ibyo, Yesu, Kuko bikomeye, Bikarut'uko byashobora Kumenywa",
+        "n'umuntu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbes' imbereri, Yesu, ni zo zakubambye ? Oya si zo, ni za mbabazi Wangiriy'",
+        "ubwanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ntangajwe na rwa rupfu Wamfiriye, Yesu, Ko rwashoboye kunshungura Ngo",
+        "nkire, Mundane,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ni rwo runkiz' ibyaha Bose bambonaho; Si byo byonyine: runkuramlo N'ibinyihishemo,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mukiza, nshenjagura; Men' ibinangiwe! Unyemeze yuk' unesheje : Unyimemo,",
+        "Mwami."
+      ]
+    }
+  ]
+}

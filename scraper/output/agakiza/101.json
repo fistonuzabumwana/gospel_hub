@@ -1,0 +1,50 @@
+{
+  "number": 101,
+  "book": "Agakiza",
+  "title": "Habayeh' umusozi",
+  "slug": "habayeh-umusozi",
+  "uuid": "ff9e9fb9-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/habayeh-umusozi/ff9e9fb9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Habayeh' umusozi warih' umusaraba w'umubabar' utey' isoni.",
+        "Ariko ndawukunda kuko Yesu yatanze",
+        "Ubugingo bwe ngo mb' ukijijwe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nkund' uwo musaraba wa Yesu Uvamw imbaraga zo kunesha. Nza¬hora ngundir'umusaraba Kugez' ubwo nzambikwa rya kamba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand' uwo musaraba tubonahw amaraso",
+        "Dukomeze tuwuririmbe. Yes' Umwana w'lmana, yapfuy' urwo baseka, Aduhesh' agakiza k'lmana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kand' uwo Musaraba ni w' unku ndisha",
+        "Yesu Nubw' usuzugurwa na benshi.  Kand' Umwana w'intama yahets' umusaraba Awujyana ha mw' i Gologota."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' uwo musaraba nubwo wab' uw' isoni,",
+        "Nzakomeza kuwuhimba za, Kugez' ubw' Umukiza azanjya na mw ijuru Muri bwa bwami bwe buhoraho."
+      ]
+    }
+  ]
+}

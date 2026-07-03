@@ -1,0 +1,51 @@
+{
+  "number": 18,
+  "book": "Gushimisha",
+  "title": "Mukiza. Mwungeri mwiza",
+  "slug": "mukiza-mwungeri-mwiza",
+  "uuid": "ff903a96-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/mukiza-mwungeri-mwiza/ff903a96-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "b.",
+        "Mukiza. Mwungeri mwiza,Dushorez' urukundo.",
+        "Ikiganza cyawe cyiza Kitugaburir'",
+        "ubu.uhimbazwe, Mucunguzi,"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mukiza turi  abawe. Twebwe tur' abaw' iteka  Kand' uhimbazwe, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "No kubw' imbabazi zawe Utwuhagir' ibyaha; No kubw' imbaraga zawe Wez'",
+        "imitima yacu,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Turashaka kukumvira Mu mategeko yawe; Nuko kubw' ibyo, dushaka Kubon'",
+        "imyizerere."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mukiza, Mwungeri mwiza.Turagukurikira. Utugwiriz' imbaraga Kand  uiy'",
+        "uturamira."
+      ]
+    }
+  ]
+}

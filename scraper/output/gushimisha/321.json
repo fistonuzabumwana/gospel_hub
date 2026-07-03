@@ -1,0 +1,37 @@
+{
+  "number": 321,
+  "book": "Gushimisha",
+  "title": "Mana Data wo mw ijuru",
+  "slug": "mana-data-wo-mw-ijuru",
+  "uuid": "ff997bec-0670-11ea-9a58-deadbe058832",
+  "category": "Ubukwe",
+  "url": "https://indirimbo.com/gushimisha/mana-data-wo-mw-ijuru/ff997bec-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana Data wo mw ijuru , Washyingiriye Adamu Na Haw' i Paradiso, Umaze kubateranya, Ubaha n'umugish'",
+        "uti: Mub' amahoro masa. Muzabyare,—Muzaheke, Muzagwire,—Mwuzuz' isi,",
+        "Muyitegeke n'ibyayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mujye mwitegeka neza, Mufashanye, mukundane,Murengerane mwembi. Mw",
+        "ihlrwe no mu makuba Mu bworo no mu bukire,Muzahimbaz' Imana. Mana Data,— Ubarinde, Ngo bagume—Kuri Wowe, Mwami, jy'ubiyegereza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wa mukwe n'umugeni mwe, Nimugir'umutim'umwe,Mubane mu mahoro. Nuk'",
+        "Umucunguzi wanyu Azabakomez' iteka,Arind' urugo rwanyu, Abageze—Mw ijur' i",
+        "We, Ngo mutahe—Na bwa bukwe Bw'Umwana w'intama, Yesu."
+      ]
+    }
+  ]
+}

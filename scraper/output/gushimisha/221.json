@@ -1,0 +1,49 @@
+{
+  "number": 221,
+  "book": "Gushimisha",
+  "title": "Bana, mw ijur' abiringiy' Umucunguzi",
+  "slug": "bana-mw-ijur-abiringiy-umucunguzi",
+  "uuid": "ff962550-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/bana-mw-ijur-abiringiy-umucunguzi/ff962550-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Bana, mw ijur' abiringiy' Umucunguzi Tuzaherway' ibintu byinshi.",
+        "Azaduh' amakamba y'ubwiza bwinshi, Kand' atwambik' imyenda yera."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Bana, tuzahabwa, tuzahabwa byinshi, Tuzagabirwa byinshi mw ijuru",
+        "Tuzahoran' ishimwe, tunezerewe, Ni twizer' Umukiza Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tuzagendagenda mu muhanda wakozwe Mw izahabu n' ifeza nyinshi; Kandi Yesu ni We zuba ryaho ryiza : Nta n'ijoro riba mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Twe n'abera bose tuzacurang' inanga, Turirimbir' Umwami Yesu; Tuhanywere",
+        "n'amazi y'Ur'uzi rwiza, Dusiz' urupfu n'amakuba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Muze mwese, tujyan' iyi nzir' ifunganye, Mumuhay' imitima yanyu. Nimuyoboke",
+        "mwes' Uwabapfiriye, Abagezey' abanezeze."
+      ]
+    }
+  ]
+}

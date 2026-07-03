@@ -1,0 +1,50 @@
+{
+  "number": 104,
+  "book": "Gushimisha",
+  "title": "Imbabazi z'Umukiza",
+  "slug": "imbabazi-zumukiza",
+  "uuid": "ff92c283-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/imbabazi-zumukiza/ff92c283-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Imbabazi z'Umukiza",
+        "Zamuzanye kunshungura;",
+        "Natabitswe n'ibyaha byanjye,",
+        "Ankuramw arankiza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nari mw isayo y'ibyaha, Aramfat' aransayura. Nari mu mwijim' ukomeye  Non'",
+        "aramurikira,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Natinze cyane kwitaba Yesu wampamagaraga; Nyuma, niringiy' ijambo rye,Yes’ ankurahw ibyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yaje kunkiz' agifite Inkovu nyinshi z'amahwa N'iz'icumu n'iz'imbereri.Mpimbaz'",
+        "urukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "None mpora mu mahoro; Umutima ni muzima; Arikw icyatumy’ anshungura,Akankiza, sinkizi"
+      ]
+    }
+  ]
+}

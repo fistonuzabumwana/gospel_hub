@@ -1,0 +1,49 @@
+{
+  "number": 59,
+  "book": "Gushimisha",
+  "title": "Nimuze, mwa ndushyi mwe",
+  "slug": "nimuze-mwa-ndushyi-mwe",
+  "uuid": "ff916b01-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/nimuze-mwa-ndushyi-mwe/ff916b01-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimuze, mwa ndushyi mwe mwese,Muremerewe, murembye. Yes' aje kubasanganira N'ubuntu bwe n'urukundo Mwese, nimuze ! Muze, mwese ! Mumwitab' arabifuza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nubw’ ur' umunyabyaha byinshi, Humura ye ! N' uw'ibambe ! I by' agushakaho nibike :  N' ukwihan' ukamwizera. Wa munyabyaha we wihebye, Arakogesh' amaraso."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umwana wera w'Uwiteka Yubamiy' i Getsemane, Baramubamb' ari tw' azira.",
+        "Nukw ati : Birarangiye ! Utegerej' iki se, kandi ? Ibyo ko biguhagije !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dore, yazamutse mw ijuru,Atsinz' urupfu n'ibyaha ! Aratuvugira kuri Se,",
+        "Agaragaz' amaraso.Na S' akareb' izo nkovu ze, Nihanny' akambabarira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nukw abakijijwe na Yesu Tuzamusanganirayo ! Abo mw isi n'abo mw ijuru Ni ko",
+        "kuririmba, tuti : Turagushimye ! Haleluya ! Ur' Umukiza n'Umwami !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "number": 70,
+  "book": "Gushimisha",
+  "title": "Nimuze mwese kumv' inkuru nziza",
+  "slug": "nimuze-mwese-kumv-inkuru-nziza",
+  "uuid": "ff91be9e-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/nimuze-mwese-kumv-inkuru-nziza/ff91be9e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimuze mwese kumv' inkuru nziza Z'agakiza kabwirizwa none. Yesu yabasanze :Arabashaka; Namwe muh' Umwami Imitima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwitinyishwa n'uko mufit' ibyaha,Ngw azabang' abater' umugongo; Ntabwo",
+        "yabigira :Yasezeranye Kwikir' uwihannye Umwizera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni W' ubwe wizanye gukiz' abantu;Yavuye ku Witek' aza mw isi. Ngo tubon'",
+        "ijuru,Yaradukunze; Yaratubambiwe;Yaravumwe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Abwira bos' ati : Jye nd' Ubugingo,Kand' unyizera wese ntazapfa. Nzamuha",
+        "kubaho Mu bwami bwanjye; N'urupfu nzamuha Kurunesha."
+      ]
+    }
+  ]
+}

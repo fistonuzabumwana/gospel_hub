@@ -1,0 +1,58 @@
+{
+  "number": 42,
+  "book": "Agakiza",
+  "title": "Mfit' amahor' i Gologota",
+  "slug": "mfit-amahor-i-gologota",
+  "uuid": "ff9d37f9-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mfit-amahor-i-gologota/ff9d37f9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mfit' amahor' i Gologota,.Ni ho Yesu yanyitangiye. Ni naho mfit' ubuhungiro, Kwa Yesu wabanje kunkunda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Simparanir' ubwiza bw'isi, Kukw isi yuzuyemw ibyaha. Ahubwo mfitiy' agakiza,",
+        "Mu nkovu za Yesu Mukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni we wadutuy' imitwaro, Yaciy' imigozi y'ibyaha. Nejejwe n'agakiza mfite,",
+        "Kavuye mw ijambo ry' Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ijambo ry'Iman' Ihoraho, Rituber' ibyo kurya byera. Ni ryo mbaraga yo",
+        "gufasha, Umukristo mu rugendo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nabay' urusengero rwera, Ntuwe mo n'Umwuka w'Imana. Nsigaye nyoborwa na",
+        "Yesu, Mu nzira y'isezerano rye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Nawe munyabyaha, tebuka.Kwa Yesu Mukiza wa bose. Akurambu riy' amaboko",
+        "Y'Urukundo, yo ku gufasha."
+      ]
+    }
+  ]
+}

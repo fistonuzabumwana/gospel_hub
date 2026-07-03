@@ -1,0 +1,57 @@
+{
+  "number": 155,
+  "book": "Gushimisha",
+  "title": "Yesu, nguhagaz' imbere",
+  "slug": "yesu-nguhagaz-imbere",
+  "uuid": "ff94508a-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/yesu-nguhagaz-imbere/ff94508a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, nguhagaz' imbere, Nibaza binyobeye Icyakunkundishij' utyo,Nd' uwatsinzwe, mpindanye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Biranyobeye, birantangaje :Nzajya mbitangarira !biranyobeye, birantangaje,",
+        "Yuko wankunz' utyo, Yesu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wasenze kubwanjy' utya, ngo :Ntibib' uko jye nshaka. N' ibyaha byanjye",
+        "byakwishe, Ntabw' ari za nguma nsa !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Birya byuya by'amaraso,Ntangar' iyo mbyibutse: tbyo byabaye kubwanjye Rya",
+        "jor' i Getsemane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Wishyizehw ibyaha byanjye, Bihinduka nk'ibyawe; Wehoho nta cyo wakoze : Ni",
+        "jye bakujijije!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Wabambwe mu cyimbo cyanjye, Ng' unkize kurimbuka, Ahubwo nzajye mw ijuru,",
+        "Ngushim' ubudasiba"
+      ]
+    }
+  ]
+}

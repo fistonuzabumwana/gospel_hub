@@ -1,0 +1,54 @@
+{
+  "number": 82,
+  "book": "Agakiza",
+  "title": "Tuzajyanwa kuri wa munsi",
+  "slug": "tuzajyanwa-kuri-wa-munsi",
+  "uuid": "ff9dfc9d-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/tuzajyanwa-kuri-wa-munsi/ff9dfc9d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tuzajyanwa kuri wa munsi",
+        "Ubw' impand' izab' ivuze. Tuzateranir' imbere ye, Dushimir' Umwami Yesu.",
+        "Hazamanuka ba maraika Bazaza kurimbur' abantu, Abanze kwakir' Umukiza,",
+        "Bakamurutish' iby' iyi si."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Hazabaho kurira gusa Ndetse no guhekeny' amenyo. Igihe cyo kwizera Yesu",
+        "Kizaba gishize rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abafit' abagore benshi Icyo gihe bazahanwa. Abarozi n'abashikisha Ndetse",
+        "n'abapfumu bose,Bazakorwa n'isoni rwose Imbere y'Umukiza Yesu. Bazashak' aho bahungira Nyamara ntibazahabona."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abatunz' iby' iyi si gusa Bazashyirwa mu rubanza. Ubutunzi bwabo bw'iyi si",
+        "Buzahinduk' umurama. Nta cyo bazabasha kubona Cyabakiz' ibyaha bakoze.",
+        "Bazafatwa kur' uwo munsi Batabwe muri wa muriro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Natwe Bakristo ba Mesia Nta teka tuzacirwaho. Tuzaba tujya nywe mw ijuru,",
+        "Tuzasangira na Yesu. Azatwambik' imyenda yera N'ingofero nziza cyane. Inkota",
+        "z'abamaraika Zizirukan' abanya byaha."
+      ]
+    }
+  ]
+}

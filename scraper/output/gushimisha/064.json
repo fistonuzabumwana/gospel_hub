@@ -1,0 +1,40 @@
+{
+  "number": 64,
+  "book": "Gushimisha",
+  "title": "Muze ku Mwami w'ubugingo",
+  "slug": "muze-ku-mwami-wubugingo",
+  "uuid": "ff9193e4-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/muze-ku-mwami-wubugingo/ff9193e4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Muze ku Mwami w'ubugingo Bangizi, musange Yesu.",
+        "Ni We wenyin' uzabakira; Azabah' Umwuka wera."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "umukunz' akihan' ibyaka Ntabwo yanga kumwakira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abamwizera mw isi yose Abatabaz’ imbaraga;",
+        "Urukundo rwe rutangaza Ruboneka hose hose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kirisito, Mukiza rnwiza,Tungany' imitima yacu; Duhe gukiranuka rwose N'amahoro no kwizera."
+      ]
+    }
+  ]
+}

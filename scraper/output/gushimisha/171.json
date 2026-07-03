@@ -1,0 +1,41 @@
+{
+  "number": 171,
+  "book": "Gushimisha",
+  "title": "Amahoro Yesu—Ah' abantu be",
+  "slug": "amahoro-yesu-ah-abantu-be",
+  "uuid": "ff94c0f7-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/amahoro-yesu-ah-abantu-be/ff94c0f7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Amahoro Yesu—Ah' abantu be Ntagir' akagero,—Ntarondoreka;",
+        "Ajy'ahumuriza—Abayafite; N' utayata, ntabwo—Wayakurwaho."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Wiringir' Imana :—Uyiringira  Ntabur' amahoro—Mez' adashira"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abo Yes' arindish’—Amaboko ye Nta mubish' ubasha—Kubageraho;",
+        "Nta magany' abasha—Guhagarika Imitim' irindwa—N'Umucunguzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibyishimo byose—N'ibyago byacu Biva mu rukundo—Rw'Umwam' Imana",
+        "We gushidikanya;—Jy'uyiringira; Ntiyahemukira—Uyizer' atyo."
+      ]
+    }
+  ]
+}

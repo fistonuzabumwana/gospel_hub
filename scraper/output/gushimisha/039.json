@@ -1,0 +1,54 @@
+{
+  "number": 39,
+  "book": "Gushimisha",
+  "title": "Ngwino, mutima wanjye",
+  "slug": "ngwino-mutima-wanjye",
+  "uuid": "ff90dae5-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ngwino-mutima-wanjye/ff90dae5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngwino, mutima wanjye, Witab' Umwami wawe ! Winjir' umuhakweho, Kukw akund' abaz' i We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kw ar’ Umwam' ukomeyc, Wamusaba bike, se ? Ubushobozi n' ubwe, N'ubuntu n'imbabazi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbanze nsab' imbabazi, Kuko nakugomeye. Umutwaro w'ibyaha, Dor' ubury' undembeje !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Amaraso wavuye, Uri ku musaratia, Yoz,'abakiranirwa, Nukw anyoz' ambpneze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Unduhure nonaha, Ndakwihay' unturemo! Wanshunguj' amaraso, Nukw unyitegekere!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mu rugendo rw'iyi si, Mb' intumwa ya Krisito, Ahw ashak' antumeyo, Nkuz' izina",
+        "rya Yesu !"
+      ]
+    }
+  ]
+}

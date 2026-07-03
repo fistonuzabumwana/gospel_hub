@@ -1,0 +1,35 @@
+{
+  "number": 177,
+  "book": "Gushimisha",
+  "title": "Mwen' Imana yizerwa",
+  "slug": "mwen-imana-yizerwa",
+  "uuid": "ff9514ab-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/mwen-imana-yizerwa/ff9514ab-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwen' Imana yizerwa ,Waterwa n'ubwoba ? Mbega, ntiwatorewe Umwam' ugukunda ? Ng' umeny' Uwagutoye,Uce mu nzira ye, Unyuz' ikirenge mu cye Kukw ari we Shobuja."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "N’ ubabara, wibwire Kw akubabarira; Niihagir' ugutuka, Umubabarire; Wizigir'",
+        "ugukunda :Shikama kigabo,Ng' uzatsind' abanzi bawe, Uberek' urukundo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "N' ubon' ibiruhanya,Ukumva k’ utsinzwe, We kugir' agahinda, Meny' ibigufasha;",
+        "Ngibi : senga, wizere;Komeza gusenga; Maz' ureb' Umusaraba W'Umwana",
+        "w'Uwiteka."
+      ]
+    }
+  ]
+}

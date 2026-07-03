@@ -1,0 +1,52 @@
+{
+  "number": 416,
+  "book": "Gushimisha",
+  "title": "Ibikomeye biranesheka",
+  "slug": "ibikomeye-biranesheka",
+  "uuid": "ff9bc92a-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/ibikomeye-biranesheka/ff9bc92a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "chorus",
+      "lines": [
+        "Gumy' ushim' ushim' ushim' Ushim' Umukiza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ibikomeye biranesheka, Utaretse gushima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Na Satani ntszagushobora,Utaretse gushima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Amakuba ntiyakwihebesha,Utaretse gushima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uraryoherwa n'ibyo mw ijuru,Utaretse gushima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yes’ uramwireber' unezerwe, Utaretse gushima."
+      ]
+    }
+  ]
+}

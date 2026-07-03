@@ -1,0 +1,71 @@
+{
+  "number": 383,
+  "book": "Gushimisha",
+  "title": "Icyamp' ukanyikorerera Amaganya",
+  "slug": "icyamp-ukanyikorerera-amaganya",
+  "uuid": "ff9ad733-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/icyamp-ukanyikorerera-amaganya/ff9ad733-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Icyamp' ukanyikorerera",
+        "Amaganya yanjye yose, Yesu,",
+        "Ngaturiz' Uwiteka,",
+        "Nkamenya yukw ibyanjye byose",
+        "Ubitegekesh'ubugwaneza",
+        "N'ubwenge burutaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kenshi ntiny' ibiribubeho,",
+        "Ngahagarik' umutima, Mwami,",
+        "Ngize kwizera guke.",
+        "Icyampa nkarorera rwose",
+        "Kwishingikiriza ku by'iyi si,",
+        "Nkakwizera wenyine."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nabuzwa n'iki kuyisaba,",
+        "Nkajya nyisunga, nkayikoreza",
+        "Ayo maganya yose,",
+        "Ngahumurizwa no kumenya",
+        "Yuko Dat' ugaburir' inyoni",
+        "Azanyumvira nanjye ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ntitwizer' uko bikwiriye;",
+        "Umutim' uhagaz' ujugunya",
+        "Rwos' amahoro yawo.",
+        "Arikw inyoni n'uburabyo",
+        "Binyigishak' umuns' ukwiriwe",
+        "N'ibyawo byago gusa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Umpe kumeny' ibyo nigishwa",
+        "N'uburabyo n'inyoni, Mukiza,",
+        "Nkwishingikirizeho !",
+        "Ngez' ah' ushaka, Mushorera,",
+        "Nuko menye, nkiri mu makuba,",
+        "Amahor' adashira."
+      ]
+    }
+  ]
+}

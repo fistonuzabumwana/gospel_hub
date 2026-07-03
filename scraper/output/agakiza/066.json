@@ -1,0 +1,66 @@
+{
+  "number": 66,
+  "book": "Agakiza",
+  "title": "Nageze ku Mwami Yesu",
+  "slug": "nageze-ku-mwami-yesu",
+  "uuid": "ff9dacb6-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nageze-ku-mwami-yesu/ff9dacb6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nageze ku Mwami Yesu",
+        "None mu mutima wanjye Harimw izuba ry'ubuntu Rimurik' iminsi yose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umutim' uraririmba Yuko nabohowe rwose. Negerey' Umwami Yesu Ndirimban'",
+        "umunezero."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umuriri w'ubuntu bwe Uri mu mutima wanjye. Agakiza ke muri jye Ni nk'umuraba mu mazi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Non' Umwami Yesu Kristo Na muberey' ubuturo! Ndetse nahaw' Umufasha",
+        "Umwuka w'isezerano!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ubw' Umwuk' azabazaho Muza herako mumenya, Yuko nicaranye namwe",
+        "Byavuzwe n'Umwami Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "N'ukuri yatugezemo Asigay' aba na na twe Ngwino wih' Imana Yera Yoz' uwo",
+        "mutima wawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Ubwo Yes' azagaruka, Aje mu bwiza bw'ijuru. Nzahindurwa nse na Yesu",
+        "Ndusheho gushim' Imana!"
+      ]
+    }
+  ]
+}

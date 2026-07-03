@@ -1,0 +1,40 @@
+{
+  "number": 109,
+  "book": "Gushimisha",
+  "title": "nyuzwe n'ubucuti bwo mw ijuru",
+  "slug": "nyuzwe-nubucuti-bwo-mw-ijuru",
+  "uuid": "ff92e2aa-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nyuzwe-nubucuti-bwo-mw-ijuru/ff92e2aa-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nyuzwe n'ubucuti bwo mw ijuru ,Nisunz' Umukiz' ukomeye. Ngiz' ihirwe, mbony' umunezero : Nisunz' Umukiz'ukomeye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Niseguye amaboko yawe,Yesu; Singitinya: nisunz' Umukiz' ukomeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nezezwa n'uko Yes' anyobora :Nisunz' Umukiz' ukomeye. Sinkiyoberw' inzira",
+        "nyuramo : Nisunz' Umukiz' ukomeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umutima wanjye ntuhagaze :Nisunz' Umukiz' ukomeye. Ngubwa neza ndi kumwe",
+        "na Yesu : Nisunz' Umukiz' ukomeye."
+      ]
+    }
+  ]
+}

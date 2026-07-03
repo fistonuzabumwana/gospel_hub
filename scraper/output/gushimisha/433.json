@@ -1,0 +1,73 @@
+{
+  "number": 433,
+  "book": "Gushimisha",
+  "title": "Yemw' abasubir' iyo muva",
+  "slug": "yemw-abasubir-iyo-muva",
+  "uuid": "ff9c26ba-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/yemw-abasubir-iyo-muva/ff9c26ba-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemw' abasubir' iyo muva, I kuzimu kwa Nyamutezi, Mukarekur' Umusaraba, Ko muneshejwe ?"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' ubw' azagaruka, Aje kwim' ingoma ve, Tuzamurebesh' amas' as' ate,",
+        "Dufit' ibyaha?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ubw' utihanira gukizwa, Ukaturir' abantu gusa,Ngo bakumenye k' ukijijwe,",
+        "Urushywa n'iki ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubw' ur' umuntu w'umwigisha, Wigish' abant' iby'Uwiteka, Ntubageze ku",
+        "Musaraba, Wigish' iki se ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ubw' ur' umunyangeso nziza, Ushyitsa byose by'Itorero, Ntusohore ku",
+        "Musaraba, Wizey' iki se ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ubw' ur' umunyabwenge bwinshi, Byos' uzi no kubigenzura,K' uyobew'",
+        "iby'Umusaraba, Bikuvuy' iki ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Ubw' ur' umunyesoni nyinshi, Utinya kwihana ng' ukizwe, Wibwira kw ar'",
+        "uguhemuka, Uzageza he ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Ngik' icyambu cy'amaraso ye, Wirohemo, wa mutindi we. Hi kub' agace",
+        "wasigaza Katuhagiwe."
+      ]
+    }
+  ]
+}

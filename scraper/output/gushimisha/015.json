@@ -1,0 +1,74 @@
+{
+  "number": 15,
+  "book": "Gushimisha",
+  "title": "Nimushim' izina ryiza",
+  "slug": "nimushim-izina-ryiza",
+  "uuid": "ff901e6d-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/nimushim-izina-ryiza/ff901e6d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimushim' izina ryiza",
+        "ry'Uwiteka Rurema;",
+        "N'icyubahiro cye cyinshi",
+        "nimucyamamaze hose hose!",
+        "Nimuvug' urukundo rwe,",
+        "bose barwumve,",
+        "Abo ku mpera y'isi",
+        "bamenye kw akiza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "urukundo rw'Uwiteka ruratemba nk'uruzi kand'ubuntu bwe n'ibambe ntabwo",
+        "bizashir'iteka ryose"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nimushim' Umwami Yesu :",
+        "ni we Mwana w'Intama",
+        "Wapfiriy’ abanyabyaha,",
+        "hanyum' agahambwa mu gituro!",
+        "Maze, ku wa gatatu,",
+        "yaneshej' urupfu,",
+        "Arazuk'arazamuka,",
+        "yima mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kand' umuns' uzaza vuba,",
+        "Yes' agaruke mw isi",
+        "Kwim' ingoma ye n'ubwami",
+        "mu cyubahiro n'ubwiza bwinshi,",
+        "Isi n'ijuru byombi",
+        "binezerwe hamwe",
+        "N'inyamaswa n'inyoni",
+        "n'ibyaremwe byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Icyo gihe cy'ibirori,",
+        "tuzarimba twishimye,",
+        "Twiteguye nk'umugeni,",
+        "uko arimba yitegur' umukwe;",
+        "Kukw Umwam' azamanuka",
+        "ngw az' adusange,T",
+        "ub' imbata ze zera",
+        "zinezerw' iteka."
+      ]
+    }
+  ]
+}

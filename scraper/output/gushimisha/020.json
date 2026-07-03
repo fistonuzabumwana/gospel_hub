@@ -1,0 +1,52 @@
+{
+  "number": 20,
+  "book": "Gushimisha",
+  "title": "Mbony' Umukiza mwiza",
+  "slug": "mbony-umukiza-mwiza",
+  "uuid": "ff904a13-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/mbony-umukiza-mwiza/ff904a13-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbony' Umukiza  mwiza,niYesu Krisito,",
+        "Ni W' urut' inshuti zose zo mw isi.",
+        "Igikundiro cye cyinshi ni cyo cyanyemeje",
+        "Kumusanga  ngw anyuh'agir' ankize!",
+        "Anyurura mbabaye, ankiz' amakuba; Amaganya yanjy' ajy'ayanyakira, Yaka nk'inyenyer' iteka; n'uw'igikundiro;",
+        "Ni W' urut' inshuti zose zo mw isi"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Anyurura mbabaye, ankiz amakuba, Amaganya yanjy' ajy' ayanyakira; Yaka nk'inyenyer' iteka: n' uw'igikundiro;Ni w' urut' inshuti zose zo mw isi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Intimba zanjye zose, yarazikoreye;",
+        "Uko ngeragejw' andinda wa Mubi.",
+        "Ibyantwazag' igitugu, yarabimbatuye :",
+        "N'igihome cyanjye, njya mwihishamo",
+        "Naterwa na Satani, ngahinwa n'inshuti, Yes' azantabar' angeze mw ijuru ! Yaka",
+        "nk'inyenyer' iteka; n' uw'igikundiro;",
+        "Ni W urut’'inshuti zose zo mw 'isi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntazansiga nk'imfubyi, ntazampemukira.",
+        "Mpora mbeshwaho no kwizera gusa.",
+        "Ubw' angoteshej' ingabo, nta cyo ngitinya pe.",
+        "Ajy' antungisha manu yo mw’'juru.Njya nkumbura n'umunsi nzagera Mw’ ijuru.Nzanezerwa ni mureba mu maso :\n\n\nYaka nk'inyenyer' iteka; n' uw'igikundiro. Ni W’ urut' inshuti zose zo mw isi."
+      ]
+    }
+  ]
+}

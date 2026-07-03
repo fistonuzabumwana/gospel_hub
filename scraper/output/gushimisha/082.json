@@ -1,0 +1,61 @@
+{
+  "number": 82,
+  "book": "Gushimisha",
+  "title": "Mwami, wakomeretse",
+  "slug": "mwami-wakomeretse",
+  "uuid": "ff921033-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/mwami-wakomeretse/ff921033-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami, wakomeretse: ni twe waziraga",
+        "wahemuw'utyo mwami Ushinyagurirwa.",
+        "Ker' utaraza mw isi, War'ufit' ubwiza !",
+        "Dor’ uko bagushyize Mur' abo bambuzi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mpindukirir' undebe, Mukiza w'ukuri:",
+        "N'impano y'imbabazi Njya nkuboneramo.",
+        "Yesu, waramfiriye:N' ibyanjye wazize;",
+        "Ump' amahoro masa Kuko nkwiringira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kand' imipfire yawe Ni yo yankijije.",
+        "Intera kugushima Mu kubaho kose:",
+        "Imbabazi n' izawe, Mucunguzi wanjye.",
+        "Nah' urupfu rwantera, Nta cyakunkuramo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "No mw ipfa ryanjye, Yesu, Uzambe bugufi:",
+        "Urupfu ni runsinda Uzamar'ubwoba.",
+        "Kokw umubiri wanjye Uzabor' uveho;",
+        "Nyamara, nzakubona Mu maso,Mukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mukiza wanjye  mfite Ubwuzu n'ishimwe,",
+        "Ngo ndeb’ inkovu zawe Wagize kubwanjye!",
+        "Umpe kunesha rero, Nkuko wanesheje.",
+        "Hahirw' uzapfa apfira Muri wowe, Yesu"
+      ]
+    }
+  ]
+}

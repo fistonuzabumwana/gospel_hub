@@ -1,0 +1,55 @@
+{
+  "number": 222,
+  "book": "Gushimisha",
+  "title": "Mbese, tuzahurirayo",
+  "slug": "mbese-tuzahurirayo",
+  "uuid": "ff962cd8-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/mbese-tuzahurirayo/ff962cd8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbese, tuzahurirayo, Kuri wa mugezi mwiza Uca mw ijuru hagati, Uv' i bwami ku Mana yacu ?"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Koko tuzahurirayo, Tubonane n'abera ku mugezi, Ku mugez' utunganye w'lmana Uv' i bwami ku Mana yacu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tuzagendana ku nkombe Y'umugezi w'ubugingo. Tuzasengan' Uwiteka, Tuyisingiz'iteka ryose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nuko, tutarabagera, Duturw' imitwaro yose, Dukizwe n'ubuntu bwayo :",
+        "Izatwambik' imyenda yera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tuzahurira n'abera Ku mugez' ubonerana; Nta kizadutandukanya Kuk' urupfu",
+        "rutagerayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nuko, tuzagera vuba Kur' uwo mugezi mwiza, Turirimbane n'abaho Indirimbo",
+        "zishimishije."
+      ]
+    }
+  ]
+}

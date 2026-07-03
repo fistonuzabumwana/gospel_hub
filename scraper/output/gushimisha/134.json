@@ -1,0 +1,41 @@
+{
+  "number": 134,
+  "book": "Gushimisha",
+  "title": "Nshaka Yesu; nta wundi nifuza",
+  "slug": "nshaka-yesu-nta-wundi-nifuza",
+  "uuid": "ff93aed6-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/nshaka-yesu-nta-wundi-nifuza/ff93aed6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nshaka Yesu; nta wundi nifuza. Andengera mu byago by'iyi si. Nshaka Yesu; ni W' umpumuriza.Nah' undi yakwishoboza, jye Nshaka Yesu !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nshaka Yesu  Nshaka Yesu Nshaka Yesu, ntasiba : Mu mahoro, mu byago, Ni",
+        "We nshaka wenyine;None n'iteka  ryose, Jye nshaka Yesu"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nshaka Yesu : n' inshuti yanjy’ubu. N' Umujyanam' uhor'unyobora. Nshaka Yesu,",
+        "ngw ansindir' Umwanzi;Jyenyine nzi ko nta cyo maze ; Nshaka Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nshaka Yesu : ni we Murengezi. S’inshuti yac' abanyabyaha se? Nshaka Yesu :",
+        "nafashwa n'undi se? Ntawund’ ukund'abantu nkaWe : Nshaka Yesu !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "number": 125,
+  "book": "Gushimisha",
+  "title": "Ubw' Umwami Yes' ankunda",
+  "slug": "ubw-umwami-yes-ankunda",
+  "uuid": "ff9364e2-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/ubw-umwami-yes-ankunda/ff9364e2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubw' Umwami Yes' ankunda , Nd' amahoro! Kubw' imbabazi ze nyinshi,Nd' amahoro! Nuhagiwe n'amaraso; Nkomezwa n'ubuntu bwinshi; Kand' amfashe n'ukuboko: Nd'amahoro!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Naho haz' i byago byinshi, Nd' amahoro  Yesu n' Umukiza wanjye:Nd' amahoro!",
+        "Niragij' Imana, Data; Nguma muri Yesu Kristo; Nejejwe n'Umwuka Wera: Nd'",
+        "amahoro!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Byose bizambera byiza: Nd' amahoro! No mu byago, nzaririmba:Nd'amahoro",
+        "Naho ndiho, naho napfa,Nzi ko nkundwa n'Uwiteka; Yes' amp' ibyo nkena byose:",
+        "Nd'amahoro."
+      ]
+    }
+  ]
+}

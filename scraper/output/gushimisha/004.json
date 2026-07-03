@@ -1,0 +1,59 @@
+{
+  "number": 4,
+  "book": "Gushimisha",
+  "title": "Dushime cyan’izina ryawe",
+  "slug": "dushime-cyanizina-ryawe",
+  "uuid": "ff8fcd3a-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/dushime-cyanizina-ryawe/ff8fcd3a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dushime cyan'izina ryawe,Yesu mukiza wacu, Tukwimik’utwitegekere"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umwami wacu Yesu Usumba byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwa bishwe bamubahora mwe, mwishimire mw,ijuru; muhimbaz’uwadupfiriye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "namwe rubyaro rw’Adamu mwe, bacunguwe na Yesu, muhimbaza mwese Dawidi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Abakuwehw’ibyaha twese, twahaw’ubwo buntu bwe, nimuze tumupfukamire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mwa bava mu mahanga mwese, nimwumvir’umukiza; ni we mucunguzi w’abantu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Twifuza cyane gusohora mw’ijur’aho Yes’ari, ngo tumushim’iteka ryose."
+      ]
+    }
+  ]
+}

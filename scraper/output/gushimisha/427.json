@@ -1,0 +1,88 @@
+{
+  "number": 427,
+  "book": "Gushimisha",
+  "title": "Urukundo rwa Yesu",
+  "slug": "urukundo-rwa-yesu",
+  "uuid": "ff9c0726-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/urukundo-rwa-yesu/ff9c0726-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Urukundo rwa Yesu",
+        "Koko rwatugezeho,",
+        "Rudukura mu kaga",
+        "Ko gukund’ iby'iyi si."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' arakiza : ( X 3) Ni we wankijije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwemeye kw abakiza,",
+        "Mukabambanwa na We.",
+        "Yes' azabajyan' i We,",
+        "Mu bwiza budashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abahaw’ Umwuka we,",
+        "Mugahinduka bashya,",
+        "Mujye mumunambaho,",
+        "Muzageze ku gupfa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ariko mbaburire,",
+        "Abajya bigumanya,",
+        "Mbese, muzageza he",
+        "Kutagir’ ibyishimo?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Reka kwihakirizwa :",
+        "Abo si bo bakiza !",
+        "Kandi ntibakwandika",
+        "Mu Gitabo cya Yesu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Kwihana s' ubuhanga",
+        "Cyangwa guca mu bwenge,",
+        "Keretse kwanamiza",
+        "Yuk' ur' umunyabyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Abakunda kwihana,",
+        "Mukareba Siyoni",
+        "Yo mw ijuru ry’Imana,",
+        "Mujye muhishimira!",
+        "(Rwanda)"
+      ]
+    }
+  ]
+}

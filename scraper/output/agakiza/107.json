@@ -1,0 +1,49 @@
+{
+  "number": 107,
+  "book": "Agakiza",
+  "title": "Twemezwa n'iki ko tuzagera mw ijuru ?",
+  "slug": "twemezwa-niki-ko-tuzagera-mw-ijuru",
+  "uuid": "ff9ebde2-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/twemezwa-niki-ko-tuzagera-mw-ijuru/ff9ebde2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Twemezwa n'iki ko tuzagera mw ijuru ?— N'Umwuka w'lhoraho.",
+        "Ibyiringiro nk'ibyo twabihabwa na nde? N'Umwuka w'lhoraho."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Dushak' uwo Mwuka Wera Ni Yesu wawulugeneye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umwuka Wer' akora imirim' ikomeye. Ni wo wemez' abantu.",
+        "Tugir' ubwoba cyan'iyo tutakimwumva Twibaz' icyo twakora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu gih' ubona k'utagifit' urukundo Menya yuk' uwo Mwuka",
+        "Yabonye k'uyoborwa n'umubiri wawe Musab' uti: garuka!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Turagusaba Mwami Yes' umwo hereze Uwo Mufasha wacu,",
+        "Kuko dufit' intambar' ikomeye mw isi. Turamukwiye rwose."
+      ]
+    }
+  ]
+}

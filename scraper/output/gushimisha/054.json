@@ -1,0 +1,45 @@
+{
+  "number": 54,
+  "book": "Gushimisha",
+  "title": "Yemwe mwes' abananiwe",
+  "slug": "yemwe-mwes-abananiwe",
+  "uuid": "ff91423d-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/yemwe-mwes-abananiwe/ff91423d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemwe mwes' abananiwe N'abaremerewe, Muyoboke Yesu Kristo; Arabarahura."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mumwizere, mumwizere,Mwizere Yesu, Abarenger' abakize Ibyaha byanyu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yavushijw' amaraso ye Ngo tuzasugire; Mumwemer’ abuhagire, Aboze dedede."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu ni W' utuyobora Mu nzira y'Imana; Mubanguke, mumwizere, Mumukurikire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nimuze muteranire Mu nzira ye nziza; Nuko muzamushimira Iteka mw ijuru."
+      ]
+    }
+  ]
+}

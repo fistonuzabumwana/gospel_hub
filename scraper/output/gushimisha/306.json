@@ -1,0 +1,53 @@
+{
+  "number": 306,
+  "book": "Gushimisha",
+  "title": "Twishimir’ umunsi w'Imana",
+  "slug": "twishimir-umunsi-wimana",
+  "uuid": "ff991b71-0670-11ea-9a58-deadbe058832",
+  "category": "Icyumweru",
+  "url": "https://indirimbo.com/gushimisha/twishimir-umunsi-wimana/ff991b71-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Twishimir’ umunsi w'Imana, Tubonahw ibyishimo. N' umunsi turuhukiraho,Tuvuye mu mirimo, Imibabaro yac’",
+        "ivuyeho No kwiganyira kose. N’ umuns' abakuru n'abato Basingiz' Uwiteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Imana yarangije byose Kur' uyu munsi mwiza; Kandi ni ho Kristo yazutse Urupf",
+        "‘arunesheje, Ngo dukizw' ibyaha n'ingeso mbi;Maz' atwoherereza Umwuka",
+        "w'Iman' ihoraho, Wamanutse mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "lyo tugejej' uyu munsi Tubon' ubukiriro, Tuba dusa n'abasohoye Ahitwa",
+        "Paradiso. Twari tuguy' umwum' ukabije;None tubony' amazi; Kand' isi",
+        "twasezeranijwe Tuba tuyigezemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Non' ingoma nyinshi zavuzeGuhamagaz' abayo, Bateranire gufungura Ifunguro",
+        "ry'Imana: Ubutumwa buramurikira Bos' a bo mu mwijima, Kandi busa n'amazi meza Ahembur' imitima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nuko dusab’ Iman' iduhe Ub' umugisha mushya Kugira ngo tuzasohore Mu bwami bwo mw ijuru. Ni ho tuzajya duhimbarisha Ijwi ry'umunezero Data wa twese",
+        "n'Umwana we Kandi n'Umwuka Wera."
+      ]
+    }
+  ]
+}

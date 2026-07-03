@@ -1,0 +1,57 @@
+{
+  "number": 355,
+  "book": "Gushimisha",
+  "title": "Nejejwe n'uko nacunguwe",
+  "slug": "nejejwe-nuko-nacunguwe",
+  "uuid": "ff9a439c-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/nejejwe-nuko-nacunguwe/ff9a439c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nejejwe n'uko nacunguwe",
+        "N'amaraso ya Yesu;",
+        "Yarankijije : Ndamushima cyane."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Haleluya (x 3) ku Mukiza haleluya (x 3) Amen"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand' iyo ntewe na Satani,Maze ngacik' intege, Ninging' Umwami, Na W'",
+        "akandengera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umutima wanjy' unejejwe N'uko mbonye Umukiza.Nanyuzwe na We, Mu mutima wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "U rukundo rw' Imana yanjye Runteye kuyikunda :Njya ndwumv' iteka Mu mutima",
+        "wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Munezerwe, mushim' Imana, Yemw' abaz' Umukiza; Mushim' Imana, Mwe,",
+        "rubanda mwese ."
+      ]
+    }
+  ]
+}

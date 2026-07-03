@@ -1,0 +1,35 @@
+{
+  "number": 294,
+  "book": "Gushimisha",
+  "title": "Har'ubw' abagore Bazany' abana babo",
+  "slug": "harubw-abagore-bazany-abana-babo",
+  "uuid": "ff98cf4a-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/harubw-abagore-bazany-abana-babo/ff98cf4a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Har'ubw' abagore Bazany' abana babo , Abigishwa ntibemera Ko barushya Yesu. Nyamara Yes' abony’ibyo,Arabahamagar'",
+        "ati :Mwemerer' abana ngo baz' aho ndi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ati : Ndabakira, Mbashyire ku bibero; Ntimuzi ko nd' Umwungeri W'abana bato,",
+        "se? Ni banyisunga bitanze,Nzabaha kujya mw ijuru : Mwemerer'   abana ngo baz'aho ndi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "icyaduh’abana bo mumahanga yose ! kumv’inkuru za Yesu, bakaza kuriwe",
+        "abayeruriy’ umwijima , abakiran’ imbabazi twemerer’abana ngo baz’ahwari!"
+      ]
+    }
+  ]
+}

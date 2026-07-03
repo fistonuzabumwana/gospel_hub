@@ -1,0 +1,67 @@
+{
+  "number": 74,
+  "book": "Gushimisha",
+  "title": "Jye mfit' Umukiz' ujy' amvugira ku Mana",
+  "slug": "jye-mfit-umukiz-ujy-amvugira-ku-mana",
+  "uuid": "ff91d9a3-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/jye-mfit-umukiz-ujy-amvugira-ku-mana/ff91d9a3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Jye mfit' Umukiz' ujy' amvugira ku Mana.",
+        "N' inshut' idahana, si nk' izo mw isi",
+        "itek' arandind'akankingira n'ibyago.",
+        "Icyamp' Uw' akab’Umukiza wawe!"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Njye ninging' Imana ngw’ ikwereke Yesu.Ngumwakire nawe : ni ko ngusabira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nahaw' ikibanza na Data wo mw ijuru",
+        "Mu rugo rwe rwera kubw' Umwana we",
+        "Azangezayo ngo tuban' iteka ryose.",
+        "Icyampa ngo nawe tuzabaneyo !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nzahabwa n'umwambaro mwiza,wera cyane",
+        "Tw' abacunguwe yatubikiyeyo.",
+        "Njya ngir' amatsiko, nkawifuza,mugenzi",
+        "Icyampa ngo naw' uzawambar' ubwo"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kur'ubu, njya ngir' amahoro mu mutima:",
+        "Nyahawe na Yes' Umukiza wanjyi",
+        "Atemba nk'uruzi : ab'isi ntibayazi.",
+        "Icyampa ngasang' uyahawe nawe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "N'umara kumwemera h' Umukiza wawe",
+        "Uhamye mu band' iby' agukoreye,",
+        "Usabe n'Iman' ibahishurire Yesu,",
+        "Bahabw' ubwo buntu wahawe nawe"
+      ]
+    }
+  ]
+}

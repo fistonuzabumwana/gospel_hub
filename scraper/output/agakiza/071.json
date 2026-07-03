@@ -1,0 +1,49 @@
+{
+  "number": 71,
+  "book": "Agakiza",
+  "title": "Muri Betesida marayik' agezemo",
+  "slug": "muri-betesida-marayik-agezemo",
+  "uuid": "ff9dc6fb-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/muri-betesida-marayik-agezemo/ff9dc6fb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Muri Betesida marayik' agezemo",
+        "Umukiza na w' arahari. Niwinjire mu mazi yihinduriza, Betesid' iri hano none!"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Agakiza kacu, agakiza kacu. Ka teguwe na Yesu Kristo. Niwinjire mu mazi",
+        "yihinduriza. Betesid' iri hano none."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Niwumv' ijwi rya maraik' ugeze mo, Risab' unyunyutse kwizera! Urakizwa na Yesu Mukiza mwiza, Urakira ndetse no kwezwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubw' udashoboye gukora ku nshunda Umukiza ntakuyobewe. Ijambo ry'Imana ni",
+        "ryo rigukiza, Haguruk' ubashe kugenda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Betesida ni nk'amaraso ya Yesu, Maraika n'ijambo n'Umwuka. Injira mu ruzi ruv'",
+        "i Gologota, Uhabw'agakiza k'Imana."
+      ]
+    }
+  ]
+}

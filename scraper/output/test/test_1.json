@@ -1,0 +1,52 @@
+{
+  "title": "Uri Uwera Uwera",
+  "number": 1,
+  "category": "Guhimbaza",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uri Uwera Uwera ,Mwami Mana yacu,",
+        "Kare mu gitondo tukuririmbire :",
+        "Uri umunyambaraga uri umunyebambe;",
+        "Uri Ubutatu uri Imana imwe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uri uwera Uwera; dore abera bose,",
+        "baguhimbazanya n'abamalayika,",
+        "Tukuramye, Mwami, wahozeho kera,",
+        "Kandi uriho, kandi uzahoraho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uri Uwera Uwera, kandi ubwiza bwawe",
+        "Buruta uko bwarebwa n'abacumuye.",
+        "Niwowe wenyine wera urusha bose",
+        "Ubuntu no  gutungana kose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uri Uwera Uwera, Mwami Mana yacu,",
+        "Ibyaremwe byose biragusingiza :",
+        "Ur'umunyambarag'ur'umunyebambe:",
+        "lngoma yawe ntizahanguka."
+      ]
+    }
+  ],
+  "debug": {
+    "hasLyricsContainer": true,
+    "childrenCount": 4,
+    "innerHTML_preview": "\n                                                                        <div class=\"flex gap-4\">\n                                                        <div class=\"flex-shrink-0 w-16 text-right\">\n                                <span class=\"text-gray-400 dark:text-gray-500 font-semibold\">1</span>\n                            </div>\n                            <div class=\"flex-1 text-lg leading-relaxed text-gray-800 dark:text-gray-200\">\n                                Uri Uwera Uwera ,Mwami Mana"
+  }
+}

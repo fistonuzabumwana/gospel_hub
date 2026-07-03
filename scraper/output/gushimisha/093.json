@@ -1,0 +1,51 @@
+{
+  "number": 93,
+  "book": "Gushimisha",
+  "title": "Umunsi Mwiza Nibuka",
+  "slug": "umunsi-mwiza-nibuka",
+  "uuid": "ff926a1b-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/umunsi-mwiza-nibuka/ff926a1b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umunsi Mwiza Nibuka",
+        "N’uwo Nakwemereyeho",
+        "Wamberey’umucunguzi",
+        "Njye Nkwiz’ibyawe Nishimye"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nsingize,Nsingize Yesu Wanyogej’ibyaha Anyigish’iby’inzira Ye Ngo Nsenge,",
+        "Nshime Nezerwe Nsingize,Nsingize Yesu Wanyogeje Ibyaha"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Warangije Kundokora Nd’uwawe Nawe Ur’uwanjye Iryo Jwi Ryawe Ryinginga",
+        "Nabura Nte Kuryitaho?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Najyaga Ndorogotana Mu By’isi No Mu Ngeso Mbi Nkugarutseho Noneho",
+        "Sinzongera Kuzimira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iteka Nzagukorera Iby’isi Ndabizinutswe No Mw’ipfa Ryanjye Mukiza Sinzarorera Kwishima."
+      ]
+    }
+  ]
+}

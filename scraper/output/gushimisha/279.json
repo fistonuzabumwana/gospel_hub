@@ -1,0 +1,49 @@
+{
+  "number": 279,
+  "book": "Gushimisha",
+  "title": "Dor' umuns' urakuze",
+  "slug": "dor-umuns-urakuze",
+  "uuid": "ff981b5e-0670-11ea-9a58-deadbe058832",
+  "category": "Iza n'imugoroba",
+  "url": "https://indirimbo.com/gushimisha/dor-umuns-urakuze/ff981b5e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dor' umuns' urakuze :Reb' aho rirengeye !Reb' ukwezi n'inyenyeri : Dore, biragaragaye, Bitwakira."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Data wera, wera, Mwani Imana, Wuzuy' isi n'ijuru; Twese tugusingize,",
+        "Nyir'ingabo !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Rurema, Nyirigira, Ngwino, turakwifuza.Twes' utwuzuz' urukundo, Utugir'",
+        "ubwoko bwawe, Tukuramye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni hacur' umwijirna. Utugotesh' umucyo !Weyur' ibikingiriza Imitima yacu",
+        "twese, Tukubone."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Duhe kukwiringira : Ni dupfa, Mucunguzi,Tuzabon' umucyo mwinshi, Nukw’ ijoro",
+        "rye kubaho, Tugushime!"
+      ]
+    }
+  ]
+}

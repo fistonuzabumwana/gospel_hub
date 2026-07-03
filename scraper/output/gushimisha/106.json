@@ -1,0 +1,47 @@
+{
+  "number": 106,
+  "book": "Gushimisha",
+  "title": "Sinterw' isoni na Yesu",
+  "slug": "sinterw-isoni-na-yesu",
+  "uuid": "ff92cf86-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/sinterw-isoni-na-yesu/ff92cf86-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Sinterw' isoni na Yesu, Cyangw' iz'ishyaka rye, Naho zab' iz'Ijambo rye, Cyangw' Umusaraba. Ku Musaraba rwose ni ho naturiwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umutwaro w'ibyaha byanjye. Nizeye, ndahumuka, mbon’ umucyo; Bituma mpora nezerewe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Izina rya Yesu wanjye Ni ryo nishimira; Nzi kw atazanyihakana Kuko mwiringiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ntabw' azivuguruz' ibyo Yansezeranije, Kukw icyo namubikije Azagikomeza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "No mw ijur' azanyemera, Nubwo nta cyo maze;  Yerusalemu yaho, Azamp'",
+        "icyicaro"
+      ]
+    }
+  ]
+}

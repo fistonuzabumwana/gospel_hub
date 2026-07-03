@@ -1,0 +1,52 @@
+{
+  "number": 293,
+  "book": "Gushimisha",
+  "title": "Uko njya mbona mw 'ijuru",
+  "slug": "uko-njya-mbona-mw-ijuru",
+  "uuid": "ff98c933-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/uko-njya-mbona-mw-ijuru/ff98c933-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uko njya mbona mw 'ijuru",
+        "Njya mbwir' Umwami, nti",
+        "Ndakwinging' unyigishe Kuguh' umutima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iteka mu gitondo,Njya mbwir' Umwami, nti :",
+        "Nyiriz' imbere yawe, Mana yanjye nkunda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kenshi cyane mu munsi, Njya mbwir' Umwami, nti : Ni Wowe turi kumwe: Uhor'",
+        "ushimishwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' iy' ijoro rije, Njya mbwir' Umwami, nti : Mukiz' ureba hose, Mpa ku byiza",
+        "byawe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kugez' igihe nzapfa,Nzabwir’ Umwami, nti: Ni kuri Wowe, Data, Njya mperw'",
+        "umugisha."
+      ]
+    }
+  ]
+}

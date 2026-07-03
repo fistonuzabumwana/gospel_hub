@@ -1,0 +1,44 @@
+{
+  "number": 208,
+  "book": "Gushimisha",
+  "title": "Imana n’ ubuhingiro",
+  "slug": "imana-n-ubuhingiro",
+  "uuid": "ff95d693-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/imana-n-ubuhingiro/ff95d693-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Imana n’ ubuhingiro:Ni Yo ngab’ idukingira.Ayo turi mu makuba, Ni Y’ ibasha kudukiza. Uk’ Umwanzi wacu Yishakiy’ uburyo Bwo kudatsinda, Ntatubasha na gato, Kukw’ Iman’iturengera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni twirwanaho twenyine,tubura imbaraga rwose.ariko dufit'intwari ijy'iturwanira",
+        "iteka.iyo ntwari ni nde? ni wowe,Mukiza.Mugaba wacu,tuzi yuko,mu byago ,ari wowe uturengera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iy' abagome bahuje Guter' itorero ryawe, Urarirengera, Mana, Ntibabashe",
+        "kuritsinda. Nubw’ Umugambanyi;Ashaka kutwica, Ntadushyikira Kukw’ aneshwa",
+        "n’ijambo Ry'Imana, Nyir'imbaraga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Hishur’ijambo rinesha, Ridufasha dushobewe. Imbabazi zawe nyinshi Zize,",
+        "zituzeho twese.Twakwamburw' ibyacu, . Ndetse, tukabohwa, Ntitwabyitaho :",
+        "Byose tuzabinesha; Tuzaragwa, n’ubwami bwawe !"
+      ]
+    }
+  ]
+}

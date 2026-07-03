@@ -1,0 +1,73 @@
+{
+  "number": 316,
+  "book": "Gushimisha",
+  "title": "Man' itang' itimana, Twese tuguhimbaze :",
+  "slug": "man-itang-itimana-twese-tuguhimbaze",
+  "uuid": "ff995f7c-0670-11ea-9a58-deadbe058832",
+  "category": "Amasarura",
+  "url": "https://indirimbo.com/gushimisha/man-itang-itimana-twese-tuguhimbaze/ff995f7c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Man' itang' itimana, Twese tuguhimbaze :"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Kokw imbabazi zawe Ntabwo zizarangira !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tugushimiy' izuba Waturemeye, Mana ;"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Waduhaye n'ukwezi Kutwakira n'ijoro :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tugushimiy' imvura Imez' ibyo tubiba :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kand' imirima yacu Wayihay’ umugisha :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mana, waduhesheje Ibigega byuzuye:"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "No mu mitima yacu, Wez' imbuto wateye :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "tugukuriy'ubwatsi ku byo twejeje byose:"
+      ]
+    }
+  ]
+}

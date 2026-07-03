@@ -1,0 +1,46 @@
+{
+  "number": 126,
+  "book": "Gushimisha",
+  "title": "Yesu, tuguhungiyeho",
+  "slug": "yesu-tuguhungiyeho",
+  "uuid": "ff936de8-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitaba Yesu",
+  "url": "https://indirimbo.com/gushimisha/yesu-tuguhungiyeho/ff936de8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, tuguhungiyeho; Udutabare, tudapfa.Nubwo tutabikwiriye,Utubabarire"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mukiz' utwemere Nubwo turi babi. Yesu, waradupfiriye: Mukiz’utwemere"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntabwo twaguhish' ibyaha; turatsinzwe rwose arlko Amaraso yawe Yesu,yaratuviriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ntabwo twashobora rwose Gutungany' ingeso zacu. Iyo tubigerageje, Biratunanira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dore, nkwikubis' imbere! Ungirir’ uko washaka. Sinshyanga Mwam’unkureho",
+        "Ingeso zose mbi."
+      ]
+    }
+  ]
+}

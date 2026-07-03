@@ -1,0 +1,86 @@
+{
+  "number": 424,
+  "book": "Gushimisha",
+  "title": "Iteka Nagendaga ndemerewe N’ibyaha",
+  "slug": "iteka-nagendaga-ndemerewe-nibyaha",
+  "uuid": "ff9bf83a-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/iteka-nagendaga-ndemerewe-nibyaha/ff9bf83a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Iteka Nagendaga Ndemerewe N’ibyaha Ntihagire Ikibasha Kumara Umubabaro"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ndashima Umusaraba Ndashima Ya Mva Nziza Ariko Cyane,Cyane Ndashima",
+        "Umwami Yesu"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kugeza Ubwo Nageze Ahantu Heza Cyane Hangiriye Umumaro Ntazibagirwa",
+        "Ukundi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iri N’itangiriro Ry’umunezero Wanjye Aha Niho Umutwaro  Wamvuye Ku",
+        "Mugongo"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ku Musaraba Mwiza Niho Umuntu Abonera Abagabo Batatu Bakamuhumuriza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ku Musaraba Mwiza Niho Umuntu Abonera Urwandiko Rw’ijuru Rutar’urw’itorero"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Umugabo Nta Bwenge Yagiye Nta Rwandiko Agira Ngo Azinjira Nk’ukw’abandi",
+        "Binjira"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Nukw’ageze Kw’irembo Bamubaza Urwandiko Rwa Katanga Ka Mbere Asanga",
+        "Atarufite"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Mu Rubavu Rwa Yesu Havuyemo Amaraso Y’uruzi Rw’ubugingo Yoza Umutima",
+        "Wanjye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 9,
+      "lines": [
+        "Gira Umwete Winjire Mu Maraso Ya Yesu Uzashiraho Inenge Mu Mutima\nWanduye"
+      ]
+    }
+  ]
+}

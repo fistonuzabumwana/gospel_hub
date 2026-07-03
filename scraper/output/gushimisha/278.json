@@ -1,0 +1,58 @@
+{
+  "number": 278,
+  "book": "Gushimisha",
+  "title": "Mukiza, ni Wowe zuba ryanjye",
+  "slug": "mukiza-ni-wowe-zuba-ryanjye",
+  "uuid": "ff981319-0670-11ea-9a58-deadbe058832",
+  "category": "Iza n'imugoroba",
+  "url": "https://indirimbo.com/gushimisha/mukiza-ni-wowe-zuba-ryanjye/ff981319-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mukiza, ni Wowe zuba ryanjye Nta joro ngir’ iyo turi kumwe. Iby'isi bye kub’ igicu Kinkingiriz' umucyo wawe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand' iyo mbony' ibitotsi byiza, Bikanduhur' umubir' urushye,Nibuke yuko mw",
+        "ijuru,Nzahora nkwiseguye, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Tujye tuguman’ umunsi wire, Kuko ntabaho tutari kumwe;Tugumane na",
+        "n'ijoro;Tutabanye, natinya gupfa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Niba hagiz' uwasuzuguye Ijwi ry'Imana kur'uyu munsi,Tangira none,",
+        "Mukiza,Kumuyobor' inzira nziza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mwam' abarwayi, mubane maso, Uh' abaken' imigisha myinshi,Kand' abapfushije",
+        "na bo,Mwam’ ubasinzirize neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Kandi, Yesu, tuzakangukane, Dukor' imirimo, turi kumwe,Nyuma tuzajye mw ijuru",
+        "Tugoswe n'urukundo rwawe."
+      ]
+    }
+  ]
+}

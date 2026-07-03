@@ -1,0 +1,47 @@
+{
+  "number": 319,
+  "book": "Gushimisha",
+  "title": "Aho, mwumvis' ijwi ry'Umwami ?",
+  "slug": "aho-mwumvis-ijwi-ryumwami",
+  "uuid": "ff997275-0670-11ea-9a58-deadbe058832",
+  "category": "Itorero",
+  "url": "https://indirimbo.com/gushimisha/aho-mwumvis-ijwi-ryumwami/ff997275-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Aho, mwumvis' ijwi ry'Umwami ? Ati, Basore, mubyuke ! Turi hano, tugandukire Rwos’ amategeko yawe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tuguhay ubusore bwacu N’urukundo rwacu, Mwami: Mu ntege nke zacu twuzure Tujye duhoran' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Twifuza cyan' umucyo wawe N'urukundo n'amahoro; Twishiman' ibendera yawe, Tuyuyane mw isi yose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dufatish' ukuboko kwawe, Ujy' udushorer' iteka. Nubwo duterwa n'ibitwosbya,",
+        "Ujy' ubidukiza byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Duh' umwete nk'lntumwa zawe, Duhore dukora nka zo; Duhwane na zo mu",
+        "kwizera No kugupfir' ubishatse."
+      ]
+    }
+  ]
+}

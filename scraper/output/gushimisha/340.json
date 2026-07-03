@@ -1,0 +1,37 @@
+{
+  "number": 340,
+  "book": "Gushimisha",
+  "title": "Umutima wanjye wizera",
+  "slug": "umutima-wanjye-wizera",
+  "uuid": "ff99e5c2-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/umutima-wanjye-wizera/ff99e5c2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umutima wanjye wizera Kugusaba, Mana Data; Unyumvane za mpuhwe zawe.Jye umwana wakugomeye.",
+        "Ni Wowe wenyine nizeye Kw ari Wow' ump' umugisha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ndagusanze nguhungiyehoKukw ari Wowe nizeye. Umpe n'Umwuka wawe",
+        "wera.",
+        "Ump' intege. ninanirwa. Ni mbon' ibyago, nkwizigire K' unyakiran' imbabazi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ku manywa mba mu mucyo wawe; N'ijoro nkakwegamira; No mu gitondo, nki",
+        "gusenga,",
+        "Ujy'untegurir' inzira: No mu maryama, Data mwiza, Undinganiriz' iby'ejo."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "number": 16,
+  "book": "Gushimisha",
+  "title": "Aba yesu bishimira",
+  "slug": "aba-yesu-bishimira",
+  "uuid": "ff9024e3-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/aba-yesu-bishimira/ff9024e3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Aba  Yesu  Bishimira",
+        "Izina  Rye  Ryiza",
+        "Ribamara Umubabaro",
+        "Rikabatinyura"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umutima  Ukomeretse",
+        "Niryo  Riwukiza",
+        "Ushonje  Rirawuhaza",
+        "Riruhur’ Urushye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Niryo  Ngabo Yanjye  Nziza",
+        "Ihor’  Inkingira",
+        "N' Urutare Nubakaho",
+        "N’ Inzu Yanjy’  Itagwa"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ur’ Umutambyi  Nemera",
+        "N’ Umwam’ Untegeka",
+        "N’ Umwungeri Ujy’ Andagira",
+        "N’Inshuti  Nizera"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ni Wowe  Bugingo  Bwanjye,",
+        "Kandi  Kuri  Wowe",
+        "Ni  Ho  Nsiganirwa , Yesu",
+        "Kand’Uri N’ Inzira"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Nuko  Ndasaba  Wemere",
+        "Ishimwe  Ngushima",
+        "Nubwo  Ntabasha  Kuvuga",
+        "Ibigukwiriye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Yes’ Ubwo  Nzakwirebera",
+        "Uk’ Uri Mw’ Ijuru",
+        "Nibwo  Nzajya  Ngusingiza",
+        "Uko Bikwiriye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Na  Non’ Uko  Mbishoboye",
+        "Nzajya  Nguhimbaza",
+        "No Mw’ Ipfa  Ryanjye  Iryo",
+        "Zina Rizampumuriza"
+      ]
+    }
+  ]
+}

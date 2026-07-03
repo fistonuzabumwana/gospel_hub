@@ -1,0 +1,57 @@
+{
+  "number": 303,
+  "book": "Gushimisha",
+  "title": "Yesu, Mwungeri wanjye",
+  "slug": "yesu-mwungeri-wanjye",
+  "uuid": "ff990a65-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/yesu-mwungeri-wanjye/ff990a65-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, Mwungeri wanjye, Nd' agatam' undagire. Byose ndabitinyuka : Nta wuzakunyambura!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwami, waramfiriye Kera ku Musaraba : Mbonye n'ibikomere Mu biganz'",
+        "unteruje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "None,njye ngusingiza, Muri byose nkumvire I Urukund' umfitiye, Ni rwo",
+        "runyishimisha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yesu, Mwungeri mwiza, Non’ unyiyegereze !Mmenyereza noneho, Nzinukwe",
+        "kuzimira!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mwami Yes’ unahorere, nshe mu nzir’ifunganyc; Nta cyo nanz' untegeke : Wow'uz’ ibinkwiriye!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Ngez' ah’ uri mw ijuru, Ibijya binyobera,Ni ho nzabimenyera, Nshim' uko",
+        "wandagiye !"
+      ]
+    }
+  ]
+}

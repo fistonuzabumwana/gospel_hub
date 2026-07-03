@@ -1,0 +1,32 @@
+{
+  "number": 67,
+  "book": "Gushimisha",
+  "title": "Uhagaze, Mukiza Ku rugi rukinze",
+  "slug": "uhagaze-mukiza-ku-rugi-rukinze",
+  "uuid": "ff91a902-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/uhagaze-mukiza-ku-rugi-rukinze/ff91a902-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uhagaze, Mukiza Ku rugi rukinze,  Utegereza yuko Bagukingurira. Ariko, bene Data,N'iby'isoni nyinshi Gukingiran' Umwami Yes' Umucunguzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Akomanga ku rugi.Kandi dor' afite Inkovu z'imbereri N'ikamba ry'amahwa. Mbeg' urukundo rwinshi Rw' utegerez' atyo ! Nta kindi cyaha kibi nko kutamwakira!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umwam' atwingingisha Ijwi ryongorera, Ati : N'iki gituma Mungirira mutyo? Mwami, tugiz' isoni Z'uko guhemuka :Nonehw injira, Mwami Ntudusig' ukundi."
+      ]
+    }
+  ]
+}

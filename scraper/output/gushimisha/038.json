@@ -1,0 +1,53 @@
+{
+  "number": 38,
+  "book": "Gushimisha",
+  "title": "Ai Mana Ndondor’umenye",
+  "slug": "ai-mana-ndondorumenye",
+  "uuid": "ff90d2c7-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ai-mana-ndondorumenye/ff90d2c7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ai Mana  Ndondor’umenye Ibyo Nkora Byose Werekane Uko Ndi Kose Ntifata Uko Ntari."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ndondorere Uyu Mutima Ni Wowe Ushobora Kugaragaza Ibirimo  Mu Bwihisho Bwawo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umurik’ahatabona Ah’umwijim’uba Ump’umutima Ukangutse Uzinukw’icyaha"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand’umeny’ibyo Nibwira N’imigambi Yanjye N’ibimbamo Binyanduza Bikangir’imbohe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mvugutira Kand’unshure Inkamba Zimvemo Umpindur’icyuma Cyawe Uhor’ukoresha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Maze Nkwikubis’imbere Mpishurirwe Rwose Yukw’Imana Ar’urukundo Rutagir’ingano"
+      ]
+    }
+  ]
+}

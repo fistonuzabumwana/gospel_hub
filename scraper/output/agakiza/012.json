@@ -1,0 +1,37 @@
+{
+  "number": 12,
+  "book": "Agakiza",
+  "title": "Waratubambiwe Mukiza",
+  "slug": "waratubambiwe-mukiza",
+  "uuid": "ff9c7ece-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/waratubambiwe-mukiza/ff9c7ece-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Waratubambiwe Mukiza ku giti: Ni wowe Pasaka yac' idukwiriye. Warababajw' ubwo wavag' amaraso,Washakaga gukor' iby' Iman' ishaka.Kandi wababariye n'i Getsemane, Arik' uhozwa n'ijambo ry'Ihoraho. Mu gusenga kwawe wahaw' imbaraga Hanyuma urapf' u duhesh' agakiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwami warakomerekejwe kubwanjye. Wapfuye kugira ngo mbon' ubugingo.",
+        "Wariyibagiw' ub' ari jye wibuka, Ndetse wasengey' abakwish' urwo",
+        "rupfu,Watuberey' igitambo gikwiriye, Ubwo wemeraga kutubabarizwa. Wemeye",
+        "gupfir' abantu bose mw isi. Kandi byose ni kubw' urukundo rwawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Noneho kumvikana n'Imana n'iki? N'ukubabarirw' umuvumo w'ibyaha. Kweger'",
+        "Imana byo bitwungur' iki se? Biduha guhinduk’inshuti z'Imana.Noneho tebuk' uve",
+        "mu byaha byawe. Ubigaragarize byose mu mucyo. Umukiza mwiz' arakubabarira, Arakubohora kand' aragufasha."
+      ]
+    }
+  ]
+}

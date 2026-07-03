@@ -1,0 +1,50 @@
+{
+  "number": 22,
+  "book": "Agakiza",
+  "title": "Yesu Mwami ni w' utubaz’ ati",
+  "slug": "yesu-mwami-ni-w-utubaz-ati",
+  "uuid": "ff9cb58f-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yesu-mwami-ni-w-utubaz-ati/ff9cb58f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu Mwami ni w' utubaz’ ati: Ni nde ntumye mu murima wanjye.",
+        "Dore hari benshi bazimiye, Gend' ubamenyesh' ubuntu bwanjye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mana yanjye, ntegek' ubu. Unkozeho ikara ry'umuriro.",
+        "Mana yanjye, ntegek' ubu. Ntuma Mwam' ubu nd' imbere yawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umuntu w'Imana yaravuze Ati: Jye nta cyo nishoboreye.",
+        "Arikw ashyuhijwe n'umuriro, Ati: Mana, noneh' uz' untume."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "har' abantu benshi bazimira, Batameny' Umwami Yesu Kristo.",
+        "Muze, tujye kubabwir' inkuru Y'agakiza k'ijambo rya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Igihe cy'isarura gishize, Abakozi bose bazataha.",
+        "Kand' Umwami wab' azabakira, Ababwir' ati: Mwakoze neza."
+      ]
+    }
+  ]
+}

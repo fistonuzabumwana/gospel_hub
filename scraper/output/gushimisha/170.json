@@ -1,0 +1,35 @@
+{
+  "number": 170,
+  "book": "Gushimisha",
+  "title": "Utinyuke kuyoborwa Mu nzira nziza y'Imana",
+  "slug": "utinyuke-kuyoborwa-mu-nzira-nziza-yimana",
+  "uuid": "ff94b6e4-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/utinyuke-kuyoborwa-mu-nzira-nziza-yimana/ff94b6e4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Utinyuke kuyoborwa Mu nzira nziza y'Imana.",
+        "Kukw ishyikir' ari ryiza, Ugend' ucamw uyoboka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntutinye gut' ibya kera, Byiguhindish' imishitsi",
+        "Kuk' umucyo w'Uwiteka Wakir' ah' ugenda hose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Urwanir' ibyiza byose N’ ubihorw’ uzabipfire.",
+        "Ujye wubahish' Imana Ng' uzabe mu cyubahiro."
+      ]
+    }
+  ]
+}

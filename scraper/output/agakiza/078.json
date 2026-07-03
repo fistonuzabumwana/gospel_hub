@@ -1,0 +1,57 @@
+{
+  "number": 78,
+  "book": "Agakiza",
+  "title": "Uhamagarwa na Yesu kenshi",
+  "slug": "uhamagarwa-na-yesu-kenshi",
+  "uuid": "ff9de949-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/uhamagarwa-na-yesu-kenshi/ff9de949-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uhamagarwa na Yesu kenshi, Umwitab' uyu munsi. Har' ubw' iri jwi wumv' uyu munsi. Ryab' ari ryo rya nyuma."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yew' ugendera mu byaha Yesu aragushaka! Ngiu akubabarir' i byaha. Ngwin'",
+        "umusange vuba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umudendezo wo mur' iyi si Nta bw' uguh' amahoro. Kand'ibikorwa",
+        "by'abanyabyaha Byose biragushuka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu gih' utazi nih' umwijima W'urupf' ukugeraho. Mugenzi wanjye nkugir' inama",
+        "Ngwino witabe Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yes' azi yuko ufit' imvune Y'ibyaha mu mutima. Uk' uri kose arakwakira, Ndetse",
+        "no kugukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Uhor' uhamagarwa na Yesu, Kuki s'utamwitaba? Nib' ukomeje kumwim' amatwi",
+        "Uzarimbuka rwose."
+      ]
+    }
+  ]
+}

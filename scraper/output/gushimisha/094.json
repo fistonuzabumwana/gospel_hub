@@ -1,0 +1,55 @@
+{
+  "number": 94,
+  "book": "Gushimisha",
+  "title": "Ubugingo bwanjye bwahinduts' ukundi",
+  "slug": "ubugingo-bwanjye-bwahinduts-ukundi",
+  "uuid": "ff927217-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/ubugingo-bwanjye-bwahinduts-ukundi/ff927217-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubugingo bwanjye bwahinduts' ukundi,  Yes' ubwo yangeragamo; Umucyo winjiye mu mutima wanjye Yes’ ubwo yangeragamo."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Kuv' ubwo yanyinjiyemo (x2) Yaranyuze; ndishima. ndamuhimbaza, Kuv' ubwo",
+        "yanyinjiyemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Naretse kuzerera no kuzimira, Kuv' u’bwo yanyinjiyemo; Kand' ibyaha byanjye",
+        "byakuweho ; rwose,Kuv’ ubwo yanyinjiyemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nonebo, mfit' ibyiringiro, nizeye Yes' uwo wanyinjiyemo; Nshizwe  imbere mu",
+        "nzira, sinshidikanya Yes' uwo wanyinjiyemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Sinzatinya kunyura mu rupfu hamwe Na Yesu wanyinjiyemo; Kuko mbon' umurwa wer' urimbishijwe Wa Yesu wanyinjiyemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nzi ko nzajya kubana kur'uwo murwa Na Yesu wanyinjiyemo; Ni cyo kizatuma njya ndirimba nshima Yes'uwo wanyinjiyemo."
+      ]
+    }
+  ]
+}

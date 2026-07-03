@@ -1,0 +1,33 @@
+{
+  "number": 342,
+  "book": "Gushimisha",
+  "title": "Njye nsindagizwa n'ukuboko kwawe",
+  "slug": "njye-nsindagizwa-nukuboko-kwawe",
+  "uuid": "ff99f273-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/njye-nsindagizwa-nukuboko-kwawe/ff99f273-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Njye nsindagizwa n'ukuboko kwawe, Jy' umwana waw' ufit' intege nke. Ni Wowe, Mwami, nisunze wenyine, Ni mbana niwe, nta kizanyobya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Njye ntegekeshw' uko kuboko kwawe,Nezerewe, ndi no mu makuba. Ngukundish' umutima wanjye wose Kugira ngo mb' uwawe. Mukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Njye nkomezwa n'uko kuboko kwawe Mu mutima wanjy' us1hidikanya: Reb'",
+        "agahinda n'ishavu njya ngira Umpumurize, Mwami, ntunsige."
+      ]
+    }
+  ]
+}

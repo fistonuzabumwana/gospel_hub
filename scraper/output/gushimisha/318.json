@@ -1,0 +1,40 @@
+{
+  "number": 318,
+  "book": "Gushimisha",
+  "title": "Hose habera heza",
+  "slug": "hose-habera-heza",
+  "uuid": "ff996d8c-0670-11ea-9a58-deadbe058832",
+  "category": "Itorero",
+  "url": "https://indirimbo.com/gushimisha/hose-habera-heza/ff996d8c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Hose habera heza Inshuti zibana : Zirakundana neza, Zibanye na Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nkukw iy' imvur’ iguye, Ihembur' imyaka, Ni kw Iman' ibigenza, Yez' abakundana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kubana kwabo kwiza,Barahugurana, Ngo be kugwa mu cyaha, Babon' amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Umwuk' uhamagara Abo mw isi yose, Ngo bazab' ishyo rimwe, Umwunger'",
+        "ab'umwe."
+      ]
+    }
+  ]
+}

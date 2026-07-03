@@ -1,0 +1,53 @@
+{
+  "number": 47,
+  "book": "Gushimisha",
+  "title": "Ube maso, Mukristo",
+  "slug": "ube-maso-mukristo",
+  "uuid": "ff911467-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ube-maso-mukristo/ff911467-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ube maso, Mukristo: Nturuhuke nonaha, Amakub'ari hafi; Usabe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ababisha b'lmana Bajya bakwubikira, Baguciriy' ibico; Usabe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ujye wambar’ intwaro yesu yakwihereye. Ku manywa 'na n’ijoro, Wirinde !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Umv' abatsinze kera lyo ntambar' urwana; Baraguhugura, ngo : Usabe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Umva n'Umwami wawe, Yesu wagupfiriye, Ni We watubwiy' ati ; Ba maso!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Iryo jamb'uryemere N'umutima wizeye, Kugira ng' urikore; Usabe !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "number": 99,
+  "book": "Gushimisha",
+  "title": "Unkunda n’ Umwana w'Imana",
+  "slug": "unkunda-n-umwana-wimana",
+  "uuid": "ff929cfc-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/unkunda-n-umwana-wimana/ff929cfc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Unkunda n’ Umwana w'Imana;",
+        "Yaje mw isi  kunshungura.",
+        "Umutima wanjy' utangazwa",
+        "N'urwo rukundo rwa Yesu.unkunda ni Yesu; ( x 2)",
+        "Yamfiriy’ ibyaha byanjye; unkunda ni Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Amaraso yawe, Mukiza,",
+        "Ankurahw ibyaha byanjye.",
+        "Nahinduts' uwatsinz’ urupfu",
+        "Kubw' izo mbabazi zawe. unkunda ni Yesu (x 2)",
+        "Wanzukiye ngw ambesheho: unkunda ni Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uzi kubaho kwanjye kose;",
+        "Unshorer' iminsi yose.",
+        "N' umucyo waw'umurikira,",
+        "Ukandindish' urukundo.unkunda ni Yesu; (x 2)",
+        "Yankujije mu by'Imana: Unkunda ni Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nzi ko Yes’ atajy' ahinduka,",
+        "No gukiz' aracyakiza.",
+        "Uk' uri kose, munyabyaha,",
+        "Mwizer' ukizwe nonaha !Ukundwa na Yesu : (x 2)",
+        "Yapfiriy' ibyaha byawe; Ukundwa na Yesu !"
+      ]
+    }
+  ]
+}

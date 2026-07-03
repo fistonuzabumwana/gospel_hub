@@ -1,0 +1,25 @@
+{
+  "number": 299,
+  "book": "Gushimisha",
+  "title": "Amaboko yawe, Yesu Mukiza",
+  "slug": "amaboko-yawe-yesu-mukiza",
+  "uuid": "ff98f456-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/amaboko-yawe-yesu-mukiza/ff98f456-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Amaboko yawe, Yesu Mukiza, Yagirag' ineza n'iby'imbabazi, Kand' abana bat' akabakikira, Agakiz' indembe n'abamugaye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Arnaboko yanjye ndayaguhaye. Ab' ayawe, Yesu, uyakoreshe ! Umpe kuba nkawe, njye ngukorera, Njye nkoran' umwet' umurimo wawe !"
+      ]
+    }
+  ]
+}

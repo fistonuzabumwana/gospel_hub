@@ -1,0 +1,42 @@
+{
+  "number": 151,
+  "book": "Gushimisha",
+  "title": "Yes’ arush’ abandi bose",
+  "slug": "yes-arush-abandi-bose",
+  "uuid": "ff94363d-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/yes-arush-abandi-bose/ff94363d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes’ arush’ abandi bose—Kudukunda; Arush' ukw abavandimw —Bakundana.Nahw izindi nshuti zacu Zaduhararuka zose, Yesu ntabw’ ahemukira—Ab’ akunda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "N'iki gihesh’ ubugingo—Budashira ? S’ ukumenya Yesu wacu—Udukunda",
+        "?Twarazimiye nk'intama. Yes' aradushakashaka, Atubony’ atwinjiz' ubwo—Mu rugo rwe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Tumumenye kw ar' inshuti—Yishimira Kuduh' imigisha yose—N'imbabazi.Imitima",
+        "yac’ ikunda Kumvir’ iyi Nshuti yacu No kumwizigira cyane—Tudatinya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand’ ibyaha byacu byari—Bikabije: Yes’ aterwa n'urukundo—Kudupfira :Ni byo",
+        "bituneshereza; Ni byo biturind' ibibi, Tukayoboka yanzira—Iger’ i We."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "number": 350,
+  "book": "Gushimisha",
+  "title": "Yemw’ abaguzwe n'amaraso",
+  "slug": "yemw-abaguzwe-namaraso",
+  "uuid": "ff9a250e-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/yemw-abaguzwe-namaraso/ff9a250e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemw’ abaguzwe n'amaraso Ya Yes' Umucunguzi, Nimuze, mumupfukamire :"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Musang' Umwami Usumha byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Dor' isoko y'amaraso ye Yashyizweho kubwanyu : Mum witabe ngw aboze namwe :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dor' aya mazi y'ubugingo :Nimuze, muyanyweho, Mumwitab' abamar' inyota :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' intege nke z'umubiri N'imanga y'umutima Bimarwa n'Umusaraba we :"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mwa ndushyi mwe ziremerewe,Nimwemere, mwihane Ni mworoshy' imitima yanyu!"
+      ]
+    }
+  ]
+}

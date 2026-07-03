@@ -1,0 +1,49 @@
+{
+  "number": 371,
+  "book": "Gushimisha",
+  "title": "Yesu, nd' uwawe",
+  "slug": "yesu-nd-uwawe",
+  "uuid": "ff9a954c-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/yesu-nd-uwawe/ff9a954c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, nd' uwawe: nyakira N'ibyanjye mfite byose.",
+        "Njye ngukunda, nkwizigire, Nkomeze nkuyoboke."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nguhay' ibyanjye, Uko bingana. Mwami wanjye mwiz' unkunda, Unyiharire !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu nd' uwawe : nyakira,Niyoroshye, nkuramye.",
+        "Mpaz' ibyishimo byo mw isi. Ubu, Yes' unyakire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu nd' uwawe : nyakira.Ngir' uwawe by’ukuri.",
+        "Turn' Umwuka Wer’ ambwire Yuko naw' ur’ uwanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Byose maze kubiguha;Numv' umpay' umWet' ubu.",
+        "Nsingiz' ubwo buntu bwawe. Nkuramye bihimbaje."
+      ]
+    }
+  ]
+}

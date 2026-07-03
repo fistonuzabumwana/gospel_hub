@@ -1,0 +1,49 @@
+{
+  "number": 87,
+  "book": "Agakiza",
+  "title": "Umugisha w'Imana",
+  "slug": "umugisha-wimana",
+  "uuid": "ff9e432a-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/umugisha-wimana/ff9e432a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umugisha w'Imana ni wo nkeneye rwose Ndashaka kubatizwa muri wa Mwuka Wera. Nejejwe mu mutima n'amasezerano ye Yaransezeranije kump' uwo Mwuka Wera."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umugish' atanga, umugish' atanga, Uva mu buntu bwe ni nk' amazi menshi.",
+        "Arawunyuzuz' ubu, abasha no kunkiza, Niyu bahwe rwose n'Umukiza wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Itorero ry'Imana n'iryo guhabw' imvura, Isoko y'umugisha dor' iradudubiza.",
+        "Twishimir' ubugingo twahawe n'lhoraho. Haleluya, dushime, dushimir' Umukiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibicu by'agakiza bitugezeho rwose Utwuzurize Man' imitima yacu twese. Abera",
+        "bawe bose bahore bezwa nawe. Haleluya, dushime, dushimir' Umukiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ibicu by'agakiza bitugezeho rwose. Turagusaba, Mana, ubyohereze mw isi.",
+        "Ibihumbi by'abantu biha bw' ako gakiza. Haleluya, dushime, dushimir' Umukiza!"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "number": 225,
+  "book": "Gushimisha",
+  "title": "Mw ivuka ryawe, Yesu",
+  "slug": "mw-ivuka-ryawe-yesu",
+  "uuid": "ff964e4d-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/mw-ivuka-ryawe-yesu/ff964e4d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mw ivuka ryawe, Yesu , bakuryamishije Mu kiraro kigawa, mu muvure w'inka. Wasasiwe, Mukiza, ahadakwiriye. Nubw' ur' Uwaturemye, ni ko wagiriwe!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nimuze, yemwe bana, tUmuhimbarize Ko yaryamishijw' atyo, mu muvure w'inka",
+        "DuShim' Umwami Yesu, tumukundir' ibyo Ko yabay' umukene kubwabanya byaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umfashe, Mwami Yesu, kuguhora hafi. Ngo ngukunde, tuban' iminsi yanjye yose,",
+        "Kandi n'abndi bana,na b' ubiyereke Bagukunde, dushiman' urukundo rwawe."
+      ]
+    }
+  ]
+}

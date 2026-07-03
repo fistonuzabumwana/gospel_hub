@@ -1,0 +1,34 @@
+{
+  "number": 24,
+  "book": "Gushimisha",
+  "title": "Njya nshima nshima",
+  "slug": "njya-nshima-nshima",
+  "uuid": "ff906a3b-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/njya-nshima-nshima/ff906a3b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Njya nshima nshima nshima nshim' Imana mu mutima, Mu mutima, mu mutima. Njya nshima nshima nshima nshim’ Imana mu mutima, Mu mutima wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta n'urubanza, nta rubanza nshiriweho rwose, Mu mutima, mu mutima. Nta",
+        "n'urubanza, nta rubanza nshiriweho rwose,Mu mutima wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mfit' amahor' arut' uko yamenywa mu mutima, Mu mutima, mu mutima. Mfit'",
+        "amahor' arut' uko yamenywa mu mutima, Mu mutima wanjye."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "number": 84,
+  "book": "Gushimisha",
+  "title": "N'iki cyankiz' ibyaha?",
+  "slug": "niki-cyankiz-ibyaha",
+  "uuid": "ff921d56-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/niki-cyankiz-ibyaha/ff921d56-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "N'iki cyankiz' ibyaha? N' amaraso yawe, Yesu.",
+        "N'iki cyanyeza rwose ? N' amaraso yawe, Yesu."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ayo maraso ye Ni y' amboneza rwose : Nta cyampa gukira, nk' amaraso y'Umukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta kindi cyantunganya,Nk'amaraso. yawe, Yesu, Nta kindi cyiru mfite, Nk'amaraso yawe, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nta cyantsembahw ibyaha,Nk'amaraso yawe, Yesu. Nta byanjye byamboneza,",
+        "Nk'amaraso yawe, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni Wowe niringira N'amaraso yawe, Yesu, Ni Wow' ump' amahoro, N'amaraso",
+        "yawe, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nguhimbariza cyane Amaraso yawe, Yesu. Mwami, ndagushimira Amaraso",
+        "wamviriye."
+      ]
+    }
+  ]
+}

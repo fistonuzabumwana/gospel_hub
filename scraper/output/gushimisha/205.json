@@ -1,0 +1,51 @@
+{
+  "number": 205,
+  "book": "Gushimisha",
+  "title": "Urwan’ intambara nziza !",
+  "slug": "urwan-intambara-nziza",
+  "uuid": "ff95c31f-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/urwan-intambara-nziza/ff95c31f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Urwan’ intambara nziza !",
+        "Kristo n'imbaraga zawe :",
+        "Fat’ ubugingo aguhaye,",
+        "Ngo buguhesh’ ibyishimo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Usiganirw’ aho Yesu",
+        "Yicay’ agutegereje",
+        "Ni We nzira kandi ni We",
+        "Bihembo byo kurushanwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wabujijwe kwiganyira,",
+        "Wizere gus’ ubuntu bwe,",
+        "Uzabon’ urukundo rwe",
+        "Kw ari rwo rukubeshahto."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ntutinye, we gucogora;",
+        "Ntahinduk’ aragukunda,",
+        "Yesu ni byos'umufite,",
+        "Nta cyo wabasha gukena"
+      ]
+    }
+  ]
+}

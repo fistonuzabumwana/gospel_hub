@@ -1,0 +1,33 @@
+{
+  "number": 301,
+  "book": "Gushimisha",
+  "title": "Mu kiza, Mwungeri mwiza",
+  "slug": "mu-kiza-mwungeri-mwiza",
+  "uuid": "ff990507-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/mu-kiza-mwungeri-mwiza/ff990507-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mukiza, Mwungeri mwiza, Uturinde tw' abana bawe; Iri jor' utube hafi, Ngo turamuk' amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wiriw’ uturinze hose, Uturagiy' intama zawe; Kandi wadutunze neza : Nuko, wumv' ibyo dusaba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu, Mwunger' udukunda, Tubabarir' ibyaha byacu; Rind' abo dukunda bose;",
+        "Nyum' uzatugez' i Wawe!"
+      ]
+    }
+  ]
+}

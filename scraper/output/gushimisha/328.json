@@ -1,0 +1,54 @@
+{
+  "number": 328,
+  "book": "Gushimisha",
+  "title": "Yes’ ur' Umukiza wanjye",
+  "slug": "yes-ur-umukiza-wanjye",
+  "uuid": "ff999d11-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/yes-ur-umukiza-wanjye/ff999d11-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes’ ur' Umukiza wanjye: Kuv' ubu, jye mb' uwawe. Nuhagiwe n'amaraso Yawe, Mwana w'imama."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tugusingize, Muklza, Yesu, Mwana w'intama. Nuhagiwe n'amaraso : Ngushime, Murokozi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kera nararushye cyane Ngo nihesh' amahoro. Nonubu, namaramaje Kwirangiriza Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nzajya mbwir' abantu bose Agakiza ka Yesu, Gashyitse, kalar' igice N'ubugingo bw'ubuntu"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nzajya namamaza Yesu, Nshiz' amanga, nta soni : Uko yambohoy' ingoyi No",
+        "kunkiz' akankiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mpimbaz' Uwanshunguy' atyo,Ankirish' imbabazi ! Ajy' andind' amp' amahoro :",
+        "Nukw asingizw' iteka !"
+      ]
+    }
+  ]
+}

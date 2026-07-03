@@ -1,0 +1,48 @@
+{
+  "number": 23,
+  "book": "Agakiza",
+  "title": "Umurima w'Iman' ureze",
+  "slug": "umurima-wiman-ureze",
+  "uuid": "ff9cbaca-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/umurima-wiman-ureze/ff9cbaca-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umurima w'Iman' ureze, N'igi he cyo kuwusarura. Mwa basaruzi muze vuba, Gusarur' ibisarurwa bye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yes' ubu turakwinginga: Wohe rez' abakozi bawe. Baterany' ibyo bisarurwa,",
+        "Babigushyikirize Mwami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubazindure kare cyane, Kand' abandi mu gica munsi. No mu gihe cy'umugoroba, Yes' ubahamagare bose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Urahamagawe Mukristo, Genda vuba udakererwa. Kandi wubur' amaso yawe, Kuk' Umwami Yes' aza vuba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Muze mwese duhaguruke, Dukorer' uwaducunguye. Hasigaye umwanya muto,",
+        "Akaza kutugororera."
+      ]
+    }
+  ]
+}

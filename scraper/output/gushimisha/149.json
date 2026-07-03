@@ -1,0 +1,76 @@
+{
+  "number": 149,
+  "book": "Gushimisha",
+  "title": "Mbega urukundo Rw’Imana",
+  "slug": "mbega-urukundo-rwimana",
+  "uuid": "ff942893-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/mbega-urukundo-rwimana/ff942893-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbega urukundo rw’Imana yacu",
+        "Nta warondora uko rungana",
+        "Rusumba ukwezi rusumba izuba",
+        "Kandi ikuzimu rugerayo",
+        "rwatumye Yesu aza mu isi yacu",
+        "Ngo indushyi aturuhure ,",
+        "Nacya kirara cy’inzererezi",
+        "Rwatumye se acyakira."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mbese urukundo rw’Imana yacu",
+        "Rwagereranywa n’iki",
+        "Mu ijuru n’isi baruririmbe",
+        "Kugeza iteka ryose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ingoma zose zo mu isi yacu",
+        "Zijya zihita zishiraho",
+        "Abanga Imana ntibayisenge",
+        "Bazapfa bose be kwibukwa",
+        "Nyamara urwo rukundo rw’Imana",
+        "Rutagira akagero",
+        "Urwo idukunda twe abari mu isi",
+        "Nirwo rutazashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Inyanja zose zaba nka wino",
+        "Ijuru rikaba impapuro",
+        "Ibyatsi nabyo bakabigira",
+        "Byose uducumu tw’abanditsi",
+        "Ab’isi bose bakandikaho",
+        "Iby’urukundo rwayo",
+        "Ntibabimara ntibyakwirwaho",
+        "Hakama inyanja ari yo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kandi uko ikunda umwana wayo",
+        "Jye niko inkunda ntakwiriye",
+        "Nari umugome nuko impa Yesu",
+        "Ngo ambambirwe ku musaraba",
+        "Mubo yacunguje ayo maraso",
+        "Nzi yuko nanjye ndimo",
+        "Nzajya ndirimba urwo rukundo",
+        "Ndukwize mu isi yose"
+      ]
+    }
+  ]
+}

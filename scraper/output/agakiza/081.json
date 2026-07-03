@@ -1,0 +1,53 @@
+{
+  "number": 81,
+  "book": "Agakiza",
+  "title": "Nkunda kumv' amakuru y'umurwa",
+  "slug": "nkunda-kumv-amakuru-yumurwa",
+  "uuid": "ff9df778-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nkunda-kumv-amakuru-yumurwa/ff9df778-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nkunda kumv' amakuru y'umurwa",
+        "Uri kur' ahateger' ibyago,",
+        "Kand' umucyo n'Umwana w'intama",
+        "Umuns' umwe nzawinjiramo.",
+        "Haleluya, ni ko mvuz' impundu!",
+        "Haleluya, nzinjira mu murwa!",
+        "Haleluya, ndi hafi kujyamo.",
+        "Umuns'umwe nzawinjiramo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta marir' aba mur' uwo murwa,",
+        "Nta muruh' ubayo n'intambara.",
+        "Nta n'indwar'ishobora kubayo.",
+        "Umuns' umwe nzawinjiramo.",
+        "Haleluya, nuzuy' ibyishimo,",
+        "Haleluya,nzinjira mu murwa.",
+        "Haleluya, ndi hafi kujyayo.",
+        "Umuns' umwe nzawinjiramo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abazajya mur' icyo gihugu",
+        "Baza ba bambay' imyenda yera.",
+        "Babikiw' ikamba ry'izahabu.",
+        "Umuns' umwe nzakigeramo.",
+        "Haleluya, nta gushidikanya.",
+        "Mw ijuru hariy'umunezero.",
+        "Nta bw' umubabar' uba mw ijuru.",
+        "Niringiye  kuzinjiramo."
+      ]
+    }
+  ]
+}

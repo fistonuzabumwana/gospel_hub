@@ -1,0 +1,59 @@
+{
+  "number": 5,
+  "book": "Agakiza",
+  "title": "Sinzibagirw' igihe nakizwaga",
+  "slug": "sinzibagirw-igihe-nakizwaga",
+  "uuid": "ff9c53d9-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/sinzibagirw-igihe-nakizwaga/ff9c53d9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Sinzibagirw' igihe nakizwaga,",
+        "Ubwo Yesu yinjiraga muri jye.",
+        "None mu mutima wanjye huzuye Ishimwe",
+        "nshimir' Umukiza wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "N'igitangaza, n'igitangaza pe, Kuko nahaw' agakiza ku buntu. N'igitangaza,",
+        "n'igitangaza, Jye mu nyabyaha nahaw' agakiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu magana menshi y'abanyabyaha,",
+        "Yantoranijemo ngo mb' inshuti ye.",
+        "Narabohowe ndamuririmbira,",
+        "Zaburi nyinshi mu mutima wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Koko yamfiriye ku musaraba,",
+        "Ng' umutima n'umubiri bikizwe.",
+        "N'urukundo n'ubuntu butangaje,",
+        "Byatumye yitangir' umunyabyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Namanukiwe n'Umwuka w'lmana,",
+        "Anyuzuzamw urukundo rukwiye.",
+        "Nuzuy' impundu mu mutima wanjye,",
+        "Abatirish' imbaraga z'ijuru."
+      ]
+    }
+  ]
+}

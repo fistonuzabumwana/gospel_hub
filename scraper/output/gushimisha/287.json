@@ -1,0 +1,49 @@
+{
+  "number": 287,
+  "book": "Gushimisha",
+  "title": "Yes' azaganz' ibihugu byose",
+  "slug": "yes-azaganz-ibihugu-byose",
+  "uuid": "ff9895cc-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/yes-azaganz-ibihugu-byose/ff9895cc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' azaganz' ibihugu byose ,Iyo biva bikagera. Ndetse n'iyi si yos' izab' ubwami bwe, Ari we Mwami w' abami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Bazamusenga badacogora;Bazamusingiz' iteka. Izina rye  rizababer' impumuro,",
+        "Ikwire mw is' isandare."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Twihute, twamamaz' ibye hose,Mu moko yose yo mw isi, Ngw indimi zose zizavug’ ishimwe rye, Zemere yukw ar' Umwami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ku ngoma ye, n' amahirwe masa: Imboh' arazibobora, Kand' abakene na b'",
+        "akabakenura, Indushy' akaziruhumu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nimuze mwese, mwa byaremwe mwe Mwubah' Umwami w'abami; Nam we",
+        "bamarayika, turirimbane, Tut' Urakaz' uhimbazwe"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "number": 2,
+  "book": "Agakiza",
+  "title": "Nari naramenyerey' ibyaha.",
+  "slug": "nari-naramenyerey-ibyaha",
+  "uuid": "ff9c44ff-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nari-naramenyerey-ibyaha/ff9c44ff-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nari naramenyerey' ibyaha.",
+        "Sinari nz' ijambo ry'Umukiza. Sinari nz' inkoni yakubiswe Kubera jye we."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' Umwami yarambabariye. Yankuyehw ibyaha byanjye byose. Non' ubu",
+        "ndamushimira cyane Umusaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ubgo numvag' ijambo rye ryiza, Nararize mu mutima wanjye. Mperako meny'",
+        "imibabaro ye, Yatewe nanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes'Umwami n'Umukiza wanjye, Ni we zuba ndetse n'ubugingo. Ndu- shaho",
+        "kujya muhimbariza Wa musaraba."
+      ]
+    }
+  ]
+}

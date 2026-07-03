@@ -1,0 +1,56 @@
+{
+  "number": 190,
+  "book": "Gushimisha",
+  "title": "Iyo turi hamwe n'Umukiza wacu",
+  "slug": "iyo-turi-hamwe-numukiza-wacu",
+  "uuid": "ff956cb0-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/iyo-turi-hamwe-numukiza-wacu/ff956cb0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Iyo turi hamwe n'Umukiza wacu,  Atuyobor' inzira nziza. abamwiringira, bakamwitondaho Ni bo banyamahoro basa."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "jy'umwizera, Kandi jy'umwumvira ! Ng' ujy'unyurwa na Yesu Mu kubaho kwawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "ntihakingirizwa, nta gicu gikuba : Byeyurwa no kuboneka kwe. nta shavu, nta",
+        "bwoba, bona n'igishyika, Tumwiringiye, tumwumvira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "iy'inzar' iteye n'ubukene buje, Aduhembur' ibihe byose Ntabwo n'amakuba",
+        "yadukomerera, Tumwiringiye, tumwumvira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ntitwakwiyungura kugir' ibyishimo, Tutazinutsw' ibyaha byose, Kukw imbabazi",
+        "ze n'imigish' afite Bigir' umwizer' amwumvira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Tuzajya twishima, turi kumwe na We,Tuzagendana na W' iteka, Tumugandukiye,",
+        "ngw adutume hose, Tumwiringiye, tumwumvira."
+      ]
+    }
+  ]
+}

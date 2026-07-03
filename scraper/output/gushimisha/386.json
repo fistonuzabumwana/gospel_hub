@@ -1,0 +1,51 @@
+{
+  "number": 386,
+  "book": "Gushimisha",
+  "title": "Ntukajy'urambirwa ku mwizera",
+  "slug": "ntukajyurambirwa-ku-mwizera",
+  "uuid": "ff9aeb6c-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/ntukajyurambirwa-ku-mwizera/ff9aeb6c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ntukajy'urambirwa  ku mwizera,",
+        "nabo wababazwa  n'iby'umubiri.",
+        "dor'agufitiye  ikamba ryiza pe,",
+        "ikamba ryiza pe, ritangirika."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "yemwe mwa nshuti mwe  mwicogora",
+        "igihe ni gito tukaruhuka.",
+        "tuzajya mw'ijuru tube tutagipfa:",
+        "twitange noneho   twe gucogora!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "isi y'umwijima  izashira.",
+        "ntabwo tuzongera  no kubabazwa.",
+        "tuzaka nk'izuba,turabagirana,",
+        "turebe cya giti cy'ubugingw'i we."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "nuko mwa nshuti mwe,  mwibabara.",
+        "naho mwarambirwa n'iby'iyi si mbi",
+        "tuzumv'impundu'ubwo,ni dutabaruka;",
+        "ni bwo tuzashira umubabaro."
+      ]
+    }
+  ]
+}

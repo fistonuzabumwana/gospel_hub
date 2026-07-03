@@ -1,0 +1,51 @@
+{
+  "number": 99,
+  "book": "Agakiza",
+  "title": "Nshatse kugukurikira Buri munsi",
+  "slug": "nshatse-kugukurikira-buri-munsi",
+  "uuid": "ff9e941f-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nshatse-kugukurikira-buri-munsi/ff9e941f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nshatse kugukurikira Buri munsi , Mwami Yesu.",
+        "Mu gihe cy' umunezero Ndetse no mu mubabaro.",
+        "Ubwo watubanjirije tuje tugukurikiye.",
+        "Tuzi rwose k'uri hafi yo kutugeza mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Sinahora mbaririza Urugendo rwawe Yesu,",
+        "Cyangwa se ngo nshidikanye Kugukurikira, Yesu.",
+        "Umurimo wanjye n'uwo Kugukurikira Yesu,",
+        "No gukomez' iyo nzira nk' uko wayimenyesheje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu gihe hagiz' icyaza Kikantesh' inzira yawe,",
+        "Cyangwa kikandemerera Mur' urwo rugendo mfite,",
+        "uzaz' uc' uwo mugozi Uzab' umbeshy' umutima",
+        "Nezezwa no kubohorwa Nkabon' uko ngukorera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Urandinde, Mwami Yesu, Ntunganiriz' imigambi.",
+        "Niba naniw' u rugendo Uzanyibuts' urukundo",
+        "Uti Ngwino, mwana wanjye,Hasigay' u mwanya muto,",
+        "Kuk'uzahozw' ibyo byose Ugez' iwanjye mw ijuru."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "number": 27,
+  "book": "Agakiza",
+  "title": "N'inkuru nziza kur' uyu munsi",
+  "slug": "ninkuru-nziza-kur-uyu-munsi",
+  "uuid": "ff9cd03f-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ninkuru-nziza-kur-uyu-munsi/ff9cd03f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "N'inkuru nziza kur' uyu munsi,",
+        "Ibayobora gusang’ Imana.",
+        "Abari hafi n'abari kure,",
+        "Mwese nimuze rnukizwe nayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Munyabyaha we, ngwino ningoga!",
+        "Yesu ni w' ushaka kugukiza.",
+        "Reka gutinda cyane mu byaha,",
+        "Uyu n'umunsi wakirizwamo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kuki wahunze Yesu Mukiza,",
+        "Kandi yagucunguj' amaraso.",
+        "Jy' ureka kumuhungira kure",
+        "Wigir' inama yo kugaruka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mur' ibyo byaha, nta munezero",
+        "ugukwiriye uzahabona.",
+        "Keretse Yesu ni w'ushobora",
+        "Kunezez' uwo mutima wawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Birashoboka ko twanezerwa,",
+        "Mu bihe byose no mu makuba.",
+        "Ni k'umukristo w'ukur' ameze,",
+        "Azanezerwa iteka ryose."
+      ]
+    }
+  ]
+}

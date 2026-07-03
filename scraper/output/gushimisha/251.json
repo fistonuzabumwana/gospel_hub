@@ -1,0 +1,81 @@
+{
+  "number": 251,
+  "book": "Gushimisha",
+  "title": "Munsi y’Umusaraba",
+  "slug": "munsi-yumusaraba",
+  "uuid": "ff9708b7-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/munsi-yumusaraba/ff9708b7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Munsi y’Umusaraba",
+        "W’Umukiza Yesu",
+        "Ni ho nifuza rwose",
+        "Guhora mpagaze",
+        "N’ibuye ry’igitare",
+        "Rimber’ igicucu",
+        "Rinkiz’ impagarara",
+        "Mu rugendo rwanjye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uwo Musaraba we",
+        "Wabay’ ihuriro",
+        "Ry’ukuri n’urukundo",
+        "By’Iman’ ihoraho",
+        "Unyibutsa za nzozi",
+        "Yakobo yarose",
+        "Umbereye nk’urwego",
+        "Rugenza mw’ ijuru"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Hirya y’Umusaraba",
+        "Mbonay’ umworera",
+        "N’umunwa w’i kuzimu",
+        "Wakamw’ umuriro",
+        "Nyamar’ imbere yawo",
+        "Har’ Umusaraba",
+        "Uteze nk’amaboko",
+        "Ng’unkize, ntagwayo"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kur’ uwo musaraba",
+        "Ndasa n’ushobora",
+        "Kureba yesu abambwe",
+        "Ari jy’ apfiriye",
+        "Ndatangaye Mukiza",
+        "Ntiwar’ ukwiriye",
+        "Kungirir’ iryo bambe",
+        "Jye waguhemuye!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Munsi y’Umusaraba",
+        "Nzagumay’ iteka,",
+        "Naho nabur’ ibyanjye",
+        "Nywubonamw’ inyungu",
+        "Nta soni mfit’ uretse",
+        "Iz’ ibyaha byanjye",
+        "Nzajya nirata gusa",
+        "Uwo Musaraba!"
+      ]
+    }
+  ]
+}

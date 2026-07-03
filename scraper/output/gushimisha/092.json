@@ -1,0 +1,45 @@
+{
+  "number": 92,
+  "book": "Gushimisha",
+  "title": "Ushimwe, Mana , ko wampaye Yesu",
+  "slug": "ushimwe-mana-ko-wampaye-yesu",
+  "uuid": "ff92622a-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/ushimwe-mana-ko-wampaye-yesu/ff92622a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ushimwe, Mana , ko wampaye Yesu. Akankirish’ urupfu rw' akanzukira."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Haleluya, Nyirigira ! Haleluya  Amen! Haleluya, Nyirigira ngwino umpembure!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yankirishjje wa Musaraba we, Singicirwahw iteka ku’bw' amaraso."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nar' uwo gupfa, Yes' aransimbura. ibicumuro byamye ni byo yazize !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ngwin' umpembure! maramw ubukonje !Ats' umurir' ubu mu mutima wanjye !"
+      ]
+    }
+  ]
+}

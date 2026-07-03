@@ -1,0 +1,49 @@
+{
+  "number": 230,
+  "book": "Gushimisha",
+  "title": "Umv' intumwa zo mw’ ijuru",
+  "slug": "umv-intumwa-zo-mw-ijuru",
+  "uuid": "ff966ffc-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/umv-intumwa-zo-mw-ijuru/ff966ffc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umv' intumwa zo mw’ ijuru Ziririmbira Yesu. Ziti Iman’ ishimwe cyane : Amahor’ a be mw’ isi: Kuk’ Umwana way’ avutse Uzakiz' abanyabyaha; Yesu n' Umukiza wacu : Yaje kuducungura."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umv’intumwa zo mw ijuru Ziririmbira Yesu:"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nubwo mu kiraro cy'inka,Arimo wavukiye, Ur’ Iman’ isumba byose: Twese",
+        "tugusingize.  Tugushime cyane,Yesu : Ur’ Iman’ uri n'umuntu .Ur’ Imanuweli wacu : Imana turi kumwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ur' izuba rituvira,Ur' amahoro yacu; Wemeye kuva mw ijuru.ub' umuntu wo",
+        "gupfa. Watuzaniy’ ubugingo,Ngo tukwizere, tubeho. Tunezererw’ uyu munsi Ko",
+        "duhaw’ Umukiza,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nuko amoko yos’ ashime Krist' Uwera w'Imana. Hose hose bumvikane  Indirimbo",
+        "z'ishimwe Amahoro nabe mw isi, Kuk’ Umwami Yes’ avutse. Yesu ni We Nshuti yacu, N’ Umuvunyi duhawe"
+      ]
+    }
+  ]
+}

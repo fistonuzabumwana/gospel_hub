@@ -1,0 +1,74 @@
+{
+  "number": 434,
+  "book": "Gushimisha",
+  "title": "Abo mur'iyi si mbi",
+  "slug": "abo-muriyi-si-mbi",
+  "uuid": "ff9c2bdf-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/abo-muriyi-si-mbi/ff9c2bdf-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Abo mur'iyi si mbi Bifuza kwinezeza, Kand' iteka bifuza Icyubahiro."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Twebwehw abakijijwe Tubaburire"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Bishwe n'Umurimbuzi, Abagir' imbata ze, Yanga ko bameny' uko Yes' abatura."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Igomwa rya Satani, Ajya yoshy' abantu be Abahemukir' atyo, Akabata pe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Naho bamutakira, Ntabwo yabarengera; No ku munsi w'imanza Ntazabafasha !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ajy'ashuk' abant' atyo, Ngw abate mu muriro, Ngw atebon' iryo shyano,Ari",
+        "wenyine."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mana, turakwinginze, Ubahumur' amaso, Ngo bahung' umuriro, Bagutakire !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Wa Mukiza wacu we, Umva, turakwinginga : Ngwin' utwigishe neza Kubaburira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Nuko, turabinginze, Uk' Umwuka w'Imana Abategetse kose,"
+      ]
+    }
+  ]
+}

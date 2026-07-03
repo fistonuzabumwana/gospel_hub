@@ -1,0 +1,50 @@
+{
+  "number": 46,
+  "book": "Gushimisha",
+  "title": "Unjy' imbere, Man’ isumba byose",
+  "slug": "unjy-imbere-man-isumba-byose",
+  "uuid": "ff910e0f-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/unjy-imbere-man-isumba-byose/ff910e0f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Unjye imbere, Mana isumba byose,",
+        "Njye ndi umunyantege nke.",
+        "Muri iyi si ko ndi umwimuikira,",
+        "Ntagufite, nagera he?",
+        "Unjye imbere, unjye imbere,",
+        "Mbera ingabo inkingira.",
+        "Yesu umbere Ingabo inkingira"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwami undudubirizemo isoko",
+        "Y'amazi y'ubugingo.",
+        "Unyoboze umuriro n'igicu",
+        "Mu nzira injyana mu ijuru.",
+        "Mbera impamba, mbera impamba",
+        "Ijya intunga mu nzira,",
+        "Ijya intunga ngana mu ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni ngera ku nkombe ya rwa Ruzi,",
+        "Uzampe gutinyuka",
+        "Amazi maremare y'urupfu,",
+        "Nyambuke, ngere mu ijuru.",
+        "Nzaririmba, nzaririmba",
+        "Indirimbo z'ishimwe,",
+        "Indirimbo zigusingiza."
+      ]
+    }
+  ]
+}

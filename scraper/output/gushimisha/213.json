@@ -1,0 +1,36 @@
+{
+  "number": 213,
+  "book": "Gushimisha",
+  "title": "Harihw indi s’irut’ iyi cyane",
+  "slug": "harihw-indi-sirut-iyi-cyane",
+  "uuid": "ff95fcc7-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/harihw-indi-sirut-iyi-cyane/ff95fcc7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Harihw indi s’irut’ iyi cyane :",
+        "Ni nziza, ni nziza  Ntiyagerwaho, n’ ikibi cyose :",
+        "Ni nziza, ni nziza !",
+        "Ni ho tuzajya kubw’ Umukiza! Baduherey’inanga nziza nshya,Ducurangane n’abamarayika: lyo si ni nziza ."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kandi nta mwijim’uriyo rwose: lyo si ni nziza !Nta mubabaro, nta muborogo: lyo sini nziza !Banywa ku mugezi w'ubugingo, Kandi bareb'uwabapfiriye, Bakishimir’ ubwiza bwe bwinshi : lyo si ni nziza !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubw' ibyaha byacu bikabije Kandi bigwiriye, Umukiza yaradupfiriye Ngo",
+        "tubikurweho.Nukw abizey' Umukiza twese, Tuzatunganywa n'urwo rupfu rwe, Kandi nyuma tuzImana na We iyo si ni nziza!"
+      ]
+    }
+  ]
+}

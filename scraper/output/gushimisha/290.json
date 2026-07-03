@@ -1,0 +1,41 @@
+{
+  "number": 290,
+  "book": "Gushimisha",
+  "title": "Ijambo ryaw' urimfungurire",
+  "slug": "ijambo-ryaw-urimfungurire",
+  "uuid": "ff98b34a-0670-11ea-9a58-deadbe058832",
+  "category": "Igitabo cy'Imana",
+  "url": "https://indirimbo.com/gushimisha/ijambo-ryaw-urimfungurire/ff98b34a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ijambo ryaw' urimfungurire , Nkuko wahagije bya bihumbi, Yes' ubasaturiy' umutsima, Nonub' umpaze nanjy' undengere."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni Wowe mutsima w'ubugingo; Nkizwa n'ijambo ryawe ry'ukuri. Rimber' ifunguro ry'umutima, Nkunde n'ukuri kwaw’ unyeretse."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes' ump' Umwuka waw' andengere, Ankore no ku maso, mpumuke. Mbon'",
+        "ibihishwe by'ijambo ryawe, Nawe, nkubonemo, Mucunguzi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Icyo gitab' ukimpishurire, Kinshinj' ibyaha byanjye, nkwizere, Niho nabaturwa,",
+        "nkabohorwa,Ni hw amahoro yawe yanzaho !"
+      ]
+    }
+  ]
+}

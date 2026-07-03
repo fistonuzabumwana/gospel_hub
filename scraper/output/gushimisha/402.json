@@ -1,0 +1,36 @@
+{
+  "number": 402,
+  "book": "Gushimisha",
+  "title": "Ijwi ryumviswe n'abantu",
+  "slug": "ijwi-ryumviswe-nabantu",
+  "uuid": "ff9b4532-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/ijwi-ryumviswe-nabantu/ff9b4532-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ijwi ryumviswe n'abantu Ribatunguye, riti: Shimwa, Mana : kuzwa mw isi. Amahor' abe bose! Mbes' izo ndirimbo twumva Zitangaza n' iza he ?",
+        "Bungeri, n' abamalayika Bababwir'Ubutumwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uw’ iyi si yatabaje Kuko yagwij' ibyago, Kuv' igihe yikoreye Umutwaro w'ibyaha,",
+        "Umukiza wahanuwe Wadusezeranijwe, Uwiringirwa byukuri Non' aratuvukiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Shimwa, Mana ! Kuzwa mw isi !  Amahor' abe hose !Urukundo n'amahoro",
+        "Biraduhishuriwe. Hamwe n'Intumwa z'Imana,Twese turangurure, Dushime no",
+        "gushimisha Impano y'Umukiza."
+      ]
+    }
+  ]
+}

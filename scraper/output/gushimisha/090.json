@@ -1,0 +1,56 @@
+{
+  "number": 90,
+  "book": "Gushimisha",
+  "title": "nari kure y'imana mungoyi",
+  "slug": "nari-kure-yimana-mungoyi",
+  "uuid": "ff9251a1-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/nari-kure-yimana-mungoyi/ff9251a1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nari kure y'lmana mu ngoyi, Ntazi ko naboshywe; Mbohorwa n'amaraso ya Yesu, Ngez’ i Goligota."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Shimwa Gologota !Shimwa Gologoto ! Ni hw ibyaha byanjve byankuriweho.",
+        "Shimwa Gologota."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu ni we wankuye mu mbohe !Njye muririmbira,  Indirimbo nshya nziza",
+        "yampaye; Ngez' i Gologota !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yahamperey' Umwuka hw ingwate,Mwakira nishimye. Yemeye no kumba mu",
+        "mutima, Ngez'i Gologota."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ngwino, sang' Unwkiza, mugenzi Nukw akubohore.Yesu  yahaniw' abanyabyaha",
+        "Rimw' i Gologota."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Genda umusangeyo! Gend' umusangeyo, Ahw ibyaha byanjye nabyogerejwe  Gend’umusangeyo"
+      ]
+    }
+  ]
+}

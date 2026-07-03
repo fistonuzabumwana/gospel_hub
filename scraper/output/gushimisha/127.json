@@ -1,0 +1,48 @@
+{
+  "number": 127,
+  "book": "Gushimisha",
+  "title": "Numvis’ijwi ryawe",
+  "slug": "numvisijwi-ryawe",
+  "uuid": "ff937ec3-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitaba Yesu",
+  "url": "https://indirimbo.com/gushimisha/numvisijwi-ryawe/ff937ec3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "b.",
+        "Numvis’ijwi ryawe, Yesu, ndagusanze, Ndaje, Mucunguz' unyoze Mu maraso yawe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mwami w'abami  waaramfiriye.Nje gupfa hamwe nawe, Ye, ku Musaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Numvis' ijwi ryawe, Riti: Nyizigira ! Unkomereze kwizera, Kandi, tugumane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Numvis' ijwi ryawe Ryinjiiye muri jye, Rimbwiriza kujya nkunda Nkuko naw'",
+        "unkunda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Numvis' Ijwi ryawe,Wowe, wamfiriye! Mwami, mbane naw' iteka; Ni Wow'",
+        "unyizeza."
+      ]
+    }
+  ]
+}

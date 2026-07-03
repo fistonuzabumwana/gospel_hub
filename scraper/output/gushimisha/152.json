@@ -1,0 +1,41 @@
+{
+  "number": 152,
+  "book": "Gushimisha",
+  "title": "Har' umukunzi nka Yesu wacu",
+  "slug": "har-umukunzi-nka-yesu-wacu",
+  "uuid": "ff943ca9-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/har-umukunzi-nka-yesu-wacu/ff943ca9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Har' umukunzi nka Yesu wacu? Oya ye, nta n'umwe! Nta n'udukiz' ubumuga nka We: Oya ye, nta n'umwe !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' az' ibiturushya byose; Atuber' umuyobora. Har' umukunzi nka Yesu wacu?",
+        "Oya ye, nta n'umwe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Har' und’ utungan' akera nka We? Oya ye, nta n'umwe! Nyamara nta wiyoroshya",
+        "nka We:Oya ye, nta n'umwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nta munsi n'umw' adusigirira; Oya ye, na hato !Haba n'ijoro tutaba kumwe, Oya",
+        "ye, na hato !"
+      ]
+    }
+  ]
+}

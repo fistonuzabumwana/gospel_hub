@@ -1,0 +1,42 @@
+{
+  "number": 228,
+  "book": "Gushimisha",
+  "title": "Bahungu, bakobwa",
+  "slug": "bahungu-bakobwa",
+  "uuid": "ff9663bd-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/bahungu-bakobwa/ff9663bd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Bahungu, bakobwa,—Nimuze mwese I Betelehemu—Mu ruhongore; Tureb' ibyo Data—Uri mw ijuru Yaduhaye twese— Mur'iri joro !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Hamwe n'abashumba,—Dushim’umwami Uryamye mu byatsi—Nk'uworoheje.",
+        "Dusang’ ababyeyi—Banezerewe; Duhuzen'Intumwa—Kumusingiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nimupfukamire—Umwami mwiza Uduh’ ubugingo,—Mumuhimbaze ! Muvuze",
+        "n'impundu—Hamwe n'Intumwa; Mubwire n'abandi—Ibyo mwabonye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Twese tumushime,—Wa Mwami mwiza t Tumuhimbarize—Kukw adukunda.",
+        "Dufatanye twese,—Tuvuz’ impundu, Ngw abatamumenye—Baze gukizwa."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "number": 220,
+  "book": "Gushimisha",
+  "title": "Ubwo nzabon’ Umukiza",
+  "slug": "ubwo-nzabon-umukiza",
+  "uuid": "ff9620a7-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/ubwo-nzabon-umukiza/ff9620a7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubwo nzabon’ Umukiza Ntumbira mu maso he, Nzanyurwa mmwitegereje, Ari We wamfiriye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nzamubona, Yes' Umwami, Turi kumwe mw ijuru : Nzamwirebera mu maso,",
+        "Njye mmusingiz' iteka!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nkiri mw isi mu mubiri, Mbur' uko mwirebera. Urya muns' urenda kuza, Mbon'",
+        "ubwiza bwe bwinshi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Amakub' azab' ashize, Nta byaha, nta mwijima : Ibigande biganduwe, Tuzishim'",
+        "imbere ye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni mwirebera mu maso, Nzicwa n'umunezero. Nzamumeny' Uwo wankunze, Akaz'akanshungura"
+      ]
+    }
+  ]
+}

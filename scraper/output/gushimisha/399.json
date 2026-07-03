@@ -1,0 +1,49 @@
+{
+  "number": 399,
+  "book": "Gushimisha",
+  "title": "Iyi si turimo",
+  "slug": "iyi-si-turimo",
+  "uuid": "ff9b337e-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/iyi-si-turimo/ff9b337e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Iyi si turimo—N' iy'ibyago N'iy'umubabaro—N'amakuba; Isi nshya tujyamo, Yo n' iy'igikundiro N'iy'umunezero—N'amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kukw ari ho Yesu—Atunganya, Ari hw azajyana—Abantu be.Abo yikurive Mu bise by'urupfu rwe, Abo yikirije,—Bakab' abe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yemw' abakijijwe—N'amaraso. Mwaneshej' ibyaha—Kubwa Yesu,Muhore",
+        "mukunda Umuremyi w'ijuru, Muhore mwifuza—Kuzabayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nimuze, twibuke—Ababayo : Nta byaha bagira; n' ab'Imana.Natw' abakijijwe",
+        "Dukund' Umucunguzi, Tunezerenye ko—Tuzab' i We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nimuze, tugire—Umutima Uzinukw' iyi si—y'umwijima, Kukw abari mw isi Bataz'",
+        "Umucunguzi, Batandukanijwe—N'Uwiteka."
+      ]
+    }
+  ]
+}

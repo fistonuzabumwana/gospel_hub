@@ -1,0 +1,71 @@
+{
+  "number": 243,
+  "book": "Gushimisha",
+  "title": "Umunyamibabaro ni izina rintangaza",
+  "slug": "umunyamibabaro-ni-izina-rintangaza",
+  "uuid": "ff96c7b6-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/umunyamibabaro-ni-izina-rintangaza/ff96c7b6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umunyamibabaro",
+        "ni izina rintangaza",
+        "Ry’Umwana w’Uwiteka:",
+        "Tumushime, n’ Umukiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yemeye guhemurwa",
+        "No gushinyagurirwa,",
+        "Apfir’ abanyabyaha:",
+        "Tumushime,n’Umukiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Twatsinzwe n'urubanza :",
+        "We nta kibi yakoze ?",
+        "Yatuberey’inshungu :",
+        "Tumushime,n’Umukiza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Abambwe, yarangije",
+        "Ibyo kuducungura,",
+        "Ati: Birarangiye!",
+        "Tumushime, ni Umukiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Avuye mu gituro,",
+        "Ajya mw' ijur' ariho,",
+        "Yicaranye n'Imana",
+        "Tumushime, ni Umukiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Kandi ubwo azagaruka",
+        "Ngw' atujyane mw' ijuru",
+        "Tuzaririmba tuti",
+        "Tumushime, ni Umukiza!"
+      ]
+    }
+  ]
+}

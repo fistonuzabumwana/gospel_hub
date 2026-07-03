@@ -1,0 +1,42 @@
+{
+  "number": 46,
+  "book": "Agakiza",
+  "title": "Yes' ubu tukuragij' uyu mwana.",
+  "slug": "yes-ubu-tukuragij-uyu-mwana",
+  "uuid": "ff9d4abd-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yes-ubu-tukuragij-uyu-mwana/ff9d4abd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' ubu tukuragij' uyu mwana.Turakwinginze umuturerere. No kubw'ubuntu bwawe, buri munsi Umuduher' umugisha, Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mw isi. huzuyemw ibigusha byi nshi. Harimw ibyago byinshi bidu tega. Ub'",
+        "umwungeri w'uyu mwana, Yesu.Umuyobore, umuber' inshuti."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu, kubw' urukund' umukome ze. Mufashe ntananirirwe mu nzira. Kand'",
+        "umurinde kubw' ubuntu bwawe. Ahore mu mahoko yawe Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Umwohererez' umucyo w'ubu ntu. Umuh' amazi yawe y'ubugingo. Turakwinginga",
+        "cyane Mwami Yesu: Rindir' umwana wacu mu mahoro."
+      ]
+    }
+  ]
+}

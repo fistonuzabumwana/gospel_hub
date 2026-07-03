@@ -1,0 +1,77 @@
+{
+  "number": 80,
+  "book": "Gushimisha",
+  "title": "Mwa bitang' igicuri mwe",
+  "slug": "mwa-bitang-igicuri-mwe",
+  "uuid": "ff920255-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/mwa-bitang-igicuri-mwe/ff920255-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwa bitang' igicuri mwe, Muyoberw' umusaraba, Turababwira turira Yuko mubabaza Yesu."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mpisemo guhora nkizwa,Ngashingwa mu gakiza ke;Sinzava mu gakiza ke"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwa barets’ ubugingo mwe, Mukabuguran' iby'isi, Ubw’ ibyo bizabora se",
+        "Muzakuramo ndamu ki ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwa barets’ igihugu mwe, Cyuzuy' ubuki n'amata, Mukimiranye vuba ye,",
+        "Musubiye mw Egiputa !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "yemwe abavug' inkurumbi cya gihugu Siyoni,  mwit’ amananiza bshoboker'",
+        "uwizeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Dor’ amaraso ya Yesu ;ni  mo dukirizw’ ibyaha, Ngwino, dusubiraneyo, Tugere ku Musaraba !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Yemwe bakunzi ba Yesu, Mwihane, ye kubabara ! Mumaramaze kwitanga, Igihe ni kigufi pe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Mwa batuy'imitwaro mwe, Ko mugifit'ingata se ? Turababwira turira Ko muri",
+        "kure ya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Muze, musange Krisito, Ku ntebe ye y'imbabazi, Dor' abategerej' ubu ; Muz' arabababarira !"
+      ]
+    }
+  ]
+}

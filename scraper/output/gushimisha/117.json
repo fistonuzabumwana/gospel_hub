@@ -1,0 +1,33 @@
+{
+  "number": 117,
+  "book": "Gushimisha",
+  "title": "Numvise Yes'ambwir'ati",
+  "slug": "numvise-yesambwirati",
+  "uuid": "ff9316fb-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/numvise-yesambwirati/ff9316fb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Numvise Yes'ambwir'ati: ngwino nkuruhure.zana ibyo bikuruhije,mbikwikorerere!musang'uko nari nd'uko;ndushye mfite ishavu;ambera uburuhukiro,ampa umunezero."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Numvise Yesu ambwira ati:nguherey'ubuntu amaz'azan'ubugingo, unyw'uram'iteka.njy'aho ari,nywa nezerewe kuri ayo mazi ye umutima ushira inyota,mpabwa ubugingo bwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Numvise Yesu ambwira ati :ni jye mucyo w'isi.wavukiye mu isi,wavukiye mu",
+        "mwijima,ngwin'umurikirwe.ndebye kuri Yesu mbona ko ari izuba ryanjye rizamvira iminsi yose y'ubugingo bwanjye."
+      ]
+    }
+  ]
+}

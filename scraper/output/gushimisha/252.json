@@ -1,0 +1,38 @@
+{
+  "number": 252,
+  "book": "Gushimisha",
+  "title": "Yes' Umucunguzi",
+  "slug": "yes-umucunguzi",
+  "uuid": "ff971361-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/yes-umucunguzi/ff971361-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' Umucunguzi—Yashyizwe mu mva; Yategerezaga—Igihe cye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ku wa gatatu arazuka, Az' atsinz' urupfu n'Umubi: Ava mu mwijima yabinesheje. Yimanye mw ijuru n'abacunguwe.Yarazutse ! Yarazutse ! Tumushime ! Ariho !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Barindiy' ubusa—Umwami wacu; Bakingiy' ubusa—Cya gituro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ingoyi z'urupfu—Yaraziciye, Ntizarnuheranye :—Yavuyemo !"
+      ]
+    }
+  ]
+}

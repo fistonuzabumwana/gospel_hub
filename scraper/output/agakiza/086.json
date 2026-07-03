@@ -1,0 +1,51 @@
+{
+  "number": 86,
+  "book": "Agakiza",
+  "title": "Uduh' Umwuka wawe",
+  "slug": "uduh-umwuka-wawe",
+  "uuid": "ff9e3c14-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/uduh-umwuka-wawe/ff9e3c14-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uduh' Umwuka wawe, Mana Yera, Nk'uko wawohererej' aba kera.",
+        "/:Ucan' umuriro wawe muri twe Ntidukomeze kub' abazuyazi:/"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uduh' Umwuka wawe, Mana Yera, Nk'uko wabigenje kuri wa munsi.",
+        "/: Intumwa peter'ubgo yigishaga, Yigishiriza munzu ya Kornelio:/"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uduh' Umwuka wawe, Mana Yera, uduhe Pentekote yacu none!",
+        "/:Abanyabyah'ibihumbi bakizwe Ijambo ryawe ribashe kogera:/"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uduh' Umwuka wawe, Mana Yera, Uturamburireh'amaboko yawe",
+        "/: Ukor'ibitangaza byawe, Mana, Ndets'abarwayi nabo ubakize:/"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Abasinziriy'ubakangure Cyane cyan'abarushye mu rugendo",
+        "/: Mwami dusange nko kuri wa munsi Ubwo wuzuzag'abigishwa bawe:/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "number": 37,
+  "book": "Agakiza",
+  "title": "Nubw' ugeze mu magorwa",
+  "slug": "nubw-ugeze-mu-magorwa",
+  "uuid": "ff9d1eee-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nubw-ugeze-mu-magorwa/ff9d1eee-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nubw' ugeze mu magorwa, wizere, wizere. Iman' izabitunganya nib' uyizeye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Niba wizey' Ihoraho, Izabigu fashamo. Izakor' ibitangaza, Niba wizeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nib' ufit' umubabaro, wizere, wizere. Uzahozwa n'lhoraho, Niba wizeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "N'ubon' ibigerageza, wizere, wizere. Wemere yuk' ubinesha, Niba wizeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nib' uzi k'uri wenyine, wizere, wizere. Yes' azab' akuri hafi, niba wizeye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nib' urushye mu rugendo, wizere, wizere. Niy' izatungany' inzira, nib' uyizeye."
+      ]
+    }
+  ]
+}

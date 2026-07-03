@@ -1,0 +1,60 @@
+{
+  "number": 150,
+  "book": "Gushimisha",
+  "title": "Nishimiye ko Data wa twese",
+  "slug": "nishimiye-ko-data-wa-twese",
+  "uuid": "ff942f3e-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/nishimiye-ko-data-wa-twese/ff942f3e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nishimiye ko Data wa twese",
+        "Yandikishij’ iby'urukundo rwe;",
+        "Mu byiz’ Imana yavuze byose,",
+        "Nta kirut' iki, ko Yesu ankunda."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nishimiye ko Yes' ankunda:",
+        "Arankunda i Arankunda",
+        "Nishimiye ko Yes’ ankunda,",
+        "Nubwo ntakwiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand’ iyo nyobye, nkamushavuza,",
+        "Ntareka kunkunda ntakwiriye;",
+        "Kand’ ikinsubiz’ aho Yes' ari",
+        "Cyane n’ ukwibuk' urukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni ndeb’ ubwiza bwe bwomw ijuru,",
+        "Nzajya ndirimb’ ik’ iteka ryose ?",
+        "Nzajya mmubaza ndirimba ntya, riti",
+        "Yesu, n’iki cyakunkundishije"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand’ urukundo ni rwo rwazanye",
+        "Yesu kunshunguz' urupfu rubi.",
+        "Kokw arankunda, ndabizi neza :",
+        "Nanjye ndamukunda, ndamushima"
+      ]
+    }
+  ]
+}

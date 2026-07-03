@@ -1,0 +1,49 @@
+{
+  "number": 101,
+  "book": "Gushimisha",
+  "title": "Nabony' uburuhukiro",
+  "slug": "nabony-uburuhukiro",
+  "uuid": "ff92ae90-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nabony-uburuhukiro/ff92ae90-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nabony' uburuhukiro Muri Kristo Yesu. Ni We musa nihishemo; Nta handi nizeye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nta wundi wese nizera;Nta kindi nireguza, Keretse Yesu wabambwe, Ari jyew'",
+        "azize."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mpagijwe n'agakiza ke,Nta bwoba ngifite; Yansanze, nd’ umunyabyaha; Maz'",
+        "aranyakira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kand' iyo ndway' aramvura, Nkaba muzima pe; Njya mpeshwa n'amaraso ye",
+        "Ubugingo bushya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mpumurijwe n'ljambo rye,N’ Ijambo ry'Imana; Nkijijwe kubw’ izina rye,",
+        "Singishidikanya."
+      ]
+    }
+  ]
+}

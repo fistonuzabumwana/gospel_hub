@@ -1,0 +1,41 @@
+{
+  "number": 226,
+  "book": "Gushimisha",
+  "title": "Mukiza wacu Yesu",
+  "slug": "mukiza-wacu-yesu",
+  "uuid": "ff965579-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/mukiza-wacu-yesu/ff965579-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mukiza wacu Yesu,tukwakire dute? tukwakire twishimye: ngwin'utwiberemo. wez'imitima yacu ,kand'utumenyeshe ingeso nziz'ukunda n'ibikunezeza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wasiz' ibyawe byose,Uza mur'iyi si, Uraduhumuriza Kuko tubabaye. Nta",
+        "watunyag’ ubwami Bwawe bw'amahoro : Uhor' udutabara, Ukaturokora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "wasanze tur' imbohe,Uratubohora, Twar’ ibisenzegeri, Uraducungura, Ngo tub’",
+        "iritore zawe,Duhoran' iteka, Tubone n'ubugingo Butazarangira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mbe n'iki cyaguteye Kuv’ahw’ Iman’ iri? Nta kindi, n' urukundo N'imbabazi zawe.Ntushak' abanyabyaha Ko bazarimbuka; Byatumy’udutabara,Turababarirwa."
+      ]
+    }
+  ]
+}

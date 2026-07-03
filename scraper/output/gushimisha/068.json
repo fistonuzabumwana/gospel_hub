@@ -1,0 +1,45 @@
+{
+  "number": 68,
+  "book": "Gushimisha",
+  "title": "Nta kindi gihesha gukiranuka",
+  "slug": "nta-kindi-gihesha-gukiranuka",
+  "uuid": "ff91afbd-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/nta-kindi-gihesha-gukiranuka/ff91afbd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nta kindi gihesha gukiranuka Mu b'isi no mu bo mw ijuru, Keretse kwizera ko wogejwe de N'amaraso ya Yesu masa."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Wogejwe na Yesu ? Watunganijwe n'amaraso ? Har' ubwo yakuhagij' amaraso?  Mbes' imyambaro yaw' irera?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Amaraso ya Yesu yogej' atyo Abanduy' imitima yabo: Ntimukererw' ahubwo mutebuke, Mwezw' imitima yanyu neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umukiz' ubw' azagaruk' afite Icyubahiro cy'ubwiza bwe, Abatari bezwa bazinjir' i we Mu birori by' ubukwe bate?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Bazatinya guhinguk' imbere ye, Bazahinduk' ubwoba busa. Nukw iyambur' iyo myambaro mibi Yes' akwambik' iye y'ubukwe."
+      ]
+    }
+  ]
+}

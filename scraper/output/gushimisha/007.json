@@ -1,0 +1,57 @@
+{
+  "number": 7,
+  "book": "Gushimisha",
+  "title": "Dor’abera bo mw ‘ijuru barishimye",
+  "slug": "dorabera-bo-mw-ijuru-barishimye",
+  "uuid": "ff8fe687-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/dorabera-bo-mw-ijuru-barishimye/ff8fe687-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dor’abera bo mw ‘ijuru barishimye",
+        "cyane Baririmbira Yes’iyi ndirimbo nshya."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Bat’Icyubahiro cyose kib’icya Yesu, Wadunz’akatwuhagiz’amaraso."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abo bose bari bandujwe n’ibyaha kera none",
+        "bambay’imyenday’abakijijwe bat’icyubahiro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uwahoz’ar’umugome Yes’amuhindura umutambyi",
+        "w’umwami tumusingize tut’icyubahiro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Iyo Yes’atadukunda turaeozw’ibyaha  tuba twihebye",
+        "rwose twakozwa na non’icybahiro nde?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Turirimbire n’aband’uko yadukijije bibareherez’ahw ari,",
+        "baririmbe bati ’icyubahiro."
+      ]
+    }
+  ]
+}

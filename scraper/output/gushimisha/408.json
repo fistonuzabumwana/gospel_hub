@@ -1,0 +1,52 @@
+{
+  "number": 408,
+  "book": "Gushimisha",
+  "title": "abakijijwe mwese",
+  "slug": "abakijijwe-mwese",
+  "uuid": "ff9b96cd-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/abakijijwe-mwese/ff9b96cd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "abakijijwe mwese,abo dufatanije.muze none twibaze ibyo twakora."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Abakunzi ba Yesu, Nkuko yadukijije, Ni ko bidukwiriye Kwamamaz' ibye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Igihe kizagera, Iman' itwibarize Ab'iwacu mu rugo N'abaturanyi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nuko, tubageremo, Tubabwir' ibya Yesu, Kand' Umwuka w'Imana Adukoreshe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dor' abadakijijwe Baragwiriye base : Bazakizwa bate se, Bataburiwe ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Reka tubasabire, Kandi tubabwirize, Bene wacu bakizwe.Yes' ashimishwe."
+      ]
+    }
+  ]
+}

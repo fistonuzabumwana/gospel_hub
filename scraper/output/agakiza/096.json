@@ -1,0 +1,34 @@
+{
+  "number": 96,
+  "book": "Agakiza",
+  "title": "Mukiza wanjye wagiye mw ijuru",
+  "slug": "mukiza-wanjye-wagiye-mw-ijuru",
+  "uuid": "ff9e8120-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/mukiza-wanjye-wagiye-mw-ijuru/ff9e8120-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mukiza wanjye wagiye mw ijuru Kwicar' iburyo bw'Iman' Ihoraho. Uzagaruka kutureba twese, Utujyane mu bwami bwo mw ijuru.Har' ibyicaro waduteguriye Non' ub' uradutegereje rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu ni wow' uhor' udusabira imbere y'Imana Dat' ihoraho. Uhor' urinda twebw'",
+        "ubushyo bwawe No kudufasha mu bigerageza. Uhor' udusabira buri munsi Ni cyo gitu ma tunesha Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubwo wazamukag' ujya mw ijuru Waramburiy' abawe bya biganza Kandi no mu",
+        "gihe cyo kugaruka Abakwizey' uzabah' umugisha. Uko wagiye ni k'uzagaruka Nkwi ye gusenga ndetse nkaba maso."
+      ]
+    }
+  ]
+}

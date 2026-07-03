@@ -1,0 +1,74 @@
+{
+  "number": 405,
+  "book": "Gushimisha",
+  "title": "Dor' is' ukunt' ikwifuza",
+  "slug": "dor-is-ukunt-ikwifuza",
+  "uuid": "ff9b8313-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/dor-is-ukunt-ikwifuza/ff9b8313-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dor' is' ukunt' ikwifuza:",
+        "Mukiz' iragukumbura !",
+        "Umv' uko bagutakira,",
+        "Ngo n'iki kigutindije ?",
+        "Uzaza ryari, Mucunguzi,",
+        "Wime bwa bwami budashira,",
+        "Ngw ibyaremwe byose byishime ?",
+        "Icyamp’ ukaz’ udatinze !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umwami Yes' ubw' azaza, (X 3)",
+        "Tuzamureba, tunyurwe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Azazana n'ingabo ze,",
+        "Impanda bazivugije,",
+        "Abapfiriye muri We,",
+        "Bazuke, bamusang' ubwo !",
+        "Natw' abazaba bakiriho",
+        "atujyane hamwe na bo,",
+        "Tubane na W’iteka ryose.",
+        "Icyamp' akaz' adatinze!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Satani n'abadayimoni",
+        "Bazahunga mu maso he,",
+        "Ab'isi b'abagurano,",
+        "Azaza ngwababature !",
+        "Kand' amahor' azatwar' isi;",
+        "Azac' intambara, zishire,",
+        "Ahindur’ ibi byose bishya.",
+        "Icyamp' akaz' adatinze !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Bagenzi, tube mas' ubu,",
+        "Duhore tumwiteguye.",
+        "N'ukuri, Databuj' uwo,",
+        "Nta wuz'igih' azazira.",
+        "Nyamar' azaza ku ngoma ye,",
+        "Aya makub' ayamareho.",
+        "Duhumure, dutegereze.",
+        "Icyamp’ akaz’ adatinze!"
+      ]
+    }
+  ]
+}

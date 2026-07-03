@@ -1,0 +1,41 @@
+{
+  "number": 234,
+  "book": "Gushimisha",
+  "title": "Inkuru nziza yavuye mw ijuru",
+  "slug": "inkuru-nziza-yavuye-mw-ijuru",
+  "uuid": "ff968adf-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/inkuru-nziza-yavuye-mw-ijuru/ff968adf-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Inkuru nziza yavuye mw ijuru Yazanywe no kuduhumuriza; Igaragazwa n'Umwami w'urukundo Wavukiy’ abanyabyaha bose"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uwo wa muhanuzi yahanuye,Akamubwiririz’ amahoro, N’ Umwami Yesu watuvukiye twese : Tumuririmbire n'iri joro !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ajy'adutera kwiringira rwose,Adusezeranir' amahoro, N'abafit' imtim, ihagaz'",
+        "iganya, Abibuka ngw abah’ ubugingo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dushinie twes'Umucunguzi wacu Kw atadutinye tw' abanyabyaha! Kand’ubuntu",
+        "bwe budukomeza mw isi. Tumwitabish’ imitim' ikunze;"
+      ]
+    }
+  ]
+}

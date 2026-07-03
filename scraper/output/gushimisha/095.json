@@ -1,0 +1,45 @@
+{
+  "number": 95,
+  "book": "Gushimisha",
+  "title": "Ibyaha byanjye",
+  "slug": "ibyaha-byanjye",
+  "uuid": "ff927ca0-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/ibyaha-byanjye/ff927ca0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ibyaha byanjye, Yesu Yarabyikoreye,W' atigeze gukora Icyaha na kimwe;",
+        "Ndamwegera, ndasenga, Nd' umunyabyaha pe, Nizer' ijambo ry' ati : Urababariwe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Maz' ibindushya byose Ndabimukorera. Nta wand' utari Yesu Wabyihanganira.",
+        "Ndamwegera, njy' ahw ari, Ndushye, ntentebutse, Ndagenda,",
+        "mpaw' intege, Nsindishirijwe pe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nukw amaganya yanjye,Nyakurwaho na We, Nduhukira muri We, Amp' amahoro ye.",
+        "Imanuweli Kristo, Zina rihebuje ! Rimbera nk' imibavu, Ihumura neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Icyampa nkaba nka We,Akamp' ineza ye, N'imbabazi n'ubuntu N'ubugwaneza",
+        "bye.",
+        "Yes' uzampe gutura I wawe mw ijuru, Nkajya ngusingizanya N'abainarayika."
+      ]
+    }
+  ]
+}

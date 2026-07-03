@@ -1,0 +1,43 @@
+{
+  "number": 3,
+  "book": "Gushimisha",
+  "title": "Mwa bari mw isi yose mwe",
+  "slug": "mwa-bari-mw-isi-yose-mwe",
+  "uuid": "ff8fc485-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/mwa-bari-mw-isi-yose-mwe/ff8fc485-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwa bari mw isi yose mwe,Nimuhimbaz' Uwiteka.",
+        "Muhore mumukorera, Kukw ibyo bidukwiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mumenye yuk' Uwiteka Ari we watwiremeye;",
+        "Turi n'intama aragira, Tur' izo mu mukumbi we."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwinjire mu marembo ye, Mugere no mu rugo rwe,",
+        "Muhore mumusingiza, Muhimbaze n'izina rye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        ".Umwam' Imana ni mwiza; Imbabazi n'ubuntu bye",
+        "Iteka bizaboraho; Mwese mushim’ izina rye."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "number": 323,
+  "book": "Gushimisha",
+  "title": "Mana Data wa twese",
+  "slug": "mana-data-wa-twese",
+  "uuid": "ff99859f-0670-11ea-9a58-deadbe058832",
+  "category": "Ubukwe",
+  "url": "https://indirimbo.com/gushimisha/mana-data-wa-twese/ff99859f-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana Data wa twese ,Muremyi wa byose, Kera wateranije Adamu na Eva, Non' aba bana bawe Ubah' umugisha Uva mu buntu bwawe, Baterane neza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu, Mukiza wacu,Wejeje bwa bukwe Bw'i Kana kera, n'ubu Ubah' umugisha.",
+        "Butah' ubwawe, weze Inzu y'aba bantu, Amahor' adashira Ajy' abamw iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwuka w'Imana mwiza, Non' ubahumure, Bareb' u bwiza bwawe N'urukundo",
+        "rwawe Ubarind' amahane Yic' imibanire, Ahubw' ubakoreshe Iby' ushima gusa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ab' ari Wowe, Data, Ububakir' inzu, Kugira ngw ibyishimoByabo bidashira. Wez'",
+        "urukundo rwabo,Ruhorehw iteka, Babane muri Wowe. Bahuj' umutima."
+      ]
+    }
+  ]
+}

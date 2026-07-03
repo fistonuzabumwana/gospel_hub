@@ -1,0 +1,41 @@
+{
+  "number": 3,
+  "book": "Agakiza",
+  "title": "Nari narazimiriye kure",
+  "slug": "nari-narazimiriye-kure",
+  "uuid": "ff9c49b9-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nari-narazimiriye-kure/ff9c49b9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nari narazimiriye kure ,nibagiwe Yesu, Nyuma Yes' ambwiz' ijwi rye, rinzanir' umunezero."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Non' ubu ndanezerewe, Kuko Yesu yantaruye. Aherakw anyoz' ibyaha.",
+        "Niyemeje kumukunda."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Sinajyaga niyibutsa ko nzajy' imbere y'Imana. Ubw' izaducir' imanza, zihwanye",
+        "n'ibyo twakoze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nari narushye mu byaha, nza kugarukira Yesu. Nukw ambwir' ijambo ryiza,",
+        "mperako mbon' amahoro."
+      ]
+    }
+  ]
+}

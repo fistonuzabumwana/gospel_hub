@@ -1,0 +1,67 @@
+{
+  "number": 21,
+  "book": "Agakiza",
+  "title": "Nimuze tureb' imbere",
+  "slug": "nimuze-tureb-imbere",
+  "uuid": "ff9cb051-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nimuze-tureb-imbere/ff9cb051-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimuze tureb' imbere,",
+        "Dutegerez' igitondo.",
+        "Twiringir' Imana yacu,",
+        "Niy' izakor' imirimo.",
+        "Izirukana Satani,",
+        "Izategek' isi yose.",
+        "Tuzanesha ni dusaba,",
+        "Kukw Iman' ijy' itwumvira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Dor'impanda ziravuze,",
+        "Muze twese dukanguke,",
+        "Kukw Imana yac' ishaka",
+        "Yuko twese tub' abera.",
+        "Buri muntu mu Itorero,",
+        "Ab' uwejejwe muri ryo.",
+        "Nshuti, reka kwiganyira,",
+        "Urahabw' imbaraga nshya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Muririmbir' Ihoraho,",
+        "Yes' ari hamwe natw' ubu.",
+        "Tunesh' ibigerageza",
+        "Kubw' imbaraga za Yesu.",
+        "Nimuze tumukorere,",
+        "Tumuh' ubutunzi bwacu.",
+        "Ndets' ubwenge n'umutima",
+        "Bikorer' Umwami Yesu!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Kand' abantu benshi cyane",
+        "Ntibaz' inzira y'ijuru.",
+        "Babohewe mu maboko",
+        "Ya wa mugome Satani.",
+        "Muze twese tubashake,",
+        "Tubasangish' Umukiza.",
+        "Ntiducogore gusenga",
+        "Kugez' ubwo Yes' azaza!"
+      ]
+    }
+  ]
+}

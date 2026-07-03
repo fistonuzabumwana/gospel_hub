@@ -1,0 +1,67 @@
+{
+  "number": 250,
+  "book": "Gushimisha",
+  "title": "Shimwa,Mwami Yesu",
+  "slug": "shimwamwami-yesu",
+  "uuid": "ff970069-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/shimwamwami-yesu/ff970069-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Shimwa,Mwami Yesu,—Ko wamviriye Amaraso yawe—Ku Musaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mur' ayo maraso,—Ni mo mbonera I neza n'ubuntu—No gusugira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umugezi wayo—Ni w' uboncza Abawibiramo,—Ntibarimbuke."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ibuk' ay'Aberi—Ko yatakiye I mana ngw ihore—Uyavushije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nyamar' aya Yesu—Ajy' ansabira Uwitek’Imana—Kumbabarira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Iy’aminjagiwe—K’uwacumuye, Satan’ aratinya,—Agahamuka !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Non’abari mw isi—Tuyasingize ! Namwe mwikirize,—Bamarayika !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Ab’Imana twese—Turangurure, Dushim’ amaraso— Yaducunguye !"
+      ]
+    }
+  ]
+}

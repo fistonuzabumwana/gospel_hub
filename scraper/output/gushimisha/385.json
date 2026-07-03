@@ -1,0 +1,67 @@
+{
+  "number": 385,
+  "book": "Gushimisha",
+  "title": "Murinzi we menyesha igihe",
+  "slug": "murinzi-we-menyesha-igihe",
+  "uuid": "ff9ae3fe-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/murinzi-we-menyesha-igihe/ff9ae3fe-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Murinzi we menyesha igihe",
+        "Iwacu se n’i muhero?",
+        "At’ijoro ryijimye cyane",
+        "Buracya hanyuma",
+        "Ntukarire,ukomeze,",
+        "Nturorere kwiringira",
+        "Kugez’igihe uzagerayo",
+        "Ku muns’uhoraho"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Murwanyi we,cyo mbwira nawe",
+        "Ansubiza yitonz’ati Dore",
+        "urugamba rurashira",
+        "Guma mu ntambara",
+        "Ntubabare wihangane",
+        "wirek’imirimo yawe",
+        "tuzabona igihembo",
+        "cyiza nidutabaruka"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndacyabaza ibyaremwe byose",
+        "Binsubiza bitya biti:",
+        "Iyi si yacu iza gushira",
+        "Haz’ind’ihoraho",
+        "Umeny’ibyo bimenyetso",
+        "Bigaragaza kuza kwe",
+        "Kand’ibyaremwe uko bingana",
+        "Byitez’impanda ye"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Twishime mu mitima yacu",
+        "kukw’imuhira ari hafi.",
+        "Duhumure,tuzaruhuka",
+        "Tutakibabara",
+        "Ntukarire,tuzabana",
+        "Ibyago bizashiraho",
+        "Ntituzaburay’amahoro",
+        "Kwa Yesu mw’ijuru."
+      ]
+    }
+  ]
+}

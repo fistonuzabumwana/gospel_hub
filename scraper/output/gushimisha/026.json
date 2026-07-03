@@ -1,0 +1,40 @@
+{
+  "number": 26,
+  "book": "Gushimisha",
+  "title": "Mana Rurema , ndagushima",
+  "slug": "mana-rurema-ndagushima",
+  "uuid": "ff9077dc-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/mana-rurema-ndagushima/ff9077dc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana Rurema , ndagushima : Wabonetse muri Yesu. Dor' urukundo rwawe rwinshi Wakunze twebw’ abangizi ! Mana, watanz' Umwana wawe Ngw adukirish' amaraso ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Njye nguhimbaza, Mwami Yesu,Kuko wangiriy' ibambe, Kandi Unkurahw ibyaha byanjye. Muvunyi wanjye, ndagushima; Ndakwihaye, mb' uwawe rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wasiz’ ubwiza bwawe bwose War' ufit' ahw Iman' iri, Umber’ Intama y'igitambo, Utwar' ibyaha by'abantu. Ngukundira, Mukiza wanjye Ibyo wanyishyuriye byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Urwo rukundo rwawe rwinshi Rujya runtangaza cyane, Uko nagiriw’ ubwo buntu,",
+        "Usumba byos' akamfira !Reka ngukunde, Mwami Yesu; Iminsi yose ngushimishe."
+      ]
+    }
+  ]
+}

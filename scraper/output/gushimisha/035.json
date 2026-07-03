@@ -1,0 +1,55 @@
+{
+  "number": 35,
+  "book": "Gushimisha",
+  "title": "Umpe Kukwegera Mana Yanjye",
+  "slug": "umpe-kukwegera-mana-yanjye",
+  "uuid": "ff90b8c8-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/umpe-kukwegera-mana-yanjye/ff90b8c8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umpe Kukwegera Mana Yanjye",
+        "Naho Twafatanya Umusaraba",
+        "Nagumya Kwishima,",
+        "Nkajya Ngusenga Nti:",
+        "Umpe Kukwegera Mana Yanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umpe Kukwegera Mana Yanjye",
+        "Jy’undenger’iteka Ngumye Nkwizere",
+        "Ntewe Na Satani,",
+        "Ujy’undwanirira",
+        "Umpe Kukwegera Mana Yanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Naho Natungurwa N’umwijima",
+        "Nkisegur’ibuye Mbaye njyenyine",
+        "Nzabe Nka Yakobo",
+        "Ndot’ibyo Mw’ijuru",
+        "Nkomeze Nkwizere Mana Yanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Wakinguy’ijuru Mana Yanjye",
+        "Urwego Ruriho Rutugezayo",
+        "Mugenzi Komera,",
+        "Jy’usab’itek’uti",
+        "Tujye Tugumana  Mana Yanjye"
+      ]
+    }
+  ]
+}

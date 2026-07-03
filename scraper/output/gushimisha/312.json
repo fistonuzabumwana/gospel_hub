@@ -1,0 +1,54 @@
+{
+  "number": 312,
+  "book": "Gushimisha",
+  "title": "Abakund' Imana mwese",
+  "slug": "abakund-imana-mwese",
+  "uuid": "ff99408e-0670-11ea-9a58-deadbe058832",
+  "category": "Gusezeranaho",
+  "url": "https://indirimbo.com/gushimisha/abakund-imana-mwese/ff99408e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Abakund' Imana mwese ,Ni hagir' abapfa muri mwebwe, Cyangwa se natwe tugapfa, Tuzahurir' i Siyoni twese."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Turashima lyatumye Tumaran’lyi minsi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta mwenda wose duflte : Twiteguye gufashwa n'lmana No kwamamaz'",
+        "Ubutumwa Mu bihugu tugiyemo byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iki gihe tumaranye, Twari dufatanirije hamwe;None natwe turagiye, Namwe",
+        "musigarane n'lmana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nshuti zacu, twarabanye; Tubasezeranyeh’ urukundo.Dushim’ Imana yatumye",
+        "Dufatany' iki gihe tumaze."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "None, ngaho, murabeho ! Iman' ibane namwe ."
+      ]
+    }
+  ]
+}

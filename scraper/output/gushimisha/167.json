@@ -1,0 +1,57 @@
+{
+  "number": 167,
+  "book": "Gushimisha",
+  "title": "Yesu Ni We Nihishemo",
+  "slug": "yesu-ni-we-nihishemo",
+  "uuid": "ff94a550-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/yesu-ni-we-nihishemo/ff94a550-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu Ni We Nihishemo Yamberey’ubuhingiro",
+        "Nta Cyankuraho Amahoro Yamberey’ Ubuhungiro"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umwami N’igitare Gikomeye Gikomeye, Gikomeye,Umwami N’igitare Gikomeye Yamberey’ Ubuhungiro"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ku Manyw’amber’ Igicucu yamberey’ Ubuhungiro",
+        "Amber’itara N’ijoro Yamberey’ Ubuhungiro"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu Mvur’ambera Ubwugamo Yamberey’ Ubuhungiro",
+        "Nta N’ubw’imiv’ Itemba Yamberey’ Ubuhungiro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nta Byago  Byanter’ubwoba Yamberey’ubuhungiro",
+        "Nta Mwanzi  Wese Wankanga Yamberey’ Ubuhungiro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ntabyo Nzav’aho Yes’ari Yamberey’ Ubuhungiro",
+        "Na We Ntazampemukira Azamber’ Ubuhungiro"
+      ]
+    }
+  ]
+}

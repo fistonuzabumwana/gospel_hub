@@ -1,0 +1,73 @@
+{
+  "number": 215,
+  "book": "Gushimisha",
+  "title": "Tujye duhimbaz’ iteka",
+  "slug": "tujye-duhimbaz-iteka",
+  "uuid": "ff9608f6-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/tujye-duhimbaz-iteka/ff9608f6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tujye duhimbaz’ iteka Ururembo rw'i wacu, Twarwubakiwe na Yesu Mw ijuru ry'Uwiteka."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "iyaba mfit’ amababa Nk’ abamarayika, mba ngurutse, nkagerayo, Nkab’ i Siyon’iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand’ amazu yaho yose Ararabagirana, Kand’ aruta cyane rwose Ay’ abantu",
+        "bubaka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes’ ariyo, ni We Mwami Utwar’ abaho bose, Kand’ abamalayika bajya",
+        "Bamuhimbaz’ iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Munsi y'intebe y'ubwami .ni hw isok’ikomoka ivamo ya mazi meza ubugingo",
+        "bw’iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kand’aho ni ho hamera Igiti cy'ubugingo: lbibabi byacyo byiza Ni byo bikiz’",
+        "abantu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Duhimbaz' urwo rurembo Rwo mw ijuru ly'Imana: Ni rwo Yesu Kristo wacu",
+        "Yadutunganirije,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Yes' utungany' imitima Y'abakwizeye twese, Tuiye dukor’ iby’ ushima, Tuzabane",
+        "mw’ ijuru.",
+        "(indirimbo y'Abagande bishwe babahora izina rya Yesu)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "number": 73,
+  "book": "Gushimisha",
+  "title": "Ngwino. zan' ibyaha byawe",
+  "slug": "ngwino-zan-ibyaha-byawe",
+  "uuid": "ff91d2ec-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/ngwino-zan-ibyaha-byawe/ff91d2ec-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngwino. zan' ibyaha byawe Kuri ya soko nziza. Ubiyirohemo byose, Wiboner' ihumure."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Gira bwangu ! Wizarira ! Nturushy' utindiganya na hato.  Yiteguye kugukiza: Arakwinginze ng' uze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ngwino, zan' ibyaha byawe Kuri ya soko nziza, Nubwo bitukura rwose, Birab'",
+        "umweru dede."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umv' amagambo ya Yesu, Wihan' umwiringire ! Mwitab' aguh' ubugingo; Nuk’ umukurikire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Subira kuri ya soko,Ni ho wakirira pe; Ni cyo kizatum' impundu Zivugira mw ijuru."
+      ]
+    }
+  ]
+}

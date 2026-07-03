@@ -1,0 +1,59 @@
+{
+  "number": 162,
+  "book": "Gushimisha",
+  "title": "Nganirir’ibya Yesu N'iby'urukundo rwe",
+  "slug": "nganiriribya-yesu-nibyurukundo-rwe",
+  "uuid": "ff9480db-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/nganiriribya-yesu-nibyurukundo-rwe/ff9480db-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nganirir’ibya Yesu N'iby'urukundo rwe",
+        "N'uko yavuye mw ijuru,Ngwaz’ aducungure.",
+        "Ni yo magamb' ankwiriye, Nd'indushyi,mpindanye.",
+        "Yamviriy’ amaraso ye Ngw’anshungure, mb' uwe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nganirir' ibya Yesu ( x 3) N’iby’urukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Twagereranya n'iki Ibyo yababajwe  Ntiyanze kutubambirwa Ngwadukiz’ibyaha.",
+        "Bisubiremo witonze, Ne kubyibagirwa, Ngo men’ icyo yankoreye n'uko yanshunguye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Onger' unyibuts' ibye,Mbimeny’uko biri. Bivug' uburyo bworoshye Nk'ubwiriz'",
+        "umwana.N'umbonan' umubabaro, Ujy'umber' inshuti, Umbwir' iby'ubwo buntu bwe Ngo bimpumurize."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Hor' ubimbwir' iteka :Ntibizandambira. Umva, ni jye munyabyaha Yesu yaj'",
+        "ashaka! Erega, n'igitangaza : Mbyamamaze hose, Uwer' utagir' inenge Kumfira ndi mubi!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Uzonger'ubimbwire Iteka n' ubona Yuko gukund’iby'iyi si Binyaz' umugisha.",
+        "Unyibuts' iby'isi yindi Irut' iyi cyane, Ngo mbon' Umwami w'iyo si, Antunganye, nyurwe."
+      ]
+    }
+  ]
+}

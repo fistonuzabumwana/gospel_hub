@@ -1,0 +1,63 @@
+{
+  "number": 435,
+  "book": "Gushimisha",
+  "title": "Muze mwes' abakijijwe",
+  "slug": "muze-mwes-abakijijwe",
+  "uuid": "ff9c30c0-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/muze-mwes-abakijijwe/ff9c30c0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Muze mwes' abakijijwe, Abazinutsw' iby' isi; Nimwikorer' umusaraba : Ni w' ubaneshereza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umusaraba ni wo bendera Yacu tw' abakijijwe!Twemeye n'isoni zawo : Ni w'",
+        "utuneshereza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umusaraba w'isoni N' irembo rifunganye. Uduhata kwiyambura Ibituremerera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nuko twiyambure byose.Tumere nka ya mpurnyi, Uko  itanze gut' umwenda,Ngw isang' Umwami Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Twajyaga dutiny' urupfu :Yes' arugir' irembo Ritugeza vuba cyane Mu bwami",
+        "bwo mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ibikangisho by'Umwanzi N' iby'intar' iziriiswe : Ni tudat' inzira yacu, Ntabw'",
+        "azadushyikira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Uzura n'lmana vuba Kubw' urupfu rwa Yesu : Amaraso y'Umusaraba Ni y'",
+        "atwuzuza na Yo."
+      ]
+    }
+  ]
+}

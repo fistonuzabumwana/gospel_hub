@@ -1,0 +1,46 @@
+{
+  "number": 231,
+  "book": "Gushimisha",
+  "title": "Umwana yavukiye Mu murwa",
+  "slug": "umwana-yavukiye-mu-murwa",
+  "uuid": "ff9676f7-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/umwana-yavukiye-mu-murwa/ff9676f7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umwana yavukiye  Mu murwa wa Dawidi Ni we Yes' Uwiteka Yadusezeranije."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Duhimbaz' uwo munsi Yesu yatuvukiye; Tubyamamaze hose Yuko haj’ umukiza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Habayehw’abungeri,    Babona marayika, Baratinya; na w’ ati : Noneho, mutinyuke!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ati : Krist’ Umukiza Yaje mu gihugu cye; Umuremyi wa byose Yavukiye mw’",
+        "icumbi !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mwana wera, w'lmana, Turagupfukamiye, Tugushimira cyane Yuk’ utujemo, Yesu !"
+      ]
+    }
+  ]
+}

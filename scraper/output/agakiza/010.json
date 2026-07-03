@@ -1,0 +1,50 @@
+{
+  "number": 10,
+  "book": "Agakiza",
+  "title": "Yesu wonger' unyigishe",
+  "slug": "yesu-wonger-unyigishe",
+  "uuid": "ff9c7154-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yesu-wonger-unyigishe/ff9c7154-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu wonger' unyigishe iby' umusaraba.",
+        "Ni wo soko nziza cyane, ni yo yoz' ibyaha."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umusaraba wa Yesu, Ni wo nsingiz' ubu. Yes' undindire muri wo Mbone",
+        "kukumenya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni ho naboney' ubuntu bwawe bu tangaje. No mur' mvo musaraba, ha vuyemw",
+        "umucyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndindira muri wo, Yesu kand' unamenyeshe. Uko wanyikorerey' ibyaha byanje",
+        "byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Munsi y'uwo musaraba handi ndir' iteka. Ngukunde kuv' uyu munsi ngez' iteka",
+        "ryose."
+      ]
+    }
+  ]
+}

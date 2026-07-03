@@ -1,0 +1,72 @@
+{
+  "number": 185,
+  "book": "Gushimisha",
+  "title": "Genda mu mucyo wa Yesu",
+  "slug": "genda-mu-mucyo-wa-yesu",
+  "uuid": "ff954d16-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/genda-mu-mucyo-wa-yesu/ff954d16-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Genda mu mucyo wa Yesu, Aguhishurire Ubury' Umwuk' afatanya Abana b'umucyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "N' ugendera mu mucyo we, Uraba wuzuye N'lyera yang' umwijima, Ituye mu",
+        "mucyo,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "N' ugendera mu mucyo we, Ibyaha byakwishe Birozwa n'amaraso ye, Nuk'",
+        "uhumanuke."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "N' ugendera mu mucyo we, Azagutinyura Imva n'urupfu, wibuke Ko yabinesheje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ugendere mu mucyo we, Umwijim' ushire, Uvirw’ iteka n'umucyo Wiman' ihoraho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Kugendera mu mucyo we N’ inzir' iboneye N'iy'amahoro n'ineza, Yes'",
+        "agushorera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Jy'ugendera mu mucyo we, Uhung' umwijima : Ni hw amaras’ akweza de, Ng'",
+        "uhor' utunganye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Kandi mu mucyo wa Yesu, Dusangamw abandi Baz' Umurokozi na bo,",
+        "Tukamusangira."
+      ]
+    }
+  ]
+}

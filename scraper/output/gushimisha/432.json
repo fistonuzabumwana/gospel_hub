@@ -1,0 +1,75 @@
+{
+  "number": 432,
+  "book": "Gushimisha",
+  "title": "Abo mur'iyi si—Izashira",
+  "slug": "abo-muriyi-si-izashira",
+  "uuid": "ff9c2198-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/abo-muriyi-si-izashira/ff9c2198-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Abo mur'iyi si—Izashira",
+        "Nta cyo mwibajije—Ku by'imperuka ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntimwitegereje—Icyiza twabonye ?",
+        "None, mwisigara—Mu butamenya !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dor' icyo twahawe—Cy'igiciro :",
+        "Twahaw' ubugingo—Butazashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yesu ni We zuba—Ritwakira;",
+        "Rituma tureba :—Tumusingize !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Isi yo mw ijuru—",
+        "N' ihebuza. Turek' iby'iyi si,—Tuhagabane !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Ushak' ubugingo—Apfirw' ibye,",
+        "Nk'ushak' izahabu,—Ukw apfirw'ibye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Yemw' abameze nka —Muka loti,",
+        "Mwikund' iby'iyi si—Izarimbuka !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Twebw' abakijijwe,—Dutambuke;",
+        "Ntitugakebuke,—Ngo duhomberwe !"
+      ]
+    }
+  ]
+}

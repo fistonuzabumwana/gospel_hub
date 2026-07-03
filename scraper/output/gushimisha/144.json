@@ -1,0 +1,44 @@
+{
+  "number": 144,
+  "book": "Gushimisha",
+  "title": "Yesu ndagukunda cyane ndakwihaye",
+  "slug": "yesu-ndagukunda-cyane-ndakwihaye",
+  "uuid": "ff940961-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/yesu-ndagukunda-cyane-ndakwihaye/ff940961-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu ndagukunda cyane ndakwihaye nzinutsw’ukw’ibyaha byanjye binezeza mucunguzi wanjye yesu nyir’ubuntu bwose ntabwo nigeze ngukund’uko ngukund’ubu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ngukunze nkwitur’uko wankunze kera Unyigur’i Gologota ntakwiriye",
+        "Ngukundiy’amahwa wanyambariye mu mutwe Ntabwo nigeze ngukund’uko",
+        "ngukund’ubu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nzahora ngukunda Yes’iteka ryose Ngihumeka njye ndirimb’ishimwe ryawe",
+        "Ningera mu rupfu nabwo nzagushima ntya nti ntabwo nigeze ngukund’uko",
+        "ngukund’ubu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ningera mu rugo rwa so  mwami Yesu nzajya mpaguhamiriz' iteka ryose",
+        "nkwikubis’imbere nzagusingiza cyane nti ntabwo nigeze ngukund’uko ngukund’ubu"
+      ]
+    }
+  ]
+}

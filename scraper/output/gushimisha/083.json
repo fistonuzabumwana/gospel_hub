@@ -1,0 +1,57 @@
+{
+  "number": 83,
+  "book": "Gushimisha",
+  "title": "Umutwaro wanjye",
+  "slug": "umutwaro-wanjye",
+  "uuid": "ff9216d1-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/umutwaro-wanjye/ff9216d1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umutwaro wanjye, Krisito, Warawikoreye. Bakubambye ku Musaraba,Ni jyewe wazize; Unkuraho wa mutwaro : Sinkiwikoreye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Igikombe cyanjye cyarimo Kuvumwa n'urupfu; Nuk' ucyiranguza kubwanjye; Ibyo bisharira, Uherak’ ubisimbuza Ibyiza by'ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uwiteka wang' ibyaha pe Yabanguy' inkoni Ariko si jye yakubise, Ahubwo ni",
+        "Wowe i lyo mibyimba, Krisito, Ni yo yankijije !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Haguy’ iy' nkundura, Yesu,Jye nkunamamw ubwo; Iguhitiraho ku Giti, Jye",
+        "ntiyanyagira. Yarakunshocaguriye; None, hareyutse."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "So yakuy inkota ye yera,Aragusogota;  Umutima waw' uhinduka Urwubati rwayo.",
+        "Non' iyo nkot' iragimbye : Nta cy' ikintwar' ubu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Jye napfanye nawe, Krisito, Ubwo wamfiraga; Urazuka, nzukana nawe,Uraz'",
+        "unturamo. Non' untungany' unyeze de, Uzangez' i Wawe."
+      ]
+    }
+  ]
+}

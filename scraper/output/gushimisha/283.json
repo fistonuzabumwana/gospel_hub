@@ -1,0 +1,39 @@
+{
+  "number": 283,
+  "book": "Gushimisha",
+  "title": "N' ijwi ry'umwungeri twumva",
+  "slug": "n-ijwi-ryumwungeri-twumva",
+  "uuid": "ff983ef2-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/n-ijwi-ryumwungeri-twumva/ff983ef2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "N' ijwi ry'umwungeri twumva; Ari mw ishyamb' ashak' ize, Zose zagiye intatane, Zavuye mu ruhongore."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tarura, tarura Izo ntama ze zazimiye;Tarura, tarura Izo ntama uzimushyire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni nde wafash' Umwungeri Kujya gushak' inzimizi Zicwa n'imvura",
+        "n'imbeho,Akajya kiratarura ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abantu bazimiye Bageze kure mu byaha. Yesu ngo, Gend' ubazane, Baz' ababere umwungeri."
+      ]
+    }
+  ]
+}

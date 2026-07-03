@@ -1,0 +1,40 @@
+{
+  "number": 159,
+  "book": "Gushimisha",
+  "title": "Jye nahoze ndengerwa N'inyanja y'urupfu",
+  "slug": "jye-nahoze-ndengerwa-ninyanja-yurupfu",
+  "uuid": "ff94701e-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/jye-nahoze-ndengerwa-ninyanja-yurupfu/ff94701e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Jye nahoze ndengerwa N'inyanja y'urupfu , Ntwawe n'ibicumuro, Mpotorwa n'ibyaha; Maze ndabukwa Yesu,Ndamutakambira; Aransingir' aramfat’ankuramo."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nakijijwe n'ubuntu bwe Nta wundi wandokoye, atari We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nawe, munt' urengerwa. Ubur’amas' ubu ! Reb' uwo Murokozi:Aragukuramo !",
+        "Imiraba ntibura Kumvira Nyira yo: Arashaka kugukiz' umwemere !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Haz’ibyago noneho, Cyangw' imibabaro, Nzi ko ntazazikama: Yes'",
+        "azankuramo.Azamaramw ubwoba, Amp’ibinkwiriye. Ni kw azakugirira, n'umwemera."
+      ]
+    }
+  ]
+}

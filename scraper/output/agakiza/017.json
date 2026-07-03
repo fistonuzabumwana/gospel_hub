@@ -1,0 +1,42 @@
+{
+  "number": 17,
+  "book": "Agakiza",
+  "title": "Umuriro wawe Mukiza",
+  "slug": "umuriro-wawe-mukiza",
+  "uuid": "ff9c9bf8-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/umuriro-wawe-mukiza/ff9c9bf8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umuriro wawe Mukiza, Twese turashak' uwo muriro wawe. Dor' uko tugusaba: Mana,Can' uwo muriro mu mitima yacu. Twes'ubu tur' imbere yawe, Uduh' Umwuka wawe Mana,Duhabwe",
+        "Pentekote yacu Twes' ubu dutegerej'uwo muriro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mana, twiteho kand' utwumve, Twese turasab' uwo muriro wawe. Turakwinginga dukomeje,Can' uwo muriro mu mitima yacu. Dukwiriy' imbaraga zawe Mu bitugerageza byose. Ni zo' zizaduha kunesha, Twes' ubu dutegerej' uwo muriro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dor' imitima yos' ikonje, Irashaka ko wayih’uwo muriro. Ibyo dukennye mu",
+        "mitima,Byakizwa n'uko waduh' uwo muriro. Jy' ubwanjye nta cyo nashobora",
+        "Cyampesha gutsinda Satani.Ariko nseng' Imana mvuga; Can' uwo muriro mu mutima wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndagusab' umuriro Mwami, Ngo nshobore kubwiriza mu rukundo.Ndashak' uwo muriro wawe, Kugira ngo ngir'umwete n'ubutwari.Nshyiz' umutima wanjye wose Ku ruhimbi rw'Imana yanjye. None Man' iryo turo ntuye,Ryemerer' urih' uwo muriro wawe Nshyiz' umutima wanjye wose Ku ruhimbi rw'Imana yanjye. None Man' iryo turo ntuye, Ryemerer' urih' uwo muriro wawe."
+      ]
+    }
+  ]
+}

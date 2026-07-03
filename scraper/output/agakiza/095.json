@@ -1,0 +1,48 @@
+{
+  "number": 95,
+  "book": "Agakiza",
+  "title": "Ndashaka kuririmbira Yesu",
+  "slug": "ndashaka-kuririmbira-yesu",
+  "uuid": "ff9e7af5-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ndashaka-kuririmbira-yesu/ff9e7af5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndashaka kuririmbira Yesu, Yaj' ar' Umwami w'igikundiro. Yarababajwe ndetse no gupfa, Kugira ngw'ambature mu byaha."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nzahora ndirimbira Yesu Kubw' urukundo yangiriye, Yanyishyu riy' imyenda",
+        "yose, Yarambohoye muri byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nd uwo guhamy'iby'urworukundo rwabonetse mu Mukiza wanjye, Cyane cyan' uko yaj' akankiza Kandi nar' uwo kurimbuka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndashimir' uwo Mukiza wanjye, Kubw' ububasha bwe butangaje. Kandi niw'",
+        "unshyiramw imbaraga Zo kunesh' umwanzi Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndashaka rwose kuririnibira Uwo Mwami wanjye, Yesu Kristo. Koko n'ukuri",
+        "yarankijije. Nzahora mpi rw' iminsi yose."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "number": 409,
+  "book": "Gushimisha",
+  "title": "Yes' aradubamagara",
+  "slug": "yes-aradubamagara",
+  "uuid": "ff9b9cb1-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/yes-aradubamagara/ff9b9cb1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yes' aradubamagara ,Ati : Nimubyuk' ubu :",
+        "Ibisarurwa bireze,Unsarurira ni nde ?",
+        "Uhamagawe na Yesu:Ni wow' ubwaw' ashaka !",
+        "Umwitabish' umutima. Uti : Mwami, nyakira !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntuzahere kure cyane Kwamamaz' ibya Yesu :",
+        "Abaguye bari  hafi,N'abazimiye na bo.",
+        "Umurim' uradutota;Dufit' umwete muke.",
+        "N’ ubur' integ' umusange, Uti : Mwami, mfash' ubu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubw' utazi gushyomoka Kuk' utar' umuhanga,",
+        "Hamya gusa ko wamenye Ko Yes' ababarira.",
+        "Ujy'ubwir' abandi bose Ibyo yagukoreye;",
+        "Nuk' umwinging' agufashe, Uti: Mwami, nyigisha !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Hataboneka muri twe Uvuga kw ananiwe !",
+        "Udushoboza ni Yesu Gukund’ ibyiza byose.",
+        "Dukor’ iyo mirimo ye N'urukundo n'umwete,",
+        "Maz’ ishize, tuzavuge, Tuti :Mwam' utwakire !"
+      ]
+    }
+  ]
+}

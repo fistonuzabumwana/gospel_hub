@@ -1,0 +1,75 @@
+{
+  "number": 311,
+  "book": "Gushimisha",
+  "title": "Yemwe, nshuti twabanye",
+  "slug": "yemwe-nshuti-twabanye",
+  "uuid": "ff9938ff-0670-11ea-9a58-deadbe058832",
+  "category": "Gusezeranaho",
+  "url": "https://indirimbo.com/gushimisha/yemwe-nshuti-twabanye/ff9938ff-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemwe, nshuti twabanye Kandi twafatanije,",
+        "Tubasezeyeh’ ubu, Murabeho : Ku Mana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tugiye gutangira Urugendo runini :",
+        "Mujye mudusabira, , Iman' ibane natwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Noneho, mwa nshuti mwe, Turashaka kugenda.",
+        "Ngo tujyane na Yesu, Hamwe n'Uwiteka, Se."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ariko ntitwihebye Kubw' inzira ducamo:",
+        "Tuzi ko twarushyize Mu maboko y'Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Murabeho, bagenzi, Abo twafatanije.",
+        "Mu byago no mu byiza. Yes' agendane namwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Har' uburuhukiro Bw'abakijijwe bose",
+        "Ni dupfa, tuzabayo Ku Witeka mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Ahar' amaso n' aya Yo kubonana mw isi;",
+        "Nyamar’ abakijijwe Tuzabana mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Murabeho, bagenzi Dusubiy' i wac' ubu.",
+        "Nimugende mwizeye, Tubaragij' Imana."
+      ]
+    }
+  ]
+}

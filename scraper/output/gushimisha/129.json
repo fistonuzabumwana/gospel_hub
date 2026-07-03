@@ -1,0 +1,53 @@
+{
+  "number": 129,
+  "book": "Gushimisha",
+  "title": "Ndeger’Umusaraba",
+  "slug": "ndegerumusaraba",
+  "uuid": "ff938c02-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitaba Yesu",
+  "url": "https://indirimbo.com/gushimisha/ndegerumusaraba/ff938c02-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndeger’Umusaraba , Nnar we, nkennye, mpumye; Nta kindi kindi nshaka : Ngusabye kunkiz’ubu."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mwami ndakwiringiye Ayi Mucunguzi wanjye; Dor’uko nkunamiye  Mwami",
+        "Yes’unkiz  ubu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nakwifujije kera,Ndi mu ngoyi z'ibyaha; Maz’umbwiranez'uti: Ngukiz’ibicumuro !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubu ndakwihereje: End’ibyo mfite byose, Ubwenge n'imbaraga; Byose Yes’ubyakire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nizey’ibyo wavuze N'amaraso wavuye; Ndicuza gutinda ntyo: None, Yesu, nyakira!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yesu, non’ungezemo ; Urakaza, Mukiza ! Nta n'ineng' umbaraho  Shimwa, shimwa, Nyakuza !"
+      ]
+    }
+  ]
+}

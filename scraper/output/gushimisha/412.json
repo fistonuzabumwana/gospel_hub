@@ -1,0 +1,56 @@
+{
+  "number": 412,
+  "book": "Gushimisha",
+  "title": "Isi yos' iririmbe",
+  "slug": "isi-yos-iririmbe",
+  "uuid": "ff9bb0bc-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/isi-yos-iririmbe/ff9bb0bc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Isi yos' iririmbe—lbitangaza Umukiza wa twese—Yadukoreye.Amahang' ukw angana Yos' asingize Yesu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "I burasirazuba,—Bamuhimbaze ! AbaShinwa bashime—Umucunguzi,AbaHindi",
+        "bemere Yesu wabapfiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kandi n'Abisilamu—Bamusingize : N'amahanga barimo—Ayabature.Yes' Umwami, bemere Yuko yabacunguye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Abatuye mu mbeho,—Aho bagira Ijoro rirerire—Ritinda gucya,Bemer' Umucyo",
+        "w'isi, Ngo bave mu mwijima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "N'abo mu Rwanda rwacu,—Bamusingize.Bang' ingeso za. kera,—Bamuyoboka, Bati: Ngwin' utwimemo, Ur' Umwami w'ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Amahanga yo mw isi—Yose ukw angana Yemer' Umucunguzi,—",
+        "Amuyoboke;Abakijijwe bose Bamusingiz' iteka."
+      ]
+    }
+  ]
+}

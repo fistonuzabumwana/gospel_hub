@@ -1,0 +1,47 @@
+{
+  "number": 392,
+  "book": "Gushimisha",
+  "title": "Basirikare ba Kristo, mubyuke",
+  "slug": "basirikare-ba-kristo-mubyuke",
+  "uuid": "ff9b0eed-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/basirikare-ba-kristo-mubyuke/ff9b0eed-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Basirikare ba Kristo, mubyuke,",
+        "Murasane n'isi n'umubiri n'Umubi;",
+        "Muze murwan' iyo ntambara nziza :",
+        "Dor' ibendera mwahawe.n' Umusaraba.",
+        "Nimumuyoboke ! Arabarengera !",
+        "Tumuflte, tuzanesh' Umwanzi Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntumwa za Yesu, ngo, Mwese mugende,",
+        "Mujye mu bihugu byose byo mur'iyi si.",
+        "Mwumvish' abaremwe bos' ubutumwa,Muti :",
+        "Yesu yabacunguj' amaraso ye. Muti :",
+        "Mumwemere, nukw ababature!",
+        "Ni We wadutumye kubwa rwa rukundo rwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yemwe Bakristo, mubyuke n'ingoga!",
+        "Nimucan' amatabaza, mubo mas' ubu.",
+        "Wa Mukw' araje : mumusanganire !",
+        "Azajyan' abiteguy' i bwami mw ijuru.",
+        "Mwitange, noneho  Ntimugapfapfane",
+        "Dor' araje niko yadusezeranije !"
+      ]
+    }
+  ]
+}

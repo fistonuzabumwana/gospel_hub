@@ -1,0 +1,49 @@
+{
+  "number": 108,
+  "book": "Agakiza",
+  "title": "Yew' usonzey' agakiza",
+  "slug": "yew-usonzey-agakiza",
+  "uuid": "ff9ec31b-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yew-usonzey-agakiza/ff9ec31b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yew' usonzey' agakiza, Ng' ubabarirw' ibyaha. Umv' agakuru k'imvaho Yuko Yes' agushaka."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Uhamagawe na Yesu, Na Yesu Mukiza. Aragushak' uyu munsi Mwemerer'",
+        "agukize."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nawe wabay' inzimizi Kuko wa hunze Yesu, Menya ko yagupfiriye. Ngwin'",
+        "umusange none."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Naw' uhamagawe none Wite kur' iryo jwi rye. Reka gutind' uyu munsi. N'uwawe",
+        "w'agakiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Harihw abumvis' iri jwi Bararisu zugura, hanyuma bajy' ikuzimu Kimwe na wa",
+        "mutunzi."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "number": 14,
+  "book": "Agakiza",
+  "title": "Isezerano ry'Umwami Mana",
+  "slug": "isezerano-ryumwami-mana",
+  "uuid": "ff9c8c25-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/isezerano-ryumwami-mana/ff9c8c25-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Isezerano ry'Umwami Mana Ntirihinduka habe na gato. Nahw imisozi yose yavaho, Ryo ntirivaho na gato."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Isezerano ry'Imana yacu, Ntirihinduka habe na gato. Nahw inyenyeri zo",
+        "zakwijima, Isezerano rihoraho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Isezerano rye rihoraho, Haba mu byago no mu mwijima, Naho nananirwa rnu",
+        "ntambara, Ryo ntirivaho na gato."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Isezerano rye rihoraho, Haba mu ndwara, haba mu rupfu. Imana Data ihor'",
+        "impoza, Kubw' isezerano, ryayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Isezerano ryayo ribaho, Izankangura kuva mu rupfu. Kwa Data ni ho nzambikw'",
+        "ikamba, Bitewe n'isezerano."
+      ]
+    }
+  ]
+}

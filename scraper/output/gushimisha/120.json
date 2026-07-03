@@ -1,0 +1,53 @@
+{
+  "number": 120,
+  "book": "Gushimisha",
+  "title": "Mw’ijuru Imbere Y’Imana",
+  "slug": "mwijuru-imbere-yimana",
+  "uuid": "ff93395e-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/mwijuru-imbere-yimana/ff93395e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mw’ijuru Imbere  Y’Imana",
+        "Mfit’umuntu Umvugira",
+        "N’umukuru W’abatambyi",
+        "Kandi Yitwa Rukundo",
+        "Mpamya Y’uko Izina Ryanjye",
+        "Riri Mu Mutima We",
+        "Ubw’amvugira, Nta Mwanzi",
+        "Wamunyirukanaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Satan’iy’anyibukije",
+        "Gukiranirwa Kwanjye",
+        "Ashaka Kunyihebesha",
+        "Njya Ntumbira Mw’ijuru",
+        "Ndebay’umukiza",
+        "Wanjye Wabikuyeho",
+        "Rwose Kera Yarampongereye",
+        "Nuko,Sinzarimbuka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Uwitek’umucamanza",
+        "Ambonye hw’amaraso",
+        "Ntancir’urubanza Rubi",
+        "Anyit’ukiranutse",
+        "Yaranshunguye Ngo Mb’uwe",
+        "Niko Kunyishingira",
+        "Kukw’adapfa,Singipfuye",
+        "Jye Na Yesu Tur’umwe."
+      ]
+    }
+  ]
+}

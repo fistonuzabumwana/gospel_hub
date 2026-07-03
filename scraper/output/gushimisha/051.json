@@ -1,0 +1,38 @@
+{
+  "number": 51,
+  "book": "Gushimisha",
+  "title": "Muze. musange Yes' ubakunda",
+  "slug": "muze-musange-yes-ubakunda",
+  "uuid": "ff912e8d-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/muze-musange-yes-ubakunda/ff912e8d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Muze. musange Yes' ubakunda, Mwese nimuze, mwe kuzuyaza. Yes’ arashaka yuko mukira,Nuko, mumwitabe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' ubw’ uzaza, tuzishima twese, Tujye kuban’ akaramata nawe, dutandukanye n'isi n'ibyaha Tubanye mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwese nimuze, mwitabe Yesu, Abaruhur’ a bah' amahoro. Nuko, mumuh' imitima yanyu, Yos’ ayibarire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wibuke yukw’igihe gikuze : Nta n'umw' umenya kw atinda mw isi, Umwami Yes' ageze bugufi; Tebuk'umwakire!"
+      ]
+    }
+  ]
+}

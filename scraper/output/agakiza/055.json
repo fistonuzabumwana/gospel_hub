@@ -1,0 +1,50 @@
+{
+  "number": 55,
+  "book": "Agakiza",
+  "title": "Nifuza cyane kuzagera Muri wa murwa",
+  "slug": "nifuza-cyane-kuzagera-muri-wa-murwa",
+  "uuid": "ff9d77c8-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nifuza-cyane-kuzagera-muri-wa-murwa/ff9d77c8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nifuza cyane kuzagera Muri wa murwa",
+        "wo mw ijuru. Mba sezeyeho bantu mwese Mushaka gukorer' iyi si."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Muri wa murwa w'ubugingo Duteraniyeyo n'abera; Tuzabone ray' Umukiza.",
+        "Tuzanezererway' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntihazageray' amarira Muri wa murwa wo mw ijuru. Urupfu ntiru zahagera Mu",
+        "murwa w'amahor' iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibyago ntibizahagera Muri wa murwa wo mw ijuru. Agahinda n'imibabaro Nta",
+        "bwo biba mur' uwo murwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tuzasangay' inshuti zacu, Zatu banzirije mw ijuru. Ubwo turamuts' Umukiza,",
+        "Tuvuz' impundu turirimba."
+      ]
+    }
+  ]
+}

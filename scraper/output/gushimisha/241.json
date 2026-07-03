@@ -1,0 +1,52 @@
+{
+  "number": 241,
+  "book": "Gushimisha",
+  "title": "Mbes’uriy’ubabaye",
+  "slug": "mbesuriyubabaye",
+  "uuid": "ff96b9c6-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/mbesuriyubabaye/ff96b9c6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mbes’uriy’ubabaye,  Wambay’ibitabutse Birihw amaraso ye, Mutubwir’uw' ari we. Dor’ukunt'ananiwe N’igiti yikoreye ! Ko yaboshywe nabi se, Ninde kand’aziz’iki ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uwo munt' ubay’atyo Niwe Nyir'ubugingo. Ibicumuro byawe Ni byo bamujijije.",
+        "We kujarajar’utyo:Sang’Uwagupfiriye; Pfukam’i Gologota, Wihan' ubabarirwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dor’amahw' asongoye Ni yo kamba yam bitswe, Kand’intebe y'ubwami Yabay’",
+        "Umusaraba.Mbes’Umwam' ugizw’atyo, Namumenyeshwa n’iki ? Soma ’icyo kirego, ngo Yesu w'i Nazareti."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Umva Yes’avug' ati: Nshuti yanjy’umenye ko Icyankuye mw ijuru",
+        "ar’ukukubeshaho.Ni wowe mbabarizwa, Bakanshinyagurira. Emera nkurokore,",
+        "Nkuzuze n’Iman’ubu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ndakwihaye, Krisito, Byos’ubimbabarire, Umpumur’umenyeshe Imibabaro",
+        "yawe.Non’ inzir’undangira Niyo nzajya nyuramo, Nger’i Wawe mw ijuru, Nzahore",
+        "ngusingiza !"
+      ]
+    }
+  ]
+}

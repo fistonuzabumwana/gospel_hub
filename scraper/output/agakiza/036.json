@@ -1,0 +1,53 @@
+{
+  "number": 36,
+  "book": "Agakiza",
+  "title": "Ubugingo dufite mw isi",
+  "slug": "ubugingo-dufite-mw-isi",
+  "uuid": "ff9d17bd-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ubugingo-dufite-mw-isi/ff9d17bd-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubugingo dufite mw isi,",
+        "Busa n'ibiba n'isarura.",
+        "Ubibira mu mubiri we,",
+        "Ni w' uzasarura kubora.",
+        "Ubwo dukorer' Umukiza ,",
+        "Azatugororera mw ijuru.",
+        "Tugume mw ijambo ry'Imana,",
+        "Kugeza mu gihe cyo gupfa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kubw' ubuntu bwinshi busaga,",
+        "Twemewe n'Iman' Ihoraho.",
+        "Kubw' ubuntu bwinshi busaga,",
+        "Twahawe gukorer' Imana.",
+        "Twibesherejweho na Yesu,",
+        "Muri byose tubonera mw isi.",
+        "Iyo twamamaj' ubutumwa,",
+        "Ni yo nyungu yacu y'ukuri."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubw'Abakristo bazinjira",
+        "Mw ijuru gushim' Umukiza.",
+        "Ndifuza kuza jyana na bo,",
+        "Dufatanye kumuhimbaza,",
+        "Tuzaririmbir' Umukiza",
+        "Kuko yatuguz' amaraso ye.",
+        "Abakoranag' urukundo,",
+        "Bazahora bamuhimbaza."
+      ]
+    }
+  ]
+}

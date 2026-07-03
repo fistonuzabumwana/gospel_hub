@@ -1,0 +1,41 @@
+{
+  "number": 259,
+  "book": "Gushimisha",
+  "title": "Ubu tunezerwe Kuk' umubabaro",
+  "slug": "ubu-tunezerwe-kuk-umubabaro",
+  "uuid": "ff975deb-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/ubu-tunezerwe-kuk-umubabaro/ff975deb-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubu tunezerwe Kuk' umubabaro n'ibyaha bishize. Umukiza wacu N'ukuri, ni muzim'ubu  Yarazutse."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Kuko ntabw' imva ye Yaherany' umurambo we None twiringiye Ko Yes'uwo",
+        "Yazutse Yazutse Yazutse Yazutse  N'ukuri, ni muzima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umunt' iy’ apfuye, Aruhuk' umubir' igihe gitoya;Arindir' umunsi Abapfa bose",
+        "bazava mu bituro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Urupfu n'ubwoba,Yesu yarabineshej' arabihamba. Yes' aradukunda : Abana",
+        "natwe, turiho no mu rupfu."
+      ]
+    }
+  ]
+}

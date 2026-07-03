@@ -1,0 +1,34 @@
+{
+  "number": 341,
+  "book": "Gushimisha",
+  "title": "Fat' ukuboko kwanjye",
+  "slug": "fat-ukuboko-kwanjye",
+  "uuid": "ff99ec5a-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/fat-ukuboko-kwanjye/ff99ec5a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Fat' ukuboko kwanjye,—Ungendeshe; Tujyan' ungez' aheza—Ku Witeka. Sinagir' aho ngera,—Ntagufite.Mwam' ah'ushaka ko njya,— Uhanjyane"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibyago ni bintera.—Mpumuriza; Unturiz' umutima,—Ni mbabara. Naje",
+        "nguhungiyeho,—Ngo nduhuke :Sintinya turi kumwe,— Mwami wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubu naho nahishwa—K' untabara, Nizeye k' unzanjyana.—Ukankiza. End'",
+        "ukuboko kwanjye,—Unyobore,Tujyan' ungez' aheza—Ku Witeka."
+      ]
+    }
+  ]
+}

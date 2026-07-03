@@ -26,14 +26,18 @@ class AppStateService {
     await prefs.setString(_bibleLanguageKey, language);
   }
 
-  static Future<bool> getDarkMode() async {
+  static Future<bool?> getDarkMode() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_darkModeKey) ?? false;
+    return prefs.getBool(_darkModeKey);
   }
 
-  static Future<void> setDarkMode(bool isDark) async {
+  static Future<void> setDarkMode(bool? isDark) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_darkModeKey, isDark);
+    if (isDark == null) {
+      await prefs.remove(_darkModeKey);
+    } else {
+      await prefs.setBool(_darkModeKey, isDark);
+    }
   }
 
   static Future<bool> isFirstLaunch() async {

@@ -1,0 +1,32 @@
+{
+  "number": 263,
+  "book": "Gushimisha",
+  "title": "Mwuka Wer' udukunda",
+  "slug": "mwuka-wer-udukunda",
+  "uuid": "ff977dd8-0670-11ea-9a58-deadbe058832",
+  "category": "Umwuka wera",
+  "url": "https://indirimbo.com/gushimisha/mwuka-wer-udukunda/ff977dd8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwuka Wer' udukunda Ni Wow' ujy'utwigisha Kwifuz’ impan' imwe nsa irut' izindi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "iyo mpan' ihebuje N' urukundo rwa Yesu. Kand' umunt' uyibuze, Nta cy' ab'amaze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Urukundo ni rwiza; Rujya rugira neza; Nta n'ishyari rugira; Ntirwirarira."
+      ]
+    }
+  ]
+}

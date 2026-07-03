@@ -1,0 +1,52 @@
+{
+  "number": 34,
+  "book": "Agakiza",
+  "title": "Nyoborwa mu nzira yose",
+  "slug": "nyoborwa-mu-nzira-yose",
+  "uuid": "ff9d03ae-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/nyoborwa-mu-nzira-yose/ff9d03ae-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nyoborwa mu nzira yose",
+        "N'ukuboko k'Umukiza.",
+        "Iyo mbony' inez' agira,",
+        "Nta bwo mba ngishidikanya.",
+        "Ndetse ngir' umunezero,",
+        "N'amahor' asendereye.",
+        "Angirir' ubuntu bwinshi, Butagir' uko bungana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nyoborwa mu nzira yose,",
+        "Niringiy' Umwami Yesu.",
+        "Antsindiran' ibishuko,",
+        "Anyongeramw' imbaraga.",
+        "Mu gihe nishwe n'inyota",
+        "Naniriwe mu rugendo.",
+        "Rwa rutare rwasadutse,",
+        "Ruradudubiz' amazi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nyoborwa mu nzira yose,",
+        "Kubw' urukundo rwe rwinshi.",
+        "No mw ijur' imbere ya Se,",
+        "Nzanezerwa bihebuje.",
+        "Yesu ku birenge byawe,",
+        "Ni ho mpfukamye nkuramya.",
+        "Kuko wa nyoboye neza",
+        "Mur' iyi si ngituyemo."
+      ]
+    }
+  ]
+}

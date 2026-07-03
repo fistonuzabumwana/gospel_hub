@@ -1,0 +1,33 @@
+{
+  "number": 143,
+  "book": "Gushimisha",
+  "title": "Yesu, ko wankunze",
+  "slug": "yesu-ko-wankunze",
+  "uuid": "ff940072-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/yesu-ko-wankunze/ff940072-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu, ko wankunze ,bigatum’ umfira.None nakwim' iki ? Ndakwihay’ubu, Umutima wanjye n'ibyo mfite byose Non’ ubyiharire : sinkir’uwanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uhagaz’imbere y'intebe y'ubuntu, Itek’umvugira k’Uwiteka, So. Mwam' ujy’",
+        "unshoboza, ntwar’umusaraba.Nkwize n'imbabazi z'Uwanshunguye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami, ndakwinginga : umpe gusa nawe :Mpa kugushimisha, kand’unyigishe. Nige kugukunda;nige kukumvira, Nshak' abazimiye, mbakugezeho!"
+      ]
+    }
+  ]
+}

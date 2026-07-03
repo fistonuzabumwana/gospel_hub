@@ -1,0 +1,42 @@
+{
+  "number": 118,
+  "book": "Gushimisha",
+  "title": "Ibyaha byanjye byose",
+  "slug": "ibyaha-byanjye-byose",
+  "uuid": "ff932a06-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/ibyaha-byanjye-byose/ff932a06-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ibyaha byanjye byose n'ibyago Nabihariy' Umwana w'Imana. Namwitegerej' ari ku Giti, Menya yukw’ ari jye yabambiwe.Numva mbabariwe, ndanezerwa; Ndishima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mpora mbiharira Yesu; ni W' uzi Kujy' amar' agahinda mbabaye. Iyo ndiz'",
+        "andeban' imbabazi;Iyo mbay' umunyantegenke pe, Yes' arushaho kump' imbaraga. Ndishima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nzajya mbiharira Yesu, ntahwcma, Mfite muri W’ ibyiringiro; Kumwizera",
+        "kumpesh' amahoro, Nkamwisegura nduhutse neza.Turi kumwe, mba ndi mw ijuru pe: Ndishima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yewe wa mwihebe wese, emera Kumuharira byose, ntutinye. Nubw' ari we",
+        "Rurema wa byose, Arikw aragukund' ugayitse.Yaguhay' ikibanza mw ijuru.Tahayo."
+      ]
+    }
+  ]
+}

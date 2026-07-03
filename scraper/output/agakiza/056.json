@@ -1,0 +1,40 @@
+{
+  "number": 56,
+  "book": "Agakiza",
+  "title": "Twese uko tur’aha turanezerewe.",
+  "slug": "twese-uko-turaha-turanezerewe",
+  "uuid": "ff9d7cc8-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/twese-uko-turaha-turanezerewe/ff9d7cc8-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Twese uko tur’aha turanezerewe. Tugusanganiye, duhuj' umutima. Twabisaby' Imana ngw ikurinde neza Mu rugendo rwa we no kukugarura."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ko twishimye dutya! Ko twi shimye dutya! Bizagenda bite Ubwo Yes' azaza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntitwakwibagiwe, ubwo twasengaga, Kand' Imana yacu yaratunejeje, Iduh'",
+        "ukwizera, kukw izakurinda Non' ishimwe rwose, turanezerewe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "None, mwene Data, twongere, twishime, Kukw Imana yacu ikira nuka, Iby' ivuga",
+        "byose,irabisohoza Ngaho tuyishime dufatanije!"
+      ]
+    }
+  ]
+}

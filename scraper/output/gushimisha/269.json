@@ -1,0 +1,41 @@
+{
+  "number": 269,
+  "book": "Gushimisha",
+  "title": "Yesu n' az' umwijim' uzahunga.",
+  "slug": "yesu-n-az-umwijim-uzahunga",
+  "uuid": "ff97b734-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/yesu-n-az-umwijim-uzahunga/ff97b734-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu n' az' umwijim' uzahunga. Kand’urupfu na rwo ruzashira; Nta n'uzac' ukundi mu gicucu Cya cya Gikombe kibi."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Dukumbuye Yesu cyane i icyaduh' akaza vuba Tuzishima twese, Yesu n aza",
+        "gukorany' intore ze"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yesu n' az' azac' umuborogo; Azamara mw is' umubabaro; Azahanagur' amarir'",
+        "ubwo Kuri tw' abakunzi be."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu n' az' impundu zizavuga, Aje kudukorany' intore ze. Azatwakiran'",
+        "umunezero, Tuban' akaramata"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "number": 338,
+  "book": "Gushimisha",
+  "title": "Mwami, vuga",
+  "slug": "mwami-vuga",
+  "uuid": "ff99d684-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/mwami-vuga/ff99d684-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami, vuga, nanjye ndumva Ndindiriy' icy' umbwira; Kijya kinezeza cyane, Kimpan' ibicumuro.",
+        "Mwami, ngutez' amatwi : Icy' unshakaho n' iki ?"
+      ]
+    }
+  ]
+}

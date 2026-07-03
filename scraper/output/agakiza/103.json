@@ -1,0 +1,71 @@
+{
+  "number": 103,
+  "book": "Agakiza",
+  "title": "Yesu yazutse n'ukuri",
+  "slug": "yesu-yazutse-nukuri",
+  "uuid": "ff9eaaa0-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yesu-yazutse-nukuri/ff9eaaa0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu yazutse n'ukuri Ya bonekey' abigishwa.",
+        "Haleluya, haleluya.",
+        "Maria na bagenzi be Bazindukira ku mva ye.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Basang' imva y'ikinguwe Harimo ba maraika.",
+        "Haleluya, haleluya.",
+        "Nuko babwir' abagore Yuko Yes' ari muzima.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ba bagore barihuta Kubimenye sh' abigishwa",
+        "Haleluya, haleluya,",
+        "Nukw abigishwa babiri Birukankira ku mva ye.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nuko n'abandi bigishwa Mu nzir' ijya Emausi",
+        "Haleluya, haleluya,",
+        "Ba ganirag' ibya Yesu Uko yapfuy' agahambwa.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yes' arababonekera, Ariko ntiba mumenya.",
+        "Haleluya, haleluya.",
+        "Yes' ati: Yemwe,mwa bapfu. Kristo yar' uwo kuzuka.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Bugorobye Yes' araza, Aboneker' abigishwa",
+        "Haleluya, haleluya,",
+        "Ati: Mugir'amahoro! Abahumeker' U mwuka.",
+        "Haleluya (x5)."
+      ]
+    }
+  ]
+}

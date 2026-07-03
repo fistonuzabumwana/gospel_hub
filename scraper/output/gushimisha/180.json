@@ -1,0 +1,42 @@
+{
+  "number": 180,
+  "book": "Gushimisha",
+  "title": "Impara yaguy' umwuma",
+  "slug": "impara-yaguy-umwuma",
+  "uuid": "ff952808-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/impara-yaguy-umwuma/ff952808-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Impara yaguy' umwuma Nkukw ishak' amazi, Mana ni ko njya nkwifuza Ng' umpemburish' ubuntu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni Wowe Man' ihorabo, Maz' amar' inyota; Ni ryari nzakwirebera, Mu maso,",
+        "Mucunguzi ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mutima wanjy' uhagaze Ubabajwe n'iki ? Wiringir' Itazabura Gukiz'",
+        "uwihanganye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uwifuz' Imana wese Imuhaz' ibyiza, Nuko nizere, nishime, Nshim' imbabazi",
+        "zayo."
+      ]
+    }
+  ]
+}

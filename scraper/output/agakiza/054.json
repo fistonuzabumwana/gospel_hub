@@ -1,0 +1,40 @@
+{
+  "number": 54,
+  "book": "Agakiza",
+  "title": "Harih' umuns' izuba rizarasa",
+  "slug": "harih-umuns-izuba-rizarasa",
+  "uuid": "ff9d7309-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/harih-umuns-izuba-rizarasa/ff9d7309-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Harih' umuns' izuba rizarasa, Wa munsi tuzageraho mw ijuru. Ni ho tuzaba dutay' umuruho. Tuzaba dufit' umunezer' udashira."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tuzamusanganira Yesu Kristo. Kuko ari we wadukirije mur' iyi si. Tuzamwi",
+        "tegerereza mw ijuru. Tuzamushimir' urukundo yadukunze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Harih' umunsi tuzabona byose Iman' ibihinduye kuba bishya. Kur' uwo munsi",
+        "Umukiza wacu Azatwu gururir' urugi rwo mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Tugeragezwa kenshi mu rugendo. Tuzanezerwa tugeze mw ijuru. Ka nd' umwijima nta bw' uzahagera. Tu zarushaho guhimbaz' Umucunguzi."
+      ]
+    }
+  ]
+}

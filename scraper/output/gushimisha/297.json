@@ -1,0 +1,52 @@
+{
+  "number": 297,
+  "book": "Gushimisha",
+  "title": "Yesu ntahinduka",
+  "slug": "yesu-ntahinduka",
+  "uuid": "ff98e5a2-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/yesu-ntahinduka/ff98e5a2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu ntahinduka, Ntahinduka, ntahinduka;Yesu ntahinduka Na hato !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu yanyogeje, Yanyogeje, yanyogeje; Yesu yanyogeje Ibyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni We wampagije, Wampagije, wampagije;Ni We wampagije : Ndahaze!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes' azanyakira, Anyakire, anyakire;Yes’ azanyakira, Ngez' i We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni We tuzabana, Tuzabana, tuzabana;Ni We tuzabana Mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mpore musingiza, musingiza, musingiza;Mpore musingiza, Nishimye !"
+      ]
+    }
+  ]
+}

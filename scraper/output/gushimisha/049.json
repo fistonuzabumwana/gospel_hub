@@ -1,0 +1,53 @@
+{
+  "number": 49,
+  "book": "Gushimisha",
+  "title": "Ibihe nseng' Uwiteka",
+  "slug": "ibihe-nseng-uwiteka",
+  "uuid": "ff9121c9-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/ibihe-nseng-uwiteka/ff9121c9-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ibihe nseng' Uwiteka",
+        "Bintarura mu mpagarara,",
+        "Ngo nigir' aho Data  ari,",
+        "Muganyir' ibyo nkennye byose",
+        "Mu bihe by'umubabaro,",
+        "Bimpumuriz' umutima.",
+        "Nsind' ubukana bw'Umwanzi,",
+        "Mubihe byiza byo gusenga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ibihe nseng' Uwiteka",
+        "Binyemeza yukw asubiza.",
+        "Ategerej' abana be,",
+        "Ngo bamusang' abakenure",
+        "Ndamwihereje rwos’ ubu",
+        "Kuko yampamagay' ubwe.",
+        "Niringiye bwa Buntu bwe:",
+        "Nogez' ibihe byo gusenga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Guhora nseng' Uwiteka",
+        "Kujye kummar' umubabaro,",
+        "Kugez' aho nzager' i We,",
+        "Mmwirebere ngeze mw ijuru,",
+        "Niyambuy' umubir’ upfa,",
+        "Nambaye kudapf' iteka;",
+        "Ubwo ni bwo nzasezera",
+        "Ku bihe byiza byo gusenga."
+      ]
+    }
+  ]
+}

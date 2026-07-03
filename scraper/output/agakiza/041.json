@@ -1,0 +1,54 @@
+{
+  "number": 41,
+  "book": "Agakiza",
+  "title": "Ndahiriwe kuk' Umucunguzi wanjye",
+  "slug": "ndahiriwe-kuk-umucunguzi-wanjye",
+  "uuid": "ff9d3336-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ndahiriwe-kuk-umucunguzi-wanjye/ff9d3336-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndahiriwe kuk' Umucunguzi  wanjye, Yankuyehw' ibyaha byose. None mvuz' impundu kubw' umunezero. Anezez' iminsi yose."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Anezez' iminsi yose! Anezez' iminsi yose! Ndahiriwe kuk' Umucunguzi wanjye, Yankuyehw' ibyaha byose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ndahiriwe kuko Yesu yampfiriye, None akab' ari muzima. N'inshuti y'ukuri kand'",
+        "itubohora, Mu ngoyi za wa mugome."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Anezez' iminsi yose! Anezez' minsi yose! Ndahiriwe kuko Yesu yampfiriye,",
+        "Non' akab' uri muzima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndahiriwe kuko nyoborwa na Yesu. Nca mu nzira yaciyemo. Cyane cyan' iyo",
+        "numviy' amagambo ye, Si mba nkizimiy' ukundi."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Anezez' iminsi yose! Anezez' iminsi yose! Ndahiriwe kuko nyoborwa na Yesu,",
+        "Ntabwo nzaba nkizimiye."
+      ]
+    }
+  ]
+}

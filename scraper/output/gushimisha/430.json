@@ -1,0 +1,91 @@
+{
+  "number": 430,
+  "book": "Gushimisha",
+  "title": "Kera nar' umwangizi",
+  "slug": "kera-nar-umwangizi",
+  "uuid": "ff9c1545-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/kera-nar-umwangizi/ff9c1545-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Kera nar' umwangizi",
+        "Mu mutima rwihishwa.",
+        "Maze, mpura n'uw'Imana,",
+        "Anyigish' ibya Yesu,"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uk' umuntu yakizwa",
+        "Urubanza rw'ibyaha,",
+        "Akabyarw' ubwa kabiri",
+        "Kubw' urupfu rwa Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibyo maze kubyumva,",
+        "Ntsindwa n'urubanz' ubwo,",
+        "Meny’ ibyaha nagakoze",
+        "Kuv'aho navukiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nsaba Yes' imbabazi,",
+        "Natur' ibyaha byanjye,",
+        "Nizer' urukund' ankunda;",
+        "Hanyum'arandokora."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kuv' ubwo, njya nzinukwa",
+        "Iby'isi nakundaga,",
+        "Menya yuko bizashira.",
+        "Yes' ubw'azagaruka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "None, mfit' amahoro",
+        "N'ubugingo bw'iteka.",
+        "Yes' ampay'. Umwuka Wera;",
+        "Anesherez' iby'isi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Ikimbabaza cyane,",
+        "Kikanter' agahinda,",
+        "N' ukureb' abari mw isi",
+        "Banze kwitaba Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Abakijijwe twese",
+        "Tubabarir' ab'isi,",
+        "Tubabwire n'Ubutumwa :",
+        "Ni wo murimo wacu."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "number": 380,
+  "book": "Gushimisha",
+  "title": "Nubwo ntsizwe n'ibyaha",
+  "slug": "nubwo-ntsizwe-nibyaha",
+  "uuid": "ff9ac59d-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/nubwo-ntsizwe-nibyaha/ff9ac59d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nubwo ntsizwe n'ibyaha, Yesu yarankijije; Yamviriy' amaraso, Angura n'urupf' atyo. Tuzab' akaramata, Ak'ishami n'igiti"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Urukundo rwa Yesu Rusaguts' ikirere ! Nta cyo twarugeraho : Ruzagumahw iteka.Ni We warumbwirije: Jye nubwo nari nduzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubwo ntsizwe n'ibyaha. Yes' andutira byose; Az' ibyo nkennye byose; Az'",
+        "umubabaro; Namuberey' imbata: Nta cyago cyampangara."
+      ]
+    }
+  ]
+}

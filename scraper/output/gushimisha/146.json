@@ -1,0 +1,44 @@
+{
+  "number": 146,
+  "book": "Gushimisha",
+  "title": "kugukunda, mwami Yesu",
+  "slug": "kugukunda-mwami-yesu",
+  "uuid": "ff9416ff-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/kugukunda-mwami-yesu/ff9416ff-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "kugukunda, mwami Yesu ,kuruhukir'i wawe, nkaba mu gituza cyawe,birankwiriye rwose.kwemer'amahoro yawe,kuko waje kunkiza,no kumenya kwera kwawe,bihora binezeza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Amahirwe yanjye nkunda Ni Wowe, Yesu wanjye! Uhor’ untabar' iteka;Ntugir'",
+        "ubw’ uhinduka. Urukundo rwawe rwinshi, Waje muri twe mw isi Ngw abazimiy’",
+        "ubashake, Ubatarure bose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Koko, yitanze kubwanjye No kumeny’aramenya. Yemeye kunshyira ma",
+        "nzu,Tukajya dusangjra. Mu ntege nke zanjye zose Arashaka kunkiza: Ni inyangamugay' akunda Kumfasha no kumpira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Amaraso yawe, Yesu, Ni yo mas’ ashobora Kunkurahw ibyaha byanjye;Ampa",
+        "gukiranuka. Mwa kumbwir' ibindi byose:N’Umurokozi wanjye, Kandi yemera no",
+        "kumpa Amahoro y'iteka."
+      ]
+    }
+  ]
+}

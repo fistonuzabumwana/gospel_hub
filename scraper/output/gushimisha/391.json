@@ -1,0 +1,57 @@
+{
+  "number": 391,
+  "book": "Gushimisha",
+  "title": "Kugeza gupfa, tuzakuyoboka",
+  "slug": "kugeza-gupfa-tuzakuyoboka",
+  "uuid": "ff9b09de-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/kugeza-gupfa-tuzakuyoboka/ff9b09de-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Kugeza gupfa, tuzakuyoboka: Kugeza gupf' ur' Umwami wacu. Duhagaritswe kw ibendera yawe ;Tuzahapfira tukwiringiye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Kugeza gupfa, turwan' intambara; Ni kw ingabo z'Umwami zinesha; Kugeza",
+        "gupf' Umusaraba wawe N' Ibendera yac' abacunguwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kubwawe, Yesu, ni byiza kubaho; Inzira yaw' iratworohera. Ni nde wakwanga",
+        "kugukurikira,Wowe, Mukiza wadupfiriye?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kugeza gupfa, dutegekwe nawe. Ubw' uriho, tuzabaho natwe ! Wumviy' Imana,",
+        "ntiwanga no gupfa, Ndets' udupfira n'urupfu rubi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mukiz' uz' intege nke zacu rwose; tuzi ko twagwa mu nzira yacu, N' utaza",
+        "gusohoz' isezerano.Ryo kuturengera, tukiriho"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Umwuka waw' udushorer' iteka,Kand' imitima yac' iwumvire, Ngo tub' ubwoko",
+        "bwaneshej' urupfu Kubwawe, Yesu wadupfiriye!"
+      ]
+    }
+  ]
+}

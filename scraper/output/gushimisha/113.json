@@ -1,0 +1,47 @@
+{
+  "number": 113,
+  "book": "Gushimisha",
+  "title": "Nkunda kwizigira Yesu",
+  "slug": "nkunda-kwizigira-yesu",
+  "uuid": "ff92fd13-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nkunda-kwizigira-yesu/ff92fd13-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nkunda kwizigira Yesu,Nkajya mwumvira rwose, Ngo njye nishingikiriza Ku masezerano ye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu, Yesu, ndakwizeye: Ur' uwo kwiringirwa  Yesu, Yesu mwiza nkunda,",
+        "Ndusheho kukwizera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nkunda kwizigira Yesu :Nkizwa n'amaraso ye. Nishyize mu ruzi rwayo, Nogamo, ndatungana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nkunda kwizigira Yesu,Nkaruhuk' intambara Y'ibicumuro n'ibyaha, Akamp' umunezero."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mpimbawe n'uko nkwizeye,Mutabaz' undengera; Nizeye k' umpora hafi; iteka",
+        "tugumane."
+      ]
+    }
+  ]
+}

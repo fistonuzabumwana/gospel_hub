@@ -1,0 +1,57 @@
+{
+  "number": 256,
+  "book": "Gushimisha",
+  "title": "Yesu Krist' arazutse",
+  "slug": "yesu-krist-arazutse",
+  "uuid": "ff9744fc-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/yesu-krist-arazutse/ff9744fc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu Krist' arazutse: None ntidutiny' urupfu,Kuko yarunesheje, Nta butware rugifite. Haleluya"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Non' urupfu n' irembo Ry'ubugingo budashira.ibyo bidutinyure, Ni tujya",
+        "kurinyuramo.Haleluya"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu wadupfiriye Ariho : natwe tubeho Tumushimish' ingeso. Ni We Databuj'",
+        "iteka.Haleluya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ariho : nta cyabasha Kudutandukanya na We.Aturindira hose, Akagez' iteka",
+        "ryose.Haleluya"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Turi mu ma boko ye : Koko, nta wamutunyaga Naho yaba Satani, Cyangw' ibyago,cyangw' urupfu.Haleluya"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Ariho : ni We Mwami W'ijuru n'isi wenyine;Tuzajy' aho yagiye, Duhorane na W'",
+        "iteka.Haleluya"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "number": 13,
+  "book": "Gushimisha",
+  "title": "Uwambitswe ker' ikamba",
+  "slug": "uwambitswe-ker-ikamba",
+  "uuid": "ff901177-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/uwambitswe-ker-ikamba/ff901177-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uwambitswe ker' ikamba Ritatse mu mahwa None yambitsw' iry'ubwami Kuko yanesheje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "None yicaye mw ijuru, Ategeka byose, Ari we Mwami w'abami N'umucy' udashira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ni we munezero wacu N'uw'abo mw ijuru : Yatwerets’ urukundo rwe, Ubwo",
+        "yabambwaga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yes' umusaraba wawe, Nubw' ar' uw'isoni, Uvamw ubuntu kubwacu N'ibyishimo byinshi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Tubabarana na Yesu, Tukir' aha mw isi. Maze, ni tujya mw ijuru, TuzImana na",
+        "We."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mukiza, ku musaraba,waradupfiriye:twabishwe n'ibicumuro,tubeshwaho na wo."
+      ]
+    }
+  ]
+}

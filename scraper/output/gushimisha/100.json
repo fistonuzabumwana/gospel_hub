@@ -1,0 +1,52 @@
+{
+  "number": 100,
+  "book": "Gushimisha",
+  "title": "Nzaririmb' igitangaza",
+  "slug": "nzaririmb-igitangaza",
+  "uuid": "ff92a640-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nzaririmb-igitangaza/ff92a640-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nzaririmb' igitangaza,Yes' Umwami yakoze; Ko yavuy' i We mw ijuru Ngw amfir’ i Gologota."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nzaririmb' igitangaza Yes' Umwami yakoze: Ndi kumwe n'abo mw ijuru Imbere ya ya ntebe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nari nzimiye nk' intama Maze Yes' arambona; 'Nukw anshyira ku bitugu, Ansubiza mu nzira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nar' impumyi, mfit' u’bwoba Nshits' intege, mbabaye, Njanjaguritse, nihebye, Maze Yes' arankiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndacyabon' ibimbabaza; Haracyar' ibindushya; Nyamar' u’bwo turi kumwe, Nzi yuko nta cyo nzaba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Azanyuza no mu rupfu,Nambuke na rwa Ruzi; Maze, ni mfata hakurya, Nzasangay' abo nkunda."
+      ]
+    }
+  ]
+}

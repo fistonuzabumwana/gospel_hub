@@ -1,0 +1,60 @@
+{
+  "number": 400,
+  "book": "Gushimisha",
+  "title": "Twebw' abasiganirwa aho dutegekwa",
+  "slug": "twebw-abasiganirwa-aho-dutegekwa",
+  "uuid": "ff9b388b-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/twebw-abasiganirwa-aho-dutegekwa/ff9b388b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Twebw' abasiganirwa aho dutegekwa, Twitegey' ururembo Tuza gutahamo."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Urwo rurembo rwera N'ibirimo byose Byubatwse n'izahabu Zirabagirana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Reka mbaganirire Ibiri muri rwo, Mumeny' ibyiza byarwo, Murwifuze namwe"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Urupfu ntirubayo,Nta no kunanirwa, Nta mbeho, nta n'izuba, Nta ndwara, nta",
+        "byago."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Udakijijwe wese Ntabw' azatahamo, Kukw azahezwa hanze Hamwe na Satani."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mbe, mur'izo si zombi, N' iyihe uhisemo? Mbes' iyi s' izashonga Ni y' uzahamamo?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Musig' iby'ino mw isi Bitazahoraho, Mwiyegurire Yesu, Umwami w'ijuru."
+      ]
+    }
+  ]
+}

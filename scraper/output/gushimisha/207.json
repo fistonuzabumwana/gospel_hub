@@ -1,0 +1,41 @@
+{
+  "number": 207,
+  "book": "Gushimisha",
+  "title": "Uwab’atinyutse lbyago byose",
+  "slug": "uwabatinyutse-lbyago-byose",
+  "uuid": "ff95d092-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/uwabatinyutse-lbyago-byose/ff95d092-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uwab’atinyutse  lbyago byose",
+        "Naz’akurikire—Umwami Yesu !",
+        "Nta cyamurekesha—lyo migambi ye",
+        "Yo guca mu nzira —ijya mw’ ijuru !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntabw’ azacogozwa N 'inshamugongo.",
+        "Abazimubwira—Nibo bazagwa !",
+        "Abanzi be bose—Nti bamugarura",
+        "munzir’ ahisemo— Ijya mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwam’ ujy'undindisha—Umwuka wawe,",
+        "mbone kuzaragwa Kubahw iteka.",
+        "Have wa bwoba we—Nimunyihorere!",
+        "Namaramaje pe— Kujya mw’ ijuru."
+      ]
+    }
+  ]
+}

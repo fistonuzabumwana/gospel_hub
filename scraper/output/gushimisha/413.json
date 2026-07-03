@@ -1,0 +1,83 @@
+{
+  "number": 413,
+  "book": "Gushimisha",
+  "title": "Intumwa z'Umwami Yesu",
+  "slug": "intumwa-zumwami-yesu",
+  "uuid": "ff9bb72c-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/intumwa-zumwami-yesu/ff9bb72c-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Intumwa z'Umwami Yesu",
+        "Zababarijwe mw isi;",
+        "Zahaw' izina rye ryera, Bazibambish' amahwa."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Twe, twes' abakijijwe, Twitange, tubabwirize Ijambo ry'Umwami Yesu, Maze,",
+        "na bo bakizwe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Twa kwita mu kaga k'isi, Twihute, tubabwire Ijambo ry'Umwami Yesu, Tugarur'",
+        "intama ze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Abataz' Imana yacu,Twihute, tubabwire  Ijambo ry'Umwami Yesu, Barek'",
+        "ibyaha rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dor' intambara n'ibyago Bir' imbere yac' ubu. Abarwanir' ubutumwa, Twihute,",
+        "tubukwize."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Peter' ubw' amwihakanye,Yumv' inkoko zibitse; Nukw aricuz' ararira; Maz'",
+        "arababarirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Twemere kuvug' ukuri Hagati y'abanzi be; Tubabibemo n'imbuto Yesu",
+        "yatubibyemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Uwizera yatorewe Kubageza ku Mana, Ngo bave mu byaha byabo: Tyo",
+        "nimubabwirize !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Mwizerwa, genda wishima : Uzagera mw ijuru ! Uzambikw' ikamba ryera : Nta",
+        "rupfu rugerayo !(Rwanda)"
+      ]
+    }
+  ]
+}

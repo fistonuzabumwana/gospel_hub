@@ -1,0 +1,50 @@
+{
+  "number": 189,
+  "book": "Gushimisha",
+  "title": "Mugenz' uragana mw ijuru?",
+  "slug": "mugenz-uragana-mw-ijuru",
+  "uuid": "ff9566c2-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/mugenz-uragana-mw-ijuru/ff9566c2-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mugenz' uragana mw ijuru? Ujy'utumbira Yesu !",
+        "Azakuyobor' amahoro : Ujy'umuhang' amaso."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ujy'umuhang' amaso Ujy'umuhang' amaso  Ajy'arind' umutumbiriye Ku manywa",
+        "na n'ijoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "ly' ushutswe ng' uyob' inzira, Ujy'utumbira Yesu !",
+        "Ukomez' inzir' ifunganye:Ntumukurehw amaso !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iy' inzir' itagaragara,Hakaba mu kabwibwi,",
+        "Yes' ati : Jye ndi kumwe nawe :Ujy'umuhang' amaso !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Urupfu ni rushak' uwarwo, Ujy'utumbira Yesu !",
+        "Ni bw' azakugeza mw ijuru,Usohor' amahoro"
+      ]
+    }
+  ]
+}

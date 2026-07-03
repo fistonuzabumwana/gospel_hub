@@ -1,0 +1,40 @@
+{
+  "number": 102,
+  "book": "Gushimisha",
+  "title": "iby' isi Yesu yabinkuyemo",
+  "slug": "iby-isi-yesu-yabinkuyemo",
+  "uuid": "ff92b56d-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/iby-isi-yesu-yabinkuyemo/ff92b56d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "iby' isi Yesu yabinkuyemo: ubw' amaraso, ntibinkang' ubu. nunamy' imbere y'Umusaraba; Yesu yanyejeje de mu maraso ye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Jye nkunda... jye nkunda...Umukiza wanjye Wanyiguriy' i Gologota ku Giti."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nari nazimiriye mu byaha, Nd' imbata y'ishyari n'inzangano, Umunsi w'amateka",
+        "nywutinya, Ankirish' amaraso ku Musaraba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Jye nar' imbat' amp' umudendezo;  Jye nar' impumyi, arampumura; Jye nari",
+        "intumbi, maz' aranzura ! Nimwumv' ayo mahoro Yesu yampaye!"
+      ]
+    }
+  ]
+}

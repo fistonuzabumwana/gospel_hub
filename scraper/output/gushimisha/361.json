@@ -1,0 +1,61 @@
+{
+  "number": 361,
+  "book": "Gushimisha",
+  "title": "Uwo njya nikomezaho",
+  "slug": "uwo-njya-nikomezaho",
+  "uuid": "ff9a62b0-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/uwo-njya-nikomezaho/ff9a62b0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uwo njya nikomezaho, Nta wundi, ni Krisito.",
+        "Reka mubashimire, nti :Yesu ni W' umpagije.",
+        "Yanyitangiyehw icyiru,Angur' amaraso ye;",
+        "Nukw anyuzuza n'lmana : Yesu ni W' umpagije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nubw' ab' is’ ar' abatunzi,Yesu ni W’ umpagije.",
+        "Bafit’ iby'igihe gito : Arampaza wenyine.",
+        "Nta mugish' uri mu by'isi :N’ umuram' utumuka.",
+        "Ibya Yesu ntibishira :Arampaza wenyine."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Naho naba mu bukene,Yesu ni W' umpagije.",
+        "Naho napfush' ibyo nkunda,Arampaza wenyine.",
+        "Nahw imirima yarumba, Singir' icyo nsoroma,",
+        "Naho napfush' amatungo, Arampaza wenyine."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Naho naterwa n'Umwanzi, Yesu ni W' umpagije.",
+        "Nzajya nesha kubwa Yesu :Arampaza wenyine.",
+        "Naho nahanwa n'inshuti, Ni ko bamumereye.",
+        "Ni We nshut' irut'izindi : Arampaza wenyine."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ubwo nzagera mu rupfu. Yes' azab'ampagije.",
+        "Azanjyan' i We, nduhuke : Yes'azab'ampagije.",
+        "Nzaba nambutse rwa Ruzi,Nzamutse, njya mw ijuru.",
+        "Nzamwirebera mu maso : Yes' azab'ampagije."
+      ]
+    }
+  ]
+}

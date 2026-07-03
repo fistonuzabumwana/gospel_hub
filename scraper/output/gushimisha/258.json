@@ -1,0 +1,34 @@
+{
+  "number": 258,
+  "book": "Gushimisha",
+  "title": "Umwami yazutse",
+  "slug": "umwami-yazutse",
+  "uuid": "ff9755d0-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/umwami-yazutse/ff9755d0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umwami yazutse inkuru yasakaye.Mw ijuru no mw isi, Bashim' Umukiza. Yaganduye byose,Kuko yadupfiriye. Turatunganiwe : Umwami yazutse."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ntugir’ icyutinya: Umucunguz’ arihoWizer’ ukomeje:Arakurengera.Utowe na",
+        "Yesu:witiny’ aragushaka;Yarakwishyuriye Umwami yazutse"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Twebw’ abacunguwe Tuzava mu bituro; Azadukangura, Aduh' ubugingo. Kandi",
+        "harmve na We Tuzicara kwa Data Mu bwiza bw'iteka. Umwami yazutse"
+      ]
+    }
+  ]
+}

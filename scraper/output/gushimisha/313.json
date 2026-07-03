@@ -1,0 +1,57 @@
+{
+  "number": 313,
+  "book": "Gushimisha",
+  "title": "Umukiz' abe hamwe namwe",
+  "slug": "umukiz-abe-hamwe-namwe",
+  "uuid": "ff99481d-0670-11ea-9a58-deadbe058832",
+  "category": "Gusezeranaho",
+  "url": "https://indirimbo.com/gushimisha/umukiz-abe-hamwe-namwe/ff99481d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umukiz' abe hamwe namwe, Ababer' umujyanama, Abaragire nk'intama, Abarinde mu mahoro ye !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Hamwe namwe, ye, hamwe namwe  Kugeza ku mperuka y'isi I Hamwe namwe,",
+        "ye, hamwe namwe, Umukiz' abe hamwe namwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mu rugamb' abe hamwe namwe,Ab' ingabo yany' ikinze, Abarinde mu makuba,",
+        "Abahishe mu mababa ye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu miruhw abe hamwe namwe, Mubuyerezwa n'ibyago, Mu bukene no mu",
+        "ndwara, Abaramiz' amaboko ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mu mahor' abe hamwe namwe,No mu gihe cy'urushyana,  No mu mvura no ku",
+        "mucyo, Mub’ iteka mu mahoro ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "No mu ntambara yo hanyuma,Ha’ urupf’ imbere yanyu, Mwenda kwambuka rwa",
+        "ruzi, Azab' ari hamwe namw' ubwo."
+      ]
+    }
+  ]
+}

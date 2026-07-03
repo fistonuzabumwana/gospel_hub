@@ -1,0 +1,42 @@
+{
+  "number": 44,
+  "book": "Agakiza",
+  "title": "Izina rya Yesu Kristo",
+  "slug": "izina-rya-yesu-kristo",
+  "uuid": "ff9d4161-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/izina-rya-yesu-kristo/ff9d4161-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Izina rya Yesu Kristo, Riho rahw iminsi yose. Iryo zina n'iry' iteka, Kandi nta bwo rihinduka. Rikwiriy'abantu bose, Abasaza n'abasore.Rishobora kuyobor' u muntu wes' ushak' Imana."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Iryo zina ndarikunda. Rinezeza mu mutima. No kubw’ iryo zina ryiza, Nanjy",
+        "nahawe agakiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iryo zina ryamamaye Mu mpande zose z'iyi si. Rizanir' abantu bose Ibyiringiro",
+        "bizima. Iryo zina rishobora Kudukurah' ubugome.Rigatuma, mu mutima Hategekwa n'Umukiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iryo zina rishobora Kumurika mu mwijima. Rishobora kuyobora Inzira nshya",
+        "y'ubugingo. Nahw izuba ryakwijima, Iryo zina, ryo riraka.Rihimbazw' iteka ryose",
+        "Mw isi ndetse no mw ijuru."
+      ]
+    }
+  ]
+}

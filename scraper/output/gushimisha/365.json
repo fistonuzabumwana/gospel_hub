@@ -1,0 +1,62 @@
+{
+  "number": 365,
+  "book": "Gushimisha",
+  "title": "Mwami, nubwo nd' umunyabyaha",
+  "slug": "mwami-nubwo-nd-umunyabyaha",
+  "uuid": "ff9a76cc-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/mwami-nubwo-nd-umunyabyaha/ff9a76cc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami, nubwo nd' umunyabyaha, Njya mpora nkwinginga : Mana, wumve gusaba kwanjye, Unze mu mutima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Narambiwe gukund' ibyaha Bituma nshumura; Ahubw' Umwuka wawe Wera Ab'ari Wo ntunga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kera najyaga nshidikanya :Nta cyo byanyunguye; None nshaka ko tuvugana,",
+        "Nkureba, nkumvira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndashaka kwaka cyane, Mwami,Murikirwa nAwe ; Umwuka waw' ufash' uwanjye,Nkund' uko wankunze."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "N'ukuri, Mwam' ubwo niyobya,Washaka wampana, Kuk' umutima mubi nk'uyu",
+        "Utabana nawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Kand' amaraso yawe, Mwami,Nzi ko yamviriye. Twuzure rwose, ndabyifuza, Uk' ubinshakira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Ni byo nsigaye njya nifuza;Mwami, ndakwinginze, Mbeshweho n'ubugingo bwawe,Kubwawe wenyine."
+      ]
+    }
+  ]
+}

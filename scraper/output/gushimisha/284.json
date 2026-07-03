@@ -1,0 +1,49 @@
+{
+  "number": 284,
+  "book": "Gushimisha",
+  "title": "Har 'intama urwenda n'icyenda",
+  "slug": "har-intama-urwenda-nicyenda",
+  "uuid": "ff9847b7-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/har-intama-urwenda-nicyenda/ff9847b7-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Har 'intama  urwenda n'icyenda Zari hamwe mu rwuri; Arikw imwe yar' izimiye,Ivuye ku Mwungeri,Mu bihanamang'izerera,itaye umwungeri wayo mwiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "izo ufit' urwenda n'icyenda, mbese, ntizihagije? ;uwomwunger' ati: Sigaho !  na",
+        "yo n' iyanjye !naho yab' igeze kure he, ngiye  gushak' iyo ntama yanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "mu bacunguwe nta wamenya imigezi yambutse no  kuzerera mu mwijima,ashak' iyo ntama ye ! yumva intam' ihondobereye, asanga  ivunitse, yenda gupfa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "iyi nkora mbona n' iy'iki, Kw irimw amaraso se ?ati:ntuzi ko nanyuze aho,nshaka",
+        "intama izimiye? ibiganza byishwe n'iki se? byishwe n'amahwa muri iri joro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "umva,ngiry'ijwi rirangira ry'uwo mwungeri mwiza,ati mbony'iyo najimije,ni",
+        "munezerwe mwese!nuko abamarayika bose bavuz'impundu,banezerewe!"
+      ]
+    }
+  ]
+}

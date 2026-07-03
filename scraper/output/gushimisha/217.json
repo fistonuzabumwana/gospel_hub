@@ -1,0 +1,46 @@
+{
+  "number": 217,
+  "book": "Gushimisha",
+  "title": "Mw’ isi nd’ umushyitsi",
+  "slug": "mw-isi-nd-umushyitsi",
+  "uuid": "ff9612b1-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/mw-isi-nd-umushyitsi/ff9612b1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mw’ isi nd’ umushyitsi;—Si ho nzab'iteka;Nzayivamo, ntahe—Mw ijuru kwa Data."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kandi nzamusanga—Kuntebe y'ubwiza. Na W azanyakira. Amp' u buntu bwinshi"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Maze, mban' iteka—Na We, nta gahinda.Sinzaruh’ ukundiHariy' amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mpore muhimbaza,—Nikubit’ imbere Y'uwo Mutabazi—Wankuye mu rupfu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "None, mfit’ ubwuzu—Bwo kuzahagera, Ngo mve mur’iyi si  Njye mu mucyo wawe."
+      ]
+    }
+  ]
+}

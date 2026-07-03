@@ -1,0 +1,43 @@
+{
+  "number": 98,
+  "book": "Gushimisha",
+  "title": "Ndumva k' umutim' ukeye",
+  "slug": "ndumva-k-umutim-ukeye",
+  "uuid": "ff929547-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/ndumva-k-umutim-ukeye/ff929547-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndumva k' umutim' ukeye: Biranejeje rwose ! Ndakijijwe, ndakijijwe : N' umunezero cyane ! Ibyaha byanjye byogejwe N'amaraso ya Yesu; Agahinda kamvuyemo : Sinkir' umunyabyago."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nishimiye, nishimiye Ko ntegekwa na Yesu. Murokozi, Murokozi, Nemeye kub'",
+        "uwawe. Wanyikuriye mu byaha,Wowe, Ntwari y'lmana; Wandokorey' umutima Kand'umpaye kubaho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Waj' unshakan' urukundo,Ubwo nari nzimiye. Wankuye mu byaha byanjye,Unyigirir' uwawe. Mpereye none n'iteka, Ni Wowe nziringira; Kubaho",
+        "kwanjye kurindwe N'amaboko ya Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ndakuririmbira, Mwami;Namwe ndababwiriza . Ibyo Yesu yankoreye:",
+        "Birantangaza rwose.Kuko yemeye kumfira, Akamber' igitambo, Umutima wanjye",
+        "wose N' uw'Uwawucunguye."
+      ]
+    }
+  ]
+}

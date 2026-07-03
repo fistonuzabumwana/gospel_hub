@@ -1,0 +1,42 @@
+{
+  "number": 216,
+  "book": "Gushimisha",
+  "title": "Singishak’ubutunzi Bwo mur'iyi si mbi",
+  "slug": "singishakubutunzi-bwo-muriyi-si-mbi",
+  "uuid": "ff960e04-0670-11ea-9a58-deadbe058832",
+  "category": "Ijuru",
+  "url": "https://indirimbo.com/gushimisha/singishakubutunzi-bwo-muriyi-si-mbi/ff960e04-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Singishak’ubutunzi Bwo mur'iyi si mbi; Ndifuz’ubwo mw ijuru No kuzagerayo. Mu gitabo cy'ubwami Cyanditswemw abera, Mbese, Yesu Mukiza, Jye wanyanditsemo ?"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Mu gitabo Cyawe, harimw iryanjye se ? , Mu gitabo cyubwami, Mbese,",
+        "nanditmemo ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mfit’ ibyaha bingana N'umuseny’ ubwinshi. Ngwino, Yesu ubirohe Mu maraso",
+        "yawe. Wadusezeranije Yukw ibyaha byacu, Nahw ari nk'umuhemba, Ng’ uzabyeza dede."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Har' umurwa mw ijuru Urimw inzu nyinshi; Nta n'ikibi kibayo.N' ah’abacunguwe.",
+        "Ubwo nogejw’ibyaha Mu maraso yawe, Nzi ko wandits' iryanjye  Mu gitabo cyawe.",
+        "Mu gitabo Cyawe,iryanjye ririmo: Mu gitabo cy'ubwami, Mbese, nanditmemo ?"
+      ]
+    }
+  ]
+}

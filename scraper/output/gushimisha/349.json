@@ -1,0 +1,49 @@
+{
+  "number": 349,
+  "book": "Gushimisha",
+  "title": "Reba Yesu ku Musaraba",
+  "slug": "reba-yesu-ku-musaraba",
+  "uuid": "ff9a1f0a-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/reba-yesu-ku-musaraba/ff9a1f0a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Reba Yesu ku Musaraba; Reb' uko twatumy' agirirwa : Huguka nonah' umwitabe, Umutumbire !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umuhang' amas' ubu: Ni h' uzab' usugiye. Nuk' uyahang' Umusaraba",
+        "Bamubambyeho."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ibyaha byarakuboshye pe : We kwanga yukw agukiz' ubu ! Emer' aguh' ubugingo bwe : Umutumbire"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uyamuhange; yarazutse ! Banguk' uburyo bukiriho. Agutangariz' umucyo we:",
+        "Umutumbire !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ni w' uduhuza n'lmana, Se. Azi gukiz' akiraniwe. Akiuy' imber' akuyobore.",
+        "Umutumbire !"
+      ]
+    }
+  ]
+}

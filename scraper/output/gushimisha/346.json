@@ -1,0 +1,47 @@
+{
+  "number": 346,
+  "book": "Gushimisha",
+  "title": "Ngwino, witabe Yesu",
+  "slug": "ngwino-witabe-yesu",
+  "uuid": "ff9a0b63-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/ngwino-witabe-yesu/ff9a0b63-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngwino, witabe Yesu; Akuri bugufi. Watur' ibyaha byawe, Usang' Umukiza."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Haguruka Haguruka  Arakurindira. Watur ibyaha byawe; wakire n'umugisha!",
+        "Awuguher' ubuntu; Nuk' umusingize"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ngwino, witabe Yesu,Uve mu mwijima  Reka gushidikanya : Imins' irahita."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ngwino, witabe Yesu, Gend' umuganaho ! Dor' atez' amaboko, Ngw 'akubabarire!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ngwino, witabe Yesu :Mbes' uratiny' iki ? Yapfiriy' abagome : Ngwin'",
+        "umwiringire !"
+      ]
+    }
+  ]
+}

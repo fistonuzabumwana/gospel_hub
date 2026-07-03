@@ -1,0 +1,46 @@
+{
+  "number": 166,
+  "book": "Gushimisha",
+  "title": "Ngwino, soko y'umugisha",
+  "slug": "ngwino-soko-yumugisha",
+  "uuid": "ff9496f4-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/ngwino-soko-yumugisha/ff9496f4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu yaje avuye mu ijuru,\nAraza, Araza.\nYabaye igitambo abishaka,\nArapfa, Arapfa.\nMaze asubira mu ikuzo\nRy’Imana, Ry’Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nkubona mu ntebe ya cyami\nUganje, Uganje,\nNtama wabaye ikivume\nKu giti, Ku giti,\nWamamajwe n’Imana ubwayo\nUmwami, Umwami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kuko vuba tuzakubona\nKu bicu, Ku bicu.\nTwifuza Mukiza, Mwigisha\nW’ikuzo, W’ikuzo,\nKugukunda, kugukorera\nIteka, Iteka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Maze uko tugenda mu isi\nBimenywe, Bimenywe\nKo tugukurikiye Yesu,\nMu iyi si, Mu iyi si,\nMu byishimo no mu makuba,\nTurwana, Turwana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Dore umuseke uratambitse,\nNi ukuri, Ni ukuri :\nIzuba riritamuruye\nHirya iyo, Hirya iyo,\nMu mpinga murebe igitondo\nKiraje ! Kiraje !"
+      ]
+    }
+  ]
+}

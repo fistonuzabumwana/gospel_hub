@@ -1,0 +1,48 @@
+{
+  "number": 249,
+  "book": "Gushimisha",
+  "title": "Nitegerej’Umusaraba",
+  "slug": "nitegerejumusaraba",
+  "uuid": "ff96f720-0670-11ea-9a58-deadbe058832",
+  "category": "Umusaraba",
+  "url": "https://indirimbo.com/gushimisha/nitegerejumusaraba/ff96f720-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nitegerej’Umusaraba Wo Yesu yadupfiriyeho, Nywubonye, ndamutakambira Ngw ambabarire."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes’umwami ahimbazwe izina rye ryogezwe  Yanyogesheje amoroso ye: Yes’ahimbazwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iman’ ishimwe kukw inkiza Imbaraga z'ibyaha zose. Bituma Yes’ambamo neza,",
+        "Akantunganya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ya soko nziza yoz' ibyaha, Nejejwe n'uko nayinjiyemo; Ni yo Yes’ahor’ankirisha;",
+        "Ni y’ anyejesha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ngwino kw isoko ngari nziza ! Ca bugufi, wa mutindi we! Jya ku birenge",
+        "by'Umukiza,Ngw agutunganye."
+      ]
+    }
+  ]
+}

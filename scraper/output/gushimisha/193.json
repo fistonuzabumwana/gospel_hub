@@ -1,0 +1,33 @@
+{
+  "number": 193,
+  "book": "Gushimisha",
+  "title": "Kor' ugifit' uburyo",
+  "slug": "kor-ugifit-uburyo",
+  "uuid": "ff957eae-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/kor-ugifit-uburyo/ff957eae-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Kor' ugifit' uburyo ; Jy'ukora n'umwete. Tangira mu gitondo; Wirind' ubute ! Kora n'umucy' ubonetse;Menya ntucogore : igihe kirakuze; Kora n'ubwira !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kor' izuba rirashe; Ntugahweme rwose. Imirimo n' ishira,Uzaruhurwa. Kand'",
+        "ugifit' imbaraga, Meny' ukore neza !Komez' uwo muhati : Mar' imirimo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kora bugiye kwira :Umuns' urakuze. Wiyongeremw umwete :Kora n'ingoga ! Ni ku kirengareng' ubu;Amajwi yatuje. Mwen' Iman' ujy'ukora ; Dore, burije."
+      ]
+    }
+  ]
+}

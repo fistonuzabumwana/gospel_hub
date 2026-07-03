@@ -1,0 +1,42 @@
+{
+  "number": 64,
+  "book": "Agakiza",
+  "title": "Uyu munsi mwiza w'urwibutso",
+  "slug": "uyu-munsi-mwiza-wurwibutso",
+  "uuid": "ff9da2aa-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/uyu-munsi-mwiza-wurwibutso/ff9da2aa-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Uyu munsi mwiza w'urwibutso",
+        "rwo kuvuka kw'Umukiza, Nimwumv' iri jambo n'iry' ukuri. Yesu yaje mur' iyi si."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yemwe bantu mwese muririmbe, Muririmbe byumvikane! Mut' i cyubahiro n'icy'",
+        "Imana N'amahoro mw isi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nta bwo mfit' ifeza n'izahabu Byo kukuzanira Mwami. Nguhay' umutima wanjye,",
+        "Yesu, Uwute gek' uk' ushaka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Muze twese, duhimbaz' Imana Ko yatwerets' urukundo. Yatwohe rerej'",
+        "Umucunguzi Umwana we Yesu Kristo."
+      ]
+    }
+  ]
+}

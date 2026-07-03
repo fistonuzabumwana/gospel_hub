@@ -1,0 +1,47 @@
+{
+  "number": 288,
+  "book": "Gushimisha",
+  "title": "Urukundo rwa Yesu",
+  "slug": "urukundo-rwa-yesu",
+  "uuid": "ff98a0c1-0670-11ea-9a58-deadbe058832",
+  "category": "Gushaka abandi",
+  "url": "https://indirimbo.com/gushimisha/urukundo-rwa-yesu/ff98a0c1-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Urukundo rwa Yesu Nzi ko rwatugezeho. Rudukuraho rwose Urubanza rwo gupfa."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yes' arankunda, (x3) Kuko yamfiriye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abatari bahabwa Ubugingo bw'iteka, Twihute tubabwire Urukundo rwa Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nkuko yadukunz' atyo, Akadupfira twese, Natwe dukunde dutyo Abakiri mu",
+        "byaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nuk' ubw' azagaruka, Aje kwim' ingoma ye, Tuzumv' ijwi ry'Umwami, Ati:",
+        "Mwakoze neza."
+      ]
+    }
+  ]
+}

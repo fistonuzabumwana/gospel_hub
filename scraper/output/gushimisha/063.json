@@ -1,0 +1,54 @@
+{
+  "number": 63,
+  "book": "Gushimisha",
+  "title": "Yemwe, banyabyaha mwe",
+  "slug": "yemwe-banyabyaha-mwe",
+  "uuid": "ff918b43-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/yemwe-banyabyaha-mwe/ff918b43-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yemwe, banyabyaha mwe, Mwitab' Umucunguzi. Nubwo mwe mwazimiye, Mwemer' abatarure !"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Muririmbe,.. .munezerewe... Yesu yaki... r’  abacumuye... Vug' iryo ja... mbo, ryamamare... Yukw ababi' abakira."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Muz' abaruhur' ubu, Muze, mumwiringiye. Arabakira, nubwo Mwanduye bikabije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Wa mutima wanjye we, Nta rubanz' ukiriho, Kuko bya bicumuro Byose yabyishyizeho !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yakir' abacumuye, Nanjy' uko ndi nanduye ! Noze mu maraso ye : Azangeze mw",
+        "ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Namwe, mwa bakonje mwe, Nubwo mwamuvuyeho, None nimutebuke,Yes'",
+        "aracyabifuza."
+      ]
+    }
+  ]
+}

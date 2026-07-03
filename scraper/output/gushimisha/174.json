@@ -1,0 +1,48 @@
+{
+  "number": 174,
+  "book": "Gushimisha",
+  "title": "Jy'uba maso",
+  "slug": "jyuba-maso",
+  "uuid": "ff94ffcf-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/jyuba-maso/ff94ffcf-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Jy'uba maso, wowe muntu wizeye :Mu gitondo, jya wisung’ Imana, Kuk' Umwanzi yoshy' abataba maso Ngw abagushe kukw abanga."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Jy'uba maso : wicogora  Jy'uba maso : senga"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Jy'uba maso, no ku manyva y'ihangu, Iby'isi byibagij' iby'ijuru; Weho, gir'",
+        "umwanya wo kwiherera, Ng’ useng' Umukiza wawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Jy'uba maso n'imunsi na n'ijoro, Wibuk' ibyiza by'inshuti Yesu; Ujy'umushakish'",
+        "umutima wawe : Mubwir' ibikubabaje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Jy'uba maso, hose mu gihe cyose : Satan' akubikiriye hose, Ashak' uburyo",
+        "yaguseseramo, Ngo yimur' Umwami Yesu"
+      ]
+    }
+  ]
+}

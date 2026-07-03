@@ -1,0 +1,48 @@
+{
+  "number": 291,
+  "book": "Gushimisha",
+  "title": "Nubwo nd' umwana muto",
+  "slug": "nubwo-nd-umwana-muto",
+  "uuid": "ff98b99d-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/nubwo-nd-umwana-muto/ff98b99d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nubwo nd' umwana muto bwose, Jye nd' agatama ka Yesu; Mbasha no kwinjira mw irembo Rijya mu Bwami bw'Imana."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Njye nshyira neza, (X 2) Murokozi, Kwizera kwanjye ( x 2) Muri Wowe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nubwo nd' umwana muto bwose, Yesu, war' umeze nkanjye; Umwuka wawe n'",
+        "ump' ubwenge, Ni bwo nzasa nawe rwose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nubwo nd' umwana muto bwose, Nsa n'urum' iyo hakeye; Yesu ni we",
+        "munyabubasha, Anshorez' ukuboko kwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Jye ndi muto; ndacyari mw isi, Mfit' ubugingo bugufi : Mukiz' ubwawe n'",
+        "ubw'iteka; Muri bwo mbone kurama."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "number": 254,
+  "book": "Gushimisha",
+  "title": "Nimureb’igitangaza",
+  "slug": "nimurebigitangaza",
+  "uuid": "ff973053-0670-11ea-9a58-deadbe058832",
+  "category": "Kuzuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/nimurebigitangaza/ff973053-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nimureb’igitangaza: wa munyamubabaro yanesheje wa mugome;tumukomer’ amashyi:Haleluya,Haleluya",
+        "Tumwimike, n ‘umwami"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Tumuh' ikamba ry'ubwiza,Ngo tumushengerere. Tumuh' Intebe y'ubwami.Twese",
+        "tuvuz' Impundu :Haleluya, Haleluya  ni we Nyir'imbaraga"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwambur' Ikamba ry'amahwa Bamwambitse baseka. Mwambik' Ikamba",
+        "ry'Ubwami,Mwemere kw ar' Umwami.Haleluya, Haleluya  Tegeka,Nyir'ingabo"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Vuz’ Impundu, rangurura : Yanesheje Satani. Ari mu twicarabami, Tumukurir'",
+        "ubwatsi. Haleluya,Haleluya ni We Mwami w'abami."
+      ]
+    }
+  ]
+}

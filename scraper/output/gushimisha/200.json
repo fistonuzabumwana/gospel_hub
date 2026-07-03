@@ -1,0 +1,69 @@
+{
+  "number": 200,
+  "book": "Gushimisha",
+  "title": "Umwam'agaby'ingabo ze",
+  "slug": "umwamagabyingabo-ze",
+  "uuid": "ff95a87a-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/umwamagabyingabo-ze/ff95a87a-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umwam'agaby'ingabo ze Kurwana n'ibyaha.",
+        "Umugaba n' Umwana we : intwari ye ni nde?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Wikorer' umusaraba,Ugendane na We. Mufatany' imibabaro, Nuk' ub' intwari ye!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Sitefano yakubiswe Kubw' uwo Mwami we, Yasabirag' abanzi be, Ubwo",
+        "bamwicaga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ubwo yar' agihagaze,Yabay' intwari ye; Bamwicishij' amabuye, Areba mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Batwikwaga mu muriro, Baranabambwaga. Dukurikiz' urugero Rwiza baduhaye!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Bajugunyirwag' intare, Zikabatanyura. Babicishaga n'inkota : N' intwari za Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Non' izo ntwari za Yesu Zageze mw ijuru ! Dore zigos' intebe ye; Ziramusingiza!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Zaciye mu mibabaro, Zizamukirayo. Mwam'udufashe natwe ngo Duc'aho baciye."
+      ]
+    }
+  ]
+}

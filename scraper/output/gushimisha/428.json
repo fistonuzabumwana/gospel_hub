@@ -1,0 +1,42 @@
+{
+  "number": 428,
+  "book": "Gushimisha",
+  "title": "Bene Data b'abirabura",
+  "slug": "bene-data-babirabura",
+  "uuid": "ff9c0bea-0670-11ea-9a58-deadbe058832",
+  "category": "Izindi mpimbano",
+  "url": "https://indirimbo.com/gushimisha/bene-data-babirabura/ff9c0bea-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Bene Data b'abirabura Murashak' iki se mw Afirika ?Turashak' Uwaducunguye: Ni We Yes' Umwana wa Dawidi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umukiza Yes' utubwira, Twamubona tumeze dute se ? N'uko mwasang'",
+        "Umucunguzi, Mukazinukw' ingeso zose mbi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mwami Yesu, dore, nditabye ! Ngirir' uko washaka nonaha.Umutima wanjy'",
+        "ucumura, Uwumaremw umwijima wose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Si jye wanze : kera nifuje Kugukiza, maz' uriyangira.None reka nze, nkubohore :",
+        "Ni jy' urokor' abakiranirwa."
+      ]
+    }
+  ]
+}

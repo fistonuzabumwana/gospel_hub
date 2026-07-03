@@ -1,0 +1,35 @@
+{
+  "number": 65,
+  "book": "Agakiza",
+  "title": "Yesu n'ibyishimo byanjye",
+  "slug": "yesu-nibyishimo-byanjye",
+  "uuid": "ff9da7dc-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/yesu-nibyishimo-byanjye/ff9da7dc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Yesu n'ibyishimo byanjye Ku ko yuzuy' urukundo. Ashobora gukomeza Umunyantege nke wese.Amp'ubushizicbw'amanga Amp' imbaraga zikwiye. Naho nanyura mu rupfu, Yesu n'Umwungeri wanjye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umugozi w'urukundo Ni wo Yes' ambohesheje. Nta bwo n'urupfu rwabasha",
+        "Kuntandukanya na Yesu.Nemeye yukw antegeka Nzamwumvira muri byose. Yankijije kubw' ubuntu Nazinutsw' ibyaha byose!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mbumbatiwe n'Umukiza Mu ma boko y'urukundo. Urwo rukundo rw'ankunda.",
+        "Simfit' uko naruvuga.Ni we wampay' imbaraga, Zifash' umutima wanjye. Yes' ubu",
+        "ni w' unyobora Mu rugendo rwanjye rwose."
+      ]
+    }
+  ]
+}

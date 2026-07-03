@@ -1,0 +1,47 @@
+{
+  "number": 277,
+  "book": "Gushimisha",
+  "title": "Mwam' ubugingo bwacu ni nk'umunsi",
+  "slug": "mwam-ubugingo-bwacu-ni-nkumunsi",
+  "uuid": "ff980ab4-0670-11ea-9a58-deadbe058832",
+  "category": "Iza n'imugoroba",
+  "url": "https://indirimbo.com/gushimisha/mwam-ubugingo-bwacu-ni-nkumunsi/ff980ab4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwam' ubugingo bwacu ni nk'umunsi: Ni buke rwose ntiburama cyane; Kand' ibyishimo byabwo birashira:Mwam' udahinduka, tugumane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Gumana nanjye, kuk' umuns' ukuze, Dore burije, Mwami, ndagushaka; Ni mbur'abandi bose bo kumfasha,Tugumane,  Mwami, tugumane"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iminsi yose mba ngushaka, Mwami, Iyo Satan' antey' andwanya cyane, Nta wundi mfit' ubasha kuntabara;Tugumane, Mwami, tugumane."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Singir’ umwanzi n'umwe turi kumwe, Kand' amakuba ntambabaza cyane; Intorezo y'urupfu yaracitse;Byose ni byiza, ni tugumana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Amaso n' aremb' uzambonekere, Nzabon' ubwiza bwawe bwo mw ijuru, Nzasiga",
+        "vub' umwijirna wo mw isi,No mw ipfa ryanjye, tuzagumane !"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "number": 262,
+  "book": "Gushimisha",
+  "title": "Umva gusaba kwanjye",
+  "slug": "umva-gusaba-kwanjye",
+  "uuid": "ff977681-0670-11ea-9a58-deadbe058832",
+  "category": "Umwuka wera",
+  "url": "https://indirimbo.com/gushimisha/umva-gusaba-kwanjye/ff977681-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Umva gusaba kwanjye, Mwuka w'imbaraga  Shyir' ububasha bwawe Mu mutima wanjye. Mwuka Wera,",
+        "hishuraibyaha bindimo; Mpesh' ubugingo bushya, ibyaha bimvemo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Za mu mutima wanjye Mbese, nabaho nte, Ntagufite ng' umbemo?Najya nizera nte ? Mwuka, nyobora neza :Nzajya nkwemerera; Ump' ubugingo bushya N'umutima mwiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ne kongera gutinya iby'Umwanzi mubi, Kuk' ukunda kumfasha,Ukampa kunesha.",
+        "Mwuka, nyemez' ibyawe Mu mutima wanjye; Uwuzuz' ubugingo No kunesha byose"
+      ]
+    }
+  ]
+}

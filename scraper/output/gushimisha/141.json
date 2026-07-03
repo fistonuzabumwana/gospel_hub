@@ -1,0 +1,42 @@
+{
+  "number": 141,
+  "book": "Gushimisha",
+  "title": "Mwami Yesu, ndagukunda",
+  "slug": "mwami-yesu-ndagukunda",
+  "uuid": "ff93f0a0-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/mwami-yesu-ndagukunda/ff93f0a0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mwami Yesu, ndagukunda, Ndakwihaye by'ukuri. Urukundo rwawe rwinshi Ni rwo rubinyemeza.Sinkibabazwa n'amakuba Yose nterwa n'iby'iyi si, Kuko mbyemereye kubwawe Kugira ngo ngushimishe."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ndagukunda, Yesu Wemere kumpaka, Nta kindi cyampaza, Mwami, Keretse",
+        "wowe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mwami, ngwin’umpishurire Ibyiza wankoreye. Nubwo nizeye buhoro, Ngeza ku",
+        "Musaraba ! Nyigish’uko wankunze, Yesu, Nkiri mubi bikabije, Ngo nitegerez' igiciro Kimpesha kubabarirwa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ndushijeho kugukunda, Ndushaho kunezerwa; Ar' aheza cyangw’ ahabi,Nta bwo",
+        "mbur’amahoro.Ariko, Yesu, ntagufite, Nta mahoro nsigaranye; Iby'iyi si, nubw' ari",
+        "byiza, Nta cyo byamarira rwose."
+      ]
+    }
+  ]
+}

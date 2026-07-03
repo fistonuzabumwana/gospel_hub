@@ -1,0 +1,46 @@
+{
+  "number": 50,
+  "book": "Gushimisha",
+  "title": "Muze mwenyine, twihererane",
+  "slug": "muze-mwenyine-twihererane",
+  "uuid": "ff912847-0670-11ea-9a58-deadbe058832",
+  "category": "Gusenga",
+  "url": "https://indirimbo.com/gushimisha/muze-mwenyine-twihererane/ff912847-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Muze mwenyine, twihererane, Munsang’ ahantu hatar' abantu; Dor’ imiruhw irabarembeje; Urusaku rurabaruhije."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Murek’ ibyifuzwa n'ab'iyi si, Mushak' ibyahishw’ abanyabwenge; Jyewe na Data tubana namwe : Ntimuri mwenyone, turi kumwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Murajye mumbwir’ ibyo mwibwira, Ibyo muvuga n'ibyo mukora, Mu miruho yanyu munaniwe; Bimenywa n'uz' imigambi yanyu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Inzir' iraruhije  mwitange, Mutazananirwa mukigenda; Mury' umutsim' uter' imbaraga, Munywe no ku mazi y'ubugingo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nuko, mukor' imirimo yanyu; Nzajya mbafasha mu mibabaro; Uwitanga nzamugororera; Ndaza vub' umusek utambitse."
+      ]
+    }
+  ]
+}

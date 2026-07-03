@@ -1,0 +1,58 @@
+{
+  "number": 275,
+  "book": "Gushimisha",
+  "title": "iri joro, Mana yanjye",
+  "slug": "iri-joro-mana-yanjye",
+  "uuid": "ff97f951-0670-11ea-9a58-deadbe058832",
+  "category": "Iza n'imugoroba",
+  "url": "https://indirimbo.com/gushimisha/iri-joro-mana-yanjye/ff97f951-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "iri joro, Mana yanjye, Ndagushimir' umugisha Wampay' uyu munsi wose; Non' umpishe mu mababa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kubwa Yesu, mbabarira ibyaha nakoze none,Ngo mbe nuzuye na bose,",
+        "Ntaragondwa n'ibitotsi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Unyigish' ingeso nziza, Ngo mpore nzigir’ iteka. Ne kuzatinya no gupfa, Nkuko",
+        "ntatiny' ibitotsi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Umpe gusinzira neza, Niringira yuk' undinda; Binsubizemw imbaraga; Maz' ejo",
+        "nzagukorera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ni mbur’ ibitotsi, Mwami, Untekereresh' ibyiza, inzozi zo kumbabaza, Satani ye",
+        "kunshogoza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Mana, Nyir'ibyiza byose, Ushimwe n'abantu bose, Ushimwe n'abo mw ijuru, We",
+        "Man' imwe mu Butatu."
+      ]
+    }
+  ]
+}

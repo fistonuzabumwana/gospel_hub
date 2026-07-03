@@ -1,0 +1,60 @@
+{
+  "number": 81,
+  "book": "Gushimisha",
+  "title": "Teg’ amatwi, wumve ijwi rya Yesu",
+  "slug": "teg-amatwi-wumve-ijwi-rya-yesu",
+  "uuid": "ff920979-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/teg-amatwi-wumve-ijwi-rya-yesu/ff920979-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Teg’ amatwi, wumve ijwi rya Yesu.",
+        "Arakongorera,—Akwinginga."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ati: Wemere—Ko nkurokora: Ni . ..jye. ..Mucunguzi—Ntiwaza se?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Umvir' ijwi ryiza—Rigusaba ngo, Nganyir' amaganya,—Nyikorere."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Umuhungireho,—Umwihishemo. Arakuruhura—Unaniwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni wowe yazize—Ku Musaraba Emer' aguture—Ibyo byaha"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Ur’ uw'intege nke :—W' arakomeye  Umwiyegurire,—Usugire."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Ubwo yakuguze,—Non' umwinjize Mu mutima wawe,—Akwimemo."
+      ]
+    }
+  ]
+}

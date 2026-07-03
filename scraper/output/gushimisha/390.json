@@ -1,0 +1,51 @@
+{
+  "number": 390,
+  "book": "Gushimisha",
+  "title": "Ngabo z'umwete, mubyuke",
+  "slug": "ngabo-zumwete-mubyuke",
+  "uuid": "ff9b0448-0670-11ea-9a58-deadbe058832",
+  "category": "Intambara",
+  "url": "https://indirimbo.com/gushimisha/ngabo-zumwete-mubyuke/ff9b0448-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ngabo z'umwete, mubyuke, Nimurwanir' Umwami;",
+        "Mwatoranijwe n'lmana: Kubwayo muranesha.",
+        "Mwitegure mu mitima, Mwirind' ibibashitka;",
+        "Isi muyigandurire Yes' Umwami w'abami."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mubwiriz' ab'isi bose Urukundo rw'Imana;",
+        "Abatuye mu mwijima Mubabwir'iby'umucyo.",
+        "Abayobye batizera,Muti : Mwemere Yesu,",
+        "Kukw akunda guhabura Imitim' izimiye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mujye mu bihugu byose,Mubwiriz' iby'Umwami;",
+        "Mujyan' Umwuka we Wera;Muzavug' ibye neza,",
+        "I torero rye rigwire Mu bari mw isi yose:",
+        "Izina ry'Umwami Yesu Ripfukamirwe hose."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Hahirw' abizey' Umwami,Bakamubabarizwa;",
+        "Bazabon' ingororano Umuns' azagaruka :",
+        "Baziman' iteka ryose Hamwe n'Umwami Yesu,",
+        "Mu bwami bwe budashira, Kuko bamukoreye."
+      ]
+    }
+  ]
+}

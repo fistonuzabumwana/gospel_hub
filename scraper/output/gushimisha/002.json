@@ -1,0 +1,43 @@
+{
+  "number": 2,
+  "book": "Gushimisha",
+  "title": "Dushim’ Iman' ihoraho",
+  "slug": "dushim-iman-ihoraho",
+  "uuid": "ff8fb9c4-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/dushim-iman-ihoraho/ff8fb9c4-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dushim’ Iman' ihoraho Kukw ari Yo yaturemye;",
+        "Yatugiriy’imbabazi, Tuyishime, Haleluya."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iman' ijy'itugabira Ibyiza bidukwiriye :",
+        "Abayo bayiringiye Duhora tuyisingiza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yemwe ngabo z'Uwiteka, Namwe bamarayika be,",
+        "Muhora mu rurembo rwe, Mumuhimbazanye natwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Dushim’ Imana y'ubuntu, Tuyishime twebwe twese :",
+        "Dushime Data wa twese N'Umwana n'Umwuka Wera."
+      ]
+    }
+  ]
+}

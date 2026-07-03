@@ -1,0 +1,52 @@
+{
+  "number": 384,
+  "book": "Gushimisha",
+  "title": "Ben' Imana yizerwa",
+  "slug": "ben-imana-yizerwa",
+  "uuid": "ff9add81-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/ben-imana-yizerwa/ff9add81-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ben' Imana yizerwa,",
+        "Twiyonger' umwete;",
+        "Maz' imbaraga zacu",
+        "Tuzih' Umukiza Kuko yatwihaye.",
+        "Dusingize dushima",
+        "Ubwiza n'urukundo By'",
+        "Umwam' udukiza. x 2"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Abashavuye mwese,",
+        "Muze mudatinya :",
+        "Abasenga bizeye",
+        "Barahumurizwa.",
+        "Umuvunyi Yesu",
+        "Ni W' urengera bose,",
+        "Kukw ar' umunyaneza;",
+        "Ntabw' azabahana.  x 2"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu n' inshuti yacu;",
+        "Tujye tumwinginga;",
+        "Maze, mu byago byacu",
+        "Ajy'aturengera.",
+        "Ni W' uturerera",
+        "Ubugingo twahawe,",
+        "Mu butunzi bwe, twese",
+        "Akadukenura. x 2"
+      ]
+    }
+  ]
+}

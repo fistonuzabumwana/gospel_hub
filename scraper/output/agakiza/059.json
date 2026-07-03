@@ -1,0 +1,42 @@
+{
+  "number": 59,
+  "book": "Agakiza",
+  "title": "Dor' urukundo rw'Imana",
+  "slug": "dor-urukundo-rwimana",
+  "uuid": "ff9d8ac6-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/dor-urukundo-rwimana/ff9d8ac6-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Dor' urukundo rw'Imana",
+        "Rumurik' iminsi yose. Icy' ishaka nuko natwe Twab' umucyo mur' iyi si."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Umucyo wac' umurike, imbere ya bene wacu. Kugira ng' umu nt' umw' umwe",
+        "Abon' inzir' itu nganye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kandi harih' umwijjma Mw isi, wazanywe n'ibyaha. Hariho n'aba ntu benshi",
+        "bashaka kubon' umucyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ube maso mwene Data, Tunga ny' itabaza ryawe. Kiza bamwe ba zimiye,",
+        "Bakirish' umucyo wawe."
+      ]
+    }
+  ]
+}

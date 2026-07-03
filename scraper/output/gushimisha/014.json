@@ -1,0 +1,71 @@
+{
+  "number": 14,
+  "book": "Gushimisha",
+  "title": "Mana,turaguhimbaza",
+  "slug": "manaturaguhimbaza",
+  "uuid": "ff9017dc-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/manaturaguhimbaza/ff9017dc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mana,turaguhimbaza;",
+        "Twemeye yuk' ur' Umwami;",
+        "Haleluya ! Haleluya !",
+        "Data wa twes' udashira,",
+        "Isi yos'irakwambaza :",
+        "Haleluya ! (x 5)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ni Wowe wera dedede,",
+        "Mwami w'iyi si n'ijuru :",
+        "Haleluya ! Haleluya !",
+        "Dor'icyubahiro cyawe",
+        "Cyamamaye mw isi yose :",
+        "Haleluya ! (x 5)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kand' abahanuzi bawe",
+        "N'intumwa nziza za Yesu",
+        "Haleluya ! Haleluya !",
+        "Baguhimbazanya, Mana,",
+        "N'abishwe babamuhora :",
+        "Haleluya ! (x 5)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "N'itorero na ryo n'uko",
+        "Ry'abera bo mw isi yose",
+        "Haleluya ! Haleluya !",
+        "Rikunda kugushimana",
+        "na za ngabo zo mw ijuru :",
+        "Haleluya ! (x 5)"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Data wa twese n'Umwana",
+        "N'Umwuka Wer' Iman' imwe,",
+        "Haleluya ! Haleluya!",
+        "Iman' imwe mu Butatu",
+        "Ishimirw’ icyubahiro :",
+        "Haleluya! (x 5)"
+      ]
+    }
+  ]
+}

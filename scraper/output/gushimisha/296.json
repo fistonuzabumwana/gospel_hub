@@ -1,0 +1,45 @@
+{
+  "number": 296,
+  "book": "Gushimisha",
+  "title": "Tuzany' amaturo",
+  "slug": "tuzany-amaturo",
+  "uuid": "ff98ddf3-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/tuzany-amaturo/ff98ddf3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tuzany' amaturo—Yo gushimisha : Yose n' aya Yesu;—tumutur' ubu !."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tumuture, tumuture,—Tumutur' ubu ! Yose n' aya Yesu—Tumutur' ubu !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Ava mu biganza—Byac’ aba Yesu; Turayamutuye,—Tut' abana be."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ubu turi bato:—Ni yo dufite. Ubwo tuzakura,—Tuzasumbyaho !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ibike dufite,— Yes' ubyakire. Ubwacu ukwihe Non' utwemere !"
+      ]
+    }
+  ]
+}

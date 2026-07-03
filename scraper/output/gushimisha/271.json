@@ -1,0 +1,41 @@
+{
+  "number": 271,
+  "book": "Gushimisha",
+  "title": "Ubw' impanda z'Uwiteka zizavuzwa mw ijuru",
+  "slug": "ubw-impanda-zuwiteka-zizavuzwa-mw-ijuru",
+  "uuid": "ff97d72e-0670-11ea-9a58-deadbe058832",
+  "category": "Kugaruka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/ubw-impanda-zuwiteka-zizavuzwa-mw-ijuru/ff97d72e-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ubw' impanda z'Uwiteka zizavuzwa mw ijuru , Habay’urya munsi mwiz' uhebuje, Abakijijwe bo mwisi bose bazamwitaba,Abakoranirije mw ijuru rye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Ubw' aza... z' ahamaga.. .ra, Amazi.. .na y'abe bo.. .se, Mu Gita.. .bo cy'ubugi..",
+        ".ngo, Nzi ko nzumv' izina ryanjye, nkitaba."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Uwo munsi, hazazurw' abapfiriye muri We, Bave mu bituro nk'Umucunguzi.",
+        "Bazahurira mw ijuru n'abazaba bariho.Nzaba mpari nanjye—sinzaburayo"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu. Databuja, nzamukorera, ntacogora:Nkwiz' ubuntu n'urukund'",
+        "amfitiye.Maz' imirimo yo mw is' ajy'ampa,ni nyirangiza.Azampamagar’ angeze mw ijuru."
+      ]
+    }
+  ]
+}

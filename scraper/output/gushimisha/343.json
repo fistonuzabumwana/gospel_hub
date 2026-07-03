@@ -1,0 +1,49 @@
+{
+  "number": 343,
+  "book": "Gushimisha",
+  "title": "Munyabyaha, nturushye se ?",
+  "slug": "munyabyaha-nturushye-se",
+  "uuid": "ff99f8c3-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamagara",
+  "url": "https://indirimbo.com/gushimisha/munyabyaha-nturushye-se/ff99f8c3-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Munyabyaha, nturushye se ?",
+        "Sanga Krisito ! Umv' iri jambo ryiz' avug' ati : Ruhuka!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yes' afit' ibimenyetso Bimutwereka ? N'umutwe n'ibiganza bifite Inkovu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Kw ar' umwami se, nta kamba Yesu yambaye ? Ye. namubonye yambay' ikamba Ry'amahwa !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Ni mpakwa kur'uwo Mwami, Nzagabirw' iki ? N' ugufatanya na W' imiruho",
+        "N'intimba !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Nimusaba kunyakira,Ntaribumpeze ? Haba na gato, ntiyabikora ! Witinya !",
+        "vi.Nimwiyeguriraho se,Yamp' umugisha? Umv' a bo mw ijuru babihamya. Bati : ye"
+      ]
+    }
+  ]
+}

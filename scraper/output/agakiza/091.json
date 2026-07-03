@@ -1,0 +1,73 @@
+{
+  "number": 91,
+  "book": "Agakiza",
+  "title": "Namaze kumeny' ibyiza",
+  "slug": "namaze-kumeny-ibyiza",
+  "uuid": "ff9e5e50-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/namaze-kumeny-ibyiza/ff9e5e50-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Namaze kumeny' ibyiza",
+        "Byinshi Yesu yakoraga",
+        "Mu gihe yagenderaga mur' iyi si,",
+        "Aho ya geraga hose",
+        "Ni ko yajyag' abafa sha",
+        "Nejejwe no kuririmba",
+        "Yuko Yes' adahinduka."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu Krist' uko yar' ari",
+        "Ni kw ahor' iminsi yose.",
+        "Arashak' aba zimiye",
+        "Ndets'akiza n 'abagome",
+        "Uwo Mukiza ntahinduka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kandi hariho n'impumyi",
+        "Yitwa ga Barutimayo.",
+        "Imaze kumenya ko Yes' ari hafi",
+        "Yinginga Yesu yizeye",
+        "Nukw ikizwa kubw' ubuntu.",
+        "Nejejwe no kuririmba",
+        "Yuko Yes' adahi nduka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yes'ahamagar'abanyabyaha",
+        "Ndetse n'abarwayi",
+        "Bos' abahamagarira kubakiza",
+        "Naw' ukore ku nshunda ze",
+        "Urahabw' imbaraga nshya.",
+        "Ugire nka wa mugore Kuko",
+        "Yes' adahinduka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Namaze kumenya yuko",
+        "Yasabi rag' abanzi be.",
+        "Cyane cyan' ubwo yari ku musaraba",
+        "N'ukuri yaraba bajwe",
+        "Ubwo yambikwag' amahwa.",
+        "Nejejwe no kuririmba",
+        "Yuko Yes'adahinduka."
+      ]
+    }
+  ]
+}

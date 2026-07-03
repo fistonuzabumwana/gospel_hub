@@ -1,0 +1,67 @@
+{
+  "number": 88,
+  "book": "Gushimisha",
+  "title": "Numva Yes ’Anyemeza",
+  "slug": "numva-yes-anyemeza",
+  "uuid": "ff9241a0-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/numva-yes-anyemeza/ff9241a0-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Numva  Yes ’Anyemeza",
+        "Ko  Mbuz’ Imbaraga",
+        "Ngo  Njye  Museng ’Iteka",
+        "Ntacyo  Nzamuburana"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yanyishyuriye Ya  Myenda  Yose Yambabariye  Ibyaha Atuma   Nera De."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Niw ’ Ufit’  Imbaraga",
+        "Zihagije Rwose",
+        "Zo Gukiz’ababembe",
+        "Zigakiz’umutima."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Singir ’Icyiza  Nkora",
+        "Nibesherejweho  N ’Ubuntu",
+        "Bwawe  Gusa  Nezwa",
+        "N’ Amaraso De."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nasaga  N ’Uwapfuye",
+        "Mu  Mutima  Wanjye",
+        "Maze  Yes ’Aranzura",
+        "Kandi  Niw’Unkomeza"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Imbere  Ya  Ya  Ntebe",
+        "Nzahagararayo",
+        "Nzaba  Njyany ’Iminyago",
+        "Nyishyikirize Yesu"
+      ]
+    }
+  ]
+}

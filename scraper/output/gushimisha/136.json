@@ -1,0 +1,44 @@
+{
+  "number": 136,
+  "book": "Gushimisha",
+  "title": "numvise ijwi ry'Umukiza",
+  "slug": "numvise-ijwi-ryumukiza",
+  "uuid": "ff93c603-0670-11ea-9a58-deadbe058832",
+  "category": "Kwitanga",
+  "url": "https://indirimbo.com/gushimisha/numvise-ijwi-ryumukiza/ff93c603-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "b.",
+        "numvise ijwi ry'Umukiza, Anyihamagarira; None, mutim' ungomesha, Umvir'",
+        "Umucunguzi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Akir' ubugingo bwanjye: Mwam' ubwitegekere; Ubwimemo, budakurwa Mu",
+        "mategeko yawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Ujy'ukoresh' uk' ushaka Ubu bugingo bwanjye; byanjye ndabigutuye: Databuja,",
+        "nd' uwawe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "No mu bihe byanjye byose, Komeza kunshorera N'imbaraga zawe zose;",
+        "Ujy'untegek' iteka."
+      ]
+    }
+  ]
+}

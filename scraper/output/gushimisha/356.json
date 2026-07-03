@@ -1,0 +1,49 @@
+{
+  "number": 356,
+  "book": "Gushimisha",
+  "title": "Batoboy' ibiganza bye",
+  "slug": "batoboy-ibiganza-bye",
+  "uuid": "ff9a48de-0670-11ea-9a58-deadbe058832",
+  "category": "Gucungurwa",
+  "url": "https://indirimbo.com/gushimisha/batoboy-ibiganza-bye/ff9a48de-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Batoboy' ibiganza bye, Byabumby' imisozi, byaremye byose, Byarambikwaga ku bana bato,Byakizag'indembe n'impumyi nyinshi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Batoboy' ibirenge bye, Byatambagiye ku nyenyeri zose, Byagendagenze no mw isi yacu.Bisur' abakene n'abanyabyaha."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Bacumis' umutima we, Wakundag' indushyi n'aboroheje; Uvamw amaraso yoz'",
+        "ibyaha, Atemba nk'uruzi kubwac' ababi."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Uwo mutima wa Yesu N'ingingo ze nziza byaziz' iki se ? Ni jye byazize n'ibyaha",
+        "byanjye,I Gologota, ku Musaraba we."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Uko ndi, Yes’ unyakire, Ingingo zanjye n'umutima wanjye, Ko wanshunguye,",
+        "nakwiyima nte ?Njye nkor' iby’ukunda, mb' imbata yawe!"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "number": 329,
+  "book": "Gushimisha",
+  "title": "Nezerwa cyane, wa si we",
+  "slug": "nezerwa-cyane-wa-si-we",
+  "uuid": "ff99a1ca-0670-11ea-9a58-deadbe058832",
+  "category": "Guhimbaza",
+  "url": "https://indirimbo.com/gushimisha/nezerwa-cyane-wa-si-we/ff99a1ca-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nezerwa cyane, wa si we;",
+        "Araje Shobuja !",
+        "Mwa bayibamo mwese mwe,",
+        "Musangwe mwinonosoye,",
+        "Ni mu mukingurire,",
+        "Mu mwakir' abiharire;",
+        "Kand' ibyaremwe byose bimuhimbaze !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Nezerwa cyane, wa si we,",
+        "Ko yimy' ingoma ye !",
+        "Mwa bantu mwe, twishimane,",
+        "Tunezerwe bihebuje.",
+        "Namwe, bamarayika,",
+        "Turirimban' ishimwe rye.",
+        "Namwe misozi mwese, nimurangire !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Non' ibitovu n'amahwa",
+        "Nimubirimbure !",
+        "Twanizwe n'ibicumuro",
+        "N'intimba byatumezemo.",
+        "Yes' araturengera",
+        "Ngw abirandure muri twe,",
+        "Wa muvum'awusimbuz' umugisha we."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Yazanywe no kuganz' isi,",
+        "Ngo twes' atwereke",
+        "Ishimwe n'icyubahiro",
+        "Bituruka mu kwera kwe",
+        "No mu rukund' afite,",
+        "Urw' akund' abacumuye.",
+        "Tumuhimbaze : n' Umukiz' utangaje"
+      ]
+    }
+  ]
+}

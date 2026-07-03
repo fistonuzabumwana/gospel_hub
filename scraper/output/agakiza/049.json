@@ -1,0 +1,44 @@
+{
+  "number": 49,
+  "book": "Agakiza",
+  "title": "Tuzanezerwa cyane mw ijuru.",
+  "slug": "tuzanezerwa-cyane-mw-ijuru",
+  "uuid": "ff9d5a51-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/tuzanezerwa-cyane-mw-ijuru/ff9d5a51-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Tuzanezerwa cyane mw ijuru.",
+        "Har' ibyicaro by' abahiriwe.",
+        "Tuzasingiz' Umukiza wacu.",
+        "Kandi tuzabana n'lmana."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tuzanezerwa,Turamy'Umukiza Imbere y'Imana mw ijuru. Tuzanezerwa,",
+        "turamy' Umukiza Mu gihe tuzagerayo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mur' iyi s' umunezero waho Kensh' uhinduka kub' amaganya. Ariko mw ijuru nta",
+        "maganya. Nta mubabar' uzahagera."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Iyo gushidikanya n'ibyago Bigiye kudindiz' urugendo. Tuzuburir' amaso mw ijuru.",
+        "Ni ho dufit' umunezero."
+      ]
+    }
+  ]
+}

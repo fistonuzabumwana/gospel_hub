@@ -1,0 +1,40 @@
+{
+  "number": 112,
+  "book": "Gushimisha",
+  "title": "Nzi k' Umukiz' ankunda",
+  "slug": "nzi-k-umukiz-ankunda",
+  "uuid": "ff92f679-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/nzi-k-umukiz-ankunda/ff92f679-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Nzi k' Umukiz' ankunda : Ni ko tubibwirizwa. Abato bose n'abe, Kandi n' uw'imbaraga."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yes' arankunda (x3)",
+        "Mpora mbihamya ntyo."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Yesu n' uw'imbaraga : Yapfiriye kunkiza.Ni mwizer’ azanjyana Mu bwami bwo mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Arankund'  andindira mumigendere yanjye; ngo njye nishingikiriza mu muryango we wera."
+      ]
+    }
+  ]
+}

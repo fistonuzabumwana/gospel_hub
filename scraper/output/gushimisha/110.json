@@ -1,0 +1,49 @@
+{
+  "number": 110,
+  "book": "Gushimisha",
+  "title": "Igituma nkunda Yesu",
+  "slug": "igituma-nkunda-yesu",
+  "uuid": "ff92e8f5-0670-11ea-9a58-deadbe058832",
+  "category": "Guhamya",
+  "url": "https://indirimbo.com/gushimisha/igituma-nkunda-yesu/ff92e8f5-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Igituma nkunda Yesu,Nkikumenyeshe none.",
+        "N'ukw uwo Mukiza mwiza Yanguz' amaraso ye."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Igituma nkunda Yesu Akandutira byose, N'uko yankuyehw ibyaha, Akonyoza, nkera de"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Igituma nkunda Yesu N' urukundo yankunze, Akankiz' ibyaha byanjye Byajyaga",
+        "bintegeka."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Igituma nkunda Yesu N'ukw ar' Umurengezi . Ahor'antabar' iteka Uk' Umwanz'",
+        "anyoheje."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Igituma nkunda Yesu N'ukw atazarorera Kumber umukunzi mwiza, Akamber'",
+        "umwungeri."
+      ]
+    }
+  ]
+}

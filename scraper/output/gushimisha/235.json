@@ -1,0 +1,47 @@
+{
+  "number": 235,
+  "book": "Gushimisha",
+  "title": "Bakristo, nimuze, munezerwe mwese",
+  "slug": "bakristo-nimuze-munezerwe-mwese",
+  "uuid": "ff969165-0670-11ea-9a58-deadbe058832",
+  "category": "Kuvuka kwa Yesu",
+  "url": "https://indirimbo.com/gushimisha/bakristo-nimuze-munezerwe-mwese/ff969165-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Bakristo, nimuze, munezerwe mwese, Nimuze, tugeran' i Betelehemu. Muze kureb' Umwami wahavukiye!"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nimuze, tumusenge ( x 3) Ni Kristo Yesu."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Imana Rurema, nubw’ isumba byose, Ntiyanze kubyarwa n'uwo woroheje.",
+        "ryaturemye, dor’ uko yamanutse !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Muririmbe cyane, bamalayika mwese, Mut’ Isumba byos’ ihabw’ icyubahiro, Kand’amahor’ abe mu bo yishimira !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Tuje kukuramya, Mwami Yes’ uvutse, Tuje kugusingiza, Mukiza Yesu, Nubw’ ur’",
+        "Imana, none turaturanye."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "number": 77,
+  "book": "Agakiza",
+  "title": "Murebe urukundo rukomeye cyane",
+  "slug": "murebe-urukundo-rukomeye-cyane",
+  "uuid": "ff9de49b-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/murebe-urukundo-rukomeye-cyane/ff9de49b-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Murebe urukundo rukomeye cyane",
+        "Twahawe n’Imana ihoraho",
+        "Twahinduwe abana b’Imana Ihoraho",
+        "Dukwiye kubana amahoro"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Tuzanerwa cyane mu ijuru",
+        "Tuzaririmbana n’abera",
+        "Tuzambikw’ikuzo Mur’urwo rukundo",
+        "Nta marira azaba mu ijuru"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Utugirire ubuntu Mana Ihoraho",
+        "Mu rugendo rwacu dufite",
+        "Utwoherereze umugisha Mukiza",
+        "Tubashe kukumenya Mana"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Sinshaka gukorera abami babiri",
+        "Niko gukunda isi n’ijuru",
+        "Hariho abakunda ubutunzi bwo mu isi",
+        "bakaburutisha ubw’ijuru"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Hariho abahamya b’urupfu rwa Yesu",
+        "Nibo barungurutse mu mva",
+        "Yesu ubwo yamaraga kuzuka mu mva",
+        "Hanyuma yagiye mu ijuru"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "No mu gihe tugendera muri iyi si",
+        "Tuyibonamo ibidushuka",
+        "Ariko dukwiye kunesha ibyo byose",
+        "Kuko ariko Imana ibishaka."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "number": 415,
+  "book": "Gushimisha",
+  "title": "Turashim' Imana yuko twavukiye Ku ngoma y'Umwami Yesu",
+  "slug": "turashim-imana-yuko-twavukiye-ku-ngoma-yumwami-yesu",
+  "uuid": "ff9bc356-0670-11ea-9a58-deadbe058832",
+  "category": "Abana",
+  "url": "https://indirimbo.com/gushimisha/turashim-imana-yuko-twavukiye-ku-ngoma-yumwami-yesu/ff9bc356-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Turashim' Imana yuko twavukiye",
+        "Ku ngoma y'Umwami Yesu, Nyir’ imbabazi.",
+        "Iyo tuvuka ku ngoma ya Satani, None tuba twihebye,"
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Yesu, tugukunde cyane (X 3) Kuko watwitangiye !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "None baba badutapfunir' itabi,",
+        "N'amajosi n'amaboko byuzuy' impigi :",
+        "Byos'Umwami Yesu yabidukuyeho, Nukw aduh' amahoro."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Dukunde Yes' udukunda turi bato !",
+        "Yaturemeshej’ Ijambo ryayo ryonyine;",
+        "Yaduhaye n'ababyeyi badukunda,Batureran' ineza."
+      ]
+    }
+  ]
+}

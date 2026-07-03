@@ -1,0 +1,45 @@
+{
+  "number": 182,
+  "book": "Gushimisha",
+  "title": "Mur'iyo nzir' iruhije",
+  "slug": "muriyo-nzir-iruhije",
+  "uuid": "ff9535bc-0670-11ea-9a58-deadbe058832",
+  "category": "Ubugingo bushya",
+  "url": "https://indirimbo.com/gushimisha/muriyo-nzir-iruhije/ff9535bc-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Mur'iyo nzir' iruhije , Mbese, muragana he ? Turagana mu gihugu Iman' itunganije. Mu bikombe n'imisozi.Ni ho duca tujy' i bwami, Ni ho duca tujy' i bwami: Nshuti, muze, tujyane!"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Mur' icyo gihugu gishya, Ariko mwizey' iki? Izaduh' imyenda yera N'amakamb'",
+        "adashira Na ya mazi y'ubugingo,Tubane n'Iman' iteka, Tubane n'Iman' iteka :",
+        "Nshuti, muze, tujyane !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mugend’ uko muri kose, Nta n'ibyago mutinya ?  Uwitek' azaturinda, Umwuk'",
+        "udukomeze . Uwitek' adutabare, Yesu, na W' atujy’ imbere, Yesu na W' atujy'",
+        "imbere : Nshuti, muze, tujyane !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Natwe twaza, mwaturinda, Ngo tujyan' aho mujya ? Nuko, tubikunze",
+        "cyane,Twishimye bhebuje. Nimuze, tutabasiga : Yes' aradutegereza; Yes'",
+        "aradutegereza  Nshuti, muze, tujyane !"
+      ]
+    }
+  ]
+}

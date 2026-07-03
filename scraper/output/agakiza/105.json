@@ -1,0 +1,59 @@
+{
+  "number": 105,
+  "book": "Agakiza",
+  "title": "Ni igitangaza pe",
+  "slug": "ni-igitangaza-pe",
+  "uuid": "ff9eb414-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/ni-igitangaza-pe/ff9eb414-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Narimboshwe rwose mu mwijima mwinshi",
+        "Sinarinzi Yesu wavuye mwijuru",
+        "Yambohoy’ingoyi zose nari mfite",
+        "Haleluya  nsigaye ndirimba Yesu."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "N’igitangaza pe!  Nigitangaza pe!",
+        "Rwose n’igitangaza ko Yesu yankijije",
+        "Umwuka we wera niw’ujyu’nyobora Uzangez’iwanjye mw’ijuru amahoro"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Iyo ngeragejwe n’umwanzi satani",
+        "Ndwan’iyo ntambara nambay’ukwizera",
+        "Ijambo ry’Imana ni ryo nkota yanjye",
+        "Kandi rizangeza mwijur’amahoro"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nyura mu misozi  nyura mu mataba",
+        "Aho hose ni ko harushy’umutima",
+        "Njya nsab’Uwiteka kugira ngw amfashe",
+        "Uwiteka na we ntatinda kunyumva"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mu gihe nanirwa mu rugendo rwanjye",
+        "Ndebesh’ukwizera ibiri mw ijuru",
+        "uzat’umuruho ndetse tuzahazwa",
+        "Yesu mukiza ni we waturaritse"
+      ]
+    }
+  ]
+}

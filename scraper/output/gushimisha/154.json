@@ -1,0 +1,55 @@
+{
+  "number": 154,
+  "book": "Gushimisha",
+  "title": "Ndabaririmbira",
+  "slug": "ndabaririmbira",
+  "uuid": "ff9448da-0670-11ea-9a58-deadbe058832",
+  "category": "Urukundo rw'Imana",
+  "url": "https://indirimbo.com/gushimisha/ndabaririmbira/ff9448da-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Ndabaririmbira—Iby’Uwamfiriye , Wankunze mfit' ibyaha, narararutse Wambonyemw iki, Krisito, Ukaza mwis’ukamfira ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yasiz' ingoma ye,—Nukw aramanuka; Baramusuzugura, ntibamwemera.Har’ indi nshuti nka We se Yakund' abayihinyuye ?"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Baramushingije,—Bashash'imyambaro Ngo, Hozana; hahirw' Umwami",
+        "Krisito!Bukeye, barahinduka,Bati: Nabambwe ! Nabambwe !"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Bafash' Umwam’ubwo,—Baramuhemura; Bakiz’umwambuzi, babamba Krisito. Iby'arabyihanganira,Ngw abon' ukw aducungura."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Yavuye mw ijuru,—Aza mur' iyi si, Abur' aho yarambik' umusaya we; Amfira ku",
+        "Musaraba,Ngo nanjy' angeze mw ijuru."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Ntabwo nzarambirwa—Kubaririmbira Iby' urukundo rwe n'uko yababajwe. Yanyemeye nk'inshuti ye:Nzavuga hos' izina rye!"
+      ]
+    }
+  ]
+}

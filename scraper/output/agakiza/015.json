@@ -1,0 +1,64 @@
+{
+  "number": 15,
+  "book": "Agakiza",
+  "title": "Amasezerano yose ukw' Iman' iyatanga",
+  "slug": "amasezerano-yose-ukw-iman-iyatanga",
+  "uuid": "ff9c926d-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/amasezerano-yose-ukw-iman-iyatanga/ff9c926d-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Amasezerano yose ukw' Iman' iyatanga, Yakomejwe n'amaraso y'Umwami wacu Yesu."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Isi nib' izavaho, Ijuru rikavaho. Uwizer' azabona Ayo masezerano."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Jy' ukora nka Aburahamu, wubur' amaso yawe. Bar' inyenyeri wizere",
+        "amasezerano ye."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Mu mwijima wo mu nzira, twizer' Imana yacu. Hasigay' umwanya muto, izuba",
+        "rikarasa."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Nubwo turushywa n'abantu, twizer' Imana yacu. Yesu ni w' uzadufasha mu",
+        "bitugerageza."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Mu gihe tubuz' inshuti, tuguman' ukwizera. Yesu niwe nshuti nziza izahorana",
+        "natwe."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "No ku byo tubona mw' isi, tuguman' ukwizera. Mw' ijuru tuzahabona ibyo",
+        "twizeye byose."
+      ]
+    }
+  ]
+}

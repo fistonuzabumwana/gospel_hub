@@ -1,0 +1,51 @@
+{
+  "number": 83,
+  "book": "Agakiza",
+  "title": "Amaraso yawe, Mukiza",
+  "slug": "amaraso-yawe-mukiza",
+  "uuid": "ff9e0169-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/amaraso-yawe-mukiza/ff9e0169-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Amaraso yawe, Mukiza, Ni yo yoz' ibyaha twakoze. Yaviriye ku musaraba Ubwo wapfaga Mwami Yesu,Nar'",
+        "uwo gucirwahw iteka kuko ntari mbashije Kwizera. Mwami nyogesh' ayo maraso, Kugira ngo ntunganir' Imana."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Nye... za nk'urubura. Nye... za nk'urubura. Nyogesh' amaraso wauuye Kugira",
+        "ngo ntunganir' Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Yes' ubwo wambikwag' amahwa, Bakujyana ku musaraba. Wihanganiy' imibabaro Ubwo wakubitwag' inguma. Iryo riba ni ryo nkeneye, Ni ryo gusa ribasha kunyeza.",
+        "Mwami nyogesh' ayo maraso Kugira ngo ntunganir' Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Nta bwo ngutunganiye, Mwami, Mfit' intege nke mu mutima. Ndakubona nt' ese",
+        "Mukiza Nanjye ngo mbabarirw' ibyaha? Ku musaraba wawe Yesu, Nizeye kw ari ho na kirira, Mwami nyogesh' ayo maraso Kugira ngo ntunganir' Imana."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Mwami, ndaje mbe hafi yawe Kugira ng' ujy' uhor' undinda. Umbohore buri",
+        "mugozi, Untunganiriz' umutima.Neger' umusaraba wawe, Mpore muri wo kugeza",
+        "gupfa Mwami nyogesh' ayo maraso Kugira ngo ntunganir' Imana."
+      ]
+    }
+  ]
+}

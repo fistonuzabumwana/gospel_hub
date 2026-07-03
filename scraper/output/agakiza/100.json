@@ -1,0 +1,61 @@
+{
+  "number": 100,
+  "book": "Agakiza",
+  "title": "Abahoze mu mwijima Babony' umucyo w'ukuri",
+  "slug": "abahoze-mu-mwijima-babony-umucyo-wukuri",
+  "uuid": "ff9e99ee-0670-11ea-9a58-deadbe058832",
+  "category": "Register",
+  "url": "https://indirimbo.com/agakiza/abahoze-mu-mwijima-babony-umucyo-wukuri/ff9e99ee-0670-11ea-9a58-deadbe058832",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Abahoze mu mwijima Babony' umucyo w'ukuri.",
+        "Haleluya, haleluya,",
+        "umwana yatuvukiye, Uwo Mwana w'umuhungu.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Kand' azitw' Igitangaza, Azitwa n'Umujyanama.",
+        "Haleluya, haleluya,",
+        "Azitw' Iman'ikomeye, Yitw' Umwami w'amahoro.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Izina rizwi ni Yesu Risobanur' Umukiza.",
+        "Haleluya, haleluya,",
+        "Azitwa n'lmanucli, Yukw Iman' iri muri twe.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Icyubahiro mw ijuru Kib' icy' Iman' ihoraho.",
+        "Haleluya, haleluya.",
+        "No mw isi hab'amahoro, Abe mubo yishimira.",
+        "Haleluya (x5)."
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Kand' abemey' uwo Mwana Ba kizera n'izina rye,",
+        "Haleluya, haleluya.",
+        "Bahaw'ubushobozi pe, bwo kub' abana b'Imana.",
+        "Haleluya (x5)."
+      ]
+    }
+  ]
+}
