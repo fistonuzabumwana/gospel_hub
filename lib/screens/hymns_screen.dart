@@ -182,8 +182,8 @@ class _HymnsScreenState extends State<HymnsScreen> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: isDark 
-                      ? [const Color(0xFF1B6A28), const Color(0xFF1E281F)]
-                      : [const Color(0xFFE5F7E8), Colors.white],
+                      ? [const Color(0xFF1A365D), const Color(0xFF1B1D1B)]
+                      : [const Color(0xFFEBF3FF), Colors.white],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -254,7 +254,7 @@ class _HymnsScreenState extends State<HymnsScreen> {
           title: 'Indirimbo z\'Agakiza',
           subtitle: 'Ibitabo by\'Agakiza (1 - 110)',
           count: '110 indirimbo',
-          color: Colors.orange.shade700,
+          color: const Color(0xFF00A8FF),
           isDark: isDark,
           onTap: () => _loadHymns('Agakiza'),
         ),
@@ -554,8 +554,8 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                   decoration: isChorus 
                       ? BoxDecoration(
                           color: isDark 
-                              ? const Color(0xFF1E281F) 
-                              : const Color(0xFFF2FBF3),
+                              ? const Color(0xFF1D2436) 
+                              : const Color(0xFFF0F5FF),
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                             color: primaryColor.withValues(alpha: 0.12),

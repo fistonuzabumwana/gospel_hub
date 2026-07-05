@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:share_plus/share_plus.dart';
 import '../services/database_service.dart';
 import '../models/bible_verse.dart';
 import '../models/bible_book.dart';
@@ -22,6 +23,20 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   List<GlobalKey> _verseKeys = [];
   bool _isLoading = true;
   bool _isSearching = false;
+
+  Map<int, int> _highlights = {};
+  Map<int, String> _notes = {};
+
+  static const List<Color> _highlightColors = [
+    Colors.yellow,
+    Colors.pink,
+    Colors.lightGreen,
+    Colors.lightBlue,
+    Colors.orange,
+    Colors.purple,
+    Colors.teal,
+    Colors.deepOrange,
+  ];
 
   // Settings
   double _fontSize = 17.0;
@@ -53,10 +68,14 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     setState(() => _isLoading = true);
     try {
       final verses = await _dbService.getChapterVerses(_selectedBook.bookNumber, _selectedChapter);
+      final highlights = await _dbService.getHighlightsForChapter(_selectedBook.bookNumber, _selectedChapter);
+      final notes = await _dbService.getNotesForChapter(_selectedBook.bookNumber, _selectedChapter);
       if (mounted) {
         setState(() {
           _verses = verses;
           _verseKeys = List.generate(verses.length, (index) => GlobalKey());
+          _highlights = highlights;
+          _notes = notes;
           _isLoading = false;
         });
       }
@@ -344,6 +363,10 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                       textColor: textColor,
                       primaryColor: primaryColor,
                       isHighlighted: _targetVerse == verse.verse,
+                      highlightColor: _highlights.containsKey(verse.id)
+                          ? _highlightColors[_highlights[verse.id]!]
+                          : null,
+                      hasNote: _notes.containsKey(verse.id),
                       onTap: () => _showVerseActionsModal(verse),
                     ),
                   );
@@ -381,65 +404,319 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   }
 
   void _showVerseActionsModal(BibleVerse verse) async {
-    final isFav = await _dbService.isFavorite('bible', verse.id!);
+    final isFavInitial = await _dbService.isFavorite('bible', verse.id!);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     if (!mounted) return;
+
+    bool localIsFav = isFavInitial;
 
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (context) {
-        return Container(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '${_selectedBook.name} ${verse.chapter}:${verse.verse}',
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+        return StatefulBuilder(
+          builder: (context, setModalState) {
+            final activeHighlightIndex = _highlights[verse.id];
+            final noteText = _notes[verse.id];
+
+            return Padding(
+              padding: EdgeInsets.only(
+                left: 24,
+                right: 24,
+                top: 24,
+                bottom: MediaQuery.of(context).viewInsets.bottom + 24,
               ),
-              const SizedBox(height: 8),
-              Text(
-                verse.text,
-                style: const TextStyle(fontStyle: FontStyle.italic, fontFamily: 'serif', fontSize: 15),
-              ),
-              const SizedBox(height: 24),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _ActionButton(
-                    icon: isFav ? Icons.favorite : Icons.favorite_border,
-                    label: isFav ? 'Kuraho' : 'Bika',
-                    color: isFav ? Colors.red : Colors.grey.shade700,
-                    onTap: () async {
-                      if (isFav) {
-                        await _dbService.removeFavorite('bible', verse.id!);
-                      } else {
-                        await _dbService.addFavorite('bible', verse.id!);
-                      }
-                      Navigator.pop(context);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(isFav ? 'Mukuraho!' : 'Yabitswe mu Byatoranyijwe!'))
-                      );
-                    },
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '${_selectedBook.name} ${verse.chapter}:${verse.verse}',
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close, size: 20),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                    ],
                   ),
-                  _ActionButton(
-                    icon: Icons.copy,
-                    label: 'Kopi',
-                    onTap: () {
-                      Clipboard.setData(ClipboardData(text: '${verse.text} (${_selectedBook.name} ${verse.chapter}:${verse.verse})'));
-                      Navigator.pop(context);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Umusaruro wakopijwe!'))
-                      );
-                    },
+                  const SizedBox(height: 8),
+                  Text(
+                    verse.text,
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'serif',
+                      fontSize: 15,
+                      color: isDark ? Colors.white70 : Colors.black87,
+                    ),
                   ),
+                  const SizedBox(height: 20),
+
+                  // ── Highlight Colors Selector ──
+                  const Text('Guhitira umurongo (Highlight):', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    height: 40,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _highlightColors.length + 1,
+                      itemBuilder: (context, index) {
+                        if (index == _highlightColors.length) {
+                          return GestureDetector(
+                            onTap: () async {
+                              await _dbService.removeHighlight(verse.id!);
+                              setState(() {
+                                _highlights.remove(verse.id);
+                              });
+                              setModalState(() {});
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 10),
+                              width: 36,
+                              height: 36,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.grey.shade400),
+                                color: Colors.transparent,
+                              ),
+                              child: const Icon(Icons.format_color_reset, size: 18, color: Colors.grey),
+                            ),
+                          );
+                        }
+
+                        final color = _highlightColors[index];
+                        final isSelected = activeHighlightIndex == index;
+
+                        return GestureDetector(
+                          onTap: () async {
+                            await _dbService.saveHighlight(verse.id!, index);
+                            setState(() {
+                              _highlights[verse.id!] = index;
+                            });
+                            setModalState(() {});
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            width: 36,
+                            height: 36,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: color,
+                              border: Border.all(
+                                color: isSelected ? Theme.of(context).primaryColor : Colors.transparent,
+                                width: isSelected ? 3.0 : 1.0,
+                              ),
+                              boxShadow: isSelected ? [
+                                BoxShadow(
+                                  color: Theme.of(context).primaryColor.withValues(alpha: 0.4),
+                                  blurRadius: 6,
+                                  spreadRadius: 1,
+                                )
+                              ] : null,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+
+                  // ── Actions Row ──
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _ActionButton(
+                        icon: localIsFav ? Icons.favorite : Icons.favorite_border,
+                        label: localIsFav ? 'Kuraho' : 'Bika',
+                        color: localIsFav ? Colors.red : null,
+                        onTap: () async {
+                          if (localIsFav) {
+                            await _dbService.removeFavorite('bible', verse.id!);
+                          } else {
+                            await _dbService.addFavorite('bible', verse.id!);
+                          }
+                          setModalState(() {
+                            localIsFav = !localIsFav;
+                          });
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(localIsFav ? 'Yabitswe mu Byatoranyijwe!' : 'Mukuraho!'),
+                              duration: const Duration(seconds: 1),
+                            )
+                          );
+                        },
+                      ),
+                      _ActionButton(
+                        icon: Icons.copy,
+                        label: 'Kopi',
+                        onTap: () {
+                          Clipboard.setData(ClipboardData(text: '${verse.text} (${_selectedBook.name} ${verse.chapter}:${verse.verse})'));
+                          Navigator.pop(context);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Umusaruro wakopijwe!'), duration: Duration(seconds: 1))
+                          );
+                        },
+                      ),
+                      _ActionButton(
+                        icon: Icons.share,
+                        label: 'Sangira',
+                        onTap: () {
+                          Navigator.pop(context);
+                          SharePlus.instance.share(
+                            ShareParams(
+                              text: '${verse.text}\n\n— ${_selectedBook.name} ${verse.chapter}:${verse.verse}',
+                            ),
+                          );
+                        },
+                      ),
+                      _ActionButton(
+                        icon: Icons.edit_note,
+                        label: 'Icyigisho',
+                        onTap: () {
+                          _showNoteEditDialog(verse, noteText, setModalState);
+                        },
+                      ),
+                    ],
+                  ),
+
+                  // ── Note Preview Area ──
+                  if (noteText != null && noteText.isNotEmpty) ...[
+                    const SizedBox(height: 20),
+                    const Divider(),
+                    const SizedBox(height: 8),
+                    const Text('Icyigisho cyabitswe (Note):', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                    const SizedBox(height: 8),
+                    Card(
+                      elevation: 0.5,
+                      color: isDark ? const Color(0xFF1B1D1B) : const Color(0xFFF0F5FF),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        side: BorderSide(
+                          color: Theme.of(context).primaryColor.withValues(alpha: 0.12),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              noteText,
+                              style: const TextStyle(fontSize: 14, height: 1.4),
+                            ),
+                            const SizedBox(height: 12),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                TextButton.icon(
+                                  icon: const Icon(Icons.edit, size: 16),
+                                  label: const Text('Hindura', style: TextStyle(fontSize: 12)),
+                                  onPressed: () {
+                                    _showNoteEditDialog(verse, noteText, setModalState);
+                                  },
+                                ),
+                                const SizedBox(width: 8),
+                                TextButton.icon(
+                                  icon: const Icon(Icons.delete_outline, size: 16, color: Colors.red),
+                                  label: const Text('Siba', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                  onPressed: () async {
+                                    final confirm = await _showDeleteConfirmDialog();
+                                    if (confirm == true) {
+                                      await _dbService.removeNote(verse.id!);
+                                      setState(() {
+                                        _notes.remove(verse.id);
+                                      });
+                                      setModalState(() {});
+                                    }
+                                  },
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ],
               ),
-            ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  void _showNoteEditDialog(BibleVerse verse, String? initialText, StateSetter setModalState) {
+    final textController = TextEditingController(text: initialText);
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('${_selectedBook.name} ${verse.chapter}:${verse.verse} - Andika Icyigisho'),
+          content: TextField(
+            controller: textController,
+            maxLines: 5,
+            autofocus: true,
+            decoration: const InputDecoration(
+              hintText: 'Andika icyigisho cyangwa igitekerezo cyawe hano...',
+              border: OutlineInputBorder(),
+            ),
           ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Reka'),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                final text = textController.text.trim();
+                if (text.isNotEmpty) {
+                  await _dbService.saveNote(verse.id!, text);
+                  setState(() {
+                    _notes[verse.id!] = text;
+                  });
+                } else {
+                  await _dbService.removeNote(verse.id!);
+                  setState(() {
+                    _notes.remove(verse.id);
+                  });
+                }
+                setModalState(() {});
+                if (mounted) {
+                  Navigator.pop(context);
+                }
+              },
+              child: const Text('Bika'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<bool?> _showDeleteConfirmDialog() {
+    return showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Gusiba Icyigisho'),
+          content: const Text('Urashaka gusiba iki cyigisho by\'ukuri?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('Reka'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: const Text('Siba', style: TextStyle(color: Colors.red)),
+            ),
+          ],
         );
       },
     );
@@ -739,6 +1016,8 @@ class VerseItem extends StatefulWidget {
   final Color textColor;
   final Color primaryColor;
   final bool isHighlighted;
+  final Color? highlightColor;
+  final bool hasNote;
   final VoidCallback onTap;
 
   const VerseItem({
@@ -748,6 +1027,8 @@ class VerseItem extends StatefulWidget {
     required this.textColor,
     required this.primaryColor,
     required this.isHighlighted,
+    this.highlightColor,
+    required this.hasNote,
     required this.onTap,
   });
 
@@ -801,6 +1082,14 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    
+    // Determine persistent highlight background color
+    Color containerColor = Colors.transparent;
+    if (widget.highlightColor != null) {
+      containerColor = widget.highlightColor!.withValues(alpha: isDark ? 0.20 : 0.35);
+    }
+
     return AnimatedBuilder(
       animation: _animation,
       builder: (context, child) {
@@ -809,7 +1098,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
           decoration: BoxDecoration(
             color: widget.isHighlighted 
                 ? widget.primaryColor.withValues(alpha: _animation.value)
-                : Colors.transparent,
+                : containerColor,
             borderRadius: BorderRadius.circular(8),
           ),
           padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
@@ -819,25 +1108,40 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
       child: InkWell(
         onTap: widget.onTap,
         borderRadius: BorderRadius.circular(8),
-        child: RichText(
-          text: TextSpan(
-            style: TextStyle(
-              fontSize: widget.fontSize,
-              color: widget.textColor,
-              height: 1.6,
-              fontFamily: 'serif',
-            ),
-            children: [
-              TextSpan(
-                text: '${widget.verse.verse}  ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: widget.primaryColor,
-                  fontSize: widget.fontSize - 2,
-                ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 4.0),
+          child: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                fontSize: widget.fontSize,
+                color: widget.textColor,
+                height: 1.6,
+                fontFamily: 'serif',
               ),
-              TextSpan(text: widget.verse.text),
-            ],
+              children: [
+                TextSpan(
+                  text: '${widget.verse.verse}  ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: widget.primaryColor,
+                    fontSize: widget.fontSize - 2,
+                  ),
+                ),
+                TextSpan(text: widget.verse.text),
+                if (widget.hasNote)
+                  WidgetSpan(
+                    alignment: PlaceholderAlignment.middle,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 6.0),
+                      child: Icon(
+                        Icons.edit_note,
+                        size: widget.fontSize + 2,
+                        color: widget.primaryColor,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
           ),
         ),
       ),

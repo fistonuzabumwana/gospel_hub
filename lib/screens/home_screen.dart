@@ -149,7 +149,11 @@ class _DashboardTabState extends State<DashboardTab> {
       appBar: AppBar(
         title: Row(
           children: [
-            Icon(Icons.church, color: primaryColor, size: 28),
+            Image.asset(
+              'assets/logo/Gospel hub logo.png',
+              width: 32,
+              height: 32,
+            ),
             const SizedBox(width: 8),
             Text(
               'Gospel Hub',
@@ -187,8 +191,8 @@ class _DashboardTabState extends State<DashboardTab> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: isDark 
-                        ? [const Color(0xFF1E5D27), const Color(0xFF121212)]
-                        : [const Color(0xFFE8F8EA), Colors.white],
+                        ? [const Color(0xFF1A365D), const Color(0xFF101210)]
+                        : [const Color(0xFFEBF3FF), Colors.white],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -287,7 +291,7 @@ class _DashboardTabState extends State<DashboardTab> {
               title: 'Indirimbo zo Gushimisha n\'Agakiza',
               subtitle: 'Indirimbo 546 z\'Agakiza n\'iz\'Imana zo Gushimisha',
               icon: Icons.music_note,
-              color: Colors.orange.shade700,
+              color: const Color(0xFF00A8FF),
               onTap: () {
                 // Switch to Hymns tab
                 final parentState = context.findAncestorStateOfType<_HomeScreenState>();

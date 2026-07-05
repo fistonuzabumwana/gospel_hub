@@ -66,7 +66,29 @@ class DatabaseService {
     }
 
     // Open the database
-    return await openDatabase(path, version: 1);
+    return await openDatabase(
+      path,
+      version: 1,
+      onOpen: (db) async {
+        await db.execute('''
+          CREATE TABLE IF NOT EXISTS highlights (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            verse_id INTEGER NOT NULL UNIQUE,
+            color_index INTEGER NOT NULL,
+            created_at INTEGER NOT NULL
+          )
+        ''');
+        await db.execute('''
+          CREATE TABLE IF NOT EXISTS notes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            verse_id INTEGER NOT NULL UNIQUE,
+            content TEXT NOT NULL,
+            created_at INTEGER NOT NULL,
+            updated_at INTEGER NOT NULL
+          )
+        ''');
+      },
+    );
   }
 
   // ── Bible Queries ──────────────────────────────────────────────────────────
@@ -178,5 +200,91 @@ class DatabaseService {
         ORDER BY f.created_at DESC
       ''');
     }
+  }
+
+  // ── Highlight Queries ──────────────────────────────────────────────────────
+
+  Future<void> saveHighlight(int verseId, int colorIndex) async {
+    final db = await database;
+    await db.insert(
+      'highlights',
+      {
+        'verse_id': verseId,
+        'color_index': colorIndex,
+        'created_at': DateTime.now().millisecondsSinceEpoch,
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  Future<void> removeHighlight(int verseId) async {
+    final db = await database;
+    await db.delete(
+      'highlights',
+      where: 'verse_id = ?',
+      whereArgs: [verseId],
+    );
+  }
+
+  Future<Map<int, int>> getHighlightsForChapter(int bookNumber, int chapterNumber) async {
+    final db = await database;
+    final List<Map<String, dynamic>> results = await db.rawQuery('''
+      SELECT h.verse_id, h.color_index
+      FROM highlights h
+      JOIN bible_verses v ON h.verse_id = v.id
+      WHERE v.book = ? AND v.chapter = ?
+    ''', [bookNumber, chapterNumber]);
+
+    return {for (var row in results) row['verse_id'] as int: row['color_index'] as int};
+  }
+
+  // ── Note Queries ───────────────────────────────────────────────────────────
+
+  Future<void> saveNote(int verseId, String content) async {
+    final db = await database;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    await db.insert(
+      'notes',
+      {
+        'verse_id': verseId,
+        'content': content,
+        'created_at': now,
+        'updated_at': now,
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  Future<void> removeNote(int verseId) async {
+    final db = await database;
+    await db.delete(
+      'notes',
+      where: 'verse_id = ?',
+      whereArgs: [verseId],
+    );
+  }
+
+  Future<String?> getNoteForVerse(int verseId) async {
+    final db = await database;
+    final List<Map<String, dynamic>> results = await db.query(
+      'notes',
+      columns: ['content'],
+      where: 'verse_id = ?',
+      whereArgs: [verseId],
+    );
+    if (results.isEmpty) return null;
+    return results.first['content'] as String;
+  }
+
+  Future<Map<int, String>> getNotesForChapter(int bookNumber, int chapterNumber) async {
+    final db = await database;
+    final List<Map<String, dynamic>> results = await db.rawQuery('''
+      SELECT n.verse_id, n.content
+      FROM notes n
+      JOIN bible_verses v ON n.verse_id = v.id
+      WHERE v.book = ? AND v.chapter = ?
+    ''', [bookNumber, chapterNumber]);
+
+    return {for (var row in results) row['verse_id'] as int: row['content'] as String};
   }
 }

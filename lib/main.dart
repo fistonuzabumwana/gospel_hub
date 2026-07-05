@@ -20,7 +20,7 @@ class GospelHubApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const primaryColor = Color(0xFF28C73D);
+    const primaryColor = Color(0xFF2A62FF);
 
     return ValueListenableBuilder<ThemeMode>(
       valueListenable: themeNotifier,
