@@ -5,6 +5,7 @@ import os
 import sys
 
 BIBLE_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/bible/kinyarwanda_2001 (2).json"
+ENGLISH_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/bible/english_kj.json"
 HYMNS_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/scraper/output/all_hymns.json"
 OUTPUT_DB_DIR = "/home/fiston/Documents/Project/gospel_hub/assets/database"
 OUTPUT_DB_PATH = os.path.join(OUTPUT_DB_DIR, "gospel_hub.db")
@@ -58,8 +59,19 @@ def main():
         )
     """)
 
+    cursor.execute("""
+        CREATE TABLE english_verses (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            book INTEGER,
+            chapter INTEGER,
+            verse INTEGER,
+            text TEXT
+        )
+    """)
+
     # Indexes
     cursor.execute("CREATE INDEX idx_bible_verses ON bible_verses(book, chapter)")
+    cursor.execute("CREATE INDEX idx_english_verses ON english_verses(book, chapter)")
     cursor.execute("CREATE INDEX idx_hymns_book ON hymns(book, number)")
 
     # 2. Populate Bible
@@ -83,6 +95,28 @@ def main():
             item["text"],
             item["testament"]
         ) for item in bible_data
+    ])
+
+    # 2.5 Populate English Bible
+    print(f"Loading English Bible from {ENGLISH_JSON_PATH}...")
+    if not os.path.exists(ENGLISH_JSON_PATH):
+        print(f"❌ Error: English Bible JSON file not found at {ENGLISH_JSON_PATH}")
+        sys.exit(1)
+
+    with open(ENGLISH_JSON_PATH, "r", encoding="utf-8") as f:
+        english_data = json.load(f)
+
+    print(f"Inserting {len(english_data)} English bible verses...")
+    cursor.executemany("""
+        INSERT INTO english_verses (book, chapter, verse, text)
+        VALUES (?, ?, ?, ?)
+    """, [
+        (
+            item["book"],
+            item["chapter"],
+            item["verse"],
+            item["text"]
+        ) for item in english_data
     ])
 
     # 3. Populate Hymns

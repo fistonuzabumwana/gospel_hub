@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:async';
 import 'package:share_plus/share_plus.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import '../services/database_service.dart';
 import '../models/bible_verse.dart';
 import '../models/bible_book.dart';
@@ -26,6 +28,17 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
   Map<int, int> _highlights = {};
   Map<int, String> _notes = {};
+  String _translationMode = 'parallel';
+  Map<int, String> _englishVerses = {};
+  Map<int, List<String>> _verseTagsMap = {};
+
+  final FlutterTts _flutterTts = FlutterTts();
+  bool _isPlayingTTS = false;
+  int? _ttsActiveVerse;
+
+  Timer? _sleepTimer;
+  int? _sleepTimerDurationMinutes;
+  int? _sleepTimerRemainingSeconds;
 
   static const List<Color> _highlightColors = [
     Colors.yellow,
@@ -53,6 +66,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    _initTts();
     _loadVerses();
   }
 
@@ -61,7 +75,34 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     _scrollController.dispose();
     _tabController.dispose();
     _searchController.dispose();
+    _flutterTts.stop();
+    _sleepTimer?.cancel();
     super.dispose();
+  }
+
+  Future<void> _initTts() async {
+    await _flutterTts.setSharedInstance(true);
+    _flutterTts.setStartHandler(() {
+      setState(() => _isPlayingTTS = true);
+    });
+    _flutterTts.setCompletionHandler(() {
+      setState(() {
+        _isPlayingTTS = false;
+        _ttsActiveVerse = null;
+      });
+    });
+    _flutterTts.setCancelHandler(() {
+      setState(() {
+        _isPlayingTTS = false;
+        _ttsActiveVerse = null;
+      });
+    });
+    _flutterTts.setErrorHandler((msg) {
+      setState(() {
+        _isPlayingTTS = false;
+        _ttsActiveVerse = null;
+      });
+    });
   }
 
   Future<void> _loadVerses() async {
@@ -70,12 +111,25 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       final verses = await _dbService.getChapterVerses(_selectedBook.bookNumber, _selectedChapter);
       final highlights = await _dbService.getHighlightsForChapter(_selectedBook.bookNumber, _selectedChapter);
       final notes = await _dbService.getNotesForChapter(_selectedBook.bookNumber, _selectedChapter);
+      final tags = await _dbService.getTagsForChapter(_selectedBook.bookNumber, _selectedChapter);
+      
+      // Log reading history in background
+      _dbService.logReading(_selectedBook.bookNumber, _selectedChapter);
+
+      Map<int, String> englishVersesMap = {};
+      if (_translationMode == 'english' || _translationMode == 'parallel') {
+        final engVerses = await _dbService.getEnglishChapterVerses(_selectedBook.bookNumber, _selectedChapter);
+        englishVersesMap = {for (var v in engVerses) v['verse'] as int: v['text'] as String};
+      }
+
       if (mounted) {
         setState(() {
           _verses = verses;
           _verseKeys = List.generate(verses.length, (index) => GlobalKey());
           _highlights = highlights;
           _notes = notes;
+          _verseTagsMap = tags;
+          _englishVerses = englishVersesMap;
           _isLoading = false;
         });
       }
@@ -256,6 +310,34 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
               },
             )
           else ...[
+            GestureDetector(
+              onLongPress: _showSleepTimerBottomSheet,
+              child: IconButton(
+                icon: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Icon(_isPlayingTTS ? Icons.stop_circle_outlined : Icons.play_circle_outline),
+                    if (_sleepTimerRemainingSeconds != null)
+                      Positioned(
+                        right: 0,
+                        bottom: 0,
+                        child: Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: const BoxDecoration(
+                            color: Colors.red,
+                            shape: BoxShape.circle,
+                          ),
+                          constraints: const BoxConstraints(minWidth: 8, minHeight: 8),
+                        ),
+                      )
+                  ],
+                ),
+                tooltip: _sleepTimerRemainingSeconds != null
+                    ? 'Sleep Timer is active! Long press to change/stop.'
+                    : (_isPlayingTTS ? 'Hagarika gusoma' : 'Soma iki gice cyose (Kanda ukanze kugira ngo ugenge igihe/Sleep Timer)'),
+                onPressed: _speakChapter,
+              ),
+            ),
             IconButton(
               icon: const Icon(Icons.search),
               onPressed: () => setState(() => _isSearching = true),
@@ -299,10 +381,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
           margin: const EdgeInsets.only(bottom: 12),
           child: ListTile(
             contentPadding: const EdgeInsets.all(16),
-            title: Text(
-              verse.text,
-              style: const TextStyle(fontSize: 15, fontFamily: 'serif', height: 1.4),
-            ),
+            title: _buildHighlightedText(verse.text, _searchController.text, context),
             subtitle: Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: Text(
@@ -327,6 +406,61 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     );
   }
 
+  Widget _buildHighlightedText(String text, String query, BuildContext context) {
+    if (query.trim().isEmpty) {
+      return Text(
+        text,
+        style: TextStyle(
+          fontSize: 15,
+          fontFamily: 'serif',
+          height: 1.4,
+          color: Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.black87,
+        ),
+      );
+    }
+
+    final matches = query.trim().split(RegExp(r'\s+'));
+    final pattern = RegExp(
+      '(${matches.map((m) => RegExp.escape(m)).join('|')})',
+      caseSensitive: false,
+    );
+
+    final spans = <InlineSpan>[];
+
+    text.splitMapJoin(
+      pattern,
+      onMatch: (Match match) {
+        spans.add(
+          TextSpan(
+            text: match.group(0),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              backgroundColor: Theme.of(context).primaryColor.withValues(alpha: 0.18),
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+        );
+        return '';
+      },
+      onNonMatch: (String nonMatch) {
+        spans.add(TextSpan(text: nonMatch));
+        return '';
+      },
+    );
+
+    return RichText(
+      text: TextSpan(
+        style: TextStyle(
+          fontSize: 15,
+          fontFamily: 'serif',
+          height: 1.4,
+          color: Theme.of(context).brightness == Brightness.dark ? Colors.white70 : Colors.black87,
+        ),
+        children: spans,
+      ),
+    );
+  }
+
   Widget _buildReaderView(Color primaryColor, bool isDark) {
     if (_isLoading) {
       return const Center(child: CircularProgressIndicator());
@@ -341,10 +475,12 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
         children: [
           Expanded(
             child: GestureDetector(
+              behavior: HitTestBehavior.translucent,
               onHorizontalDragEnd: (details) {
-                if (details.primaryVelocity! < 0) {
+                final velocity = details.primaryVelocity ?? 0;
+                if (velocity < -200) {
                   _nextChapter();
-                } else if (details.primaryVelocity! > 0) {
+                } else if (velocity > 200) {
                   _prevChapter();
                 }
               },
@@ -367,6 +503,9 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                           ? _highlightColors[_highlights[verse.id]!]
                           : null,
                       hasNote: _notes.containsKey(verse.id),
+                      englishText: _englishVerses[verse.verse],
+                      translationMode: _translationMode,
+                      tags: _verseTagsMap[verse.id],
                       onTap: () => _showVerseActionsModal(verse),
                     ),
                   );
@@ -527,62 +666,107 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                   ),
                   const SizedBox(height: 24),
 
-                  // ── Actions Row ──
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  // ── Study Tags Section ──
+                  const Text('Ibimenyetso (Tags):', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8.0,
+                    runSpacing: 4.0,
+                    crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
-                      _ActionButton(
-                        icon: localIsFav ? Icons.favorite : Icons.favorite_border,
-                        label: localIsFav ? 'Kuraho' : 'Bika',
-                        color: localIsFav ? Colors.red : null,
-                        onTap: () async {
-                          if (localIsFav) {
-                            await _dbService.removeFavorite('bible', verse.id!);
-                          } else {
-                            await _dbService.addFavorite('bible', verse.id!);
-                          }
-                          setModalState(() {
-                            localIsFav = !localIsFav;
-                          });
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(localIsFav ? 'Yabitswe mu Byatoranyijwe!' : 'Mukuraho!'),
-                              duration: const Duration(seconds: 1),
-                            )
-                          );
-                        },
-                      ),
-                      _ActionButton(
-                        icon: Icons.copy,
-                        label: 'Kopi',
-                        onTap: () {
-                          Clipboard.setData(ClipboardData(text: '${verse.text} (${_selectedBook.name} ${verse.chapter}:${verse.verse})'));
-                          Navigator.pop(context);
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Umusaruro wakopijwe!'), duration: Duration(seconds: 1))
-                          );
-                        },
-                      ),
-                      _ActionButton(
-                        icon: Icons.share,
-                        label: 'Sangira',
-                        onTap: () {
-                          Navigator.pop(context);
-                          SharePlus.instance.share(
-                            ShareParams(
-                              text: '${verse.text}\n\n— ${_selectedBook.name} ${verse.chapter}:${verse.verse}',
-                            ),
-                          );
-                        },
-                      ),
-                      _ActionButton(
-                        icon: Icons.edit_note,
-                        label: 'Icyigisho',
-                        onTap: () {
-                          _showNoteEditDialog(verse, noteText, setModalState);
+                      ...?_verseTagsMap[verse.id]?.map((tag) {
+                        return Chip(
+                          label: Text(tag, style: const TextStyle(fontSize: 12)),
+                          deleteIcon: const Icon(Icons.close, size: 12),
+                          onDeleted: () async {
+                            await _dbService.removeVerseTag(verse.id!, tag);
+                            final updatedTags = await _dbService.getTagsForChapter(_selectedBook.bookNumber, _selectedChapter);
+                            setState(() {
+                              _verseTagsMap = updatedTags;
+                            });
+                            setModalState(() {});
+                          },
+                        );
+                      }),
+                      ActionChip(
+                        backgroundColor: Theme.of(context).primaryColor.withValues(alpha: 0.1),
+                        avatar: const Icon(Icons.add, size: 14),
+                        label: const Text('Ongeraho', style: TextStyle(fontSize: 12)),
+                        onPressed: () {
+                          _showAddTagDialog(verse, setModalState);
                         },
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 24),
+
+                  // ── Actions Row ──
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        _ActionButton(
+                          icon: localIsFav ? Icons.favorite : Icons.favorite_border,
+                          label: localIsFav ? 'Kuraho' : 'Bika',
+                          color: localIsFav ? Colors.red : null,
+                          onTap: () async {
+                            if (localIsFav) {
+                              await _dbService.removeFavorite('bible', verse.id!);
+                            } else {
+                              await _dbService.addFavorite('bible', verse.id!);
+                            }
+                            setModalState(() {
+                              localIsFav = !localIsFav;
+                            });
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(localIsFav ? 'Yabitswe mu Byatoranyijwe!' : 'Mukuraho!'),
+                                duration: const Duration(seconds: 1),
+                              )
+                            );
+                          },
+                        ),
+                        _ActionButton(
+                          icon: Icons.copy,
+                          label: 'Kopi',
+                          onTap: () {
+                            Clipboard.setData(ClipboardData(text: '${verse.text} (${_selectedBook.name} ${verse.chapter}:${verse.verse})'));
+                            Navigator.pop(context);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Umusaruro wakopijwe!'), duration: Duration(seconds: 1))
+                            );
+                          },
+                        ),
+                        _ActionButton(
+                          icon: Icons.share,
+                          label: 'Sangira',
+                          onTap: () {
+                            Navigator.pop(context);
+                            SharePlus.instance.share(
+                              ShareParams(
+                                text: '${verse.text}\n\n— ${_selectedBook.name} ${verse.chapter}:${verse.verse}',
+                              ),
+                            );
+                          },
+                        ),
+                        _ActionButton(
+                          icon: Icons.edit_note,
+                          label: 'Icyigisho',
+                          onTap: () {
+                            _showNoteEditDialog(verse, noteText, setModalState);
+                          },
+                        ),
+                        _ActionButton(
+                          icon: Icons.volume_up_outlined,
+                          label: 'Soma',
+                          onTap: () {
+                            Navigator.pop(context);
+                            _speakVerse(verse);
+                          },
+                        ),
+                      ],
+                    ),
                   ),
 
                   // ── Note Preview Area ──
@@ -722,6 +906,263 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     );
   }
 
+  void _showAddTagDialog(BibleVerse verse, StateSetter setModalState) async {
+    final textController = TextEditingController();
+    final uniqueTags = await _dbService.getAllUniqueTags();
+    
+    if (!mounted) return;
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Ongeraho Ikimenyetso (Tag)'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TextField(
+                controller: textController,
+                autofocus: true,
+                decoration: const InputDecoration(
+                  hintText: 'Andika ikimenyetso (e.g. Urukundo, Isengesho)...',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              if (uniqueTags.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                const Text('Ibimenyetso bihari:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                const SizedBox(height: 6),
+                Wrap(
+                  spacing: 6.0,
+                  children: uniqueTags.take(6).map((tag) {
+                    return ActionChip(
+                      label: Text(tag, style: const TextStyle(fontSize: 11)),
+                      onPressed: () {
+                        textController.text = tag;
+                      },
+                    );
+                  }).toList(),
+                )
+              ]
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Reka'),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                final tag = textController.text.trim();
+                if (tag.isNotEmpty) {
+                  await _dbService.addVerseTag(verse.id!, tag);
+                  final updatedTags = await _dbService.getTagsForChapter(_selectedBook.bookNumber, _selectedChapter);
+                  setState(() {
+                    _verseTagsMap = updatedTags;
+                  });
+                  setModalState(() {});
+                }
+                if (mounted) {
+                  Navigator.pop(context);
+                }
+              },
+              child: const Text('Bika'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> _speakVerse(BibleVerse verse) async {
+    if (_isPlayingTTS) {
+      await _flutterTts.stop();
+      if (_ttsActiveVerse == verse.verse) {
+        setState(() {
+          _isPlayingTTS = false;
+          _ttsActiveVerse = null;
+        });
+        return;
+      }
+    }
+
+    String targetText = verse.text;
+    String langCode = 'rw-RW';
+    
+    if (_translationMode == 'english') {
+      targetText = _englishVerses[verse.verse] ?? verse.text;
+      langCode = 'en-US';
+    }
+
+    await _flutterTts.setLanguage(langCode);
+    await _flutterTts.setPitch(1.0);
+    await _flutterTts.setSpeechRate(0.5);
+
+    setState(() {
+      _ttsActiveVerse = verse.verse;
+      _isPlayingTTS = true;
+    });
+
+    await _flutterTts.speak(targetText);
+  }
+
+  Future<void> _speakChapter() async {
+    if (_isPlayingTTS) {
+      await _flutterTts.stop();
+      setState(() {
+        _isPlayingTTS = false;
+        _ttsActiveVerse = null;
+      });
+      return;
+    }
+
+    final buffer = StringBuffer();
+    buffer.write('${_selectedBook.name} igice cya $_selectedChapter. ');
+    for (var v in _verses) {
+      buffer.write('${v.verse}. ');
+      if (_translationMode == 'english') {
+        buffer.write('${_englishVerses[v.verse] ?? v.text}. ');
+      } else {
+        buffer.write('${v.text}. ');
+      }
+    }
+
+    String langCode = _translationMode == 'english' ? 'en-US' : 'rw-RW';
+    await _flutterTts.setLanguage(langCode);
+    await _flutterTts.setPitch(1.0);
+    await _flutterTts.setSpeechRate(0.5);
+
+    setState(() {
+      _isPlayingTTS = true;
+    });
+
+    await _flutterTts.speak(buffer.toString());
+  }
+
+  void _showSleepTimerBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setModalState) {
+            final activeTimer = _sleepTimerDurationMinutes;
+            final isRunning = _sleepTimerRemainingSeconds != null;
+            
+            String statusText = 'Nta gupima igihe guhari (Timer is Off)';
+            if (isRunning) {
+              final mins = _sleepTimerRemainingSeconds! ~/ 60;
+              final secs = _sleepTimerRemainingSeconds! % 60;
+              statusText = 'Bizahagarara nyuma ya: ${mins.toString().padLeft(2, '0')}:${secs.toString().padLeft(2, '0')}';
+            }
+
+            return Container(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Guhagarika Gusoma (Sleep Timer)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                  const SizedBox(height: 8),
+                  Text(statusText, style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold, fontSize: 14)),
+                  const SizedBox(height: 20),
+                  Wrap(
+                    spacing: 8.0,
+                    runSpacing: 8.0,
+                    children: [
+                      _TimerChip(
+                        label: 'Hagarika',
+                        selected: activeTimer == null,
+                        onTap: () {
+                          _cancelSleepTimer();
+                          setModalState(() {});
+                          setState(() {});
+                          Navigator.pop(context);
+                        },
+                      ),
+                      _TimerChip(
+                        label: '5 min',
+                        selected: activeTimer == 5,
+                        onTap: () => _startSleepTimer(5, setModalState),
+                      ),
+                      _TimerChip(
+                        label: '15 min',
+                        selected: activeTimer == 15,
+                        onTap: () => _startSleepTimer(15, setModalState),
+                      ),
+                      _TimerChip(
+                        label: '30 min',
+                        selected: activeTimer == 30,
+                        onTap: () => _startSleepTimer(30, setModalState),
+                      ),
+                      _TimerChip(
+                        label: '45 min',
+                        selected: activeTimer == 45,
+                        onTap: () => _startSleepTimer(45, setModalState),
+                      ),
+                      _TimerChip(
+                        label: '60 min',
+                        selected: activeTimer == 60,
+                        onTap: () => _startSleepTimer(60, setModalState),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  void _cancelSleepTimer() {
+    _sleepTimer?.cancel();
+    setState(() {
+      _sleepTimer = null;
+      _sleepTimerDurationMinutes = null;
+      _sleepTimerRemainingSeconds = null;
+    });
+  }
+
+  void _startSleepTimer(int minutes, StateSetter setModalState) {
+    _sleepTimer?.cancel();
+    setState(() {
+      _sleepTimerDurationMinutes = minutes;
+      _sleepTimerRemainingSeconds = minutes * 60;
+    });
+
+    _sleepTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_sleepTimerRemainingSeconds == null || _sleepTimerRemainingSeconds! <= 0) {
+        timer.cancel();
+        _flutterTts.stop();
+        setState(() {
+          _isPlayingTTS = false;
+          _ttsActiveVerse = null;
+          _sleepTimer = null;
+          _sleepTimerDurationMinutes = null;
+          _sleepTimerRemainingSeconds = null;
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Gusoma guhagaze kuko igihe cyarangiye (Sleep Timer fired).')),
+        );
+      } else {
+        setState(() {
+          _sleepTimerRemainingSeconds = _sleepTimerRemainingSeconds! - 1;
+        });
+        setModalState(() {});
+      }
+    });
+
+    Navigator.pop(context);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Gusoma bizahagarara nyuma y\'iminota $minutes!')),
+    );
+  }
+
   void _showSettingsBottomSheet() {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     showModalBottomSheet(
@@ -791,6 +1232,41 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                         onTap: () {
                           setModalState(() => _customThemeMode = 'Dark');
                           setState(() => _customThemeMode = 'Dark');
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
+                  const Text('Umuhinduzi (Translation)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _TranslationOptionButton(
+                        label: 'Kinyarwanda',
+                        selected: _translationMode == 'kinyarwanda',
+                        onTap: () {
+                          setModalState(() => _translationMode = 'kinyarwanda');
+                          setState(() => _translationMode = 'kinyarwanda');
+                          _loadVerses();
+                        },
+                      ),
+                      _TranslationOptionButton(
+                        label: 'English KJV',
+                        selected: _translationMode == 'english',
+                        onTap: () {
+                          setModalState(() => _translationMode = 'english');
+                          setState(() => _translationMode = 'english');
+                          _loadVerses();
+                        },
+                      ),
+                      _TranslationOptionButton(
+                        label: 'Parallel',
+                        selected: _translationMode == 'parallel',
+                        onTap: () {
+                          setModalState(() => _translationMode = 'parallel');
+                          setState(() => _translationMode = 'parallel');
+                          _loadVerses();
                         },
                       ),
                     ],
@@ -1018,6 +1494,9 @@ class VerseItem extends StatefulWidget {
   final bool isHighlighted;
   final Color? highlightColor;
   final bool hasNote;
+  final String? englishText;
+  final String translationMode;
+  final List<String>? tags;
   final VoidCallback onTap;
 
   const VerseItem({
@@ -1029,6 +1508,9 @@ class VerseItem extends StatefulWidget {
     required this.isHighlighted,
     this.highlightColor,
     required this.hasNote,
+    this.englishText,
+    required this.translationMode,
+    this.tags,
     required this.onTap,
   });
 
@@ -1127,7 +1609,22 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
                     fontSize: widget.fontSize - 2,
                   ),
                 ),
-                TextSpan(text: widget.verse.text),
+                TextSpan(
+                  text: widget.translationMode == 'english' 
+                      ? (widget.englishText ?? widget.verse.text)
+                      : widget.verse.text,
+                ),
+                if (widget.translationMode == 'parallel' && widget.englishText != null) ...[
+                  const TextSpan(text: '\n'),
+                  TextSpan(
+                    text: widget.englishText!,
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: widget.fontSize - 1.5,
+                      color: isDark ? Colors.white60 : Colors.black54,
+                    ),
+                  ),
+                ],
                 if (widget.hasNote)
                   WidgetSpan(
                     alignment: PlaceholderAlignment.middle,
@@ -1140,6 +1637,35 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
                       ),
                     ),
                   ),
+                if (widget.tags != null && widget.tags!.isNotEmpty) ...[
+                  const TextSpan(text: '\n'),
+                  WidgetSpan(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 4.0),
+                      child: Wrap(
+                        spacing: 4.0,
+                        runSpacing: 2.0,
+                        children: widget.tags!.map((t) {
+                          return Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            decoration: BoxDecoration(
+                              color: widget.primaryColor.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Text(
+                              t,
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                                color: widget.primaryColor,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  ),
+                ],
               ],
             ),
           ),
@@ -1168,7 +1694,7 @@ class _ActionButton extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
         child: Column(
           children: [
             Icon(icon, color: color ?? Theme.of(context).primaryColor, size: 26),
@@ -1215,6 +1741,63 @@ class _ThemeButton extends StatelessWidget {
         label,
         style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
       ),
+    );
+  }
+}
+
+class _TranslationOptionButton extends StatelessWidget {
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _TranslationOptionButton({
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: selected ? Colors.white : theme.textTheme.bodyMedium?.color,
+        backgroundColor: selected ? theme.primaryColor : Colors.transparent,
+        side: BorderSide(color: selected ? theme.primaryColor : Colors.grey.shade400),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      ),
+      onPressed: onTap,
+      child: Text(label, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+    );
+  }
+}
+
+class _TimerChip extends StatelessWidget {
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _TimerChip({
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return ActionChip(
+      backgroundColor: selected ? theme.primaryColor : theme.primaryColor.withValues(alpha: 0.08),
+      label: Text(
+        label,
+        style: TextStyle(
+          color: selected ? Colors.white : theme.primaryColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 12,
+        ),
+      ),
+      onPressed: onTap,
     );
   }
 }

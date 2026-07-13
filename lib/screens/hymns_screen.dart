@@ -7,11 +7,18 @@ class HymnsScreen extends StatefulWidget {
   const HymnsScreen({super.key});
 
   @override
-  State<HymnsScreen> createState() => _HymnsScreenState();
+  State<HymnsScreen> createState() => HymnsScreenState();
 }
 
-class _HymnsScreenState extends State<HymnsScreen> {
+class HymnsScreenState extends State<HymnsScreen> {
   final DatabaseService _dbService = DatabaseService();
+  Hymn? _selectedHymn;
+
+  void selectHymn(Hymn hymn) {
+    setState(() {
+      _selectedHymn = hymn;
+    });
+  }
 
   // Navigation states:
   // 0: Hymn Books List (cards like INDIRIMBO)
@@ -22,6 +29,8 @@ class _HymnsScreenState extends State<HymnsScreen> {
 
   List<Hymn> _hymnsList = [];
   List<Hymn> _filteredHymnsList = [];
+  List<String> _categories = [];
+  String? _selectedCategory;
   bool _isLoading = false;
 
   final TextEditingController _searchController = TextEditingController();
@@ -41,24 +50,37 @@ class _HymnsScreenState extends State<HymnsScreen> {
   }
 
   void _onSearchChanged() {
+    _applyFilters();
+  }
+
+  void _onCategorySelected(String? category) {
+    setState(() {
+      _selectedCategory = category;
+      _applyFilters();
+    });
+  }
+
+  void _applyFilters() {
     final query = _searchController.text.toLowerCase().trim();
-    if (query.isEmpty) {
-      setState(() {
-        _filteredHymnsList = _hymnsList;
-      });
-      return;
+    List<Hymn> temp = _hymnsList;
+
+    if (_selectedCategory != null) {
+      temp = temp.where((hymn) => hymn.category == _selectedCategory).toList();
     }
 
-    setState(() {
-      _filteredHymnsList = _hymnsList.where((hymn) {
+    if (query.isNotEmpty) {
+      temp = temp.where((hymn) {
         final matchesNum = hymn.number.toString() == query;
         final matchesTitle = hymn.title.toLowerCase().contains(query);
-        final matchesCategory = hymn.category.toLowerCase().contains(query);
         final matchesLyrics = hymn.lyrics.any(
           (block) => block.lines.any((line) => line.toLowerCase().contains(query))
         );
-        return matchesNum || matchesTitle || matchesCategory || matchesLyrics;
+        return matchesNum || matchesTitle || matchesLyrics;
       }).toList();
+    }
+
+    setState(() {
+      _filteredHymnsList = temp;
     });
   }
 
@@ -71,10 +93,13 @@ class _HymnsScreenState extends State<HymnsScreen> {
 
     try {
       final list = await _dbService.getHymnsByBook(bookName);
+      final categories = await _dbService.getHymnCategories(bookName);
       if (mounted) {
         setState(() {
           _hymnsList = list;
           _filteredHymnsList = list;
+          _categories = categories;
+          _selectedCategory = null;
           _isLoading = false;
         });
       }
@@ -102,6 +127,23 @@ class _HymnsScreenState extends State<HymnsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (_selectedHymn != null) {
+      return PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, result) {
+          if (!didPop) {
+            setState(() {
+              _selectedHymn = null;
+            });
+          }
+        },
+        child: HymnDetailModal(
+          hymn: _selectedHymn!,
+          onBack: () => setState(() => _selectedHymn = null),
+        ),
+      );
+    }
+
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return PopScope(
@@ -326,55 +368,93 @@ class _HymnsScreenState extends State<HymnsScreen> {
       return const Center(child: CircularProgressIndicator());
     }
 
-    if (_filteredHymnsList.isEmpty) {
-      return const Center(
-        child: Text('Nta ndirimbo yabonetse yujuje ibi bintu.', style: TextStyle(color: Colors.grey)),
-      );
-    }
+    return Column(
+      children: [
+        if (_categories.isNotEmpty)
+          Container(
+            height: 48,
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              itemCount: _categories.length + 1,
+              itemBuilder: (context, index) {
+                if (index == 0) {
+                  final isSelected = _selectedCategory == null;
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: ChoiceChip(
+                      label: const Text('Zose', style: TextStyle(fontSize: 12)),
+                      selected: isSelected,
+                      onSelected: (_) => _onCategorySelected(null),
+                    ),
+                  );
+                }
 
-    return ListView.builder(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      itemCount: _filteredHymnsList.length,
-      itemBuilder: (context, index) {
-        final hymn = _filteredHymnsList[index];
-        return Card(
-          margin: const EdgeInsets.only(bottom: 8),
-          elevation: 0.5,
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Theme.of(context).primaryColor.withValues(alpha: 0.1),
-              child: Text(
-                '${hymn.number}',
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+                final cat = _categories[index - 1];
+                final isSelected = _selectedCategory == cat;
+                return Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: ChoiceChip(
+                    label: Text(cat, style: const TextStyle(fontSize: 12)),
+                    selected: isSelected,
+                    onSelected: (selected) {
+                      _onCategorySelected(selected ? cat : null);
+                    },
+                  ),
+                );
+              },
             ),
-            title: Text(
-              hymn.title,
-              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
-            ),
-            trailing: const Icon(Icons.chevron_right, size: 18),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HymnDetailModal(hymn: hymn),
-                ),
-              );
-            },
           ),
-        );
-      },
+        Expanded(
+          child: _filteredHymnsList.isEmpty
+              ? const Center(
+                  child: Text('Nta ndirimbo yabonetse yujuje ibi bintu.', style: TextStyle(color: Colors.grey)),
+                )
+              : ListView.builder(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  itemCount: _filteredHymnsList.length,
+                  itemBuilder: (context, index) {
+                    final hymn = _filteredHymnsList[index];
+                    return Card(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      elevation: 0.5,
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Theme.of(context).primaryColor.withValues(alpha: 0.1),
+                          child: Text(
+                            '${hymn.number}',
+                            style: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        title: Text(
+                          hymn.title,
+                          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+                        ),
+                        subtitle: Text(
+                          hymn.category,
+                          style: const TextStyle(fontSize: 12, color: Colors.grey),
+                        ),
+                        trailing: const Icon(Icons.chevron_right, size: 18),
+                        onTap: () => selectHymn(hymn),
+                      ),
+                    );
+                  },
+                ),
+        ),
+      ],
     );
   }
 }
 
 class HymnDetailModal extends StatefulWidget {
   final Hymn hymn;
+  final VoidCallback? onBack;
 
-  const HymnDetailModal({super.key, required this.hymn});
+  const HymnDetailModal({super.key, required this.hymn, this.onBack});
 
   @override
   State<HymnDetailModal> createState() => _HymnDetailModalState();
@@ -382,17 +462,19 @@ class HymnDetailModal extends StatefulWidget {
 
 class _HymnDetailModalState extends State<HymnDetailModal> {
   final DatabaseService _dbService = DatabaseService();
+  late Hymn _currentHymn;
   bool _isFav = false;
   double _fontSize = 16.0;
 
   @override
   void initState() {
     super.initState();
+    _currentHymn = widget.hymn;
     _checkFavorite();
   }
 
   Future<void> _checkFavorite() async {
-    final status = await _dbService.isFavorite('hymn', widget.hymn.id!);
+    final status = await _dbService.isFavorite('hymn', _currentHymn.id!);
     if (mounted) {
       setState(() => _isFav = status);
     }
@@ -444,6 +526,125 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
     );
   }
 
+  void _showAddToPlaylistDialog() async {
+    final playlists = await _dbService.getPlaylists();
+    
+    if (!mounted) return;
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        final newPlaylistController = TextEditingController();
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            return AlertDialog(
+              title: const Text('Ongeraho mu Rutonde (Playlist)'),
+              content: SizedBox(
+                width: double.maxFinite,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (playlists.isEmpty)
+                      const Text('Nta ntonde zihari. Banza ukore urutonde rushya!', style: TextStyle(color: Colors.grey, fontSize: 13))
+                    else
+                      Flexible(
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: playlists.length,
+                          itemBuilder: (context, index) {
+                            final pl = playlists[index];
+                            return ListTile(
+                              leading: const Icon(Icons.playlist_play),
+                              title: Text(pl['name']),
+                              onTap: () async {
+                                await _dbService.addHymnToPlaylist(pl['id'], _currentHymn.id!);
+                                if (mounted) {
+                                  Navigator.pop(context);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text('Yongewe kuri "${pl['name']}"!')),
+                                  );
+                                }
+                              },
+                            );
+                          },
+                        ),
+                      ),
+                    const Divider(),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: newPlaylistController,
+                      decoration: const InputDecoration(
+                        hintText: 'Andika izina ry\'urutonde rushya...',
+                        border: OutlineInputBorder(),
+                        contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text('Reka'),
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    final name = newPlaylistController.text.trim();
+                    if (name.isNotEmpty) {
+                      final plId = await _dbService.createPlaylist(name);
+                      if (plId > 0) {
+                        await _dbService.addHymnToPlaylist(plId, _currentHymn.id!);
+                        if (mounted) {
+                          Navigator.pop(context);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Uruhande rwashyizweho neza kandi indirimbo yongewemo!')),
+                          );
+                        }
+                      }
+                    }
+                  },
+                  child: const Text('Kora & Ongeraho'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Future<void> _nextHymn() async {
+    final nextNumber = _currentHymn.number + 1;
+    final next = await _dbService.getHymnByBookAndNumber(_currentHymn.book, nextNumber);
+    if (next != null) {
+      setState(() {
+        _currentHymn = next;
+      });
+      _checkFavorite();
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Iyi niyo ndirimbo ya nyuma mu gitabo!'), duration: Duration(seconds: 1)),
+      );
+    }
+  }
+
+  Future<void> _prevHymn() async {
+    if (_currentHymn.number <= 1) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Iyi niyo ndirimbo ya mbere mu gitabo!'), duration: Duration(seconds: 1)),
+      );
+      return;
+    }
+    final prevNumber = _currentHymn.number - 1;
+    final prev = await _dbService.getHymnByBookAndNumber(_currentHymn.book, prevNumber);
+    if (prev != null) {
+      setState(() {
+        _currentHymn = prev;
+      });
+      _checkFavorite();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
@@ -451,8 +652,19 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('${widget.hymn.book} - indirimbo ya ${widget.hymn.number}'),
+        leading: widget.onBack != null
+            ? IconButton(
+                icon: const Icon(Icons.arrow_back_ios_new),
+                onPressed: widget.onBack,
+              )
+            : null,
+        title: Text('${_currentHymn.book} - indirimbo ya ${_currentHymn.number}'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.playlist_add),
+            tooltip: 'Ongeraho mu rutonde (Add to playlist)',
+            onPressed: _showAddToPlaylistDialog,
+          ),
           IconButton(
             icon: const Icon(Icons.format_size),
             onPressed: _showSettingsBottomSheet,
@@ -461,9 +673,9 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
             icon: Icon(_isFav ? Icons.favorite : Icons.favorite_border, color: _isFav ? Colors.red : null),
             onPressed: () async {
               if (_isFav) {
-                await _dbService.removeFavorite('hymn', widget.hymn.id!);
+                await _dbService.removeFavorite('hymn', _currentHymn.id!);
               } else {
-                await _dbService.addFavorite('hymn', widget.hymn.id!);
+                await _dbService.addFavorite('hymn', _currentHymn.id!);
               }
               setState(() => _isFav = !_isFav);
               if (mounted) {
@@ -478,8 +690,8 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
             onPressed: () {
               // Copy all lyrics as plain text
               final buffer = StringBuffer();
-              buffer.writeln('${widget.hymn.title} (${widget.hymn.book} #${widget.hymn.number})\n');
-              for (var block in widget.hymn.lyrics) {
+              buffer.writeln('${_currentHymn.title} (${_currentHymn.book} #${_currentHymn.number})\n');
+              for (var block in _currentHymn.lyrics) {
                 if (block.type == 'chorus') {
                   buffer.writeln('[Chorus/Gusubiramo]');
                 } else {
@@ -498,113 +710,128 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Column(
-                children: [
-                  Text(
-                    widget.hymn.title,
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  if (widget.hymn.category.isNotEmpty) ...[
-                    const SizedBox(height: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: primaryColor.withValues(alpha: 0.08),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Text(
-                        widget.hymn.category,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: primaryColor,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ],
-              ),
-            ),
-            const SizedBox(height: 32),
-
-            // Lyrics block list
-            ListView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: widget.hymn.lyrics.length,
-              itemBuilder: (context, index) {
-                final block = widget.hymn.lyrics[index];
-                final isChorus = block.type == 'chorus';
-
-                return Container(
-                  margin: const EdgeInsets.only(bottom: 24),
-                  padding: isChorus 
-                      ? const EdgeInsets.symmetric(vertical: 12, horizontal: 16)
-                      : null,
-                  decoration: isChorus 
-                      ? BoxDecoration(
-                          color: isDark 
-                              ? const Color(0xFF1D2436) 
-                              : const Color(0xFFF0F5FF),
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                            color: primaryColor.withValues(alpha: 0.12),
-                            width: 1,
-                          ),
-                        )
-                      : null,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+      body: GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onHorizontalDragEnd: (details) {
+          if (details.primaryVelocity! < 0) {
+            _nextHymn();
+          } else if (details.primaryVelocity! > 0) {
+            _prevHymn();
+          }
+        },
+        child: Container(
+          color: Colors.transparent, // Ensures swiping anywhere is caught by the detector
+          height: double.infinity,
+          width: double.infinity,
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Column(
                     children: [
-                      // Left label column: Verse number or Ref/Chorus badge
-                      Container(
-                        width: 44,
-                        alignment: Alignment.topRight,
-                        padding: const EdgeInsets.only(right: 12.0),
-                        child: Text(
-                          isChorus ? 'Ch.' : '${block.number ?? ""}',
-                          style: TextStyle(
-                            fontSize: _fontSize - 1,
-                            fontWeight: FontWeight.bold,
-                            color: primaryColor,
+                      Text(
+                        _currentHymn.title,
+                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: primaryColor,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      if (_currentHymn.category.isNotEmpty) ...[
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: primaryColor.withValues(alpha: 0.08),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            _currentHymn.category,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: primaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      ),
-                      // Lines column
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: block.lines.map((line) {
-                            return Padding(
-                              padding: const EdgeInsets.only(bottom: 6.0),
-                              child: Text(
-                                line,
-                                style: TextStyle(
-                                  fontSize: _fontSize,
-                                  height: 1.5,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                      ),
+                      ],
                     ],
                   ),
-                );
-              },
+                ),
+                const SizedBox(height: 32),
+
+                // Lyrics block list
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: _currentHymn.lyrics.length,
+                  itemBuilder: (context, index) {
+                    final block = _currentHymn.lyrics[index];
+                    final isChorus = block.type == 'chorus';
+
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 24),
+                      padding: isChorus 
+                          ? const EdgeInsets.symmetric(vertical: 12, horizontal: 16)
+                          : null,
+                      decoration: isChorus 
+                          ? BoxDecoration(
+                              color: isDark 
+                                  ? const Color(0xFF1D2436) 
+                                  : const Color(0xFFF0F5FF),
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: primaryColor.withValues(alpha: 0.12),
+                                width: 1,
+                              ),
+                            )
+                          : null,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Left label column: Verse number or Ref/Chorus badge
+                          Container(
+                            width: 44,
+                            alignment: Alignment.topRight,
+                            padding: const EdgeInsets.only(right: 12.0),
+                            child: Text(
+                              isChorus ? 'Ch.' : '${block.number ?? ""}',
+                              style: TextStyle(
+                                fontSize: _fontSize - 1,
+                                fontWeight: FontWeight.bold,
+                                color: primaryColor,
+                              ),
+                            ),
+                          ),
+                          // Lines column
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: block.lines.map((line) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 6.0),
+                                  child: Text(
+                                    line,
+                                    style: TextStyle(
+                                      fontSize: _fontSize,
+                                      height: 1.5,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
