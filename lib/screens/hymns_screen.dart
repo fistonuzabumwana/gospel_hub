@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../services/database_service.dart';
 import '../models/hymn.dart';
+import '../services/app_localizations.dart';
 
 class HymnsScreen extends StatefulWidget {
   const HymnsScreen({super.key});
@@ -164,15 +165,15 @@ class HymnsScreenState extends State<HymnsScreen> {
           title: _isSearching 
               ? TextField(
                   controller: _searchController,
-                  decoration: const InputDecoration(
-                    hintText: 'Shaka indirimbo (izina, numero cyangwa amagambo)...',
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.translate('hymns_search_hint'),
                     border: InputBorder.none,
                   ),
                   autofocus: true,
                   style: const TextStyle(fontSize: 16),
                 )
               : Text(
-                  _currentView == 2 ? _selectedBookName : 'Ibitabo by\'Indirimbo',
+                  _currentView == 2 ? _selectedBookName : AppLocalizations.translate('hymns_books_title'),
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
           actions: [
@@ -495,9 +496,9 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Ibipimo by\'Inyandiko',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  Text(
+                    AppLocalizations.translate('reader_settings_font_size'),
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   const SizedBox(height: 16),
                   Row(

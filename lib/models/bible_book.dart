@@ -15,6 +15,10 @@ class BibleBook {
 
   bool get isOldTestament => testament == 'Old';
 
+  String getDisplayName(String translationMode) {
+    return translationMode == 'english' ? englishName : name;
+  }
+
   static const List<BibleBook> allBooks = [
     // Old Testament (39 books)
     BibleBook(bookNumber: 1, name: "Intangiriro", englishName: "Genesis", testament: "Old", chapterCount: 50),

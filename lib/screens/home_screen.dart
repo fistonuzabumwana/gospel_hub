@@ -11,6 +11,8 @@ import '../models/hymn.dart';
 import '../models/bible_book.dart';
 import '../main.dart';
 import '../services/app_state_service.dart';
+import '../services/app_localizations.dart';
+import 'settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -59,7 +61,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
 
-    return Scaffold(
+    return ValueListenableBuilder<String>(
+      valueListenable: localeNotifier,
+      builder: (context, currentLang, _) {
+        return Scaffold(
       body: IndexedStack(
         index: _currentTabIndex,
         children: _tabs,
@@ -88,30 +93,32 @@ class _HomeScreenState extends State<HomeScreen> {
               ? Colors.white 
               : const Color(0xFF121212),
           elevation: 0,
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard_outlined),
-              activeIcon: Icon(Icons.dashboard),
-              label: 'Ahabanza',
+              icon: const Icon(Icons.dashboard_outlined),
+              activeIcon: const Icon(Icons.dashboard),
+              label: AppLocalizations.translate('nav_home'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.menu_book_outlined),
-              activeIcon: Icon(Icons.menu_book),
-              label: 'Bibiliya',
+              icon: const Icon(Icons.menu_book_outlined),
+              activeIcon: const Icon(Icons.menu_book),
+              label: AppLocalizations.translate('nav_bible'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.music_note_outlined),
-              activeIcon: Icon(Icons.music_note),
-              label: 'Indirimbo',
+              icon: const Icon(Icons.music_note_outlined),
+              activeIcon: const Icon(Icons.music_note),
+              label: AppLocalizations.translate('nav_hymns'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border),
-              activeIcon: Icon(Icons.favorite),
-              label: 'Ibyatoranyijwe',
+              icon: const Icon(Icons.favorite_border),
+              activeIcon: const Icon(Icons.favorite),
+              label: AppLocalizations.translate('nav_saved'),
             ),
           ],
         ),
       ),
+    );
+      },
     );
   }
 }
@@ -227,7 +234,10 @@ class _DashboardTabState extends State<DashboardTab> {
     final primaryColor = Theme.of(context).primaryColor;
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    return Scaffold(
+    return ValueListenableBuilder<String>(
+      valueListenable: localeNotifier,
+      builder: (context, currentLang, _) {
+        return Scaffold(
       appBar: AppBar(
         title: Row(
           children: [
@@ -251,11 +261,21 @@ class _DashboardTabState extends State<DashboardTab> {
         actions: [
           IconButton(
             icon: Icon(isDark ? Icons.light_mode_outlined : Icons.dark_mode_outlined),
-            tooltip: isDark ? 'Koresha umweru' : 'Koresha umukara',
+            tooltip: isDark ? AppLocalizations.translate('theme_light_mode') : AppLocalizations.translate('theme_dark_mode'),
             onPressed: () async {
               final newMode = isDark ? ThemeMode.light : ThemeMode.dark;
               themeNotifier.value = newMode;
               await AppStateService.setDarkMode(newMode == ThemeMode.dark);
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings_outlined),
+            tooltip: AppLocalizations.translate('settings_title'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsScreen()),
+              );
             },
           ),
           const SizedBox(width: 8),
@@ -290,7 +310,7 @@ class _DashboardTabState extends State<DashboardTab> {
                           Icon(Icons.auto_awesome, color: primaryColor, size: 20),
                           const SizedBox(width: 8),
                           Text(
-                            'Umurongo w\'Umunsi',
+                            AppLocalizations.translate('dash_verse_of_day'),
                             style: TextStyle(
                               color: primaryColor,
                               fontWeight: FontWeight.bold,
@@ -329,7 +349,7 @@ class _DashboardTabState extends State<DashboardTab> {
                                     text: '${_todayVerse['text']} (${_todayVerse['ref']})'
                                   ));
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(content: Text('Umusaruro wakopijwe!'))
+                                    SnackBar(content: Text(AppLocalizations.translate('verse_copied')))
                                   );
                                 },
                               ),
@@ -357,7 +377,7 @@ class _DashboardTabState extends State<DashboardTab> {
             // Devotional Habit Statistics Card
             if (!_loadingStats) ...[
               Text(
-                'Ibikorwa byawe by\'isengesho (My Devotion)',
+                AppLocalizations.translate('dash_stats'),
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 12),
@@ -382,8 +402,10 @@ class _DashboardTabState extends State<DashboardTab> {
                               ],
                             ),
                             const SizedBox(height: 4),
-                            const Text('Umunsi Uhoraho', style: TextStyle(fontSize: 12, color: Colors.grey)),
-                            const Text('(Daily Streak)', style: TextStyle(fontSize: 10, color: Colors.grey)),
+                            Text(
+                              AppLocalizations.translate('dash_streak'),
+                              style: const TextStyle(fontSize: 12, color: Colors.grey),
+                            ),
                           ],
                         ),
                       ),
@@ -409,8 +431,10 @@ class _DashboardTabState extends State<DashboardTab> {
                               ],
                             ),
                             const SizedBox(height: 4),
-                            const Text('Ibyo Wasomye', style: TextStyle(fontSize: 12, color: Colors.grey)),
-                            const Text('(Chapters Read)', style: TextStyle(fontSize: 10, color: Colors.grey)),
+                            Text(
+                              AppLocalizations.translate('dash_chapters'),
+                              style: const TextStyle(fontSize: 12, color: Colors.grey),
+                            ),
                           ],
                         ),
                       ),
@@ -422,9 +446,9 @@ class _DashboardTabState extends State<DashboardTab> {
 
               // Recently Read Chapters (Quick resumption)
               if (_stats['recently_read'] != null && (_stats['recently_read'] as List).isNotEmpty) ...[
-                const Text(
-                  'Aho ugeze usoma (Recently Read)',
-                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.grey),
+                Text(
+                  AppLocalizations.translate('dash_recently_read'),
+                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.grey),
                 ),
                 const SizedBox(height: 8),
                 Card(
@@ -458,15 +482,15 @@ class _DashboardTabState extends State<DashboardTab> {
 
             // Navigation Links Title
             Text(
-              'Ibice by\'Ijambo',
+              AppLocalizations.translate('dash_categories'),
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 16),
 
             // Card list for main features
             _MenuCard(
-              title: 'Bibiliya Yera',
-              subtitle: 'Isezerano rya Kera n\'Iryo Kabiri mu Kinyarwanda (2001)',
+              title: AppLocalizations.translate('nav_bible'),
+              subtitle: AppLocalizations.translate('dash_bible_desc'),
               icon: Icons.menu_book,
               color: primaryColor,
               onTap: () {
@@ -479,8 +503,8 @@ class _DashboardTabState extends State<DashboardTab> {
             ),
             const SizedBox(height: 12),
             _MenuCard(
-              title: 'Indirimbo zo Gushimisha n\'Agakiza',
-              subtitle: 'Indirimbo 546 z\'Agakiza n\'iz\'Imana zo Gushimisha',
+              title: AppLocalizations.translate('dash_hymns_title'),
+              subtitle: AppLocalizations.translate('dash_hymns_desc'),
               icon: Icons.music_note,
               color: const Color(0xFF00A8FF),
               onTap: () {
@@ -493,8 +517,8 @@ class _DashboardTabState extends State<DashboardTab> {
             ),
             const SizedBox(height: 12),
             _MenuCard(
-              title: 'Ibyatoranyijwe',
-              subtitle: 'Gushaka imirongo n\'indirimbo wabitse',
+              title: AppLocalizations.translate('nav_saved'),
+              subtitle: AppLocalizations.translate('dash_saved_desc'),
               icon: Icons.favorite,
               color: Colors.red.shade600,
               onTap: () {
@@ -508,6 +532,8 @@ class _DashboardTabState extends State<DashboardTab> {
           ],
         ),
       ),
+    );
+      },
     );
   }
 }
@@ -756,9 +782,12 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
 
-    return Scaffold(
+    return ValueListenableBuilder<String>(
+      valueListenable: localeNotifier,
+      builder: (context, currentLang, _) {
+        return Scaffold(
       appBar: AppBar(
-        title: const Text('Ibyatoranyijwe', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: Text(AppLocalizations.translate('nav_saved'), style: const TextStyle(fontWeight: FontWeight.bold)),
         actions: [
           IconButton(
             tooltip: 'Bika amakuru (Backup)',
@@ -776,10 +805,10 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
           indicatorColor: primaryColor,
           labelColor: primaryColor,
           unselectedLabelColor: Colors.grey,
-          tabs: const [
-            Tab(text: 'Imirongo'),
-            Tab(text: 'Indirimbo'),
-            Tab(text: 'Icyigisho'),
+          tabs: [
+            Tab(text: AppLocalizations.translate('saved_tab_verses')),
+            Tab(text: AppLocalizations.translate('saved_tab_hymns')),
+            Tab(text: AppLocalizations.translate('saved_tab_study')),
           ],
         ),
       ),
@@ -794,11 +823,13 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
               ],
             ),
     );
+      },
+    );
   }
 
   Widget _buildVersesList() {
     if (_savedVerses.isEmpty) {
-      return _buildEmptyState('Nta murongo w\'Ijambo watoranyijwe urabikwa.');
+      return _buildEmptyState(AppLocalizations.translate('saved_empty_verses'));
     }
 
     return ListView.builder(
@@ -877,7 +908,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
 
   Widget _buildFavoritesHymnsTab() {
     if (_savedHymns.isEmpty) {
-      return _buildEmptyState('Nta ndirimbo yatoranyijwe urabikwa.');
+      return _buildEmptyState(AppLocalizations.translate('saved_empty_hymns'));
     }
 
     return ListView.builder(
@@ -1068,7 +1099,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
     final hasTags = _uniqueTags.isNotEmpty;
 
     if (!hasHighlights && !hasNotes && !hasTags) {
-      return _buildEmptyState('Nta nyandiko cyangwa bimurikirwa bikabikwa.');
+      return _buildEmptyState(AppLocalizations.translate('saved_empty_study'));
     }
 
     return Column(

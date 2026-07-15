@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../services/database_service.dart';
 import '../models/bible_verse.dart';
 import '../models/bible_book.dart';
+import '../services/app_localizations.dart';
 
 class BibleReaderScreen extends StatefulWidget {
   const BibleReaderScreen({super.key});
@@ -235,10 +236,28 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     double estimatedOffset = 0;
     for (int i = 0; i < index; i++) {
       final v = _verses[i];
-      final textLength = v.text.length;
-      final charsPerLine = 40.0 * (17.0 / _fontSize);
-      final lines = (textLength / charsPerLine).ceil();
-      final verseHeight = lines * (_fontSize * 1.6) + 24.0;
+      // Assume a conservative characters-per-line to avoid under-estimating height
+      final charsPerLine = 34.0 * (17.0 / _fontSize);
+      
+      int lines = 0;
+      if (_translationMode == 'parallel') {
+        final rwTextLength = v.text.length;
+        final engTextLength = (_englishVerses[v.verse] ?? '').length;
+        // Each translation gets its own text span block divided by a newline
+        lines = (rwTextLength / charsPerLine).ceil() + (engTextLength / charsPerLine).ceil() + 1;
+      } else if (_translationMode == 'english') {
+        final engTextLength = (_englishVerses[v.verse] ?? v.text).length;
+        lines = (engTextLength / charsPerLine).ceil();
+      } else {
+        final rwTextLength = v.text.length;
+        lines = (rwTextLength / charsPerLine).ceil();
+      }
+      
+      final hasNote = _notes.containsKey(v.id);
+      final tags = _verseTagsMap[v.id];
+      final tagCount = tags != null ? tags.length : 0;
+      
+      final verseHeight = lines * (_fontSize * 1.6) + 16.0 + (hasNote ? 12.0 : 0.0) + (tagCount > 0 ? 24.0 : 0.0);
       estimatedOffset += verseHeight;
     }
 
@@ -247,8 +266,8 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       _scrollController.jumpTo(estimatedOffset);
     }
 
-    // 3. Precise scroll to context in the next frame
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    // Helper to perform the precise animated scroll
+    void doEnsureVisible() {
       if (index < _verseKeys.length) {
         final keyContext = _verseKeys[index].currentContext;
         if (keyContext != null) {
@@ -259,6 +278,28 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
             alignment: 0.2, // Align to top 20% of screen
           );
         }
+      }
+    }
+
+    // 3. Try to scroll in the next frame. If context is not ready, wait a brief 100ms for ListView to render.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (index < _verseKeys.length && _verseKeys[index].currentContext != null) {
+        doEnsureVisible();
+      } else {
+        // Retry 1: after 100ms
+        Future.delayed(const Duration(milliseconds: 100), () {
+          if (!mounted) return;
+          if (index < _verseKeys.length && _verseKeys[index].currentContext != null) {
+            doEnsureVisible();
+          } else {
+            // Retry 2: after another 200ms
+            Future.delayed(const Duration(milliseconds: 200), () {
+              if (mounted) {
+                doEnsureVisible();
+              }
+            });
+          }
+        });
       }
     });
   }
@@ -353,9 +394,12 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                 onChanged: _searchBible,
                 autofocus: true,
               )
-            : Text(
-                '${_selectedBook.name} $_selectedChapter',
-                style: const TextStyle(fontWeight: FontWeight.bold),
+            : GestureDetector(
+                onTap: _showBookSelectorModal,
+                child: Text(
+                  '${_selectedBook.getDisplayName(_translationMode)} $_selectedChapter',
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
         actions: [
           if (_isSearching)
@@ -589,9 +633,15 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                   icon: const Icon(Icons.arrow_back_ios_new, size: 20),
                   onPressed: _prevChapter,
                 ),
-                Text(
-                  '${_selectedBook.name} $_selectedChapter',
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+                GestureDetector(
+                  onTap: _showBookSelectorModal,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                    child: Text(
+                      '${_selectedBook.getDisplayName(_translationMode)} $_selectedChapter',
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ),
                 IconButton(
                   icon: const Icon(Icons.arrow_forward_ios, size: 20),
@@ -639,7 +689,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${_selectedBook.name} ${verse.chapter}:${verse.verse}',
+                        '${_selectedBook.getDisplayName(_translationMode)} ${verse.chapter}:${verse.verse}',
                         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                       IconButton(
@@ -794,10 +844,10 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                           icon: Icons.copy,
                           label: 'Kopi',
                           onTap: () {
-                            Clipboard.setData(ClipboardData(text: '${verse.text} (${_selectedBook.name} ${verse.chapter}:${verse.verse})'));
+                            Clipboard.setData(ClipboardData(text: '${verse.text} (${_selectedBook.getDisplayName(_translationMode)} ${verse.chapter}:${verse.verse})'));
                             Navigator.pop(context);
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('Umusaruro wakopijwe!'), duration: Duration(seconds: 1))
+                              SnackBar(content: Text(AppLocalizations.translate('toast_verse_copied')), duration: const Duration(seconds: 1))
                             );
                           },
                         ),
@@ -808,7 +858,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                             Navigator.pop(context);
                             SharePlus.instance.share(
                               ShareParams(
-                                text: '${verse.text}\n\n— ${_selectedBook.name} ${verse.chapter}:${verse.verse}',
+                                text: '${verse.text}\n\n— ${_selectedBook.getDisplayName(_translationMode)} ${verse.chapter}:${verse.verse}',
                               ),
                             );
                           },
@@ -905,7 +955,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('${_selectedBook.name} ${verse.chapter}:${verse.verse} - Andika Icyigisho'),
+          title: Text('${_selectedBook.getDisplayName(_translationMode)} ${verse.chapter}:${verse.verse} - Andika Icyigisho'),
           content: TextField(
             controller: textController,
             maxLines: 5,
@@ -1287,7 +1337,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
           _sleepTimerRemainingSeconds = null;
         });
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Gusoma guhagaze kuko igihe cyarangiye (Sleep Timer fired).')),
+          SnackBar(content: Text(AppLocalizations.translate('toast_sleep_timer_fired'))),
         );
       } else {
         setState(() {
@@ -1299,7 +1349,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
     Navigator.pop(context);
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Gusoma bizahagarara nyuma y\'iminota $minutes!')),
+      SnackBar(content: Text(AppLocalizations.translate('toast_sleep_timer_set').replaceAll('{minutes}', minutes.toString()))),
     );
   }
 
@@ -1319,7 +1369,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Ibipimo by\'Inyandiko', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                  Text(AppLocalizations.translate('reader_settings_font_size'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                   const SizedBox(height: 16),
                   Row(
                     children: [
@@ -1339,13 +1389,13 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                     ],
                   ),
                   const SizedBox(height: 24),
-                  const Text('Ibikoresho by\'Umwanya', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                  Text(AppLocalizations.translate('reader_settings_theme'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                   const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       _ThemeButton(
-                        label: 'Umweru',
+                        label: AppLocalizations.translate('reader_settings_theme_white'),
                         selected: _getActiveThemeMode(isDark) == 'Light',
                         bgColor: Colors.white,
                         textColor: Colors.black87,
@@ -1355,7 +1405,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                         },
                       ),
                       _ThemeButton(
-                        label: 'Umutuku',
+                        label: AppLocalizations.translate('reader_settings_theme_warm'),
                         selected: _getActiveThemeMode(isDark) == 'Warm',
                         bgColor: const Color(0xFFF7F2E8),
                         textColor: const Color(0xFF4C3E26),
@@ -1365,7 +1415,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                         },
                       ),
                       _ThemeButton(
-                        label: 'Umukara',
+                        label: AppLocalizations.translate('reader_settings_theme_black'),
                         selected: _getActiveThemeMode(isDark) == 'Dark',
                         bgColor: const Color(0xFF1B1D1B),
                         textColor: Colors.white70,
@@ -1377,7 +1427,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                     ],
                   ),
                   const SizedBox(height: 24),
-                  const Text('Umuhinduzi (Translation)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                  Text(AppLocalizations.translate('reader_settings_translation'), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                   const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -1443,9 +1493,9 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                     indicatorColor: Theme.of(context).primaryColor,
                     labelColor: Theme.of(context).primaryColor,
                     unselectedLabelColor: Colors.grey,
-                    tabs: const [
-                      Tab(text: 'Isezerano rya Kera'),
-                      Tab(text: 'Isezerano Rishya'),
+                    tabs: [
+                      Tab(text: _translationMode == 'english' ? 'Old Testament' : 'Isezerano rya Kera'),
+                      Tab(text: _translationMode == 'english' ? 'New Testament' : 'Isezerano Rishya'),
                     ],
                   ),
                 ),
@@ -1492,7 +1542,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
             borderRadius: BorderRadius.circular(12),
             child: Center(
               child: Text(
-                book.name,
+                book.getDisplayName(_translationMode),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: isSelected ? Colors.white : null,

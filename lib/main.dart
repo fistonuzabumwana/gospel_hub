@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'services/app_state_service.dart';
+import 'services/app_localizations.dart';
 
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Load initial app language preference
+  final savedLanguage = await AppStateService.getAppLanguage();
+  localeNotifier.value = savedLanguage;
+
   final isDark = await AppStateService.getDarkMode();
   if (isDark == null) {
     themeNotifier.value = ThemeMode.system;
@@ -22,12 +28,16 @@ class GospelHubApp extends StatelessWidget {
   Widget build(BuildContext context) {
     const primaryColor = Color(0xFF2A62FF);
 
-    return ValueListenableBuilder<ThemeMode>(
-      valueListenable: themeNotifier,
-      builder: (_, ThemeMode currentThemeMode, __) {
-        return MaterialApp(
-          title: 'Gospel Hub',
-          debugShowCheckedModeBanner: false,
+    return ValueListenableBuilder<String>(
+      valueListenable: localeNotifier,
+      builder: (_, String currentLocale, __) {
+        return ValueListenableBuilder<ThemeMode>(
+          valueListenable: themeNotifier,
+          builder: (_, ThemeMode currentThemeMode, __) {
+            return MaterialApp(
+              title: 'Gospel Hub',
+              debugShowCheckedModeBanner: false,
+              locale: Locale(currentLocale),
           theme: ThemeData(
             useMaterial3: true,
             brightness: Brightness.light,
@@ -139,5 +149,7 @@ class GospelHubApp extends StatelessWidget {
         );
       },
     );
+  },
+);
   }
 }
