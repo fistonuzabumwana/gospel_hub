@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
 import '../models/bible_verse.dart';
 import '../models/hymn.dart';
@@ -12,10 +13,25 @@ class DatabaseService {
   DatabaseService._internal();
 
   static Database? _database;
+  static Completer<Database>? _dbCompleter;
 
   Future<Database> get database async {
     if (_database != null) return _database!;
-    _database = await _initDatabase();
+    
+    if (_dbCompleter != null) {
+      return _dbCompleter!.future;
+    }
+    
+    _dbCompleter = Completer<Database>();
+    try {
+      final db = await _initDatabase();
+      _database = db;
+      _dbCompleter!.complete(db);
+    } catch (e) {
+      _dbCompleter!.completeError(e);
+      _dbCompleter = null;
+      rethrow;
+    }
     return _database!;
   }
 
@@ -23,23 +39,37 @@ class DatabaseService {
     final databasesPath = await getDatabasesPath();
     final path = join(databasesPath, 'gospel_hub.db');
 
+    final prefs = await SharedPreferences.getInstance();
+    const currentDbVersion = 3;
+    final savedDbVersion = prefs.getInt('db_version') ?? 0;
+
     // Check if the database exists
     final exists = await databaseExists(path);
-    bool shouldCopy = !exists;
+    bool shouldCopy = !exists || (savedDbVersion < currentDbVersion);
 
-    if (exists) {
+    if (exists && savedDbVersion < currentDbVersion) {
+      print('Database version upgrade required (from $savedDbVersion to $currentDbVersion). Deleting old DB...');
+      try {
+        await deleteDatabase(path);
+      } catch (e) {
+        print('Error deleting old database: $e');
+      }
+    }
+
+    if (!shouldCopy && exists) {
+      // Double check if tables exist and have entries
       try {
         final db = await openDatabase(path, readOnly: true);
         final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM bible_verses'));
-        // Try reading from english_verses to verify KJV translation table exists
+        final hymnsCount = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM hymns'));
         await db.rawQuery('SELECT COUNT(*) FROM english_verses');
         await db.close();
-        if (count == null || count == 0) {
-          print('Existing database is empty. Will overwrite.');
+        if (count == null || count == 0 || hymnsCount == null || hymnsCount == 0) {
+          print('Existing database is empty or missing hymns. Will force copy.');
           shouldCopy = true;
         }
       } catch (e) {
-        print('Existing database is invalid or lacks KJV translation table: $e. Will overwrite.');
+        print('Existing database is invalid: $e. Will force copy.');
         shouldCopy = true;
       }
     }
@@ -58,6 +88,7 @@ class DatabaseService {
         
         // Write and flush the bytes written
         await File(path).writeAsBytes(bytes, flush: true);
+        await prefs.setInt('db_version', currentDbVersion);
         print('Database copied successfully!');
       } catch (e) {
         print('Error copying database asset: $e');

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'dart:async';
 import 'package:share_plus/share_plus.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../services/database_service.dart';
 import '../models/bible_verse.dart';
 import '../models/bible_book.dart';
@@ -35,6 +36,9 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   final FlutterTts _flutterTts = FlutterTts();
   bool _isPlayingTTS = false;
   int? _ttsActiveVerse;
+  int? _ttsWordStartChar;
+  int? _ttsWordEndChar;
+  bool _isChapterTTS = false;
 
   Timer? _sleepTimer;
   int? _sleepTimerDurationMinutes;
@@ -67,7 +71,29 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
     _initTts();
-    _loadVerses();
+    _loadLastRead().then((_) {
+      _loadVerses();
+    });
+  }
+
+  Future<void> _saveLastRead() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('last_read_book_number', _selectedBook.bookNumber);
+    await prefs.setInt('last_read_chapter', _selectedChapter);
+  }
+
+  Future<void> _loadLastRead() async {
+    final prefs = await SharedPreferences.getInstance();
+    final savedBookNum = prefs.getInt('last_read_book_number');
+    final savedChapter = prefs.getInt('last_read_chapter');
+    if (savedBookNum != null && savedChapter != null) {
+      final book = BibleBook.allBooks.firstWhere(
+        (b) => b.bookNumber == savedBookNum,
+        orElse: () => BibleBook.allBooks.first,
+      );
+      _selectedBook = book;
+      _selectedChapter = savedChapter;
+    }
   }
 
   @override
@@ -85,29 +111,63 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     _flutterTts.setStartHandler(() {
       setState(() => _isPlayingTTS = true);
     });
+    _flutterTts.setProgressHandler((String text, int start, int end, String word) {
+      if (mounted) {
+        setState(() {
+          _ttsWordStartChar = start;
+          _ttsWordEndChar = end;
+        });
+      }
+    });
     _flutterTts.setCompletionHandler(() {
-      setState(() {
-        _isPlayingTTS = false;
-        _ttsActiveVerse = null;
-      });
+      if (mounted) {
+        if (_isChapterTTS && _ttsActiveVerse != null) {
+          // Increment to the next verse
+          setState(() {
+            _ttsActiveVerse = _ttsActiveVerse! + 1;
+            _ttsWordStartChar = null;
+            _ttsWordEndChar = null;
+          });
+          _speakChapterVerseSequentially();
+        } else {
+          setState(() {
+            _isPlayingTTS = false;
+            _ttsActiveVerse = null;
+            _isChapterTTS = false;
+            _ttsWordStartChar = null;
+            _ttsWordEndChar = null;
+          });
+        }
+      }
     });
     _flutterTts.setCancelHandler(() {
-      setState(() {
-        _isPlayingTTS = false;
-        _ttsActiveVerse = null;
-      });
+      if (mounted) {
+        setState(() {
+          _isPlayingTTS = false;
+          _ttsActiveVerse = null;
+          _isChapterTTS = false;
+          _ttsWordStartChar = null;
+          _ttsWordEndChar = null;
+        });
+      }
     });
     _flutterTts.setErrorHandler((msg) {
-      setState(() {
-        _isPlayingTTS = false;
-        _ttsActiveVerse = null;
-      });
+      if (mounted) {
+        setState(() {
+          _isPlayingTTS = false;
+          _ttsActiveVerse = null;
+          _isChapterTTS = false;
+          _ttsWordStartChar = null;
+          _ttsWordEndChar = null;
+        });
+      }
     });
   }
 
   Future<void> _loadVerses() async {
     setState(() => _isLoading = true);
     try {
+      _saveLastRead();
       final verses = await _dbService.getChapterVerses(_selectedBook.bookNumber, _selectedChapter);
       final highlights = await _dbService.getHighlightsForChapter(_selectedBook.bookNumber, _selectedChapter);
       final notes = await _dbService.getNotesForChapter(_selectedBook.bookNumber, _selectedChapter);
@@ -265,14 +325,14 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     final activeMode = _getActiveThemeMode(isDark);
     if (activeMode == 'Dark') return const Color(0xFF101210); // Rich dark black background
     if (activeMode == 'Warm') return const Color(0xFFF7F2E8);
-    return const Color(0xFFFAFBFB);
+    return const Color(0xFFF8FAFC); // Slate 50 Background
   }
 
   Color _getTextColor(bool isDark) {
     final activeMode = _getActiveThemeMode(isDark);
     if (activeMode == 'Dark') return Colors.grey.shade300;
     if (activeMode == 'Warm') return const Color(0xFF4C3E26);
-    return Colors.black87;
+    return const Color(0xFF1E293B); // Slate 800 Text
   }
 
   @override
@@ -507,6 +567,9 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                       translationMode: _translationMode,
                       tags: _verseTagsMap[verse.id],
                       onTap: () => _showVerseActionsModal(verse),
+                      isTtsActive: _isPlayingTTS && _ttsActiveVerse == verse.verse,
+                      ttsStartChar: _ttsWordStartChar,
+                      ttsEndChar: _ttsWordEndChar,
                     ),
                   );
                 },
@@ -975,6 +1038,45 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     );
   }
 
+  Future<void> _setBestVoiceForLanguage(String langCode) async {
+    try {
+      List<dynamic> voices = await _flutterTts.getVoices;
+      if (voices.isEmpty) return;
+
+      // Filter voices matching the target language code (e.g. 'en-us' or 'rw-rw')
+      final targetLang = langCode.toLowerCase().replaceAll('_', '-');
+      List<Map<String, String>> matchingVoices = [];
+      for (var v in voices) {
+        if (v is Map) {
+          final locale = (v['locale'] ?? '').toString().toLowerCase().replaceAll('_', '-');
+          final name = (v['name'] ?? '').toString();
+          if (locale.startsWith(targetLang) || targetLang.startsWith(locale)) {
+            matchingVoices.add({
+              'name': name,
+              'locale': (v['locale'] ?? '').toString(),
+            });
+          }
+        }
+      }
+
+      if (matchingVoices.isNotEmpty) {
+        // Find the best voice. We prefer 'network' voices which are Wavenet/neural cloud synthesis
+        Map<String, String>? bestVoice;
+        for (var voice in matchingVoices) {
+          final nameLower = voice['name']!.toLowerCase();
+          if (nameLower.contains('network') || nameLower.contains('wavenet') || nameLower.contains('neural')) {
+            bestVoice = voice;
+            break;
+          }
+        }
+
+        // Fallback to the first matching voice if no network/wavenet voice is found
+        bestVoice ??= matchingVoices.first;
+        await _flutterTts.setVoice(bestVoice);
+      }
+    } catch (_) {}
+  }
+
   Future<void> _speakVerse(BibleVerse verse) async {
     if (_isPlayingTTS) {
       await _flutterTts.stop();
@@ -982,6 +1084,9 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
         setState(() {
           _isPlayingTTS = false;
           _ttsActiveVerse = null;
+          _isChapterTTS = false;
+          _ttsWordStartChar = null;
+          _ttsWordEndChar = null;
         });
         return;
       }
@@ -996,12 +1101,16 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     }
 
     await _flutterTts.setLanguage(langCode);
+    await _setBestVoiceForLanguage(langCode);
     await _flutterTts.setPitch(1.0);
-    await _flutterTts.setSpeechRate(0.5);
+    await _flutterTts.setSpeechRate(0.55);
 
     setState(() {
       _ttsActiveVerse = verse.verse;
       _isPlayingTTS = true;
+      _isChapterTTS = false;
+      _ttsWordStartChar = null;
+      _ttsWordEndChar = null;
     });
 
     await _flutterTts.speak(targetText);
@@ -1013,31 +1122,62 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       setState(() {
         _isPlayingTTS = false;
         _ttsActiveVerse = null;
+        _isChapterTTS = false;
+        _ttsWordStartChar = null;
+        _ttsWordEndChar = null;
       });
       return;
     }
 
-    final buffer = StringBuffer();
-    buffer.write('${_selectedBook.name} igice cya $_selectedChapter. ');
-    for (var v in _verses) {
-      buffer.write('${v.verse}. ');
-      if (_translationMode == 'english') {
-        buffer.write('${_englishVerses[v.verse] ?? v.text}. ');
-      } else {
-        buffer.write('${v.text}. ');
-      }
-    }
+    if (_verses.isEmpty) return;
 
+    // Set configuration once for the entire chapter
     String langCode = _translationMode == 'english' ? 'en-US' : 'rw-RW';
     await _flutterTts.setLanguage(langCode);
+    await _setBestVoiceForLanguage(langCode);
     await _flutterTts.setPitch(1.0);
-    await _flutterTts.setSpeechRate(0.5);
+    await _flutterTts.setSpeechRate(0.55);
 
     setState(() {
       _isPlayingTTS = true;
+      _isChapterTTS = true;
+      _ttsActiveVerse = _verses.first.verse;
+      _ttsWordStartChar = null;
+      _ttsWordEndChar = null;
     });
 
-    await _flutterTts.speak(buffer.toString());
+    _speakChapterVerseSequentially();
+  }
+
+  Future<void> _speakChapterVerseSequentially() async {
+    if (!_isPlayingTTS || !_isChapterTTS || _ttsActiveVerse == null) return;
+
+    // Find the active BibleVerse object
+    final verseIndex = _verses.indexWhere((v) => v.verse == _ttsActiveVerse);
+    if (verseIndex == -1) {
+      // Reached the end of the chapter list!
+      setState(() {
+        _isPlayingTTS = false;
+        _ttsActiveVerse = null;
+        _isChapterTTS = false;
+        _ttsWordStartChar = null;
+        _ttsWordEndChar = null;
+      });
+      return;
+    }
+
+    final verse = _verses[verseIndex];
+    
+    // Auto-scroll the active verse into view
+    _scrollToVerse(verse.verse);
+
+    String targetText = verse.text;
+    if (_translationMode == 'english') {
+      targetText = _englishVerses[verse.verse] ?? verse.text;
+    }
+
+    // Speak this verse (re-uses configuration initialized in _speakChapter)
+    await _flutterTts.speak(targetText);
   }
 
   void _showSleepTimerBottomSheet() {
@@ -1498,6 +1638,9 @@ class VerseItem extends StatefulWidget {
   final String translationMode;
   final List<String>? tags;
   final VoidCallback onTap;
+  final bool isTtsActive;
+  final int? ttsStartChar;
+  final int? ttsEndChar;
 
   const VerseItem({
     super.key,
@@ -1512,6 +1655,9 @@ class VerseItem extends StatefulWidget {
     required this.translationMode,
     this.tags,
     required this.onTap,
+    this.isTtsActive = false,
+    this.ttsStartChar,
+    this.ttsEndChar,
   });
 
   @override
@@ -1562,6 +1708,36 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
     super.dispose();
   }
 
+  List<InlineSpan> _buildSpans(
+    String fullText,
+    bool isTtsActive,
+    int? start,
+    int? end,
+    TextStyle style,
+    Color primaryColor,
+  ) {
+    if (!isTtsActive || start == null || end == null || start < 0 || end > fullText.length || start >= end) {
+      return [TextSpan(text: fullText, style: style)];
+    }
+
+    final prefix = fullText.substring(0, start);
+    final word = fullText.substring(start, end);
+    final suffix = fullText.substring(end);
+
+    return [
+      TextSpan(text: prefix, style: style),
+      TextSpan(
+        text: word,
+        style: style.copyWith(
+          backgroundColor: primaryColor.withValues(alpha: 0.25),
+          fontWeight: FontWeight.bold,
+          decoration: TextDecoration.underline,
+        ),
+      ),
+      TextSpan(text: suffix, style: style),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -1609,10 +1785,20 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
                     fontSize: widget.fontSize - 2,
                   ),
                 ),
-                TextSpan(
-                  text: widget.translationMode == 'english' 
+                ..._buildSpans(
+                  widget.translationMode == 'english' 
                       ? (widget.englishText ?? widget.verse.text)
                       : widget.verse.text,
+                  widget.isTtsActive,
+                  widget.ttsStartChar,
+                  widget.ttsEndChar,
+                  TextStyle(
+                    fontSize: widget.fontSize,
+                    color: widget.textColor,
+                    height: 1.6,
+                    fontFamily: 'serif',
+                  ),
+                  widget.primaryColor,
                 ),
                 if (widget.translationMode == 'parallel' && widget.englishText != null) ...[
                   const TextSpan(text: '\n'),

@@ -661,52 +661,82 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
         title: Text('${_currentHymn.book} - indirimbo ya ${_currentHymn.number}'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.playlist_add),
-            tooltip: 'Ongeraho mu rutonde (Add to playlist)',
-            onPressed: _showAddToPlaylistDialog,
-          ),
-          IconButton(
             icon: const Icon(Icons.format_size),
             onPressed: _showSettingsBottomSheet,
           ),
-          IconButton(
-            icon: Icon(_isFav ? Icons.favorite : Icons.favorite_border, color: _isFav ? Colors.red : null),
-            onPressed: () async {
-              if (_isFav) {
-                await _dbService.removeFavorite('hymn', _currentHymn.id!);
-              } else {
-                await _dbService.addFavorite('hymn', _currentHymn.id!);
-              }
-              setState(() => _isFav = !_isFav);
-              if (mounted) {
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.more_vert),
+            onSelected: (value) async {
+              if (value == 'playlist') {
+                _showAddToPlaylistDialog();
+              } else if (value == 'favorite') {
+                if (_isFav) {
+                  await _dbService.removeFavorite('hymn', _currentHymn.id!);
+                } else {
+                  await _dbService.addFavorite('hymn', _currentHymn.id!);
+                }
+                setState(() => _isFav = !_isFav);
+                if (mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text(_isFav ? 'Yabitswe mu Byatoranyijwe!' : 'Mukuraho!'))
+                  );
+                }
+              } else if (value == 'copy') {
+                // Copy all lyrics as plain text
+                final buffer = StringBuffer();
+                buffer.writeln('${_currentHymn.number}. ${_currentHymn.title} (${_currentHymn.book})\n');
+                for (var block in _currentHymn.lyrics) {
+                  if (block.type == 'chorus') {
+                    buffer.writeln('[Chorus/Gusubiramo]');
+                  } else {
+                    buffer.writeln('[Verse ${block.number}]');
+                  }
+                  for (var line in block.lines) {
+                    buffer.writeln(line);
+                  }
+                  buffer.writeln();
+                }
+                Clipboard.setData(ClipboardData(text: buffer.toString()));
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(_isFav ? 'Yabitswe mu Byatoranyijwe!' : 'Mukuraho!'))
+                  const SnackBar(content: Text('Indirimbo yakopijwe yose!'))
                 );
               }
             },
-          ),
-          IconButton(
-            icon: const Icon(Icons.copy),
-            onPressed: () {
-              // Copy all lyrics as plain text
-              final buffer = StringBuffer();
-              buffer.writeln('${_currentHymn.title} (${_currentHymn.book} #${_currentHymn.number})\n');
-              for (var block in _currentHymn.lyrics) {
-                if (block.type == 'chorus') {
-                  buffer.writeln('[Chorus/Gusubiramo]');
-                } else {
-                  buffer.writeln('[Verse ${block.number}]');
-                }
-                for (var line in block.lines) {
-                  buffer.writeln(line);
-                }
-                buffer.writeln();
-              }
-              Clipboard.setData(ClipboardData(text: buffer.toString()));
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Indirimbo yakopijwe yose!'))
-              );
-            },
+            itemBuilder: (BuildContext context) => [
+              PopupMenuItem<String>(
+                value: 'playlist',
+                child: Row(
+                  children: [
+                    Icon(Icons.playlist_add, color: primaryColor),
+                    const SizedBox(width: 12),
+                    const Text('Ongeraho mu rutonde'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<String>(
+                value: 'favorite',
+                child: Row(
+                  children: [
+                    Icon(
+                      _isFav ? Icons.favorite : Icons.favorite_border,
+                      color: _isFav ? Colors.red : primaryColor,
+                    ),
+                    const SizedBox(width: 12),
+                    Text(_isFav ? 'Kura mu byatoranyijwe' : 'Ongeraho mu byatoranyijwe'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<String>(
+                value: 'copy',
+                child: Row(
+                  children: [
+                    Icon(Icons.copy, color: primaryColor),
+                    const SizedBox(width: 12),
+                    const Text('Kopiya (Copy)'),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
@@ -732,7 +762,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                   child: Column(
                     children: [
                       Text(
-                        _currentHymn.title,
+                        '${_currentHymn.number}. ${_currentHymn.title}',
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: primaryColor,

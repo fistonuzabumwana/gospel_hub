@@ -32,32 +32,74 @@ class GospelHubApp extends StatelessWidget {
             useMaterial3: true,
             brightness: Brightness.light,
             primaryColor: primaryColor,
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: primaryColor,
+            colorScheme: const ColorScheme.light(
               primary: primaryColor,
-              secondary: primaryColor,
+              secondary: Color(0xFF4F46E5), // Indigo Accent
+              tertiary: Color(0xFFF59E0B),  // Amber Accent
               surface: Colors.white,
-              brightness: Brightness.light,
+              error: Color(0xFFEF4444),
+              onPrimary: Colors.white,
+              onSecondary: Colors.white,
+              onSurface: Color(0xFF0F172A), // Slate 900
+              onSurfaceVariant: Color(0xFF475569), // Slate 600
+              outline: Color(0xFFE2E8F0),   // Slate 200
             ),
-            scaffoldBackgroundColor: const Color(0xFFF6F8F6),
+            scaffoldBackgroundColor: const Color(0xFFF8FAFC), // Slate 50 Background
             appBarTheme: const AppBarTheme(
               backgroundColor: Colors.white,
-              foregroundColor: Colors.black87,
+              foregroundColor: Color(0xFF0F172A),
               elevation: 0,
               scrolledUnderElevation: 1,
+              centerTitle: false,
+              iconTheme: IconThemeData(color: Color(0xFF334155)),
             ),
             cardTheme: CardThemeData(
               color: Colors.white,
-              elevation: 1.5,
+              elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
+                side: const BorderSide(color: Color(0xFFE2E8F0), width: 1), // Thin slate-200 border
               ),
             ),
             textTheme: const TextTheme(
-              titleLarge: TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
-              titleMedium: TextStyle(fontWeight: FontWeight.w600, color: Colors.black87),
-              bodyLarge: TextStyle(color: Colors.black87),
-              bodyMedium: TextStyle(color: Colors.black54),
+              titleLarge: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF0F172A), letterSpacing: -0.5),
+              titleMedium: TextStyle(fontWeight: FontWeight.w600, color: Color(0xFF1E293B)),
+              bodyLarge: TextStyle(color: Color(0xFF334155), height: 1.5),
+              bodyMedium: TextStyle(color: Color(0xFF64748B), height: 1.4),
+            ),
+            dividerTheme: const DividerThemeData(
+              color: Color(0xFFF1F5F9), // Slate 100
+              thickness: 1,
+              space: 1,
+            ),
+            chipTheme: ChipThemeData(
+              backgroundColor: const Color(0xFFF1F5F9),
+              selectedColor: const Color(0xFFEBF3FF),
+              labelStyle: const TextStyle(color: Color(0xFF334155), fontSize: 13, fontWeight: FontWeight.w500),
+              secondaryLabelStyle: const TextStyle(color: primaryColor, fontSize: 13, fontWeight: FontWeight.w600),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+                side: BorderSide.none,
+              ),
+            ),
+            inputDecorationTheme: InputDecorationTheme(
+              filled: true,
+              fillColor: const Color(0xFFF1F5F9),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide.none,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide.none,
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: const BorderSide(color: primaryColor, width: 1.5),
+              ),
+              labelStyle: const TextStyle(color: Color(0xFF64748B)),
+              hintStyle: const TextStyle(color: Color(0xFF94A3B8)),
             ),
           ),
           darkTheme: ThemeData(

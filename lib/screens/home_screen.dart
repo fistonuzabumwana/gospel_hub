@@ -60,7 +60,10 @@ class _HomeScreenState extends State<HomeScreen> {
     final primaryColor = Theme.of(context).primaryColor;
 
     return Scaffold(
-      body: _tabs[_currentTabIndex],
+      body: IndexedStack(
+        index: _currentTabIndex,
+        children: _tabs,
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           boxShadow: [
@@ -843,21 +846,25 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
       children: [
         // Playlist Toggle row
         Container(
+          width: double.infinity,
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ChoiceChip(
-                label: const Text('Indirimbo zose (Favorites)', style: TextStyle(fontSize: 12)),
-                selected: !_showPlaylists,
-                onSelected: (_) => setState(() => _showPlaylists = false),
-              ),
-              ChoiceChip(
-                label: const Text('Urutonde rw\'indirimbo (Playlists)', style: TextStyle(fontSize: 12)),
-                selected: _showPlaylists,
-                onSelected: (_) => setState(() => _showPlaylists = true),
-              ),
-            ],
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                ChoiceChip(
+                  label: const Text('Indirimbo zose (Favorites)', style: TextStyle(fontSize: 12)),
+                  selected: !_showPlaylists,
+                  onSelected: (_) => setState(() => _showPlaylists = false),
+                ),
+                const SizedBox(width: 12),
+                ChoiceChip(
+                  label: const Text('Urutonde rw\'indirimbo (Playlists)', style: TextStyle(fontSize: 12)),
+                  selected: _showPlaylists,
+                  onSelected: (_) => setState(() => _showPlaylists = true),
+                ),
+              ],
+            ),
           ),
         ),
 
