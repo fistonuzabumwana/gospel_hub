@@ -167,10 +167,11 @@ class HymnsScreenState extends State<HymnsScreen> {
                   controller: _searchController,
                   decoration: InputDecoration(
                     hintText: AppLocalizations.translate('hymns_search_hint'),
+                    hintStyle: const TextStyle(color: Colors.white70),
                     border: InputBorder.none,
                   ),
                   autofocus: true,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 16, color: Colors.white),
                 )
               : Text(
                   _currentView == 2 ? _selectedBookName : AppLocalizations.translate('hymns_books_title'),
@@ -236,12 +237,12 @@ class HymnsScreenState extends State<HymnsScreen> {
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor.withValues(alpha: 0.15),
+                      color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.15),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
                       Icons.library_books,
-                      color: Theme.of(context).primaryColor,
+                      color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
                       size: 32,
                     ),
                   ),
@@ -288,7 +289,7 @@ class HymnsScreenState extends State<HymnsScreen> {
           title: 'Indirimbo zo Gushimisha',
           subtitle: 'Ibitabo bihabwa Imana (1 - 436)',
           count: '436 indirimbo',
-          color: Theme.of(context).primaryColor,
+          color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
           isDark: isDark,
           onTap: () => _loadHymns('Gushimisha'),
         ),
@@ -422,11 +423,11 @@ class HymnsScreenState extends State<HymnsScreen> {
                       elevation: 0.5,
                       child: ListTile(
                         leading: CircleAvatar(
-                          backgroundColor: Theme.of(context).primaryColor.withValues(alpha: 0.1),
+                          backgroundColor: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
                           child: Text(
                             '${hymn.number}',
                             style: TextStyle(
-                              color: Theme.of(context).primaryColor,
+                              color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -708,7 +709,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                 value: 'playlist',
                 child: Row(
                   children: [
-                    Icon(Icons.playlist_add, color: primaryColor),
+                    Icon(Icons.playlist_add, color: isDark ? const Color(0xFF60A5FA) : primaryColor),
                     const SizedBox(width: 12),
                     const Text('Ongeraho mu rutonde'),
                   ],
@@ -720,7 +721,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                   children: [
                     Icon(
                       _isFav ? Icons.favorite : Icons.favorite_border,
-                      color: _isFav ? Colors.red : primaryColor,
+                      color: _isFav ? Colors.red : (isDark ? const Color(0xFF60A5FA) : primaryColor),
                     ),
                     const SizedBox(width: 12),
                     Text(_isFav ? 'Kura mu byatoranyijwe' : 'Ongeraho mu byatoranyijwe'),
@@ -731,7 +732,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                 value: 'copy',
                 child: Row(
                   children: [
-                    Icon(Icons.copy, color: primaryColor),
+                    Icon(Icons.copy, color: isDark ? const Color(0xFF60A5FA) : primaryColor),
                     const SizedBox(width: 12),
                     const Text('Kopiya (Copy)'),
                   ],
@@ -766,7 +767,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                         '${_currentHymn.number}. ${_currentHymn.title}',
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: primaryColor,
+                          color: isDark ? const Color(0xFF60A5FA) : primaryColor,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -775,14 +776,14 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                           decoration: BoxDecoration(
-                            color: primaryColor.withValues(alpha: 0.08),
+                            color: (isDark ? const Color(0xFF60A5FA) : primaryColor).withValues(alpha: 0.08),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
                             _currentHymn.category,
                             style: TextStyle(
                               fontSize: 12,
-                              color: primaryColor,
+                              color: isDark ? const Color(0xFF60A5FA) : primaryColor,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -814,7 +815,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                                   : const Color(0xFFF0F5FF),
                               borderRadius: BorderRadius.circular(12),
                               border: Border.all(
-                                color: primaryColor.withValues(alpha: 0.12),
+                                color: (isDark ? const Color(0xFF60A5FA) : primaryColor).withValues(alpha: 0.12),
                                 width: 1,
                               ),
                             )
@@ -832,7 +833,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                               style: TextStyle(
                                 fontSize: _fontSize - 1,
                                 fontWeight: FontWeight.bold,
-                                color: primaryColor,
+                                color: isDark ? const Color(0xFF60A5FA) : primaryColor,
                               ),
                             ),
                           ),

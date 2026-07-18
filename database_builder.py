@@ -4,7 +4,7 @@ import sqlite3
 import os
 import sys
 
-BIBLE_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/bible/kinyarwanda_2001 (2).json"
+BIBLE_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/bible/bible_yera_all.json"
 ENGLISH_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/bible/english_kj.json"
 HYMNS_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/scraper/output/all_hymns.json"
 OUTPUT_DB_DIR = "/home/fiston/Documents/Project/gospel_hub/assets/database"
@@ -32,7 +32,8 @@ def main():
             chapter INTEGER,
             verse INTEGER,
             text TEXT,
-            testament TEXT
+            testament TEXT,
+            heading TEXT
         )
     """)
 
@@ -85,15 +86,16 @@ def main():
 
     print(f"Inserting {len(bible_data)} bible verses...")
     cursor.executemany("""
-        INSERT INTO bible_verses (book, chapter, verse, text, testament)
-        VALUES (?, ?, ?, ?, ?)
+        INSERT INTO bible_verses (book, chapter, verse, text, testament, heading)
+        VALUES (?, ?, ?, ?, ?, ?)
     """, [
         (
             item["book"],
             item["chapter"],
             item["verse"],
             item["text"],
-            item["testament"]
+            item["testament"],
+            item.get("heading")
         ) for item in bible_data
     ])
 

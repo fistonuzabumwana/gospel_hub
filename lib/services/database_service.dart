@@ -40,7 +40,7 @@ class DatabaseService {
     final path = join(databasesPath, 'gospel_hub.db');
 
     final prefs = await SharedPreferences.getInstance();
-    const currentDbVersion = 3;
+    const currentDbVersion = 4;
     final savedDbVersion = prefs.getInt('db_version') ?? 0;
 
     // Check if the database exists
@@ -81,17 +81,18 @@ class DatabaseService {
         await Directory(dirname(path)).create(recursive: true);
       } catch (_) {}
 
-      // Copy from asset
+      // Decompress and copy from asset
       try {
-        ByteData data = await rootBundle.load('assets/database/gospel_hub.db');
-        List<int> bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+        ByteData data = await rootBundle.load('assets/database/gospel_hub.db.gz');
+        List<int> compressedBytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+        List<int> decompressedBytes = gzip.decode(compressedBytes);
         
         // Write and flush the bytes written
-        await File(path).writeAsBytes(bytes, flush: true);
+        await File(path).writeAsBytes(decompressedBytes, flush: true);
         await prefs.setInt('db_version', currentDbVersion);
-        print('Database copied successfully!');
+        print('Database decompressed and copied successfully!');
       } catch (e) {
-        print('Error copying database asset: $e');
+        print('Error decompressing/copying database asset: $e');
         throw Exception('Failed to initialize local database');
       }
     } else {
@@ -542,6 +543,34 @@ class DatabaseService {
       whereArgs: [bookNumber, chapterNumber],
       orderBy: 'verse',
     );
+  }
+
+  Future<String?> getSingleVerseText(int bookNumber, int chapter, int verse, bool isEnglish) async {
+    final db = await database;
+    if (isEnglish) {
+      final List<Map<String, dynamic>> results = await db.query(
+        'english_verses',
+        columns: ['text'],
+        where: 'book = ? AND chapter = ? AND verse = ?',
+        whereArgs: [bookNumber, chapter, verse],
+        limit: 1,
+      );
+      if (results.isNotEmpty) {
+        return results.first['text'] as String?;
+      }
+    } else {
+      final List<Map<String, dynamic>> results = await db.query(
+        'bible_verses',
+        columns: ['text'],
+        where: 'book = ? AND chapter = ? AND verse = ?',
+        whereArgs: [bookNumber, chapter, verse],
+        limit: 1,
+      );
+      if (results.isNotEmpty) {
+        return results.first['text'] as String?;
+      }
+    }
+    return null;
   }
 
   // ── Study Tags Queries ─────────────────────────────────────────────────────
