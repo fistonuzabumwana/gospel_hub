@@ -14,14 +14,22 @@ import '../services/app_state_service.dart';
 import '../services/app_localizations.dart';
 import 'settings_screen.dart';
 
+class DailyVerseReference {
+  final int bookNumber;
+  final int chapter;
+  final int verse;
+
+  const DailyVerseReference(this.bookNumber, this.chapter, this.verse);
+}
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreen> createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends State<HomeScreen> {
   int _currentTabIndex = 0;
   final GlobalKey<BibleReaderScreenState> _bibleReaderKey = GlobalKey<BibleReaderScreenState>();
   final GlobalKey<HymnsScreenState> _hymnsScreenKey = GlobalKey<HymnsScreenState>();
@@ -37,6 +45,12 @@ class _HomeScreenState extends State<HomeScreen> {
       HymnsScreen(key: _hymnsScreenKey),
       const SavedItemsTab(),
     ];
+  }
+
+  void setTab(int index) {
+    setState(() {
+      _currentTabIndex = index;
+    });
   }
 
   void navigateToBibleVerse(BibleBook book, int chapter, int verse) {
@@ -87,10 +101,14 @@ class _HomeScreenState extends State<HomeScreen> {
               _currentTabIndex = index;
             });
           },
-          selectedItemColor: primaryColor,
-          unselectedItemColor: Colors.grey.shade500,
+          selectedItemColor: Theme.of(context).brightness == Brightness.light
+              ? Colors.white
+              : primaryColor,
+          unselectedItemColor: Theme.of(context).brightness == Brightness.light
+              ? Colors.white.withValues(alpha: 0.6)
+              : Colors.grey.shade500,
           backgroundColor: Theme.of(context).brightness == Brightness.light 
-              ? Colors.white 
+              ? primaryColor 
               : const Color(0xFF121212),
           elevation: 0,
           items: [
@@ -157,76 +175,43 @@ class _DashboardTabState extends State<DashboardTab> {
     }
   }
 
-  // Static daily verses in Kinyarwanda
-  static const List<Map<String, String>> _dailyVerses = [
-    {
-      'ref': 'Yohana 3:16',
-      'text': 'Kuko Imana yakunze abari mu isi cyane, byatumye itanga Umwana wayo w\'ikinege, ngo umwizera wese atarimbuka, ahubwo ahabwe ubugingo buhoraho.'
-    },
-    {
-      'ref': 'Yosuwa 1:9',
-      'text': 'Mbese sinabigutegetse? Komeza umutima ube intwari, ntugatinye kandi ntuguke umutima, kuko Uwiteka Imana yawe iri kumwe nawe mu byo uzakora byose.'
-    },
-    {
-      'ref': 'Zaburi 23:1',
-      'text': 'Uwiteka ni Umwungeri wanjye, ntacyo nzakena.'
-    },
-    {
-      'ref': 'Abaroma 8:28',
-      'text': 'Kandi tuzi yuko ku bakunda Imana byose bafatanyiriza hamwe kubazanira ibyiza, ari bo bahamagawe nk\'uko umugambi wayo uri.'
-    },
-    {
-      'ref': 'Imigani 3:5-6',
-      'text': 'Wiringire Uwiteka n\'umutima wawe wose, kandi ntiwishingikirize ku buhanga bwawe. Mu nzira zawe zose ujye umwemera, na we azagorora inzira zawe.'
-    },
-    {
-      'ref': 'Abafilipi 4:13',
-      'text': 'Nshobozwa byose n\'umpa imbaraga.'
-    },
+  static const List<DailyVerseReference> _dailyVerseRefs = [
+    DailyVerseReference(43, 3, 16), // Yohana / John 3:16
+    DailyVerseReference(6, 1, 9),   // Yosuwa / Joshua 1:9
+    DailyVerseReference(19, 23, 1), // Zaburi / Psalms 23:1
+    DailyVerseReference(45, 8, 28), // Abaroma / Romans 8:28
+    DailyVerseReference(20, 3, 5),  // Imigani / Proverbs 3:5
+    DailyVerseReference(50, 4, 13), // Abafilipi / Philippians 4:13
   ];
 
-  Map<String, String> get _todayVerse {
-    final dayIndex = DateTime.now().day % _dailyVerses.length;
-    return _dailyVerses[dayIndex];
+  DailyVerseReference get _todayVerseRef {
+    final dayIndex = DateTime.now().day % _dailyVerseRefs.length;
+    return _dailyVerseRefs[dayIndex];
   }
 
-  void _navigateToVerse(String ref) {
-    try {
-      final lastSpaceIndex = ref.lastIndexOf(' ');
-      if (lastSpaceIndex == -1) return;
+  BibleBook _getBook(int bookNumber) {
+    return BibleBook.allBooks.firstWhere(
+      (b) => b.bookNumber == bookNumber,
+      orElse: () => BibleBook.allBooks.first,
+    );
+  }
 
-      final bookName = ref.substring(0, lastSpaceIndex).trim();
-      final rest = ref.substring(lastSpaceIndex + 1).trim();
+  Future<Map<String, String>> _fetchTodayVerse(String translationMode) async {
+    final ref = _todayVerseRef;
+    final book = _getBook(ref.bookNumber);
+    final isEnglish = translationMode == 'english';
+    final text = await _dbService.getSingleVerseText(ref.bookNumber, ref.chapter, ref.verse, isEnglish);
+    final bookName = book.getDisplayName(translationMode);
+    return {
+      'ref': '$bookName ${ref.chapter}:${ref.verse}',
+      'text': text ?? '',
+    };
+  }
 
-      final colonIndex = rest.indexOf(':');
-      if (colonIndex == -1) return;
-
-      final chapterStr = rest.substring(0, colonIndex);
-      var verseStr = rest.substring(colonIndex + 1);
-
-      final hyphenIndex = verseStr.indexOf('-');
-      if (hyphenIndex != -1) {
-        verseStr = verseStr.substring(0, hyphenIndex);
-      }
-
-      final chapter = int.tryParse(chapterStr);
-      final verse = int.tryParse(verseStr);
-
-      if (chapter == null || verse == null) return;
-
-      final bookObj = BibleBook.allBooks.firstWhere(
-        (b) => b.name.toLowerCase() == bookName.toLowerCase(),
-        orElse: () => BibleBook.allBooks.firstWhere(
-          (b) => b.name.toLowerCase().contains(bookName.toLowerCase()),
-          orElse: () => BibleBook.allBooks.first,
-        ),
-      );
-
-      final parentState = context.findAncestorStateOfType<_HomeScreenState>();
-      parentState?.navigateToBibleVerse(bookObj, chapter, verse);
-    } catch (e) {
-      print('Error parsing reference: $e');
-    }
+  void _navigateToVerseRef(DailyVerseReference ref) {
+    final bookObj = _getBook(ref.bookNumber);
+    final parentState = context.findAncestorStateOfType<HomeScreenState>();
+    parentState?.navigateToBibleVerse(bookObj, ref.chapter, ref.verse);
   }
 
   @override
@@ -247,20 +232,22 @@ class _DashboardTabState extends State<DashboardTab> {
               height: 32,
             ),
             const SizedBox(width: 8),
-            Text(
+            const Text(
               'Gospel Hub',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
-                color: isDark ? Colors.white : Colors.black87,
+                color: Colors.white,
               ),
             ),
           ],
         ),
-        backgroundColor: Colors.transparent,
         actions: [
           IconButton(
-            icon: Icon(isDark ? Icons.light_mode_outlined : Icons.dark_mode_outlined),
+            icon: Icon(
+              isDark ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
+              color: Colors.white,
+            ),
             tooltip: isDark ? AppLocalizations.translate('theme_light_mode') : AppLocalizations.translate('theme_dark_mode'),
             onPressed: () async {
               final newMode = isDark ? ThemeMode.light : ThemeMode.dark;
@@ -269,7 +256,10 @@ class _DashboardTabState extends State<DashboardTab> {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.settings_outlined),
+            icon: const Icon(
+              Icons.settings_outlined,
+              color: Colors.white,
+            ),
             tooltip: AppLocalizations.translate('settings_title'),
             onPressed: () {
               Navigator.push(
@@ -287,90 +277,126 @@ class _DashboardTabState extends State<DashboardTab> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Daily Verse Card
-            Card(
-              clipBehavior: Clip.antiAlias,
-              child: InkWell(
-                onTap: () => _navigateToVerse(_todayVerse['ref']!),
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: isDark 
-                          ? [const Color(0xFF1A365D), const Color(0xFF101210)]
-                          : [const Color(0xFFEBF3FF), Colors.white],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                  ),
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.auto_awesome, color: primaryColor, size: 20),
-                          const SizedBox(width: 8),
-                          Text(
-                            AppLocalizations.translate('dash_verse_of_day'),
-                            style: TextStyle(
-                              color: primaryColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                            ),
+            ValueListenableBuilder<String>(
+              valueListenable: bibleTranslationNotifier,
+              builder: (context, translationMode, _) {
+                return FutureBuilder<Map<String, String>>(
+                  future: _fetchTodayVerse(translationMode),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(24.0),
+                          child: Center(
+                            child: CircularProgressIndicator(),
                           ),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        '"${_todayVerse['text']}"',
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontStyle: FontStyle.italic,
-                          height: 1.5,
-                          fontFamily: 'serif',
                         ),
-                      ),
-                      const SizedBox(height: 12),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            _todayVerse['ref']!,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: isDark ? Colors.white70 : Colors.black87,
+                      );
+                    }
+                    if (snapshot.hasError || !snapshot.hasData) {
+                      return const SizedBox.shrink();
+                    }
+                    final verseData = snapshot.data!;
+                    final verseText = verseData['text']!;
+                    final verseRef = verseData['ref']!;
+
+                    return Card(
+                      clipBehavior: Clip.antiAlias,
+                      child: InkWell(
+                        onTap: () => _navigateToVerseRef(_todayVerseRef),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: isDark 
+                                  ? [const Color(0xFF1A365D), const Color(0xFF1B1D1B)]
+                                  : [const Color(0xFF273E82), const Color(0xFF1B264F)],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
                             ),
                           ),
-                          Row(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              IconButton(
-                                icon: const Icon(Icons.copy_outlined, size: 20),
-                                onPressed: () {
-                                  Clipboard.setData(ClipboardData(
-                                    text: '${_todayVerse['text']} (${_todayVerse['ref']})'
-                                  ));
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text(AppLocalizations.translate('verse_copied')))
-                                  );
-                                },
-                              ),
-                              IconButton(
-                                icon: const Icon(Icons.share_outlined, size: 20),
-                                onPressed: () {
-                                  SharePlus.instance.share(
-                                    ShareParams(
-                                      text: '"${_todayVerse['text']}"\n\n— ${_todayVerse['ref']}',
+                              Row(
+                                children: [
+                                  Icon(Icons.auto_awesome, color: isDark ? primaryColor : Colors.white, size: 20),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    AppLocalizations.translate('dash_verse_of_day'),
+                                    style: TextStyle(
+                                      color: isDark ? primaryColor : Colors.white.withValues(alpha: 0.9),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
                                     ),
-                                  );
-                                },
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 16),
+                              Text(
+                                '"$verseText"',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontStyle: FontStyle.italic,
+                                  height: 1.5,
+                                  fontFamily: 'serif',
+                                  color: isDark ? Colors.white70 : Colors.white,
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    verseRef,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: isDark ? Colors.white70 : Colors.white.withValues(alpha: 0.95),
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      IconButton(
+                                        icon: Icon(
+                                          Icons.copy_outlined, 
+                                          size: 20,
+                                          color: isDark ? null : Colors.white.withValues(alpha: 0.85),
+                                        ),
+                                        onPressed: () {
+                                          Clipboard.setData(ClipboardData(
+                                            text: '$verseText ($verseRef)'
+                                          ));
+                                          ScaffoldMessenger.of(context).showSnackBar(
+                                            SnackBar(content: Text(AppLocalizations.translate('verse_copied')))
+                                          );
+                                        },
+                                      ),
+                                      IconButton(
+                                        icon: Icon(
+                                          Icons.share_outlined, 
+                                          size: 20,
+                                          color: isDark ? null : Colors.white.withValues(alpha: 0.85),
+                                        ),
+                                        onPressed: () {
+                                          SharePlus.instance.share(
+                                            ShareParams(
+                                              text: '"$verseText"\n\n— $verseRef',
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                        ],
+                        ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
+                    );
+                  },
+                );
+              },
             ),
             const SizedBox(height: 24),
 
@@ -469,7 +495,7 @@ class _DashboardTabState extends State<DashboardTab> {
                         ),
                         trailing: const Icon(Icons.chevron_right, size: 16),
                         onTap: () {
-                          final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+                          final parentState = context.findAncestorStateOfType<HomeScreenState>();
                           parentState?.navigateToBibleVerse(bookObj, item['chapter'], 1);
                         },
                       );
@@ -495,7 +521,7 @@ class _DashboardTabState extends State<DashboardTab> {
               color: primaryColor,
               onTap: () {
                 // Switch to Bible tab
-                final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+                final parentState = context.findAncestorStateOfType<HomeScreenState>();
                 parentState?.setState(() {
                   parentState._currentTabIndex = 1;
                 });
@@ -509,7 +535,7 @@ class _DashboardTabState extends State<DashboardTab> {
               color: const Color(0xFF00A8FF),
               onTap: () {
                 // Switch to Hymns tab
-                final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+                final parentState = context.findAncestorStateOfType<HomeScreenState>();
                 parentState?.setState(() {
                   parentState._currentTabIndex = 2;
                 });
@@ -523,7 +549,7 @@ class _DashboardTabState extends State<DashboardTab> {
               color: Colors.red.shade600,
               onTap: () {
                 // Switch to Saved tab
-                final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+                final parentState = context.findAncestorStateOfType<HomeScreenState>();
                 parentState?.setState(() {
                   parentState._currentTabIndex = 3;
                 });
@@ -802,9 +828,9 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
         ],
         bottom: TabBar(
           controller: _tabController,
-          indicatorColor: primaryColor,
-          labelColor: primaryColor,
-          unselectedLabelColor: Colors.grey,
+          indicatorColor: Theme.of(context).brightness == Brightness.light ? Colors.white : primaryColor,
+          labelColor: Theme.of(context).brightness == Brightness.light ? Colors.white : primaryColor,
+          unselectedLabelColor: Theme.of(context).brightness == Brightness.light ? Colors.white.withValues(alpha: 0.7) : Colors.grey,
           tabs: [
             Tab(text: AppLocalizations.translate('saved_tab_verses')),
             Tab(text: AppLocalizations.translate('saved_tab_hymns')),
@@ -863,7 +889,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
               },
             ),
             onTap: () {
-              final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+              final parentState = context.findAncestorStateOfType<HomeScreenState>();
               parentState?.navigateToBibleVerse(bookObj, verseMap['chapter'], verseMap['verse']);
             },
           ),
@@ -937,7 +963,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
             ),
             onTap: () {
               final hymnObj = Hymn.fromMap(hymnMap);
-              final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+              final parentState = context.findAncestorStateOfType<HomeScreenState>();
               parentState?.navigateToHymn(hymnObj);
             },
           ),
@@ -1073,7 +1099,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
                             ),
                             onTap: () {
                               Navigator.pop(context); // Close dialog
-                              final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+                              final parentState = context.findAncestorStateOfType<HomeScreenState>();
                               parentState?.navigateToHymn(song);
                             },
                           );
@@ -1204,7 +1230,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
                               },
                             ),
                             onTap: () {
-                              final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+                              final parentState = context.findAncestorStateOfType<HomeScreenState>();
                               parentState?.navigateToBibleVerse(bookObj, note['chapter'], note['verse']);
                             },
                           ),
@@ -1258,7 +1284,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
                               },
                             ),
                             onTap: () {
-                              final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+                              final parentState = context.findAncestorStateOfType<HomeScreenState>();
                               parentState?.navigateToBibleVerse(bookObj, hl['chapter'], hl['verse']);
                             },
                           ),
@@ -1324,7 +1350,7 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
               },
             ),
             onTap: () {
-              final parentState = context.findAncestorStateOfType<_HomeScreenState>();
+              final parentState = context.findAncestorStateOfType<HomeScreenState>();
               parentState?.navigateToBibleVerse(bookObj, item['chapter'], item['verse']);
             },
           ),

@@ -8,6 +8,8 @@ import '../services/database_service.dart';
 import '../models/bible_verse.dart';
 import '../models/bible_book.dart';
 import '../services/app_localizations.dart';
+import '../main.dart';
+import 'home_screen.dart';
 
 class BibleReaderScreen extends StatefulWidget {
   const BibleReaderScreen({super.key});
@@ -33,6 +35,8 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   String _translationMode = 'parallel';
   Map<int, String> _englishVerses = {};
   Map<int, List<String>> _verseTagsMap = {};
+  bool _isMultiSelectMode = false;
+  final Set<int> _selectedVerseIds = {};
 
   final FlutterTts _flutterTts = FlutterTts();
   bool _isPlayingTTS = false;
@@ -72,9 +76,23 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
     _initTts();
+
+    // Set initial translation mode from global notifier
+    _translationMode = bibleTranslationNotifier.value;
+    bibleTranslationNotifier.addListener(_onTranslationChanged);
+
     _loadLastRead().then((_) {
       _loadVerses();
     });
+  }
+
+  void _onTranslationChanged() {
+    if (mounted) {
+      setState(() {
+        _translationMode = bibleTranslationNotifier.value;
+      });
+      _loadVerses();
+    }
   }
 
   Future<void> _saveLastRead() async {
@@ -99,6 +117,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
   @override
   void dispose() {
+    bibleTranslationNotifier.removeListener(_onTranslationChanged);
     _scrollController.dispose();
     _tabController.dispose();
     _searchController.dispose();
@@ -113,11 +132,33 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       setState(() => _isPlayingTTS = true);
     });
     _flutterTts.setProgressHandler((String text, int start, int end, String word) {
-      if (mounted) {
-        setState(() {
-          _ttsWordStartChar = start;
-          _ttsWordEndChar = end;
-        });
+      if (mounted && _ttsActiveVerse != null) {
+        final verseIndex = _verses.indexWhere((v) => v.verse == _ttsActiveVerse);
+        if (verseIndex != -1) {
+          final verse = _verses[verseIndex];
+          final hasHeading = verse.heading != null && verse.heading!.isNotEmpty && _translationMode != 'english';
+          
+          if (hasHeading) {
+            final prefixLength = verse.heading!.length + 2; // "+ 2" for the period and space
+            if (start >= prefixLength) {
+              setState(() {
+                _ttsWordStartChar = start - prefixLength;
+                _ttsWordEndChar = end - prefixLength;
+              });
+            } else {
+              // Narrating the heading, clear highlight
+              setState(() {
+                _ttsWordStartChar = null;
+                _ttsWordEndChar = null;
+              });
+            }
+          } else {
+            setState(() {
+              _ttsWordStartChar = start;
+              _ttsWordEndChar = end;
+            });
+          }
+        }
       }
     });
     _flutterTts.setCompletionHandler(() {
@@ -129,7 +170,11 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
             _ttsWordStartChar = null;
             _ttsWordEndChar = null;
           });
-          _speakChapterVerseSequentially();
+          Future.delayed(const Duration(milliseconds: 300), () {
+            if (mounted && _isPlayingTTS) {
+              _speakChapterVerseSequentially();
+            }
+          });
         } else {
           setState(() {
             _isPlayingTTS = false;
@@ -256,8 +301,16 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       final hasNote = _notes.containsKey(v.id);
       final tags = _verseTagsMap[v.id];
       final tagCount = tags != null ? tags.length : 0;
+      final hasHeading = v.heading != null && v.heading!.isNotEmpty;
       
-      final verseHeight = lines * (_fontSize * 1.6) + 16.0 + (hasNote ? 12.0 : 0.0) + (tagCount > 0 ? 24.0 : 0.0);
+      double headingHeight = 0;
+      if (hasHeading) {
+        final headingTextLength = v.heading!.length;
+        final headingLines = (headingTextLength / charsPerLine).ceil();
+        headingHeight = headingLines * ((_fontSize + 1.5) * 1.4) + 28.0;
+      }
+      
+      final verseHeight = lines * (_fontSize * 1.6) + 16.0 + (hasNote ? 12.0 : 0.0) + (tagCount > 0 ? 24.0 : 0.0) + headingHeight;
       estimatedOffset += verseHeight;
     }
 
@@ -369,6 +422,13 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     return const Color(0xFFF8FAFC); // Slate 50 Background
   }
 
+  Color _getButtonCircleColor(bool isDark) {
+    final activeMode = _getActiveThemeMode(isDark);
+    if (activeMode == 'Dark') return const Color(0xFF1B1D1B);
+    if (activeMode == 'Warm') return const Color(0xFFE8DECA);
+    return Colors.white;
+  }
+
   Color _getTextColor(bool isDark) {
     final activeMode = _getActiveThemeMode(isDark);
     if (activeMode == 'Dark') return Colors.grey.shade300;
@@ -382,13 +442,30 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
+      extendBody: true, // Let Scaffold body go under the bottomNavigationBar!
       appBar: AppBar(
+        leading: _isSearching
+            ? null
+            : IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  final parentState = context.findAncestorStateOfType<HomeScreenState>();
+                  if (parentState != null) {
+                    parentState.setTab(0);
+                  } else {
+                    Navigator.maybePop(context);
+                  }
+                },
+                tooltip: 'Genda inyuma',
+              ),
+        centerTitle: true,
         title: _isSearching 
             ? TextField(
                 controller: _searchController,
-                style: const TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: 16, color: Colors.white),
                 decoration: const InputDecoration(
                   hintText: 'Shaka umurongo...',
+                  hintStyle: TextStyle(color: Colors.white70),
                   border: InputBorder.none,
                 ),
                 onChanged: _searchBible,
@@ -414,52 +491,141 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
               },
             )
           else ...[
-            GestureDetector(
-              onLongPress: _showSleepTimerBottomSheet,
-              child: IconButton(
-                icon: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Icon(_isPlayingTTS ? Icons.stop_circle_outlined : Icons.play_circle_outline),
-                    if (_sleepTimerRemainingSeconds != null)
-                      Positioned(
-                        right: 0,
-                        bottom: 0,
-                        child: Container(
-                          padding: const EdgeInsets.all(2),
-                          decoration: const BoxDecoration(
-                            color: Colors.red,
-                            shape: BoxShape.circle,
-                          ),
-                          constraints: const BoxConstraints(minWidth: 8, minHeight: 8),
-                        ),
-                      )
-                  ],
-                ),
-                tooltip: _sleepTimerRemainingSeconds != null
-                    ? 'Sleep Timer is active! Long press to change/stop.'
-                    : (_isPlayingTTS ? 'Hagarika gusoma' : 'Soma iki gice cyose (Kanda ukanze kugira ngo ugenge igihe/Sleep Timer)'),
-                onPressed: _speakChapter,
-              ),
-            ),
             IconButton(
               icon: const Icon(Icons.search),
               onPressed: () => setState(() => _isSearching = true),
             ),
-            IconButton(
-              icon: const Icon(Icons.format_size),
-              onPressed: _showSettingsBottomSheet,
+            PopupMenuButton<String>(
+              icon: const Icon(Icons.more_vert),
+              onSelected: (val) {
+                if (val == 'text_settings') {
+                  _showSettingsBottomSheet();
+                } else if (val == 'book_selector') {
+                  _showBookSelectorModal();
+                } else if (val == 'multi_select') {
+                  setState(() {
+                    _isMultiSelectMode = true;
+                    _selectedVerseIds.clear();
+                  });
+                } else if (val == 'play_chapter') {
+                  _speakChapter();
+                } else if (val == 'sleep_timer') {
+                  _showSleepTimerBottomSheet();
+                } else if (val == 'copy_chapter') {
+                  _copyChapterText();
+                } else if (val == 'share_chapter') {
+                  _shareChapterText();
+                } else if (val == 'clear_highlights') {
+                  _clearAllHighlightsInChapter();
+                } else if (val == 'clear_notes') {
+                  _clearAllNotesInChapter();
+                }
+              },
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: 'text_settings',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.format_size, size: 20),
+                      const SizedBox(width: 8),
+                      Text(AppLocalizations.translate('reader_settings_title')),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: 'book_selector',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.list_alt, size: 20),
+                      const SizedBox(width: 8),
+                      const Text('Hitamo Igitabo'),
+                    ],
+                  ),
+                ),
+                const PopupMenuDivider(),
+                PopupMenuItem(
+                  value: 'multi_select',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.checklist_rtl, size: 20),
+                      const SizedBox(width: 8),
+                      const Text('Hitamo Imirongo (Select)'),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: 'play_chapter',
+                  child: Row(
+                    children: [
+                      Icon(_isPlayingTTS ? Icons.stop_circle_outlined : Icons.play_circle_outline, size: 20),
+                      const SizedBox(width: 8),
+                      Text(_isPlayingTTS ? 'Hagarika Gusoma' : 'Soma Iki Gice (TTS)'),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: 'sleep_timer',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.timer_outlined, size: 20),
+                      const SizedBox(width: 8),
+                      const Text('Igihe cy\'Igisomwa (Timer)'),
+                    ],
+                  ),
+                ),
+                const PopupMenuDivider(),
+                PopupMenuItem(
+                  value: 'copy_chapter',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.copy_all, size: 20),
+                      const SizedBox(width: 8),
+                      const Text('Kopi y\'iki Gice'),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: 'share_chapter',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.share, size: 20),
+                      const SizedBox(width: 8),
+                      const Text('Sangira iki Gice'),
+                    ],
+                  ),
+                ),
+                const PopupMenuDivider(),
+                PopupMenuItem(
+                  value: 'clear_highlights',
+                  child: Row(
+                    children: [
+                      Icon(Icons.format_color_reset, size: 20, color: Colors.redAccent.shade200),
+                      const SizedBox(width: 8),
+                      const Text('Siba Ibihitijwe byose', style: TextStyle(color: Colors.redAccent)),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: 'clear_notes',
+                  child: Row(
+                    children: [
+                      Icon(Icons.delete_sweep_outlined, size: 20, color: Colors.redAccent.shade200),
+                      const SizedBox(width: 8),
+                      const Text('Siba Ibyanditswe byose', style: TextStyle(color: Colors.redAccent)),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            IconButton(
-              icon: const Icon(Icons.list_alt),
-              onPressed: _showBookSelectorModal,
-            ),
-          ]
+          ],
         ],
       ),
       body: _isSearching 
           ? _buildSearchResultsList()
           : _buildReaderView(primaryColor, isDark),
+      bottomNavigationBar: _isSearching
+          ? null
+          : _buildBottomFooter(primaryColor, isDark),
     );
   }
 
@@ -577,6 +743,40 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       color: bgColor,
       child: Column(
         children: [
+          // Thinner/Smaller Quick Access Font Size Slider Bar
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+            height: 36,
+            decoration: BoxDecoration(
+              color: bgColor,
+              border: Border(bottom: BorderSide(color: Colors.grey.withValues(alpha: isDark ? 0.15 : 0.08))),
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.text_fields, size: 14, color: textColor.withValues(alpha: 0.6)),
+                Expanded(
+                  child: SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      trackHeight: 2.0,
+                      thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6.0),
+                      overlayShape: const RoundSliderOverlayShape(overlayRadius: 14.0),
+                    ),
+                    child: Slider(
+                      min: 12.0,
+                      max: 30.0,
+                      value: _fontSize,
+                      activeColor: primaryColor,
+                      inactiveColor: primaryColor.withValues(alpha: 0.2),
+                      onChanged: (val) {
+                        setState(() => _fontSize = val);
+                      },
+                    ),
+                  ),
+                ),
+                Icon(Icons.text_fields, size: 20, color: textColor),
+              ],
+            ),
+          ),
           Expanded(
             child: GestureDetector(
               behavior: HitTestBehavior.translucent,
@@ -590,11 +790,14 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
               },
               child: ListView.builder(
                 controller: _scrollController,
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                // Use larger bottom padding (e.g. 80.0) so list view can be scrolled fully above the floating footer
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 16, bottom: 80),
                 itemCount: _verses.length,
                 itemBuilder: (context, index) {
                   final verse = _verses[index];
-                  return Padding(
+                  final hasHeading = verse.heading != null && verse.heading!.isNotEmpty;
+
+                  final verseItemWidget = Padding(
                     padding: const EdgeInsets.only(bottom: 12.0),
                     child: VerseItem(
                       key: _verseKeys[index],
@@ -603,6 +806,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                       textColor: textColor,
                       primaryColor: primaryColor,
                       isHighlighted: _targetVerse == verse.verse,
+                      isSelected: _selectedVerseIds.contains(verse.id),
                       highlightColor: _highlights.containsKey(verse.id)
                           ? _highlightColors[_highlights[verse.id]!]
                           : null,
@@ -610,44 +814,553 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                       englishText: _englishVerses[verse.verse],
                       translationMode: _translationMode,
                       tags: _verseTagsMap[verse.id],
-                      onTap: () => _showVerseActionsModal(verse),
+                      onTap: () {
+                        if (_isMultiSelectMode) {
+                          setState(() {
+                            if (_selectedVerseIds.contains(verse.id)) {
+                              _selectedVerseIds.remove(verse.id);
+                              if (_selectedVerseIds.isEmpty) {
+                                _isMultiSelectMode = false;
+                              }
+                            } else {
+                              _selectedVerseIds.add(verse.id!);
+                            }
+                          });
+                        } else {
+                          _showVerseActionsModal(verse);
+                        }
+                      },
+                      onLongPress: () {
+                        setState(() {
+                          _isMultiSelectMode = true;
+                          _selectedVerseIds.add(verse.id!);
+                        });
+                      },
                       isTtsActive: _isPlayingTTS && _ttsActiveVerse == verse.verse,
                       ttsStartChar: _ttsWordStartChar,
                       ttsEndChar: _ttsWordEndChar,
                     ),
                   );
+
+                  if (hasHeading) {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 8.0, right: 8.0),
+                            child: Text(
+                              verse.heading!,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: _fontSize + 1.5,
+                                fontWeight: FontWeight.bold,
+                                color: isDark ? const Color(0xFF60A5FA) : primaryColor,
+                                height: 1.4,
+                              ),
+                            ),
+                          ),
+                        ),
+                        verseItemWidget,
+                      ],
+                    );
+                  }
+
+                  return verseItemWidget;
                 },
               ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF161616) : Colors.white,
-              border: Border(top: BorderSide(color: Colors.grey.withValues(alpha: 0.1))),
+        ],
+      ),
+    );
+  }
+
+  void _exitMultiSelectMode() {
+    setState(() {
+      _isMultiSelectMode = false;
+      _selectedVerseIds.clear();
+    });
+  }
+
+  void _copySelectedVerses() {
+    if (_selectedVerseIds.isEmpty) return;
+    final sortedVerses = _verses.where((v) => _selectedVerseIds.contains(v.id)).toList()
+      ..sort((a, b) => a.verse.compareTo(b.verse));
+    
+    StringBuffer buffer = StringBuffer();
+    for (var i = 0; i < sortedVerses.length; i++) {
+      final v = sortedVerses[i];
+      buffer.write('${v.verse} ${v.text}\n');
+    }
+    
+    final bookName = _selectedBook.getDisplayName(_translationMode);
+    final startVerse = sortedVerses.first.verse;
+    final endVerse = sortedVerses.last.verse;
+    final ref = startVerse == endVerse 
+        ? '$bookName $_selectedChapter:$startVerse'
+        : '$bookName $_selectedChapter:$startVerse-$endVerse';
+    
+    buffer.write('($ref)');
+    
+    Clipboard.setData(ClipboardData(text: buffer.toString()));
+    _exitMultiSelectMode();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(AppLocalizations.translate('toast_verse_copied')),
+        duration: const Duration(seconds: 1),
+      ),
+    );
+  }
+
+  void _shareSelectedVerses() {
+    if (_selectedVerseIds.isEmpty) return;
+    final sortedVerses = _verses.where((v) => _selectedVerseIds.contains(v.id)).toList()
+      ..sort((a, b) => a.verse.compareTo(b.verse));
+    
+    StringBuffer buffer = StringBuffer();
+    for (var v in sortedVerses) {
+      buffer.write('${v.verse} ${v.text}\n');
+    }
+    
+    final bookName = _selectedBook.getDisplayName(_translationMode);
+    final startVerse = sortedVerses.first.verse;
+    final endVerse = sortedVerses.last.verse;
+    final ref = startVerse == endVerse 
+        ? '$bookName $_selectedChapter:$startVerse'
+        : '$bookName $_selectedChapter:$startVerse-$endVerse';
+    
+    buffer.write('\n— $ref');
+    
+    _exitMultiSelectMode();
+    SharePlus.instance.share(ShareParams(text: buffer.toString()));
+  }
+
+  Future<void> _favoriteSelectedVerses() async {
+    if (_selectedVerseIds.isEmpty) return;
+    
+    bool hasAnyUnfavorited = false;
+    for (final id in _selectedVerseIds) {
+      final isFav = await _dbService.isFavorite('bible', id);
+      if (!isFav) {
+        hasAnyUnfavorited = true;
+        break;
+      }
+    }
+
+    for (final id in _selectedVerseIds) {
+      if (hasAnyUnfavorited) {
+        await _dbService.addFavorite('bible', id);
+      } else {
+        await _dbService.removeFavorite('bible', id);
+      }
+    }
+
+    _exitMultiSelectMode();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(hasAnyUnfavorited ? 'Yabitswe mu Byatoranyijwe!' : 'Bikurwe mu Byatoranyijwe!'),
+        duration: const Duration(seconds: 1),
+      ),
+    );
+  }
+
+  void _showMultiHighlightColorPicker() {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (context) {
+        return Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Hitamo ibara ryo guhitira (Highlight):',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+              const SizedBox(height: 16),
+              SizedBox(
+                height: 40,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: _highlightColors.length + 1,
+                  itemBuilder: (context, index) {
+                    if (index == _highlightColors.length) {
+                      return GestureDetector(
+                         onTap: () async {
+                           for (final id in _selectedVerseIds) {
+                             await _dbService.removeHighlight(id);
+                           }
+                           setState(() {
+                             for (final id in _selectedVerseIds) {
+                               _highlights.remove(id);
+                             }
+                           });
+                           if (context.mounted) Navigator.pop(context);
+                           _exitMultiSelectMode();
+                         },
+                         child: Container(
+                           margin: const EdgeInsets.only(right: 10),
+                           width: 36,
+                           height: 36,
+                           decoration: BoxDecoration(
+                             shape: BoxShape.circle,
+                             border: Border.all(color: Colors.grey.shade400),
+                             color: Colors.transparent,
+                           ),
+                           child: const Icon(Icons.format_color_reset, size: 18, color: Colors.grey),
+                         ),
+                       );
+                    }
+
+                    final color = _highlightColors[index];
+
+                    return GestureDetector(
+                       onTap: () async {
+                         for (final id in _selectedVerseIds) {
+                           await _dbService.saveHighlight(id, index);
+                         }
+                         setState(() {
+                           for (final id in _selectedVerseIds) {
+                             _highlights[id] = index;
+                           }
+                         });
+                         if (context.mounted) Navigator.pop(context);
+                         _exitMultiSelectMode();
+                       },
+                       child: Container(
+                         margin: const EdgeInsets.only(right: 10),
+                         width: 36,
+                         height: 36,
+                         decoration: BoxDecoration(
+                           shape: BoxShape.circle,
+                           color: color,
+                           border: Border.all(color: Colors.transparent),
+                         ),
+                       ),
+                     );
+                  },
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void _showMultiAddTagDialog() {
+    final TextEditingController tagController = TextEditingController();
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Ongeraho Ikimenyetso (Add Tag)'),
+          content: TextField(
+            controller: tagController,
+            decoration: const InputDecoration(
+              hintText: 'Urugero: Isengesho, Kwizera...',
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                  onPressed: _prevChapter,
-                ),
-                GestureDetector(
-                  onTap: _showBookSelectorModal,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-                    child: Text(
-                      '${_selectedBook.getDisplayName(_translationMode)} $_selectedChapter',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.arrow_forward_ios, size: 20),
-                  onPressed: _nextChapter,
+            autofocus: true,
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Gukuramo'),
+            ),
+            TextButton(
+              onPressed: () async {
+                final tag = tagController.text.trim();
+                if (tag.isNotEmpty) {
+                  for (final id in _selectedVerseIds) {
+                    await _dbService.addVerseTag(id, tag);
+                  }
+                  final updatedTags = await _dbService.getTagsForChapter(_selectedBook.bookNumber, _selectedChapter);
+                  setState(() {
+                    _verseTagsMap = updatedTags;
+                  });
+                }
+                if (mounted) {
+                  Navigator.pop(context);
+                  _exitMultiSelectMode();
+                }
+              },
+              child: const Text('Bika'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _copyChapterText() {
+    if (_verses.isEmpty) return;
+    StringBuffer buffer = StringBuffer();
+    for (var v in _verses) {
+      buffer.write('${v.verse} ${v.text}\n');
+    }
+    final ref = '${_selectedBook.getDisplayName(_translationMode)} $_selectedChapter';
+    buffer.write('\n($ref)');
+    Clipboard.setData(ClipboardData(text: buffer.toString()));
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Gukora kopi y\'igice byagenze neza!')),
+    );
+  }
+
+  void _shareChapterText() {
+    if (_verses.isEmpty) return;
+    StringBuffer buffer = StringBuffer();
+    for (var v in _verses) {
+      buffer.write('${v.verse} ${v.text}\n');
+    }
+    final ref = '${_selectedBook.getDisplayName(_translationMode)} $_selectedChapter';
+    buffer.write('\n($ref)');
+    SharePlus.instance.share(ShareParams(text: buffer.toString()));
+  }
+
+  void _clearAllHighlightsInChapter() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Gusiba Ibihitijwe (Clear Highlights)'),
+          content: const Text('Ese wifuza gusiba ibihitijwe byose muri iki gice?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Oya'),
+            ),
+            TextButton(
+              onPressed: () async {
+                for (var v in _verses) {
+                  await _dbService.removeHighlight(v.id!);
+                }
+                setState(() {
+                  for (var v in _verses) {
+                    _highlights.remove(v.id);
+                  }
+                });
+                if (mounted) Navigator.pop(context);
+              },
+              child: const Text('Yego, Siba', style: TextStyle(color: Colors.redAccent)),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _clearAllNotesInChapter() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Gusiba Ibyanditswe (Clear Notes)'),
+          content: const Text('Ese wifuza gusiba ibyanditswe/ama-notes yose muri iki gice?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Oya'),
+            ),
+            TextButton(
+              onPressed: () async {
+                for (var v in _verses) {
+                  await _dbService.saveNote(v.id!, '');
+                }
+                setState(() {
+                  for (var v in _verses) {
+                    _notes.remove(v.id);
+                  }
+                });
+                if (mounted) Navigator.pop(context);
+              },
+              child: const Text('Yego, Siba', style: TextStyle(color: Colors.redAccent)),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildMultiSelectFooter(Color primaryColor, bool isDark) {
+    return Container(
+      margin: const EdgeInsets.only(left: 12, right: 12, bottom: 20),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.15),
+            blurRadius: 10,
+            offset: const Offset(0, 3),
+          ),
+        ],
+        border: Border.all(
+          color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200,
+        ),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Umirongo ${_selectedVerseIds.length} yatoranyijwe',
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+              ),
+              IconButton(
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
+                icon: const Icon(Icons.close, size: 20),
+                onPressed: _exitMultiSelectMode,
+              ),
+            ],
+          ),
+          const Divider(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              _ActionButton(
+                icon: Icons.copy,
+                label: 'Kopi',
+                onTap: _copySelectedVerses,
+              ),
+              _ActionButton(
+                icon: Icons.format_color_fill,
+                label: 'Guhitira',
+                onTap: _showMultiHighlightColorPicker,
+              ),
+              _ActionButton(
+                icon: Icons.share,
+                label: 'Sangira',
+                onTap: _shareSelectedVerses,
+              ),
+              _ActionButton(
+                icon: Icons.favorite_border,
+                label: 'Bika',
+                onTap: _favoriteSelectedVerses,
+              ),
+              _ActionButton(
+                icon: Icons.label_outline,
+                label: 'Tag',
+                onTap: _showMultiAddTagDialog,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget? _buildBottomFooter(Color primaryColor, bool isDark) {
+    if (_isLoading) return null;
+    if (_isMultiSelectMode) {
+      return _buildMultiSelectFooter(primaryColor, isDark);
+    }
+
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 28),
+      color: Colors.transparent, // Fully transparent
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Smaller Circular Back Chapter Button
+          Container(
+            width: 38,
+            height: 38,
+            decoration: BoxDecoration(
+              color: _getButtonCircleColor(isDark),
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.08),
+                  blurRadius: 4,
+                  offset: const Offset(0, 2),
                 ),
               ],
+            ),
+            child: IconButton(
+              padding: EdgeInsets.zero,
+              icon: const Icon(Icons.arrow_back_ios_new, size: 16),
+              onPressed: _prevChapter,
+              tooltip: 'Igice kibanza',
+            ),
+          ),
+          // Smaller Circular TTS Play Button
+          GestureDetector(
+            onLongPress: _showSleepTimerBottomSheet,
+            child: Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                color: _getButtonCircleColor(isDark),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.08),
+                    blurRadius: 6,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: IconButton(
+                padding: EdgeInsets.zero,
+                icon: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Icon(
+                      _isPlayingTTS ? Icons.stop_circle_outlined : Icons.play_circle_outline,
+                      size: 24,
+                      color: primaryColor,
+                    ),
+                    if (_sleepTimerRemainingSeconds != null)
+                      Positioned(
+                        right: 0,
+                        bottom: 0,
+                        child: Container(
+                          padding: const EdgeInsets.all(1.5),
+                          decoration: const BoxDecoration(
+                            color: Colors.red,
+                            shape: BoxShape.circle,
+                          ),
+                          constraints: const BoxConstraints(minWidth: 6, minHeight: 6),
+                        ),
+                      )
+                  ],
+                ),
+                tooltip: _sleepTimerRemainingSeconds != null
+                    ? 'Sleep Timer is active! Long press to change/stop.'
+                    : (_isPlayingTTS ? 'Hagarika gusoma' : 'Soma iki gice cyose'),
+                onPressed: _speakChapter,
+              ),
+            ),
+          ),
+          // Smaller Circular Forward Chapter Button
+          Container(
+            width: 38,
+            height: 38,
+            decoration: BoxDecoration(
+              color: _getButtonCircleColor(isDark),
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.08),
+                  blurRadius: 4,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            child: IconButton(
+              padding: EdgeInsets.zero,
+              icon: const Icon(Icons.arrow_forward_ios, size: 16),
+              onPressed: _nextChapter,
+              tooltip: 'Igice gikurikira',
             ),
           ),
         ],
@@ -1142,13 +1855,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       }
     }
 
-    String targetText = verse.text;
-    String langCode = 'rw-RW';
-    
-    if (_translationMode == 'english') {
-      targetText = _englishVerses[verse.verse] ?? verse.text;
-      langCode = 'en-US';
-    }
+    String langCode = _translationMode == 'english' ? 'en-US' : 'rw-RW';
 
     await _flutterTts.setLanguage(langCode);
     await _setBestVoiceForLanguage(langCode);
@@ -1163,6 +1870,15 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       _ttsWordEndChar = null;
     });
 
+    String targetText = verse.text;
+    if (_translationMode == 'english') {
+      targetText = _englishVerses[verse.verse] ?? verse.text;
+    } else {
+      final hasHeading = verse.heading != null && verse.heading!.isNotEmpty;
+      if (hasHeading) {
+        targetText = "${verse.heading!}. $targetText";
+      }
+    }
     await _flutterTts.speak(targetText);
   }
 
@@ -1183,6 +1899,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
     // Set configuration once for the entire chapter
     String langCode = _translationMode == 'english' ? 'en-US' : 'rw-RW';
+
     await _flutterTts.setLanguage(langCode);
     await _setBestVoiceForLanguage(langCode);
     await _flutterTts.setPitch(1.0);
@@ -1224,8 +1941,12 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     String targetText = verse.text;
     if (_translationMode == 'english') {
       targetText = _englishVerses[verse.verse] ?? verse.text;
+    } else {
+      final hasHeading = verse.heading != null && verse.heading!.isNotEmpty;
+      if (hasHeading) {
+        targetText = "${verse.heading!}. $targetText";
+      }
     }
-
     // Speak this verse (re-uses configuration initialized in _speakChapter)
     await _flutterTts.speak(targetText);
   }
@@ -1432,31 +2153,34 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      _TranslationOptionButton(
+                       _TranslationOptionButton(
                         label: 'Kinyarwanda',
                         selected: _translationMode == 'kinyarwanda',
-                        onTap: () {
-                          setModalState(() => _translationMode = 'kinyarwanda');
-                          setState(() => _translationMode = 'kinyarwanda');
-                          _loadVerses();
+                        onTap: () async {
+                          bibleTranslationNotifier.value = 'kinyarwanda';
+                          final prefs = await SharedPreferences.getInstance();
+                          await prefs.setString('bible_translation_mode', 'kinyarwanda');
+                          setModalState(() {});
                         },
                       ),
                       _TranslationOptionButton(
                         label: 'English KJV',
                         selected: _translationMode == 'english',
-                        onTap: () {
-                          setModalState(() => _translationMode = 'english');
-                          setState(() => _translationMode = 'english');
-                          _loadVerses();
+                        onTap: () async {
+                          bibleTranslationNotifier.value = 'english';
+                          final prefs = await SharedPreferences.getInstance();
+                          await prefs.setString('bible_translation_mode', 'english');
+                          setModalState(() {});
                         },
                       ),
                       _TranslationOptionButton(
                         label: 'Parallel',
                         selected: _translationMode == 'parallel',
-                        onTap: () {
-                          setModalState(() => _translationMode = 'parallel');
-                          setState(() => _translationMode = 'parallel');
-                          _loadVerses();
+                        onTap: () async {
+                          bibleTranslationNotifier.value = 'parallel';
+                          final prefs = await SharedPreferences.getInstance();
+                          await prefs.setString('bible_translation_mode', 'parallel');
+                          setModalState(() {});
                         },
                       ),
                     ],
@@ -1688,9 +2412,11 @@ class VerseItem extends StatefulWidget {
   final String translationMode;
   final List<String>? tags;
   final VoidCallback onTap;
+  final VoidCallback? onLongPress;
   final bool isTtsActive;
   final int? ttsStartChar;
   final int? ttsEndChar;
+  final bool isSelected;
 
   const VerseItem({
     super.key,
@@ -1705,9 +2431,11 @@ class VerseItem extends StatefulWidget {
     required this.translationMode,
     this.tags,
     required this.onTap,
+    this.onLongPress,
     this.isTtsActive = false,
     this.ttsStartChar,
     this.ttsEndChar,
+    this.isSelected = false,
   });
 
   @override
@@ -1804,10 +2532,16 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: widget.isHighlighted 
-                ? widget.primaryColor.withValues(alpha: _animation.value)
-                : containerColor,
+            color: widget.isSelected
+                ? widget.primaryColor.withValues(alpha: isDark ? 0.25 : 0.15)
+                : (widget.isHighlighted 
+                    ? widget.primaryColor.withValues(alpha: _animation.value)
+                    : containerColor),
             borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: widget.isSelected ? widget.primaryColor : Colors.transparent,
+              width: 1.5,
+            ),
           ),
           padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
           child: child,
@@ -1815,6 +2549,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
       },
       child: InkWell(
         onTap: widget.onTap,
+        onLongPress: widget.onLongPress,
         borderRadius: BorderRadius.circular(8),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 4.0),

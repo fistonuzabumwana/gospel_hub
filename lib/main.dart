@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/home_screen.dart';
 import 'services/app_state_service.dart';
 import 'services/app_localizations.dart';
 
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
+final ValueNotifier<String> bibleTranslationNotifier = ValueNotifier('parallel');
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +21,12 @@ void main() async {
   } else {
     themeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
   }
+
+  // Load initial Bible translation mode preference
+  final prefs = await SharedPreferences.getInstance();
+  final savedTranslation = prefs.getString('bible_translation_mode') ?? 'parallel';
+  bibleTranslationNotifier.value = savedTranslation;
+
   runApp(const GospelHubApp());
 }
 
@@ -26,7 +35,7 @@ class GospelHubApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const primaryColor = Color(0xFF2A62FF);
+    const primaryColor = Color(0xFF253570);
 
     return ValueListenableBuilder<String>(
       valueListenable: localeNotifier,
@@ -56,12 +65,18 @@ class GospelHubApp extends StatelessWidget {
             ),
             scaffoldBackgroundColor: const Color(0xFFF8FAFC), // Slate 50 Background
             appBarTheme: const AppBarTheme(
-              backgroundColor: Colors.white,
-              foregroundColor: Color(0xFF0F172A),
+              backgroundColor: primaryColor,
+              foregroundColor: Colors.white,
               elevation: 0,
-              scrolledUnderElevation: 1,
+              scrolledUnderElevation: 0,
               centerTitle: false,
-              iconTheme: IconThemeData(color: Color(0xFF334155)),
+              iconTheme: IconThemeData(color: Colors.white),
+              systemOverlayStyle: SystemUiOverlayStyle.light,
+              titleTextStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             cardTheme: CardThemeData(
               color: Colors.white,
@@ -129,6 +144,12 @@ class GospelHubApp extends StatelessWidget {
               foregroundColor: Colors.white,
               elevation: 0,
               scrolledUnderElevation: 1,
+              systemOverlayStyle: SystemUiOverlayStyle.light,
+              titleTextStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             cardTheme: CardThemeData(
               color: const Color(0xFF1B1D1B),

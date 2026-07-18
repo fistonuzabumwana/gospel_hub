@@ -167,10 +167,11 @@ class HymnsScreenState extends State<HymnsScreen> {
                   controller: _searchController,
                   decoration: InputDecoration(
                     hintText: AppLocalizations.translate('hymns_search_hint'),
+                    hintStyle: const TextStyle(color: Colors.white70),
                     border: InputBorder.none,
                   ),
                   autofocus: true,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 16, color: Colors.white),
                 )
               : Text(
                   _currentView == 2 ? _selectedBookName : AppLocalizations.translate('hymns_books_title'),

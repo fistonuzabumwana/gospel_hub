@@ -5,6 +5,7 @@ class BibleVerse {
   final int verse;
   final String text;
   final String testament;
+  final String? heading;
 
   BibleVerse({
     this.id,
@@ -13,6 +14,7 @@ class BibleVerse {
     required this.verse,
     required this.text,
     required this.testament,
+    this.heading,
   });
 
   Map<String, dynamic> toMap() {
@@ -23,6 +25,7 @@ class BibleVerse {
       'verse': verse,
       'text': text,
       'testament': testament,
+      'heading': heading,
     };
   }
 
@@ -34,6 +37,7 @@ class BibleVerse {
       verse: map['verse'] as int? ?? 1,
       text: map['text'] as String? ?? '',
       testament: map['testament'] as String? ?? 'Old',
+      heading: map['heading'] as String?,
     );
   }
 }
