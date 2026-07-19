@@ -30,9 +30,9 @@ public class BibleWidgetProvider extends AppWidgetProvider {
         String action = intent.getAction();
         if (ACTION_PREV_VERSE.equals(action) || ACTION_NEXT_VERSE.equals(action)) {
             SharedPreferences sp = context.getSharedPreferences("FlutterSharedPreferences", Context.MODE_PRIVATE);
-            long count = sp.getLong("flutter.widget_verses_count", 0L);
+            long count = getSafeLong(sp, "flutter.widget_verses_count", 0L);
             if (count > 0) {
-                long currentIndex = sp.getLong("flutter.widget_verse_index", 0L);
+                long currentIndex = getSafeLong(sp, "flutter.widget_verse_index", 0L);
                 if (ACTION_PREV_VERSE.equals(action)) {
                     currentIndex = (currentIndex - 1 + count) % count;
                 } else {
@@ -54,8 +54,8 @@ public class BibleWidgetProvider extends AppWidgetProvider {
         SharedPreferences sp = context.getSharedPreferences("FlutterSharedPreferences", Context.MODE_PRIVATE);
         
         String lang = sp.getString("flutter.widget_language", "rw");
-        long count = sp.getLong("flutter.widget_verses_count", 0L);
-        long index = sp.getLong("flutter.widget_verse_index", 0L);
+        long count = getSafeLong(sp, "flutter.widget_verses_count", 0L);
+        long index = getSafeLong(sp, "flutter.widget_verse_index", 0L);
 
         String ref = "";
         String text = "";
@@ -76,14 +76,14 @@ public class BibleWidgetProvider extends AppWidgetProvider {
             }
         }
 
-        // Apply dynamic opacity
-        float opacity = sp.getFloat("flutter.widget_opacity", 1.0f);
+        // Apply dynamic opacity (read as safe float since Flutter writes double as String)
+        float opacity = getSafeFloat(sp, "flutter.widget_opacity", 1.0f);
         int alphaValue = (int) (opacity * 255.0f);
         views.setInt(R.id.widget_background_img, "setImageAlpha", alphaValue);
 
-        // Apply dynamic font family & size
+        // Apply dynamic font family & size (read as safe float)
         String fontStyle = sp.getString("flutter.widget_font_style", "serif");
-        float fontSize = sp.getFloat("flutter.widget_font_size", 14.5f);
+        float fontSize = getSafeFloat(sp, "flutter.widget_font_size", 14.5f);
 
         int activeTextId;
         int inactiveId1;
@@ -135,5 +135,39 @@ public class BibleWidgetProvider extends AppWidgetProvider {
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
+    }
+
+    // Helper to safely read float values that may be written by Flutter as Strings
+    private static float getSafeFloat(SharedPreferences sp, String key, float defaultValue) {
+        try {
+            String valStr = sp.getString(key, null);
+            if (valStr != null) {
+                return Float.parseFloat(valStr);
+            }
+        } catch (ClassCastException e) {
+            try {
+                return sp.getFloat(key, defaultValue);
+            } catch (Exception ignored) {}
+        } catch (Exception ignored) {}
+        return defaultValue;
+    }
+
+    // Helper to safely read long values (integers)
+    private static long getSafeLong(SharedPreferences sp, String key, long defaultValue) {
+        try {
+            return sp.getLong(key, defaultValue);
+        } catch (ClassCastException e) {
+            try {
+                return sp.getInt(key, (int) defaultValue);
+            } catch (ClassCastException ex) {
+                try {
+                    String valStr = sp.getString(key, null);
+                    if (valStr != null) {
+                        return Long.parseLong(valStr);
+                    }
+                } catch (Exception ignored) {}
+            }
+        }
+        return defaultValue;
     }
 }
