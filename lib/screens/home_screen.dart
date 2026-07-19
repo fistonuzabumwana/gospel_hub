@@ -12,6 +12,7 @@ import '../models/bible_book.dart';
 import '../main.dart';
 import '../services/app_state_service.dart';
 import '../services/app_localizations.dart';
+import '../services/widget_service.dart';
 import 'settings_screen.dart';
 
 class DailyVerseReference {
@@ -45,6 +46,14 @@ class HomeScreenState extends State<HomeScreen> {
       HymnsScreen(key: _hymnsScreenKey),
       const SavedItemsTab(),
     ];
+    _syncWidgetData();
+  }
+
+  void _syncWidgetData() async {
+    try {
+      final lang = await AppStateService.getAppLanguage();
+      await WidgetService.syncWidgetData(lang);
+    } catch (_) {}
   }
 
   void setTab(int index) {

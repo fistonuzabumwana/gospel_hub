@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'widget_service.dart';
 
 class AppStateService {
   static const String _appLanguageKey = 'app_language';
@@ -14,6 +15,7 @@ class AppStateService {
   static Future<void> setAppLanguage(String language) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_appLanguageKey, language);
+    await WidgetService.syncWidgetData(language);
   }
 
   static Future<String> getBibleLanguage() async {

@@ -31,6 +31,20 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- Bible Verse Home Screen Widget Provider -->
+        <receiver
+            android:name=".BibleWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.gospelhub.app.ACTION_PREV_VERSE" />
+                <action android:name="com.gospelhub.app.ACTION_NEXT_VERSE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bible_widget_info" />
+        </receiver>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
