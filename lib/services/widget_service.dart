@@ -68,4 +68,43 @@ class WidgetService {
       print('Error syncing widget data: $e');
     }
   }
+
+  static Future<double> getWidgetOpacity() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getDouble('widget_opacity') ?? 1.0;
+  }
+
+  static Future<void> setWidgetOpacity(double opacity) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setDouble('widget_opacity', opacity);
+    await _channel.invokeMethod('updateWidget');
+  }
+
+  static Future<double> getWidgetFontSize() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getDouble('widget_font_size') ?? 14.5;
+  }
+
+  static Future<void> setWidgetFontSize(double size) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setDouble('widget_font_size', size);
+    await _channel.invokeMethod('updateWidget');
+  }
+
+  static Future<String> getWidgetFontStyle() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('widget_font_style') ?? 'serif';
+  }
+
+  static Future<void> setWidgetFontStyle(String style) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('widget_font_style', style);
+    await _channel.invokeMethod('updateWidget');
+  }
+
+  static Future<void> triggerWidgetUpdate() async {
+    try {
+      await _channel.invokeMethod('updateWidget');
+    } catch (_) {}
+  }
 }

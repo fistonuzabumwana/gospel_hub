@@ -7,6 +7,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.TypedValue;
+import android.view.View;
 import android.widget.RemoteViews;
 
 public class BibleWidgetProvider extends AppWidgetProvider {
@@ -74,9 +76,42 @@ public class BibleWidgetProvider extends AppWidgetProvider {
             }
         }
 
-        // Set layout text fields
+        // Apply dynamic opacity
+        float opacity = sp.getFloat("flutter.widget_opacity", 1.0f);
+        int alphaValue = (int) (opacity * 255.0f);
+        views.setInt(R.id.widget_background_img, "setImageAlpha", alphaValue);
+
+        // Apply dynamic font family & size
+        String fontStyle = sp.getString("flutter.widget_font_style", "serif");
+        float fontSize = sp.getFloat("flutter.widget_font_size", 14.5f);
+
+        int activeTextId;
+        int inactiveId1;
+        int inactiveId2;
+
+        if ("sans".equals(fontStyle)) {
+            activeTextId = R.id.widget_verse_text_sans;
+            inactiveId1 = R.id.widget_verse_text_serif;
+            inactiveId2 = R.id.widget_verse_text_mono;
+        } else if ("mono".equals(fontStyle)) {
+            activeTextId = R.id.widget_verse_text_mono;
+            inactiveId1 = R.id.widget_verse_text_sans;
+            inactiveId2 = R.id.widget_verse_text_serif;
+        } else {
+            activeTextId = R.id.widget_verse_text_serif;
+            inactiveId1 = R.id.widget_verse_text_sans;
+            inactiveId2 = R.id.widget_verse_text_mono;
+        }
+
+        views.setViewVisibility(activeTextId, View.VISIBLE);
+        views.setViewVisibility(inactiveId1, View.GONE);
+        views.setViewVisibility(inactiveId2, View.GONE);
+
+        views.setTextViewText(activeTextId, text);
+        views.setTextViewTextSize(activeTextId, TypedValue.COMPLEX_UNIT_SP, fontSize);
+
+        // Set reference title
         views.setTextViewText(R.id.widget_verse_ref, ref);
-        views.setTextViewText(R.id.widget_verse_text, text);
 
         // Previous button PendingIntent
         Intent intentPrev = new Intent(context, BibleWidgetProvider.class);
@@ -96,7 +131,7 @@ public class BibleWidgetProvider extends AppWidgetProvider {
         Intent intentApp = new Intent(context, MainActivity.class);
         PendingIntent piApp = PendingIntent.getActivity(context, 0, intentApp, 
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-        views.setOnClickPendingIntent(R.id.widget_container, piApp);
+        views.setOnClickPendingIntent(R.id.widget_root, piApp);
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);

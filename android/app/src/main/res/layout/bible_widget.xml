@@ -1,80 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/widget_container"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/widget_background"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Header Row -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <!-- App Icon -->
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="Gospel Hub Logo"/>
-
-        <TextView
-            android:id="@+id/widget_verse_ref"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:text="James 1:3"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            android:singleLine="true"/>
-
-        <!-- Navigation Buttons -->
-        <ImageView
-            android:id="@+id/widget_btn_prev"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="6dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_arrow_left"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Previous Verse"/>
-
-        <ImageView
-            android:id="@+id/widget_btn_next"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="6dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_arrow_right"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Next Verse"/>
-
-    </LinearLayout>
-
-    <!-- Space divider -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
-
-    <!-- Verse Body -->
-    <TextView
-        android:id="@+id/widget_verse_text"
+    <!-- Widget Background Image (Allows dynamic opacity via setImageAlpha) -->
+    <ImageView
+        android:id="@+id/widget_background_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="For he rent Israel from the house of David; and they made Jeroboam..."
-        android:textColor="#E2E8F0"
-        android:textSize="13.5sp"
-        android:ellipsize="end"
-        android:maxLines="4"
-        android:lineSpacingMultiplier="1.25"
-        android:fontFamily="serif"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/widget_background"
+        android:contentDescription="Widget Background"/>
 
-</LinearLayout>
+    <!-- Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- App Icon -->
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="Gospel Hub Logo"/>
+
+            <TextView
+                android:id="@+id/widget_verse_ref"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="James 1:3"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:singleLine="true"/>
+
+            <!-- Navigation Buttons (Removed unsupported selectableItemBackgroundBorderless) -->
+            <ImageView
+                android:id="@+id/widget_btn_prev"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_arrow_left"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Previous Verse"/>
+
+            <ImageView
+                android:id="@+id/widget_btn_next"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_arrow_right"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Next Verse"/>
+
+        </LinearLayout>
+
+        <!-- Space divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <!-- Verse Body (Sans-Serif Font Style Variant) -->
+        <TextView
+            android:id="@+id/widget_verse_text_sans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="For he rent Israel..."
+            android:textColor="#E2E8F0"
+            android:textSize="13.5sp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:lineSpacingMultiplier="1.25"
+            android:fontFamily="sans-serif"
+            android:visibility="gone"/>
+
+        <!-- Verse Body (Serif Font Style Variant - Default) -->
+        <TextView
+            android:id="@+id/widget_verse_text_serif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="For he rent Israel..."
+            android:textColor="#E2E8F0"
+            android:textSize="13.5sp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:lineSpacingMultiplier="1.25"
+            android:fontFamily="serif"
+            android:visibility="visible"/>
+
+        <!-- Verse Body (Monospace Font Style Variant) -->
+        <TextView
+            android:id="@+id/widget_verse_text_mono"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="For he rent Israel..."
+            android:textColor="#E2E8F0"
+            android:textSize="13.5sp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:lineSpacingMultiplier="1.25"
+            android:fontFamily="monospace"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</FrameLayout>

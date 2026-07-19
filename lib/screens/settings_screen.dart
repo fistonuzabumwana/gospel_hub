@@ -3,6 +3,7 @@ import '../services/backup_service.dart';
 import '../services/app_localizations.dart';
 import '../services/app_state_service.dart';
 import 'privacy_policy_screen.dart';
+import 'widget_settings_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -52,6 +53,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         title: AppLocalizations.translate('settings_language'),
                         subtitle: currentLang == 'rw' ? 'Ikinyarwanda' : 'English',
                         onTap: () => _showLanguagePicker(context),
+                      ),
+                      const Divider(height: 1, indent: 56),
+                      _SettingsTile(
+                        leading: const _IconBadge(
+                          icon: Icons.widgets_outlined,
+                          color: Color(0xFF0EA5E9), // Sky Blue
+                        ),
+                        title: currentLang == 'rw' ? 'Akamenyetso k\'Ibyanditswe' : 'Bible Widget Settings',
+                        subtitle: currentLang == 'rw' ? 'Guhindura uko kagaragara' : 'Customize layout & opacity',
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const WidgetSettingsScreen()),
+                          );
+                        },
                       ),
                     ],
                   ),
