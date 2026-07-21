@@ -47,23 +47,31 @@
                 android:ellipsize="end"
                 android:singleLine="true"/>
 
-            <!-- Navigation Buttons (Removed unsupported selectableItemBackgroundBorderless) -->
-            <ImageView
+            <!-- Navigation Buttons -->
+            <TextView
                 android:id="@+id/widget_btn_prev"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:padding="6dp"
-                android:src="@drawable/ic_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="❮"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
                 android:contentDescription="Previous Verse"/>
 
-            <ImageView
+            <TextView
                 android:id="@+id/widget_btn_next"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:padding="6dp"
-                android:src="@drawable/ic_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="❯"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
                 android:contentDescription="Next Verse"/>

@@ -35,7 +35,7 @@
         <!-- Bible Verse Home Screen Widget Provider -->
         <receiver
             android:name=".BibleWidgetProvider"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.gospelhub.app.ACTION_PREV_VERSE" />
