@@ -9,6 +9,7 @@ import '../models/bible_verse.dart';
 import '../models/bible_book.dart';
 import '../services/app_localizations.dart';
 import '../main.dart';
+import '../widgets/book_page_fold.dart';
 import 'home_screen.dart';
 
 class BibleReaderScreen extends StatefulWidget {
@@ -210,8 +211,10 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     });
   }
 
-  Future<void> _loadVerses() async {
-    setState(() => _isLoading = true);
+  Future<void> _loadVerses({bool showLoading = true}) async {
+    if (showLoading && mounted) {
+      setState(() => _isLoading = true);
+    }
     try {
       _saveLastRead();
       final verses = await _dbService.getChapterVerses(_selectedBook.bookNumber, _selectedChapter);
@@ -372,42 +375,218 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     }
   }
 
-  void _nextChapter() {
+  bool get _canTurnForward {
+    if (_selectedChapter < _selectedBook.chapterCount) return true;
+    final currentIndex = BibleBook.allBooks.indexOf(_selectedBook);
+    return currentIndex < BibleBook.allBooks.length - 1;
+  }
+
+  bool get _canTurnBackward {
+    if (_selectedChapter > 1) return true;
+    final currentIndex = BibleBook.allBooks.indexOf(_selectedBook);
+    return currentIndex > 0;
+  }
+
+  void _advanceChapter() {
     if (_selectedChapter < _selectedBook.chapterCount) {
-      setState(() {
-        _selectedChapter++;
-      });
-      _loadVerses();
+      _selectedChapter++;
     } else {
-      // Go to next book
       final currentIndex = BibleBook.allBooks.indexOf(_selectedBook);
       if (currentIndex < BibleBook.allBooks.length - 1) {
-        setState(() {
-          _selectedBook = BibleBook.allBooks[currentIndex + 1];
-          _selectedChapter = 1;
-        });
-        _loadVerses();
+        _selectedBook = BibleBook.allBooks[currentIndex + 1];
+        _selectedChapter = 1;
       }
     }
   }
 
-  void _prevChapter() {
+  void _retreatChapter() {
     if (_selectedChapter > 1) {
-      setState(() {
-        _selectedChapter--;
-      });
-      _loadVerses();
+      _selectedChapter--;
     } else {
-      // Go to prev book
       final currentIndex = BibleBook.allBooks.indexOf(_selectedBook);
       if (currentIndex > 0) {
         final prevBook = BibleBook.allBooks[currentIndex - 1];
-        setState(() {
-          _selectedBook = prevBook;
-          _selectedChapter = prevBook.chapterCount;
-        });
-        _loadVerses();
+        _selectedBook = prevBook;
+        _selectedChapter = prevBook.chapterCount;
       }
+    }
+  }
+
+  void _nextChapter() {
+    if (!_canTurnForward) return;
+    setState(() => _advanceChapter());
+    _loadVerses();
+  }
+
+  void _prevChapter() {
+    if (!_canTurnBackward) return;
+    setState(() => _retreatChapter());
+    _loadVerses();
+  }
+
+  Future<void> _onBookPageTurn(BookPageTurnDirection direction) async {
+    if (_isPlayingTTS) {
+      await _flutterTts.stop();
+    }
+    if (direction == BookPageTurnDirection.forward) {
+      if (!_canTurnForward) return;
+      _advanceChapter();
+    } else {
+      if (!_canTurnBackward) return;
+      _retreatChapter();
+    }
+    // Keep the folding page visible while the next chapter loads.
+    await _loadVerses(showLoading: false);
+    if (_scrollController.hasClients) {
+      _scrollController.jumpTo(0);
+    }
+  }
+
+  /// Target book/chapter for a page-turn direction (does not mutate state).
+  (BibleBook book, int chapter)? _adjacentChapter(BookPageTurnDirection direction) {
+    if (direction == BookPageTurnDirection.forward) {
+      if (_selectedChapter < _selectedBook.chapterCount) {
+        return (_selectedBook, _selectedChapter + 1);
+      }
+      final currentIndex = BibleBook.allBooks.indexOf(_selectedBook);
+      if (currentIndex < BibleBook.allBooks.length - 1) {
+        return (BibleBook.allBooks[currentIndex + 1], 1);
+      }
+      return null;
+    }
+
+    if (_selectedChapter > 1) {
+      return (_selectedBook, _selectedChapter - 1);
+    }
+    final currentIndex = BibleBook.allBooks.indexOf(_selectedBook);
+    if (currentIndex > 0) {
+      final prevBook = BibleBook.allBooks[currentIndex - 1];
+      return (prevBook, prevBook.chapterCount);
+    }
+    return null;
+  }
+
+  /// Builds a read-only snapshot of the destination chapter for the curl underside.
+  Future<Widget?> _loadDestinationPage(BookPageTurnDirection direction) async {
+    final target = _adjacentChapter(direction);
+    if (target == null) return null;
+
+    final book = target.$1;
+    final chapter = target.$2;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isReaderDark = _getActiveThemeMode(isDark) == 'Dark';
+    final bgColor = _getBgColor(isDark);
+    final textColor = _getTextColor(isDark);
+    final primaryColor = Theme.of(context).primaryColor;
+
+    try {
+      final verses = await _dbService.getChapterVerses(book.bookNumber, chapter);
+      Map<int, String> englishMap = {};
+      if (_translationMode == 'english' || _translationMode == 'parallel') {
+        final eng = await _dbService.getEnglishChapterVerses(book.bookNumber, chapter);
+        englishMap = {for (var v in eng) v['verse'] as int: v['text'] as String};
+      }
+
+      if (!mounted) return null;
+
+      return ColoredBox(
+        color: bgColor,
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final leadCount = _dropCapLeadCount(
+              verses: verses,
+              contentWidth: constraints.maxWidth - 40,
+              chapter: chapter,
+              englishMap: englishMap,
+            );
+            final remaining =
+                (verses.length - leadCount).clamp(0, verses.length);
+            return ListView.builder(
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 16, bottom: 80),
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: verses.isEmpty ? 0 : 1 + remaining,
+              itemBuilder: (context, index) {
+                if (index == 0) {
+                  final leadVerses = verses.sublist(0, leadCount);
+                  final firstHeading = leadVerses.first.heading;
+                  final hasFirstHeading =
+                      firstHeading != null && firstHeading.isNotEmpty;
+
+                  Widget lead;
+                  if (leadCount > 1) {
+                    lead = _buildMultiVerseDropCapLead(
+                      chapter: chapter,
+                      leadVerses: leadVerses,
+                      leadIndexes: List.generate(leadCount, (i) => i),
+                      textColor: textColor,
+                      primaryColor: primaryColor,
+                      isDark: isReaderDark,
+                      englishMap: englishMap,
+                      interactive: false,
+                    );
+                  } else {
+                    lead = Padding(
+                      padding: const EdgeInsets.only(bottom: 4.0),
+                      child: VerseItem(
+                        verse: leadVerses.first,
+                        fontSize: _fontSize,
+                        textColor: textColor,
+                        primaryColor: primaryColor,
+                        isHighlighted: false,
+                        hasNote: false,
+                        englishText: englishMap[leadVerses.first.verse],
+                        translationMode: _translationMode,
+                        onTap: () {},
+                        chapterDropCap: chapter,
+                        isDark: isReaderDark,
+                      ),
+                    );
+                  }
+
+                  if (!hasFirstHeading) return lead;
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildVerseHeading(firstHeading, isReaderDark, primaryColor),
+                      lead,
+                    ],
+                  );
+                }
+
+                final verseIndex = leadCount + index - 1;
+                final verse = verses[verseIndex];
+                final hasHeading =
+                    verse.heading != null && verse.heading!.isNotEmpty;
+                final verseItem = Padding(
+                  padding: const EdgeInsets.only(bottom: 4.0),
+                  child: VerseItem(
+                    verse: verse,
+                    fontSize: _fontSize,
+                    textColor: textColor,
+                    primaryColor: primaryColor,
+                    isHighlighted: false,
+                    hasNote: false,
+                    englishText: englishMap[verse.verse],
+                    translationMode: _translationMode,
+                    onTap: () {},
+                    isDark: isReaderDark,
+                  ),
+                );
+                if (!hasHeading) return verseItem;
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildVerseHeading(verse.heading!, isReaderDark, primaryColor),
+                    verseItem,
+                  ],
+                );
+              },
+            );
+          },
+        ),
+      );
+    } catch (_) {
+      return ColoredBox(color: bgColor);
     }
   }
 
@@ -434,6 +613,223 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     if (activeMode == 'Dark') return Colors.grey.shade300;
     if (activeMode == 'Warm') return const Color(0xFF4C3E26);
     return const Color(0xFF1E293B); // Slate 800 Text
+  }
+
+  String _verseBodyText(BibleVerse verse, Map<int, String> englishMap) {
+    if (_translationMode == 'english') {
+      return englishMap[verse.verse] ?? verse.text;
+    }
+    return verse.text;
+  }
+
+  /// How many opening verses fit beside the chapter drop-cap.
+  int _dropCapLeadCount({
+    required List<BibleVerse> verses,
+    required double contentWidth,
+    required int chapter,
+    required Map<int, String> englishMap,
+  }) {
+    if (verses.isEmpty || contentWidth <= 0) return verses.isEmpty ? 0 : 1;
+
+    const gap = 12.0;
+    final dropCapStyle = TextStyle(
+      fontSize: _fontSize * 5.2,
+      fontWeight: FontWeight.w500,
+      height: 0.88,
+      fontFamily: 'serif',
+      letterSpacing: -2.0,
+    );
+    final bodyStyle = TextStyle(
+      fontSize: _fontSize,
+      height: 1.35,
+      fontFamily: 'serif',
+    );
+    final englishStyle = TextStyle(
+      fontStyle: FontStyle.italic,
+      fontSize: _fontSize - 1.5,
+      height: 1.35,
+      fontFamily: 'serif',
+    );
+
+    final dropPainter = TextPainter(
+      text: TextSpan(text: '$chapter', style: dropCapStyle),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    final sideWidth =
+        (contentWidth - dropPainter.width - gap).clamp(40.0, contentWidth);
+    final dropH = dropPainter.height;
+
+    double measureSpan(InlineSpan span) {
+      final tp = TextPainter(
+        text: span,
+        textDirection: TextDirection.ltr,
+      )..layout(maxWidth: sideWidth);
+      return tp.height;
+    }
+
+    double measureVerseHeight(int index) {
+      final verse = verses[index];
+      final prefix = index == 0 ? '' : '${verse.verse}  ';
+      final main = '$prefix${_verseBodyText(verse, englishMap)}';
+      final children = <InlineSpan>[TextSpan(text: main, style: bodyStyle)];
+      if (_translationMode == 'parallel' && englishMap[verse.verse] != null) {
+        children.add(const TextSpan(text: '\n'));
+        children.add(
+          TextSpan(text: englishMap[verse.verse], style: englishStyle),
+        );
+      }
+      return measureSpan(TextSpan(children: children)) + 4.0;
+    }
+
+    var count = 0;
+    var used = 0.0;
+    for (var i = 0; i < verses.length; i++) {
+      final h = measureVerseHeight(i);
+      if (i == 0) {
+        count = 1;
+        used = h;
+        // Long first verse (incl. parallel English): single-verse drop-cap wrap.
+        if (h >= dropH) return 1;
+        continue;
+      }
+      if (used + h > dropH + 2) break;
+      count++;
+      used += h;
+      if (used >= dropH) break;
+    }
+    return count;
+  }
+
+  Widget _buildVerseHeading(String heading, bool isDark, Color primaryColor) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 8.0, right: 8.0),
+        child: Text(
+          heading,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: _fontSize + 1.5,
+            fontWeight: FontWeight.bold,
+            color: isDark ? const Color(0xFF60A5FA) : primaryColor,
+            height: 1.4,
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// Shared chapter drop-cap with one or more short opening verses beside it.
+  Widget _buildMultiVerseDropCapLead({
+    required int chapter,
+    required List<BibleVerse> leadVerses,
+    required List<int> leadIndexes,
+    required Color textColor,
+    required Color primaryColor,
+    required bool isDark,
+    required Map<int, String> englishMap,
+    required bool interactive,
+  }) {
+    const gap = 12.0;
+    final dropCapStyle = TextStyle(
+      fontSize: _fontSize * 5.2,
+      fontWeight: FontWeight.w500,
+      height: 0.88,
+      fontFamily: 'serif',
+      color: textColor,
+      letterSpacing: -2.0,
+    );
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: gap),
+            child: Text('$chapter', style: dropCapStyle),
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (var i = 0; i < leadVerses.length; i++) ...[
+                  if (i > 0 &&
+                      leadVerses[i].heading != null &&
+                      leadVerses[i].heading!.isNotEmpty)
+                    _buildVerseHeading(
+                      leadVerses[i].heading!,
+                      isDark,
+                      primaryColor,
+                    ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4.0),
+                    child: VerseItem(
+                      key: interactive &&
+                              leadIndexes[i] < _verseKeys.length
+                          ? _verseKeys[leadIndexes[i]]
+                          : null,
+                      verse: leadVerses[i],
+                      fontSize: _fontSize,
+                      textColor: textColor,
+                      primaryColor: primaryColor,
+                      isDark: isDark,
+                      isHighlighted: interactive &&
+                          _targetVerse == leadVerses[i].verse,
+                      isSelected: interactive &&
+                          _selectedVerseIds.contains(leadVerses[i].id),
+                      highlightColor: interactive &&
+                              _highlights.containsKey(leadVerses[i].id)
+                          ? _highlightColors[_highlights[leadVerses[i].id]!]
+                          : null,
+                      hasNote: interactive &&
+                          _notes.containsKey(leadVerses[i].id),
+                      englishText: englishMap[leadVerses[i].verse],
+                      translationMode: _translationMode,
+                      tags: interactive
+                          ? _verseTagsMap[leadVerses[i].id]
+                          : null,
+                      hideVerseNumber: i == 0,
+                      onTap: interactive
+                          ? () {
+                              final verse = leadVerses[i];
+                              if (_isMultiSelectMode) {
+                                setState(() {
+                                  if (_selectedVerseIds.contains(verse.id)) {
+                                    _selectedVerseIds.remove(verse.id);
+                                    if (_selectedVerseIds.isEmpty) {
+                                      _isMultiSelectMode = false;
+                                    }
+                                  } else {
+                                    _selectedVerseIds.add(verse.id!);
+                                  }
+                                });
+                              } else {
+                                _showVerseActionsModal(verse);
+                              }
+                            }
+                          : () {},
+                      onLongPress: interactive
+                          ? () {
+                              setState(() {
+                                _isMultiSelectMode = true;
+                                _selectedVerseIds.add(leadVerses[i].id!);
+                              });
+                            }
+                          : null,
+                      isTtsActive: interactive &&
+                          _isPlayingTTS &&
+                          _ttsActiveVerse == leadVerses[i].verse,
+                      ttsStartChar: _ttsWordStartChar,
+                      ttsEndChar: _ttsWordEndChar,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -733,6 +1129,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   }
 
   Widget _buildReaderView(Color primaryColor, bool isDark) {
+    final isReaderDark = _getActiveThemeMode(isDark) == 'Dark';
     if (_isLoading) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -779,95 +1176,168 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
             ),
           ),
           Expanded(
-            child: GestureDetector(
-              behavior: HitTestBehavior.translucent,
-              onHorizontalDragEnd: (details) {
-                final velocity = details.primaryVelocity ?? 0;
-                if (velocity < -200) {
-                  _nextChapter();
-                } else if (velocity > 200) {
-                  _prevChapter();
-                }
-              },
-              child: ListView.builder(
-                controller: _scrollController,
-                // Use larger bottom padding (e.g. 80.0) so list view can be scrolled fully above the floating footer
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 16, bottom: 80),
-                itemCount: _verses.length,
-                itemBuilder: (context, index) {
-                  final verse = _verses[index];
-                  final hasHeading = verse.heading != null && verse.heading!.isNotEmpty;
-
-                  final verseItemWidget = Padding(
-                    padding: const EdgeInsets.only(bottom: 12.0),
-                    child: VerseItem(
-                      key: _verseKeys[index],
-                      verse: verse,
-                      fontSize: _fontSize,
-                      textColor: textColor,
-                      primaryColor: primaryColor,
-                      isHighlighted: _targetVerse == verse.verse,
-                      isSelected: _selectedVerseIds.contains(verse.id),
-                      highlightColor: _highlights.containsKey(verse.id)
-                          ? _highlightColors[_highlights[verse.id]!]
-                          : null,
-                      hasNote: _notes.containsKey(verse.id),
-                      englishText: _englishVerses[verse.verse],
-                      translationMode: _translationMode,
-                      tags: _verseTagsMap[verse.id],
-                      onTap: () {
-                        if (_isMultiSelectMode) {
-                          setState(() {
-                            if (_selectedVerseIds.contains(verse.id)) {
-                              _selectedVerseIds.remove(verse.id);
-                              if (_selectedVerseIds.isEmpty) {
-                                _isMultiSelectMode = false;
-                              }
-                            } else {
-                              _selectedVerseIds.add(verse.id!);
-                            }
-                          });
-                        } else {
-                          _showVerseActionsModal(verse);
-                        }
-                      },
-                      onLongPress: () {
-                        setState(() {
-                          _isMultiSelectMode = true;
-                          _selectedVerseIds.add(verse.id!);
-                        });
-                      },
-                      isTtsActive: _isPlayingTTS && _ttsActiveVerse == verse.verse,
-                      ttsStartChar: _ttsWordStartChar,
-                      ttsEndChar: _ttsWordEndChar,
-                    ),
+            child: BookPageFold(
+              canTurnForward: _canTurnForward,
+              canTurnBackward: _canTurnBackward,
+              paperColor: bgColor,
+              onTurn: _onBookPageTurn,
+              loadDestinationPage: _loadDestinationPage,
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  final leadCount = _dropCapLeadCount(
+                    verses: _verses,
+                    contentWidth: constraints.maxWidth - 40,
+                    chapter: _selectedChapter,
+                    englishMap: _englishVerses,
                   );
+                  final remaining = (_verses.length - leadCount).clamp(0, _verses.length);
+                  return ListView.builder(
+                    controller: _scrollController,
+                    // Use larger bottom padding so list can scroll above the floating footer
+                    padding: const EdgeInsets.only(left: 20, right: 20, top: 16, bottom: 80),
+                    itemCount: _verses.isEmpty ? 0 : 1 + remaining,
+                    itemBuilder: (context, index) {
+                      if (index == 0) {
+                        final leadVerses = _verses.sublist(0, leadCount);
+                        final firstHeading = leadVerses.first.heading;
+                        final hasFirstHeading =
+                            firstHeading != null && firstHeading.isNotEmpty;
 
-                  if (hasHeading) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Center(
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 8.0, right: 8.0),
-                            child: Text(
-                              verse.heading!,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: _fontSize + 1.5,
-                                fontWeight: FontWeight.bold,
-                                color: isDark ? const Color(0xFF60A5FA) : primaryColor,
-                                height: 1.4,
-                              ),
+                        Widget lead;
+                        if (leadCount > 1) {
+                          lead = _buildMultiVerseDropCapLead(
+                            chapter: _selectedChapter,
+                            leadVerses: leadVerses,
+                            leadIndexes: List.generate(leadCount, (i) => i),
+                            textColor: textColor,
+                            primaryColor: primaryColor,
+                            isDark: isReaderDark,
+                            englishMap: _englishVerses,
+                            interactive: true,
+                          );
+                        } else {
+                          final verse = leadVerses.first;
+                          lead = Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: VerseItem(
+                              key: _verseKeys.isNotEmpty ? _verseKeys[0] : null,
+                              verse: verse,
+                              fontSize: _fontSize,
+                              textColor: textColor,
+                              primaryColor: primaryColor,
+                              isHighlighted: _targetVerse == verse.verse,
+                              isSelected: _selectedVerseIds.contains(verse.id),
+                              highlightColor: _highlights.containsKey(verse.id)
+                                  ? _highlightColors[_highlights[verse.id]!]
+                                  : null,
+                              hasNote: _notes.containsKey(verse.id),
+                              englishText: _englishVerses[verse.verse],
+                              translationMode: _translationMode,
+                              tags: _verseTagsMap[verse.id],
+                              chapterDropCap: _selectedChapter,
+                              isDark: isReaderDark,
+                              onTap: () {
+                                if (_isMultiSelectMode) {
+                                  setState(() {
+                                    if (_selectedVerseIds.contains(verse.id)) {
+                                      _selectedVerseIds.remove(verse.id);
+                                      if (_selectedVerseIds.isEmpty) {
+                                        _isMultiSelectMode = false;
+                                      }
+                                    } else {
+                                      _selectedVerseIds.add(verse.id!);
+                                    }
+                                  });
+                                } else {
+                                  _showVerseActionsModal(verse);
+                                }
+                              },
+                              onLongPress: () {
+                                setState(() {
+                                  _isMultiSelectMode = true;
+                                  _selectedVerseIds.add(verse.id!);
+                                });
+                              },
+                              isTtsActive: _isPlayingTTS &&
+                                  _ttsActiveVerse == verse.verse,
+                              ttsStartChar: _ttsWordStartChar,
+                              ttsEndChar: _ttsWordEndChar,
                             ),
-                          ),
-                        ),
-                        verseItemWidget,
-                      ],
-                    );
-                  }
+                          );
+                        }
 
-                  return verseItemWidget;
+                        if (!hasFirstHeading) return lead;
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _buildVerseHeading(firstHeading, isReaderDark, primaryColor),
+                            lead,
+                          ],
+                        );
+                      }
+
+                      final verseIndex = leadCount + index - 1;
+                      final verse = _verses[verseIndex];
+                      final hasHeading =
+                          verse.heading != null && verse.heading!.isNotEmpty;
+
+                      final verseItemWidget = Padding(
+                        padding: const EdgeInsets.only(bottom: 4.0),
+                        child: VerseItem(
+                          key: _verseKeys[verseIndex],
+                          verse: verse,
+                          fontSize: _fontSize,
+                          textColor: textColor,
+                          primaryColor: primaryColor,
+                          isHighlighted: _targetVerse == verse.verse,
+                          isSelected: _selectedVerseIds.contains(verse.id),
+                          highlightColor: _highlights.containsKey(verse.id)
+                              ? _highlightColors[_highlights[verse.id]!]
+                              : null,
+                          hasNote: _notes.containsKey(verse.id),
+                          englishText: _englishVerses[verse.verse],
+                          translationMode: _translationMode,
+                          tags: _verseTagsMap[verse.id],
+                          onTap: () {
+                            if (_isMultiSelectMode) {
+                              setState(() {
+                                if (_selectedVerseIds.contains(verse.id)) {
+                                  _selectedVerseIds.remove(verse.id);
+                                  if (_selectedVerseIds.isEmpty) {
+                                    _isMultiSelectMode = false;
+                                  }
+                                } else {
+                                  _selectedVerseIds.add(verse.id!);
+                                }
+                              });
+                            } else {
+                              _showVerseActionsModal(verse);
+                            }
+                          },
+                          onLongPress: () {
+                            setState(() {
+                              _isMultiSelectMode = true;
+                              _selectedVerseIds.add(verse.id!);
+                            });
+                          },
+                          isTtsActive: _isPlayingTTS &&
+                              _ttsActiveVerse == verse.verse,
+                          ttsStartChar: _ttsWordStartChar,
+                          ttsEndChar: _ttsWordEndChar,
+                          isDark: isReaderDark,
+                        ),
+                      );
+
+                      if (!hasHeading) return verseItemWidget;
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _buildVerseHeading(verse.heading!, isReaderDark, primaryColor),
+                          verseItemWidget,
+                        ],
+                      );
+                    },
+                  );
                 },
               ),
             ),
@@ -2420,6 +2890,13 @@ class VerseItem extends StatefulWidget {
   final int? ttsStartChar;
   final int? ttsEndChar;
   final bool isSelected;
+  /// When set (usually on the first verse), shows a large chapter drop-cap
+  /// instead of the small verse number.
+  final int? chapterDropCap;
+  /// Hide the small verse number (used when a shared chapter drop-cap is shown
+  /// beside several short opening verses).
+  final bool hideVerseNumber;
+  final bool isDark;
 
   const VerseItem({
     super.key,
@@ -2439,6 +2916,9 @@ class VerseItem extends StatefulWidget {
     this.ttsStartChar,
     this.ttsEndChar,
     this.isSelected = false,
+    this.chapterDropCap,
+    this.hideVerseNumber = false,
+    required this.isDark,
   });
 
   @override
@@ -2495,15 +2975,23 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
     int? start,
     int? end,
     TextStyle style,
-    Color primaryColor,
-  ) {
-    if (!isTtsActive || start == null || end == null || start < 0 || end > fullText.length || start >= end) {
+    Color primaryColor, {
+    int textOffset = 0,
+  }) {
+    final localStart = start == null ? null : start - textOffset;
+    final localEnd = end == null ? null : end - textOffset;
+    if (!isTtsActive ||
+        localStart == null ||
+        localEnd == null ||
+        localStart < 0 ||
+        localEnd > fullText.length ||
+        localStart >= localEnd) {
       return [TextSpan(text: fullText, style: style)];
     }
 
-    final prefix = fullText.substring(0, start);
-    final word = fullText.substring(start, end);
-    final suffix = fullText.substring(end);
+    final prefix = fullText.substring(0, localStart);
+    final word = fullText.substring(localStart, localEnd);
+    final suffix = fullText.substring(localEnd);
 
     return [
       TextSpan(text: prefix, style: style),
@@ -2519,9 +3007,197 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
     ];
   }
 
+  /// Splits [text] so the first lines sit beside [dropCapSize], rest wrap below.
+  /// Returns (beside, below, belowStartOffsetInOriginal).
+  (String, String, int) _splitForDropCap({
+    required String text,
+    required TextStyle style,
+    required double maxWidth,
+    required Size dropCapSize,
+    required double gap,
+  }) {
+    final sideWidth = (maxWidth - dropCapSize.width - gap).clamp(40.0, maxWidth);
+    final painter = TextPainter(
+      text: TextSpan(text: text, style: style),
+      textDirection: TextDirection.ltr,
+    )..layout(maxWidth: sideWidth);
+
+    final metrics = painter.computeLineMetrics();
+    if (metrics.isEmpty) return (text, '', 0);
+
+    final lineHeight = metrics.first.height;
+    final linesBeside =
+        (dropCapSize.height / lineHeight).ceil().clamp(1, metrics.length);
+
+    var y = 0.0;
+    for (var i = 0; i < linesBeside; i++) {
+      y += metrics[i].height;
+    }
+
+    final pos = painter.getPositionForOffset(Offset(sideWidth, y - 0.5));
+    var split = pos.offset.clamp(0, text.length);
+
+    // Prefer splitting on a space so we don't break mid-word awkwardly.
+    if (split > 0 && split < text.length && text[split - 1] != ' ') {
+      final space = text.lastIndexOf(' ', split);
+      if (space > 0) split = space + 1;
+    }
+
+    final beside = text.substring(0, split).trimRight();
+    final belowRaw = text.substring(split);
+    final below = belowRaw.trimLeft();
+    final belowOffset = split + (belowRaw.length - below.length);
+    return (beside, below, belowOffset);
+  }
+
+  Widget _buildDropCapVerse({
+    required String text,
+    required TextStyle bodyStyle,
+    required Color accentBlue,
+    required bool isDark,
+  }) {
+    final dropCapStyle = TextStyle(
+      fontSize: widget.fontSize * 5.2,
+      fontWeight: FontWeight.w500,
+      height: 0.88,
+      fontFamily: 'serif',
+      color: widget.textColor,
+      letterSpacing: -2.0,
+    );
+    const gap = 12.0;
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final dropPainter = TextPainter(
+          text: TextSpan(text: '${widget.chapterDropCap}', style: dropCapStyle),
+          textDirection: TextDirection.ltr,
+        )..layout();
+        final dropSize = dropPainter.size;
+
+        final split = _splitForDropCap(
+          text: text,
+          style: bodyStyle,
+          maxWidth: constraints.maxWidth,
+          dropCapSize: dropSize,
+          gap: gap,
+        );
+        final beside = split.$1;
+        final below = split.$2;
+        final belowOffset = split.$3;
+        final showParallel = widget.translationMode == 'parallel' &&
+            widget.englishText != null &&
+            widget.englishText!.isNotEmpty;
+        final englishStyle = TextStyle(
+          fontStyle: FontStyle.italic,
+          fontSize: widget.fontSize - 1.5,
+          height: 1.35,
+          color: isDark ? Colors.white60 : Colors.black54,
+        );
+        // Keep English with this verse: beside the drop-cap when the
+        // primary text fully fits there; otherwise under the wrapped text.
+        final englishBesidePrimary = showParallel && below.isEmpty;
+
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: gap, top: 0),
+                  child: Text('${widget.chapterDropCap}', style: dropCapStyle),
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      RichText(
+                        text: TextSpan(
+                          children: _buildSpans(
+                            beside,
+                            widget.isTtsActive,
+                            widget.ttsStartChar,
+                            widget.ttsEndChar,
+                            bodyStyle,
+                            accentBlue,
+                          ),
+                        ),
+                      ),
+                      if (englishBesidePrimary) ...[
+                        const SizedBox(height: 4),
+                        Text(widget.englishText!, style: englishStyle),
+                      ],
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            if (below.isNotEmpty)
+              RichText(
+                text: TextSpan(
+                  children: _buildSpans(
+                    below,
+                    widget.isTtsActive,
+                    widget.ttsStartChar,
+                    widget.ttsEndChar,
+                    bodyStyle,
+                    accentBlue,
+                    textOffset: belowOffset,
+                  ),
+                ),
+              ),
+            if (showParallel && !englishBesidePrimary) ...[
+              const SizedBox(height: 4),
+              Text(widget.englishText!, style: englishStyle),
+            ],
+            if (widget.hasNote ||
+                (widget.tags != null && widget.tags!.isNotEmpty))
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0),
+                child: Wrap(
+                  spacing: 4,
+                  runSpacing: 2,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    if (widget.hasNote)
+                      Icon(
+                        Icons.edit_note,
+                        size: widget.fontSize + 2,
+                        color: accentBlue,
+                      ),
+                    if (widget.tags != null)
+                      ...widget.tags!.map((t) {
+                        return Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 6,
+                            vertical: 2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: accentBlue.withValues(alpha: 0.12),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            t,
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: accentBlue,
+                            ),
+                          ),
+                        );
+                      }),
+                  ],
+                ),
+              ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = widget.isDark;
     final accentBlue = isDark ? const Color(0xFF60A5FA) : widget.primaryColor;
     
     // Determine persistent highlight background color
@@ -2529,6 +3205,16 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
     if (widget.highlightColor != null) {
       containerColor = widget.highlightColor!.withValues(alpha: isDark ? 0.20 : 0.35);
     }
+
+    final bodyStyle = TextStyle(
+      fontSize: widget.fontSize,
+      color: widget.textColor,
+      height: 1.35,
+      fontFamily: 'serif',
+    );
+    final mainText = widget.translationMode == 'english'
+        ? (widget.englishText ?? widget.verse.text)
+        : widget.verse.text;
 
     return AnimatedBuilder(
       animation: _animation,
@@ -2547,7 +3233,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
               width: 1.5,
             ),
           ),
-          padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+          padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 8.0),
           child: child,
         );
       },
@@ -2556,94 +3242,94 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
         onLongPress: widget.onLongPress,
         borderRadius: BorderRadius.circular(8),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4.0),
-          child: RichText(
-            text: TextSpan(
-              style: TextStyle(
-                fontSize: widget.fontSize,
-                color: widget.textColor,
-                height: 1.6,
-                fontFamily: 'serif',
-              ),
-              children: [
-                TextSpan(
-                  text: '${widget.verse.verse}  ',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: accentBlue,
-                    fontSize: widget.fontSize - 2,
+          padding: const EdgeInsets.symmetric(vertical: 1.0),
+          child: widget.chapterDropCap != null
+              ? _buildDropCapVerse(
+                  text: mainText,
+                  bodyStyle: bodyStyle,
+                  accentBlue: accentBlue,
+                  isDark: isDark,
+                )
+              : RichText(
+                  text: TextSpan(
+                    style: bodyStyle,
+                    children: [
+                      if (!widget.hideVerseNumber)
+                        TextSpan(
+                          text: '${widget.verse.verse}  ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: accentBlue,
+                            fontSize: widget.fontSize - 1,
+                          ),
+                        ),
+                      ..._buildSpans(
+                        mainText,
+                        widget.isTtsActive,
+                        widget.ttsStartChar,
+                        widget.ttsEndChar,
+                        bodyStyle,
+                        accentBlue,
+                      ),
+                      if (widget.translationMode == 'parallel' &&
+                          widget.englishText != null) ...[
+                        const TextSpan(text: '\n'),
+                        TextSpan(
+                          text: widget.englishText!,
+                          style: TextStyle(
+                            fontStyle: FontStyle.italic,
+                            fontSize: widget.fontSize - 1.5,
+                            color: isDark ? Colors.white60 : Colors.black54,
+                          ),
+                        ),
+                      ],
+                      if (widget.hasNote)
+                        WidgetSpan(
+                          alignment: PlaceholderAlignment.middle,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 6.0),
+                            child: Icon(
+                              Icons.edit_note,
+                              size: widget.fontSize + 2,
+                              color: accentBlue,
+                            ),
+                          ),
+                        ),
+                      if (widget.tags != null && widget.tags!.isNotEmpty) ...[
+                        const TextSpan(text: '\n'),
+                        WidgetSpan(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 4.0),
+                            child: Wrap(
+                              spacing: 4.0,
+                              runSpacing: 2.0,
+                              children: widget.tags!.map((t) {
+                                return Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 6,
+                                    vertical: 2,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: accentBlue.withValues(alpha: 0.12),
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                  child: Text(
+                                    t,
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold,
+                                      color: accentBlue,
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
                   ),
                 ),
-                ..._buildSpans(
-                  widget.translationMode == 'english' 
-                      ? (widget.englishText ?? widget.verse.text)
-                      : widget.verse.text,
-                  widget.isTtsActive,
-                  widget.ttsStartChar,
-                  widget.ttsEndChar,
-                  TextStyle(
-                    fontSize: widget.fontSize,
-                    color: widget.textColor,
-                    height: 1.6,
-                    fontFamily: 'serif',
-                  ),
-                  accentBlue,
-                ),
-                if (widget.translationMode == 'parallel' && widget.englishText != null) ...[
-                  const TextSpan(text: '\n'),
-                  TextSpan(
-                    text: widget.englishText!,
-                    style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: widget.fontSize - 1.5,
-                      color: isDark ? Colors.white60 : Colors.black54,
-                    ),
-                  ),
-                ],
-                if (widget.hasNote)
-                  WidgetSpan(
-                    alignment: PlaceholderAlignment.middle,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 6.0),
-                      child: Icon(
-                        Icons.edit_note,
-                        size: widget.fontSize + 2,
-                        color: accentBlue,
-                      ),
-                    ),
-                  ),
-                if (widget.tags != null && widget.tags!.isNotEmpty) ...[
-                  const TextSpan(text: '\n'),
-                  WidgetSpan(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 4.0),
-                      child: Wrap(
-                        spacing: 4.0,
-                        runSpacing: 2.0,
-                        children: widget.tags!.map((t) {
-                          return Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: accentBlue.withValues(alpha: 0.12),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: Text(
-                              t,
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.bold,
-                                color: accentBlue,
-                              ),
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                    ),
-                  ),
-                ],
-              ],
-            ),
-          ),
         ),
       ),
     );

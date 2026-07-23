@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../services/database_service.dart';
@@ -16,6 +17,18 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
   final DatabaseService _dbService = DatabaseService();
   Hymn? _selectedHymn;
   late TabController _tabController;
+
+  final ScrollController _gushimishaScrollController = ScrollController();
+  final ScrollController _agakizaScrollController = ScrollController();
+
+  // HUD and Beaming variables
+  String? _hudText;
+  bool _showHUDWidget = false;
+  Timer? _hudTimer;
+
+  int? _beamedGushimishaIndex;
+  int? _beamedAgakizaIndex;
+  Timer? _beamTimer;
 
   // Preloaded caching
   bool _isPreloading = true;
@@ -55,6 +68,10 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     _tabController.dispose();
     _searchController.removeListener(_onSearchChanged);
     _searchController.dispose();
+    _gushimishaScrollController.dispose();
+    _agakizaScrollController.dispose();
+    _hudTimer?.cancel();
+    _beamTimer?.cancel();
     super.dispose();
   }
 
@@ -397,41 +414,214 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
               ? const Center(
                   child: Text('Nta ndirimbo yabonetse yujuje ibi bintu.', style: TextStyle(color: Colors.grey)),
                 )
-              : ListView.builder(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  itemCount: list.length,
-                  itemBuilder: (context, index) {
-                    final hymn = list[index];
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      elevation: 0.5,
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          backgroundColor: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-                          child: Text(
-                            '${hymn.number}',
-                            style: TextStyle(
-                              color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
-                              fontWeight: FontWeight.bold,
+              : Stack(
+                  children: [
+                    ListView.builder(
+                      controller: isGushimisha ? _gushimishaScrollController : _agakizaScrollController,
+                      padding: const EdgeInsets.only(left: 16, right: 56, top: 8, bottom: 8),
+                      itemCount: list.length,
+                      itemBuilder: (context, index) {
+                        final hymn = list[index];
+                        final isBeamed = isGushimisha 
+                            ? index == _beamedGushimishaIndex 
+                            : index == _beamedAgakizaIndex;
+
+                        return Card(
+                          margin: const EdgeInsets.only(bottom: 8),
+                          elevation: isBeamed ? 4 : 0.5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            side: BorderSide(
+                              color: isBeamed 
+                                  ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor)
+                                  : Colors.transparent,
+                              width: isBeamed ? 2.0 : 0.0,
+                            ),
+                          ),
+                          color: isBeamed 
+                              ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.18)
+                              : null,
+                          child: ListTile(
+                            leading: CircleAvatar(
+                              backgroundColor: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
+                              child: Text(
+                                '${hymn.number}',
+                                style: TextStyle(
+                                  color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            title: Text(
+                              hymn.title,
+                              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+                            ),
+                            subtitle: Text(
+                              hymn.category,
+                              style: const TextStyle(fontSize: 12, color: Colors.grey),
+                            ),
+                            trailing: const Icon(Icons.chevron_right, size: 18),
+                            onTap: () => selectHymn(hymn),
+                          ),
+                        );
+                      },
+                    ),
+                    Positioned(
+                      right: 12,
+                      top: 12,
+                      bottom: 12,
+                      width: 32,
+                      child: _buildVerticalIndexer(context, list, isGushimisha),
+                    ),
+                    if (_showHUDWidget && _hudText != null)
+                      Align(
+                        alignment: Alignment.center,
+                        child: IgnorePointer(
+                          child: AnimatedOpacity(
+                            opacity: _showHUDWidget ? 1.0 : 0.0,
+                            duration: const Duration(milliseconds: 150),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                              decoration: BoxDecoration(
+                                color: Colors.black87,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Text(
+                                _hudText!,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.2,
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                        title: Text(
-                          hymn.title,
-                          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
-                        ),
-                        subtitle: Text(
-                          hymn.category,
-                          style: const TextStyle(fontSize: 12, color: Colors.grey),
-                        ),
-                        trailing: const Icon(Icons.chevron_right, size: 18),
-                        onTap: () => selectHymn(hymn),
                       ),
-                    );
-                  },
+                  ],
                 ),
         ),
       ],
+    );
+  }
+
+  void _showHUD(String text) {
+    if (_hudTimer != null) {
+      _hudTimer!.cancel();
+    }
+    setState(() {
+      _hudText = text;
+      _showHUDWidget = true;
+    });
+  }
+
+  void _hideHUD() {
+    _hudTimer = Timer(const Duration(milliseconds: 500), () {
+      if (mounted) {
+        setState(() {
+          _showHUDWidget = false;
+        });
+      }
+    });
+  }
+
+  Widget _buildVerticalIndexer(BuildContext context, List<Hymn> list, bool isGushimisha) {
+    final Map<int, int> rangeFirstHymnIndex = {};
+    final List<int> availableRangeIndexes = [];
+
+    for (int i = 0; i < list.length; i++) {
+      final hymn = list[i];
+      final rIndex = (hymn.number - 1) ~/ 10;
+      if (!rangeFirstHymnIndex.containsKey(rIndex)) {
+        rangeFirstHymnIndex[rIndex] = i;
+        availableRangeIndexes.add(rIndex);
+      }
+    }
+    availableRangeIndexes.sort();
+
+    if (availableRangeIndexes.isEmpty) return const SizedBox.shrink();
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final height = constraints.maxHeight;
+        final itemHeight = height / availableRangeIndexes.length;
+
+        void onTouch(double localY) {
+          int index = (localY / itemHeight).floor();
+          index = index.clamp(0, availableRangeIndexes.length - 1);
+          final rIndex = availableRangeIndexes[index];
+          final targetListIndex = rangeFirstHymnIndex[rIndex]!;
+
+          final controller = isGushimisha ? _gushimishaScrollController : _agakizaScrollController;
+          if (controller.hasClients) {
+            final itemScrollOffset = targetListIndex * 80.0;
+            final maxScroll = controller.position.maxScrollExtent;
+            final targetOffset = itemScrollOffset.clamp(0.0, maxScroll);
+            controller.jumpTo(targetOffset);
+          }
+
+          setState(() {
+            if (isGushimisha) {
+              _beamedGushimishaIndex = targetListIndex;
+            } else {
+              _beamedAgakizaIndex = targetListIndex;
+            }
+          });
+
+          if (_beamTimer != null) {
+            _beamTimer!.cancel();
+          }
+          _beamTimer = Timer(const Duration(milliseconds: 1200), () {
+            if (mounted) {
+              setState(() {
+                _beamedGushimishaIndex = null;
+                _beamedAgakizaIndex = null;
+              });
+            }
+          });
+
+          final startNum = (rIndex * 10) + 1;
+          final endNum = (rIndex + 1) * 10;
+          _showHUD('$startNum-$endNum');
+        }
+
+        return GestureDetector(
+          onVerticalDragStart: (details) => onTouch(details.localPosition.dy),
+          onVerticalDragUpdate: (details) => onTouch(details.localPosition.dy),
+          onVerticalDragEnd: (_) => _hideHUD(),
+          onTapDown: (details) => onTouch(details.localPosition.dy),
+          onTapUp: (_) => _hideHUD(),
+          child: Container(
+            decoration: BoxDecoration(
+              color: (Theme.of(context).brightness == Brightness.dark 
+                      ? Colors.white.withValues(alpha: 0.08)
+                      : Colors.black.withValues(alpha: 0.04)),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: availableRangeIndexes.map((rIndex) {
+                final labelText = rIndex == 0 ? '1' : '${rIndex * 10}';
+                return Expanded(
+                  child: Center(
+                    child: Text(
+                      labelText,
+                      style: TextStyle(
+                        fontSize: 8.5,
+                        fontWeight: FontWeight.w900,
+                        color: Theme.of(context).brightness == Brightness.dark 
+                            ? Colors.white54 
+                            : Colors.black54,
+                      ),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+        );
+      },
     );
   }
 }
