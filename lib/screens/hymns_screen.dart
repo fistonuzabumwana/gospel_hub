@@ -32,6 +32,11 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
   String? _selectedGushimishaCategory;
   String? _selectedAgakizaCategory;
 
+  // Navigation state:
+  // 0: INDIRIMBO Book card list (first view)
+  // 1: Tabbed hymns list (Gushimisha and Agakiza tabs)
+  int _currentView = 0;
+
   final TextEditingController _searchController = TextEditingController();
   bool _isSearching = false;
 
@@ -96,6 +101,7 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
   void selectHymn(Hymn hymn) {
     setState(() {
       _selectedHymn = hymn;
+      _currentView = 1;
       final targetIndex = hymn.book == 'Gushimisha' ? 0 : 1;
       if (_tabController.index != targetIndex) {
         _tabController.index = targetIndex;
@@ -191,56 +197,155 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
       );
     }
 
-    return Scaffold(
-      appBar: AppBar(
-        title: _isSearching
-            ? TextField(
-                controller: _searchController,
-                decoration: InputDecoration(
-                  hintText: AppLocalizations.translate('hymns_search_hint'),
-                  hintStyle: const TextStyle(color: Colors.white70),
-                  border: InputBorder.none,
+    return PopScope(
+      canPop: _currentView == 0,
+      onPopInvokedWithResult: (didPop, result) {
+        if (!didPop) {
+          setState(() {
+            _currentView = 0;
+          });
+        }
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          leading: _currentView == 1
+              ? IconButton(
+                  icon: const Icon(Icons.arrow_back_ios_new),
+                  onPressed: () {
+                    setState(() {
+                      _currentView = 0;
+                    });
+                  },
+                )
+              : null,
+          title: _isSearching
+              ? TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.translate('hymns_search_hint'),
+                    hintStyle: const TextStyle(color: Colors.white70),
+                    border: InputBorder.none,
+                  ),
+                  autofocus: true,
+                  style: const TextStyle(fontSize: 16, color: Colors.white),
+                )
+              : Text(
+                  _currentView == 1 ? 'INDIRIMBO' : AppLocalizations.translate('hymns_books_title'),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
-                autofocus: true,
-                style: const TextStyle(fontSize: 16, color: Colors.white),
-              )
-            : Text(
-                AppLocalizations.translate('hymns_books_title'),
-                style: const TextStyle(fontWeight: FontWeight.bold),
+          actions: [
+            if (_currentView == 1)
+              IconButton(
+                icon: Icon(_isSearching ? Icons.close : Icons.search),
+                onPressed: () {
+                  setState(() {
+                    _isSearching = !_isSearching;
+                    if (!_isSearching) {
+                      _searchController.clear();
+                    }
+                  });
+                },
               ),
-        actions: [
-          IconButton(
-            icon: Icon(_isSearching ? Icons.close : Icons.search),
-            onPressed: () {
+          ],
+          bottom: _currentView == 0
+              ? null
+              : TabBar(
+                  controller: _tabController,
+                  indicatorColor: Colors.white,
+                  indicatorWeight: 3,
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.white60,
+                  labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.normal, fontSize: 15),
+                  dividerColor: Colors.transparent,
+                  tabs: const [
+                    Tab(text: 'zo Gushimisha'),
+                    Tab(text: "z'Agakiza"),
+                  ],
+                ),
+        ),
+        body: _currentView == 0
+            ? _buildHymnBooksList(isDark)
+            : TabBarView(
+                controller: _tabController,
+                children: [
+                  _buildHymnsList(isDark, true),
+                  _buildHymnsList(isDark, false),
+                ],
+              ),
+      ),
+    );
+  }
+
+  Widget _buildHymnBooksList(bool isDark) {
+    return ListView(
+      padding: const EdgeInsets.all(16),
+      children: [
+        Card(
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () {
               setState(() {
-                _isSearching = !_isSearching;
-                if (!_isSearching) {
-                  _searchController.clear();
-                }
+                _currentView = 1;
               });
             },
+            borderRadius: BorderRadius.circular(16),
+            child: Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: isDark 
+                      ? [const Color(0xFF1A365D), const Color(0xFF1B1D1B)]
+                      : [const Color(0xFFEBF3FF), Colors.white],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.15),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.library_books,
+                      color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
+                      size: 32,
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  const Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'INDIRIMBO',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 20,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        SizedBox(height: 6),
+                        Text(
+                          'Indirimbo zo Gushimisha Imana n\'Agakiza',
+                          style: TextStyle(
+                            fontSize: 14,
+                            height: 1.3,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Icon(Icons.arrow_forward_ios, size: 18, color: Colors.grey),
+                ],
+              ),
+            ),
           ),
-        ],
-        bottom: TabBar(
-          controller: _tabController,
-          indicatorColor: Colors.white,
-          indicatorWeight: 3,
-          labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-          unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.normal, fontSize: 15),
-          dividerColor: Colors.transparent,
-          tabs: const [
-            Tab(text: 'zo Gushimisha'),
-            Tab(text: "z'Agakiza"),
-          ],
         ),
-      ),
-      body: TabBarView(
-        controller: _tabController,
-        children: [
-          _buildHymnsList(isDark, true),
-          _buildHymnsList(isDark, false),
-        ],
-      ),
+      ],
     );
   }
 
