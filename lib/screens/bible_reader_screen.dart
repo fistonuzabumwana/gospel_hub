@@ -1102,8 +1102,8 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
             text: match.group(0),
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              backgroundColor: Theme.of(context).primaryColor.withValues(alpha: 0.18),
-              color: Theme.of(context).primaryColor,
+              backgroundColor: (Theme.of(context).brightness == Brightness.dark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.18),
+              color: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
             ),
           ),
         );
@@ -1163,8 +1163,8 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                       min: 12.0,
                       max: 30.0,
                       value: _fontSize,
-                      activeColor: primaryColor,
-                      inactiveColor: primaryColor.withValues(alpha: 0.2),
+                      activeColor: isReaderDark ? const Color(0xFF60A5FA) : primaryColor,
+                      inactiveColor: (isReaderDark ? const Color(0xFF60A5FA) : primaryColor).withValues(alpha: 0.2),
                       onChanged: (val) {
                         setState(() => _fontSize = val);
                       },
@@ -1658,21 +1658,22 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   }
 
   Widget _buildMultiSelectFooter(Color primaryColor, bool isDark) {
+    final isReaderDark = _getActiveThemeMode(isDark) == 'Dark';
     return Container(
       margin: const EdgeInsets.only(left: 12, right: 12, bottom: 20),
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
+        color: isReaderDark ? const Color(0xFF1E1E1E) : Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.15),
+            color: Colors.black.withValues(alpha: isReaderDark ? 0.35 : 0.15),
             blurRadius: 10,
             offset: const Offset(0, 3),
           ),
         ],
         border: Border.all(
-          color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200,
+          color: isReaderDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey.shade200,
         ),
       ),
       child: Column(
@@ -1683,12 +1684,16 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
             children: [
               Text(
                 'Umirongo ${_selectedVerseIds.length} yatoranyijwe',
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: isReaderDark ? Colors.white : Colors.black87,
+                ),
               ),
               IconButton(
                 padding: EdgeInsets.zero,
                 constraints: const BoxConstraints(),
-                icon: const Icon(Icons.close, size: 20),
+                icon: Icon(Icons.close, size: 20, color: isReaderDark ? Colors.white70 : Colors.black54),
                 onPressed: _exitMultiSelectMode,
               ),
             ],
@@ -1700,26 +1705,31 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
               _ActionButton(
                 icon: Icons.copy,
                 label: 'Kopi',
+                color: isReaderDark ? const Color(0xFF60A5FA) : primaryColor,
                 onTap: _copySelectedVerses,
               ),
               _ActionButton(
                 icon: Icons.format_color_fill,
                 label: 'Guhitira',
+                color: isReaderDark ? const Color(0xFF60A5FA) : primaryColor,
                 onTap: _showMultiHighlightColorPicker,
               ),
               _ActionButton(
                 icon: Icons.share,
                 label: 'Sangira',
+                color: isReaderDark ? const Color(0xFF60A5FA) : primaryColor,
                 onTap: _shareSelectedVerses,
               ),
               _ActionButton(
                 icon: Icons.favorite_border,
                 label: 'Bika',
+                color: isReaderDark ? const Color(0xFF60A5FA) : primaryColor,
                 onTap: _favoriteSelectedVerses,
               ),
               _ActionButton(
                 icon: Icons.label_outline,
                 label: 'Tag',
+                color: isReaderDark ? const Color(0xFF60A5FA) : primaryColor,
                 onTap: _showMultiAddTagDialog,
               ),
             ],
@@ -1731,6 +1741,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
   Widget? _buildBottomFooter(Color primaryColor, bool isDark) {
     if (_isLoading) return null;
+    final isReaderDark = _getActiveThemeMode(isDark) == 'Dark';
     if (_isMultiSelectMode) {
       return _buildMultiSelectFooter(primaryColor, isDark);
     }
@@ -1788,7 +1799,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                     Icon(
                       _isPlayingTTS ? Icons.stop_circle_outlined : Icons.play_circle_outline,
                       size: 24,
-                      color: primaryColor,
+                      color: isReaderDark ? const Color(0xFF60A5FA) : primaryColor,
                     ),
                     if (_sleepTimerRemainingSeconds != null)
                       Positioned(
