@@ -30,6 +30,9 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
   int? _beamedAgakizaIndex;
   Timer? _beamTimer;
 
+  // Active touch coordinate for fast-scroll magnification
+  double? _activeTouchY;
+
   // Preloaded caching
   bool _isPreloading = true;
   List<Hymn> _allGushimishaHymns = [];
@@ -542,12 +545,18 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
 
     if (availableRangeIndexes.isEmpty) return const SizedBox.shrink();
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return LayoutBuilder(
       builder: (context, constraints) {
         final height = constraints.maxHeight;
         final itemHeight = height / availableRangeIndexes.length;
 
         void onTouch(double localY) {
+          setState(() {
+            _activeTouchY = localY;
+          });
+
           int index = (localY / itemHeight).floor();
           index = index.clamp(0, availableRangeIndexes.length - 1);
           final rIndex = availableRangeIndexes[index];
@@ -586,15 +595,23 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
           _showHUD('$startNum-$endNum');
         }
 
+        void onTouchEnd() {
+          _hideHUD();
+          setState(() {
+            _activeTouchY = null;
+          });
+        }
+
         return GestureDetector(
           onVerticalDragStart: (details) => onTouch(details.localPosition.dy),
           onVerticalDragUpdate: (details) => onTouch(details.localPosition.dy),
-          onVerticalDragEnd: (_) => _hideHUD(),
+          onVerticalDragEnd: (_) => onTouchEnd(),
           onTapDown: (details) => onTouch(details.localPosition.dy),
-          onTapUp: (_) => _hideHUD(),
+          onTapUp: (_) => onTouchEnd(),
           child: Container(
+            clipBehavior: Clip.none,
             decoration: BoxDecoration(
-              color: (Theme.of(context).brightness == Brightness.dark 
+              color: (isDark 
                       ? Colors.white.withValues(alpha: 0.08)
                       : Colors.black.withValues(alpha: 0.04)),
               borderRadius: BorderRadius.circular(10),
@@ -603,16 +620,62 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: availableRangeIndexes.map((rIndex) {
                 final labelText = rIndex == 0 ? '1' : '${rIndex * 10}';
+                final idx = availableRangeIndexes.indexOf(rIndex);
+                final itemCenterY = (idx + 0.5) * itemHeight;
+
+                double scale = 1.0;
+                double translationX = 0.0;
+
+                if (_activeTouchY != null) {
+                  final distance = (_activeTouchY! - itemCenterY).abs();
+                  const maxRadius = 90.0; // Radius of influence in pixels
+                  if (distance < maxRadius) {
+                    final t = (maxRadius - distance) / maxRadius; // 0.0 to 1.0
+                    final smoothT = t * t; // Smooth quadratic scaling
+                    scale = 1.0 + 0.85 * smoothT; // Max scale of 1.85x
+                    translationX = -28.0 * smoothT; // Slide left by up to 28 pixels
+                  }
+                }
+
+                final isHighlighted = _activeTouchY != null && scale > 1.15;
+
                 return Expanded(
                   child: Center(
-                    child: Text(
-                      labelText,
-                      style: TextStyle(
-                        fontSize: 8.5,
-                        fontWeight: FontWeight.w900,
-                        color: Theme.of(context).brightness == Brightness.dark 
-                            ? Colors.white54 
-                            : Colors.black54,
+                    child: Transform.translate(
+                      offset: Offset(translationX, 0),
+                      child: Transform.scale(
+                        scale: scale,
+                        alignment: Alignment.centerRight,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                          decoration: isHighlighted
+                              ? BoxDecoration(
+                                  color: (isDark ? const Color(0xFF1E293B) : Colors.white).withValues(alpha: 0.95),
+                                  borderRadius: BorderRadius.circular(6),
+                                  border: Border.all(
+                                    color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.4),
+                                    width: 0.75,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withValues(alpha: 0.15),
+                                      blurRadius: 4,
+                                      offset: const Offset(-1.5, 1.5),
+                                    )
+                                  ],
+                                )
+                              : null,
+                          child: Text(
+                            labelText,
+                            style: TextStyle(
+                              fontSize: 8.5,
+                              fontWeight: FontWeight.w900,
+                              color: isHighlighted
+                                  ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor)
+                                  : (isDark ? Colors.white54 : Colors.black54),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
