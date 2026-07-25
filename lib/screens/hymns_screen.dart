@@ -55,6 +55,7 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
 
   final TextEditingController _searchController = TextEditingController();
   bool _isSearching = false;
+  Timer? _searchDebounceTimer;
 
   @override
   void initState() {
@@ -71,6 +72,7 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     _tabController.dispose();
     _searchController.removeListener(_onSearchChanged);
     _searchController.dispose();
+    _searchDebounceTimer?.cancel();
     _gushimishaScrollController.dispose();
     _agakizaScrollController.dispose();
     _hudTimer?.cancel();
@@ -130,7 +132,10 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
   }
 
   void _onSearchChanged() {
-    _applyFilters();
+    _searchDebounceTimer?.cancel();
+    _searchDebounceTimer = Timer(const Duration(milliseconds: 200), () {
+      _applyFilters();
+    });
   }
 
   void _onCategorySelected(String? category, bool isGushimisha) {
@@ -641,38 +646,40 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
 
                 return Expanded(
                   child: Center(
-                    child: Transform.translate(
-                      offset: Offset(translationX, 0),
-                      child: Transform.scale(
-                        scale: scale,
-                        alignment: Alignment.centerRight,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                          decoration: isHighlighted
-                              ? BoxDecoration(
-                                  color: (isDark ? const Color(0xFF1E293B) : Colors.white).withValues(alpha: 0.95),
-                                  borderRadius: BorderRadius.circular(6),
-                                  border: Border.all(
-                                    color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.4),
-                                    width: 0.75,
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withValues(alpha: 0.15),
-                                      blurRadius: 4,
-                                      offset: const Offset(-1.5, 1.5),
-                                    )
-                                  ],
-                                )
-                              : null,
-                          child: Text(
-                            labelText,
-                            style: TextStyle(
-                              fontSize: 8.5,
-                              fontWeight: FontWeight.w900,
-                              color: isHighlighted
-                                  ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor)
-                                  : (isDark ? Colors.white54 : Colors.black54),
+                    child: RepaintBoundary(
+                      child: Transform.translate(
+                        offset: Offset(translationX, 0),
+                        child: Transform.scale(
+                          scale: scale,
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                            decoration: isHighlighted
+                                ? BoxDecoration(
+                                    color: (isDark ? const Color(0xFF1E293B) : Colors.white).withValues(alpha: 0.95),
+                                    borderRadius: BorderRadius.circular(6),
+                                    border: Border.all(
+                                      color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.4),
+                                      width: 0.75,
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withValues(alpha: 0.15),
+                                        blurRadius: 4,
+                                        offset: const Offset(-1.5, 1.5),
+                                      )
+                                    ],
+                                  )
+                                : null,
+                            child: Text(
+                              labelText,
+                              style: TextStyle(
+                                fontSize: 8.5,
+                                fontWeight: FontWeight.w900,
+                                color: isHighlighted
+                                    ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor)
+                                    : (isDark ? Colors.white54 : Colors.black54),
+                              ),
                             ),
                           ),
                         ),

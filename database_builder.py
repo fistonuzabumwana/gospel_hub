@@ -156,6 +156,52 @@ def main():
         VALUES (?, ?, ?, ?, ?, ?, ?)
     """, hymn_list)
 
+    # 4. Populate FTS Virtual Tables for fast searching
+    print("Populating FTS5 Virtual Tables...")
+    cursor.execute("""
+        CREATE VIRTUAL TABLE bible_verses_fts USING fts5(
+            verse_id,
+            book,
+            chapter,
+            verse,
+            text,
+            heading
+        )
+    """)
+    cursor.execute("""
+        INSERT INTO bible_verses_fts(verse_id, book, chapter, verse, text, heading)
+        SELECT id, book, chapter, verse, text, heading FROM bible_verses;
+    """)
+
+    cursor.execute("""
+        CREATE VIRTUAL TABLE english_verses_fts USING fts5(
+            verse_id,
+            book,
+            chapter,
+            verse,
+            text
+        )
+    """)
+    cursor.execute("""
+        INSERT INTO english_verses_fts(verse_id, book, chapter, verse, text)
+        SELECT id, book, chapter, verse, text FROM english_verses;
+    """)
+
+    cursor.execute("""
+        CREATE VIRTUAL TABLE hymns_fts USING fts5(
+            hymn_id,
+            book,
+            number,
+            title,
+            category,
+            lyrics
+        )
+    """)
+    cursor.execute("""
+        INSERT INTO hymns_fts(hymn_id, book, number, title, category, lyrics)
+        SELECT id, book, number, title, category, lyrics FROM hymns;
+    """)
+
     # Commit and close
     conn.commit()
     conn.close()

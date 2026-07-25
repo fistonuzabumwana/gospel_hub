@@ -69,6 +69,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   final TextEditingController _searchController = TextEditingController();
   List<BibleVerse> _searchResults = [];
   bool _isSearchLoading = false;
+  Timer? _searchDebounceTimer;
 
   late TabController _tabController;
 
@@ -122,6 +123,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     _scrollController.dispose();
     _tabController.dispose();
     _searchController.dispose();
+    _searchDebounceTimer?.cancel();
     _flutterTts.stop();
     _sleepTimer?.cancel();
     super.dispose();
@@ -361,18 +363,24 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   }
 
   Future<void> _searchBible(String query) async {
+    _searchDebounceTimer?.cancel();
     if (query.trim().isEmpty) {
-      setState(() => _searchResults = []);
+      setState(() {
+        _searchResults = [];
+        _isSearchLoading = false;
+      });
       return;
     }
     setState(() => _isSearchLoading = true);
-    final results = await _dbService.searchBible(query);
-    if (mounted) {
-      setState(() {
-        _searchResults = results;
-        _isSearchLoading = false;
-      });
-    }
+    _searchDebounceTimer = Timer(const Duration(milliseconds: 300), () async {
+      final results = await _dbService.searchBible(query);
+      if (mounted) {
+        setState(() {
+          _searchResults = results;
+          _isSearchLoading = false;
+        });
+      }
+    });
   }
 
   bool get _canTurnForward {

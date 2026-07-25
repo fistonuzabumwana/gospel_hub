@@ -1,2 +1,0 @@
-# No external dependencies required!
-# This scraper runs using Python's built-in urllib and html.parser.

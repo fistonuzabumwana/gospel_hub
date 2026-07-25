@@ -40,7 +40,7 @@ class DatabaseService {
     final path = join(databasesPath, 'gospel_hub.db');
 
     final prefs = await SharedPreferences.getInstance();
-    const currentDbVersion = 4;
+    const currentDbVersion = 5;
     final savedDbVersion = prefs.getInt('db_version') ?? 0;
 
     // Check if the database exists
@@ -172,16 +172,39 @@ class DatabaseService {
   }
 
   Future<List<BibleVerse>> searchBible(String query) async {
-    if (query.trim().isEmpty) return [];
+    final trimmed = query.trim();
+    if (trimmed.isEmpty) return [];
     final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query(
-      'bible_verses',
-      where: 'text LIKE ?',
-      whereArgs: ['%$query%'],
-      orderBy: 'book, chapter, verse',
-      limit: 100, // Safe limit for performance
-    );
-    return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
+    
+    try {
+      // Use SQLite FTS5 MATCH query for sub-millisecond execution
+      final cleanQuery = trimmed.replaceAll('"', '""').split(RegExp(r'\s+')).map((w) => '$w*').join(' ');
+      final List<Map<String, dynamic>> maps = await db.rawQuery('''
+        SELECT 
+          verse_id as id, 
+          book, 
+          chapter, 
+          verse, 
+          text, 
+          heading 
+        FROM bible_verses_fts 
+        WHERE text MATCH ? 
+        ORDER BY book, chapter, verse 
+        LIMIT 100
+      ''', [cleanQuery]);
+      return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
+    } catch (e) {
+      print('FTS5 searchBible failed: $e. Falling back to LIKE query.');
+      // Safe fallback to LIKE search
+      final List<Map<String, dynamic>> maps = await db.query(
+        'bible_verses',
+        where: 'text LIKE ?',
+        whereArgs: ['%$trimmed%'],
+        orderBy: 'book, chapter, verse',
+        limit: 100,
+      );
+      return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
+    }
   }
 
   // ── Hymn Queries ───────────────────────────────────────────────────────────
@@ -210,16 +233,40 @@ class DatabaseService {
   }
 
   Future<List<Hymn>> searchHymns(String query) async {
-    if (query.trim().isEmpty) return [];
+    final trimmed = query.trim();
+    if (trimmed.isEmpty) return [];
     final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query(
-      'hymns',
-      where: 'title LIKE ? OR category LIKE ? OR lyrics LIKE ? OR number = ?',
-      whereArgs: ['%$query%', '%$query%', '%$query%', int.tryParse(query) ?? -1],
-      orderBy: 'book, number',
-      limit: 100,
-    );
-    return List.generate(maps.length, (i) => Hymn.fromMap(maps[i]));
+    
+    final intQuery = int.tryParse(trimmed) ?? -1;
+    
+    try {
+      // Use SQLite FTS5 MATCH query for sub-millisecond execution across title, category, and lyrics
+      final cleanQuery = trimmed.replaceAll('"', '""').split(RegExp(r'\s+')).map((w) => '$w*').join(' ');
+      final List<Map<String, dynamic>> maps = await db.rawQuery('''
+        SELECT 
+          hymn_id as id, 
+          book, 
+          number, 
+          title, 
+          category, 
+          lyrics 
+        FROM hymns_fts 
+        WHERE hymns_fts MATCH ? OR number = ?
+        ORDER BY book, number
+        LIMIT 100
+      ''', [cleanQuery, intQuery]);
+      return List.generate(maps.length, (i) => Hymn.fromMap(maps[i]));
+    } catch (e) {
+      print('FTS5 searchHymns failed: $e. Falling back to LIKE query.');
+      final List<Map<String, dynamic>> maps = await db.query(
+        'hymns',
+        where: 'title LIKE ? OR category LIKE ? OR lyrics LIKE ? OR number = ?',
+        whereArgs: ['%$trimmed%', '%$trimmed%', '%$trimmed%', intQuery],
+        orderBy: 'book, number',
+        limit: 100,
+      );
+      return List.generate(maps.length, (i) => Hymn.fromMap(maps[i]));
+    }
   }
 
   // ── Favorite Queries ────────────────────────────────────────────────────────
