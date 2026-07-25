@@ -46,7 +46,7 @@ BOOKS = {
     },
 }
 
-OUTPUT_DIR = Path(__file__).parent / "output"
+OUTPUT_DIR = Path(__file__).parent.parent / "assets" / "hymns"
 
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────

@@ -20,3 +20,7 @@
 
 # Tell R8 to ignore missing class warnings and compile successfully
 -ignorewarnings
+
+# Home screen widget (release minify/shrink)
+-keep class com.gospelhub.app.gospel_hub.BibleWidgetProvider { *; }
+-keep class com.gospelhub.app.gospel_hub.MainActivity { *; }

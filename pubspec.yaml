@@ -69,6 +69,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  shaders:
+    - shaders/page_curl.frag
+
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/database/gospel_hub.db.gz

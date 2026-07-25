@@ -15,7 +15,7 @@ class AppStateService {
   static Future<void> setAppLanguage(String language) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_appLanguageKey, language);
-    await WidgetService.syncWidgetData(language);
+    await WidgetService.syncWidgetData();
   }
 
   static Future<String> getBibleLanguage() async {

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@layout/bible_widget,@xml/bible_widget_info,@drawable/widget_background,@drawable/widget_background_border,@drawable/widget_logo" />

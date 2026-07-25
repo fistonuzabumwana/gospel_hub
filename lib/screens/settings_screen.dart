@@ -533,23 +533,15 @@ class _SettingsGroup extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            color: isDark ? const Color(0xFF1B1D1B) : Colors.white,
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: isDark ? 0.2 : 0.03),
-                blurRadius: 10,
-                offset: const Offset(0, 2),
-              ),
-            ],
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: Column(
-              children: children,
-            ),
+        Material(
+          color: isDark ? const Color(0xFF1B1D1B) : Colors.white,
+          elevation: 2,
+          shadowColor: Colors.black.withValues(alpha: isDark ? 0.2 : 0.03),
+          borderRadius: BorderRadius.circular(16),
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: children,
           ),
         ),
         const SizedBox(height: 16),

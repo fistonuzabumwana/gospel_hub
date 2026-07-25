@@ -4,10 +4,11 @@ import sqlite3
 import os
 import sys
 
-BIBLE_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/bible/bible_yera_all.json"
-ENGLISH_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/bible/english_kj.json"
-HYMNS_JSON_PATH = "/home/fiston/Documents/Project/gospel_hub/scraper/output/all_hymns.json"
-OUTPUT_DB_DIR = "/home/fiston/Documents/Project/gospel_hub/assets/database"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BIBLE_JSON_PATH = os.path.join(SCRIPT_DIR, "assets", "bible", "bible_yera_all.json")
+ENGLISH_JSON_PATH = os.path.join(SCRIPT_DIR, "assets", "bible", "english_kj.json")
+HYMNS_JSON_PATH = os.path.join(SCRIPT_DIR, "assets", "hymns", "all_hymns.json")
+OUTPUT_DB_DIR = os.path.join(SCRIPT_DIR, "assets", "database")
 OUTPUT_DB_PATH = os.path.join(OUTPUT_DB_DIR, "gospel_hub.db")
 
 def main():

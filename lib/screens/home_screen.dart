@@ -12,16 +12,9 @@ import '../models/bible_book.dart';
 import '../main.dart';
 import '../services/app_state_service.dart';
 import '../services/app_localizations.dart';
+import '../services/daily_verse_service.dart';
 import '../services/widget_service.dart';
 import 'settings_screen.dart';
-
-class DailyVerseReference {
-  final int bookNumber;
-  final int chapter;
-  final int verse;
-
-  const DailyVerseReference(this.bookNumber, this.chapter, this.verse);
-}
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -51,8 +44,7 @@ class HomeScreenState extends State<HomeScreen> {
 
   void _syncWidgetData() async {
     try {
-      final lang = await AppStateService.getAppLanguage();
-      await WidgetService.syncWidgetData(lang);
+      await WidgetService.syncWidgetData();
     } catch (_) {}
   }
 
@@ -184,19 +176,7 @@ class _DashboardTabState extends State<DashboardTab> {
     }
   }
 
-  static const List<DailyVerseReference> _dailyVerseRefs = [
-    DailyVerseReference(43, 3, 16), // Yohana / John 3:16
-    DailyVerseReference(6, 1, 9),   // Yosuwa / Joshua 1:9
-    DailyVerseReference(19, 23, 1), // Zaburi / Psalms 23:1
-    DailyVerseReference(45, 8, 28), // Abaroma / Romans 8:28
-    DailyVerseReference(20, 3, 5),  // Imigani / Proverbs 3:5
-    DailyVerseReference(50, 4, 13), // Abafilipi / Philippians 4:13
-  ];
-
-  DailyVerseReference get _todayVerseRef {
-    final dayIndex = DateTime.now().day % _dailyVerseRefs.length;
-    return _dailyVerseRefs[dayIndex];
-  }
+  DailyVerseRef get _todayVerseRef => DailyVerseService.todayVerseRef();
 
   BibleBook _getBook(int bookNumber) {
     return BibleBook.allBooks.firstWhere(
@@ -217,7 +197,7 @@ class _DashboardTabState extends State<DashboardTab> {
     };
   }
 
-  void _navigateToVerseRef(DailyVerseReference ref) {
+  void _navigateToVerseRef(DailyVerseRef ref) {
     final bookObj = _getBook(ref.bookNumber);
     final parentState = context.findAncestorStateOfType<HomeScreenState>();
     parentState?.navigateToBibleVerse(bookObj, ref.chapter, ref.verse);
