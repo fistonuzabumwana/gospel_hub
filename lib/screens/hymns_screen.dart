@@ -32,6 +32,7 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
 
   // Active touch coordinate for fast-scroll magnification
   double? _activeTouchY;
+  bool _isDraggingFastScroll = false;
 
   // Preloaded caching
   bool _isPreloading = true;
@@ -63,6 +64,8 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     _tabController = TabController(length: 2, vsync: this);
     _tabController.addListener(_handleTabChange);
     _searchController.addListener(_onSearchChanged);
+    _gushimishaScrollController.addListener(_onScrollUpdated);
+    _agakizaScrollController.addListener(_onScrollUpdated);
     _preloadAllHymns();
   }
 
@@ -73,11 +76,19 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     _searchController.removeListener(_onSearchChanged);
     _searchController.dispose();
     _searchDebounceTimer?.cancel();
+    _gushimishaScrollController.removeListener(_onScrollUpdated);
     _gushimishaScrollController.dispose();
+    _agakizaScrollController.removeListener(_onScrollUpdated);
     _agakizaScrollController.dispose();
     _hudTimer?.cancel();
     _beamTimer?.cancel();
     super.dispose();
+  }
+
+  void _onScrollUpdated() {
+    if (!_isDraggingFastScroll) {
+      setState(() {});
+    }
   }
 
   void _handleTabChange() {
@@ -535,51 +546,70 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
   }
 
   Widget _buildVerticalIndexer(BuildContext context, List<Hymn> list, bool isGushimisha) {
-    final Map<int, int> rangeFirstHymnIndex = {};
-    final List<int> availableRangeIndexes = [];
-
-    for (int i = 0; i < list.length; i++) {
-      final hymn = list[i];
-      final rIndex = (hymn.number - 1) ~/ 10;
-      if (!rangeFirstHymnIndex.containsKey(rIndex)) {
-        rangeFirstHymnIndex[rIndex] = i;
-        availableRangeIndexes.add(rIndex);
-      }
-    }
-    availableRangeIndexes.sort();
-
-    if (availableRangeIndexes.isEmpty) return const SizedBox.shrink();
+    if (list.isEmpty) return const SizedBox.shrink();
 
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final controller = isGushimisha ? _gushimishaScrollController : _agakizaScrollController;
+
+    // Calculate current scroll progress if scroll controller has clients
+    double scrollPercent = 0.0;
+    if (controller.hasClients && controller.position.maxScrollExtent > 0) {
+      scrollPercent = (controller.offset / controller.position.maxScrollExtent).clamp(0.0, 1.0);
+    }
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final height = constraints.maxHeight;
-        final itemHeight = height / availableRangeIndexes.length;
+        final trackHeight = constraints.maxHeight;
+        const handleHeight = 48.0;
+        const handleWidth = 14.0;
+        const trackWidth = 24.0;
+
+        // Determine current handle center Y
+        double handleCenterY;
+        if (_isDraggingFastScroll && _activeTouchY != null) {
+          handleCenterY = _activeTouchY!.clamp(handleHeight / 2, trackHeight - handleHeight / 2);
+        } else {
+          handleCenterY = scrollPercent * (trackHeight - handleHeight) + (handleHeight / 2);
+        }
+
+        // Map handleCenterY to the list index
+        double dragPercent = ((handleCenterY - handleHeight / 2) / (trackHeight - handleHeight)).clamp(0.0, 1.0);
+        int targetIndex = (dragPercent * (list.length - 1)).round().clamp(0, list.length - 1);
+        final targetHymn = list[targetIndex];
 
         void onTouch(double localY) {
           setState(() {
+            _isDraggingFastScroll = true;
             _activeTouchY = localY;
           });
 
-          int index = (localY / itemHeight).floor();
-          index = index.clamp(0, availableRangeIndexes.length - 1);
-          final rIndex = availableRangeIndexes[index];
-          final targetListIndex = rangeFirstHymnIndex[rIndex]!;
+          // Show HUD continuously with target song number
+          _showHUD('${targetHymn.number}');
+        }
 
-          final controller = isGushimisha ? _gushimishaScrollController : _agakizaScrollController;
+        void onTouchEnd() {
+          setState(() {
+            _isDraggingFastScroll = false;
+            _activeTouchY = null;
+          });
+          _hideHUD();
+
+          // Scroll list to corresponding song
           if (controller.hasClients) {
-            final itemScrollOffset = targetListIndex * 80.0;
+            // Compute offset based on targetIndex
+            // Each card is roughly 80.0 pixels tall
+            final itemScrollOffset = targetIndex * 80.0;
             final maxScroll = controller.position.maxScrollExtent;
             final targetOffset = itemScrollOffset.clamp(0.0, maxScroll);
             controller.jumpTo(targetOffset);
           }
 
+          // Beam highlight effect
           setState(() {
             if (isGushimisha) {
-              _beamedGushimishaIndex = targetListIndex;
+              _beamedGushimishaIndex = targetIndex;
             } else {
-              _beamedAgakizaIndex = targetListIndex;
+              _beamedAgakizaIndex = targetIndex;
             }
           });
 
@@ -594,18 +624,9 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
               });
             }
           });
-
-          final startNum = (rIndex * 10) + 1;
-          final endNum = (rIndex + 1) * 10;
-          _showHUD('$startNum-$endNum');
         }
 
-        void onTouchEnd() {
-          _hideHUD();
-          setState(() {
-            _activeTouchY = null;
-          });
-        }
+        final activeColor = isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor;
 
         return GestureDetector(
           onVerticalDragStart: (details) => onTouch(details.localPosition.dy),
@@ -614,80 +635,58 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
           onTapDown: (details) => onTouch(details.localPosition.dy),
           onTapUp: (_) => onTouchEnd(),
           child: Container(
-            clipBehavior: Clip.none,
-            decoration: BoxDecoration(
-              color: (isDark 
-                      ? Colors.white.withValues(alpha: 0.08)
-                      : Colors.black.withValues(alpha: 0.04)),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: availableRangeIndexes.map((rIndex) {
-                final labelText = rIndex == 0 ? '1' : '${rIndex * 10}';
-                final idx = availableRangeIndexes.indexOf(rIndex);
-                final itemCenterY = (idx + 0.5) * itemHeight;
-
-                double scale = 1.0;
-                double translationX = 0.0;
-
-                if (_activeTouchY != null) {
-                  final distance = (_activeTouchY! - itemCenterY).abs();
-                  const maxRadius = 90.0; // Radius of influence in pixels
-                  if (distance < maxRadius) {
-                    final t = (maxRadius - distance) / maxRadius; // 0.0 to 1.0
-                    final smoothT = t * t; // Smooth quadratic scaling
-                    scale = 1.0 + 0.85 * smoothT; // Max scale of 1.85x
-                    translationX = -28.0 * smoothT; // Slide left by up to 28 pixels
-                  }
-                }
-
-                final isHighlighted = _activeTouchY != null && scale > 1.15;
-
-                return Expanded(
-                  child: Center(
-                    child: RepaintBoundary(
-                      child: Transform.translate(
-                        offset: Offset(translationX, 0),
-                        child: Transform.scale(
-                          scale: scale,
-                          alignment: Alignment.centerRight,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                            decoration: isHighlighted
-                                ? BoxDecoration(
-                                    color: (isDark ? const Color(0xFF1E293B) : Colors.white).withValues(alpha: 0.95),
-                                    borderRadius: BorderRadius.circular(6),
-                                    border: Border.all(
-                                      color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.4),
-                                      width: 0.75,
-                                    ),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black.withValues(alpha: 0.15),
-                                        blurRadius: 4,
-                                        offset: const Offset(-1.5, 1.5),
-                                      )
-                                    ],
-                                  )
-                                : null,
-                            child: Text(
-                              labelText,
-                              style: TextStyle(
-                                fontSize: 8.5,
-                                fontWeight: FontWeight.w900,
-                                color: isHighlighted
-                                    ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor)
-                                    : (isDark ? Colors.white54 : Colors.black54),
-                              ),
+            width: trackWidth,
+            height: trackHeight,
+            color: Colors.transparent, // Expand touch target area
+            child: Stack(
+              clipBehavior: Clip.none,
+              alignment: Alignment.topCenter,
+              children: [
+                // Visual vertical track line
+                Positioned(
+                  top: handleHeight / 2,
+                  bottom: handleHeight / 2,
+                  width: 4,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: isDark 
+                          ? Colors.white.withValues(alpha: 0.08) 
+                          : Colors.black.withValues(alpha: 0.04),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                ),
+                // Draggable handle/thumb
+                Positioned(
+                  top: handleCenterY - (handleHeight / 2),
+                  width: _isDraggingFastScroll ? handleWidth * 1.3 : handleWidth,
+                  height: handleHeight,
+                  child: RepaintBoundary(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: _isDraggingFastScroll 
+                            ? activeColor 
+                            : (isDark ? Colors.white54 : Colors.black45),
+                        borderRadius: BorderRadius.circular(handleWidth),
+                        boxShadow: [
+                          if (_isDraggingFastScroll)
+                            BoxShadow(
+                              color: activeColor.withValues(alpha: 0.4),
+                              blurRadius: 8,
+                              spreadRadius: 1,
+                            )
+                          else
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.15),
+                              blurRadius: 3,
+                              offset: const Offset(0, 1),
                             ),
-                          ),
-                        ),
+                        ],
                       ),
                     ),
                   ),
-                );
-              }).toList(),
+                ),
+              ],
             ),
           ),
         );
