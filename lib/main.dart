@@ -7,6 +7,8 @@ import 'services/app_localizations.dart';
 
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
 final ValueNotifier<String> bibleTranslationNotifier = ValueNotifier('parallel');
+final ValueNotifier<String> activeKinyarwandaBibleNotifier = ValueNotifier('BY');
+final ValueNotifier<String> activeEnglishBibleNotifier = ValueNotifier('KJV');
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +28,11 @@ void main() async {
   final prefs = await SharedPreferences.getInstance();
   final savedTranslation = prefs.getString('bible_translation_mode') ?? 'parallel';
   bibleTranslationNotifier.value = savedTranslation;
+
+  final savedKinyarwandaBible = prefs.getString('active_kinyarwanda_bible') ?? 'BY';
+  final savedEnglishBible = prefs.getString('active_english_bible') ?? 'KJV';
+  activeKinyarwandaBibleNotifier.value = savedKinyarwandaBible;
+  activeEnglishBibleNotifier.value = savedEnglishBible;
 
   runApp(const GospelHubApp());
 }

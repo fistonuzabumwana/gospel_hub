@@ -76,6 +76,7 @@ flutter:
   assets:
     - assets/database/gospel_hub.db.gz
     - assets/logo/
+    - assets/bible/logos/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

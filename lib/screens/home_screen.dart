@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'bible_reader_screen.dart';
+import 'bible_selection_screen.dart';
 import 'hymns_screen.dart';
 import '../services/database_service.dart';
 import '../models/hymn.dart';
@@ -27,19 +29,30 @@ class HomeScreenState extends State<HomeScreen> {
   int _currentTabIndex = 0;
   final GlobalKey<BibleReaderScreenState> _bibleReaderKey = GlobalKey<BibleReaderScreenState>();
   final GlobalKey<HymnsScreenState> _hymnsScreenKey = GlobalKey<HymnsScreenState>();
+  String? _activeBibleId;
 
-  late final List<Widget> _tabs;
+  String? get activeBibleId => _activeBibleId;
 
   @override
   void initState() {
     super.initState();
-    _tabs = [
-      const DashboardTab(),
-      BibleReaderScreen(key: _bibleReaderKey),
-      HymnsScreen(key: _hymnsScreenKey),
-      const SavedItemsTab(),
-    ];
+    _loadActiveBibleId();
     _syncWidgetData();
+  }
+
+  Future<void> _loadActiveBibleId() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _activeBibleId = prefs.getString('active_bible_id');
+    });
+  }
+
+  void clearActiveBible() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('active_bible_id');
+    setState(() {
+      _activeBibleId = null;
+    });
   }
 
   void _syncWidgetData() async {
@@ -54,7 +67,14 @@ class HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  void navigateToBibleVerse(BibleBook book, int chapter, int verse) {
+  void navigateToBibleVerse(BibleBook book, int chapter, int verse) async {
+    final prefs = await SharedPreferences.getInstance();
+    if (_activeBibleId == null) {
+      await prefs.setString('active_bible_id', 'BY');
+      setState(() {
+        _activeBibleId = 'BY';
+      });
+    }
     setState(() {
       _currentTabIndex = 1;
     });
@@ -82,7 +102,16 @@ class HomeScreenState extends State<HomeScreen> {
         return Scaffold(
       body: IndexedStack(
         index: _currentTabIndex,
-        children: _tabs,
+        children: [
+          const DashboardTab(),
+          _activeBibleId == null
+              ? BibleSelectionScreen(
+                  onBibleSelected: _loadActiveBibleId,
+                )
+              : BibleReaderScreen(key: _bibleReaderKey),
+          HymnsScreen(key: _hymnsScreenKey),
+          const SavedItemsTab(),
+        ],
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(

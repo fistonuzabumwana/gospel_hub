@@ -40,7 +40,7 @@ class DatabaseService {
     final path = join(databasesPath, 'gospel_hub.db');
 
     final prefs = await SharedPreferences.getInstance();
-    const currentDbVersion = 5;
+    const currentDbVersion = 6;
     final savedDbVersion = prefs.getInt('db_version') ?? 0;
 
     // Check if the database exists
@@ -62,7 +62,6 @@ class DatabaseService {
         final db = await openDatabase(path, readOnly: true);
         final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM bible_verses'));
         final hymnsCount = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM hymns'));
-        await db.rawQuery('SELECT COUNT(*) FROM english_verses');
         await db.close();
         if (count == null || count == 0 || hymnsCount == null || hymnsCount == 0) {
           print('Existing database is empty or missing hymns. Will force copy.');
@@ -88,9 +87,12 @@ class DatabaseService {
         List<int> decompressedBytes = gzip.decode(compressedBytes);
         
         // Write and flush the bytes written
-        await File(path).writeAsBytes(decompressedBytes, flush: true);
+        final file = File(path);
+        await file.writeAsBytes(decompressedBytes, flush: true);
+        
+        // Save the current version
         await prefs.setInt('db_version', currentDbVersion);
-        print('Database decompressed and copied successfully!');
+        print('Database compiled copy decompressed and written successfully.');
       } catch (e) {
         print('Error decompressing/copying database asset: $e');
         throw Exception('Failed to initialize local database');
@@ -160,18 +162,18 @@ class DatabaseService {
 
   // ── Bible Queries ──────────────────────────────────────────────────────────
 
-  Future<List<BibleVerse>> getChapterVerses(int bookNumber, int chapterNumber) async {
+  Future<List<BibleVerse>> getChapterVerses(int bookNumber, int chapterNumber, {String translation = 'BY'}) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
       'bible_verses',
-      where: 'book = ? AND chapter = ?',
-      whereArgs: [bookNumber, chapterNumber],
+      where: 'translation = ? AND book = ? AND chapter = ?',
+      whereArgs: [translation, bookNumber, chapterNumber],
       orderBy: 'verse',
     );
     return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
   }
 
-  Future<List<BibleVerse>> searchBible(String query) async {
+  Future<List<BibleVerse>> searchBible(String query, {String translation = 'BY'}) async {
     final trimmed = query.trim();
     if (trimmed.isEmpty) return [];
     final db = await database;
@@ -181,30 +183,39 @@ class DatabaseService {
       final cleanQuery = trimmed.replaceAll('"', '""').split(RegExp(r'\s+')).map((w) => '$w*').join(' ');
       final List<Map<String, dynamic>> maps = await db.rawQuery('''
         SELECT 
-          verse_id as id, 
+          rowid as id, 
           book, 
           chapter, 
           verse, 
           text, 
           heading 
         FROM bible_verses_fts 
-        WHERE text MATCH ? 
+        WHERE translation = ? AND text MATCH ? 
         ORDER BY book, chapter, verse 
         LIMIT 100
-      ''', [cleanQuery]);
+      ''', [translation, cleanQuery]);
       return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
     } catch (e) {
       print('FTS5 searchBible failed: $e. Falling back to LIKE query.');
       // Safe fallback to LIKE search
       final List<Map<String, dynamic>> maps = await db.query(
         'bible_verses',
-        where: 'text LIKE ?',
-        whereArgs: ['%$trimmed%'],
+        where: 'translation = ? AND text LIKE ?',
+        whereArgs: [translation, '%$trimmed%'],
         orderBy: 'book, chapter, verse',
         limit: 100,
       );
       return List.generate(maps.length, (i) => BibleVerse.fromMap(maps[i]));
     }
+  }
+
+  Future<Set<int>> getAvailableBooks(String translation) async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.rawQuery(
+      'SELECT DISTINCT book FROM bible_verses WHERE translation = ?',
+      [translation],
+    );
+    return maps.map((m) => m['book'] as int).toSet();
   }
 
   // ── Hymn Queries ───────────────────────────────────────────────────────────
@@ -244,7 +255,7 @@ class DatabaseService {
       final cleanQuery = trimmed.replaceAll('"', '""').split(RegExp(r'\s+')).map((w) => '$w*').join(' ');
       final List<Map<String, dynamic>> maps = await db.rawQuery('''
         SELECT 
-          hymn_id as id, 
+          rowid as id, 
           book, 
           number, 
           title, 
@@ -582,40 +593,29 @@ class DatabaseService {
 
   // ── English Bible Queries ──────────────────────────────────────────────────
 
-  Future<List<Map<String, dynamic>>> getEnglishChapterVerses(int bookNumber, int chapterNumber) async {
+  Future<List<Map<String, dynamic>>> getEnglishChapterVerses(int bookNumber, int chapterNumber, {String translation = 'KJV'}) async {
     final db = await database;
     return await db.query(
-      'english_verses',
-      where: 'book = ? AND chapter = ?',
-      whereArgs: [bookNumber, chapterNumber],
+      'bible_verses',
+      where: 'translation = ? AND book = ? AND chapter = ?',
+      whereArgs: [translation, bookNumber, chapterNumber],
       orderBy: 'verse',
     );
   }
 
-  Future<String?> getSingleVerseText(int bookNumber, int chapter, int verse, bool isEnglish) async {
+  Future<String?> getSingleVerseText(int bookNumber, int chapter, int verse, bool isEnglish, {String? translation}) async {
     final db = await database;
-    if (isEnglish) {
-      final List<Map<String, dynamic>> results = await db.query(
-        'english_verses',
-        columns: ['text'],
-        where: 'book = ? AND chapter = ? AND verse = ?',
-        whereArgs: [bookNumber, chapter, verse],
-        limit: 1,
-      );
-      if (results.isNotEmpty) {
-        return results.first['text'] as String?;
-      }
-    } else {
-      final List<Map<String, dynamic>> results = await db.query(
-        'bible_verses',
-        columns: ['text'],
-        where: 'book = ? AND chapter = ? AND verse = ?',
-        whereArgs: [bookNumber, chapter, verse],
-        limit: 1,
-      );
-      if (results.isNotEmpty) {
-        return results.first['text'] as String?;
-      }
+    final activeTranslation = translation ?? (isEnglish ? 'KJV' : 'BY');
+    
+    final List<Map<String, dynamic>> results = await db.query(
+      'bible_verses',
+      columns: ['text'],
+      where: 'translation = ? AND book = ? AND chapter = ? AND verse = ?',
+      whereArgs: [activeTranslation, bookNumber, chapter, verse],
+      limit: 1,
+    );
+    if (results.isNotEmpty) {
+      return results.first['text'] as String?;
     }
     return null;
   }

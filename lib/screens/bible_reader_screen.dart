@@ -50,6 +50,13 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   int? _sleepTimerDurationMinutes;
   int? _sleepTimerRemainingSeconds;
 
+  int? _lastScrolledVerse;
+  Timer? _scrollThrottleTimer;
+
+  String get _activeTranslation => _translationMode == 'english'
+      ? activeEnglishBibleNotifier.value
+      : activeKinyarwandaBibleNotifier.value;
+
   static const List<Color> _highlightColors = [
     Colors.yellow,
     Colors.pink,
@@ -73,6 +80,8 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
   late TabController _tabController;
 
+  Set<int> _availableBookNumbers = {};
+
   @override
   void initState() {
     super.initState();
@@ -82,9 +91,15 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     // Set initial translation mode from global notifier
     _translationMode = bibleTranslationNotifier.value;
     bibleTranslationNotifier.addListener(_onTranslationChanged);
+    activeKinyarwandaBibleNotifier.addListener(_onBibleVersionsChanged);
+    activeEnglishBibleNotifier.addListener(_onBibleVersionsChanged);
 
-    _loadLastRead().then((_) {
-      _loadVerses();
+    _scrollController.addListener(_onScroll);
+
+    _loadAvailableBooks().then((_) {
+      _loadLastRead().then((_) {
+        _loadVerses();
+      });
     });
   }
 
@@ -93,20 +108,56 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       setState(() {
         _translationMode = bibleTranslationNotifier.value;
       });
-      _loadVerses();
+      _loadAvailableBooks().then((_) {
+        _loadLastRead().then((_) {
+          _loadVerses();
+        });
+      });
+    }
+  }
+
+  void _onBibleVersionsChanged() {
+    if (mounted) {
+      _loadAvailableBooks().then((_) {
+        _loadLastRead().then((_) {
+          _loadVerses();
+        });
+      });
+    }
+  }
+
+  Future<void> _loadAvailableBooks() async {
+    final activeTrans = _translationMode == 'english'
+        ? activeEnglishBibleNotifier.value
+        : activeKinyarwandaBibleNotifier.value;
+    final books = await _dbService.getAvailableBooks(activeTrans);
+    if (mounted) {
+      setState(() {
+        _availableBookNumbers = books;
+      });
     }
   }
 
   Future<void> _saveLastRead() async {
     final prefs = await SharedPreferences.getInstance();
+    final trans = _activeTranslation;
+    await prefs.setInt('last_read_book_number_$trans', _selectedBook.bookNumber);
+    await prefs.setInt('last_read_chapter_$trans', _selectedChapter);
+    if (_lastScrolledVerse != null) {
+      await prefs.setInt('last_read_verse_$trans', _lastScrolledVerse!);
+    }
+    // Also save to global keys for backward compatibility and fallback
     await prefs.setInt('last_read_book_number', _selectedBook.bookNumber);
     await prefs.setInt('last_read_chapter', _selectedChapter);
   }
 
   Future<void> _loadLastRead() async {
     final prefs = await SharedPreferences.getInstance();
-    final savedBookNum = prefs.getInt('last_read_book_number');
-    final savedChapter = prefs.getInt('last_read_chapter');
+    final trans = _activeTranslation;
+    final savedBookNum = prefs.getInt('last_read_book_number_$trans');
+    final savedChapter = prefs.getInt('last_read_chapter_$trans');
+    final savedVerse = prefs.getInt('last_read_verse_$trans');
+
     if (savedBookNum != null && savedChapter != null) {
       final book = BibleBook.allBooks.firstWhere(
         (b) => b.bookNumber == savedBookNum,
@@ -114,13 +165,81 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       );
       _selectedBook = book;
       _selectedChapter = savedChapter;
+      _targetVerse = savedVerse;
+      _lastScrolledVerse = savedVerse;
+    } else {
+      // Fallback: If no translation-specific last read exists, use the global ones
+      final globalBookNum = prefs.getInt('last_read_book_number');
+      final globalChapter = prefs.getInt('last_read_chapter');
+      if (globalBookNum != null && globalChapter != null) {
+        final book = BibleBook.allBooks.firstWhere(
+          (b) => b.bookNumber == globalBookNum,
+          orElse: () => BibleBook.allBooks.first,
+        );
+        // ONLY use it if it's present in this translation's available books!
+        if (_availableBookNumbers.isEmpty || _availableBookNumbers.contains(book.bookNumber)) {
+          _selectedBook = book;
+          _selectedChapter = globalChapter;
+        } else {
+          // Fallback to first available book
+          if (_availableBookNumbers.isNotEmpty) {
+            _selectedBook = BibleBook.getByNumber(_availableBookNumbers.first);
+          } else {
+            _selectedBook = BibleBook.allBooks.first;
+          }
+          _selectedChapter = 1;
+        }
+      } else {
+        // Default to Matthew 1 or the first available book
+        if (_availableBookNumbers.isNotEmpty) {
+          _selectedBook = BibleBook.getByNumber(_availableBookNumbers.contains(47) ? 47 : _availableBookNumbers.first);
+        } else {
+          _selectedBook = BibleBook.allBooks.first;
+        }
+        _selectedChapter = 1;
+      }
+      _targetVerse = null;
+      _lastScrolledVerse = null;
     }
+  }
+
+  void _onScroll() {
+    if (_scrollThrottleTimer?.isActive ?? false) return;
+    _scrollThrottleTimer = Timer(const Duration(milliseconds: 200), () {
+      if (!mounted || _verses.isEmpty || _verseKeys.isEmpty) return;
+      int? topVerse;
+      double minDiff = double.infinity;
+      for (int i = 0; i < _verseKeys.length; i++) {
+        if (i >= _verseKeys.length) break;
+        final keyContext = _verseKeys[i].currentContext;
+        if (keyContext != null) {
+          final box = keyContext.findRenderObject() as RenderBox?;
+          if (box != null && box.hasSize) {
+            final position = box.localToGlobal(Offset.zero);
+            // Check top edge of the widget relative to the viewport height (appbar boundary is ~120px)
+            final diff = (position.dy - 120).abs();
+            if (diff < minDiff) {
+              minDiff = diff;
+              topVerse = _verses[i].verse;
+            }
+          }
+        }
+      }
+      if (topVerse != null && topVerse != _lastScrolledVerse) {
+        _lastScrolledVerse = topVerse;
+        _saveLastRead();
+      }
+    });
   }
 
   @override
   void dispose() {
     bibleTranslationNotifier.removeListener(_onTranslationChanged);
+    activeKinyarwandaBibleNotifier.removeListener(_onBibleVersionsChanged);
+    activeEnglishBibleNotifier.removeListener(_onBibleVersionsChanged);
+    _scrollController.removeListener(_onScroll);
     _scrollController.dispose();
+    _scrollThrottleTimer?.cancel();
     _tabController.dispose();
     _searchController.dispose();
     _searchDebounceTimer?.cancel();
@@ -218,8 +337,9 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       setState(() => _isLoading = true);
     }
     try {
+      _lastScrolledVerse = _targetVerse;
       _saveLastRead();
-      final verses = await _dbService.getChapterVerses(_selectedBook.bookNumber, _selectedChapter);
+      final verses = await _dbService.getChapterVerses(_selectedBook.bookNumber, _selectedChapter, translation: activeKinyarwandaBibleNotifier.value);
       final highlights = await _dbService.getHighlightsForChapter(_selectedBook.bookNumber, _selectedChapter);
       final notes = await _dbService.getNotesForChapter(_selectedBook.bookNumber, _selectedChapter);
       final tags = await _dbService.getTagsForChapter(_selectedBook.bookNumber, _selectedChapter);
@@ -229,7 +349,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
       Map<int, String> englishVersesMap = {};
       if (_translationMode == 'english' || _translationMode == 'parallel') {
-        final engVerses = await _dbService.getEnglishChapterVerses(_selectedBook.bookNumber, _selectedChapter);
+        final engVerses = await _dbService.getEnglishChapterVerses(_selectedBook.bookNumber, _selectedChapter, translation: activeEnglishBibleNotifier.value);
         englishVersesMap = {for (var v in engVerses) v['verse'] as int: v['text'] as String};
       }
 
@@ -255,11 +375,13 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   Future<void> _loadVersesAndScroll() async {
     await _loadVerses();
     if (_targetVerse != null) {
+      _scrollController.removeListener(_onScroll);
       WidgetsBinding.instance.addPostFrameCallback((_) {
         _scrollToVerse(_targetVerse!);
-        // Reset target verse after animation completes (approx 2.5s)
-        Future.delayed(const Duration(milliseconds: 2500), () {
+        // Reset target verse and restore scroll listener after animation completes (approx 2.5s)
+        Future.delayed(const Duration(milliseconds: 2600), () {
           if (mounted) {
+            _scrollController.addListener(_onScroll);
             setState(() {
               _targetVerse = null;
             });
@@ -373,7 +495,10 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     }
     setState(() => _isSearchLoading = true);
     _searchDebounceTimer = Timer(const Duration(milliseconds: 300), () async {
-      final results = await _dbService.searchBible(query);
+      final activeTrans = _translationMode == 'english'
+          ? activeEnglishBibleNotifier.value
+          : activeKinyarwandaBibleNotifier.value;
+      final results = await _dbService.searchBible(query, translation: activeTrans);
       if (mounted) {
         setState(() {
           _searchResults = results;
@@ -488,10 +613,10 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     final primaryColor = Theme.of(context).primaryColor;
 
     try {
-      final verses = await _dbService.getChapterVerses(book.bookNumber, chapter);
+      final verses = await _dbService.getChapterVerses(book.bookNumber, chapter, translation: activeKinyarwandaBibleNotifier.value);
       Map<int, String> englishMap = {};
       if (_translationMode == 'english' || _translationMode == 'parallel') {
-        final eng = await _dbService.getEnglishChapterVerses(book.bookNumber, chapter);
+        final eng = await _dbService.getEnglishChapterVerses(book.bookNumber, chapter, translation: activeEnglishBibleNotifier.value);
         englishMap = {for (var v in eng) v['verse'] as int: v['text'] as String};
       }
 
@@ -855,7 +980,11 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                 onPressed: () {
                   final parentState = context.findAncestorStateOfType<HomeScreenState>();
                   if (parentState != null) {
-                    parentState.setTab(0);
+                    if (parentState.activeBibleId != null) {
+                      parentState.clearActiveBible();
+                    } else {
+                      parentState.setTab(0);
+                    }
                   } else {
                     Navigator.maybePop(context);
                   }
@@ -2733,6 +2862,10 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   }
 
   Widget _buildBookSelectorGrid(List<BibleBook> books, ScrollController controller) {
+    final displayBooks = _availableBookNumbers.isEmpty
+        ? books
+        : books.where((b) => _availableBookNumbers.contains(b.bookNumber)).toList();
+
     return GridView.builder(
       controller: controller,
       padding: const EdgeInsets.all(16),
@@ -2742,9 +2875,9 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
-      itemCount: books.length,
+      itemCount: displayBooks.length,
       itemBuilder: (context, index) {
-        final book = books[index];
+        final book = displayBooks[index];
         final isSelected = book.bookNumber == _selectedBook.bookNumber;
 
         return Card(
@@ -2831,7 +2964,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
   void _showVerseSelectorModal(BibleBook book, int chapter) async {
     // Temporarily fetch verses to get the exact count
-    final verses = await _dbService.getChapterVerses(book.bookNumber, chapter);
+    final verses = await _dbService.getChapterVerses(book.bookNumber, chapter, translation: activeKinyarwandaBibleNotifier.value);
     final verseCount = verses.length;
     
     if (!mounted) return;
