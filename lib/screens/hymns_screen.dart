@@ -475,10 +475,6 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
                               hymn.title,
                               style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                             ),
-                            subtitle: Text(
-                              hymn.category,
-                              style: const TextStyle(fontSize: 12, color: Colors.grey),
-                            ),
                             trailing: const Icon(Icons.chevron_right, size: 18),
                             onTap: () => selectHymn(hymn),
                           ),
@@ -1013,6 +1009,7 @@ class _HymnDetailModalState extends State<HymnDetailModal> {
                                 fontSize: _fontSize,
                                 height: 1.5,
                                 fontWeight: FontWeight.w500,
+                                color: isDark ? Colors.white : Colors.black,
                               ),
                             ),
                           );

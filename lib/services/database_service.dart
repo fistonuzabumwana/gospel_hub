@@ -156,6 +156,15 @@ class DatabaseService {
             UNIQUE(playlist_id, hymn_id)
           )
         ''');
+        await db.execute('''
+          CREATE TABLE IF NOT EXISTS journal_notes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            content TEXT NOT NULL,
+            created_at INTEGER NOT NULL,
+            updated_at INTEGER NOT NULL
+          )
+        ''');
       },
     );
   }
@@ -491,14 +500,16 @@ class DatabaseService {
     List<dynamic>? tags,
     List<dynamic>? history,
     List<dynamic>? playlists,
-    List<dynamic>? playlistItems,
-  ) async {
+    List<dynamic>? playlistItems, {
+    List<dynamic>? journalNotes,
+  }) async {
     final db = await database;
     await db.transaction((txn) async {
       // Clear existing records
       await txn.delete('favorites');
       await txn.delete('highlights');
       await txn.delete('notes');
+      await txn.delete('journal_notes');
       await txn.delete('verse_tags');
       await txn.delete('reading_history');
       await txn.delete('hymn_playlists');
@@ -583,6 +594,19 @@ class DatabaseService {
             await txn.insert(
               'hymn_playlist_items',
               Map<String, dynamic>.from(pi),
+              conflictAlgorithm: ConflictAlgorithm.replace,
+            );
+          }
+        }
+      }
+
+      // Re-insert journal notes
+      if (journalNotes != null) {
+        for (var jn in journalNotes) {
+          if (jn is Map) {
+            await txn.insert(
+              'journal_notes',
+              Map<String, dynamic>.from(jn),
               conflictAlgorithm: ConflictAlgorithm.replace,
             );
           }
@@ -866,5 +890,45 @@ class DatabaseService {
         whereArgs: [playlistId],
       );
     });
+  }
+
+  Future<List<Map<String, dynamic>>> getAllJournalNotesRaw() async {
+    final db = await database;
+    return await db.query('journal_notes', orderBy: 'updated_at DESC');
+  }
+
+  Future<int> insertJournalNote(String title, String content) async {
+    final db = await database;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    return await db.insert('journal_notes', {
+      'title': title,
+      'content': content,
+      'created_at': now,
+      'updated_at': now,
+    });
+  }
+
+  Future<int> updateJournalNote(int id, String title, String content) async {
+    final db = await database;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    return await db.update(
+      'journal_notes',
+      {
+        'title': title,
+        'content': content,
+        'updated_at': now,
+      },
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+  }
+
+  Future<int> deleteJournalNote(int id) async {
+    final db = await database;
+    return await db.delete(
+      'journal_notes',
+      where: 'id = ?',
+      whereArgs: [id],
+    );
   }
 }
