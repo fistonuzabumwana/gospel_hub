@@ -8,7 +8,8 @@ class Hymn {
   final String slug;
   final String uuid;
   final String category;
-  final List<LyricsBlock> lyrics;
+  final String rawLyrics;
+  List<LyricsBlock>? _parsedLyrics;
 
   Hymn({
     this.id,
@@ -18,8 +19,28 @@ class Hymn {
     required this.slug,
     required this.uuid,
     required this.category,
-    required this.lyrics,
-  });
+    String? rawLyrics,
+    List<LyricsBlock>? lyrics,
+  })  : rawLyrics = rawLyrics ?? '',
+        _parsedLyrics = lyrics;
+
+  List<LyricsBlock> get lyrics {
+    if (_parsedLyrics != null) return _parsedLyrics!;
+    if (rawLyrics.isEmpty) {
+      _parsedLyrics = [];
+      return _parsedLyrics!;
+    }
+    try {
+      final List<dynamic> lyricsJson = json.decode(rawLyrics) as List<dynamic>;
+      _parsedLyrics = lyricsJson
+          .map((l) => LyricsBlock.fromMap(l as Map<String, dynamic>))
+          .toList();
+    } catch (e) {
+      print('Error parsing lyrics JSON: $e');
+      _parsedLyrics = [];
+    }
+    return _parsedLyrics!;
+  }
 
   Map<String, dynamic> toMap() {
     return {
@@ -30,18 +51,22 @@ class Hymn {
       'slug': slug,
       'uuid': uuid,
       'category': category,
-      'lyrics': json.encode(lyrics.map((l) => l.toMap()).toList()),
+      'lyrics': rawLyrics.isNotEmpty ? rawLyrics : json.encode(lyrics.map((l) => l.toMap()).toList()),
     };
   }
 
   factory Hymn.fromMap(Map<String, dynamic> map) {
-    List<dynamic> lyricsJson = [];
-    try {
-      if (map['lyrics'] != null) {
-        lyricsJson = json.decode(map['lyrics'] as String) as List<dynamic>;
-      }
-    } catch (e) {
-      print('Error parsing lyrics JSON: $e');
+    final raw = map['lyrics'];
+    String rawLyricsStr = '';
+    List<LyricsBlock>? parsed;
+
+    if (raw is String) {
+      rawLyricsStr = raw;
+    } else if (raw is List) {
+      try {
+        parsed = raw.map((l) => LyricsBlock.fromMap(l as Map<String, dynamic>)).toList();
+        rawLyricsStr = json.encode(raw);
+      } catch (_) {}
     }
 
     return Hymn(
@@ -52,7 +77,8 @@ class Hymn {
       slug: map['slug'] as String? ?? '',
       uuid: map['uuid'] as String? ?? '',
       category: map['category'] as String? ?? '',
-      lyrics: lyricsJson.map((l) => LyricsBlock.fromMap(l as Map<String, dynamic>)).toList(),
+      rawLyrics: rawLyricsStr,
+      lyrics: parsed,
     );
   }
 }

@@ -30,7 +30,17 @@ void main() async {
   bibleTranslationNotifier.value = savedTranslation;
 
   final savedKinyarwandaBible = prefs.getString('active_kinyarwanda_bible') ?? 'BY';
-  final savedEnglishBible = prefs.getString('active_english_bible') ?? 'KJV';
+  var savedEnglishBible = prefs.getString('active_english_bible');
+  if (savedEnglishBible == null) {
+    const defaultPairings = {
+      'BY': 'KJV',
+      'II': 'GNB',
+      'BN': 'CE',
+      'IID': 'GNC',
+    };
+    savedEnglishBible = defaultPairings[savedKinyarwandaBible] ?? 'KJV';
+  }
+
   activeKinyarwandaBibleNotifier.value = savedKinyarwandaBible;
   activeEnglishBibleNotifier.value = savedEnglishBible;
 

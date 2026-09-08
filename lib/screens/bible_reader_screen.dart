@@ -53,10 +53,6 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
   int? _lastScrolledVerse;
   Timer? _scrollThrottleTimer;
 
-  String get _activeTranslation => _translationMode == 'english'
-      ? activeEnglishBibleNotifier.value
-      : activeKinyarwandaBibleNotifier.value;
-
   static const List<Color> _highlightColors = [
     Colors.yellow,
     Colors.pink,
@@ -98,7 +94,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
     _loadAvailableBooks().then((_) {
       _loadLastRead().then((_) {
-        _loadVerses();
+        _loadVersesAndScroll();
       });
     });
   }
@@ -108,11 +104,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       setState(() {
         _translationMode = bibleTranslationNotifier.value;
       });
-      _loadAvailableBooks().then((_) {
-        _loadLastRead().then((_) {
-          _loadVerses();
-        });
-      });
+      _onTranslationModeToggled();
     }
   }
 
@@ -120,10 +112,27 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     if (mounted) {
       _loadAvailableBooks().then((_) {
         _loadLastRead().then((_) {
-          _loadVerses();
+          _loadVersesAndScroll();
         });
       });
     }
+  }
+
+  Future<void> _onTranslationModeToggled() async {
+    await _loadAvailableBooks();
+    // Maintain current reading position when toggling translation view mode
+    _targetVerse = _lastScrolledVerse;
+    await _saveLastRead();
+    _loadVersesAndScroll();
+  }
+
+  Future<String> _getPrimaryBibleId() async {
+    final prefs = await SharedPreferences.getInstance();
+    final primaryId = prefs.getString('active_bible_id');
+    if (primaryId != null && primaryId.isNotEmpty) {
+      return primaryId;
+    }
+    return activeKinyarwandaBibleNotifier.value;
   }
 
   Future<void> _loadAvailableBooks() async {
@@ -140,64 +149,51 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
 
   Future<void> _saveLastRead() async {
     final prefs = await SharedPreferences.getInstance();
-    final trans = _activeTranslation;
-    await prefs.setInt('last_read_book_number_$trans', _selectedBook.bookNumber);
-    await prefs.setInt('last_read_chapter_$trans', _selectedChapter);
+    final primaryId = await _getPrimaryBibleId();
+    await prefs.setInt('last_read_book_number_$primaryId', _selectedBook.bookNumber);
+    await prefs.setInt('last_read_chapter_$primaryId', _selectedChapter);
     if (_lastScrolledVerse != null) {
-      await prefs.setInt('last_read_verse_$trans', _lastScrolledVerse!);
+      await prefs.setInt('last_read_verse_$primaryId', _lastScrolledVerse!);
     }
-    // Also save to global keys for backward compatibility and fallback
     await prefs.setInt('last_read_book_number', _selectedBook.bookNumber);
     await prefs.setInt('last_read_chapter', _selectedChapter);
   }
 
   Future<void> _loadLastRead() async {
     final prefs = await SharedPreferences.getInstance();
-    final trans = _activeTranslation;
-    final savedBookNum = prefs.getInt('last_read_book_number_$trans');
-    final savedChapter = prefs.getInt('last_read_chapter_$trans');
-    final savedVerse = prefs.getInt('last_read_verse_$trans');
+    final primaryId = await _getPrimaryBibleId();
+    final savedBookNum = prefs.getInt('last_read_book_number_$primaryId');
+    final savedChapter = prefs.getInt('last_read_chapter_$primaryId');
+    final savedVerse = prefs.getInt('last_read_verse_$primaryId');
 
     if (savedBookNum != null && savedChapter != null) {
       final book = BibleBook.allBooks.firstWhere(
         (b) => b.bookNumber == savedBookNum,
         orElse: () => BibleBook.allBooks.first,
       );
-      _selectedBook = book;
-      _selectedChapter = savedChapter;
-      _targetVerse = savedVerse;
-      _lastScrolledVerse = savedVerse;
-    } else {
-      // Fallback: If no translation-specific last read exists, use the global ones
-      final globalBookNum = prefs.getInt('last_read_book_number');
-      final globalChapter = prefs.getInt('last_read_chapter');
-      if (globalBookNum != null && globalChapter != null) {
-        final book = BibleBook.allBooks.firstWhere(
-          (b) => b.bookNumber == globalBookNum,
-          orElse: () => BibleBook.allBooks.first,
-        );
-        // ONLY use it if it's present in this translation's available books!
-        if (_availableBookNumbers.isEmpty || _availableBookNumbers.contains(book.bookNumber)) {
-          _selectedBook = book;
-          _selectedChapter = globalChapter;
-        } else {
-          // Fallback to first available book
-          if (_availableBookNumbers.isNotEmpty) {
-            _selectedBook = BibleBook.getByNumber(_availableBookNumbers.first);
-          } else {
-            _selectedBook = BibleBook.allBooks.first;
-          }
-          _selectedChapter = 1;
-        }
+      if (_availableBookNumbers.isEmpty || _availableBookNumbers.contains(book.bookNumber)) {
+        _selectedBook = book;
+        _selectedChapter = savedChapter;
+        _targetVerse = savedVerse;
+        _lastScrolledVerse = savedVerse;
       } else {
-        // Default to Matthew 1 or the first available book
         if (_availableBookNumbers.isNotEmpty) {
-          _selectedBook = BibleBook.getByNumber(_availableBookNumbers.contains(47) ? 47 : _availableBookNumbers.first);
+          _selectedBook = BibleBook.getByNumber(_availableBookNumbers.first);
         } else {
           _selectedBook = BibleBook.allBooks.first;
         }
         _selectedChapter = 1;
+        _targetVerse = null;
+        _lastScrolledVerse = null;
       }
+    } else {
+      // Default to Matthew 1 or the first available book for a newly opened Bible version
+      if (_availableBookNumbers.isNotEmpty) {
+        _selectedBook = BibleBook.getByNumber(_availableBookNumbers.contains(47) ? 47 : _availableBookNumbers.first);
+      } else {
+        _selectedBook = BibleBook.allBooks.first;
+      }
+      _selectedChapter = 1;
       _targetVerse = null;
       _lastScrolledVerse = null;
     }
@@ -404,50 +400,50 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     final index = _verses.indexWhere((v) => v.verse == verseNumber);
     if (index == -1) return;
 
-    // 1. Estimate scroll offset to jump close to the target
+    // 1. Estimate scroll offset to jump close to the target verse
     double estimatedOffset = 0;
+    final isParallel = _translationMode == 'parallel';
+    final charsPerLine = 28.0 * (17.0 / _fontSize);
+
     for (int i = 0; i < index; i++) {
       final v = _verses[i];
-      // Assume a conservative characters-per-line to avoid under-estimating height
-      final charsPerLine = 34.0 * (17.0 / _fontSize);
-      
       int lines = 0;
-      if (_translationMode == 'parallel') {
-        final rwTextLength = v.text.length;
-        final engTextLength = (_englishVerses[v.verse] ?? '').length;
-        // Each translation gets its own text span block divided by a newline
-        lines = (rwTextLength / charsPerLine).ceil() + (engTextLength / charsPerLine).ceil() + 1;
+      if (isParallel) {
+        final rwLen = v.text.length;
+        final engLen = (_englishVerses[v.verse] ?? '').length;
+        lines = (rwLen / charsPerLine).ceil() + (engLen / charsPerLine).ceil() + 2;
       } else if (_translationMode == 'english') {
-        final engTextLength = (_englishVerses[v.verse] ?? v.text).length;
-        lines = (engTextLength / charsPerLine).ceil();
+        final engLen = (_englishVerses[v.verse] ?? v.text).length;
+        lines = (engLen / charsPerLine).ceil();
       } else {
-        final rwTextLength = v.text.length;
-        lines = (rwTextLength / charsPerLine).ceil();
+        final rwLen = v.text.length;
+        lines = (rwLen / charsPerLine).ceil();
       }
-      
+
       final hasNote = _notes.containsKey(v.id);
       final tags = _verseTagsMap[v.id];
       final tagCount = tags != null ? tags.length : 0;
       final hasHeading = v.heading != null && v.heading!.isNotEmpty;
-      
+
       double headingHeight = 0;
       if (hasHeading) {
-        final headingTextLength = v.heading!.length;
-        final headingLines = (headingTextLength / charsPerLine).ceil();
-        headingHeight = headingLines * ((_fontSize + 1.5) * 1.4) + 28.0;
+        final headingLines = (v.heading!.length / charsPerLine).ceil();
+        headingHeight = headingLines * ((_fontSize + 1.5) * 1.4) + 32.0;
       }
-      
-      final verseHeight = lines * (_fontSize * 1.6) + 16.0 + (hasNote ? 12.0 : 0.0) + (tagCount > 0 ? 24.0 : 0.0) + headingHeight;
+
+      final padding = isParallel ? 32.0 : 18.0;
+      final verseHeight = lines * (_fontSize * 1.6) + padding + (hasNote ? 14.0 : 0.0) + (tagCount > 0 ? 28.0 : 0.0) + headingHeight;
       estimatedOffset += verseHeight;
     }
 
-    // 2. Jump close so ListView builds it
     if (_scrollController.hasClients) {
-      _scrollController.jumpTo(estimatedOffset);
+      final maxScroll = _scrollController.position.maxScrollExtent;
+      _scrollController.jumpTo(estimatedOffset.clamp(0.0, maxScroll));
     }
 
-    // Helper to perform the precise animated scroll
-    void doEnsureVisible() {
+    // Helper to perform precise alignment
+    bool tryEnsureVisible() {
+      if (!mounted) return false;
       if (index < _verseKeys.length) {
         final keyContext = _verseKeys[index].currentContext;
         if (keyContext != null) {
@@ -455,30 +451,52 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
             keyContext,
             duration: const Duration(milliseconds: 300),
             curve: Curves.easeInOut,
-            alignment: 0.2, // Align to top 20% of screen
+            alignment: 0.2, // Align near top 20% of screen
           );
+          return true;
+        }
+      }
+      return false;
+    }
+
+    // Helper to locate rendered elements and adjust scroll if initial jump under-estimated
+    void adjustAndEnsureVisible() {
+      if (tryEnsureVisible()) return;
+
+      int lastRenderedIndex = -1;
+      for (int i = _verseKeys.length - 1; i >= 0; i--) {
+        if (_verseKeys[i].currentContext != null) {
+          lastRenderedIndex = i;
+          break;
+        }
+      }
+
+      if (lastRenderedIndex != -1 && lastRenderedIndex != index && _scrollController.hasClients) {
+        final box = _verseKeys[lastRenderedIndex].currentContext?.findRenderObject() as RenderBox?;
+        if (box != null && box.hasSize) {
+          final pos = box.localToGlobal(Offset.zero);
+          final currentScroll = _scrollController.offset;
+          final diffIndex = index - lastRenderedIndex;
+          final avgVerseHeight = isParallel ? (_fontSize * 6.5) : (_fontSize * 3.5);
+          final targetJump = currentScroll + (pos.dy - 120) + (diffIndex * avgVerseHeight);
+          
+          final maxScroll = _scrollController.position.maxScrollExtent;
+          _scrollController.jumpTo(targetJump.clamp(0.0, maxScroll));
+          
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            tryEnsureVisible();
+          });
         }
       }
     }
 
-    // 3. Try to scroll in the next frame. If context is not ready, wait a brief 100ms for ListView to render.
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (index < _verseKeys.length && _verseKeys[index].currentContext != null) {
-        doEnsureVisible();
-      } else {
-        // Retry 1: after 100ms
+      if (!tryEnsureVisible()) {
         Future.delayed(const Duration(milliseconds: 100), () {
-          if (!mounted) return;
-          if (index < _verseKeys.length && _verseKeys[index].currentContext != null) {
-            doEnsureVisible();
-          } else {
-            // Retry 2: after another 200ms
-            Future.delayed(const Duration(milliseconds: 200), () {
-              if (mounted) {
-                doEnsureVisible();
-              }
-            });
-          }
+          adjustAndEnsureVisible();
+        });
+        Future.delayed(const Duration(milliseconds: 300), () {
+          tryEnsureVisible();
         });
       }
     });
@@ -2783,14 +2801,27 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
                           setModalState(() {});
                         },
                       ),
-                      _TranslationOptionButton(
-                        label: 'English KJV',
-                        selected: _translationMode == 'english',
-                        onTap: () async {
-                          bibleTranslationNotifier.value = 'english';
-                          final prefs = await SharedPreferences.getInstance();
-                          await prefs.setString('bible_translation_mode', 'english');
-                          setModalState(() {});
+                      ValueListenableBuilder<String>(
+                        valueListenable: activeEnglishBibleNotifier,
+                        builder: (context, activeEng, _) {
+                          String engLabel = 'English KJV';
+                          if (activeEng == 'GNB') {
+                            engLabel = 'English GNB';
+                          } else if (activeEng == 'CE') {
+                            engLabel = 'English CPDV';
+                          } else if (activeEng == 'GNC') {
+                            engLabel = 'English GNC';
+                          }
+                          return _TranslationOptionButton(
+                            label: engLabel,
+                            selected: _translationMode == 'english',
+                            onTap: () async {
+                              bibleTranslationNotifier.value = 'english';
+                              final prefs = await SharedPreferences.getInstance();
+                              await prefs.setString('bible_translation_mode', 'english');
+                              setModalState(() {});
+                            },
+                          );
                         },
                       ),
                       _TranslationOptionButton(

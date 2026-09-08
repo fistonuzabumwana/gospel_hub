@@ -39,7 +39,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
               final isSignedIn = user != null;
 
               return ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 12.0,
+                ),
                 children: [
                   // ── GENERAL SETTINGS GROUP ──
                   _SettingsGroup(
@@ -51,7 +54,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           color: Color(0xFF6366F1), // Indigo
                         ),
                         title: AppLocalizations.translate('settings_language'),
-                        subtitle: currentLang == 'rw' ? 'Ikinyarwanda' : 'English',
+                        subtitle:
+                            currentLang == 'rw' ? 'Ikinyarwanda' : 'English',
                         onTap: () => _showLanguagePicker(context),
                       ),
                       const Divider(height: 1, indent: 56),
@@ -60,12 +64,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           icon: Icons.widgets_outlined,
                           color: Color(0xFF0EA5E9), // Sky Blue
                         ),
-                        title: currentLang == 'rw' ? 'Akamenyetso k\'Ibyanditswe' : 'Bible Widget Settings',
-                        subtitle: currentLang == 'rw' ? 'Guhindura uko kagaragara' : 'Customize layout & opacity',
+                        title:
+                            currentLang == 'rw'
+                                ? 'Akamenyetso k\'Ibyanditswe'
+                                : 'Bible Widget Settings',
+                        subtitle:
+                            currentLang == 'rw'
+                                ? 'Guhindura uko kagaragara'
+                                : 'Customize layout & opacity',
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const WidgetSettingsScreen()),
+                            MaterialPageRoute(
+                              builder:
+                                  (context) => const WidgetSettingsScreen(),
+                            ),
                           );
                         },
                       ),
@@ -86,25 +99,43 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 children: [
                                   CircleAvatar(
                                     radius: 26,
-                                    backgroundImage: user.photoUrl != null ? NetworkImage(user.photoUrl!) : null,
-                                    child: user.photoUrl == null
-                                        ? Icon(Icons.person, size: 26, color: isDark ? Colors.white70 : Colors.black54)
-                                        : null,
+                                    backgroundImage:
+                                        user.photoUrl != null
+                                            ? NetworkImage(user.photoUrl!)
+                                            : null,
+                                    child:
+                                        user.photoUrl == null
+                                            ? Icon(
+                                              Icons.person,
+                                              size: 26,
+                                              color:
+                                                  isDark
+                                                      ? Colors.white70
+                                                      : Colors.black54,
+                                            )
+                                            : null,
                                   ),
                                   const SizedBox(width: 14),
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           user.displayName ?? 'Google User',
-                                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                          style: const TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                          ),
                                         ),
                                         const SizedBox(height: 3),
                                         Text(
                                           user.email,
                                           style: TextStyle(
-                                            color: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+                                            color:
+                                                isDark
+                                                    ? Colors.grey.shade400
+                                                    : Colors.grey.shade600,
                                             fontSize: 13,
                                           ),
                                         ),
@@ -121,13 +152,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 child: TextButton.icon(
                                   style: TextButton.styleFrom(
                                     foregroundColor: Colors.redAccent,
-                                    padding: const EdgeInsets.symmetric(vertical: 8),
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 8,
+                                    ),
                                   ),
                                   onPressed: _isSyncing ? null : _handleSignOut,
                                   icon: const Icon(Icons.logout, size: 16),
                                   label: Text(
-                                    AppLocalizations.translate('settings_signout'),
-                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                    AppLocalizations.translate(
+                                      'settings_signout',
+                                    ),
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -161,10 +199,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 2.0),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12.0,
+                        vertical: 2.0,
+                      ),
                       child: Text(
                         AppLocalizations.translate('settings_sync_desc'),
-                        style: const TextStyle(fontSize: 12, color: Colors.grey, height: 1.4),
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
+                          height: 1.4,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -177,9 +222,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           padding: const EdgeInsets.all(20.0),
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                              colors: isDark
-                                  ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
-                                  : [const Color(0xFFF0F7FF), Colors.white],
+                              colors:
+                                  isDark
+                                      ? [
+                                        const Color(0xFF1E293B),
+                                        const Color(0xFF0F172A),
+                                      ]
+                                      : [const Color(0xFFF0F7FF), Colors.white],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             ),
@@ -195,22 +244,36 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                       color: accentBlue.withValues(alpha: 0.15),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(Icons.cloud_sync, color: accentBlue, size: 26),
+                                    child: Icon(
+                                      Icons.cloud_sync,
+                                      color: accentBlue,
+                                      size: 26,
+                                    ),
                                   ),
                                   const SizedBox(width: 14),
                                   Expanded(
                                     child: Text(
-                                      AppLocalizations.translate('settings_sync'),
-                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                      AppLocalizations.translate(
+                                        'settings_sync',
+                                      ),
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                               const SizedBox(height: 14),
                               Text(
-                                AppLocalizations.translate('settings_account_desc'),
+                                AppLocalizations.translate(
+                                  'settings_account_desc',
+                                ),
                                 style: TextStyle(
-                                  color: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
+                                  color:
+                                      isDark
+                                          ? Colors.grey.shade300
+                                          : Colors.grey.shade700,
                                   fontSize: 13,
                                   height: 1.4,
                                 ),
@@ -225,14 +288,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    padding: const EdgeInsets.symmetric(vertical: 12),
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 12,
+                                    ),
                                     elevation: 0,
                                   ),
                                   onPressed: _isSyncing ? null : _handleSignIn,
                                   icon: const Icon(Icons.login, size: 18),
                                   label: Text(
-                                    AppLocalizations.translate('settings_signin'),
-                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                    AppLocalizations.translate(
+                                      'settings_signin',
+                                    ),
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -258,7 +328,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           const SizedBox(width: 12),
                           Text(
                             AppLocalizations.translate('settings_sync_loading'),
-                            style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 13,
+                            ),
                           ),
                         ],
                       ),
@@ -270,21 +343,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       margin: const EdgeInsets.only(bottom: 16),
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: _syncStatusMessage!.contains('Error') ||
-                                _syncStatusMessage!.contains('failed') ||
-                                _syncStatusMessage!.contains('byanze')
-                            ? Colors.redAccent.withValues(alpha: 0.1)
-                            : Colors.green.withValues(alpha: 0.1),
+                        color:
+                            _syncStatusMessage!.contains('Error') ||
+                                    _syncStatusMessage!.contains('failed') ||
+                                    _syncStatusMessage!.contains('byanze')
+                                ? Colors.redAccent.withValues(alpha: 0.1)
+                                : Colors.green.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
                         _syncStatusMessage!,
                         style: TextStyle(
-                          color: _syncStatusMessage!.contains('Error') ||
-                                  _syncStatusMessage!.contains('failed') ||
-                                  _syncStatusMessage!.contains('byanze')
-                              ? Colors.redAccent
-                              : Colors.green,
+                          color:
+                              _syncStatusMessage!.contains('Error') ||
+                                      _syncStatusMessage!.contains('failed') ||
+                                      _syncStatusMessage!.contains('byanze')
+                                  ? Colors.redAccent
+                                  : Colors.green,
                           fontWeight: FontWeight.w500,
                           fontSize: 13,
                         ),
@@ -306,7 +381,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const PrivacyPolicyScreen()),
+                            MaterialPageRoute(
+                              builder: (context) => const PrivacyPolicyScreen(),
+                            ),
                           );
                         },
                       ),
@@ -316,10 +393,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           icon: Icons.info_outline,
                           color: Color(0xFF64748B), // Slate Grey
                         ),
-                        title: currentLang == 'rw' ? 'Verisiyo y\'App' : 'App Version',
+                        title:
+                            currentLang == 'rw'
+                                ? 'Verisiyo y\'App'
+                                : 'App Version',
                         trailing: const Text(
-                          'v1.0.1',
-                          style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 13),
+                          'v2.0.0',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 13,
+                          ),
                         ),
                         onTap: () {},
                       ),
@@ -363,14 +447,29 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   Text(
                     AppLocalizations.translate('settings_select_lang'),
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
                   const SizedBox(height: 16),
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     leading: const Text('🇷🇼', style: TextStyle(fontSize: 24)),
-                    title: const Text('Ikinyarwanda', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-                    trailing: currentLang == 'rw' ? Icon(Icons.check_circle, color: Theme.of(context).primaryColor) : null,
+                    title: const Text(
+                      'Ikinyarwanda',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                      ),
+                    ),
+                    trailing:
+                        currentLang == 'rw'
+                            ? Icon(
+                              Icons.check_circle,
+                              color: Theme.of(context).primaryColor,
+                            )
+                            : null,
                     onTap: () {
                       localeNotifier.value = 'rw';
                       AppStateService.setAppLanguage('rw');
@@ -381,8 +480,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     leading: const Text('🇺🇸', style: TextStyle(fontSize: 24)),
-                    title: const Text('English', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-                    trailing: currentLang == 'en' ? Icon(Icons.check_circle, color: Theme.of(context).primaryColor) : null,
+                    title: const Text(
+                      'English',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                      ),
+                    ),
+                    trailing:
+                        currentLang == 'en'
+                            ? Icon(
+                              Icons.check_circle,
+                              color: Theme.of(context).primaryColor,
+                            )
+                            : null,
                     onTap: () {
                       localeNotifier.value = 'en';
                       AppStateService.setAppLanguage('en');
@@ -408,9 +519,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
     setState(() {
       _isSyncing = false;
       if (user != null) {
-        _syncStatusMessage = '${AppLocalizations.translate('settings_signed_in_as')}: ${user.email}';
+        _syncStatusMessage =
+            '${AppLocalizations.translate('settings_signed_in_as')}: ${user.email}';
       } else {
-        _syncStatusMessage = AppLocalizations.translate('settings_backup_failed');
+        _syncStatusMessage = AppLocalizations.translate(
+          'settings_backup_failed',
+        );
       }
     });
   }
@@ -438,9 +552,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
     setState(() {
       _isSyncing = false;
       if (success) {
-        _syncStatusMessage = AppLocalizations.translate('settings_backup_success');
+        _syncStatusMessage = AppLocalizations.translate(
+          'settings_backup_success',
+        );
       } else {
-        _syncStatusMessage = AppLocalizations.translate('settings_backup_failed');
+        _syncStatusMessage = AppLocalizations.translate(
+          'settings_backup_failed',
+        );
       }
     });
   }
@@ -448,26 +566,34 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Future<void> _handleRestoreConfirm() async {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text(AppLocalizations.translate('settings_restore_confirm_title')),
-        content: Text(AppLocalizations.translate('settings_restore_confirm_desc')),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(AppLocalizations.translate('settings_cancel')),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              _handleRestore();
-            },
-            child: Text(
-              AppLocalizations.translate('settings_restore_btn'),
-              style: const TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
+      builder:
+          (context) => AlertDialog(
+            title: Text(
+              AppLocalizations.translate('settings_restore_confirm_title'),
             ),
+            content: Text(
+              AppLocalizations.translate('settings_restore_confirm_desc'),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(AppLocalizations.translate('settings_cancel')),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _handleRestore();
+                },
+                child: Text(
+                  AppLocalizations.translate('settings_restore_btn'),
+                  style: const TextStyle(
+                    color: Colors.redAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
     );
   }
 
@@ -481,10 +607,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
     setState(() {
       _isSyncing = false;
       if (success) {
-        _syncStatusMessage = AppLocalizations.translate('settings_restore_success');
+        _syncStatusMessage = AppLocalizations.translate(
+          'settings_restore_success',
+        );
         _showRestartAlert();
       } else {
-        _syncStatusMessage = AppLocalizations.translate('settings_restore_failed');
+        _syncStatusMessage = AppLocalizations.translate(
+          'settings_restore_failed',
+        );
       }
     });
   }
@@ -493,18 +623,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => AlertDialog(
-        title: Text(AppLocalizations.translate('settings_restart_title')),
-        content: Text(AppLocalizations.translate('settings_restart_desc')),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('OK'),
+      builder:
+          (context) => AlertDialog(
+            title: Text(AppLocalizations.translate('settings_restart_title')),
+            content: Text(AppLocalizations.translate('settings_restart_desc')),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('OK'),
+              ),
+            ],
           ),
-        ],
-      ),
     );
   }
 }
@@ -539,10 +670,7 @@ class _SettingsGroup extends StatelessWidget {
           shadowColor: Colors.black.withValues(alpha: isDark ? 0.2 : 0.03),
           borderRadius: BorderRadius.circular(16),
           clipBehavior: Clip.antiAlias,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: children,
-          ),
+          child: Column(mainAxisSize: MainAxisSize.min, children: children),
         ),
         const SizedBox(height: 16),
       ],
@@ -573,10 +701,16 @@ class _SettingsTile extends StatelessWidget {
         title,
         style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14.5),
       ),
-      subtitle: subtitle != null
-          ? Text(subtitle!, style: const TextStyle(fontSize: 12, color: Colors.grey))
-          : null,
-      trailing: trailing ?? const Icon(Icons.chevron_right, size: 18, color: Colors.grey),
+      subtitle:
+          subtitle != null
+              ? Text(
+                subtitle!,
+                style: const TextStyle(fontSize: 12, color: Colors.grey),
+              )
+              : null,
+      trailing:
+          trailing ??
+          const Icon(Icons.chevron_right, size: 18, color: Colors.grey),
       onTap: onTap,
     );
   }

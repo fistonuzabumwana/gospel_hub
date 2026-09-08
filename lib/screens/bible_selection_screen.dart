@@ -99,6 +99,20 @@ class BibleSelectionScreen extends StatelessWidget {
     ),
   ];
 
+  static const Map<String, String> kinyarwandaToEnglishMap = {
+    'BY': 'KJV',
+    'II': 'GNB',
+    'BN': 'CE',
+    'IID': 'GNC',
+  };
+
+  static const Map<String, String> englishToKinyarwandaMap = {
+    'KJV': 'BY',
+    'GNB': 'II',
+    'CE': 'BN',
+    'GNC': 'IID',
+  };
+
   Future<void> _selectBible(BuildContext context, BibleVersion version) async {
     final prefs = await SharedPreferences.getInstance();
     final isEnglish = version.language == 'English';
@@ -106,11 +120,25 @@ class BibleSelectionScreen extends StatelessWidget {
     if (isEnglish) {
       activeEnglishBibleNotifier.value = version.id;
       await prefs.setString('active_english_bible', version.id);
+
+      final pairedKinyarwanda = englishToKinyarwandaMap[version.id];
+      if (pairedKinyarwanda != null) {
+        activeKinyarwandaBibleNotifier.value = pairedKinyarwanda;
+        await prefs.setString('active_kinyarwanda_bible', pairedKinyarwanda);
+      }
+
       bibleTranslationNotifier.value = 'english';
       await prefs.setString('bible_translation_mode', 'english');
     } else {
       activeKinyarwandaBibleNotifier.value = version.id;
       await prefs.setString('active_kinyarwanda_bible', version.id);
+
+      final pairedEnglish = kinyarwandaToEnglishMap[version.id];
+      if (pairedEnglish != null) {
+        activeEnglishBibleNotifier.value = pairedEnglish;
+        await prefs.setString('active_english_bible', pairedEnglish);
+      }
+
       bibleTranslationNotifier.value = 'kinyarwanda';
       await prefs.setString('bible_translation_mode', 'kinyarwanda');
     }

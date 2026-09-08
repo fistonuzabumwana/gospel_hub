@@ -64,8 +64,6 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     _tabController = TabController(length: 2, vsync: this);
     _tabController.addListener(_handleTabChange);
     _searchController.addListener(_onSearchChanged);
-    _gushimishaScrollController.addListener(_onScrollUpdated);
-    _agakizaScrollController.addListener(_onScrollUpdated);
     _preloadAllHymns();
   }
 
@@ -76,19 +74,11 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     _searchController.removeListener(_onSearchChanged);
     _searchController.dispose();
     _searchDebounceTimer?.cancel();
-    _gushimishaScrollController.removeListener(_onScrollUpdated);
     _gushimishaScrollController.dispose();
-    _agakizaScrollController.removeListener(_onScrollUpdated);
     _agakizaScrollController.dispose();
     _hudTimer?.cancel();
     _beamTimer?.cancel();
     super.dispose();
-  }
-
-  void _onScrollUpdated() {
-    if (!_isDraggingFastScroll) {
-      setState(() {});
-    }
   }
 
   void _handleTabChange() {
@@ -191,9 +181,7 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     return list.where((hymn) {
       final matchesNum = hymn.number.toString() == query;
       final matchesTitle = hymn.title.toLowerCase().contains(query);
-      final matchesLyrics = hymn.lyrics.any(
-        (block) => block.lines.any((line) => line.toLowerCase().contains(query))
-      );
+      final matchesLyrics = hymn.rawLyrics.toLowerCase().contains(query);
       return matchesNum || matchesTitle || matchesLyrics;
     }).toList();
   }
@@ -314,74 +302,78 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
   }
 
   Widget _buildHymnBooksList(bool isDark) {
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        Card(
-          clipBehavior: Clip.antiAlias,
-          child: InkWell(
-            onTap: () {
-              setState(() {
-                _currentView = 1;
-              });
-            },
-            borderRadius: BorderRadius.circular(16),
-            child: Container(
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: isDark 
-                      ? [const Color(0xFF1A365D), const Color(0xFF1B1D1B)]
-                      : [const Color(0xFFEBF3FF), Colors.white],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+    return RefreshIndicator(
+      onRefresh: _preloadAllHymns,
+      child: ListView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        padding: const EdgeInsets.all(16),
+        children: [
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: InkWell(
+              onTap: () {
+                setState(() {
+                  _currentView = 1;
+                });
+              },
+              borderRadius: BorderRadius.circular(16),
+              child: Container(
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: isDark 
+                        ? [const Color(0xFF1A365D), const Color(0xFF1B1D1B)]
+                        : [const Color(0xFFEBF3FF), Colors.white],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                 ),
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.15),
-                      shape: BoxShape.circle,
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.15),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.library_books,
+                        color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
+                        size: 32,
+                      ),
                     ),
-                    child: Icon(
-                      Icons.library_books,
-                      color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
-                      size: 32,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'INDIRIMBO',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 20,
-                            letterSpacing: 1.2,
+                    const SizedBox(width: 20),
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'INDIRIMBO',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 20,
+                              letterSpacing: 1.2,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 6),
-                        Text(
-                          'Indirimbo zo Gushimisha Imana n\'Agakiza',
-                          style: TextStyle(
-                            fontSize: 14,
-                            height: 1.3,
+                          SizedBox(height: 6),
+                          Text(
+                            'Indirimbo zo Gushimisha Imana n\'Agakiza',
+                            style: TextStyle(
+                              fontSize: 14,
+                              height: 1.3,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                  const Icon(Icons.arrow_forward_ios, size: 18, color: Colors.grey),
-                ],
+                    const Icon(Icons.arrow_forward_ios, size: 18, color: Colors.grey),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -429,14 +421,23 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
             ),
           ),
         Expanded(
-          child: list.isEmpty
-              ? const Center(
-                  child: Text('Nta ndirimbo yabonetse yujuje ibi bintu.', style: TextStyle(color: Colors.grey)),
-                )
-              : Stack(
-                  children: [
-                    ListView.builder(
-                      controller: isGushimisha ? _gushimishaScrollController : _agakizaScrollController,
+          child: RefreshIndicator(
+            onRefresh: _preloadAllHymns,
+            child: list.isEmpty
+                ? ListView(
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    children: const [
+                      SizedBox(height: 100),
+                      Center(
+                        child: Text('Nta ndirimbo yabonetse yujuje ibi bintu.', style: TextStyle(color: Colors.grey)),
+                      ),
+                    ],
+                  )
+                : Stack(
+                    children: [
+                      ListView.builder(
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        controller: isGushimisha ? _gushimishaScrollController : _agakizaScrollController,
                       padding: const EdgeInsets.only(left: 16, right: 56, top: 8, bottom: 8),
                       itemCount: list.length,
                       itemBuilder: (context, index) {
@@ -446,10 +447,10 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
                             : index == _beamedAgakizaIndex;
 
                         return Card(
-                          margin: const EdgeInsets.only(bottom: 8),
-                          elevation: isBeamed ? 4 : 0.5,
+                          margin: const EdgeInsets.only(bottom: 4),
+                          elevation: isBeamed ? 3 : 0.5,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(10),
                             side: BorderSide(
                               color: isBeamed 
                                   ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor)
@@ -461,21 +462,30 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
                               ? (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.18)
                               : null,
                           child: ListTile(
-                            leading: CircleAvatar(
-                              backgroundColor: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-                              child: Text(
-                                '${hymn.number}',
-                                style: TextStyle(
-                                  color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
-                                  fontWeight: FontWeight.bold,
+                            dense: true,
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                            minLeadingWidth: 32,
+                            leading: SizedBox(
+                              width: 32,
+                              height: 32,
+                              child: CircleAvatar(
+                                radius: 14,
+                                backgroundColor: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.12),
+                                child: Text(
+                                  '${hymn.number}',
+                                  style: TextStyle(
+                                    color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12,
+                                  ),
                                 ),
                               ),
                             ),
                             title: Text(
                               hymn.title,
-                              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+                              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13.5),
                             ),
-                            trailing: const Icon(Icons.chevron_right, size: 18),
+                            trailing: const Icon(Icons.chevron_right, size: 16),
                             onTap: () => selectHymn(hymn),
                           ),
                         );
@@ -488,7 +498,7 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
                       width: 32,
                       child: _buildVerticalIndexer(context, list, isGushimisha),
                     ),
-                    if (_showHUDWidget && _hudText != null)
+                    if (_showHUDWidget && _hudText != null && _hudText!.isNotEmpty)
                       Align(
                         alignment: Alignment.center,
                         child: IgnorePointer(
@@ -502,20 +512,19 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
                                 borderRadius: BorderRadius.circular(16),
                               ),
                               child: Text(
-                                _hudText!,
+                                _hudText ?? '',
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.2,
+                                    letterSpacing: 1.2,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                  ],
-                ),
+                    ],
+                  ),
+          ),
         ),
       ],
     );
@@ -547,14 +556,24 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final controller = isGushimisha ? _gushimishaScrollController : _agakizaScrollController;
 
-    // Calculate current scroll progress if scroll controller has clients
-    double scrollPercent = 0.0;
-    if (controller.hasClients && controller.position.maxScrollExtent > 0) {
-      scrollPercent = (controller.offset / controller.position.maxScrollExtent).clamp(0.0, 1.0);
-    }
+    return ListenableBuilder(
+      listenable: controller,
+      builder: (context, _) {
+        // Calculate current scroll progress if scroll controller has clients
+        double scrollPercent = 0.0;
+        try {
+          if (controller.hasClients &&
+              controller.positions.length == 1 &&
+              controller.position.hasContentDimensions) {
+            final maxExtent = controller.position.maxScrollExtent;
+            if (maxExtent > 0) {
+              scrollPercent = (controller.offset / maxExtent).clamp(0.0, 1.0);
+            }
+          }
+        } catch (_) {}
 
-    return LayoutBuilder(
-      builder: (context, constraints) {
+        return LayoutBuilder(
+          builder: (context, constraints) {
         final trackHeight = constraints.maxHeight;
         const handleHeight = 48.0;
         const handleWidth = 14.0;
@@ -591,13 +610,17 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
           _hideHUD();
 
           // Scroll list to corresponding song
-          if (controller.hasClients) {
-            // Compute offset based on targetIndex
-            // Each card is roughly 80.0 pixels tall
-            final itemScrollOffset = targetIndex * 80.0;
-            final maxScroll = controller.position.maxScrollExtent;
-            final targetOffset = itemScrollOffset.clamp(0.0, maxScroll);
-            controller.jumpTo(targetOffset);
+          if (controller.hasClients && list.isNotEmpty) {
+            try {
+              if (controller.positions.length == 1 &&
+                  controller.position.hasContentDimensions) {
+                final maxScroll = controller.position.maxScrollExtent;
+                final double targetOffset = (list.length > 1)
+                    ? (targetIndex / (list.length - 1)) * maxScroll
+                    : 0.0;
+                controller.jumpTo(targetOffset.clamp(0.0, maxScroll));
+              }
+            } catch (_) {}
           }
 
           // Beam highlight effect
@@ -688,7 +711,9 @@ class HymnsScreenState extends State<HymnsScreen> with SingleTickerProviderState
         );
       },
     );
-  }
+  },
+);
+}
 }
 
 class HymnDetailModal extends StatefulWidget {

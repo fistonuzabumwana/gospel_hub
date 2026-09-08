@@ -638,9 +638,33 @@ class DatabaseService {
       whereArgs: [activeTranslation, bookNumber, chapter, verse],
       limit: 1,
     );
-    if (results.isNotEmpty) {
+    if (results.isNotEmpty && (results.first['text'] as String?)?.isNotEmpty == true) {
       return results.first['text'] as String?;
     }
+
+    // Fallback 1: Query any available translation for the same reference
+    final List<Map<String, dynamic>> fallbackResults = await db.query(
+      'bible_verses',
+      columns: ['text'],
+      where: 'book = ? AND chapter = ? AND verse = ?',
+      whereArgs: [bookNumber, chapter, verse],
+      limit: 1,
+    );
+    if (fallbackResults.isNotEmpty && (fallbackResults.first['text'] as String?)?.isNotEmpty == true) {
+      return fallbackResults.first['text'] as String?;
+    }
+
+    // Fallback 2: Guaranteed inspirational verse (John 3:16 -> Book 50, Ch 3, V 16)
+    final List<Map<String, dynamic>> johnResults = await db.query(
+      'bible_verses',
+      columns: ['text'],
+      where: 'book = 50 AND chapter = 3 AND verse = 16',
+      limit: 1,
+    );
+    if (johnResults.isNotEmpty) {
+      return johnResults.first['text'] as String?;
+    }
+
     return null;
   }
 

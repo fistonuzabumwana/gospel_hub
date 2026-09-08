@@ -27,6 +27,7 @@ class HomeScreen extends StatefulWidget {
 
 class HomeScreenState extends State<HomeScreen> {
   int _currentTabIndex = 2;
+  final Set<int> _activatedTabs = {2};
   final GlobalKey<BibleReaderScreenState> _bibleReaderKey = GlobalKey<BibleReaderScreenState>();
   final GlobalKey<HymnsScreenState> _hymnsScreenKey = GlobalKey<HymnsScreenState>();
   String? _activeBibleId;
@@ -63,6 +64,7 @@ class HomeScreenState extends State<HomeScreen> {
 
   void setTab(int index) {
     setState(() {
+      _activatedTabs.add(index);
       _currentTabIndex = index;
     });
   }
@@ -76,6 +78,7 @@ class HomeScreenState extends State<HomeScreen> {
       });
     }
     setState(() {
+      _activatedTabs.add(0);
       _currentTabIndex = 0;
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -85,6 +88,7 @@ class HomeScreenState extends State<HomeScreen> {
 
   void navigateToHymn(Hymn hymn) {
     setState(() {
+      _activatedTabs.add(1);
       _currentTabIndex = 1; // Switch to Hymns tab
     });
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -103,15 +107,25 @@ class HomeScreenState extends State<HomeScreen> {
           body: IndexedStack(
             index: _currentTabIndex,
             children: [
-              _activeBibleId == null
-                  ? BibleSelectionScreen(
-                      onBibleSelected: _loadActiveBibleId,
-                    )
-                  : BibleReaderScreen(key: _bibleReaderKey),
-              HymnsScreen(key: _hymnsScreenKey),
-              const DashboardTab(),
-              const SavedItemsTab(),
-              const SettingsScreen(),
+              _activatedTabs.contains(0)
+                  ? (_activeBibleId == null
+                      ? BibleSelectionScreen(
+                          onBibleSelected: _loadActiveBibleId,
+                        )
+                      : BibleReaderScreen(key: _bibleReaderKey))
+                  : const SizedBox.shrink(),
+              _activatedTabs.contains(1)
+                  ? HymnsScreen(key: _hymnsScreenKey)
+                  : const SizedBox.shrink(),
+              _activatedTabs.contains(2)
+                  ? const DashboardTab()
+                  : const SizedBox.shrink(),
+              _activatedTabs.contains(3)
+                  ? const SavedItemsTab()
+                  : const SizedBox.shrink(),
+              _activatedTabs.contains(4)
+                  ? const SettingsScreen()
+                  : const SizedBox.shrink(),
             ],
           ),
           bottomNavigationBar: Container(
@@ -181,7 +195,7 @@ class HomeScreenState extends State<HomeScreen> {
 
     return Expanded(
       child: InkWell(
-        onTap: () => setState(() => _currentTabIndex = index),
+        onTap: () => setTab(index),
         borderRadius: BorderRadius.circular(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -235,7 +249,7 @@ class HomeScreenState extends State<HomeScreen> {
     );
 
     return GestureDetector(
-      onTap: () => setState(() => _currentTabIndex = 2),
+      onTap: () => setTab(2),
       child: Container(
         width: 58,
         height: 58,
@@ -383,9 +397,15 @@ class _DashboardTabState extends State<DashboardTab> {
           const SizedBox(width: 8),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
+      body: RefreshIndicator(
+        onRefresh: () async {
+          await _loadStats();
+          if (mounted) setState(() {});
+        },
+        child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Daily Verse Card
@@ -670,10 +690,11 @@ class _DashboardTabState extends State<DashboardTab> {
           ],
         ),
       ),
-    );
-      },
-    );
-  }
+    ),
+  );
+},
+);
+}
 }
 
 class _MenuCard extends StatelessWidget {
@@ -982,13 +1003,16 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
           ),
           body: _isLoading 
               ? const Center(child: CircularProgressIndicator())
-              : TabBarView(
-                  controller: _tabController,
-                  children: [
-                    _buildVersesList(),
-                    _buildHymnsList(),
-                    _buildStudyNotesList(),
-                  ],
+              : RefreshIndicator(
+                  onRefresh: _loadFavorites,
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      _buildVersesList(),
+                      _buildHymnsList(),
+                      _buildStudyNotesList(),
+                    ],
+                  ),
                 ),
           floatingActionButton: _tabController.index == 2 && _studySubTab == 'journal'
               ? FloatingActionButton.extended(
