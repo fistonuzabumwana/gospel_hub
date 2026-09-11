@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -11,6 +12,9 @@ class DatabaseService {
   static final DatabaseService _instance = DatabaseService._internal();
   factory DatabaseService() => _instance;
   DatabaseService._internal();
+
+  /// Top-level function for compute() isolate — gzip decompression off the main thread.
+  static List<int> _decompressGzip(List<int> compressed) => gzip.decode(compressed);
 
   static Database? _database;
   static Completer<Database>? _dbCompleter;
@@ -57,19 +61,25 @@ class DatabaseService {
     }
 
     if (!shouldCopy && exists) {
-      // Double check if tables exist and have entries
-      try {
-        final db = await openDatabase(path, readOnly: true);
-        final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM bible_verses'));
-        final hymnsCount = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM hymns'));
-        await db.close();
-        if (count == null || count == 0 || hymnsCount == null || hymnsCount == 0) {
-          print('Existing database is empty or missing hymns. Will force copy.');
+      // Only verify integrity once after each DB version install
+      final integrityVerified = prefs.getBool('db_integrity_verified_$currentDbVersion') ?? false;
+      if (!integrityVerified) {
+        try {
+          final db = await openDatabase(path, readOnly: true);
+          final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM bible_verses'));
+          final hymnsCount = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM hymns'));
+          await db.close();
+          if (count == null || count == 0 || hymnsCount == null || hymnsCount == 0) {
+            print('Existing database is empty or missing hymns. Will force copy.');
+            shouldCopy = true;
+          } else {
+            // Mark integrity as verified so we skip this on subsequent launches
+            await prefs.setBool('db_integrity_verified_$currentDbVersion', true);
+          }
+        } catch (e) {
+          print('Existing database is invalid: $e. Will force copy.');
           shouldCopy = true;
         }
-      } catch (e) {
-        print('Existing database is invalid: $e. Will force copy.');
-        shouldCopy = true;
       }
     }
 
@@ -84,7 +94,7 @@ class DatabaseService {
       try {
         ByteData data = await rootBundle.load('assets/database/gospel_hub.db.gz');
         List<int> compressedBytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-        List<int> decompressedBytes = gzip.decode(compressedBytes);
+        List<int> decompressedBytes = await compute(_decompressGzip, compressedBytes);
         
         // Write and flush the bytes written
         final file = File(path);
@@ -101,72 +111,82 @@ class DatabaseService {
       print('Database already exists at: $path and is healthy.');
     }
 
-    // Open the database
+    // Open the database with proper version-based table creation
     return await openDatabase(
       path,
-      version: 1,
-      onOpen: (db) async {
-        await db.execute('''
-          CREATE TABLE IF NOT EXISTS highlights (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            verse_id INTEGER NOT NULL UNIQUE,
-            color_index INTEGER NOT NULL,
-            created_at INTEGER NOT NULL
-          )
-        ''');
-        await db.execute('''
-          CREATE TABLE IF NOT EXISTS notes (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            verse_id INTEGER NOT NULL UNIQUE,
-            content TEXT NOT NULL,
-            created_at INTEGER NOT NULL,
-            updated_at INTEGER NOT NULL
-          )
-        ''');
-        await db.execute('''
-          CREATE TABLE IF NOT EXISTS verse_tags (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            verse_id INTEGER NOT NULL,
-            tag_name TEXT NOT NULL,
-            created_at INTEGER NOT NULL,
-            UNIQUE(verse_id, tag_name)
-          )
-        ''');
-        await db.execute('''
-          CREATE TABLE IF NOT EXISTS reading_history (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            book INTEGER NOT NULL,
-            chapter INTEGER NOT NULL,
-            read_at INTEGER NOT NULL
-          )
-        ''');
-        await db.execute('''
-          CREATE TABLE IF NOT EXISTS hymn_playlists (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL UNIQUE,
-            created_at INTEGER NOT NULL
-          )
-        ''');
-        await db.execute('''
-          CREATE TABLE IF NOT EXISTS hymn_playlist_items (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            playlist_id INTEGER NOT NULL,
-            hymn_id INTEGER NOT NULL,
-            position INTEGER NOT NULL,
-            UNIQUE(playlist_id, hymn_id)
-          )
-        ''');
-        await db.execute('''
-          CREATE TABLE IF NOT EXISTS journal_notes (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,
-            content TEXT NOT NULL,
-            created_at INTEGER NOT NULL,
-            updated_at INTEGER NOT NULL
-          )
-        ''');
+      version: 2, // Internal sqflite schema version for user-data tables
+      onCreate: (db, version) async {
+        await _createUserDataTables(db);
+      },
+      onUpgrade: (db, oldVersion, newVersion) async {
+        // Ensure all tables exist on upgrade (idempotent)
+        await _createUserDataTables(db);
       },
     );
+  }
+
+  /// Creates user-data tables (highlights, notes, tags, etc.).
+  /// Uses IF NOT EXISTS so it's safe to call repeatedly during upgrades.
+  static Future<void> _createUserDataTables(Database db) async {
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS highlights (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        verse_id INTEGER NOT NULL UNIQUE,
+        color_index INTEGER NOT NULL,
+        created_at INTEGER NOT NULL
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS notes (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        verse_id INTEGER NOT NULL UNIQUE,
+        content TEXT NOT NULL,
+        created_at INTEGER NOT NULL,
+        updated_at INTEGER NOT NULL
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS verse_tags (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        verse_id INTEGER NOT NULL,
+        tag_name TEXT NOT NULL,
+        created_at INTEGER NOT NULL,
+        UNIQUE(verse_id, tag_name)
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS reading_history (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        book INTEGER NOT NULL,
+        chapter INTEGER NOT NULL,
+        read_at INTEGER NOT NULL
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS hymn_playlists (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL UNIQUE,
+        created_at INTEGER NOT NULL
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS hymn_playlist_items (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        playlist_id INTEGER NOT NULL,
+        hymn_id INTEGER NOT NULL,
+        position INTEGER NOT NULL,
+        UNIQUE(playlist_id, hymn_id)
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS journal_notes (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        content TEXT NOT NULL,
+        created_at INTEGER NOT NULL,
+        updated_at INTEGER NOT NULL
+      )
+    ''');
   }
 
   // ── Bible Queries ──────────────────────────────────────────────────────────

@@ -17,6 +17,9 @@ import '../services/app_localizations.dart';
 import '../services/daily_verse_service.dart';
 import '../services/widget_service.dart';
 import 'settings_screen.dart';
+import '../widgets/saved/saved_verses_tab.dart';
+import '../widgets/saved/saved_hymns_tab.dart';
+import '../widgets/saved/saved_study_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -38,7 +41,10 @@ class HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _loadActiveBibleId();
-    _syncWidgetData();
+    // Defer heavy widget sync until after the first frame is painted
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _syncWidgetDataIfNeeded();
+    });
   }
 
   Future<void> _loadActiveBibleId() async {
@@ -56,9 +62,15 @@ class HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  void _syncWidgetData() async {
+  /// Only re-syncs widget data when the date changes (not every launch).
+  void _syncWidgetDataIfNeeded() async {
     try {
+      final prefs = await SharedPreferences.getInstance();
+      final today = '${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}';
+      final lastSync = prefs.getString('widget_last_sync_date');
+      if (lastSync == today) return; // Already synced today
       await WidgetService.syncWidgetData();
+      await prefs.setString('widget_last_sync_date', today);
     } catch (_) {}
   }
 
@@ -782,30 +794,16 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
   List<Map<String, dynamic>> _savedNotes = [];
   List<Map<String, dynamic>> _savedHighlights = [];
   List<String> _uniqueTags = [];
-  String? _selectedTagFilter;
-  List<Map<String, dynamic>> _taggedVerses = [];
   
   List<Map<String, dynamic>> _playlists = [];
-  bool _showPlaylists = false;
   
   List<Map<String, dynamic>> _journalNotes = [];
   String _studySubTab = 'journal'; // 'journal', 'verse_notes', 'highlights'
   
   final TextEditingController _journalSearchController = TextEditingController();
-  String _journalSearchQuery = '';
   
   bool _isLoading = true;
 
-  static const List<Color> _highlightColors = [
-    Colors.yellow,
-    Colors.pink,
-    Colors.lightGreen,
-    Colors.lightBlue,
-    Colors.orange,
-    Colors.purple,
-    Colors.teal,
-    Colors.deepOrange,
-  ];
 
   @override
   void initState() {
@@ -828,29 +826,27 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
 
   Future<void> _loadFavorites() async {
     setState(() => _isLoading = true);
-    final verses = await _dbService.getFavoritesByType('bible');
-    final hymns = await _dbService.getFavoritesByType('hymn');
-    final notes = await _dbService.getAllNotesWithVerses();
-    final highlights = await _dbService.getAllHighlightsWithVerses();
-    final uniqueTags = await _dbService.getAllUniqueTags();
-    final playlists = await _dbService.getPlaylists();
-    final journal = await _dbService.getAllJournalNotesRaw();
 
-    List<Map<String, dynamic>> taggedVerses = [];
-    if (_selectedTagFilter != null) {
-      taggedVerses = await _dbService.getVersesByTag(_selectedTagFilter!);
-    }
+    // Run all queries in parallel instead of sequentially
+    final results = await Future.wait([
+      _dbService.getFavoritesByType('bible'),
+      _dbService.getFavoritesByType('hymn'),
+      _dbService.getAllNotesWithVerses(),
+      _dbService.getAllHighlightsWithVerses(),
+      _dbService.getAllUniqueTags(),
+      _dbService.getPlaylists(),
+      _dbService.getAllJournalNotesRaw(),
+    ]);
 
     if (mounted) {
       setState(() {
-        _savedVerses = verses;
-        _savedHymns = hymns;
-        _savedNotes = notes;
-        _savedHighlights = highlights;
-        _uniqueTags = uniqueTags;
-        _taggedVerses = taggedVerses;
-        _playlists = playlists;
-        _journalNotes = journal;
+        _savedVerses = results[0] as List<Map<String, dynamic>>;
+        _savedHymns = results[1] as List<Map<String, dynamic>>;
+        _savedNotes = results[2] as List<Map<String, dynamic>>;
+        _savedHighlights = results[3] as List<Map<String, dynamic>>;
+        _uniqueTags = results[4] as List<String>;
+        _playlists = results[5] as List<Map<String, dynamic>>;
+        _journalNotes = results[6] as List<Map<String, dynamic>>;
         _isLoading = false;
       });
     }
@@ -1008,988 +1004,33 @@ class _SavedItemsTabState extends State<SavedItemsTab> with SingleTickerProvider
                   child: TabBarView(
                     controller: _tabController,
                     children: [
-                      _buildVersesList(),
-                      _buildHymnsList(),
-                      _buildStudyNotesList(),
-                    ],
-                  ),
-                ),
-          floatingActionButton: _tabController.index == 2 && _studySubTab == 'journal'
-              ? FloatingActionButton.extended(
-                  onPressed: () => _showJournalEditor(),
-                  icon: const Icon(Icons.add),
-                  label: Text(localeNotifier.value == 'en' ? 'New Journal' : 'Inyandiko Nshya'),
-                )
-              : null,
-        );
-      },
-    );
-  }
-
-  Widget _buildVersesList() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    if (_savedVerses.isEmpty) {
-      return _buildEmptyState(AppLocalizations.translate('saved_empty_verses'));
-    }
-
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: _savedVerses.length,
-      itemBuilder: (context, index) {
-        final verseMap = _savedVerses[index];
-        final bookObj = BibleBook.getByNumber(verseMap['book']);
-        final refStr = '${bookObj.name} ${verseMap['chapter']}:${verseMap['verse']}';
-
-        return Card(
-          margin: const EdgeInsets.only(bottom: 12),
-          child: ListTile(
-            contentPadding: const EdgeInsets.all(16),
-            title: Text(
-              verseMap['text'],
-              style: const TextStyle(fontSize: 15, fontFamily: 'serif', height: 1.5),
-            ),
-            subtitle: Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: Text(
-                refStr,
-                style: TextStyle(fontWeight: FontWeight.bold, color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor),
-              ),
-            ),
-            trailing: IconButton(
-              icon: const Icon(Icons.delete_outline, color: Colors.red),
-              onPressed: () async {
-                await _dbService.removeFavorite('bible', verseMap['id']);
-                _loadFavorites();
-              },
-            ),
-            onTap: () {
-              final parentState = context.findAncestorStateOfType<HomeScreenState>();
-              parentState?.navigateToBibleVerse(bookObj, verseMap['chapter'], verseMap['verse']);
-            },
-          ),
-        );
-      },
-    );
-  }
-
-  Widget _buildHymnsList() {
-    return Column(
-      children: [
-        // Playlist Toggle row
-        Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                ChoiceChip(
-                  label: const Text('Indirimbo zose (Favorites)', style: TextStyle(fontSize: 12)),
-                  selected: !_showPlaylists,
-                  onSelected: (_) => setState(() => _showPlaylists = false),
-                ),
-                const SizedBox(width: 12),
-                ChoiceChip(
-                  label: const Text('Urutonde rw\'indirimbo (Playlists)', style: TextStyle(fontSize: 12)),
-                  selected: _showPlaylists,
-                  onSelected: (_) => setState(() => _showPlaylists = true),
-                ),
-              ],
-            ),
-          ),
-        ),
-
-        Expanded(
-          child: _showPlaylists ? _buildPlaylistsTab() : _buildFavoritesHymnsTab(),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildFavoritesHymnsTab() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    if (_savedHymns.isEmpty) {
-      return _buildEmptyState(AppLocalizations.translate('saved_empty_hymns'));
-    }
-
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: _savedHymns.length,
-      itemBuilder: (context, index) {
-        final hymnMap = _savedHymns[index];
-        return Card(
-          margin: const EdgeInsets.only(bottom: 8),
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundColor: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-              child: Text(
-                '#${hymnMap['number']}',
-                style: TextStyle(color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor, fontWeight: FontWeight.bold),
-              ),
-            ),
-            title: Text(hymnMap['title'], style: const TextStyle(fontWeight: FontWeight.bold)),
-            subtitle: Text('Igitabo: ${hymnMap['book']}'),
-            trailing: IconButton(
-              icon: const Icon(Icons.delete_outline, color: Colors.red),
-              onPressed: () async {
-                await _dbService.removeFavorite('hymn', hymnMap['id']);
-                _loadFavorites();
-              },
-            ),
-            onTap: () {
-              final hymnObj = Hymn.fromMap(hymnMap);
-              final parentState = context.findAncestorStateOfType<HomeScreenState>();
-              parentState?.navigateToHymn(hymnObj);
-            },
-          ),
-        );
-      },
-    );
-  }
-
-  Widget _buildPlaylistsTab() {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: ElevatedButton.icon(
-            icon: const Icon(Icons.add),
-            label: const Text('Kora urutonde rushya (Create Playlist)'),
-            onPressed: _showCreatePlaylistDialog,
-          ),
-        ),
-        Expanded(
-          child: _playlists.isEmpty
-              ? const Center(child: Text('Nta ntonde z\'indirimbo ziriho.', style: TextStyle(color: Colors.grey)))
-              : ListView.builder(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  itemCount: _playlists.length,
-                  itemBuilder: (context, index) {
-                    final pl = _playlists[index];
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      child: ListTile(
-                        leading: const Icon(Icons.playlist_play, size: 28),
-                        title: Text(
-                          pl['name'],
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        trailing: IconButton(
-                          icon: const Icon(Icons.delete_outline, color: Colors.red),
-                          onPressed: () async {
-                            await _dbService.deletePlaylist(pl['id']);
-                            _loadFavorites();
-                          },
-                        ),
-                        onTap: () => _showPlaylistSongsDialog(pl['id'], pl['name']),
+                      SavedVersesTab(
+                        savedVerses: _savedVerses,
+                        dbService: _dbService,
+                        onDataChanged: _loadFavorites,
                       ),
-                    );
-                  },
-                ),
-        ),
-      ],
-    );
-  }
-
-  void _showCreatePlaylistDialog() {
-    final controller = TextEditingController();
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Kora Urutonde Rushya (Playlist)'),
-        content: TextField(
-          controller: controller,
-          autofocus: true,
-          decoration: const InputDecoration(
-            hintText: 'Andika izina ry\'urutonde ry\'indirimbo...',
-            border: OutlineInputBorder(),
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Reka'),
-          ),
-          ElevatedButton(
-            onPressed: () async {
-              final name = controller.text.trim();
-              if (name.isNotEmpty) {
-                await _dbService.createPlaylist(name);
-                _loadFavorites();
-              }
-              if (mounted) Navigator.pop(context);
-            },
-            child: const Text('Kora'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _showPlaylistSongsDialog(int playlistId, String playlistName) async {
-    final hymns = await _dbService.getPlaylistHymns(playlistId);
-    if (!mounted) return;
-
-    showDialog(
-      context: context,
-      builder: (context) {
-        return StatefulBuilder(
-          builder: (context, setDialogState) {
-            return AlertDialog(
-              title: Text('Urutonde: $playlistName'),
-              content: SizedBox(
-                width: double.maxFinite,
-                child: hymns.isEmpty
-                    ? const Center(
-                        child: Text(
-                          'Nta ndirimbo ziri muri uru rutonde. Andika "+" ku ndirimbo yose ngo uyongeremo!',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.grey, fontSize: 13),
-                        ),
-                      )
-                    : ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: hymns.length,
-                        itemBuilder: (context, index) {
-                          final song = hymns[index];
-                          return ListTile(
-                            leading: CircleAvatar(
-                              child: Text('${song.number}'),
-                            ),
-                            title: Text(song.title, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
-                            subtitle: Text(song.book, style: const TextStyle(fontSize: 12)),
-                            trailing: IconButton(
-                              icon: const Icon(Icons.remove_circle_outline, color: Colors.red),
-                              onPressed: () async {
-                                await _dbService.removeHymnFromPlaylist(playlistId, song.id!);
-                                final updated = await _dbService.getPlaylistHymns(playlistId);
-                                setDialogState(() {
-                                  hymns.clear();
-                                  hymns.addAll(updated);
-                                });
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Ikutse muri playlist!'), duration: Duration(seconds: 1)),
-                                );
-                              },
-                            ),
-                            onTap: () {
-                              Navigator.pop(context); // Close dialog
-                              final parentState = context.findAncestorStateOfType<HomeScreenState>();
-                              parentState?.navigateToHymn(song);
-                            },
-                          );
-                        },
+                      SavedHymnsTab(
+                        savedHymns: _savedHymns,
+                        playlists: _playlists,
+                        dbService: _dbService,
+                        onDataChanged: _loadFavorites,
                       ),
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('Funga'),
-                ),
-              ],
-            );
-          },
-        );
-      },
-    );
-  }
-
-  Widget _buildStudyNotesList() {
-    return Column(
-      children: [
-        _buildStudySubNavBar(),
-        Expanded(
-          child: _buildStudySubTabContent(),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildStudySubTabContent() {
-    switch (_studySubTab) {
-      case 'journal':
-        return _buildJournalNotesList();
-      case 'verse_notes':
-        return _buildVerseNotesList();
-      case 'highlights':
-        return _buildHighlightsList();
-      default:
-        return const SizedBox.shrink();
-    }
-  }
-
-
-  Widget _buildStudySubNavBar() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF2A2A2A) : const Color(0xFFF3F4F6),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Row(
-        children: [
-          _buildSubTabButton('journal', localeNotifier.value == 'en' ? '📝 Journal' : '📝 Inyandiko'),
-          _buildSubTabButton('verse_notes', localeNotifier.value == 'en' ? '📖 Verse Notes' : '📖 Inyandiko z\'Umurongo'),
-          _buildSubTabButton('highlights', localeNotifier.value == 'en' ? '🎨 Highlights' : '🎨 Ibimurikirwa'),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSubTabButton(String tab, String label) {
-    final isSelected = _studySubTab == tab;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Expanded(
-      child: InkWell(
-        onTap: () => setState(() => _studySubTab = tab),
-        borderRadius: BorderRadius.circular(8),
-        child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          decoration: BoxDecoration(
-            color: isSelected 
-                ? (isDark ? const Color(0xFF3B82F6) : Theme.of(context).primaryColor)
-                : Colors.transparent,
-            borderRadius: BorderRadius.circular(8),
-            boxShadow: isSelected ? [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.1),
-                blurRadius: 4,
-                offset: const Offset(0, 2),
-              )
-            ] : null,
-          ),
-          child: Text(
-            label,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.bold,
-              color: isSelected 
-                  ? Colors.white 
-                  : (isDark ? Colors.grey[350] : const Color(0xFF4B5563)),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  void _showJournalEditor({Map<String, dynamic>? note}) {
-    final titleController = TextEditingController(text: note?['title'] ?? '');
-    final contentController = TextEditingController(text: note?['content'] ?? '');
-    final isEdit = note != null;
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
-      builder: (context) {
-        final isDark = Theme.of(context).brightness == Brightness.dark;
-        return Container(
-          height: MediaQuery.of(context).size.height * 0.85,
-          decoration: BoxDecoration(
-            color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
-          ),
-          padding: EdgeInsets.only(
-            top: 20,
-            left: 20,
-            right: 20,
-            bottom: MediaQuery.of(context).viewInsets.bottom + 20,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    isEdit ? 'Kora inyandiko (Edit Note)' : 'Inyandiko nshya (New Note)',
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                ],
-              ),
-              const Divider(),
-              TextField(
-                controller: titleController,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                decoration: const InputDecoration(
-                  hintText: 'Umutwe w\'inyandiko (Title)...',
-                  border: InputBorder.none,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Expanded(
-                child: TextField(
-                  controller: contentController,
-                  maxLines: null,
-                  style: const TextStyle(fontSize: 15, height: 1.5),
-                  decoration: const InputDecoration(
-                    hintText: 'Andika hano (Write note content)...',
-                    border: InputBorder.none,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 12),
-              SizedBox(
-                width: double.infinity,
-                height: 48,
-                child: ElevatedButton.icon(
-                  onPressed: () async {
-                    final title = titleController.text.trim();
-                    final content = contentController.text.trim();
-                    if (content.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Nta kintu cyanditswe!')),
-                      );
-                      return;
-                    }
-                    final finalTitle = title.isEmpty ? 'Nta mutwe' : title;
-                    if (isEdit) {
-                      await _dbService.updateJournalNote(note['id'], finalTitle, content);
-                    } else {
-                      await _dbService.insertJournalNote(finalTitle, content);
-                    }
-                    _loadFavorites();
-                    if (mounted) Navigator.pop(context);
-                  },
-                  icon: const Icon(Icons.save_outlined),
-                  label: const Text('Bika (Save Note)'),
-                ),
-              ),
-            ],
-          ),
-        );
-      },
-    );
-  }
-
-  Widget _buildJournalNotesList() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    
-    // Filter notes based on search query
-    final filteredNotes = _journalSearchQuery.trim().isEmpty
-        ? _journalNotes
-        : _journalNotes.where((note) {
-            final t = (note['title'] ?? '').toString().toLowerCase();
-            final c = (note['content'] ?? '').toString().toLowerCase();
-            final q = _journalSearchQuery.toLowerCase();
-            return t.contains(q) || c.contains(q);
-          }).toList();
-
-    if (_journalNotes.isEmpty) {
-      return _buildEmptyState(
-        localeNotifier.value == 'en' 
-            ? 'Your study journal is empty. Click "+" to start writing.' 
-            : 'Nta nyandiko z\'icyigisho ufite. Kanda "+" ngo wandike inyandiko nshya.'
-      );
-    }
-
-    return Column(
-      children: [
-        // Search bar
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-          child: TextField(
-            controller: _journalSearchController,
-            onChanged: (val) => setState(() => _journalSearchQuery = val),
-            decoration: InputDecoration(
-              hintText: localeNotifier.value == 'en' ? 'Search journal...' : 'Shakisha inyandiko...',
-              prefixIcon: const Icon(Icons.search),
-              suffixIcon: _journalSearchQuery.isNotEmpty
-                  ? IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {
-                        _journalSearchController.clear();
-                        setState(() => _journalSearchQuery = '');
-                      },
-                    )
-                  : null,
-              contentPadding: const EdgeInsets.symmetric(vertical: 0),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-            ),
-          ),
-        ),
-        Expanded(
-          child: filteredNotes.isEmpty
-              ? const Center(child: Text('Nta nyandiko zihuye n\'ibyo ushaka zibonetse.', style: TextStyle(color: Colors.grey)))
-              : ListView.builder(
-                  padding: const EdgeInsets.all(16),
-                  itemCount: filteredNotes.length,
-                  itemBuilder: (context, index) {
-                    final note = filteredNotes[index];
-                    final dateStr = DateTime.fromMillisecondsSinceEpoch(note['updated_at'] ?? note['created_at'])
-                        .toLocal()
-                        .toString()
-                        .substring(0, 16);
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        side: BorderSide(
-                          color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-                        ),
-                      ),
-                      child: InkWell(
-                        onTap: () => _showJournalEditor(note: note),
-                        borderRadius: BorderRadius.circular(16),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                    child: Text(
-                                      note['title'] ?? 'Nta mutwe',
-                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      IconButton(
-                                        padding: EdgeInsets.zero,
-                                        constraints: const BoxConstraints(),
-                                        icon: const Icon(Icons.share_outlined, size: 20, color: Colors.grey),
-                                        onPressed: () {
-                                          SharePlus.instance.share(
-                                            ShareParams(
-                                              text: '${note['title'] ?? ""}\n\n${note['content'] ?? ""}',
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                      const SizedBox(width: 12),
-                                      IconButton(
-                                        padding: EdgeInsets.zero,
-                                        constraints: const BoxConstraints(),
-                                        icon: const Icon(Icons.delete_outline, color: Colors.red, size: 20),
-                                        onPressed: () async {
-                                          final confirm = await showDialog<bool>(
-                                            context: context,
-                                            builder: (context) => AlertDialog(
-                                              title: const Text('Gusiba inyandiko'),
-                                              content: const Text('Urashaka gusiba iyi nyandiko rwose?'),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () => Navigator.pop(context, false),
-                                                  child: const Text('Reka'),
-                                                ),
-                                                TextButton(
-                                                  onPressed: () => Navigator.pop(context, true),
-                                                  child: const Text('Siba', style: TextStyle(color: Colors.red)),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                          if (confirm == true) {
-                                            await _dbService.deleteJournalNote(note['id']);
-                                            _loadFavorites();
-                                          }
-                                        },
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                note['content'] ?? '',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: isDark ? Colors.grey[300] : const Color(0xFF4B5563),
-                                  height: 1.4,
-                                ),
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              const SizedBox(height: 12),
-                              Text(
-                                dateStr,
-                                style: TextStyle(fontSize: 11, color: isDark ? Colors.grey[500] : Colors.grey[600]),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildVerseNotesList() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final hasNotes = _savedNotes.isNotEmpty;
-    final hasTags = _uniqueTags.isNotEmpty;
-
-    if (!hasNotes && !hasTags) {
-      return _buildEmptyState(AppLocalizations.translate('saved_empty_study'));
-    }
-
-    return Column(
-      children: [
-        if (hasTags)
-          Container(
-            height: 48,
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: _uniqueTags.length + 1,
-              itemBuilder: (context, index) {
-                if (index == 0) {
-                  final isSelected = _selectedTagFilter == null;
-                  return Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: ChoiceChip(
-                      label: const Text('Zose (All)', style: TextStyle(fontSize: 12)),
-                      selected: isSelected,
-                      onSelected: (_) {
-                        setState(() {
-                          _selectedTagFilter = null;
-                        });
-                        _loadFavorites();
-                      },
-                    ),
-                  );
-                }
-
-                final tag = _uniqueTags[index - 1];
-                final isSelected = _selectedTagFilter == tag;
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: ChoiceChip(
-                    label: Text(tag, style: const TextStyle(fontSize: 12)),
-                    selected: isSelected,
-                    onSelected: (selected) {
-                      setState(() {
-                        _selectedTagFilter = selected ? tag : null;
-                      });
-                      _loadFavorites();
-                    },
-                  ),
-                );
-              },
-            ),
-          ),
-        Expanded(
-          child: _selectedTagFilter != null
-              ? _buildTaggedVersesList()
-              : _savedNotes.isEmpty
-                  ? _buildEmptyState(
-                      localeNotifier.value == 'en' 
-                          ? 'No verse notes saved. Tap and hold a verse in reader to add notes.' 
-                          : 'Nta nyandiko z\'umurongo ufite.'
-                    )
-                  : ListView(
-                      padding: const EdgeInsets.all(16),
-                      children: _savedNotes.map((note) {
-                        final bookObj = BibleBook.getByNumber(note['book']);
-                        final refStr = '${bookObj.name} ${note['chapter']}:${note['verse']}';
-                        return Card(
-                          margin: const EdgeInsets.only(bottom: 12),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            side: BorderSide(
-                              color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-                            ),
-                          ),
-                          child: InkWell(
-                            onTap: () {
-                              final parentState = context.findAncestorStateOfType<HomeScreenState>();
-                              parentState?.navigateToBibleVerse(bookObj, note['chapter'], note['verse']);
-                            },
-                            borderRadius: BorderRadius.circular(16),
-                            child: Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                        decoration: BoxDecoration(
-                                          color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-                                          borderRadius: BorderRadius.circular(12),
-                                        ),
-                                        child: Text(
-                                          refStr,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
-                                            fontSize: 11,
-                                          ),
-                                        ),
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          IconButton(
-                                            padding: EdgeInsets.zero,
-                                            constraints: const BoxConstraints(),
-                                            icon: const Icon(Icons.share_outlined, size: 20, color: Colors.grey),
-                                            onPressed: () {
-                                              SharePlus.instance.share(
-                                                ShareParams(
-                                                  text: 'Inyandiko z\'umurongo kuri $refStr:\n"${note['text']}"\n\nInyandiko: ${note['note_content']}',
-                                                ),
-                                              );
-                                            },
-                                          ),
-                                          const SizedBox(width: 12),
-                                          IconButton(
-                                            padding: EdgeInsets.zero,
-                                            constraints: const BoxConstraints(),
-                                            icon: const Icon(Icons.delete_outline, color: Colors.red, size: 20),
-                                            onPressed: () async {
-                                              await _dbService.removeNote(note['id']);
-                                              _loadFavorites();
-                                            },
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 12),
-                                  Text(
-                                    note['note_content'],
-                                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Container(
-                                    width: double.infinity,
-                                    padding: const EdgeInsets.all(12),
-                                    decoration: BoxDecoration(
-                                      color: isDark ? const Color(0xFF242424) : const Color(0xFFF9FAFB),
-                                      borderRadius: BorderRadius.circular(12),
-                                      border: Border.all(
-                                        color: isDark ? const Color(0xFF333333) : const Color(0xFFF3F4F6),
-                                      ),
-                                    ),
-                                    child: Text(
-                                      note['text'],
-                                      style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13, fontFamily: 'serif', height: 1.4),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                    ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildHighlightsList() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    
-    if (_savedHighlights.isEmpty) {
-      return _buildEmptyState(
-        localeNotifier.value == 'en' 
-            ? 'No highlights saved. Tap a verse in reader to highlight it.' 
-            : 'Nta bintu bimuritswe ufite.'
-      );
-    }
-
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: _savedHighlights.length,
-      itemBuilder: (context, index) {
-        final hl = _savedHighlights[index];
-        final bookObj = BibleBook.getByNumber(hl['book']);
-        final refStr = '${bookObj.name} ${hl['chapter']}:${hl['verse']}';
-        final highlightColor = _highlightColors[hl['color_index']];
-
-        return Card(
-          margin: const EdgeInsets.only(bottom: 12),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-            side: BorderSide(
-              color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-            ),
-          ),
-          child: InkWell(
-            onTap: () {
-              final parentState = context.findAncestorStateOfType<HomeScreenState>();
-              parentState?.navigateToBibleVerse(bookObj, hl['chapter'], hl['verse']);
-            },
-            borderRadius: BorderRadius.circular(16),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 12,
-                            height: 12,
-                            decoration: BoxDecoration(
-                              color: highlightColor,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Text(
-                              refStr,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor,
-                                fontSize: 11,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          IconButton(
-                            padding: EdgeInsets.zero,
-                            constraints: const BoxConstraints(),
-                            icon: const Icon(Icons.share_outlined, size: 20, color: Colors.grey),
-                            onPressed: () {
-                              SharePlus.instance.share(
-                                ShareParams(
-                                  text: '"${hl['text']}"\n\n— $refStr',
-                                ),
-                              );
-                            },
-                          ),
-                          const SizedBox(width: 12),
-                          IconButton(
-                            padding: EdgeInsets.zero,
-                            constraints: const BoxConstraints(),
-                            icon: const Icon(Icons.delete_outline, color: Colors.red, size: 20),
-                            onPressed: () async {
-                              await _dbService.removeHighlight(hl['id']);
-                              _loadFavorites();
-                            },
-                          ),
-                        ],
+                      SavedStudyTab(
+                        journalNotes: _journalNotes,
+                        savedNotes: _savedNotes,
+                        savedHighlights: _savedHighlights,
+                        uniqueTags: _uniqueTags,
+                        dbService: _dbService,
+                        onDataChanged: _loadFavorites,
+                        initialStudySubTab: _studySubTab,
+                        onStudySubTabChanged: (val) => setState(() => _studySubTab = val),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 12),
-                  Text(
-                    hl['text'],
-                    style: const TextStyle(fontSize: 14, fontFamily: 'serif', height: 1.4),
-                  ),
-                ],
-              ),
-            ),
-          ),
+                ),
         );
       },
     );
   }
 
-  Widget _buildTaggedVersesList() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    if (_taggedVerses.isEmpty) {
-      return _buildEmptyState('Nta mirongo ifite iki kimenyetso.');
-    }
-
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: _taggedVerses.length,
-      itemBuilder: (context, index) {
-        final item = _taggedVerses[index];
-        final bookObj = BibleBook.getByNumber(item['book']);
-        final refStr = '${bookObj.name} ${item['chapter']}:${item['verse']}';
-
-        return Card(
-          margin: const EdgeInsets.only(bottom: 12),
-          child: ListTile(
-            contentPadding: const EdgeInsets.all(16),
-            title: Text(
-              item['text'],
-              style: const TextStyle(fontSize: 14, fontFamily: 'serif', height: 1.5),
-            ),
-            subtitle: Padding(
-              padding: const EdgeInsets.only(top: 10.0),
-              child: Row(
-                children: [
-                  Text(
-                    refStr,
-                    style: TextStyle(fontWeight: FontWeight.bold, color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor, fontSize: 12),
-                  ),
-                  const SizedBox(width: 12),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: (isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor).withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Text(
-                      item['tag_name'],
-                      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: isDark ? const Color(0xFF60A5FA) : Theme.of(context).primaryColor),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            trailing: IconButton(
-              icon: const Icon(Icons.delete_outline, color: Colors.red),
-              onPressed: () async {
-                await _dbService.removeVerseTag(item['verse_id'] ?? item['id'], item['tag_name']);
-                _loadFavorites();
-              },
-            ),
-            onTap: () {
-              final parentState = context.findAncestorStateOfType<HomeScreenState>();
-              parentState?.navigateToBibleVerse(bookObj, item['chapter'], item['verse']);
-            },
-          ),
-        );
-      },
-    );
-  }
-
-  Widget _buildEmptyState(String text) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Icon(Icons.favorite_border, size: 64, color: Colors.grey),
-          const SizedBox(height: 16),
-          Text(
-            text,
-            style: const TextStyle(color: Colors.grey, fontSize: 15),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
-    );
-  }
 }

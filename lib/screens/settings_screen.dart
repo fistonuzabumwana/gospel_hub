@@ -398,7 +398,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 ? 'Verisiyo y\'App'
                                 : 'App Version',
                         trailing: const Text(
-                          'v2.0.0',
+                          'v2.1.0',
                           style: TextStyle(
                             color: Colors.grey,
                             fontWeight: FontWeight.bold,
