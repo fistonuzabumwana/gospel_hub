@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/home_screen.dart';
 import 'services/app_localizations.dart';
+import 'services/notification_service.dart';
 import 'theme/app_theme.dart';
 
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
@@ -44,6 +45,11 @@ void main() async {
 
   activeKinyarwandaBibleNotifier.value = savedKinyarwandaBible;
   activeEnglishBibleNotifier.value = savedEnglishBible;
+
+  // Initialize and request notification permissions
+  final notificationService = NotificationService();
+  await notificationService.init();
+  await notificationService.requestPermissions();
 
   runApp(const GospelHubApp());
 }

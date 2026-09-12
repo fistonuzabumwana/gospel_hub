@@ -4,6 +4,7 @@ import '../services/app_localizations.dart';
 import '../services/app_state_service.dart';
 import 'privacy_policy_screen.dart';
 import 'widget_settings_screen.dart';
+import '../services/notification_service.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -16,6 +17,40 @@ class _SettingsScreenState extends State<SettingsScreen> {
   final BackupService _backupService = BackupService.instance;
   bool _isSyncing = false;
   String? _syncStatusMessage;
+  
+  bool _notificationsEnabled = true;
+  TimeOfDay _notificationTime = const TimeOfDay(hour: 8, minute: 0);
+
+  @override
+  void initState() {
+    super.initState();
+    _loadNotificationSettings();
+  }
+
+  Future<void> _loadNotificationSettings() async {
+    final enabled = await AppStateService.isDailyNotificationEnabled();
+    final hour = await AppStateService.getDailyNotificationHour();
+    final minute = await AppStateService.getDailyNotificationMinute();
+    if (mounted) {
+      setState(() {
+        _notificationsEnabled = enabled;
+        _notificationTime = TimeOfDay(hour: hour, minute: minute);
+      });
+    }
+  }
+
+  Future<void> _updateNotificationSettings() async {
+    await AppStateService.setDailyNotificationEnabled(_notificationsEnabled);
+    await AppStateService.setDailyNotificationHour(_notificationTime.hour);
+    await AppStateService.setDailyNotificationMinute(_notificationTime.minute);
+    
+    // Reschedule or cancel notifications
+    if (_notificationsEnabled) {
+      await NotificationService().scheduleNext30Days();
+    } else {
+      await NotificationService().flutterLocalNotificationsPlugin.cancelAll();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +117,48 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           );
                         },
                       ),
+                      const Divider(height: 1, indent: 56),
+                      SwitchListTile(
+                        value: _notificationsEnabled,
+                        onChanged: (val) {
+                          setState(() => _notificationsEnabled = val);
+                          _updateNotificationSettings();
+                        },
+                        secondary: const _IconBadge(
+                          icon: Icons.notifications_active_outlined,
+                          color: Color(0xFFEAB308), // Yellow
+                        ),
+                        title: Text(
+                          currentLang == 'rw' ? 'Kumenyesha buri munsi' : 'Daily Notifications',
+                          style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14.5),
+                        ),
+                        subtitle: Text(
+                          currentLang == 'rw' ? 'Kwakira ijambo ry\'umunsi' : 'Receive the verse of the day',
+                          style: const TextStyle(fontSize: 12, color: Colors.grey),
+                        ),
+                        activeThumbColor: primaryColor,
+                      ),
+                      if (_notificationsEnabled) ...[
+                        const Divider(height: 1, indent: 56),
+                        _SettingsTile(
+                          leading: const _IconBadge(
+                            icon: Icons.access_time,
+                            color: Color(0xFF8B5CF6), // Purple
+                          ),
+                          title: currentLang == 'rw' ? 'Igihe cyo kumenyeshwa' : 'Notification Time',
+                          subtitle: _notificationTime.format(context),
+                          onTap: () async {
+                            final time = await showTimePicker(
+                              context: context,
+                              initialTime: _notificationTime,
+                            );
+                            if (time != null && mounted) {
+                              setState(() => _notificationTime = time);
+                              _updateNotificationSettings();
+                            }
+                          },
+                        ),
+                      ],
                     ],
                   ),
 

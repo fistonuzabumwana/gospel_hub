@@ -58,4 +58,38 @@ class AppStateService {
     final prefs = await _getPrefs();
     await prefs.setBool(_isFirstLaunchKey, false);
   }
+
+  static const String _dailyNotificationEnabledKey = 'daily_notification_enabled';
+  static const String _dailyNotificationHourKey = 'daily_notification_hour';
+  static const String _dailyNotificationMinuteKey = 'daily_notification_minute';
+
+  static Future<bool> isDailyNotificationEnabled() async {
+    final prefs = await _getPrefs();
+    return prefs.getBool(_dailyNotificationEnabledKey) ?? true;
+  }
+
+  static Future<void> setDailyNotificationEnabled(bool enabled) async {
+    final prefs = await _getPrefs();
+    await prefs.setBool(_dailyNotificationEnabledKey, enabled);
+  }
+
+  static Future<int> getDailyNotificationHour() async {
+    final prefs = await _getPrefs();
+    return prefs.getInt(_dailyNotificationHourKey) ?? 8;
+  }
+
+  static Future<void> setDailyNotificationHour(int hour) async {
+    final prefs = await _getPrefs();
+    await prefs.setInt(_dailyNotificationHourKey, hour);
+  }
+
+  static Future<int> getDailyNotificationMinute() async {
+    final prefs = await _getPrefs();
+    return prefs.getInt(_dailyNotificationMinuteKey) ?? 0;
+  }
+
+  static Future<void> setDailyNotificationMinute(int minute) async {
+    final prefs = await _getPrefs();
+    await prefs.setInt(_dailyNotificationMinuteKey, minute);
+  }
 }
