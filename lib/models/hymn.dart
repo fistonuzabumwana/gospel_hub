@@ -9,6 +9,7 @@ class Hymn {
   final String uuid;
   final String category;
   final String rawLyrics;
+  final String? midiFile;
   List<LyricsBlock>? _parsedLyrics;
 
   Hymn({
@@ -20,6 +21,7 @@ class Hymn {
     required this.uuid,
     required this.category,
     String? rawLyrics,
+    this.midiFile,
     List<LyricsBlock>? lyrics,
   })  : rawLyrics = rawLyrics ?? '',
         _parsedLyrics = lyrics;
@@ -51,6 +53,7 @@ class Hymn {
       'slug': slug,
       'uuid': uuid,
       'category': category,
+      if (midiFile != null) 'midi_file': midiFile,
       'lyrics': rawLyrics.isNotEmpty ? rawLyrics : json.encode(lyrics.map((l) => l.toMap()).toList()),
     };
   }
@@ -78,6 +81,7 @@ class Hymn {
       uuid: map['uuid'] as String? ?? '',
       category: map['category'] as String? ?? '',
       rawLyrics: rawLyricsStr,
+      midiFile: map['midi_file'] as String?,
       lyrics: parsed,
     );
   }
