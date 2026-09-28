@@ -215,7 +215,7 @@ class _WidgetSettingsScreenState extends State<WidgetSettingsScreen> {
                         Row(
                           children: [
                             Image.asset(
-                              'assets/logo/Gospel hub logo.png',
+                              'assets/logo/Gospel hub logo.webp',
                               width: 22,
                               height: 22,
                             ),
