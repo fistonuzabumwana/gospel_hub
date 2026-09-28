@@ -178,6 +178,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     }
     await prefs.setInt('last_read_book_number', _selectedBook.bookNumber);
     await prefs.setInt('last_read_chapter', _selectedChapter);
+    _dbService.logReading(_selectedBook.bookNumber, _selectedChapter, _lastScrolledVerse ?? 1);
   }
 
   /// Debounced save — waits 1.5s after last scroll movement before writing to disk.
@@ -391,7 +392,7 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
       }
 
       // Log reading history in background (fire-and-forget)
-      _dbService.logReading(bookNum, chapter);
+      _dbService.logReading(bookNum, chapter, _lastScrolledVerse ?? 1);
 
       if (mounted) {
         setState(() {
@@ -440,107 +441,228 @@ class BibleReaderScreenState extends State<BibleReaderScreen> with SingleTickerP
     _loadVersesAndScroll();
   }
 
+  double _measureHeadingHeight(String heading, double textWidth) {
+    final tp = TextPainter(
+      text: TextSpan(
+        text: heading,
+        style: TextStyle(
+          fontSize: _fontSize + 1.5,
+          fontWeight: FontWeight.bold,
+          height: 1.4,
+        ),
+      ),
+      textAlign: TextAlign.center,
+      textDirection: TextDirection.ltr,
+    )..layout(maxWidth: textWidth);
+    return tp.height + 28.0; // top: 20.0, bottom: 8.0
+  }
+
+  double _measureVerseItemHeight({
+    required BibleVerse verse,
+    required double textWidth,
+    required TextStyle bodyStyle,
+    required TextStyle englishStyle,
+    required TextStyle verseNumStyle,
+    required bool isParallel,
+    required bool isEnglish,
+  }) {
+    final vNum = verse.verse;
+    final rwText = verse.text;
+    final engText = _englishVerses[vNum] ?? '';
+
+    final spans = <InlineSpan>[
+      TextSpan(text: '$vNum  ', style: verseNumStyle),
+    ];
+
+    if (isEnglish) {
+      spans.add(TextSpan(text: engText.isNotEmpty ? engText : rwText, style: bodyStyle));
+    } else if (isParallel) {
+      spans.add(TextSpan(text: rwText, style: bodyStyle));
+      if (engText.isNotEmpty) {
+        spans.add(const TextSpan(text: '\n'));
+        spans.add(TextSpan(text: engText, style: englishStyle));
+      }
+    } else {
+      // Kinyarwanda
+      spans.add(TextSpan(text: rwText, style: bodyStyle));
+    }
+
+    final tp = TextPainter(
+      text: TextSpan(children: spans),
+      textDirection: TextDirection.ltr,
+    )..layout(maxWidth: textWidth);
+
+    double h = tp.height + 8.0; // 4.0 inner padding + 4.0 bottom margin
+
+    if (_verseTagsMap[verse.id]?.isNotEmpty ?? false) {
+      h += 24.0;
+    }
+
+    return h;
+  }
+
+  double _calculateExactVerseOffset(int verseNumber, double contentWidth) {
+    final targetIndex = _verses.indexWhere((v) => v.verse == verseNumber);
+    if (targetIndex == -1 || _verses.isEmpty) return 0.0;
+
+    final isParallel = _translationMode == 'parallel';
+    final isEnglish = _translationMode == 'english';
+    final textWidth = (contentWidth - 40.0 - 16.0).clamp(60.0, 10000.0);
+
+    final leadCount = _dropCapLeadCount(
+      verses: _verses,
+      contentWidth: contentWidth - 40.0,
+      chapter: _selectedChapter,
+      englishMap: _englishVerses,
+    );
+
+    // If target verse is in the lead drop-cap section, scroll straight to the top
+    if (targetIndex < leadCount) {
+      return 0.0;
+    }
+
+    final bodyStyle = TextStyle(
+      fontSize: _fontSize,
+      height: 1.35,
+      fontFamily: 'serif',
+    );
+    final englishStyle = TextStyle(
+      fontStyle: FontStyle.italic,
+      fontSize: _fontSize - 1.5,
+      height: 1.35,
+      fontFamily: 'serif',
+    );
+    final verseNumStyle = TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: _fontSize - 1,
+      fontFamily: 'serif',
+    );
+
+    // Top padding of ListView
+    double offset = 16.0;
+
+    // 1. Add height of item 0 (lead drop-cap item)
+    final leadVerses = _verses.sublist(0, leadCount);
+    final firstHeading = leadVerses.first.heading;
+    if (firstHeading != null && firstHeading.isNotEmpty) {
+      offset += _measureHeadingHeight(firstHeading, textWidth);
+    }
+
+    final dropCapStyle = TextStyle(
+      fontSize: _fontSize * 5.2,
+      fontWeight: FontWeight.w500,
+      height: 0.88,
+      fontFamily: 'serif',
+      letterSpacing: -2.0,
+    );
+    final dropPainter = TextPainter(
+      text: TextSpan(text: '$_selectedChapter', style: dropCapStyle),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    final dropH = dropPainter.height;
+    final sideWidth = (contentWidth - 40.0 - dropPainter.width - 12.0).clamp(40.0, contentWidth - 40.0);
+
+    if (leadCount > 1) {
+      double totalVersesH = 0;
+      for (int i = 0; i < leadVerses.length; i++) {
+        final v = leadVerses[i];
+        final prefix = i == 0 ? '' : '${v.verse}  ';
+        final main = isEnglish ? (_englishVerses[v.verse] ?? v.text) : v.text;
+        final eng = _englishVerses[v.verse] ?? '';
+
+        final spans = <InlineSpan>[
+          TextSpan(text: '$prefix$main', style: bodyStyle),
+        ];
+        if (isParallel && eng.isNotEmpty) {
+          spans.add(const TextSpan(text: '\n'));
+          spans.add(TextSpan(text: eng, style: englishStyle));
+        }
+        final tp = TextPainter(
+          text: TextSpan(children: spans),
+          textDirection: TextDirection.ltr,
+        )..layout(maxWidth: sideWidth);
+        totalVersesH += tp.height + 4.0;
+      }
+      offset += (totalVersesH > dropH ? totalVersesH : dropH) + 8.0;
+    } else {
+      final v = leadVerses.first;
+      final main = isEnglish ? (_englishVerses[v.verse] ?? v.text) : v.text;
+      final eng = _englishVerses[v.verse] ?? '';
+
+      final tpBeside = TextPainter(
+        text: TextSpan(text: main, style: bodyStyle),
+        textDirection: TextDirection.ltr,
+      )..layout(maxWidth: sideWidth);
+
+      double h = dropH;
+      if (tpBeside.height > dropH) {
+        h = tpBeside.height;
+      }
+      if (isParallel && eng.isNotEmpty) {
+        final engTp = TextPainter(
+          text: TextSpan(text: eng, style: englishStyle),
+          textDirection: TextDirection.ltr,
+        )..layout(maxWidth: textWidth);
+        h += engTp.height + 4.0;
+      }
+      offset += h + 8.0;
+    }
+
+    // 2. Add height of items from leadCount to targetIndex - 1
+    for (int i = leadCount; i < targetIndex; i++) {
+      final v = _verses[i];
+      if (v.heading != null && v.heading!.isNotEmpty) {
+        offset += _measureHeadingHeight(v.heading!, textWidth);
+      }
+      offset += _measureVerseItemHeight(
+        verse: v,
+        textWidth: textWidth,
+        bodyStyle: bodyStyle,
+        englishStyle: englishStyle,
+        verseNumStyle: verseNumStyle,
+        isParallel: isParallel,
+        isEnglish: isEnglish,
+      );
+    }
+
+    return offset;
+  }
+
   void _scrollToVerse(int verseNumber) {
     final index = _verses.indexWhere((v) => v.verse == verseNumber);
-    if (index == -1) return;
+    if (index == -1 || !_scrollController.hasClients) return;
 
-    // 1. Estimate scroll offset to jump close to the target verse
-    double estimatedOffset = 0;
-    final isParallel = _translationMode == 'parallel';
-    final charsPerLine = 28.0 * (17.0 / _fontSize);
+    final box = context.findRenderObject() as RenderBox?;
+    final contentWidth = (box != null && box.hasSize)
+        ? box.size.width
+        : MediaQuery.of(context).size.width;
 
-    for (int i = 0; i < index; i++) {
-      final v = _verses[i];
-      int lines = 0;
-      if (isParallel) {
-        final rwLen = v.text.length;
-        final engLen = (_englishVerses[v.verse] ?? '').length;
-        lines = (rwLen / charsPerLine).ceil() + (engLen / charsPerLine).ceil() + 2;
-      } else if (_translationMode == 'english') {
-        final engLen = (_englishVerses[v.verse] ?? v.text).length;
-        lines = (engLen / charsPerLine).ceil();
-      } else {
-        final rwLen = v.text.length;
-        lines = (rwLen / charsPerLine).ceil();
-      }
+    final targetOffset = _calculateExactVerseOffset(verseNumber, contentWidth);
+    final maxScroll = _scrollController.position.maxScrollExtent;
 
-      final hasNote = _notes.containsKey(v.id);
-      final tags = _verseTagsMap[v.id];
-      final tagCount = tags != null ? tags.length : 0;
-      final hasHeading = v.heading != null && v.heading!.isNotEmpty;
+    // Immediately jump to the precise pre-calculated offset
+    _scrollController.jumpTo(targetOffset.clamp(0.0, maxScroll));
 
-      double headingHeight = 0;
-      if (hasHeading) {
-        final headingLines = (v.heading!.length / charsPerLine).ceil();
-        headingHeight = headingLines * ((_fontSize + 1.5) * 1.4) + 32.0;
-      }
-
-      final padding = isParallel ? 32.0 : 18.0;
-      final verseHeight = lines * (_fontSize * 1.6) + padding + (hasNote ? 14.0 : 0.0) + (tagCount > 0 ? 28.0 : 0.0) + headingHeight;
-      estimatedOffset += verseHeight;
-    }
-
-    if (_scrollController.hasClients) {
-      final maxScroll = _scrollController.position.maxScrollExtent;
-      _scrollController.jumpTo(estimatedOffset.clamp(0.0, maxScroll));
-    }
-
-    // Helper to perform precise alignment
-    bool tryEnsureVisible() {
-      if (!mounted) return false;
-      if (index < _verseKeys.length) {
-        final keyContext = _verseKeys[index].currentContext;
-        if (keyContext != null) {
-          Scrollable.ensureVisible(
-            keyContext,
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeInOut,
-            alignment: 0.2, // Align near top 20% of screen
-          );
-          return true;
-        }
-      }
-      return false;
-    }
-
-    // Helper to locate rendered elements and adjust scroll if initial jump under-estimated
-    void adjustAndEnsureVisible() {
-      if (tryEnsureVisible()) return;
-
-      int lastRenderedIndex = -1;
-      for (int i = _verseKeys.length - 1; i >= 0; i--) {
-        if (_verseKeys[i].currentContext != null) {
-          lastRenderedIndex = i;
-          break;
-        }
-      }
-
-      if (lastRenderedIndex != -1 && lastRenderedIndex != index && _scrollController.hasClients) {
-        final box = _verseKeys[lastRenderedIndex].currentContext?.findRenderObject() as RenderBox?;
-        if (box != null && box.hasSize) {
-          final pos = box.localToGlobal(Offset.zero);
-          final currentScroll = _scrollController.offset;
-          final diffIndex = index - lastRenderedIndex;
-          final avgVerseHeight = isParallel ? (_fontSize * 6.5) : (_fontSize * 3.5);
-          final targetJump = currentScroll + (pos.dy - 120) + (diffIndex * avgVerseHeight);
-          
-          final maxScroll = _scrollController.position.maxScrollExtent;
-          _scrollController.jumpTo(targetJump.clamp(0.0, maxScroll));
-          
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            tryEnsureVisible();
-          });
-        }
-      }
-    }
-
+    // Align with ensureVisible on next frame once the target widget is mounted in the viewport
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!tryEnsureVisible()) {
-        Future.delayed(const Duration(milliseconds: 100), () {
-          adjustAndEnsureVisible();
-        });
-        Future.delayed(const Duration(milliseconds: 300), () {
-          tryEnsureVisible();
+      if (!mounted) return;
+      if (index < _verseKeys.length && _verseKeys[index].currentContext != null) {
+        Scrollable.ensureVisible(
+          _verseKeys[index].currentContext!,
+          duration: const Duration(milliseconds: 250),
+          curve: Curves.easeOutCubic,
+          alignment: 0.10, // Places the target verse 10% from the top
+        );
+      } else {
+        Future.delayed(const Duration(milliseconds: 80), () {
+          if (mounted && index < _verseKeys.length && _verseKeys[index].currentContext != null) {
+            Scrollable.ensureVisible(
+              _verseKeys[index].currentContext!,
+              duration: const Duration(milliseconds: 200),
+              curve: Curves.easeOutCubic,
+              alignment: 0.10,
+            );
+          }
         });
       }
     });

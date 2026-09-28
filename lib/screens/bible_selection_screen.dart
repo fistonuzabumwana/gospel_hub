@@ -36,7 +36,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'Kinyarwanda',
       coverGradient: [Color(0xFF1E3A8A), Color(0xFF3B82F6)],
       abbrev: 'BY',
-      imagePath: 'assets/bible/logos/bibiriya_yera_kinyarwanda.png',
+      imagePath: 'assets/bible/logos/bibiriya_yera_kinyarwanda.webp',
     ),
     BibleVersion(
       id: 'II',
@@ -44,7 +44,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'Kinyarwanda',
       coverGradient: [Color(0xFF065F46), Color(0xFF10B981)],
       abbrev: 'II',
-      imagePath: 'assets/bible/logos/bibiriya_ijambo_ryimana_kinyarwanda.png',
+      imagePath: 'assets/bible/logos/bibiriya_ijambo_ryimana_kinyarwanda.webp',
     ),
     BibleVersion(
       id: 'KJV',
@@ -52,7 +52,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'English',
       coverGradient: [Color(0xFF78350F), Color(0xFFD97706)],
       abbrev: 'KJV',
-      imagePath: 'assets/bible/logos/holy_bible_english_kjv.png',
+      imagePath: 'assets/bible/logos/holy_bible_english_kjv.webp',
     ),
     BibleVersion(
       id: 'GNB',
@@ -60,7 +60,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'English',
       coverGradient: [Color(0xFF5B21B6), Color(0xFF8B5CF6)],
       abbrev: 'GNB',
-      imagePath: 'assets/bible/logos/Holy_bible_good_news_english.png',
+      imagePath: 'assets/bible/logos/Holy_bible_good_news_english.webp',
     ),
   ];
 
@@ -71,7 +71,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'Kinyarwanda',
       coverGradient: [Color(0xFF991B1B), Color(0xFFEF4444)],
       abbrev: 'BN',
-      imagePath: 'assets/bible/logos/bibiriya_ntagatifu_kinyarwanda.png',
+      imagePath: 'assets/bible/logos/bibiriya_ntagatifu_kinyarwanda.webp',
     ),
     BibleVersion(
       id: 'IID',
@@ -79,7 +79,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'Kinyarwanda',
       coverGradient: [Color(0xFF374151), Color(0xFF6B7280)],
       abbrev: 'IID',
-      imagePath: 'assets/bible/logos/bibiriya_ijambo_ryimana_d_kinyarwanda.png',
+      imagePath: 'assets/bible/logos/bibiriya_ijambo_ryimana_d_kinyarwanda.webp',
     ),
     BibleVersion(
       id: 'CE',
@@ -87,7 +87,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'English',
       coverGradient: [Color(0xFF854D0E), Color(0xFFEAB308)],
       abbrev: 'CE',
-      imagePath: 'assets/bible/logos/Holy_bible_catholic_english.png',
+      imagePath: 'assets/bible/logos/Holy_bible_catholic_english.webp',
     ),
     BibleVersion(
       id: 'GNC',
@@ -95,7 +95,7 @@ class BibleSelectionScreen extends StatelessWidget {
       language: 'English',
       coverGradient: [Color(0xFF0F766E), Color(0xFF14B8A6)],
       abbrev: 'GNC',
-      imagePath: 'assets/bible/logos/Holy_bible_good_news_catholic_english.png',
+      imagePath: 'assets/bible/logos/Holy_bible_good_news_catholic_english.webp',
     ),
   ];
 

@@ -183,6 +183,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
     required TextStyle bodyStyle,
     required Color accentBlue,
     required bool isDark,
+    Color? textHighlightBg,
   }) {
     final dropCapStyle = TextStyle(
       fontSize: widget.fontSize * 5.2,
@@ -220,6 +221,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
           fontSize: widget.fontSize - 1.5,
           height: 1.35,
           color: isDark ? Colors.white60 : Colors.black54,
+          backgroundColor: textHighlightBg,
         );
         // Keep English with this verse: beside the drop-cap when the
         // primary text fully fits there; otherwise under the wrapped text.
@@ -328,17 +330,15 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
     final isDark = widget.isDark;
     final accentBlue = isDark ? const Color(0xFF60A5FA) : widget.primaryColor;
     
-    // Determine persistent highlight background color
-    Color containerColor = Colors.transparent;
-    if (widget.highlightColor != null) {
-      containerColor = widget.highlightColor!.withValues(alpha: isDark ? 0.20 : 0.35);
-    }
+    // Determine persistent highlight background color for text glyphs
+    final textHighlightBg = widget.highlightColor?.withValues(alpha: isDark ? 0.35 : 0.45);
 
     final bodyStyle = TextStyle(
       fontSize: widget.fontSize,
       color: widget.textColor,
       height: 1.35,
       fontFamily: 'serif',
+      backgroundColor: textHighlightBg,
     );
     final mainText = widget.translationMode == 'english'
         ? (widget.englishText ?? widget.verse.text)
@@ -354,7 +354,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
                 ? accentBlue.withValues(alpha: isDark ? 0.25 : 0.15)
                 : (widget.isHighlighted 
                     ? accentBlue.withValues(alpha: _animation.value)
-                    : containerColor),
+                    : Colors.transparent),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
               color: widget.isSelected ? accentBlue : Colors.transparent,
@@ -377,6 +377,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
                   bodyStyle: bodyStyle,
                   accentBlue: accentBlue,
                   isDark: isDark,
+                  textHighlightBg: textHighlightBg,
                 )
               : RichText(
                   text: TextSpan(
@@ -408,6 +409,7 @@ class _VerseItemState extends State<VerseItem> with SingleTickerProviderStateMix
                             fontStyle: FontStyle.italic,
                             fontSize: widget.fontSize - 1.5,
                             color: isDark ? Colors.white60 : Colors.black54,
+                            backgroundColor: textHighlightBg,
                           ),
                         ),
                       ],
