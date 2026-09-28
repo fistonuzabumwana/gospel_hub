@@ -17,6 +17,8 @@ import '../services/app_localizations.dart';
 import '../services/daily_verse_service.dart';
 import '../services/widget_service.dart';
 import 'settings_screen.dart';
+import 'reading_history_screen.dart';
+import '../widgets/truncated_verse_text.dart';
 import '../widgets/saved/saved_verses_tab.dart';
 import '../widgets/saved/saved_hymns_tab.dart';
 import '../widgets/saved/saved_study_tab.dart';
@@ -33,6 +35,7 @@ class HomeScreenState extends State<HomeScreen> {
   final Set<int> _activatedTabs = {2};
   final GlobalKey<BibleReaderScreenState> _bibleReaderKey = GlobalKey<BibleReaderScreenState>();
   final GlobalKey<HymnsScreenState> _hymnsScreenKey = GlobalKey<HymnsScreenState>();
+  final GlobalKey<DashboardTabState> _dashboardTabKey = GlobalKey<DashboardTabState>();
   String? _activeBibleId;
 
   String? get activeBibleId => _activeBibleId;
@@ -79,6 +82,9 @@ class HomeScreenState extends State<HomeScreen> {
       _activatedTabs.add(index);
       _currentTabIndex = index;
     });
+    if (index == 2) {
+      _dashboardTabKey.currentState?.refreshStats();
+    }
   }
 
   void navigateToBibleVerse(BibleBook book, int chapter, int verse) async {
@@ -130,7 +136,7 @@ class HomeScreenState extends State<HomeScreen> {
                   ? HymnsScreen(key: _hymnsScreenKey)
                   : const SizedBox.shrink(),
               _activatedTabs.contains(2)
-                  ? const DashboardTab()
+                  ? DashboardTab(key: _dashboardTabKey)
                   : const SizedBox.shrink(),
               _activatedTabs.contains(3)
                   ? const SavedItemsTab()
@@ -295,10 +301,10 @@ class DashboardTab extends StatefulWidget {
   const DashboardTab({super.key});
 
   @override
-  State<DashboardTab> createState() => _DashboardTabState();
+  State<DashboardTab> createState() => DashboardTabState();
 }
 
-class _DashboardTabState extends State<DashboardTab> {
+class DashboardTabState extends State<DashboardTab> {
   final DatabaseService _dbService = DatabaseService();
   Map<String, dynamic> _stats = {};
   bool _loadingStats = true;
@@ -306,6 +312,10 @@ class _DashboardTabState extends State<DashboardTab> {
   @override
   void initState() {
     super.initState();
+    _loadStats();
+  }
+
+  void refreshStats() {
     _loadStats();
   }
 
@@ -352,6 +362,22 @@ class _DashboardTabState extends State<DashboardTab> {
     parentState?.navigateToBibleVerse(bookObj, ref.chapter, ref.verse);
   }
 
+  void _openReadingHistory() {
+    final parentState = context.findAncestorStateOfType<HomeScreenState>();
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ReadingHistoryScreen(
+          onNavigateToVerse: (book, chapter, verse) {
+            parentState?.navigateToBibleVerse(book, chapter, verse);
+          },
+        ),
+      ),
+    ).then((_) {
+      _loadStats();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
@@ -365,7 +391,7 @@ class _DashboardTabState extends State<DashboardTab> {
         title: Row(
           children: [
             Image.asset(
-              'assets/logo/Gospel hub logo.png',
+              'assets/logo/Gospel hub logo.webp',
               width: 32,
               height: 32,
             ),
@@ -616,34 +642,159 @@ class _DashboardTabState extends State<DashboardTab> {
 
               // Recently Read Chapters (Quick resumption)
               if (_stats['recently_read'] != null && (_stats['recently_read'] as List).isNotEmpty) ...[
-                Text(
-                  AppLocalizations.translate('dash_recently_read'),
-                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.grey),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      AppLocalizations.translate('dash_recently_read'),
+                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.grey),
+                    ),
+                    InkWell(
+                      onTap: _openReadingHistory,
+                      borderRadius: BorderRadius.circular(8),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              AppLocalizations.translate('dash_see_all'),
+                              style: TextStyle(
+                                fontSize: 12.5,
+                                fontWeight: FontWeight.w600,
+                                color: isDark ? const Color(0xFF60A5FA) : primaryColor,
+                              ),
+                            ),
+                            const SizedBox(width: 4),
+                            Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              size: 11,
+                              color: isDark ? const Color(0xFF60A5FA) : primaryColor,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 8),
                 Card(
                   elevation: 0.5,
-                  child: ListView.separated(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: (_stats['recently_read'] as List).length,
-                    separatorBuilder: (_, __) => const Divider(height: 1),
-                    itemBuilder: (context, idx) {
-                      final item = _stats['recently_read'][idx];
-                      final bookObj = BibleBook.getByNumber(item['book']);
-                      return ListTile(
-                        leading: Icon(Icons.history, color: isDark ? const Color(0xFF60A5FA) : primaryColor, size: 20),
-                        title: Text(
-                          '${bookObj.name} Igice cya ${item['chapter']}',
-                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-                        ),
-                        trailing: const Icon(Icons.chevron_right, size: 16),
-                        onTap: () {
-                          final parentState = context.findAncestorStateOfType<HomeScreenState>();
-                          parentState?.navigateToBibleVerse(bookObj, item['chapter'], 1);
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Column(
+                    children: [
+                      ListView.separated(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        padding: EdgeInsets.zero,
+                        itemCount: (_stats['recently_read'] as List).length,
+                        separatorBuilder: (_, __) => const Divider(height: 1),
+                        itemBuilder: (context, idx) {
+                          final item = _stats['recently_read'][idx];
+                          final bookObj = BibleBook.getByNumber(item['book']);
+                          final verseNum = (item['verse'] as int?) ?? 1;
+                          final verseText = (currentLang == 'en'
+                                  ? (item['verse_text_en'] ?? item['verse_text'])
+                                  : item['verse_text']) as String? ?? '';
+                          final bookName = bookObj.getDisplayName(currentLang == 'en' ? 'english' : 'kinyarwanda');
+                          final refTitle = '$bookName ${item['chapter']}:$verseNum';
+
+                          return InkWell(
+                            onTap: () {
+                              final parentState = context.findAncestorStateOfType<HomeScreenState>();
+                              parentState?.navigateToBibleVerse(bookObj, item['chapter'], verseNum);
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 36,
+                                    height: 36,
+                                    decoration: BoxDecoration(
+                                      color: (isDark ? const Color(0xFF60A5FA) : primaryColor).withValues(alpha: 0.1),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Icon(
+                                      Icons.history_rounded,
+                                      color: isDark ? const Color(0xFF60A5FA) : primaryColor,
+                                      size: 18,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 14),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Text(
+                                          refTitle,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        if (verseText.trim().isNotEmpty) ...[
+                                          const SizedBox(height: 3),
+                                          TruncatedVerseText(
+                                            text: verseText.trim(),
+                                            style: TextStyle(
+                                              fontSize: 12.5,
+                                              fontStyle: FontStyle.italic,
+                                              color: isDark ? Colors.grey[400] : const Color(0xFF6B7280),
+                                              height: 1.25,
+                                            ),
+                                          ),
+                                        ],
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Icon(
+                                    Icons.chevron_right_rounded,
+                                    size: 20,
+                                    color: isDark ? Colors.grey[500] : Colors.grey[400],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
                         },
-                      );
-                    },
+                      ),
+                      if (((_stats['recently_read'] as List).length >= 5) || ((_stats['total_recent_count'] as int? ?? 0) > (_stats['recently_read'] as List).length)) ...[
+                        const Divider(height: 1),
+                        InkWell(
+                          onTap: _openReadingHistory,
+                          borderRadius: const BorderRadius.vertical(bottom: Radius.circular(16)),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 11.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.history_rounded,
+                                  size: 16,
+                                  color: isDark ? const Color(0xFF60A5FA) : primaryColor,
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  AppLocalizations.translate('dash_view_more_history'),
+                                  style: TextStyle(
+                                    fontSize: 12.5,
+                                    fontWeight: FontWeight.w600,
+                                    color: isDark ? const Color(0xFF60A5FA) : primaryColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
                   ),
                 ),
                 const SizedBox(height: 24),

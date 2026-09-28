@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,9 +11,6 @@ class DatabaseService {
   static final DatabaseService _instance = DatabaseService._internal();
   factory DatabaseService() => _instance;
   DatabaseService._internal();
-
-  /// Top-level function for compute() isolate — gzip decompression off the main thread.
-  static List<int> _decompressGzip(List<int> compressed) => gzip.decode(compressed);
 
   static Database? _database;
   static Completer<Database>? _dbCompleter;
@@ -44,7 +40,7 @@ class DatabaseService {
     final path = join(databasesPath, 'gospel_hub.db');
 
     final prefs = await SharedPreferences.getInstance();
-    const currentDbVersion = 6;
+    const currentDbVersion = 8;
     final savedDbVersion = prefs.getInt('db_version') ?? 0;
 
     // Check if the database exists
@@ -68,9 +64,10 @@ class DatabaseService {
           final db = await openDatabase(path, readOnly: true);
           final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM bible_verses'));
           final hymnsCount = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM hymns'));
+          final origHymnsCount = Sqflite.firstIntValue(await db.rawQuery("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='original_hymns'"));
           await db.close();
-          if (count == null || count == 0 || hymnsCount == null || hymnsCount == 0) {
-            print('Existing database is empty or missing hymns. Will force copy.');
+          if (count == null || count == 0 || hymnsCount == null || hymnsCount == 0 || origHymnsCount == null || origHymnsCount == 0) {
+            print('Existing database is empty or missing hymns/original_hymns. Will force copy.');
             shouldCopy = true;
           } else {
             // Mark integrity as verified so we skip this on subsequent launches
@@ -90,19 +87,19 @@ class DatabaseService {
         await Directory(dirname(path)).create(recursive: true);
       } catch (_) {}
 
-      // Decompress and copy from asset
+      // Decompress and copy from asset via stream to eliminate transient RAM spikes
       try {
-        ByteData data = await rootBundle.load('assets/database/gospel_hub.db.gz');
-        List<int> compressedBytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-        List<int> decompressedBytes = await compute(_decompressGzip, compressedBytes);
-        
-        // Write and flush the bytes written
-        final file = File(path);
-        await file.writeAsBytes(decompressedBytes, flush: true);
-        
+        final ByteData data = await rootBundle.load('assets/database/gospel_hub.db.gz');
+        final targetFile = File(path);
+        final sink = targetFile.openWrite();
+        final Stream<List<int>> stream = Stream.value(
+          data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
+        );
+        await stream.transform(gzip.decoder).pipe(sink);
+
         // Save the current version
         await prefs.setInt('db_version', currentDbVersion);
-        print('Database compiled copy decompressed and written successfully.');
+        print('Database compiled copy decompressed and written successfully via stream.');
       } catch (e) {
         print('Error decompressing/copying database asset: $e');
         throw Exception('Failed to initialize local database');
@@ -159,9 +156,13 @@ class DatabaseService {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         book INTEGER NOT NULL,
         chapter INTEGER NOT NULL,
+        verse INTEGER NOT NULL DEFAULT 1,
         read_at INTEGER NOT NULL
       )
     ''');
+    try {
+      await db.execute('ALTER TABLE reading_history ADD COLUMN verse INTEGER NOT NULL DEFAULT 1');
+    } catch (_) {}
     await db.execute('''
       CREATE TABLE IF NOT EXISTS hymn_playlists (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -788,7 +789,7 @@ class DatabaseService {
 
   // ── Devotion Stats & Reading History Queries ──────────────────────────────
 
-  Future<void> logReading(int bookNumber, int chapterNumber) async {
+  Future<void> logReading(int bookNumber, int chapterNumber, [int verseNumber = 1]) async {
     final db = await database;
     final todayStart = DateTime.now().copyWith(hour: 0, minute: 0, second: 0, millisecond: 0, microsecond: 0).millisecondsSinceEpoch;
     final List<Map<String, dynamic>> existing = await db.query(
@@ -800,12 +801,23 @@ class DatabaseService {
       await db.insert('reading_history', {
         'book': bookNumber,
         'chapter': chapterNumber,
+        'verse': verseNumber,
         'read_at': DateTime.now().millisecondsSinceEpoch,
       });
+    } else {
+      await db.update(
+        'reading_history',
+        {
+          'verse': verseNumber,
+          'read_at': DateTime.now().millisecondsSinceEpoch,
+        },
+        where: 'id = ?',
+        whereArgs: [existing.first['id']],
+      );
     }
   }
 
-  Future<Map<String, dynamic>> getDevotionStats() async {
+  Future<Map<String, dynamic>> getDevotionStats({int recentLimit = 5}) async {
     final db = await database;
 
     // 1. Total chapters read
@@ -845,21 +857,81 @@ class DatabaseService {
       GROUP BY color_index
     ''');
 
-    // 4. Recently read chapters
+    // 4. Recently read chapters and verses
     final List<Map<String, dynamic>> recentlyRead = await db.rawQuery('''
-      SELECT book, chapter, MAX(read_at) as last_read
-      FROM reading_history
-      GROUP BY book, chapter
+      SELECT rh.book, rh.chapter, COALESCE(rh.verse, 1) as verse, rh.read_at as last_read
+      FROM reading_history rh
+      INNER JOIN (
+        SELECT book, chapter, MAX(read_at) as max_read_at
+        FROM reading_history
+        GROUP BY book, chapter
+      ) latest ON rh.book = latest.book AND rh.chapter = latest.chapter AND rh.read_at = latest.max_read_at
+      GROUP BY rh.book, rh.chapter
       ORDER BY last_read DESC
-      LIMIT 3
-    ''');
+      LIMIT ?
+    ''', [recentLimit]);
+
+    final List<Map<String, dynamic>> recentlyReadWithVerses = [];
+    for (final row in recentlyRead) {
+      final item = Map<String, dynamic>.from(row);
+      final bookNum = item['book'] as int;
+      final chapter = item['chapter'] as int;
+      final verse = (item['verse'] as int?) ?? 1;
+      item['verse'] = verse;
+      final kinText = await getSingleVerseText(bookNum, chapter, verse, false);
+      final engText = await getSingleVerseText(bookNum, chapter, verse, true);
+      item['verse_text'] = kinText ?? engText ?? '';
+      item['verse_text_en'] = engText ?? kinText ?? '';
+      recentlyReadWithVerses.add(item);
+    }
+
+    final totalRecentCount = Sqflite.firstIntValue(await db.rawQuery('''
+      SELECT COUNT(DISTINCT book || '_' || chapter) FROM reading_history
+    ''')) ?? 0;
 
     return {
       'total_chapters': totalCount,
       'streak': streak,
       'highlights_breakdown': colorsBreakdown,
-      'recently_read': recentlyRead,
+      'recently_read': recentlyReadWithVerses,
+      'total_recent_count': totalRecentCount,
     };
+  }
+
+  Future<List<Map<String, dynamic>>> getRecentlyReadHistory({int limit = 100}) async {
+    final db = await database;
+    final List<Map<String, dynamic>> records = await db.rawQuery('''
+      SELECT rh.book, rh.chapter, COALESCE(rh.verse, 1) as verse, rh.read_at as last_read
+      FROM reading_history rh
+      INNER JOIN (
+        SELECT book, chapter, MAX(read_at) as max_read_at
+        FROM reading_history
+        GROUP BY book, chapter
+      ) latest ON rh.book = latest.book AND rh.chapter = latest.chapter AND rh.read_at = latest.max_read_at
+      GROUP BY rh.book, rh.chapter
+      ORDER BY last_read DESC
+      LIMIT ?
+    ''', [limit]);
+
+    final List<Map<String, dynamic>> result = [];
+    for (final row in records) {
+      final item = Map<String, dynamic>.from(row);
+      final bookNum = item['book'] as int;
+      final chapter = item['chapter'] as int;
+      final verse = (item['verse'] as int?) ?? 1;
+      item['verse'] = verse;
+      final kinText = await getSingleVerseText(bookNum, chapter, verse, false);
+      final engText = await getSingleVerseText(bookNum, chapter, verse, true);
+      item['verse_text'] = kinText ?? engText ?? '';
+      item['verse_text_en'] = engText ?? kinText ?? '';
+      result.add(item);
+    }
+    return result;
+  }
+
+  Future<void> clearReadingHistory() async {
+    final db = await database;
+    await db.delete('reading_history');
   }
 
   // ── Hymn Playlists Queries ───────────────────────────────────────────────
@@ -973,6 +1045,21 @@ class DatabaseService {
       'journal_notes',
       where: 'id = ?',
       whereArgs: [id],
+    );
+  }
+
+  // Original Hymns (Translations)
+  Future<List<Map<String, dynamic>>> getAllOriginalHymnsRaw() async {
+    final db = await database;
+    return await db.query('original_hymns', orderBy: 'hymn_number ASC');
+  }
+
+  Future<List<Map<String, dynamic>>> getOriginalHymnsByNumber(int hymnNumber) async {
+    final db = await database;
+    return await db.query(
+      'original_hymns',
+      where: 'hymn_number = ?',
+      whereArgs: [hymnNumber],
     );
   }
 }
