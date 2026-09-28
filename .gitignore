@@ -43,3 +43,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Unnecessary files
+scraper/
+scratch/
+*.apk
+*.md
+!README.md
